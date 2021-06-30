@@ -1,10 +1,30 @@
 # function for building distribution object
 rdist <- function(type,...){
-  list(type = type, params = list(...))
+  params <- list(...)
+  nms <- names(params)
+  if(!length(params)){
+    warning('Distribution has been provided no parameters. This will use the default parameters for ',type,' which is rarely what is wanted' )
+  } else if(is.null(nms) || any(nms == "")){
+    stop("All distribution parameters for 'rdist' must be named")
+  } else if(length(unique(nms)) < length(nms)){
+    stop("Distrtribution parameter names for 'rdist' must be unique")
+  } else if("n" %in% nms){
+    stop("'n' is not an allowable parameter name for an 'rdist' object")
+  } else if(class(type) != "character"){
+    stop("'type' must be the name of a function from generating random numbers, e.g. rnorm (normal distribution) or rpert (PERT distribution) ")
+  }
+  structure(list(type = type, params = list(...)), class = "rdist")
 }
 
 # functions for sampling from a distribution object
 draw <- function(distribution, n){
+  UseMethod("draw")
+}
+
+draw.rdist <- function(distribution, n){
+  if(class(distribution) != "rdist"){
+    stop('draw only works on distributions objects produced by the function rdist')
+  }
   do.call(distribution$type, c(n = n, distribution$params))
 }
 
@@ -12,7 +32,7 @@ draw <- function(distribution, n){
 
 ## PERT
 ppert_alt <- function (q, mode = 0, lowq = -1, highq = 1,
-                       lowp = 0.05, highp = 0.95, median = NULL,
+                       lowp = 0.025, highp = 0.975, median = NULL,
                        shape = 4, lower.tail = TRUE,
                        log.p = FALSE) {
   if(is.null(median)){
@@ -84,18 +104,19 @@ getPertMinMaxFromQuant <- function(mode, lowq, highq,
                                    lowp = 0.05, highp = 0.95,
                                    shape = 4){
   if(lowq > mode || highq < mode || lowq > highq){
-    stop('Invalid distributional parameters. Arguments must satisfy lowq < mode < highq')
+    stop('Invalid (or extreme) distributional parameters. Arguments must satisfy lowq < mode < highq')
   }
   if(lowp > highp || lowp < 0 || highp > 1){
     stop('Invalid distributional parameters. Arguments must satisfy  0 < lowp < highp < 1')
   }
 
   f <- function(x){
-    sum((qpert(c(lowp, highp), min = lowq - x[1], max = highq + x[2], mode = mode, shape = shape) - c(lowq, highq))^2)
+    suppressWarnings(sum((qpert(c(lowp, highp), min = x[1], max = x[2], mode = mode, shape = shape) - c(lowq, highq))^2))
   }
-  opt <- optim(c(1, 1), f , lower = 0, method = "L-BFGS-B")
+  opt <- optim(c(lowq, highq), f , method = "Nelder-Mead")
   if(opt$convergence | sqrt(opt$value) > 0.001){
-    stop(paste('Distributional parameters may be invalid, or very extreme.',
+    stop(paste(paste('Convergence code was', opt$convergence, 'and sqrt(opt$value) =',sqrt(opt$value)),
+               '  Distributional parameters may be invalid, or very extreme.',
                '    Sometimes, though the parameters satisfy:',
                '        lowq < mode < highq',
                '    and',
@@ -103,7 +124,7 @@ getPertMinMaxFromQuant <- function(mode, lowq, highq,
                '    these parameters can imply a distribution which is extremely',
                '    (or impossibly) left or right skewed.',sep = '\n'))
   }
-  list(min = lowq - opt$par[1], max = highq + opt$par[2])
+  list(min = opt$par[1], max = opt$par[2])
 }
 
 getPertMinMaxModeFromQuant <- function(median, lowq, highq,
@@ -118,11 +139,13 @@ getPertMinMaxModeFromQuant <- function(median, lowq, highq,
   }
 
   f <- function(x){
-    sum((qpert(c(lowp, 0.5, highp), min = lowq - x[1], max = highq + x[2], mode = x[3], shape = shape) - c(lowq, median, highq))^2)
+    suppressWarnings(sum((qpert(c(lowp, 0.5, highp), min = x[1], max = x[2], mode = x[3], shape = shape) - c(lowq, median, highq))^2))
   }
-  opt <- optim(c(1, 1,0), f , lower = c(0,0,lowq), upper = c(Inf, Inf, highq), method = "L-BFGS-B")
+
+  opt <- optim(c(lowq, highq, median), f , method = "Nelder-Mead")
   if(opt$convergence | sqrt(opt$value) > 0.001){
-    stop(paste('Distributional parameters may be invalid, or very extreme.',
+    stop(paste(paste(median, lowq, highq,lowp, highp),
+               'Distributional parameters may be invalid, or very extreme.',
                '    Sometimes, though the parameters satisfy:',
                '        lowq < median < highq',
                '    and',
@@ -131,7 +154,7 @@ getPertMinMaxModeFromQuant <- function(median, lowq, highq,
                '    (or impossibly) left or right skewed.',sep = '\n'))
   }
 
-  list(min = lowq - opt$par[1], max = highq + opt$par[2], mode = opt$par[3])
+  list(min =opt$par[1], max = opt$par[2], mode = opt$par[3])
 }
 
 ## log normal
