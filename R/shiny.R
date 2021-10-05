@@ -1,50 +1,33 @@
 library(DT)
 library(shiny)
+library(tidyverse)
 
-source("./R/Trial Script.R")
-DiseaseNames <- names(DiseaseAssumptions)
+#setwd("R")
 
-Years <- intersect(NNDSSIncidenceAgegroup$Year, AusPopAgegroup$Year)
-Measures <- c("Domestic", "Foodborne",
-              "DomesticPerMillion", "FoodbornePerMillion")
+CostTable <- read.csv("CostTable.csv") %>%
+  select(-X) %>%
+  mutate(across(c(median,X5.,X95.),~round(.x/10^6,2))) %>%
+  mutate(`90% CI` = paste(X5.,X95.,sep = '-')) %>%
+  rename("Cost (millions AUD)" = "median") %>%
+  select(-c(X5.,X95.))
+CostTable
+Measures <- unique(CostTable$CostItem)
+PathogenNames <- unique(CostTable$Pathogen)
+Diseases <- unique(CostTable$Disease)
+
 AgeGroups <- c("<5", "5-64", "65+")
 
 
 ui <- fluidPage(
-  titlePanel("Incidence of Foodborne Diseases in Australia"),
+  titlePanel("Cost of Foodborne Diseases in Australia"),
   tabsetPanel(type = "pills",
-              tabPanel("Single Year and Pathogen",
-                       fluidRow(column(width = 6,
-                                       selectInput(
-                                         "Disease",
-                                         "Disease",
-                                         DiseaseNames,
-                                         selected = DiseaseNames[2]
-                                       )),
-                                column(width = 6,
-                                       selectInput(
-                                         "Year",
-                                         "Year",
-                                         Years,
-                                         selected = Years[length(Years)]
-                                       )),
-                       ),
-                       tableOutput("mytable1")),
               tabPanel("Compare Years and Pathogens",
                        fluidRow(column(width = 3,
                                        selectInput(
-                                         "Diseases",
-                                         "Diseases",
-                                         DiseaseNames,
-                                         selected = DiseaseNames[2],
-                                         multiple = TRUE
-                                       )),
-                                column(width = 3,
-                                       selectInput(
-                                         "Years",
-                                         "Years",
-                                         Years,
-                                         selected = Years[length(Years)],
+                                         "Pathogen",
+                                         "Pathogen",
+                                         PathogenNames,
+                                         selected = PathogenNames,
                                          multiple = TRUE
                                        )),
                                 column(width = 3,
@@ -60,53 +43,29 @@ ui <- fluidPage(
                                          "Measure",
                                          "Measure",
                                          Measures,
-                                         selected = Years[length(Years)],
-                                         multiple = FALSE
+                                         selected = Measures,
+                                         multiple = TRUE
+                                       )),
+                                column(width = 3,
+                                       selectInput(
+                                         "Disease",
+                                         "Disease",
+                                         Diseases,
+                                         selected = Diseases,
+                                         multiple = TRUE
                                        ))
                        ),
-                       DT::dataTableOutput("mytable2"))
+                       DT::dataTableOutput("mytable1"))
   )
 )
 
 server <- function(input, output) {
 
-  output$mytable1 = shiny::renderTable({
-    estimateIncidence(DiseaseAssumptions[[input$Disease]],
-                      gastroRate = gastroRate,
-                      population = subset(AusPopAgegroup,
-                                          Year == input$Year &
-                                            AgeGroup == input$AgeGroup)$Persons,
-                      notifications = subset(NNDSSIncidenceAgegroup,
-                                             Year == input$Year &
-                                               Disease == input$Disease)$Cases,
-                      ndraws = 10^6) %>%
-      as.data.frame() %>%
-      map(quantile, p = c(0.05,0.5,0.95)) %>%
-      as.data.frame() %>%
-      t()
-  })
-
-  output$mytable2 = DT::renderDataTable({
-    Combinations <- expand.grid(Disease = sort(input$Diseases),
-                                Year = sort(input$Years),
-                                AgeGroup = sort(input$AgeGroups))
-    cbind(Combinations,
-          pmap_df(Combinations,
-                  function(Disease, Year, AgeGroup){
-                    estimateIncidence(DiseaseAssumptions[[Disease]],
-                                      gastroRate = gastroRate,
-                                      population = subset(AusPopAgegroup,
-                                                          Year == Year &
-                                                            AgeGroup == AgeGroup)$Persons,
-                                      notifications = subset(NNDSSIncidenceAgegroup,
-                                                             Year == Year &
-                                                               Disease == Disease &
-                                                               AgeGroup == AgeGroup)$Cases,
-                                      ndraws = 10^6)[[input$Measure]] %>%
-                      quantile(p = c(0.05,0.5,0.95)) %>%
-                      round
-                  }))
-  })
+  output$mytable1 = DT::renderDataTable(CostTable %>%
+                                          subset(CostItem %in% input$Measure &
+                                                   AgeGroup %in% input$AgeGroups &
+                                                   Pathogen %in% input$Pathogen &
+                                                   Disease %in% input$Disease))
 }
 
 shinyApp(ui, server)
