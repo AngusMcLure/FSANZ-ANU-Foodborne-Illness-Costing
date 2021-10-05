@@ -1,4 +1,4 @@
-source("./BuildCostTable.R")
+source("./R/BuildCostTable.R")
 
 SalmOutbreakAssumptions <- DiseaseAssumptions$Salmonellosis
 

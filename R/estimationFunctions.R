@@ -252,7 +252,7 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
     incidenceSequelae <- IncidenceList$Sequel[[d$name]][[a]]
   }else{
     incidencePrimary <- estimateIncidence(d, notifications = notifications, ndraws = ndraws)$Foodborne
-    incidenceSequelae <- estimateSequelae(d,incidence = IncidencePrimary, ndraws = ndraws)
+    incidenceSequelae <- estimateSequelae(d,incidence = incidencePrimary, ndraws = ndraws)
   }
   incidence <- c(list(incidencePrimary),incidenceSequelae)
   names(incidence)[1] <- d$name
