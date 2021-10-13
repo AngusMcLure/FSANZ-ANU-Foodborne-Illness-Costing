@@ -95,14 +95,18 @@ alert_bounds <- function(x, lower = 0, upper = NULL, name = NULL){
   }
 }
 
+warning('check whether the fields specialist, physio and bacterial are needed')
 # functions for building disease objects
 disease <- function(
   name, kind, notifiable = NULL, correction = NULL, domestic, underreporting = NULL,
   foodborne, gpShort, gpLong, ed, sequelae = NULL,
   hospPrincipalDiagnosis = NULL, hospMethod, hospCodes = NULL, mortCodes, DRGCodes,
   underdiagnosis, medications, medicationsToWhom, tests,
-  testsToWhom, bacterial = NULL, specialist = NULL, physio = NULL, ongoing = NULL,
-  duration = NULL, severity = NULL, symptoms = NULL
+  testsToWhom, bacterial = NULL,
+  specialist = NULL, physio = NULL,
+  propOngoing = NULL, durationOngoing = NULL, propSevere = NULL,
+  duration = NULL, severity = NULL, symptoms,
+  missedWorkCarer = NULL, missedWorkSelf = NULL
  ){
 
   out <- list(
@@ -113,9 +117,13 @@ disease <- function(
     hospCodes = hospCodes, mortCodes = mortCodes, DRGCodes = DRGCodes,
     underdiagnosis = underdiagnosis, medications = medications,
     medicationsToWhom = medicationsToWhom, tests = tests,
-    testsToWhom = testsToWhom, bacterial = bacterial, specialist = specialist,
-    physio = physio, ongoing = ongoing,
-    duration = duration, severity = severity, symptoms = symptoms
+    testsToWhom = testsToWhom, bacterial = bacterial,
+    specialist = specialist,
+    physio = physio,
+    propOngoing = propOngoing, durationOngoing = durationOngoing,
+    propSevere = propSevere,
+    duration = duration, severity = severity, symptoms = symptoms,
+    missedWorkCarer = missedWorkCarer, missedWorkSelf = missedWorkSelf
   )
   #out <- as.list(environment())
   out <- out[!unlist(lapply(out,is.null))] # drop all NULL arguments
@@ -125,8 +133,12 @@ disease <- function(
     stop("kind is listed as ", kind, ". Allowable kinds are: ", paste0(AllowedKinds, collapse = ", "))
   }
 
-  AdditionalRequiredArguments <- list(initial = c('notifiable', 'correction', 'underreporting', 'sequelae'),
-                                      sequel = c('specialist', 'ongoing'))
+  AdditionalRequiredArguments <- list(initial = c('notifiable', 'correction',
+                                                  'underreporting', 'sequelae',
+                                                  'duration', 'severity'),
+                                      sequel = c('specialist', 'propOngoing',
+                                                 'durationOngoing','propSevere',
+                                                 'missedWorkCarer','missedWorkSelf'))
 
   if(!all(AdditionalRequiredArguments$kind %in% names(out))){
     stop(paste(AdditionalRequiredArguments$kind, collapse = ", "), ' are required arguments for ', kind, 'diseases')
@@ -175,7 +187,12 @@ disease <- function(
                              testsToWhom = 'character',
                              symptoms = 'character',
                              severity = 'character',
-                             duration = 'numeric')
+                             duration = 'numeric',
+                             propOngoing = 'list',
+                             durationOngoing = 'numeric',
+                             propSevere = 'numeric',
+                             missedWorkCarer = 'list',
+                             missedWorkSelf = 'list')
 
   ArgsCorrectClasses <- ArgsCorrectClasses[names(out)]
 
@@ -247,8 +264,22 @@ disease <- function(
   purrr::imap(DRGCodes,~alert_type_error(.x, class_name = "character",
                                          x_name = paste0("the DRG code in age group ", .y)))
   if(kind == "sequel"){
-    checkAgeNames(ongoing)
-    purrr::imap(ongoing,~alert_bounds(.x, upper = 1, name = paste0("the DRG code in age group ", .y)))
+    checkAgeNames(missedWorkCarer)
+    purrr::imap(missedWorkCarer, ~alert_type_error(.x, class_name = "numeric",
+                                           x_name = paste0("the number of carer days in age group ", .y)))
+    purrr::imap(missedWorkCarer, ~alert_bounds(.x, lower = 0, name = paste(.y, "number of carer days", name)))
+
+    checkAgeNames(missedWorkSelf)
+    purrr::imap(missedWorkCarer, ~alert_type_error(.x, class_name = "numeric",
+                                           x_name = paste0("the number of days off work in age group ", .y)))
+    purrr::imap(missedWorkCarer, ~alert_bounds(.x, lower = 0, name = paste(.y, "number of days off work", name)))
+
+
+    if(propSevere < 0 || propSevere > 1) stop('propSevere needs to be between 0 and 1')
+    if(durationOngoing < 0 ) stop('durationOngoing needs to be greater than or equal to 0 (in years)')
+    if(durationOngoing > 100 ) warning('durationOngoing is measured in years so a value of ', durationOngoing, ' is not reasonable')
+    checkAgeNames(propOngoing)
+    purrr::imap(propOngoing,~alert_bounds(.x, upper = 1, name = paste0("the proportion ongoing illness in age group ", .y)))
   }else{
     if(!setequal(names(duration), c("Hosp", "NonHosp"))){
       stop('duration must be a named vector of severities for the disease, with named entries for Hosp (hospitalised cases) and NonHosp (non-hospitalised cases)')

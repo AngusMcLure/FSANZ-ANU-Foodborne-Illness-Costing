@@ -89,13 +89,34 @@ estimateTests <- function(disease, ageGroup, ndraws = 10^6, incidence = NULL){
 }
 
 
-costWTP <- function(disease, cases, separations){
-  costNonHosp <- (cases - separations)  * disease$duration["NonHosp"] *
-    subset(WTPValues, severity == disease$severity["NonHosp"] & symptom == disease$symptoms)$WTPvalue
-  costHosp <- separations  * disease$duration["Hosp"] *
-    subset(WTPValues, severity == disease$severity["Hosp"] & symptom == disease$symptoms)$WTPvalue
-  costNonHosp + costHosp
+costWTP <- function(disease, ageGroup, cases, separations = NULL, discount = NULL, ndraws = 10^6){
+
+  if(length(cases) != 1 & length(cases) != ndraws){
+    stop('The length of cases should either be 1 or equal to ndraws')
+  }
+
+  if(!is.null(separations) && length(separations) != 1 && length(cases) != ndraws){
+    stop('The length of separations should either be 1 or equal to ndraws')
+  }
+
+  if(disease$kind == 'initial'){
+    costNonHosp <- (cases - separations)  * disease$duration["NonHosp"] *
+      subset(WTPValues, severity == disease$severity["NonHosp"] & symptom == disease$symptoms)$WTPvalue
+    costHosp <- separations  * disease$duration["Hosp"] *
+      subset(WTPValues, severity == disease$severity["Hosp"] & symptom == disease$symptoms)$WTPvalue
+    list(FirstYear = costNonHosp + costHosp,
+         Ongoing = 0)
+  }else{
+    WTPMild <- subset(WTPValues, severity=='mild' & symptom == disease$symptoms)$WTPvalue
+    WTPSevere <- subset(WTPValues, severity=='severe' & symptom == disease$symptoms)$WTPvalue
+    FirstYear <- WTPMild * (1- disease$propSevere) + WTPSevere * disease$propSevere;
+    Ongoing <- WTPMild * draw(disease$propOngoing[[ageGroup]],ndraws) *
+      (1 - (1-discount)^disease$durationOngoing)/discount * (1 - discount)
+    list(FirstYear = FirstYear * cases,
+         Ongoing = Ongoing * cases)
+  }
 }
+
 
 costList <- function(l){
   MissingCosts <- setdiff(names(l),row.names(Costs))
@@ -131,10 +152,11 @@ costHumanCapital <- function(disease,ageGroup,cases,ndraws){
                                  sdlog = parsS$sd.mu/parsS$estimate.mu)
     }
   }else{
-    warning("I haven't implemented human capital costs for non-gastro illness")
-    CarerDays <- rep(0,ndraws) # cases * draw(disease$CarerDays)
-    SelfDays <- rep(0,ndraws) # cases * draw(disease$SelfDays)
+    CarerDays <- cases * disease$missedWorkCarer[[ageGroup]]; #warning('Carer days off work for sequelae do not have uncertainty estimates around them')
+    if(ageGroup !="<5"){
+      SelfDays <- cases * disease$missedWorkSelf[[ageGroup]]; #warning('Self days off work for sequalae do not have uncertainty estimates around them')
     }
+  }
 
   Cost <- CarerDays * subset(Incomes, AgeGroup == "5-64")$Income
   if(ageGroup !="<5"){
@@ -143,16 +165,16 @@ costHumanCapital <- function(disease,ageGroup,cases,ndraws){
   Cost
 }
 
-costFriction <- function(disease,ageGroup,cases,ndraws,rate){
-  if(length(cases) != 1 & length(cases) != ndraws){
-    stop('The length of cases should either be 1 or equal to ndraws')
-  }
-  if(disease$symptoms == "GI"){
-    return(costHumanCapital(disease,ageGroup,cases,ndraws) * rate)
-  }else{
-    warning("I haven't implemented friction costs for non-gastro illness")
-    return(rep(0, ndraws))}
-}
+# costFriction <- function(disease,ageGroup,cases,ndraws,rate){
+#   if(length(cases) != 1 & length(cases) != ndraws){
+#     stop('The length of cases should either be 1 or equal to ndraws')
+#   }
+#   if(disease$symptoms == "GI"){
+#     return(costHumanCapital(disease,ageGroup,cases,ndraws) * rate)
+#   }else{
+#     warning("I haven't implemented friction costs for non-gastro illness")
+#     return(rep(0, ndraws))}
+# }
 
 mquant <- function(x){
   map(x,~quantile(.x, probs = c(0.05,0.5,0.95)))
@@ -241,7 +263,8 @@ makeDeathsList <- function(year, diseases, ndraws = 10^6){
 
 
 estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
-                          notifications = NULL, separations = NULL, deaths = NULL){
+                          notifications = NULL, separations = NULL, deaths = NULL,
+                          discount){
   d <- disease
   a <- ageGroup
   #p <- subset(AusPopAgegroup,Year == year & AgeGroup == a)$Persons #This is unnecessary since we are not calculating rates
@@ -302,9 +325,13 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
                    AllCases = list(Foodborne = ..2))
 
     HumanCapital <- costHumanCapital(..1, a, ..2, ndraws = ndraws)
-    FrictionHigh <- costFriction(..1, a, ..2, ndraws = ndraws, FrictionRates$High)
-    FrictionLow <- costFriction(..1, a, ..2, ndraws = ndraws, FrictionRates$Low)
+    # FrictionHigh <- costFriction(..1, a, ..2, ndraws = ndraws, FrictionRates$High)
+    # FrictionLow <- costFriction(..1, a, ..2, ndraws = ndraws, FrictionRates$Low)
+    FrictionHigh <- HumanCapital * FrictionRates$High
+    FrictionLow <- HumanCapital * FrictionRates$Low
+    warning('Friction costs assume time off is below the 3 month cap!')
     Deaths <- VSL * ..4
+    WTP = costWTP(..1,a,cases = ..2, separations = ..3,discount = discount, ndraws = ndraws)
 
     out <- list(GP = costList(GP),
                 ED = costList(ED),
@@ -312,7 +339,8 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
                 Tests = costList(Tests),
                 Hospitalisation = Hosp$Foodborne * Costs[..1$DRGCodes[[a]],"Cost"],
                 Deaths = Deaths,
-                WTP = costWTP(..1,cases = ..2, separations = ..3),
+                WTP = WTP$FirstYear,
+                WTPOngoing = WTP$Ongoing,
                 HumanCapital = HumanCapital,
                 FrictionHigh = FrictionHigh,
                 FrictionLow = FrictionLow)
@@ -326,13 +354,13 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
 
 makeCostList <- function(year,
                          diseases,
-                         ndraws = 10^6){
+                         ndraws = 10^6, discount){
   AgeGroups <- c("<5","5-64","65+")
   names(AgeGroups) <- c("<5","5-64", "65+")
 
   map(diseases, function(.d){
     map(AgeGroups, function(.a){
-      estimateCosts(.d,year,.a,ndraws = ndraws)
+      estimateCosts(.d,year,.a,ndraws = ndraws, discount = discount)
     })
   })
 }

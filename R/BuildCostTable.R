@@ -20,7 +20,7 @@ FrictionRates <- getFrictionRates()
 
 
 # Draw from all distributions
-ndraws <- 10^5
+ndraws <- 10^3
 WorkingDiseases <- c("Campylobacteriosis","Salmonellosis","Shigellosis")
 
 
@@ -36,7 +36,7 @@ SequelaeFractions <- calcSequelaeFractions(IncidenceList$Sequel)
 DeathsList <- makeDeathsList(2019,
                              diseases = c(DiseaseAssumptions[WorkingDiseases],SequelaeAssumptions),
                              ndraws = ndraws)
-CostList <- makeCostList(2019, DiseaseAssumptions[WorkingDiseases], ndraws)
+CostList <- makeCostList(2019, DiseaseAssumptions[WorkingDiseases], ndraws, discount = 0.07)
 
 
 

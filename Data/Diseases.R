@@ -9,7 +9,7 @@ gastroRate <- rdist(type = "pert_alt",
                     lowp = 0.025,
                     highp = 0.975)
 
-IBSMultiplier <- rdist("pert_alt",  lowq = 0.072, median = 0.088,  highq = 0.104) # only for Campy, Salmonella and Shigella
+IBSMultiplier <- rdist("pert_alt",  lowq = 0.072, median = 0.088,  highq = 0.104) # only for Campy, Salmonella, and Shigella
 
 GastroDRGCodes = list(`<5` = "G67B",
                       `5-64` = "G67B",
@@ -191,7 +191,6 @@ SequelaeAssumptions <- list(
     gpLong  =    rdist("pert_alt", lowq = 0.25*0.66,  highq = 0.25*0.89,  median = 0.25*0.8),
     ed =         rdist("discrete", value = 0,         continuous = FALSE), #i.e. none
     specialist = rdist("pert_alt", lowq = 0.223,      highq = 0.258,      median = 0.24),
-    ongoing = list(AllAges = rdist("pert_alt", lowq = 0.23, highq = 0.77, median = 0.5)),
     hospPrincipalDiagnosis = rdist("discrete", value = 0.5, continuous = FALSE),
     hospMethod = "AIHW",
     hospCodes = c("M02.1", "M02.3","M02.8","M03.2"),
@@ -232,11 +231,19 @@ SequelaeAssumptions <- list(
         MRI	                        = rdist("pert_alt", lowp = 0.05, highp = 0.95, lowq = 0.002, median=0.01,  highq = 0.03)
       )
     ),
-    duration = c(NonHosp = 365, Hosp = 365 + 10), # complete guesses here -- just placeholders to get the code working
-    severity = c(NonHosp = "mild", Hosp = "severe"),
-    symptoms = "ReA"#,
-    #CarerMissedDays = NULL,
-    #SelfMissedDays = NULL
+    propOngoing = list(`<5` = rdist('pert_alt', mode = 0.2 * 0.41, lowq = 0.2 * 0.29, highq = 0.2 * 0.54),
+                       `5-64` = rdist('pert_alt', mode = 0.2 * 0.41, lowq = 0.2 * 0.29, highq = 0.2 * 0.54),
+                       `65+` = rdist('pert_alt', mode = 0.2 * 0.41, lowq = 0.2 * 0.29, highq = 0.2 * 0.54)),
+    durationOngoing = 10, #this is duration for ongoing illness in years
+    #severityOngoing = 'mild',
+    propSevere = 0.2,
+    symptoms = "ReA",
+    missedWorkCarer = list(`<5` = 5.7,
+                           `5-64` = 1.9,
+                           `65+` = 1.9),
+    missedWorkSelf = list(`<5` = 0,
+                          `5-64` = 4.8,
+                          `65+` = 1.1)
   ),
   IBS = disease(
     name = "IBS",
@@ -249,7 +256,6 @@ SequelaeAssumptions <- list(
     gpLong =     rdist("pert_alt", lowq = 4.27 * 0.25,  highq = 4.73 * 0.25,  median = 4.5 * 0.25),
     ed =         rdist("discrete", value = 0,           continuous = FALSE), #i.e. none
     specialist = rdist("pert_alt", lowq = 0.286,        highq = 0.315,        median = 0.3),
-    ongoing = list(AllAges = rdist("pert_alt", lowq = 0.218, highq = 0.66, median = 0.429)),
     hospPrincipalDiagnosis = rdist("discrete", value = 0.5, continuous = FALSE),
     hospMethod = "AIHW",
     hospCodes = c("K58.0", "K58.9"),
@@ -274,9 +280,19 @@ SequelaeAssumptions <- list(
       `5-64` =  list(Endoscopy_and_biopsy = rdist('pert_alt', lowp = 0.05, highp = 0.95, lowq = 0.05,  median = 0.1,   highq = 0.15)),
       `65+` =   list(Endoscopy_and_biopsy = rdist('pert_alt', lowp = 0.05, highp = 0.95, lowq = 0.15,  median = 0.2,   highq = 0.25))
     ),
-    duration = c(NonHosp = 365, Hosp = 365 + 10), # complete guesses here -- just placeholders to get the code working
-    severity = c(NonHosp = "mild", Hosp = "severe"),
-    symptoms = "IBS"
+    propOngoing = list(`<5` = rdist('pert_alt', mode = 0.429, lowq = 0.218, highq = 0.66),
+                       `5-64` = rdist('pert_alt', mode = 0.429, lowq = 0.218, highq = 0.66),
+                       `65+` = rdist('pert_alt', mode = 0.429, lowq = 0.218, highq = 0.66)),
+    durationOngoing = 10, #this is duration for ongoing illness in years
+    #severityOngoing = 'mild',
+    propSevere = 0.3,
+    symptoms = "IBS",
+    missedWorkCarer = list(`<5` = 2.9,
+                           `5-64` = 1.0,
+                           `65+` = 1.0),
+    missedWorkSelf = list(`<5` = 0,
+                          `5-64` = 2.4,
+                          `65+` = 0.5)
   ),
   GBS = disease(
     name = "GBS",
@@ -289,9 +305,6 @@ SequelaeAssumptions <- list(
     ed = rdist("discrete", value = 0, continuous = FALSE), #i.e. none. CHECK THIS!
     specialist = rdist("pert_alt", lowq = 2.5, median = 3.0, highq = 3.5),
     physio =     rdist("pert_alt", lowq = 5.5, median = 6.0, highq = 6.5),
-    ongoing = list(`<5`   = rdist("pert_alt", lowq = 0.065, median = 0.075, highq = 0.085),
-                   `5-64` = rdist("pert_alt", lowq = 0.14, median = 0.16, highq = 0.18),
-                   `65+`  = rdist("pert_alt", lowq = 0.47, median = 0.49, highq = 0.50)),
     #hospPrincipalDiagnosis = rdist('discrete', value = 0.71, continuous = FALSE),
     hospMethod = "AllCases",
     #hospCodes = "G61.0",
@@ -300,16 +313,26 @@ SequelaeAssumptions <- list(
                      `5-64` = "B06A",
                      `65+` = "B06A"),
     underdiagnosis = rdist('pert', min = 1, mode = 2, max = 3),
-    medicationsToWhom = "None",
-    medications = list(AllAges = list()),
-    testsToWhom = "None",
-    tests = list(AllAges = list()),
-    duration = c(NonHosp = 30, Hosp = 30), # complete guesses here -- just placeholders to get the code working
-    severity = c(NonHosp = "severe", Hosp = "severe"),
-    symptoms = "GBS"
+    medicationsToWhom = "None", #none as they are assumed to be included in hospitalisation costs
+    medications = list(AllAges = list()), #none as they are assumed to be included in hospitalisation costs
+    testsToWhom = "None", #none as they are assumed to be included in hospitalisation costs
+    tests = list(AllAges = list()), #none as they are assumed to be included in hospitalisation costs
+    propOngoing = list(`<5`   = rdist('pert_alt', mode = 0.075, lowq = 0.065, highq = 0.085),
+                       `5-64` = rdist('pert_alt', mode = 0.16,  lowq = 0.14,  highq = 0.18 ),
+                       `65+`  = rdist('pert_alt', mode = 0.49,  lowq = 0.47,  highq = 0.50 )),
+    durationOngoing = 10,
+    #severityOngoing = 'mild',
+    propSevere = 1,
+    symptoms = "GBS",
+    missedWorkCarer = list(`<5` = 51.4,
+                           `5-64` = 17.1,
+                           `65+` = 17.1),
+    missedWorkSelf = list(`<5` = 0,
+                          `5-64` = 43.1,
+                          `65+` = 9.6)
   )
 )
-
+warning('time off work due to non-gastro illnesses do not have uncertainty distributions')
 warning('LOTS OF THE FIGURES IN THE DISEASES FILE NEED TO BE CHECKED e.g.:
         duration of symptoms for all the sequelae
         many of the treatment/test multipliers have been commented out becuase the multipliers include negative numbers')
