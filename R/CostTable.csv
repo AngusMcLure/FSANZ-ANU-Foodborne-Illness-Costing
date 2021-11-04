@@ -1,331 +1,1277 @@
 "","Pathogen","AgeGroup","Disease","CostItem","median","5%","95%"
-"1","Campylobacteriosis","<5","Campylobacteriosis","Deaths",1242010.58297558,229015.632463301,4145084.52249088
-"2","Campylobacteriosis","<5","Campylobacteriosis","ED",1081542.59857821,457348.337682165,2413499.85078837
-"3","Campylobacteriosis","<5","Campylobacteriosis","FrictionHigh",4542636.10643828,2356024.14534597,8691423.70793642
-"4","Campylobacteriosis","<5","Campylobacteriosis","FrictionLow",1703488.53991435,883509.05450474,3259283.89047616
-"5","Campylobacteriosis","<5","Campylobacteriosis","GP",362302.045912543,198957.077684249,686738.905521153
-"6","Campylobacteriosis","<5","Campylobacteriosis","Hospitalisation",508356.478797098,339048.90153318,699351.937978044
-"7","Campylobacteriosis","<5","Campylobacteriosis","HumanCapital",5678295.13304785,2945030.18168247,10864279.6349205
-"8","Campylobacteriosis","<5","Campylobacteriosis","Medications",133889.616456907,57489.3854045247,268256.721557549
-"9","Campylobacteriosis","<5","Campylobacteriosis","Tests",216039.96,216039.96,216039.96
-"10","Campylobacteriosis","<5","Campylobacteriosis","WTP",3672436.88587653,2239186.88298985,5770621.38961624
-"11","Campylobacteriosis","<5","Campylobacteriosis","WTPOngoing",0,0,0
-"12","Campylobacteriosis","<5","GBS","Deaths",53976.999608536,621.086617908159,548685.919750872
-"13","Campylobacteriosis","<5","GBS","ED",0,0,0
-"14","Campylobacteriosis","<5","GBS","FrictionHigh",140399.203023377,70379.5741142935,280624.72547118
-"15","Campylobacteriosis","<5","GBS","FrictionLow",52649.7011337665,26392.3402928601,105234.272051693
-"16","Campylobacteriosis","<5","GBS","GP",1666.0617456528,834.670552380794,3326.08333432471
-"17","Campylobacteriosis","<5","GBS","Hospitalisation",279004.796891641,139860.044489064,557664.451413036
-"18","Campylobacteriosis","<5","GBS","HumanCapital",175499.003779222,87974.4676428669,350780.906838975
-"19","Campylobacteriosis","<5","GBS","Medications",0,0,0
-"20","Campylobacteriosis","<5","GBS","Tests",0,0,0
-"21","Campylobacteriosis","<5","GBS","WTP",13223.4789829032,6628.69018544981,26430.5998854797
-"22","Campylobacteriosis","<5","GBS","WTPOngoing",3788.68730214856,1874.09336986783,7758.1764626053
-"23","Campylobacteriosis","<5","IBS","Deaths",23122.3096809795,189.32292323169,272028.330524556
-"24","Campylobacteriosis","<5","IBS","ED",0,0,0
-"25","Campylobacteriosis","<5","IBS","FrictionHigh",1902014.29653583,1098736.92045109,3094362.61114469
-"26","Campylobacteriosis","<5","IBS","FrictionLow",713255.361200938,412026.345169159,1160385.97917926
-"27","Campylobacteriosis","<5","IBS","GP",497234.286012171,286287.108548132,809114.598234477
-"28","Campylobacteriosis","<5","IBS","Hospitalisation",6592.47120078344,2336.80919306473,14759.419737027
-"29","Campylobacteriosis","<5","IBS","HumanCapital",2377517.87066979,1373421.15056386,3867953.26393086
-"30","Campylobacteriosis","<5","IBS","Medications",67100.8174951218,39140.1955669816,110156.512377038
-"31","Campylobacteriosis","<5","IBS","Tests",437660.925526793,253020.123629743,713146.266906994
-"32","Campylobacteriosis","<5","IBS","WTP",1227434.70821643,709052.415545341,1996897.74974027
-"33","Campylobacteriosis","<5","IBS","WTPOngoing",2240905.70161364,954316.271270285,4620056.35959119
-"34","Campylobacteriosis","<5","ReactiveArthritis","Deaths",63155.2076475385,560.53877580337,630964.389362266
-"35","Campylobacteriosis","<5","ReactiveArthritis","ED",0,0,0
-"36","Campylobacteriosis","<5","ReactiveArthritis","FrictionHigh",3210739.12741548,1488162.94380023,6146190.75435485
-"37","Campylobacteriosis","<5","ReactiveArthritis","FrictionLow",1204027.17278081,558061.103925085,2304821.53288307
-"38","Campylobacteriosis","<5","ReactiveArthritis","GP",74559.5032695663,34261.0876009456,147434.091527294
-"39","Campylobacteriosis","<5","ReactiveArthritis","Hospitalisation",363945.4984631,171750.336713376,648692.458948732
-"40","Campylobacteriosis","<5","ReactiveArthritis","HumanCapital",4013423.90926935,1860203.67975028,7682738.44294357
-"41","Campylobacteriosis","<5","ReactiveArthritis","Medications",153437.898861857,49952.4410593833,460615.13404641
-"42","Campylobacteriosis","<5","ReactiveArthritis","Tests",91843.8099318548,40201.8735012857,189580.813796816
-"43","Campylobacteriosis","<5","ReactiveArthritis","WTP",1426517.80539597,661184.497530431,2730726.53943856
-"44","Campylobacteriosis","<5","ReactiveArthritis","WTPOngoing",656844.499050305,293764.096562055,1403594.48700248
-"45","Campylobacteriosis","5-64","Campylobacteriosis","Deaths",8026707.59878734,4201769.46119489,15421185.0447386
-"46","Campylobacteriosis","5-64","Campylobacteriosis","ED",7828221.41456501,3439612.89892688,17061860.6925591
-"47","Campylobacteriosis","5-64","Campylobacteriosis","FrictionHigh",48168828.5633881,28704354.9901467,82357585.4887872
-"48","Campylobacteriosis","5-64","Campylobacteriosis","FrictionLow",18063310.7112705,10764133.121305,30884094.5582952
-"49","Campylobacteriosis","5-64","Campylobacteriosis","GP",2600834.7360283,1371263.52849156,4824500.16409481
-"50","Campylobacteriosis","5-64","Campylobacteriosis","Hospitalisation",6107990.21612546,3997848.01750165,8447061.71470603
-"51","Campylobacteriosis","5-64","Campylobacteriosis","HumanCapital",60211035.7042351,35880443.7376833,102946981.860984
-"52","Campylobacteriosis","5-64","Campylobacteriosis","Medications",1890657.22571196,1073757.08355829,3425744.62521825
-"53","Campylobacteriosis","5-64","Campylobacteriosis","Tests",1552164.96,1552164.96,1552164.96
-"54","Campylobacteriosis","5-64","Campylobacteriosis","WTP",25686930.5794792,15903860.1682529,42409969.6057315
-"55","Campylobacteriosis","5-64","Campylobacteriosis","WTPOngoing",0,0,0
-"56","Campylobacteriosis","5-64","GBS","Deaths",11774842.865261,4473641.85641118,23973530.6860547
-"57","Campylobacteriosis","5-64","GBS","ED",0,0,0
-"58","Campylobacteriosis","5-64","GBS","FrictionHigh",1204038.90521128,582232.704983641,2419218.76910003
-"59","Campylobacteriosis","5-64","GBS","FrictionLow",451514.589454228,218337.264368865,907207.038412513
-"60","Campylobacteriosis","5-64","GBS","GP",12151.8365790672,5875.54423365009,24396.7845759827
-"61","Campylobacteriosis","5-64","GBS","Hospitalisation",2042933.24341687,987893.78255754,4104769.72554742
-"62","Campylobacteriosis","5-64","GBS","HumanCapital",1505048.63151409,727790.881229551,3024023.46137504
-"63","Campylobacteriosis","5-64","GBS","Medications",0,0,0
-"64","Campylobacteriosis","5-64","GBS","Tests",0,0,0
-"65","Campylobacteriosis","5-64","GBS","WTP",96825.1625375783,46821.3909457043,194546.247233571
-"66","Campylobacteriosis","5-64","GBS","WTPOngoing",58462.5746736448,27809.7129908612,122618.215932571
-"67","Campylobacteriosis","5-64","IBS","Deaths",1816584.02182807,629880.876767711,4404978.05065134
-"68","Campylobacteriosis","5-64","IBS","ED",0,0,0
-"69","Campylobacteriosis","5-64","IBS","FrictionHigh",15614270.6766757,9079036.31883915,26655016.7341006
-"70","Campylobacteriosis","5-64","IBS","FrictionLow",5855351.50375337,3404638.61956468,9995631.27528774
-"71","Campylobacteriosis","5-64","IBS","GP",3484993.43978854,2032201.07242745,5910517.35527965
-"72","Campylobacteriosis","5-64","IBS","Hospitalisation",4496051.7605183,1441028.15363548,9063579.8232746
-"73","Campylobacteriosis","5-64","IBS","HumanCapital",19517838.3458446,11348795.3985489,33318770.9176258
-"74","Campylobacteriosis","5-64","IBS","Medications",471544.006666745,273882.750320058,815208.941023791
-"75","Campylobacteriosis","5-64","IBS","Tests",3601715.29760112,2071679.46011447,6133056.45371916
-"76","Campylobacteriosis","5-64","IBS","WTP",8594594.81829314,4997392.45698815,14671775.1631287
-"77","Campylobacteriosis","5-64","IBS","WTPOngoing",16356425.44237,7615734.43731111,33951226.2953283
-"78","Campylobacteriosis","5-64","ReactiveArthritis","Deaths",76097.2431424216,743.572671162341,742544.836977962
-"79","Campylobacteriosis","5-64","ReactiveArthritis","ED",0,0,0
-"80","Campylobacteriosis","5-64","ReactiveArthritis","FrictionHigh",26491581.0983028,12665401.1976937,52966276.2708795
-"81","Campylobacteriosis","5-64","ReactiveArthritis","FrictionLow",9934342.91186354,4749525.44913512,19862353.6015798
-"82","Campylobacteriosis","5-64","ReactiveArthritis","GP",521157.28112755,245296.448919197,1060967.02970628
-"83","Campylobacteriosis","5-64","ReactiveArthritis","Hospitalisation",2775932.7643536,1539596.50620354,4316408.87971451
-"84","Campylobacteriosis","5-64","ReactiveArthritis","HumanCapital",33114476.3728785,15831751.4971171,66207845.3385994
-"85","Campylobacteriosis","5-64","ReactiveArthritis","Medications",1113215.50907155,366504.884007257,3607002.78856881
-"86","Campylobacteriosis","5-64","ReactiveArthritis","Tests",637361.641446496,292427.972813073,1354103.93269745
-"87","Campylobacteriosis","5-64","ReactiveArthritis","WTP",10013366.4114295,4787305.91691221,20020350.2305605
-"88","Campylobacteriosis","5-64","ReactiveArthritis","WTPOngoing",4672649.10474869,2126497.51864488,10130681.5479718
-"89","Campylobacteriosis","65+","Campylobacteriosis","Deaths",15127520.482639,8293121.51795829,25798436.3931721
-"90","Campylobacteriosis","65+","Campylobacteriosis","ED",2255743.51767115,906427.072999395,4898201.44236472
-"91","Campylobacteriosis","65+","Campylobacteriosis","FrictionHigh",7162476.52879313,2043208.82248675,36209014.811225
-"92","Campylobacteriosis","65+","Campylobacteriosis","FrictionLow",2685928.69829742,766203.308432533,13578380.5542094
-"93","Campylobacteriosis","65+","Campylobacteriosis","GP",744938.2467939,377167.838806895,1362825.28691004
-"94","Campylobacteriosis","65+","Campylobacteriosis","Hospitalisation",13917284.7900311,9273631.88859906,19472415.0924896
-"95","Campylobacteriosis","65+","Campylobacteriosis","HumanCapital",8953095.66099141,2554011.02810844,45261268.5140313
-"96","Campylobacteriosis","65+","Campylobacteriosis","Medications",30692.4613412865,10491.161121593,63244.094232379
-"97","Campylobacteriosis","65+","Campylobacteriosis","Tests",438615.48,438615.48,438615.48
-"98","Campylobacteriosis","65+","Campylobacteriosis","WTP",7393017.87765301,4479754.90845924,12101287.6731546
-"99","Campylobacteriosis","65+","Campylobacteriosis","WTPOngoing",0,0,0
-"100","Campylobacteriosis","65+","GBS","Deaths",66800927.8958872,26091840.2001155,127875930.788656
-"101","Campylobacteriosis","65+","GBS","ED",0,0,0
-"102","Campylobacteriosis","65+","GBS","FrictionHigh",135410.581260346,67901.9058078958,286270.296801192
-"103","Campylobacteriosis","65+","GBS","FrictionLow",50778.9679726296,25463.2146779609,107351.361300447
-"104","Campylobacteriosis","65+","GBS","GP",3363.36199292722,1684.07955671809,7117.90074075743
-"105","Campylobacteriosis","65+","GBS","Hospitalisation",563217.7692442,282426.672720829,1190693.6405158
-"106","Campylobacteriosis","65+","GBS","HumanCapital",169263.226575432,84877.3822598697,357837.87100149
-"107","Campylobacteriosis","65+","GBS","Medications",0,0,0
-"108","Campylobacteriosis","65+","GBS","Tests",0,0,0
-"109","Campylobacteriosis","65+","GBS","WTP",26693.8003122964,13385.6593597765,56433.1241105946
-"110","Campylobacteriosis","65+","GBS","WTPOngoing",49253.089927032,24720.9146608071,103544.134234773
-"111","Campylobacteriosis","65+","IBS","Deaths",22480620.8209252,7617372.5455358,49438210.6634344
-"112","Campylobacteriosis","65+","IBS","ED",0,0,0
-"113","Campylobacteriosis","65+","IBS","FrictionHigh",1830236.73820202,1053386.41671962,3041403.24911379
-"114","Campylobacteriosis","65+","IBS","FrictionLow",686338.776825757,395019.906269857,1140526.21841767
-"115","Campylobacteriosis","65+","IBS","GP",1003279.13322717,576800.803704295,1655141.62293861
-"116","Campylobacteriosis","65+","IBS","Hospitalisation",1093590.89805848,376585.52356807,2398949.41631257
-"117","Campylobacteriosis","65+","IBS","HumanCapital",2287795.92275252,1316733.02089952,3801754.06139224
-"118","Campylobacteriosis","65+","IBS","Medications",135357.285474969,78287.2514485174,226932.195914531
-"119","Campylobacteriosis","65+","IBS","Tests",1181254.96240329,681744.076547738,1985047.29393814
-"120","Campylobacteriosis","65+","IBS","WTP",2467002.72443303,1419874.87502899,4099551.68369865
-"121","Campylobacteriosis","65+","IBS","WTPOngoing",4592526.52195318,1993034.3478372,9422439.00330343
-"122","Campylobacteriosis","65+","ReactiveArthritis","Deaths",108940.510777921,1218.09969905412,1080794.41298993
-"123","Campylobacteriosis","65+","ReactiveArthritis","ED",0,0,0
-"124","Campylobacteriosis","65+","ReactiveArthritis","FrictionHigh",3074175.90925127,1384982.62034179,6318195.78956255
-"125","Campylobacteriosis","65+","ReactiveArthritis","FrictionLow",1152815.96596923,519368.482628172,2369323.42108596
-"126","Campylobacteriosis","65+","ReactiveArthritis","GP",148689.852766928,66213.5973573587,307904.628417506
-"127","Campylobacteriosis","65+","ReactiveArthritis","Hospitalisation",762410.916237187,457330.773918453,1151913.86840168
-"128","Campylobacteriosis","65+","ReactiveArthritis","HumanCapital",3842719.88656409,1731228.27542724,7897744.73695319
-"129","Campylobacteriosis","65+","ReactiveArthritis","Medications",320279.750629733,101300.758394041,946711.819110973
-"130","Campylobacteriosis","65+","ReactiveArthritis","Tests",177537.78289392,80074.9424017346,390422.094877326
-"131","Campylobacteriosis","65+","ReactiveArthritis","WTP",2826375.45138321,1273343.16391797,5808904.24094229
-"132","Campylobacteriosis","65+","ReactiveArthritis","WTPOngoing",1321966.09103251,568195.982791042,2923264.85463579
-"133","Salmonellosis","<5","IBS","Deaths",12820.6077951113,106.973486266766,183769.647355029
-"134","Salmonellosis","<5","IBS","ED",0,0,0
-"135","Salmonellosis","<5","IBS","FrictionHigh",1053550.62207578,587432.525265482,2005709.01687796
-"136","Salmonellosis","<5","IBS","FrictionLow",395081.483278419,220287.196974556,752140.881329234
-"137","Salmonellosis","<5","IBS","GP",275025.494800132,154100.867610335,515710.491628771
-"138","Salmonellosis","<5","IBS","Hospitalisation",3593.11646447628,1143.42788098696,9275.28465918642
-"139","Salmonellosis","<5","IBS","HumanCapital",1316938.27759473,734290.656581852,2507136.27109745
-"140","Salmonellosis","<5","IBS","Medications",37305.3983314933,20609.984668475,70959.3463936727
-"141","Salmonellosis","<5","IBS","Tests",242712.972297622,135425.790540755,463913.119223571
-"142","Salmonellosis","<5","IBS","WTP",679892.155781421,379090.247407346,1294352.44855021
-"143","Salmonellosis","<5","IBS","WTPOngoing",1275406.46650149,549034.95867429,2794484.723184
-"144","Salmonellosis","<5","ReactiveArthritis","Deaths",40166.9357325154,375.731126473004,445419.684638881
-"145","Salmonellosis","<5","ReactiveArthritis","ED",0,0,0
-"146","Salmonellosis","<5","ReactiveArthritis","FrictionHigh",2268997.32267486,647870.988964628,5398440.73440443
-"147","Salmonellosis","<5","ReactiveArthritis","FrictionLow",850873.996003074,242951.620861736,2024415.27540166
-"148","Salmonellosis","<5","ReactiveArthritis","GP",52926.5756365614,14947.5392988354,128069.151011965
-"149","Salmonellosis","<5","ReactiveArthritis","Hospitalisation",254355.886649216,82971.3529750482,488986.639924173
-"150","Salmonellosis","<5","ReactiveArthritis","HumanCapital",2836246.65334358,809838.736205785,6748050.91800553
-"151","Salmonellosis","<5","ReactiveArthritis","Medications",105320.828692038,27757.5718807913,386099.881388076
-"152","Salmonellosis","<5","ReactiveArthritis","Tests",63865.2912731407,18313.4920445234,162316.939321054
-"153","Salmonellosis","<5","ReactiveArthritis","WTP",1008105.90731391,287846.338391708,2398504.37030111
-"154","Salmonellosis","<5","ReactiveArthritis","WTPOngoing",474209.086688959,128222.698764283,1190102.17371958
-"155","Salmonellosis","<5","Salmonellosis","Deaths",2404303.5898241,820016.633717634,5640846.87601823
-"156","Salmonellosis","<5","Salmonellosis","ED",628750.903516102,244281.916051553,1386651.66290517
-"157","Salmonellosis","<5","Salmonellosis","FrictionHigh",2487106.26897643,1252855.58355308,5405670.30454055
-"158","Salmonellosis","<5","Salmonellosis","FrictionLow",932664.850866162,469820.843832404,2027126.36420271
-"159","Salmonellosis","<5","Salmonellosis","GP",206497.446015908,102641.037138961,403899.283363163
-"160","Salmonellosis","<5","Salmonellosis","Hospitalisation",1793772.94071696,1145054.93393795,2637297.09067958
-"161","Salmonellosis","<5","Salmonellosis","HumanCapital",3108882.83622054,1566069.47944135,6757087.88067569
-"162","Salmonellosis","<5","Salmonellosis","Medications",75047.4318139057,28009.7250572488,162424.544198614
-"163","Salmonellosis","<5","Salmonellosis","Tests",213474.6,213474.6,213474.6
-"164","Salmonellosis","<5","Salmonellosis","WTP",2062010.85615472,1216394.37884196,3654308.434105
-"165","Salmonellosis","<5","Salmonellosis","WTPOngoing",0,0,0
-"166","Salmonellosis","5-64","IBS","Deaths",380283.20744273,105366.123882143,1185039.32547317
-"167","Salmonellosis","5-64","IBS","ED",0,0,0
-"168","Salmonellosis","5-64","IBS","FrictionHigh",3293546.22970047,1763979.98064207,5912873.68486456
-"169","Salmonellosis","5-64","IBS","FrictionLow",1235079.83613768,661492.492740778,2217327.63182421
-"170","Salmonellosis","5-64","IBS","GP",735202.740006463,391813.390557622,1322485.20225736
-"171","Salmonellosis","5-64","IBS","Hospitalisation",902086.715292129,268444.374085477,2436820.2359854
-"172","Salmonellosis","5-64","IBS","HumanCapital",4116932.78712559,2204974.97580259,7391092.10608069
-"173","Salmonellosis","5-64","IBS","Medications",99213.8581350997,53578.4130665918,180566.806839167
-"174","Salmonellosis","5-64","IBS","Tests",756646.354632552,402192.778870325,1371629.24812112
-"175","Salmonellosis","5-64","IBS","WTP",1812873.36089777,970951.094363056,3254635.10819439
-"176","Salmonellosis","5-64","IBS","WTPOngoing",3456163.43644009,1377306.47511022,7323471.87066594
-"177","Salmonellosis","5-64","ReactiveArthritis","Deaths",20036.8725546603,194.64318910569,220795.943101036
-"178","Salmonellosis","5-64","ReactiveArthritis","ED",0,0,0
-"179","Salmonellosis","5-64","ReactiveArthritis","FrictionHigh",7015155.65419077,1780431.68605162,18105255.6068615
-"180","Salmonellosis","5-64","ReactiveArthritis","FrictionLow",2630683.37032154,667661.882269356,6789470.85257305
-"181","Salmonellosis","5-64","ReactiveArthritis","GP",139766.456027099,35414.9179466545,358647.582556256
-"182","Salmonellosis","5-64","ReactiveArthritis","Hospitalisation",720953.536894074,186595.779379852,1798136.31951271
-"183","Salmonellosis","5-64","ReactiveArthritis","HumanCapital",8768944.56773846,2225539.60756452,22631569.5085768
-"184","Salmonellosis","5-64","ReactiveArthritis","Medications",290671.339874217,58131.5873579102,1078969.00300068
-"185","Salmonellosis","5-64","ReactiveArthritis","Tests",169394.511456909,41746.6414703331,460050.215078555
-"186","Salmonellosis","5-64","ReactiveArthritis","WTP",2651609.34479384,672972.850385898,6843478.22394439
-"187","Salmonellosis","5-64","ReactiveArthritis","WTPOngoing",1218114.13925725,305338.044894525,3309736.6765408
-"188","Salmonellosis","5-64","Salmonellosis","Deaths",18756801.2916254,10513232.402304,31279250.7701736
-"189","Salmonellosis","5-64","Salmonellosis","ED",1650795.41173758,653238.274084281,3878453.61844175
-"190","Salmonellosis","5-64","Salmonellosis","FrictionHigh",10269586.4390336,5402851.70447315,18358004.9121816
-"191","Salmonellosis","5-64","Salmonellosis","FrictionLow",3851094.91463759,2026069.38917743,6884251.84206809
-"192","Salmonellosis","5-64","Salmonellosis","GP",545013.187828911,255531.474483847,1039372.21326024
-"193","Salmonellosis","5-64","Salmonellosis","Hospitalisation",3684185.36829306,2331011.64639945,5345204.63951311
-"194","Salmonellosis","5-64","Salmonellosis","HumanCapital",12836983.048792,6753564.63059144,22947506.140227
-"195","Salmonellosis","5-64","Salmonellosis","Medications",395312.662420326,195044.278541935,738283.939592577
-"196","Salmonellosis","5-64","Salmonellosis","Tests",556805.28,556805.28,556805.28
-"197","Salmonellosis","5-64","Salmonellosis","WTP",5502059.35750668,3036402.0517017,9597975.86700084
-"198","Salmonellosis","5-64","Salmonellosis","WTPOngoing",0,0,0
-"199","Salmonellosis","65+","IBS","Deaths",3630320.5043704,986441.868914454,10152396.2614668
-"200","Salmonellosis","65+","IBS","ED",0,0,0
-"201","Salmonellosis","65+","IBS","FrictionHigh",293529.909503122,159078.379697345,544290.802435583
-"202","Salmonellosis","65+","IBS","FrictionLow",110073.716063671,59654.3923865045,204109.050913343
-"203","Salmonellosis","65+","IBS","GP",160834.592268007,86726.405794069,299391.735427938
-"204","Salmonellosis","65+","IBS","Hospitalisation",173911.78668876,46971.5713907033,520479.454129423
-"205","Salmonellosis","65+","IBS","HumanCapital",366912.386878903,198847.974621682,680363.503044478
-"206","Salmonellosis","65+","IBS","Medications",21709.6568190001,11748.0671842316,40092.2053826167
-"207","Salmonellosis","65+","IBS","Tests",187325.489167831,103455.877897399,349440.584109386
-"208","Salmonellosis","65+","IBS","WTP",395653.235088135,214424.062155628,733657.490566782
-"209","Salmonellosis","65+","IBS","WTPOngoing",738407.507999545,304061.203952121,1541278.81898791
-"210","Salmonellosis","65+","ReactiveArthritis","Deaths",22412.3932664697,203.347584837406,241381.504785218
-"211","Salmonellosis","65+","ReactiveArthritis","ED",0,0,0
-"212","Salmonellosis","65+","ReactiveArthritis","FrictionHigh",634006.687987205,171462.931744932,1532106.71603308
-"213","Salmonellosis","65+","ReactiveArthritis","FrictionLow",237752.507995202,64298.5994043495,574540.018512406
-"214","Salmonellosis","65+","ReactiveArthritis","GP",30677.2315442716,8265.01292648277,74213.232576237
-"215","Salmonellosis","65+","ReactiveArthritis","Hospitalisation",147803.223194262,41711.2941256785,397971.850933602
-"216","Salmonellosis","65+","ReactiveArthritis","HumanCapital",792508.359984006,214328.664681165,1915133.39504135
-"217","Salmonellosis","65+","ReactiveArthritis","Medications",62637.9183877963,14703.3202313413,232481.80755594
-"218","Salmonellosis","65+","ReactiveArthritis","Tests",36813.5551556543,9628.31043824262,92555.5398481148
-"219","Salmonellosis","65+","ReactiveArthritis","WTP",582901.236571151,157641.799107098,1408608.01038217
-"220","Salmonellosis","65+","ReactiveArthritis","WTPOngoing",267192.148878922,71971.5495835252,670244.353016883
-"221","Salmonellosis","65+","Salmonellosis","Deaths",64848249.36867,41263613.236648,98705907.3178787
-"222","Salmonellosis","65+","Salmonellosis","ED",359989.658150936,152223.300959966,863997.652618048
-"223","Salmonellosis","65+","Salmonellosis","FrictionHigh",1163021.5772191,309187.199809938,6038952.6320371
-"224","Salmonellosis","65+","Salmonellosis","FrictionLow",436133.091457164,115945.199928727,2264607.23701391
-"225","Salmonellosis","65+","Salmonellosis","GP",119806.65090401,61416.9683683493,242742.778679332
-"226","Salmonellosis","65+","Salmonellosis","Hospitalisation",5537379.46792379,3504496.94749212,7876607.25057882
-"227","Salmonellosis","65+","Salmonellosis","HumanCapital",1453776.97152388,386483.999762423,7548690.79004638
-"228","Salmonellosis","65+","Salmonellosis","Medications",4807.2618143204,1524.30114913724,10701.6579823598
-"229","Salmonellosis","65+","Salmonellosis","Tests",126008.04,126008.04,126008.04
-"230","Salmonellosis","65+","Salmonellosis","WTP",1237682.0542603,716667.11234555,2152090.01669717
-"231","Salmonellosis","65+","Salmonellosis","WTPOngoing",0,0,0
-"232","Shigellosis","<5","IBS","Deaths",221.78183882223,1.89889218886052,3518.43548522371
-"233","Shigellosis","<5","IBS","ED",0,0,0
-"234","Shigellosis","<5","IBS","FrictionHigh",19272.9332257128,6102.79305956571,43770.0708127408
-"235","Shigellosis","<5","IBS","FrictionLow",7227.34995964231,2288.54739733714,16413.7765547778
-"236","Shigellosis","<5","IBS","GP",5061.20308301439,1620.56819857029,11390.7871799768
-"237","Shigellosis","<5","IBS","Hospitalisation",63.8521779505377,13.1602048043949,234.204334042917
-"238","Shigellosis","<5","IBS","HumanCapital",24091.166532141,7628.49132445714,54712.588515926
-"239","Shigellosis","<5","IBS","Medications",678.149683905034,216.845103733745,1554.01385355985
-"240","Shigellosis","<5","IBS","Tests",4442.61935306792,1412.98220735548,10115.2971809666
-"241","Shigellosis","<5","IBS","WTP",12437.4812605053,3938.34054350505,28246.3198065856
-"242","Shigellosis","<5","IBS","WTPOngoing",22818.3535468484,6785.74746363092,62753.9901983452
-"243","Shigellosis","<5","ReactiveArthritis","Deaths",709.383245289156,4.16479166835833,7556.0237156838
-"244","Shigellosis","<5","ReactiveArthritis","ED",0,0,0
-"245","Shigellosis","<5","ReactiveArthritis","FrictionHigh",35976.2250208082,11296.2292786605,82095.8452404895
-"246","Shigellosis","<5","ReactiveArthritis","FrictionLow",13491.0843828031,4236.08597949769,30785.9419651836
-"247","Shigellosis","<5","ReactiveArthritis","GP",840.946867744787,274.662595843342,1983.7802491539
-"248","Shigellosis","<5","ReactiveArthritis","Hospitalisation",4072.07857102961,1027.74262046805,11492.1160131174
-"249","Shigellosis","<5","ReactiveArthritis","HumanCapital",44970.2812760103,14120.2865983256,102619.806550612
-"250","Shigellosis","<5","ReactiveArthritis","Medications",1799.59904850523,469.138264534991,6158.05841977085
-"251","Shigellosis","<5","ReactiveArthritis","Tests",1027.39225530158,317.914130627851,2413.20614660015
-"252","Shigellosis","<5","ReactiveArthritis","WTP",15984.0845134079,5018.86685911347,36474.8365834567
-"253","Shigellosis","<5","ReactiveArthritis","WTPOngoing",7410.18768014868,2252.39278507023,17867.5491897823
-"254","Shigellosis","<5","Shigellosis","Deaths",78602.2810935336,7042.09930407343,361646.716583355
-"255","Shigellosis","<5","Shigellosis","ED",11055.5978746245,3030.70963119984,32340.8222296095
-"256","Shigellosis","<5","Shigellosis","FrictionHigh",45359.0628434398,13964.3182677381,120656.679715496
-"257","Shigellosis","<5","Shigellosis","FrictionLow",17009.6485662899,5236.61935040179,45246.2548933109
-"258","Shigellosis","<5","Shigellosis","GP",3702.64986156664,1168.22389587761,9130.5137447595
-"259","Shigellosis","<5","Shigellosis","Hospitalisation",36449.0469527531,13478.0957351956,71747.8737823412
-"260","Shigellosis","<5","Shigellosis","HumanCapital",56698.8285542998,17455.3978346726,150820.84964437
-"261","Shigellosis","<5","Shigellosis","Medications",2421.25934027092,767.395525159403,6182.33422021182
-"262","Shigellosis","<5","Shigellosis","Tests",26875.2,26875.2,26875.2
-"263","Shigellosis","<5","Shigellosis","WTP",43583.6304697555,18235.6169270307,93196.8329150498
-"264","Shigellosis","<5","Shigellosis","WTPOngoing",0,0,0
-"265","Shigellosis","5-64","IBS","Deaths",14003.4639721409,3385.15863199038,52318.4112179464
-"266","Shigellosis","5-64","IBS","ED",0,0,0
-"267","Shigellosis","5-64","IBS","FrictionHigh",125710.742006332,45744.9671507215,280249.308625977
-"268","Shigellosis","5-64","IBS","FrictionLow",47141.5282523747,17154.3626815205,105093.490734742
-"269","Shigellosis","5-64","IBS","GP",28117.3811219269,10227.7987109853,62596.8316290629
-"270","Shigellosis","5-64","IBS","Hospitalisation",35107.1806391022,7931.68461512629,122163.889070743
-"271","Shigellosis","5-64","IBS","HumanCapital",157138.427507916,57181.2089384018,350311.635782472
-"272","Shigellosis","5-64","IBS","Medications",3806.91488460883,1386.55566240871,8487.24019422478
-"273","Shigellosis","5-64","IBS","Tests",28981.8362718058,10333.970785454,64815.1666754471
-"274","Shigellosis","5-64","IBS","WTP",69195.2198231932,25179.4954614099,154258.197876961
-"275","Shigellosis","5-64","IBS","WTPOngoing",128307.892603231,37057.0581074925,329470.910386865
-"276","Shigellosis","5-64","ReactiveArthritis","Deaths",629.609695548168,4.82749261404478,9212.8690794774
-"277","Shigellosis","5-64","ReactiveArthritis","ED",0,0,0
-"278","Shigellosis","5-64","ReactiveArthritis","FrictionHigh",229792.096525534,82457.0958139876,529218.817240135
-"279","Shigellosis","5-64","ReactiveArthritis","FrictionLow",86172.0361970752,30921.4109302453,198457.05646505
-"280","Shigellosis","5-64","ReactiveArthritis","GP",4582.71673102215,1550.14597065372,10615.3105215762
-"281","Shigellosis","5-64","ReactiveArthritis","Hospitalisation",23166.3805612839,6672.26188056233,76046.6176315779
-"282","Shigellosis","5-64","ReactiveArthritis","HumanCapital",287240.120656917,103071.369767484,661523.521550168
-"283","Shigellosis","5-64","ReactiveArthritis","Medications",9787.78077367559,2574.34519652482,33314.3657776454
-"284","Shigellosis","5-64","ReactiveArthritis","Tests",5632.02752304923,1868.56358377879,13183.3958826443
-"285","Shigellosis","5-64","ReactiveArthritis","WTP",86857.4983283334,31167.3776866683,200035.698480386
-"286","Shigellosis","5-64","ReactiveArthritis","WTPOngoing",41448.628944891,13965.6676306945,97939.4312803466
-"287","Shigellosis","5-64","Shigellosis","Deaths",332731.249944561,84796.2567520313,974724.597869695
-"288","Shigellosis","5-64","Shigellosis","ED",60831.4605849719,17167.6886723346,170914.198022303
-"289","Shigellosis","5-64","Shigellosis","FrictionHigh",388331.8158212,129650.732713594,862887.785370356
-"290","Shigellosis","5-64","Shigellosis","FrictionLow",145624.43093295,48619.0247675977,323582.919513883
-"291","Shigellosis","5-64","Shigellosis","GP",20407.4093917217,7028.33525169041,49236.8710200345
-"292","Shigellosis","5-64","Shigellosis","Hospitalisation",126058.236051277,50511.0372292844,246990.958087811
-"293","Shigellosis","5-64","Shigellosis","HumanCapital",485414.769776499,162063.415891992,1078609.73171294
-"294","Shigellosis","5-64","Shigellosis","Medications",20076.1709531377,6998.35250058031,45747.6591140966
-"295","Shigellosis","5-64","Shigellosis","Tests",148974.12,148974.12,148974.12
-"296","Shigellosis","5-64","Shigellosis","WTP",226186.119829044,95683.9353176738,469187.719471978
-"297","Shigellosis","5-64","Shigellosis","WTPOngoing",0,0,0
-"298","Shigellosis","65+","IBS","Deaths",68717.9921221683,12966.2699944825,239494.661729007
-"299","Shigellosis","65+","IBS","ED",0,0,0
-"300","Shigellosis","65+","IBS","FrictionHigh",5926.76908303545,1918.7001432836,13006.7027024571
-"301","Shigellosis","65+","IBS","FrictionLow",2222.53840613829,719.512553731348,4877.5135134214
-"302","Shigellosis","65+","IBS","GP",3209.61434607634,1049.72475173522,7243.16967367937
-"303","Shigellosis","65+","IBS","Hospitalisation",3302.48132173093,706.597448811591,11096.9527699071
-"304","Shigellosis","65+","IBS","HumanCapital",7408.46135379432,2398.37517910449,16258.3783780713
-"305","Shigellosis","65+","IBS","Medications",434.158365787937,144.117398817383,984.169934136785
-"306","Shigellosis","65+","IBS","Tests",3779.33723912319,1232.12595706664,8499.6339597808
-"307","Shigellosis","65+","IBS","WTP",7988.77826553609,2586.24383504655,17531.9237851023
-"308","Shigellosis","65+","IBS","WTPOngoing",14620.6707408229,4094.41215369414,38198.7837552259
-"309","Shigellosis","65+","ReactiveArthritis","Deaths",397.776177381026,3.82877922120918,4778.62885086642
-"310","Shigellosis","65+","ReactiveArthritis","ED",0,0,0
-"311","Shigellosis","65+","ReactiveArthritis","FrictionHigh",10818.0421537493,3564.06065978934,25078.4152240723
-"312","Shigellosis","65+","ReactiveArthritis","FrictionLow",4056.76580765598,1336.522747421,9404.40570902713
-"313","Shigellosis","65+","ReactiveArthritis","GP",516.042403937867,172.559246312024,1224.72989126122
-"314","Shigellosis","65+","ReactiveArthritis","Hospitalisation",2547.01883277639,699.076217479012,8440.86881408584
-"315","Shigellosis","65+","ReactiveArthritis","HumanCapital",13522.5526921866,4455.07582473668,31348.0190300904
-"316","Shigellosis","65+","ReactiveArthritis","Medications",1032.95845541421,276.7896016435,3635.3452641967
-"317","Shigellosis","65+","ReactiveArthritis","Tests",631.966319044761,206.807716269228,1529.92681163933
-"318","Shigellosis","65+","ReactiveArthritis","WTP",9946.03096178468,3276.77200441098,23056.9164684451
-"319","Shigellosis","65+","ReactiveArthritis","WTPOngoing",4670.99093134348,1409.43488095605,11778.4923280095
-"320","Shigellosis","65+","Shigellosis","Deaths",28662.6308339631,257.331551150961,283080.109965844
-"321","Shigellosis","65+","Shigellosis","ED",7388.59578397043,2027.03354502925,21086.5544104981
-"322","Shigellosis","65+","Shigellosis","FrictionHigh",22208.1428371072,4367.55061296273,129993.051819355
-"323","Shigellosis","65+","Shigellosis","FrictionLow",8328.05356391519,1637.83147986102,48747.394432258
-"324","Shigellosis","65+","Shigellosis","GP",2329.48217777625,770.339448377677,6255.28299628096
-"325","Shigellosis","65+","Shigellosis","Hospitalisation",41656.6926319964,14722.5910615773,79540.345258241
-"326","Shigellosis","65+","Shigellosis","HumanCapital",27760.178546384,5459.43826620341,162491.314774193
-"327","Shigellosis","65+","Shigellosis","Medications",671.420275744368,225.662355486463,1684.22912283859
-"328","Shigellosis","65+","Shigellosis","Tests",16613.76,16613.76,16613.76
-"329","Shigellosis","65+","Shigellosis","WTP",25744.2525995247,10257.8340368136,56960.0570811426
-"330","Shigellosis","65+","Shigellosis","WTPOngoing",0,0,0
+"1","All Pathogens","<5","All Diseases","Deaths",10718029.9234735,6500111.47136754,17241732.574868
+"2","All Pathogens","<5","All Diseases","ED",6199519.13207792,3806203.5484877,10509678.577993
+"3","All Pathogens","<5","All Diseases","FrictionHigh",68255097.5258217,40738059.0111677,115692180.283075
+"4","All Pathogens","<5","All Diseases","FrictionLow",25595661.5721832,15276772.1291879,43384567.606153
+"5","All Pathogens","<5","All Diseases","GP",3792031.95531526,2641597.9291684,5374311.03994726
+"6","All Pathogens","<5","All Diseases","Hospitalisation",12601891.2777042,8119015.20750935,19246978.3732166
+"7","All Pathogens","<5","All Diseases","HumanCapital",85318871.9072772,50922573.7639597,144615225.353843
+"8","All Pathogens","<5","All Diseases","Medications",2742485.68762458,1723865.37882575,4426525.55438399
+"9","All Pathogens","<5","All Diseases","Tests",1905260.57274257,1455298.15298499,2637426.35274131
+"10","All Pathogens","<5","All Diseases","WTP",20881589.2389367,15058649.5606625,27720088.5673078
+"11","All Pathogens","<5","All Diseases","WTPOngoing",3601807.36814644,2207918.87266982,5670083.28082715
+"12","All Pathogens","<5","Campylobacteriosis","Deaths",1200337.74325805,240804.132616463,4016878.4984849
+"13","All Pathogens","<5","Campylobacteriosis","ED",1104668.80464585,503379.290680901,2196594.18400953
+"14","All Pathogens","<5","Campylobacteriosis","FrictionHigh",4454784.5412414,2216371.76481351,8882163.12762332
+"15","All Pathogens","<5","Campylobacteriosis","FrictionLow",1670544.20296552,831139.411805067,3330811.17285874
+"16","All Pathogens","<5","Campylobacteriosis","GP",362489.541449749,199319.676118794,631071.741444094
+"17","All Pathogens","<5","Campylobacteriosis","Hospitalisation",502856.658621493,338484.998306689,699407.154125088
+"18","All Pathogens","<5","Campylobacteriosis","HumanCapital",5568480.67655174,2770464.70601689,11102703.9095291
+"19","All Pathogens","<5","Campylobacteriosis","Medications",156952.894692333,76562.7080145548,316026.625290468
+"20","All Pathogens","<5","Campylobacteriosis","Tests",216039.96,216039.96,216039.96
+"21","All Pathogens","<5","Campylobacteriosis","WTP",3530272.7772693,2172605.82142567,5651142.07370168
+"22","All Pathogens","<5","Campylobacteriosis","WTPOngoing",0,0,0
+"23","All Pathogens","<5","Gastroenteritis","Deaths",5398186.01645122,2693167.88305879,10670356.1973503
+"24","All Pathogens","<5","Gastroenteritis","ED",4319039.40304969,2079761.44095781,8788365.13108465
+"25","All Pathogens","<5","Gastroenteritis","FrictionHigh",50758510.718576,24072147.6981978,96822238.8746237
+"26","All Pathogens","<5","Gastroenteritis","FrictionLow",19034441.519466,9027055.38682417,36308339.5779839
+"27","All Pathogens","<5","Gastroenteritis","GP",2206750.25212081,1203892.07574554,3607870.7758039
+"28","All Pathogens","<5","Gastroenteritis","Hospitalisation",9123925.52586955,4680129.40225915,15574931.3105946
+"29","All Pathogens","<5","Gastroenteritis","HumanCapital",63448138.39822,30090184.6227472,121027798.59328
+"30","All Pathogens","<5","Gastroenteritis","Medications",1999095.98929347,1069386.23994691,3644841.06692617
+"31","All Pathogens","<5","Gastroenteritis","Tests",528493.206691568,229329.273472173,1167625.91676904
+"32","All Pathogens","<5","Gastroenteritis","WTP",10005206.1333993,5844952.22525201,15629889.3368674
+"33","All Pathogens","<5","Gastroenteritis","WTPOngoing",0,0,0
+"34","All Pathogens","<5","GBS","Deaths",61269.6061505048,305.369226355921,635999.789634196
+"35","All Pathogens","<5","GBS","ED",0,0,0
+"36","All Pathogens","<5","GBS","FrictionHigh",137948.463630468,69523.2688310878,285180.511734691
+"37","All Pathogens","<5","GBS","FrictionLow",51730.6738614253,26071.2258116579,106942.691900509
+"38","All Pathogens","<5","GBS","GP",1632.99529532042,824.619643304733,3357.37840832903
+"39","All Pathogens","<5","GBS","Hospitalisation",274134.626464539,138158.373279589,566717.823467583
+"40","All Pathogens","<5","GBS","HumanCapital",172435.579538084,86904.0860388598,356475.639668364
+"41","All Pathogens","<5","GBS","Medications",0,0,0
+"42","All Pathogens","<5","GBS","Tests",0,0,0
+"43","All Pathogens","<5","GBS","WTP",12992.6564414866,6548.03919405113,26859.6859672298
+"44","All Pathogens","<5","GBS","WTPOngoing",2691.30396445738,1341.41385223881,5503.90045824111
+"45","All Pathogens","<5","IBS","Deaths",31571.6094252567,155.524511960511,311418.571794263
+"46","All Pathogens","<5","IBS","ED",0,0,0
+"47","All Pathogens","<5","IBS","FrictionHigh",3013602.06243125,2055215.58901907,4387580.47519056
+"48","All Pathogens","<5","IBS","FrictionLow",1130100.77341172,770705.845882152,1645342.67819646
+"49","All Pathogens","<5","IBS","GP",788302.471257446,539697.761868908,1150634.84758739
+"50","All Pathogens","<5","IBS","Hospitalisation",8882.83616800362,4893.25904249705,16571.09861479
+"51","All Pathogens","<5","IBS","HumanCapital",3767002.57803906,2569019.48627384,5484475.5939882
+"52","All Pathogens","<5","IBS","Medications",106633.465242062,73102.2150057305,155794.721490857
+"53","All Pathogens","<5","IBS","Tests",694378.339074967,477165.991876919,1024657.01602376
+"54","All Pathogens","<5","IBS","WTP",1944780.21270281,1326300.728351,2831455.35243887
+"55","All Pathogens","<5","IBS","WTPOngoing",2701427.59742891,1549571.33712546,4458899.33718759
+"56","All Pathogens","<5","ReactiveArthritis","Deaths",115935.966449742,943.120961001195,992327.891203117
+"57","All Pathogens","<5","ReactiveArthritis","ED",0,0,0
+"58","All Pathogens","<5","ReactiveArthritis","FrictionHigh",5651739.3390113,2939093.32764609,9771739.8113351
+"59","All Pathogens","<5","ReactiveArthritis","FrictionLow",2119402.25212924,1102159.99786728,3664402.42925066
+"60","All Pathogens","<5","ReactiveArthritis","GP",131716.674911091,69030.5998522037,230624.033817377
+"61","All Pathogens","<5","ReactiveArthritis","Hospitalisation",641065.790742604,460038.378763165,840002.294612427
+"62","All Pathogens","<5","ReactiveArthritis","HumanCapital",7064674.17376412,3673866.65955761,12214674.7641689
+"63","All Pathogens","<5","ReactiveArthritis","Medications",300922.70976617,124924.136837556,670739.003950149
+"64","All Pathogens","<5","ReactiveArthritis","Tests",160791.203402955,83953.5485461234,286889.790202477
+"65","All Pathogens","<5","ReactiveArthritis","WTP",2511043.86828409,1305826.7262537,4341542.64092671
+"66","All Pathogens","<5","ReactiveArthritis","WTPOngoing",861921.31259889,434992.544522068,1544783.4959915
+"67","All Pathogens","<5","Salmonellosis","Deaths",2371890.08030722,755155.822201559,5808613.71004797
+"68","All Pathogens","<5","Salmonellosis","ED",598566.09730067,263215.98918194,1373491.86462749
+"69","All Pathogens","<5","Salmonellosis","FrictionHigh",2852026.92399187,1487991.69242783,5452296.50346181
+"70","All Pathogens","<5","Salmonellosis","FrictionLow",1069510.09649695,557996.884660435,2044611.18879818
+"71","All Pathogens","<5","Salmonellosis","GP",208080.180420132,104099.411899985,399935.538161372
+"72","All Pathogens","<5","Salmonellosis","Hospitalisation",1827684.20002583,1114906.3434306,2622435.50665891
+"73","All Pathogens","<5","Salmonellosis","HumanCapital",3565033.65498983,1859989.61553478,6815370.62932726
+"74","All Pathogens","<5","Salmonellosis","Medications",91409.3211285378,40108.1605375579,193498.078390659
+"75","All Pathogens","<5","Salmonellosis","Tests",213657.84,213657.84,213657.84
+"76","All Pathogens","<5","Salmonellosis","WTP",2130385.10611372,1174028.00209848,3707241.88548192
+"77","All Pathogens","<5","Salmonellosis","WTPOngoing",0,0,0
+"78","All Pathogens","<5","Shigellosis","Deaths",80243.6696077581,6845.84504977001,394970.020645289
+"79","All Pathogens","<5","Shigellosis","ED",11133.7871579994,3124.19369165587,30200.3378452519
+"80","All Pathogens","<5","Shigellosis","FrictionHigh",49761.1232297993,19298.5727618052,130730.689533501
+"81","All Pathogens","<5","Shigellosis","FrictionLow",18660.4212111747,7236.96478567696,49024.0085750627
+"82","All Pathogens","<5","Shigellosis","GP",3853.94454001149,1171.95721615614,9121.94484408079
+"83","All Pathogens","<5","Shigellosis","Hospitalisation",37768.0290424247,14815.9601477588,74072.6254783805
+"84","All Pathogens","<5","Shigellosis","HumanCapital",62201.4040372492,24123.2159522565,163413.361916876
+"85","All Pathogens","<5","Shigellosis","Medications",2430.79768011748,776.582233477265,5728.09883262234
+"86","All Pathogens","<5","Shigellosis","Tests",26875.2,26875.2,26875.2
+"87","All Pathogens","<5","Shigellosis","WTP",38654.496188237,13002.017868137,85002.7455565936
+"88","All Pathogens","<5","Shigellosis","WTPOngoing",0,0,0
+"89","All Pathogens","<5","Toxoplasma","Deaths",136566.983697032,7281.98045747366,948114.365726921
+"90","All Pathogens","<5","Toxoplasma","ED",0,0,0
+"91","All Pathogens","<5","Toxoplasma","FrictionHigh",465878.16585805,168232.5834981,1033843.00284258
+"92","All Pathogens","<5","Toxoplasma","FrictionLow",174704.312196769,63087.2188117874,387691.126065968
+"93","All Pathogens","<5","Toxoplasma","GP",38298.9262676734,14832.3764873963,74352.7651190909
+"94","All Pathogens","<5","Toxoplasma","Hospitalisation",70982.2242511299,26608.2969965364,132992.862994595
+"95","All Pathogens","<5","Toxoplasma","HumanCapital",582347.707322563,210290.729372625,1292303.75355323
+"96","All Pathogens","<5","Toxoplasma","Medications",11227.7626426005,4348.27862959542,21797.3525613645
+"97","All Pathogens","<5","Toxoplasma","Tests",20903.801046743,8095.60677957245,40582.2188972587
+"98","All Pathogens","<5","Toxoplasma","WTP",156049.183328406,62183.5797364805,279240.372843083
+"99","All Pathogens","<5","Toxoplasma","WTPOngoing",0,0,0
+"100","All Pathogens","<5","Typhoid Fever","Deaths",20086.3578867677,126.797598451038,205496.385463626
+"101","All Pathogens","<5","Typhoid Fever","ED",1146.1436057215,361.58452392151,2700.50702283963
+"102","All Pathogens","<5","Typhoid Fever","FrictionHigh",2506.63939949864,790.792715141538,5906.06383727228
+"103","All Pathogens","<5","Typhoid Fever","FrictionLow",939.98977481199,296.547268178076,2214.7739389771
+"104","All Pathogens","<5","Typhoid Fever","GP",309.107833678373,95.3162038590129,783.013525534843
+"105","All Pathogens","<5","Typhoid Fever","Hospitalisation",28929.9112897645,9126.78668587611,68163.7346473321
+"106","All Pathogens","<5","Typhoid Fever","HumanCapital",3133.2992493733,988.490893926922,7382.57979659035
+"107","All Pathogens","<5","Typhoid Fever","Medications",0,0,0
+"108","All Pathogens","<5","Typhoid Fever","Tests",0,0,0
+"109","All Pathogens","<5","Typhoid Fever","WTP",2015.40180531723,635.817447873333,4748.62547933227
+"110","All Pathogens","<5","Typhoid Fever","WTPOngoing",0,0,0
+"111","All Pathogens","5-64","All Diseases","Deaths",105285219.631319,74500303.0110199,154026578.533911
+"112","All Pathogens","5-64","All Diseases","ED",65953413.0013417,35384516.5020502,121585236.624186
+"113","All Pathogens","5-64","All Diseases","FrictionHigh",1071253383.40303,637907290.698009,1664984881.49742
+"114","All Pathogens","5-64","All Diseases","FrictionLow",401720018.776137,239215234.011753,624369330.561533
+"115","All Pathogens","5-64","All Diseases","GP",36026999.973628,23365837.8023334,55014126.1751121
+"116","All Pathogens","5-64","All Diseases","Hospitalisation",74766848.6289308,49497363.2381072,119449976.10588
+"117","All Pathogens","5-64","All Diseases","HumanCapital",1339066729.25379,797384113.372511,2081231101.87178
+"118","All Pathogens","5-64","All Diseases","Medications",23720122.8276999,14792917.0061535,35765962.9940337
+"119","All Pathogens","5-64","All Diseases","Tests",14675756.8200033,10049961.039228,23128285.3808559
+"120","All Pathogens","5-64","All Diseases","WTP",181906106.891019,121836776.811485,256328967.397748
+"121","All Pathogens","5-64","All Diseases","WTPOngoing",19222015.8948529,10979504.1492813,32287707.3360836
+"122","All Pathogens","5-64","Campylobacteriosis","Deaths",8388181.92899259,4234675.27601712,15182985.6647426
+"123","All Pathogens","5-64","Campylobacteriosis","ED",7826926.83810978,3522430.40327653,15908880.9283524
+"124","All Pathogens","5-64","Campylobacteriosis","FrictionHigh",49004040.7543353,28037149.4361114,83795416.702818
+"125","All Pathogens","5-64","Campylobacteriosis","FrictionLow",18376515.2828757,10513931.0385418,31423281.2635567
+"126","All Pathogens","5-64","Campylobacteriosis","GP",2625819.69782323,1407371.1995057,4689824.7144536
+"127","All Pathogens","5-64","Campylobacteriosis","Hospitalisation",6103165.81919586,3972967.82845094,8524878.5966817
+"128","All Pathogens","5-64","Campylobacteriosis","HumanCapital",61255050.9429191,35046436.7951392,104744270.878523
+"129","All Pathogens","5-64","Campylobacteriosis","Medications",1833946.68140076,1021051.94178243,3292109.51227869
+"130","All Pathogens","5-64","Campylobacteriosis","Tests",1552226.04,1552226.04,1552226.04
+"131","All Pathogens","5-64","Campylobacteriosis","WTP",25570782.6393997,15304109.9562113,42342184.1241692
+"132","All Pathogens","5-64","Campylobacteriosis","WTPOngoing",0,0,0
+"133","All Pathogens","5-64","Gastroenteritis","Deaths",56593011.8622281,30116697.1223147,102570550.616947
+"134","All Pathogens","5-64","Gastroenteritis","ED",55229723.5820213,25605921.5525651,109345545.080008
+"135","All Pathogens","5-64","Gastroenteritis","FrictionHigh",943544287.036482,517964436.884578,1548026134.43829
+"136","All Pathogens","5-64","Gastroenteritis","FrictionLow",353829107.638681,194236663.831717,580509800.414359
+"137","All Pathogens","5-64","Gastroenteritis","GP",27265905.7667573,14962952.6298439,45508766.8756066
+"138","All Pathogens","5-64","Gastroenteritis","Hospitalisation",52294261.3787587,26708822.6870013,95393262.0244081
+"139","All Pathogens","5-64","Gastroenteritis","HumanCapital",1179430358.7956,647455546.105722,1935032668.04786
+"140","All Pathogens","5-64","Gastroenteritis","Medications",18929511.2107466,10601251.2311532,30765291.1760404
+"141","All Pathogens","5-64","Gastroenteritis","Tests",6549270.4819673,2913253.94661237,15067537.2436343
+"142","All Pathogens","5-64","Gastroenteritis","WTP",121336405.378917,70965028.4860526,194083056.714975
+"143","All Pathogens","5-64","Gastroenteritis","WTPOngoing",0,0,0
+"144","All Pathogens","5-64","GBS","Deaths",12149558.041667,5217043.75949453,23034295.1541837
+"145","All Pathogens","5-64","GBS","ED",0,0,0
+"146","All Pathogens","5-64","GBS","FrictionHigh",1187694.47727469,577178.889397466,2524447.27373798
+"147","All Pathogens","5-64","GBS","FrictionLow",445385.42897801,216442.08352405,946667.727651744
+"148","All Pathogens","5-64","GBS","GP",12042.9953311545,5793.28930726754,25524.474292754
+"149","All Pathogens","5-64","GBS","Hospitalisation",2015201.10367308,979318.803939815,4283314.46305504
+"150","All Pathogens","5-64","GBS","HumanCapital",1484618.09659337,721473.611746832,3155559.09217248
+"151","All Pathogens","5-64","GBS","Medications",0,0,0
+"152","All Pathogens","5-64","GBS","Tests",0,0,0
+"153","All Pathogens","5-64","GBS","WTP",95510.7931391364,46414.9784008534,203008.404910584
+"154","All Pathogens","5-64","GBS","WTPOngoing",41823.202101028,20454.4461255265,89450.3786889395
+"155","All Pathogens","5-64","IBS","Deaths",1782811.04773715,764144.346177924,4676860.69884347
+"156","All Pathogens","5-64","IBS","ED",0,0,0
+"157","All Pathogens","5-64","IBS","FrictionHigh",19370985.8969708,12529158.9110496,30300445.3911769
+"158","All Pathogens","5-64","IBS","FrictionLow",7264119.71136405,4698434.59164361,11362667.0216913
+"159","All Pathogens","5-64","IBS","GP",4334050.02601422,2799761.91378284,6896206.55330076
+"160","All Pathogens","5-64","IBS","Hospitalisation",4475114.81884061,2491948.79456216,9433972.21709281
+"161","All Pathogens","5-64","IBS","HumanCapital",24213732.3712135,15661448.638812,37875556.7389711
+"162","All Pathogens","5-64","IBS","Medications",586970.75055706,377961.043418485,913812.465517549
+"163","All Pathogens","5-64","IBS","Tests",4442379.62602405,2860536.92976942,6932703.18200601
+"164","All Pathogens","5-64","IBS","WTP",10662411.2302618,6896450.46408307,16678335.8853894
+"165","All Pathogens","5-64","IBS","WTPOngoing",14827359.8111293,7814215.06525911,25433403.8627281
+"166","All Pathogens","5-64","ReactiveArthritis","Deaths",117787.544386035,594.49718624403,922086.117668261
+"167","All Pathogens","5-64","ReactiveArthritis","ED",0,0,0
+"168","All Pathogens","5-64","ReactiveArthritis","FrictionHigh",34398456.6564388,18689254.1806821,64228750.1667351
+"169","All Pathogens","5-64","ReactiveArthritis","FrictionLow",12899421.2461645,7008470.3177558,24085781.3125257
+"170","All Pathogens","5-64","ReactiveArthritis","GP",685435.908545196,363073.062224793,1286676.11137982
+"171","All Pathogens","5-64","ReactiveArthritis","Hospitalisation",3652943.84205146,2520234.69295057,5060139.40400853
+"172","All Pathogens","5-64","ReactiveArthritis","HumanCapital",42998070.8205485,23361567.7258527,80285937.7084189
+"173","All Pathogens","5-64","ReactiveArthritis","Medications",1529446.33163637,634336.760700786,3718526.57280639
+"174","All Pathogens","5-64","ReactiveArthritis","Tests",840108.79792191,441978.734869866,1606491.30352544
+"175","All Pathogens","5-64","ReactiveArthritis","WTP",13002030.6908244,7064219.73732251,24277373.5241074
+"176","All Pathogens","5-64","ReactiveArthritis","WTPOngoing",4502563.37090459,2376102.15006099,8581801.72349265
+"177","All Pathogens","5-64","Salmonellosis","Deaths",19233168.9902354,10931403.8594656,31316088.8515649
+"178","All Pathogens","5-64","Salmonellosis","ED",1644781.94343767,723559.437955995,3555335.4430316
+"179","All Pathogens","5-64","Salmonellosis","FrictionHigh",10541889.402347,6095270.7010009,19410647.9827886
+"180","All Pathogens","5-64","Salmonellosis","FrictionLow",3953208.52588013,2285726.51287534,7278992.99354573
+"181","All Pathogens","5-64","Salmonellosis","GP",539966.505006367,277889.983810504,1035923.70322069
+"182","All Pathogens","5-64","Salmonellosis","Hospitalisation",3776797.98503535,2364777.66148472,5372943.13466318
+"183","All Pathogens","5-64","Salmonellosis","HumanCapital",13177361.7529338,7619088.37625113,24263309.9784858
+"184","All Pathogens","5-64","Salmonellosis","Medications",385595.390513568,198573.625363,710366.119170076
+"185","All Pathogens","5-64","Salmonellosis","Tests",557355,557355,557355
+"186","All Pathogens","5-64","Salmonellosis","WTP",5396485.45424306,3096223.03652807,9389289.88410568
+"187","All Pathogens","5-64","Salmonellosis","WTPOngoing",0,0,0
+"188","All Pathogens","5-64","Shigellosis","Deaths",338756.152979863,86751.2974211638,1015530.53270244
+"189","All Pathogens","5-64","Shigellosis","ED",60257.5736898204,17632.5380012585,175526.249781561
+"190","All Pathogens","5-64","Shigellosis","FrictionHigh",394279.638118129,151840.677612264,912046.666169757
+"191","All Pathogens","5-64","Shigellosis","FrictionLow",147854.864294298,56940.2541045991,342017.499813659
+"192","All Pathogens","5-64","Shigellosis","GP",20487.0739823795,6270.61736753258,49402.8598057512
+"193","All Pathogens","5-64","Shigellosis","Hospitalisation",123324.765219189,41850.9836825777,242102.2015137
+"194","All Pathogens","5-64","Shigellosis","HumanCapital",492849.547647661,189800.84701533,1140058.3327122
+"195","All Pathogens","5-64","Shigellosis","Medications",19143.2390079241,6631.25641397534,45246.0782024697
+"196","All Pathogens","5-64","Shigellosis","Tests",148974.12,148974.12,148974.12
+"197","All Pathogens","5-64","Shigellosis","WTP",202694.343930523,72570.2249672183,455444.463800192
+"198","All Pathogens","5-64","Shigellosis","WTPOngoing",0,0,0
+"199","All Pathogens","5-64","Toxoplasma","Deaths",4551237.14171863,1710421.03387051,9736942.76517776
+"200","All Pathogens","5-64","Toxoplasma","ED",0,0,0
+"201","All Pathogens","5-64","Toxoplasma","FrictionHigh",3329785.6017888,1478066.7541081,5980329.86981189
+"202","All Pathogens","5-64","Toxoplasma","FrictionLow",1248669.6006708,554275.032790539,2242623.70117946
+"203","All Pathogens","5-64","Toxoplasma","GP",170163.695803484,68236.9934214367,332450.565741579
+"204","All Pathogens","5-64","Toxoplasma","Hospitalisation",1245988.99907232,481334.771735381,2376563.60465414
+"205","All Pathogens","5-64","Toxoplasma","HumanCapital",4162232.002236,1847583.44263513,7475412.33726486
+"206","All Pathogens","5-64","Toxoplasma","Medications",49885.4086278085,20004.4450391618,97461.6368212732
+"207","All Pathogens","5-64","Toxoplasma","Tests",92876.442999837,37244.1912480874,181453.663624113
+"208","All Pathogens","5-64","Toxoplasma","WTP",714240.945042631,298778.91191032,1236868.00827599
+"209","All Pathogens","5-64","Toxoplasma","WTPOngoing",0,0,0
+"210","All Pathogens","5-64","Typhoid Fever","Deaths",169744.848981173,33096.7324807969,614666.113547961
+"211","All Pathogens","5-64","Typhoid Fever","ED",8287.27876625985,2963.04977728521,19592.88493308
+"212","All Pathogens","5-64","Typhoid Fever","FrictionHigh",23604.5219980982,8439.60673003328,55806.0970860542
+"213","All Pathogens","5-64","Typhoid Fever","FrictionLow",8851.69574928681,3164.85252376248,20927.2864072703
+"214","All Pathogens","5-64","Typhoid Fever","GP",2180.92956262485,753.359971522855,5454.59839223931
+"215","All Pathogens","5-64","Typhoid Fever","Hospitalisation",209179.930285022,74790.5993420922,494545.72725008
+"216","All Pathogens","5-64","Typhoid Fever","HumanCapital",29505.6524976227,10549.5084125416,69757.6213575678
+"217","All Pathogens","5-64","Typhoid Fever","Medications",0,0,0
+"218","All Pathogens","5-64","Typhoid Fever","Tests",0,0,0
+"219","All Pathogens","5-64","Typhoid Fever","WTP",14572.5164833714,5210.28590184929,34452.5201452787
+"220","All Pathogens","5-64","Typhoid Fever","WTPOngoing",0,0,0
+"221","All Pathogens","65+","All Diseases","Deaths",442517908.194612,305481852.889389,663612548.541072
+"222","All Pathogens","65+","All Diseases","ED",14069647.2888662,8014188.88937268,24484160.7796865
+"223","All Pathogens","65+","All Diseases","FrictionHigh",128149690.309847,48319282.8237508,533712291.71477
+"224","All Pathogens","65+","All Diseases","FrictionLow",48056133.8661925,18119731.0589066,200142109.393039
+"225","All Pathogens","65+","All Diseases","GP",7955483.72417877,5257843.39092704,11768052.6980142
+"226","All Pathogens","65+","All Diseases","Hospitalisation",117369691.370092,72501218.0483061,191636905.791829
+"227","All Pathogens","65+","All Diseases","HumanCapital",160187112.887308,60399103.5296885,667140364.643462
+"228","All Pathogens","65+","All Diseases","Medications",7492237.3885841,4752233.3441779,11838210.8167117
+"229","All Pathogens","65+","All Diseases","Tests",3646750.63411196,2587837.96857767,5495736.38312079
+"230","All Pathogens","65+","All Diseases","WTP",41991496.5766856,29751290.7304369,58204992.8444871
+"231","All Pathogens","65+","All Diseases","WTPOngoing",5295901.44423965,3023226.33001916,8988936.02721058
+"232","All Pathogens","65+","Campylobacteriosis","Deaths",15315963.0303022,8334480.36391887,26081439.418452
+"233","All Pathogens","65+","Campylobacteriosis","ED",2205941.82214013,992768.266709557,4519031.23133371
+"234","All Pathogens","65+","Campylobacteriosis","FrictionHigh",7787313.42761424,2799497.8839063,36165645.0672303
+"235","All Pathogens","65+","Campylobacteriosis","FrictionLow",2920242.53535534,1049811.70646486,13562116.9002114
+"236","All Pathogens","65+","Campylobacteriosis","GP",745661.063395347,398024.742018753,1318510.64580711
+"237","All Pathogens","65+","Campylobacteriosis","Hospitalisation",13935612.4433214,9316677.10723155,19469546.326846
+"238","All Pathogens","65+","Campylobacteriosis","HumanCapital",9734141.7845178,3499372.35488288,45207056.3340379
+"239","All Pathogens","65+","Campylobacteriosis","Medications",1116075.54787116,580396.927191205,2102163.6098261
+"240","All Pathogens","65+","Campylobacteriosis","Tests",438615.48,438615.48,438615.48
+"241","All Pathogens","65+","Campylobacteriosis","WTP",7384126.46337819,4555181.88766093,12150324.7148476
+"242","All Pathogens","65+","Campylobacteriosis","WTPOngoing",0,0,0
+"243","All Pathogens","65+","Gastroenteritis","Deaths",263121981.936626,139886569.695056,466286245.811044
+"244","All Pathogens","65+","Gastroenteritis","ED",11161229.9879379,5389217.58516393,21596024.4170923
+"245","All Pathogens","65+","Gastroenteritis","FrictionHigh",104780077.890961,29225689.0838952,515948489.220432
+"246","All Pathogens","65+","Gastroenteritis","FrictionLow",39292529.2091105,10959633.4064607,193480683.457662
+"247","All Pathogens","65+","Gastroenteritis","GP",5563075.21263098,3095245.30269605,9212081.13486962
+"248","All Pathogens","65+","Gastroenteritis","Hospitalisation",95085461.1710922,49081616.7255378,168552845.911416
+"249","All Pathogens","65+","Gastroenteritis","HumanCapital",130975097.363702,36532111.354869,644935611.525539
+"250","All Pathogens","65+","Gastroenteritis","Medications",5469694.73600795,2937096.03597509,9668073.60558385
+"251","All Pathogens","65+","Gastroenteritis","Tests",1388007.42306348,595707.740526535,2963893.81729976
+"252","All Pathogens","65+","Gastroenteritis","WTP",25993614.1126226,15539983.2003461,40562819.9436339
+"253","All Pathogens","65+","Gastroenteritis","WTPOngoing",0,0,0
+"254","All Pathogens","65+","GBS","Deaths",67946580.080134,30992304.1400942,124187456.356021
+"255","All Pathogens","65+","GBS","ED",0,0,0
+"256","All Pathogens","65+","GBS","FrictionHigh",137802.78390849,66062.7600050861,282774.711400325
+"257","All Pathogens","65+","GBS","FrictionLow",51676.0439656836,24773.5350019073,106040.516775122
+"258","All Pathogens","65+","GBS","GP",3426.99325544162,1639.04108706849,7034.82265965943
+"259","All Pathogens","65+","GBS","Hospitalisation",573167.737898992,274777.051939852,1176154.33499511
+"260","All Pathogens","65+","GBS","HumanCapital",172253.479885612,82578.4500063576,353468.389250406
+"261","All Pathogens","65+","GBS","Medications",0,0,0
+"262","All Pathogens","65+","GBS","Tests",0,0,0
+"263","All Pathogens","65+","GBS","WTP",27165.3807397766,13023.1043042672,55744.0312952708
+"264","All Pathogens","65+","GBS","WTPOngoing",36859.2521515612,17350.7540340266,75012.4438513771
+"265","All Pathogens","65+","IBS","Deaths",20447056.3915583,10124486.9284927,50124811.8913844
+"266","All Pathogens","65+","IBS","ED",0,0,0
+"267","All Pathogens","65+","IBS","FrictionHigh",2118095.7295281,1380357.1442156,3362792.62150995
+"268","All Pathogens","65+","IBS","FrictionLow",794285.898573037,517633.92908085,1261047.23306623
+"269","All Pathogens","65+","IBS","GP",1156193.63320024,746619.055192476,1834446.13344877
+"270","All Pathogens","65+","IBS","Hospitalisation",992352.786442393,564876.145070144,2146423.96910316
+"271","All Pathogens","65+","IBS","HumanCapital",2647619.66191012,1725446.4302695,4203490.77688743
+"272","All Pathogens","65+","IBS","Medications",156065.806122106,101121.066060435,249637.337741822
+"273","All Pathogens","65+","IBS","Tests",1372244.0330043,881623.949331779,2165881.59733353
+"274","All Pathogens","65+","IBS","WTP",2855012.04641377,1860603.47516345,4532757.09410039
+"275","All Pathogens","65+","IBS","WTPOngoing",3991674.17607198,2152407.81572475,7020007.22495033
+"276","All Pathogens","65+","ReactiveArthritis","Deaths",148249.867285293,906.090075435072,1191398.20575662
+"277","All Pathogens","65+","ReactiveArthritis","ED",0,0,0
+"278","All Pathogens","65+","ReactiveArthritis","FrictionHigh",3788986.89735379,1955717.79163152,6911090.15658069
+"279","All Pathogens","65+","ReactiveArthritis","FrictionLow",1420870.08650767,733394.171861818,2591658.80871776
+"280","All Pathogens","65+","ReactiveArthritis","GP",183832.178411078,94006.4206483021,333483.673068279
+"281","All Pathogens","65+","ReactiveArthritis","Hospitalisation",941537.999414599,620828.930852895,1290280.37201172
+"282","All Pathogens","65+","ReactiveArthritis","HumanCapital",4736233.62169223,2444647.23953939,8638862.69572586
+"283","All Pathogens","65+","ReactiveArthritis","Medications",403106.518917705,158715.178861341,1047500.06415938
+"284","All Pathogens","65+","ReactiveArthritis","Tests",226111.230681925,117769.001803258,416450.387672313
+"285","All Pathogens","65+","ReactiveArthritis","WTP",3483567.5863785,1798073.01835468,6354007.10221986
+"286","All Pathogens","65+","ReactiveArthritis","WTPOngoing",1209614.47752029,607041.477672482,2273122.94891192
+"287","All Pathogens","65+","Salmonellosis","Deaths",65753891.4365914,41379288.276655,101019200.022017
+"288","All Pathogens","65+","Salmonellosis","ED",359319.378276098,152622.80394715,798824.315673739
+"289","All Pathogens","65+","Salmonellosis","FrictionHigh",1518230.58783798,669630.749072192,6566996.68898632
+"290","All Pathogens","65+","Salmonellosis","FrictionLow",569336.470439243,251111.530902072,2462623.75836987
+"291","All Pathogens","65+","Salmonellosis","GP",121301.293473863,59598.2072974543,230553.564303862
+"292","All Pathogens","65+","Salmonellosis","Hospitalisation",5533754.5616141,3462776.46312284,7947211.96613031
+"293","All Pathogens","65+","Salmonellosis","HumanCapital",1897788.23479748,837038.436340241,8208745.8612329
+"294","All Pathogens","65+","Salmonellosis","Medications",174683.762926675,86292.5478752808,346189.807107034
+"295","All Pathogens","65+","Salmonellosis","Tests",126313.44,126313.44,126313.44
+"296","All Pathogens","65+","Salmonellosis","WTP",1250360.29018878,727158.224728437,2134390.93856719
+"297","All Pathogens","65+","Salmonellosis","WTPOngoing",0,0,0
+"298","All Pathogens","65+","Shigellosis","Deaths",26847.7024873136,242.305698298052,281442.937164278
+"299","All Pathogens","65+","Shigellosis","ED",6710.78624891517,1893.55163792127,18615.598650556
+"300","All Pathogens","65+","Shigellosis","FrictionHigh",22471.9604581903,6353.1521950011,113757.991358896
+"301","All Pathogens","65+","Shigellosis","FrictionLow",8426.98517182138,2382.43207312541,42659.246759586
+"302","All Pathogens","65+","Shigellosis","GP",2199.91171086427,736.12349443701,5605.81238600124
+"303","All Pathogens","65+","Shigellosis","Hospitalisation",38770.5089831029,13804.0645816996,78229.3770198017
+"304","All Pathogens","65+","Shigellosis","HumanCapital",28089.9505727379,7941.44024375138,142197.48919862
+"305","All Pathogens","65+","Shigellosis","Medications",4025.482244248,1293.11527024383,9826.53088561986
+"306","All Pathogens","65+","Shigellosis","Tests",16613.76,16613.76,16613.76
+"307","All Pathogens","65+","Shigellosis","WTP",22838.0931956339,8458.54892080555,50512.41799138
+"308","All Pathogens","65+","Shigellosis","WTPOngoing",0,0,0
+"309","All Pathogens","65+","Toxoplasma","Deaths",834907.732827602,146779.008279733,2564013.71061552
+"310","All Pathogens","65+","Toxoplasma","ED",0,0,0
+"311","All Pathogens","65+","Toxoplasma","FrictionHigh",66396.192634056,15422.1447431335,327745.746096086
+"312","All Pathogens","65+","Toxoplasma","FrictionLow",24898.572237771,5783.30427867504,122904.654786032
+"313","All Pathogens","65+","Toxoplasma","GP",5972.54463025581,1922.95056231843,12348.9940979108
+"314","All Pathogens","65+","Toxoplasma","Hospitalisation",412498.51102578,167899.4964335,798445.700678137
+"315","All Pathogens","65+","Toxoplasma","HumanCapital",82995.24079257,19277.6809289168,409682.182620108
+"316","All Pathogens","65+","Toxoplasma","Medications",1750.91889031499,563.734668075803,3620.24704392946
+"317","All Pathogens","65+","Toxoplasma","Tests",3259.85339173962,1049.55882304606,6740.16064956937
+"318","All Pathogens","65+","Toxoplasma","WTP",30423.4856698977,13376.4387982188,53815.2533912033
+"319","All Pathogens","65+","Toxoplasma","WTPOngoing",0,0,0
+"320","All Pathogens","65+","Typhoid Fever","Deaths",199421.623180653,41840.6344652136,752682.909222689
+"321","All Pathogens","65+","Typhoid Fever","ED",91.2035058771923,30.2393920276432,222.061626507336
+"322","All Pathogens","65+","Typhoid Fever","FrictionHigh",182.975852197798,60.6673885283722,445.508261549953
+"323","All Pathogens","65+","Typhoid Fever","FrictionLow",68.6159445741741,22.7502706981396,167.065598081232
+"324","All Pathogens","65+","Typhoid Fever","GP",24.4105530843755,7.44596057638869,63.8796661601889
+"325","All Pathogens","65+","Typhoid Fever","Hospitalisation",2302.07569206107,763.275146717264,5605.07699353607
+"326","All Pathogens","65+","Typhoid Fever","HumanCapital",228.719815247247,75.8342356604653,556.885326937441
+"327","All Pathogens","65+","Typhoid Fever","Medications",0,0,0
+"328","All Pathogens","65+","Typhoid Fever","Tests",0,0,0
+"329","All Pathogens","65+","Typhoid Fever","WTP",160.374066110542,53.1735508360168,390.477598723624
+"330","All Pathogens","65+","Typhoid Fever","WTPOngoing",0,0,0
+"331","All Pathogens","All Ages","All Diseases","Deaths",567334921.268738,420251612.61668,793073176.082323
+"332","All Pathogens","All Ages","All Diseases","ED",86978847.4889091,55512898.1177005,143296057.037015
+"333","All Pathogens","All Ages","All Diseases","FrictionHigh",1316657910.46963,824676210.443424,2057592976.4084
+"334","All Pathogens","All Ages","All Diseases","FrictionLow",493746716.426113,309253578.916284,771597366.153149
+"335","All Pathogens","All Ages","All Diseases","GP",48141563.0249283,35078447.1890052,67294372.6589272
+"336","All Pathogens","All Ages","All Diseases","Hospitalisation",210959856.889861,152407448.851701,289263550.625034
+"337","All Pathogens","All Ages","All Diseases","HumanCapital",1645822388.08704,1030845263.05428,2571991220.5105
+"338","All Pathogens","All Ages","All Diseases","Medications",34239206.4242857,24958005.9508789,46871597.6674998
+"339","All Pathogens","All Ages","All Diseases","Tests",20491947.6925659,15499334.0999638,28828111.6796432
+"340","All Pathogens","All Ages","All Diseases","WTP",245092772.724921,184241256.401719,320323516.598713
+"341","All Pathogens","All Ages","All Diseases","WTPOngoing",28615512.1572419,19443040.256602,42255709.5667258
+"342","All Pathogens","All Ages","Campylobacteriosis","Deaths",25656177.0734558,16411727.6786515,38469354.3389504
+"343","All Pathogens","All Ages","Campylobacteriosis","ED",11619237.6835243,6689655.83945113,19767010.0939525
+"344","All Pathogens","All Ages","Campylobacteriosis","FrictionHigh",65081123.6821085,40763052.165381,108851528.507811
+"345","All Pathogens","All Ages","Campylobacteriosis","FrictionLow",24405421.3807907,15286144.5620179,40819323.1904292
+"346","All Pathogens","All Ages","Campylobacteriosis","GP",3786030.8899318,2403080.60484264,5967426.9725244
+"347","All Pathogens","All Ages","Campylobacteriosis","Hospitalisation",20486779.7936936,15396562.2830861,26261615.915001
+"348","All Pathogens","All Ages","Campylobacteriosis","HumanCapital",81351404.6026357,50953815.2067262,136064410.634764
+"349","All Pathogens","All Ages","Campylobacteriosis","Medications",3239812.67758854,2118438.30424525,4914731.23421946
+"350","All Pathogens","All Ages","Campylobacteriosis","Tests",2206881.48,2206881.48,2206881.48
+"351","All Pathogens","All Ages","Campylobacteriosis","WTP",37335184.4487059,25601539.8212434,53929153.7603273
+"352","All Pathogens","All Ages","Campylobacteriosis","WTPOngoing",0,0,0
+"353","All Pathogens","All Ages","Gastroenteritis","Deaths",327128704.029119,199581608.13179,537897152.40364
+"354","All Pathogens","All Ages","Gastroenteritis","ED",71975475.8920163,40429351.5902447,126133763.945644
+"355","All Pathogens","All Ages","Gastroenteritis","FrictionHigh",1157045343.0655,668137828.093124,1888476602.44384
+"356","All Pathogens","All Ages","Gastroenteritis","FrictionLow",433892003.649564,250551685.534921,708178725.91644
+"357","All Pathogens","All Ages","Gastroenteritis","GP",35121818.3506275,23145119.1143401,54432711.289796
+"358","All Pathogens","All Ages","Gastroenteritis","Hospitalisation",162043281.533927,103595645.778141,241367623.654035
+"359","All Pathogens","All Ages","Gastroenteritis","HumanCapital",1446306678.83188,835172285.116405,2360595753.0548
+"360","All Pathogens","All Ages","Gastroenteritis","Medications",26828994.6947444,17479347.9984134,39344803.5209576
+"361","All Pathogens","All Ages","Gastroenteritis","Tests",8709788.26197006,4642049.5956522,17390709.3940647
+"362","All Pathogens","All Ages","Gastroenteritis","WTP",157820599.515036,106177335.043421,232800013.16316
+"363","All Pathogens","All Ages","Gastroenteritis","WTPOngoing",0,0,0
+"364","All Pathogens","All Ages","GBS","Deaths",81079840.9313963,41976088.7306284,136439410.850259
+"365","All Pathogens","All Ages","GBS","ED",0,0,0
+"366","All Pathogens","All Ages","GBS","FrictionHigh",1492612.48501049,856225.261529823,2816304.56579422
+"367","All Pathogens","All Ages","GBS","FrictionLow",559729.681878934,321084.473073684,1056114.21217283
+"368","All Pathogens","All Ages","GBS","GP",17583.1934664651,10476.8510000472,31280.7617253459
+"369","All Pathogens","All Ages","GBS","Hospitalisation",2957170.07451877,1752512.25835472,5220403.5258171
+"370","All Pathogens","All Ages","GBS","HumanCapital",1865765.60626311,1070281.57691228,3520380.70724278
+"371","All Pathogens","All Ages","GBS","Medications",0,0,0
+"372","All Pathogens","All Ages","GBS","Tests",0,0,0
+"373","All Pathogens","All Ages","GBS","WTP",140155.56995766,83060.6114081764,247421.897669833
+"374","All Pathogens","All Ages","GBS","WTPOngoing",85219.7261717236,51220.6579067525,145042.79747141
+"375","All Pathogens","All Ages","IBS","Deaths",22512613.2856541,12138720.7834377,52361381.0666456
+"376","All Pathogens","All Ages","IBS","ED",0,0,0
+"377","All Pathogens","All Ages","IBS","FrictionHigh",24727916.0448666,17436824.6916326,35693140.3832057
+"378","All Pathogens","All Ages","IBS","FrictionLow",9272968.51682499,6538809.25936222,13384927.6437021
+"379","All Pathogens","All Ages","IBS","GP",6362128.01461058,4622719.27577141,8876098.42309919
+"380","All Pathogens","All Ages","IBS","Hospitalisation",5703890.04656235,3437037.77198719,10660199.4511187
+"381","All Pathogens","All Ages","IBS","HumanCapital",30909895.0560833,21796030.8645407,44616425.4790071
+"382","All Pathogens","All Ages","IBS","Medications",858853.469597802,621589.504478786,1196995.30103968
+"383","All Pathogens","All Ages","IBS","Tests",6582715.78491263,4791355.91601945,9235184.67922182
+"384","All Pathogens","All Ages","IBS","WTP",15673306.8843758,11330932.9485557,21787657.979774
+"385","All Pathogens","All Ages","IBS","WTPOngoing",21798368.2102405,14349180.0086216,33376496.2889515
+"386","All Pathogens","All Ages","ReactiveArthritis","Deaths",668356.351183492,109747.677758108,1999398.40739063
+"387","All Pathogens","All Ages","ReactiveArthritis","ED",0,0,0
+"388","All Pathogens","All Ages","ReactiveArthritis","FrictionHigh",44252459.8550996,28187414.6574745,74159936.5521832
+"389","All Pathogens","All Ages","ReactiveArthritis","FrictionLow",16594672.4456624,10570280.496553,27809976.2070687
+"390","All Pathogens","All Ages","ReactiveArthritis","GP",1022832.29004586,672278.755088279,1617345.64898591
+"391","All Pathogens","All Ages","ReactiveArthritis","Hospitalisation",5240910.13888421,4056582.79526378,6701610.58992828
+"392","All Pathogens","All Ages","ReactiveArthritis","HumanCapital",55315574.8188746,35234268.3218432,92699920.690229
+"393","All Pathogens","All Ages","ReactiveArthritis","Medications",2368974.4809267,1310423.03175222,4641870.83457165
+"394","All Pathogens","All Ages","ReactiveArthritis","Tests",1261563.14889475,812273.467461463,2042397.78675774
+"395","All Pathogens","All Ages","ReactiveArthritis","WTP",19384975.2515653,12653739.956997,30701799.6512223
+"396","All Pathogens","All Ages","ReactiveArthritis","WTPOngoing",6728704.41501243,4335757.10584894,11030368.4787897
+"397","All Pathogens","All Ages","Salmonellosis","Deaths",88396224.715321,61968676.2876035,123601597.581702
+"398","All Pathogens","All Ages","Salmonellosis","ED",2736553.09322623,1628480.66594708,4922503.41640441
+"399","All Pathogens","All Ages","Salmonellosis","FrictionHigh",16152218.8699538,10385503.7314077,26052833.1934749
+"400","All Pathogens","All Ages","Salmonellosis","FrictionLow",6057082.07623269,3894563.8992779,9769812.44755307
+"401","All Pathogens","All Ages","Salmonellosis","GP",890794.01619537,583871.416592474,1420289.13219107
+"402","All Pathogens","All Ages","Salmonellosis","Hospitalisation",11170843.6558752,8669877.5912961,14089759.2308913
+"403","All Pathogens","All Ages","Salmonellosis","HumanCapital",20190273.5874423,12981879.6642597,32566041.4918436
+"404","All Pathogens","All Ages","Salmonellosis","Medications",683164.450788331,439159.552005501,1045803.27651675
+"405","All Pathogens","All Ages","Salmonellosis","Tests",897326.28,897326.28,897326.28
+"406","All Pathogens","All Ages","Salmonellosis","WTP",9100971.5841996,6363128.82516587,13270392.8084782
+"407","All Pathogens","All Ages","Salmonellosis","WTPOngoing",0,0,0
+"408","All Pathogens","All Ages","Shigellosis","Deaths",542667.660099931,189368.746018192,1261899.8569577
+"409","All Pathogens","All Ages","Shigellosis","ED",81128.1614843516,34826.7448015935,192744.985216053
+"410","All Pathogens","All Ages","Shigellosis","FrictionHigh",496533.640354847,226890.896955419,1008584.45492962
+"411","All Pathogens","All Ages","Shigellosis","FrictionLow",186200.115133068,85084.0863582821,378219.170598607
+"412","All Pathogens","All Ages","Shigellosis","GP",27371.7916146832,12568.1325346232,56777.1303123388
+"413","All Pathogens","All Ages","Shigellosis","Hospitalisation",205886.291939384,114734.913443995,328813.992283694
+"414","All Pathogens","All Ages","Shigellosis","HumanCapital",620667.050443559,283613.621194274,1260730.56866202
+"415","All Pathogens","All Ages","Shigellosis","Medications",26837.6791363255,12819.2301816365,53256.9768702371
+"416","All Pathogens","All Ages","Shigellosis","Tests",192463.08,192463.08,192463.08
+"417","All Pathogens","All Ages","Shigellosis","WTP",273161.441970014,134126.526704625,530422.079840731
+"418","All Pathogens","All Ages","Shigellosis","WTPOngoing",0,0,0
+"419","All Pathogens","All Ages","Toxoplasma","Deaths",5835993.96884166,2798549.18585511,11223731.1313271
+"420","All Pathogens","All Ages","Toxoplasma","ED",0,0,0
+"421","All Pathogens","All Ages","Toxoplasma","FrictionHigh",3952264.71868598,1992147.50096792,6606149.59725497
+"422","All Pathogens","All Ages","Toxoplasma","FrictionLow",1482099.26950724,747055.31286297,2477306.09897061
+"423","All Pathogens","All Ages","Toxoplasma","GP",216788.787678826,106501.476118412,378652.951804223
+"424","All Pathogens","All Ages","Toxoplasma","Hospitalisation",1754520.5945628,914221.36103304,2928959.61407745
+"425","All Pathogens","All Ages","Toxoplasma","HumanCapital",4940330.89835748,2490184.3762099,8257686.99656871
+"426","All Pathogens","All Ages","Toxoplasma","Medications",63554.0807233926,31222.110160133,111006.38793538
+"427","All Pathogens","All Ages","Toxoplasma","Tests",118324.718952443,58129.1927717266,206671.224017015
+"428","All Pathogens","All Ages","Toxoplasma","WTP",899540.032686073,481233.39450313,1424364.15403908
+"429","All Pathogens","All Ages","Toxoplasma","WTPOngoing",0,0,0
+"430","All Pathogens","All Ages","Typhoid Fever","Deaths",497201.636624862,174258.970381736,1172380.04295197
+"431","All Pathogens","All Ages","Typhoid Fever","ED",9741.71970553152,4099.4652171291,21284.2703494056
+"432","All Pathogens","All Ages","Typhoid Fever","FrictionHigh",26807.2111898485,10915.3072095957,59411.6119954512
+"433","All Pathogens","All Ages","Typhoid Fever","FrictionLow",10052.7041961932,4093.24020359838,22279.3544982942
+"434","All Pathogens","All Ages","Typhoid Fever","GP",2631.53901104456,1106.63436413767,5778.01551592303
+"435","All Pathogens","All Ages","Typhoid Fever","Hospitalisation",245891.601614238,103474.961143602,537238.134908979
+"436","All Pathogens","All Ages","Typhoid Fever","HumanCapital",33509.0139873106,13644.1340119946,74264.514994314
+"437","All Pathogens","All Ages","Typhoid Fever","Medications",0,0,0
+"438","All Pathogens","All Ages","Typhoid Fever","Tests",0,0,0
+"439","All Pathogens","All Ages","Typhoid Fever","WTP",17130.0344768432,7208.58150601138,37426.6860390927
+"440","All Pathogens","All Ages","Typhoid Fever","WTPOngoing",0,0,0
+"441","Campylobacteriosis","<5","All Diseases","Deaths",1546862.87156681,494806.165630738,4325752.47305069
+"442","Campylobacteriosis","<5","All Diseases","ED",1104668.80464585,503379.290680901,2196594.18400953
+"443","Campylobacteriosis","<5","All Diseases","FrictionHigh",9590636.55016476,5446822.75618987,16900070.7371182
+"444","Campylobacteriosis","<5","All Diseases","FrictionLow",3596488.70631179,2042558.5335712,6337526.52641933
+"445","Campylobacteriosis","<5","All Diseases","GP",921360.237754459,553372.912016937,1517361.19549975
+"446","Campylobacteriosis","<5","All Diseases","Hospitalisation",1163630.72719289,824458.978229774,1617570.98928201
+"447","Campylobacteriosis","<5","All Diseases","HumanCapital",11988295.687706,6808528.44523734,21125088.4213978
+"448","Campylobacteriosis","<5","All Diseases","Medications",391118.383174464,208449.048322393,768170.48214017
+"449","Campylobacteriosis","<5","All Diseases","Tests",735874.37754061,526164.217558779,1069277.86731329
+"450","Campylobacteriosis","<5","All Diseases","WTP",6190207.9386783,3748964.52946964,10030202.5947732
+"451","Campylobacteriosis","<5","All Diseases","WTPOngoing",2161993.13925865,1066985.01550329,4002322.38458228
+"452","Campylobacteriosis","<5","Campylobacteriosis","Deaths",1200337.74325805,240804.132616463,4016878.4984849
+"453","Campylobacteriosis","<5","Campylobacteriosis","ED",1104668.80464585,503379.290680901,2196594.18400953
+"454","Campylobacteriosis","<5","Campylobacteriosis","FrictionHigh",4454784.5412414,2216371.76481351,8882163.12762332
+"455","Campylobacteriosis","<5","Campylobacteriosis","FrictionLow",1670544.20296552,831139.411805067,3330811.17285874
+"456","Campylobacteriosis","<5","Campylobacteriosis","GP",362489.541449749,199319.676118794,631071.741444094
+"457","Campylobacteriosis","<5","Campylobacteriosis","Hospitalisation",502856.658621493,338484.998306689,699407.154125088
+"458","Campylobacteriosis","<5","Campylobacteriosis","HumanCapital",5568480.67655174,2770464.70601689,11102703.9095291
+"459","Campylobacteriosis","<5","Campylobacteriosis","Medications",156952.894692333,76562.7080145548,316026.625290468
+"460","Campylobacteriosis","<5","Campylobacteriosis","Tests",216039.96,216039.96,216039.96
+"461","Campylobacteriosis","<5","Campylobacteriosis","WTP",3530272.7772693,2172605.82142567,5651142.07370168
+"462","Campylobacteriosis","<5","Campylobacteriosis","WTPOngoing",0,0,0
+"463","Campylobacteriosis","<5","GBS","Deaths",61269.6061505048,305.369226355921,635999.789634196
+"464","Campylobacteriosis","<5","GBS","ED",0,0,0
+"465","Campylobacteriosis","<5","GBS","FrictionHigh",137948.463630468,69523.2688310878,285180.511734691
+"466","Campylobacteriosis","<5","GBS","FrictionLow",51730.6738614253,26071.2258116579,106942.691900509
+"467","Campylobacteriosis","<5","GBS","GP",1632.99529532042,824.619643304733,3357.37840832903
+"468","Campylobacteriosis","<5","GBS","Hospitalisation",274134.626464539,138158.373279589,566717.823467583
+"469","Campylobacteriosis","<5","GBS","HumanCapital",172435.579538084,86904.0860388598,356475.639668364
+"470","Campylobacteriosis","<5","GBS","Medications",0,0,0
+"471","Campylobacteriosis","<5","GBS","Tests",0,0,0
+"472","Campylobacteriosis","<5","GBS","WTP",12992.6564414866,6548.03919405113,26859.6859672298
+"473","Campylobacteriosis","<5","GBS","WTPOngoing",2691.30396445738,1341.41385223881,5503.90045824111
+"474","Campylobacteriosis","<5","IBS","Deaths",19418.785972448,96.6489618389093,191709.236680484
+"475","Campylobacteriosis","<5","IBS","ED",0,0,0
+"476","Campylobacteriosis","<5","IBS","FrictionHigh",1859897.46871683,1115171.03442103,3061294.74413693
+"477","Campylobacteriosis","<5","IBS","FrictionLow",697461.55076881,418189.137907888,1147985.52905135
+"478","Campylobacteriosis","<5","IBS","GP",485683.892652545,291192.696982536,797609.804506795
+"479","Campylobacteriosis","<5","IBS","Hospitalisation",5073.32228064375,2204.22386028505,12844.3297485859
+"480","Campylobacteriosis","<5","IBS","HumanCapital",2324871.83589603,1393963.79302629,3826618.43017116
+"481","Campylobacteriosis","<5","IBS","Medications",65277.0916692087,39639.9981670515,108589.037535304
+"482","Campylobacteriosis","<5","IBS","Tests",426983.505583333,256353.570014836,705320.781067396
+"483","Campylobacteriosis","<5","IBS","WTP",1200255.28251013,719657.90990058,1975557.92712908
+"484","Campylobacteriosis","<5","IBS","WTPOngoing",1651234.70059959,762371.993969955,3215473.28273616
+"485","Campylobacteriosis","<5","ReactiveArthritis","Deaths",63684.5558903769,562.208465340886,549081.663101839
+"486","Campylobacteriosis","<5","ReactiveArthritis","ED",0,0,0
+"487","Campylobacteriosis","<5","ReactiveArthritis","FrictionHigh",3111563.98267374,1508901.53757707,6138568.70147641
+"488","Campylobacteriosis","<5","ReactiveArthritis","FrictionLow",1166836.49350265,565838.076591401,2301963.26305365
+"489","Campylobacteriosis","<5","ReactiveArthritis","GP",71943.4095265985,32884.4813871532,147528.281960944
+"490","Campylobacteriosis","<5","ReactiveArthritis","Hospitalisation",360467.173775821,160040.290093193,640426.366090336
+"491","Campylobacteriosis","<5","ReactiveArthritis","HumanCapital",3889454.97834217,1886126.92197134,7673210.87684551
+"492","Campylobacteriosis","<5","ReactiveArthritis","Medications",150951.212360638,52724.2117418063,434300.249281457
+"493","Campylobacteriosis","<5","ReactiveArthritis","Tests",87532.5512369464,40129.5656260941,181594.618407862
+"494","Campylobacteriosis","<5","ReactiveArthritis","WTP",1382454.70832937,670398.566972863,2727340.09360373
+"495","Campylobacteriosis","<5","ReactiveArthritis","WTPOngoing",463728.256108105,210831.723015555,956164.536770111
+"496","Campylobacteriosis","5-64","All Diseases","Deaths",22746276.4787217,14501252.6136796,34983112.8945012
+"497","Campylobacteriosis","5-64","All Diseases","ED",7826926.83810978,3522430.40327653,15908880.9283524
+"498","Campylobacteriosis","5-64","All Diseases","FrictionHigh",92610523.1951402,53679539.5577463,158946697.649716
+"499","Campylobacteriosis","5-64","All Diseases","FrictionLow",34728946.1981775,20129827.3341549,59605011.6186436
+"500","Campylobacteriosis","5-64","All Diseases","GP",6713765.69234892,3894187.8684991,11426770.82003
+"501","Campylobacteriosis","5-64","All Diseases","Hospitalisation",14829483.6242248,10875911.7472021,21055609.596166
+"502","Campylobacteriosis","5-64","All Diseases","HumanCapital",115763153.993925,67099424.4471829,198683372.062145
+"503","Campylobacteriosis","5-64","All Diseases","Medications",3604495.15245442,1851669.91049396,6899512.53604401
+"504","Campylobacteriosis","5-64","All Diseases","Tests",5819365.89460452,4057762.39088061,8979752.41133248
+"505","Campylobacteriosis","5-64","All Diseases","WTP",44499318.4653849,26533571.3420907,76367645.0876866
+"506","Campylobacteriosis","5-64","All Diseases","WTPOngoing",15324608.3721351,7885362.99660241,27989173.6533112
+"507","Campylobacteriosis","5-64","Campylobacteriosis","Deaths",8388181.92899259,4234675.27601712,15182985.6647426
+"508","Campylobacteriosis","5-64","Campylobacteriosis","ED",7826926.83810978,3522430.40327653,15908880.9283524
+"509","Campylobacteriosis","5-64","Campylobacteriosis","FrictionHigh",49004040.7543353,28037149.4361114,83795416.702818
+"510","Campylobacteriosis","5-64","Campylobacteriosis","FrictionLow",18376515.2828757,10513931.0385418,31423281.2635567
+"511","Campylobacteriosis","5-64","Campylobacteriosis","GP",2625819.69782323,1407371.1995057,4689824.7144536
+"512","Campylobacteriosis","5-64","Campylobacteriosis","Hospitalisation",6103165.81919586,3972967.82845094,8524878.5966817
+"513","Campylobacteriosis","5-64","Campylobacteriosis","HumanCapital",61255050.9429191,35046436.7951392,104744270.878523
+"514","Campylobacteriosis","5-64","Campylobacteriosis","Medications",1833946.68140076,1021051.94178243,3292109.51227869
+"515","Campylobacteriosis","5-64","Campylobacteriosis","Tests",1552226.04,1552226.04,1552226.04
+"516","Campylobacteriosis","5-64","Campylobacteriosis","WTP",25570782.6393997,15304109.9562113,42342184.1241692
+"517","Campylobacteriosis","5-64","Campylobacteriosis","WTPOngoing",0,0,0
+"518","Campylobacteriosis","5-64","GBS","Deaths",12149558.041667,5217043.75949453,23034295.1541837
+"519","Campylobacteriosis","5-64","GBS","ED",0,0,0
+"520","Campylobacteriosis","5-64","GBS","FrictionHigh",1187694.47727469,577178.889397466,2524447.27373798
+"521","Campylobacteriosis","5-64","GBS","FrictionLow",445385.42897801,216442.08352405,946667.727651744
+"522","Campylobacteriosis","5-64","GBS","GP",12042.9953311545,5793.28930726754,25524.474292754
+"523","Campylobacteriosis","5-64","GBS","Hospitalisation",2015201.10367308,979318.803939815,4283314.46305504
+"524","Campylobacteriosis","5-64","GBS","HumanCapital",1484618.09659337,721473.611746832,3155559.09217248
+"525","Campylobacteriosis","5-64","GBS","Medications",0,0,0
+"526","Campylobacteriosis","5-64","GBS","Tests",0,0,0
+"527","Campylobacteriosis","5-64","GBS","WTP",95510.7931391364,46414.9784008534,203008.404910584
+"528","Campylobacteriosis","5-64","GBS","WTPOngoing",41823.202101028,20454.4461255265,89450.3786889395
+"529","Campylobacteriosis","5-64","IBS","Deaths",1445923.61643919,617554.157951912,3710780.67250276
+"530","Campylobacteriosis","5-64","IBS","ED",0,0,0
+"531","Campylobacteriosis","5-64","IBS","FrictionHigh",15729091.2288243,9120388.97149484,26958297.0236384
+"532","Campylobacteriosis","5-64","IBS","FrictionLow",5898409.21080912,3420145.86431057,10109361.3838644
+"533","Campylobacteriosis","5-64","IBS","GP",3495838.94605621,2034338.32853004,5955266.82473152
+"534","Campylobacteriosis","5-64","IBS","Hospitalisation",3476140.67628409,1666781.66352384,8587103.38206565
+"535","Campylobacteriosis","5-64","IBS","HumanCapital",19661364.0360304,11400486.2143686,33697871.279548
+"536","Campylobacteriosis","5-64","IBS","Medications",474742.858773074,274599.041557215,797784.253308395
+"537","Campylobacteriosis","5-64","IBS","Tests",3597135.81409534,2087748.46986911,6106697.85477941
+"538","Campylobacteriosis","5-64","IBS","WTP",8657795.72872724,5020154.28183394,14838710.3507481
+"539","Campylobacteriosis","5-64","IBS","WTPOngoing",11705816.2784666,5382797.05713315,22647354.92342
+"540","Campylobacteriosis","5-64","ReactiveArthritis","Deaths",85030.0419156012,440.459041566919,723325.271001144
+"541","Campylobacteriosis","5-64","ReactiveArthritis","ED",0,0,0
+"542","Campylobacteriosis","5-64","ReactiveArthritis","FrictionHigh",26131938.8542612,12255601.5495824,53754553.4215582
+"543","Campylobacteriosis","5-64","ReactiveArthritis","FrictionLow",9799477.07034796,4595850.58109339,20157957.5330843
+"544","Campylobacteriosis","5-64","ReactiveArthritis","GP",516608.771567481,242118.182132242,1054129.10320539
+"545","Campylobacteriosis","5-64","ReactiveArthritis","Hospitalisation",2762592.40754918,1631014.65608954,4435755.42754397
+"546","Campylobacteriosis","5-64","ReactiveArthritis","HumanCapital",32664923.5678265,15319501.936978,67193191.7769477
+"547","Campylobacteriosis","5-64","ReactiveArthritis","Medications",1140848.60906251,363302.747390663,3402042.23270477
+"548","Campylobacteriosis","5-64","ReactiveArthritis","Tests",641230.261174264,292882.791341836,1366838.61877427
+"549","Campylobacteriosis","5-64","ReactiveArthritis","WTP",9877427.76913955,4632408.63023889,20318305.5664166
+"550","Campylobacteriosis","5-64","ReactiveArthritis","WTPOngoing",3383267.14595689,1577158.66003361,7136883.72835102
+"551","Campylobacteriosis","65+","All Diseases","Deaths",104966936.943723,61998992.3756676,162058959.075046
+"552","Campylobacteriosis","65+","All Diseases","ED",2205941.82214013,992768.266709557,4519031.23133371
+"553","Campylobacteriosis","65+","All Diseases","FrictionHigh",13531832.0077834,6438917.03320233,42122859.5803513
+"554","Campylobacteriosis","65+","All Diseases","FrictionLow",5074437.00291877,2414593.88745087,15796072.3426317
+"555","Campylobacteriosis","65+","All Diseases","GP",1911973.28855289,1128450.24790218,3169865.29855591
+"556","Campylobacteriosis","65+","All Diseases","Hospitalisation",16347689.8491083,11502853.6514262,21823290.2853269
+"557","Campylobacteriosis","65+","All Diseases","HumanCapital",16914790.0097292,8048646.29150292,52653574.4754391
+"558","Campylobacteriosis","65+","All Diseases","Medications",1609721.13140954,850255.681582923,2998275.61674357
+"559","Campylobacteriosis","65+","All Diseases","Tests",1803174.5914062,1242718.91331069,2696636.8127874
+"560","Campylobacteriosis","65+","All Diseases","WTP",12823615.5649194,7639707.14321659,21109315.260577
+"561","Campylobacteriosis","65+","All Diseases","WTPOngoing",4435167.330629,2277472.53355226,8048231.11553445
+"562","Campylobacteriosis","65+","Campylobacteriosis","Deaths",15315963.0303022,8334480.36391887,26081439.418452
+"563","Campylobacteriosis","65+","Campylobacteriosis","ED",2205941.82214013,992768.266709557,4519031.23133371
+"564","Campylobacteriosis","65+","Campylobacteriosis","FrictionHigh",7787313.42761424,2799497.8839063,36165645.0672303
+"565","Campylobacteriosis","65+","Campylobacteriosis","FrictionLow",2920242.53535534,1049811.70646486,13562116.9002114
+"566","Campylobacteriosis","65+","Campylobacteriosis","GP",745661.063395347,398024.742018753,1318510.64580711
+"567","Campylobacteriosis","65+","Campylobacteriosis","Hospitalisation",13935612.4433214,9316677.10723155,19469546.326846
+"568","Campylobacteriosis","65+","Campylobacteriosis","HumanCapital",9734141.7845178,3499372.35488288,45207056.3340379
+"569","Campylobacteriosis","65+","Campylobacteriosis","Medications",1116075.54787116,580396.927191205,2102163.6098261
+"570","Campylobacteriosis","65+","Campylobacteriosis","Tests",438615.48,438615.48,438615.48
+"571","Campylobacteriosis","65+","Campylobacteriosis","WTP",7384126.46337819,4555181.88766093,12150324.7148476
+"572","Campylobacteriosis","65+","Campylobacteriosis","WTPOngoing",0,0,0
+"573","Campylobacteriosis","65+","GBS","Deaths",67946580.080134,30992304.1400942,124187456.356021
+"574","Campylobacteriosis","65+","GBS","ED",0,0,0
+"575","Campylobacteriosis","65+","GBS","FrictionHigh",137802.78390849,66062.7600050861,282774.711400325
+"576","Campylobacteriosis","65+","GBS","FrictionLow",51676.0439656836,24773.5350019073,106040.516775122
+"577","Campylobacteriosis","65+","GBS","GP",3426.99325544162,1639.04108706849,7034.82265965943
+"578","Campylobacteriosis","65+","GBS","Hospitalisation",573167.737898992,274777.051939852,1176154.33499511
+"579","Campylobacteriosis","65+","GBS","HumanCapital",172253.479885612,82578.4500063576,353468.389250406
+"580","Campylobacteriosis","65+","GBS","Medications",0,0,0
+"581","Campylobacteriosis","65+","GBS","Tests",0,0,0
+"582","Campylobacteriosis","65+","GBS","WTP",27165.3807397766,13023.1043042672,55744.0312952708
+"583","Campylobacteriosis","65+","GBS","WTPOngoing",36859.2521515612,17350.7540340266,75012.4438513771
+"584","Campylobacteriosis","65+","IBS","Deaths",17154601.2258432,8354018.55418538,42111240.0171901
+"585","Campylobacteriosis","65+","IBS","ED",0,0,0
+"586","Campylobacteriosis","65+","IBS","FrictionHigh",1805882.58716281,1080709.20667822,3045264.47923848
+"587","Campylobacteriosis","65+","IBS","FrictionLow",677205.970186054,405265.952504333,1141974.17971443
+"588","Campylobacteriosis","65+","IBS","GP",987430.950822812,585588.652960123,1664579.99966813
+"589","Campylobacteriosis","65+","IBS","Hospitalisation",808095.569911189,412147.804092997,1964175.41516272
+"590","Campylobacteriosis","65+","IBS","HumanCapital",2257353.23395351,1350886.50834778,3806580.5990481
+"591","Campylobacteriosis","65+","IBS","Medications",133757.561309102,79738.5544065489,226106.07019343
+"592","Campylobacteriosis","65+","IBS","Tests",1169613.97160473,695470.656147933,1945917.93059602
+"593","Campylobacteriosis","65+","IBS","WTP",2434175.40996004,1456703.66108712,4104756.29195421
+"594","Campylobacteriosis","65+","IBS","WTPOngoing",3377784.86527163,1623050.72643636,6400245.14775515
+"595","Campylobacteriosis","65+","ReactiveArthritis","Deaths",117815.334562366,719.676253154095,999934.95159062
+"596","Campylobacteriosis","65+","ReactiveArthritis","ED",0,0,0
+"597","Campylobacteriosis","65+","ReactiveArthritis","FrictionHigh",3145131.16232738,1394385.35777387,6050463.06740268
+"598","Campylobacteriosis","65+","ReactiveArthritis","FrictionLow",1179424.18587277,522894.509165202,2268923.65027601
+"599","Campylobacteriosis","65+","ReactiveArthritis","GP",151535.819722589,65381.4545921442,298898.412254076
+"600","Campylobacteriosis","65+","ReactiveArthritis","Hospitalisation",759677.762488377,439660.517651591,1160419.29218593
+"601","Campylobacteriosis","65+","ReactiveArthritis","HumanCapital",3931413.95290923,1742981.69721734,7563078.83425335
+"602","Campylobacteriosis","65+","ReactiveArthritis","Medications",319417.308781264,99846.3993870362,950333.476606734
+"603","Campylobacteriosis","65+","ReactiveArthritis","Tests",186574.444381838,79750.5514721469,373033.259519863
+"604","Campylobacteriosis","65+","ReactiveArthritis","WTP",2891611.20605733,1281987.97379169,5562752.68170086
+"605","Campylobacteriosis","65+","ReactiveArthritis","WTPOngoing",980933.073409068,425477.662034358,2026328.24484964
+"606","Campylobacteriosis","All Ages","All Diseases","Deaths",130850682.146576,84351892.2457991,188218191.964805
+"607","Campylobacteriosis","All Ages","All Diseases","ED",11619237.6835243,6689655.83945113,19767010.0939525
+"608","Campylobacteriosis","All Ages","All Diseases","FrictionHigh",120861943.068356,77434091.4071075,193725521.641219
+"609","Campylobacteriosis","All Ages","All Diseases","FrictionLow",45323228.6506334,29037784.2776653,72647070.615457
+"610","Campylobacteriosis","All Ages","All Diseases","GP",9725479.33458317,6521191.17333046,14690957.8770505
+"611","Campylobacteriosis","All Ages","All Diseases","Hospitalisation",32515508.2039926,26142103.58667,40796630.6543829
+"612","Campylobacteriosis","All Ages","All Diseases","HumanCapital",151077428.835445,96792614.2588843,242156902.051523
+"613","Campylobacteriosis","All Ages","All Diseases","Medications",5836994.21049352,3667870.63646283,9318210.892754
+"614","Campylobacteriosis","All Ages","All Diseases","Tests",8471320.94229092,6430429.64839157,11666240.7492063
+"615","Campylobacteriosis","All Ages","All Diseases","WTP",64884124.5884342,44114196.4319897,95780560.4654295
+"616","Campylobacteriosis","All Ages","All Diseases","WTPOngoing",22484069.3343559,13944805.751056,35686804.2587765
+"617","Campylobacteriosis","All Ages","Campylobacteriosis","Deaths",25656177.0734558,16411727.6786515,38469354.3389504
+"618","Campylobacteriosis","All Ages","Campylobacteriosis","ED",11619237.6835243,6689655.83945113,19767010.0939525
+"619","Campylobacteriosis","All Ages","Campylobacteriosis","FrictionHigh",65081123.6821085,40763052.165381,108851528.507811
+"620","Campylobacteriosis","All Ages","Campylobacteriosis","FrictionLow",24405421.3807907,15286144.5620179,40819323.1904292
+"621","Campylobacteriosis","All Ages","Campylobacteriosis","GP",3786030.8899318,2403080.60484264,5967426.9725244
+"622","Campylobacteriosis","All Ages","Campylobacteriosis","Hospitalisation",20486779.7936936,15396562.2830861,26261615.915001
+"623","Campylobacteriosis","All Ages","Campylobacteriosis","HumanCapital",81351404.6026357,50953815.2067262,136064410.634764
+"624","Campylobacteriosis","All Ages","Campylobacteriosis","Medications",3239812.67758854,2118438.30424525,4914731.23421946
+"625","Campylobacteriosis","All Ages","Campylobacteriosis","Tests",2206881.48,2206881.48,2206881.48
+"626","Campylobacteriosis","All Ages","Campylobacteriosis","WTP",37335184.4487059,25601539.8212434,53929153.7603273
+"627","Campylobacteriosis","All Ages","Campylobacteriosis","WTPOngoing",0,0,0
+"628","Campylobacteriosis","All Ages","GBS","Deaths",81079840.9313963,41976088.7306284,136439410.850259
+"629","Campylobacteriosis","All Ages","GBS","ED",0,0,0
+"630","Campylobacteriosis","All Ages","GBS","FrictionHigh",1492612.48501049,856225.261529823,2816304.56579422
+"631","Campylobacteriosis","All Ages","GBS","FrictionLow",559729.681878934,321084.473073684,1056114.21217283
+"632","Campylobacteriosis","All Ages","GBS","GP",17583.1934664651,10476.8510000472,31280.7617253459
+"633","Campylobacteriosis","All Ages","GBS","Hospitalisation",2957170.07451877,1752512.25835472,5220403.5258171
+"634","Campylobacteriosis","All Ages","GBS","HumanCapital",1865765.60626311,1070281.57691228,3520380.70724278
+"635","Campylobacteriosis","All Ages","GBS","Medications",0,0,0
+"636","Campylobacteriosis","All Ages","GBS","Tests",0,0,0
+"637","Campylobacteriosis","All Ages","GBS","WTP",140155.56995766,83060.6114081764,247421.897669833
+"638","Campylobacteriosis","All Ages","GBS","WTPOngoing",85219.7261717236,51220.6579067525,145042.79747141
+"639","Campylobacteriosis","All Ages","IBS","Deaths",18978318.6705736,10048864.5275719,43920971.7938681
+"640","Campylobacteriosis","All Ages","IBS","ED",0,0,0
+"641","Campylobacteriosis","All Ages","IBS","FrictionHigh",19661291.7913835,12668356.9825768,30493499.9506518
+"642","Campylobacteriosis","All Ages","IBS","FrictionLow",7372984.4217688,4750633.86846628,11435062.4814944
+"643","Campylobacteriosis","All Ages","IBS","GP",5060374.00559484,3415756.67792082,7594093.02023885
+"644","Campylobacteriosis","All Ages","IBS","Hospitalisation",4497349.50145806,2445332.11847635,9609701.88949275
+"645","Campylobacteriosis","All Ages","IBS","HumanCapital",24576614.7392293,15835446.2282209,38116874.9383148
+"646","Campylobacteriosis","All Ages","IBS","Medications",683772.368276384,457601.107806572,1031053.01341249
+"647","Campylobacteriosis","All Ages","IBS","Tests",5277175.5955335,3554751.92705701,7938244.99255459
+"648","Campylobacteriosis","All Ages","IBS","WTP",12475260.8930241,8405342.93039778,18888006.406094
+"649","Campylobacteriosis","All Ages","IBS","WTPOngoing",17293137.9388562,10021567.8597014,28896677.4272609
+"650","Campylobacteriosis","All Ages","ReactiveArthritis","Deaths",478476.636700182,76841.5122648328,1469786.96797355
+"651","Campylobacteriosis","All Ages","ReactiveArthritis","ED",0,0,0
+"652","Campylobacteriosis","All Ages","ReactiveArthritis","FrictionHigh",32970469.5587686,18830461.1881226,61109091.6477696
+"653","Campylobacteriosis","All Ages","ReactiveArthritis","FrictionLow",12363926.0845382,7061422.94554596,22915909.3679136
+"654","Campylobacteriosis","All Ages","ReactiveArthritis","GP",764653.73533662,461580.883514311,1328843.01126551
+"655","Campylobacteriosis","All Ages","ReactiveArthritis","Hospitalisation",3898034.83155402,2687893.42717238,5591797.67402169
+"656","Campylobacteriosis","All Ages","ReactiveArthritis","HumanCapital",41213086.9484607,23538076.4851532,76386364.5597119
+"657","Campylobacteriosis","All Ages","ReactiveArthritis","Medications",1744654.73750852,799816.912155704,3939811.1721819
+"658","Campylobacteriosis","All Ages","ReactiveArthritis","Tests",942267.960812947,561948.227447009,1695369.05047824
+"659","Campylobacteriosis","All Ages","ReactiveArthritis","WTP",14605739.2891719,8834025.4088804,25139945.1017749
+"660","Campylobacteriosis","All Ages","ReactiveArthritis","WTPOngoing",4999882.3052094,2982773.8517949,8717948.45281528
+"661","Gastroenteritis","<5","All Diseases","Deaths",5398186.01645122,2693167.88305879,10670356.1973503
+"662","Gastroenteritis","<5","All Diseases","ED",4319039.40304969,2079761.44095781,8788365.13108465
+"663","Gastroenteritis","<5","All Diseases","FrictionHigh",50758510.718576,24072147.6981978,96822238.8746237
+"664","Gastroenteritis","<5","All Diseases","FrictionLow",19034441.519466,9027055.38682417,36308339.5779839
+"665","Gastroenteritis","<5","All Diseases","GP",2206750.25212081,1203892.07574554,3607870.7758039
+"666","Gastroenteritis","<5","All Diseases","Hospitalisation",9123925.52586955,4680129.40225915,15574931.3105946
+"667","Gastroenteritis","<5","All Diseases","HumanCapital",63448138.39822,30090184.6227472,121027798.59328
+"668","Gastroenteritis","<5","All Diseases","Medications",1999095.98929347,1069386.23994691,3644841.06692617
+"669","Gastroenteritis","<5","All Diseases","Tests",528493.206691568,229329.273472173,1167625.91676904
+"670","Gastroenteritis","<5","All Diseases","WTP",10005206.1333993,5844952.22525201,15629889.3368674
+"671","Gastroenteritis","<5","All Diseases","WTPOngoing",0,0,0
+"672","Gastroenteritis","<5","Gastroenteritis","Deaths",5398186.01645122,2693167.88305879,10670356.1973503
+"673","Gastroenteritis","<5","Gastroenteritis","ED",4319039.40304969,2079761.44095781,8788365.13108465
+"674","Gastroenteritis","<5","Gastroenteritis","FrictionHigh",50758510.718576,24072147.6981978,96822238.8746237
+"675","Gastroenteritis","<5","Gastroenteritis","FrictionLow",19034441.519466,9027055.38682417,36308339.5779839
+"676","Gastroenteritis","<5","Gastroenteritis","GP",2206750.25212081,1203892.07574554,3607870.7758039
+"677","Gastroenteritis","<5","Gastroenteritis","Hospitalisation",9123925.52586955,4680129.40225915,15574931.3105946
+"678","Gastroenteritis","<5","Gastroenteritis","HumanCapital",63448138.39822,30090184.6227472,121027798.59328
+"679","Gastroenteritis","<5","Gastroenteritis","Medications",1999095.98929347,1069386.23994691,3644841.06692617
+"680","Gastroenteritis","<5","Gastroenteritis","Tests",528493.206691568,229329.273472173,1167625.91676904
+"681","Gastroenteritis","<5","Gastroenteritis","WTP",10005206.1333993,5844952.22525201,15629889.3368674
+"682","Gastroenteritis","<5","Gastroenteritis","WTPOngoing",0,0,0
+"683","Gastroenteritis","5-64","All Diseases","Deaths",56593011.8622281,30116697.1223147,102570550.616947
+"684","Gastroenteritis","5-64","All Diseases","ED",55229723.5820213,25605921.5525651,109345545.080008
+"685","Gastroenteritis","5-64","All Diseases","FrictionHigh",943544287.036482,517964436.884578,1548026134.43829
+"686","Gastroenteritis","5-64","All Diseases","FrictionLow",353829107.638681,194236663.831717,580509800.414359
+"687","Gastroenteritis","5-64","All Diseases","GP",27265905.7667573,14962952.6298439,45508766.8756066
+"688","Gastroenteritis","5-64","All Diseases","Hospitalisation",52294261.3787587,26708822.6870013,95393262.0244081
+"689","Gastroenteritis","5-64","All Diseases","HumanCapital",1179430358.7956,647455546.105722,1935032668.04786
+"690","Gastroenteritis","5-64","All Diseases","Medications",18929511.2107466,10601251.2311532,30765291.1760404
+"691","Gastroenteritis","5-64","All Diseases","Tests",6549270.4819673,2913253.94661237,15067537.2436343
+"692","Gastroenteritis","5-64","All Diseases","WTP",121336405.378917,70965028.4860526,194083056.714975
+"693","Gastroenteritis","5-64","All Diseases","WTPOngoing",0,0,0
+"694","Gastroenteritis","5-64","Gastroenteritis","Deaths",56593011.8622281,30116697.1223147,102570550.616947
+"695","Gastroenteritis","5-64","Gastroenteritis","ED",55229723.5820213,25605921.5525651,109345545.080008
+"696","Gastroenteritis","5-64","Gastroenteritis","FrictionHigh",943544287.036482,517964436.884578,1548026134.43829
+"697","Gastroenteritis","5-64","Gastroenteritis","FrictionLow",353829107.638681,194236663.831717,580509800.414359
+"698","Gastroenteritis","5-64","Gastroenteritis","GP",27265905.7667573,14962952.6298439,45508766.8756066
+"699","Gastroenteritis","5-64","Gastroenteritis","Hospitalisation",52294261.3787587,26708822.6870013,95393262.0244081
+"700","Gastroenteritis","5-64","Gastroenteritis","HumanCapital",1179430358.7956,647455546.105722,1935032668.04786
+"701","Gastroenteritis","5-64","Gastroenteritis","Medications",18929511.2107466,10601251.2311532,30765291.1760404
+"702","Gastroenteritis","5-64","Gastroenteritis","Tests",6549270.4819673,2913253.94661237,15067537.2436343
+"703","Gastroenteritis","5-64","Gastroenteritis","WTP",121336405.378917,70965028.4860526,194083056.714975
+"704","Gastroenteritis","5-64","Gastroenteritis","WTPOngoing",0,0,0
+"705","Gastroenteritis","65+","All Diseases","Deaths",263121981.936626,139886569.695056,466286245.811044
+"706","Gastroenteritis","65+","All Diseases","ED",11161229.9879379,5389217.58516393,21596024.4170923
+"707","Gastroenteritis","65+","All Diseases","FrictionHigh",104780077.890961,29225689.0838952,515948489.220432
+"708","Gastroenteritis","65+","All Diseases","FrictionLow",39292529.2091105,10959633.4064607,193480683.457662
+"709","Gastroenteritis","65+","All Diseases","GP",5563075.21263098,3095245.30269605,9212081.13486962
+"710","Gastroenteritis","65+","All Diseases","Hospitalisation",95085461.1710922,49081616.7255378,168552845.911416
+"711","Gastroenteritis","65+","All Diseases","HumanCapital",130975097.363702,36532111.354869,644935611.525539
+"712","Gastroenteritis","65+","All Diseases","Medications",5469694.73600795,2937096.03597509,9668073.60558385
+"713","Gastroenteritis","65+","All Diseases","Tests",1388007.42306348,595707.740526535,2963893.81729976
+"714","Gastroenteritis","65+","All Diseases","WTP",25993614.1126226,15539983.2003461,40562819.9436339
+"715","Gastroenteritis","65+","All Diseases","WTPOngoing",0,0,0
+"716","Gastroenteritis","65+","Gastroenteritis","Deaths",263121981.936626,139886569.695056,466286245.811044
+"717","Gastroenteritis","65+","Gastroenteritis","ED",11161229.9879379,5389217.58516393,21596024.4170923
+"718","Gastroenteritis","65+","Gastroenteritis","FrictionHigh",104780077.890961,29225689.0838952,515948489.220432
+"719","Gastroenteritis","65+","Gastroenteritis","FrictionLow",39292529.2091105,10959633.4064607,193480683.457662
+"720","Gastroenteritis","65+","Gastroenteritis","GP",5563075.21263098,3095245.30269605,9212081.13486962
+"721","Gastroenteritis","65+","Gastroenteritis","Hospitalisation",95085461.1710922,49081616.7255378,168552845.911416
+"722","Gastroenteritis","65+","Gastroenteritis","HumanCapital",130975097.363702,36532111.354869,644935611.525539
+"723","Gastroenteritis","65+","Gastroenteritis","Medications",5469694.73600795,2937096.03597509,9668073.60558385
+"724","Gastroenteritis","65+","Gastroenteritis","Tests",1388007.42306348,595707.740526535,2963893.81729976
+"725","Gastroenteritis","65+","Gastroenteritis","WTP",25993614.1126226,15539983.2003461,40562819.9436339
+"726","Gastroenteritis","65+","Gastroenteritis","WTPOngoing",0,0,0
+"727","Gastroenteritis","All Ages","All Diseases","Deaths",327128704.029119,199581608.13179,537897152.40364
+"728","Gastroenteritis","All Ages","All Diseases","ED",71975475.8920163,40429351.5902447,126133763.945644
+"729","Gastroenteritis","All Ages","All Diseases","FrictionHigh",1157045343.0655,668137828.093124,1888476602.44384
+"730","Gastroenteritis","All Ages","All Diseases","FrictionLow",433892003.649564,250551685.534921,708178725.91644
+"731","Gastroenteritis","All Ages","All Diseases","GP",35121818.3506275,23145119.1143401,54432711.289796
+"732","Gastroenteritis","All Ages","All Diseases","Hospitalisation",162043281.533927,103595645.778141,241367623.654035
+"733","Gastroenteritis","All Ages","All Diseases","HumanCapital",1446306678.83188,835172285.116405,2360595753.0548
+"734","Gastroenteritis","All Ages","All Diseases","Medications",26828994.6947444,17479347.9984134,39344803.5209576
+"735","Gastroenteritis","All Ages","All Diseases","Tests",8709788.26197006,4642049.5956522,17390709.3940647
+"736","Gastroenteritis","All Ages","All Diseases","WTP",157820599.515036,106177335.043421,232800013.16316
+"737","Gastroenteritis","All Ages","All Diseases","WTPOngoing",0,0,0
+"738","Gastroenteritis","All Ages","Gastroenteritis","Deaths",327128704.029119,199581608.13179,537897152.40364
+"739","Gastroenteritis","All Ages","Gastroenteritis","ED",71975475.8920163,40429351.5902447,126133763.945644
+"740","Gastroenteritis","All Ages","Gastroenteritis","FrictionHigh",1157045343.0655,668137828.093124,1888476602.44384
+"741","Gastroenteritis","All Ages","Gastroenteritis","FrictionLow",433892003.649564,250551685.534921,708178725.91644
+"742","Gastroenteritis","All Ages","Gastroenteritis","GP",35121818.3506275,23145119.1143401,54432711.289796
+"743","Gastroenteritis","All Ages","Gastroenteritis","Hospitalisation",162043281.533927,103595645.778141,241367623.654035
+"744","Gastroenteritis","All Ages","Gastroenteritis","HumanCapital",1446306678.83188,835172285.116405,2360595753.0548
+"745","Gastroenteritis","All Ages","Gastroenteritis","Medications",26828994.6947444,17479347.9984134,39344803.5209576
+"746","Gastroenteritis","All Ages","Gastroenteritis","Tests",8709788.26197006,4642049.5956522,17390709.3940647
+"747","Gastroenteritis","All Ages","Gastroenteritis","WTP",157820599.515036,106177335.043421,232800013.16316
+"748","Gastroenteritis","All Ages","Gastroenteritis","WTPOngoing",0,0,0
+"749","Salmonellosis","<5","All Diseases","Deaths",2529158.05720009,825621.64349657,5937490.23647848
+"750","Salmonellosis","<5","All Diseases","ED",598566.09730067,263215.98918194,1373491.86462749
+"751","Salmonellosis","<5","All Diseases","FrictionHigh",6238438.67582668,3137686.68569965,12066236.6902548
+"752","Salmonellosis","<5","All Diseases","FrictionLow",2339414.50343501,1176632.50713737,4524838.75884554
+"753","Salmonellosis","<5","All Diseases","GP",544673.961562924,277005.47227361,983059.645258447
+"754","Salmonellosis","<5","All Diseases","Hospitalisation",2071036.20398326,1398690.65771444,2932034.43100492
+"755","Salmonellosis","<5","All Diseases","HumanCapital",7798048.34478335,3922108.35712456,15082795.8628185
+"756","Salmonellosis","<5","All Diseases","Medications",248609.067621362,111262.485895413,587197.934188004
+"757","Salmonellosis","<5","All Diseases","Tests",523561.923684139,373647.224062582,777005.614727257
+"758","Salmonellosis","<5","All Diseases","WTP",3804389.14370216,1991639.34140467,6968188.01196212
+"759","Salmonellosis","<5","All Diseases","WTPOngoing",1307929.64236415,586026.554546511,2569988.71602657
+"760","Salmonellosis","<5","IBS","Deaths",10857.1147332598,59.9316956469898,126392.246718362
+"761","Salmonellosis","<5","IBS","ED",0,0,0
+"762","Salmonellosis","<5","IBS","FrictionHigh",1071285.7879616,554288.431840909,1850263.5823916
+"763","Salmonellosis","<5","IBS","FrictionLow",401732.170485601,207858.161940341,693848.843396851
+"764","Salmonellosis","<5","IBS","GP",280224.467632454,144451.669538993,486735.49718604
+"765","Salmonellosis","<5","IBS","Hospitalisation",2955.72970870181,1126.88786719687,7957.73338758596
+"766","Salmonellosis","<5","IBS","HumanCapital",1339107.234952,692860.539801136,2312829.4779895
+"767","Salmonellosis","<5","IBS","Medications",37643.8315064679,19756.8745713014,66416.6789590856
+"768","Salmonellosis","<5","IBS","Tests",247109.912309397,127944.542459944,426390.373571529
+"769","Salmonellosis","<5","IBS","WTP",691337.263320244,357701.233289112,1194038.2070275
+"770","Salmonellosis","<5","IBS","WTPOngoing",926330.801547211,407454.592911728,1908238.2865687
+"771","Salmonellosis","<5","ReactiveArthritis","Deaths",42379.6981659237,339.045969271871,457408.034981661
+"772","Salmonellosis","<5","ReactiveArthritis","ED",0,0,0
+"773","Salmonellosis","<5","ReactiveArthritis","FrictionHigh",2288072.87397992,567945.0672253,5569479.13933252
+"774","Salmonellosis","<5","ReactiveArthritis","FrictionLow",858027.32774247,212979.400209488,2088554.6772497
+"775","Salmonellosis","<5","ReactiveArthritis","GP",52938.4630372025,13191.383738168,132140.197806706
+"776","Salmonellosis","<5","ReactiveArthritis","Hospitalisation",254168.51295377,82465.7517551943,526146.758796116
+"777","Salmonellosis","<5","ReactiveArthritis","HumanCapital",2860091.0924749,709931.334031626,6961848.92416565
+"778","Salmonellosis","<5","ReactiveArthritis","Medications",109644.312164416,23753.6615270301,383149.246928353
+"779","Salmonellosis","<5","ReactiveArthritis","Tests",63074.8754852646,15903.8414900694,160921.5776823
+"780","Salmonellosis","<5","ReactiveArthritis","WTP",1016581.09402468,252335.589635981,2474496.0097193
+"781","Salmonellosis","<5","ReactiveArthritis","WTPOngoing",349113.124338373,85557.7920366029,859359.749142705
+"782","Salmonellosis","<5","Salmonellosis","Deaths",2371890.08030722,755155.822201559,5808613.71004797
+"783","Salmonellosis","<5","Salmonellosis","ED",598566.09730067,263215.98918194,1373491.86462749
+"784","Salmonellosis","<5","Salmonellosis","FrictionHigh",2852026.92399187,1487991.69242783,5452296.50346181
+"785","Salmonellosis","<5","Salmonellosis","FrictionLow",1069510.09649695,557996.884660435,2044611.18879818
+"786","Salmonellosis","<5","Salmonellosis","GP",208080.180420132,104099.411899985,399935.538161372
+"787","Salmonellosis","<5","Salmonellosis","Hospitalisation",1827684.20002583,1114906.3434306,2622435.50665891
+"788","Salmonellosis","<5","Salmonellosis","HumanCapital",3565033.65498983,1859989.61553478,6815370.62932726
+"789","Salmonellosis","<5","Salmonellosis","Medications",91409.3211285378,40108.1605375579,193498.078390659
+"790","Salmonellosis","<5","Salmonellosis","Tests",213657.84,213657.84,213657.84
+"791","Salmonellosis","<5","Salmonellosis","WTP",2130385.10611372,1174028.00209848,3707241.88548192
+"792","Salmonellosis","<5","Salmonellosis","WTPOngoing",0,0,0
+"793","Salmonellosis","5-64","All Diseases","Deaths",19622083.6608387,11396304.7194077,31706869.5142801
+"794","Salmonellosis","5-64","All Diseases","ED",1644781.94343767,723559.437955995,3555335.4430316
+"795","Salmonellosis","5-64","All Diseases","FrictionHigh",20858690.5915973,11324071.5168141,39384927.2487729
+"796","Salmonellosis","5-64","All Diseases","FrictionLow",7822008.97184898,4246526.81880531,14769347.7182898
+"797","Salmonellosis","5-64","All Diseases","GP",1410853.16821813,762608.989570793,2614596.73706739
+"798","Salmonellosis","5-64","All Diseases","Hospitalisation",5468388.8975592,3506086.24441292,7845787.66822585
+"799","Salmonellosis","5-64","All Diseases","HumanCapital",26073363.2394966,14155089.3960177,49231159.0609662
+"800","Salmonellosis","5-64","All Diseases","Medications",811070.798079491,371512.110753352,1677856.03755966
+"801","Salmonellosis","5-64","All Diseases","Tests",1470155.76530211,1056956.18649762,2243158.20365242
+"802","Salmonellosis","5-64","All Diseases","WTP",9856187.56167955,5384679.01395535,18502263.463392
+"803","Salmonellosis","5-64","All Diseases","WTPOngoing",3436453.46222213,1670410.5341774,7064084.50144956
+"804","Salmonellosis","5-64","IBS","Deaths",310995.296756115,99074.2210290333,1041777.43575885
+"805","Salmonellosis","5-64","IBS","ED",0,0,0
+"806","Salmonellosis","5-64","IBS","FrictionHigh",3255714.6866331,1783842.00915499,5838530.48219124
+"807","Salmonellosis","5-64","IBS","FrictionLow",1220893.00748741,668940.75343312,2189448.93082171
+"808","Salmonellosis","5-64","IBS","GP",726516.609232256,398048.733476853,1329263.14466194
+"809","Salmonellosis","5-64","IBS","Hospitalisation",736930.748003624,266502.170567894,2069703.38654438
+"810","Salmonellosis","5-64","IBS","HumanCapital",4069643.35829137,2229802.51144373,7298163.10273905
+"811","Salmonellosis","5-64","IBS","Medications",97488.1721292257,53981.2732384949,178953.41431521
+"812","Salmonellosis","5-64","IBS","Tests",743602.096165095,401698.299085003,1356524.85951407
+"813","Salmonellosis","5-64","IBS","WTP",1792049.66757596,981883.791180773,3213714.22769333
+"814","Salmonellosis","5-64","IBS","WTPOngoing",2439080.41234938,1086603.66188405,5246288.75450302
+"815","Salmonellosis","5-64","ReactiveArthritis","Deaths",21304.0554718294,117.36958421611,239326.066468633
+"816","Salmonellosis","5-64","ReactiveArthritis","ED",0,0,0
+"817","Salmonellosis","5-64","ReactiveArthritis","FrictionHigh",6981472.21778718,1955471.70054419,16718930.832914
+"818","Salmonellosis","5-64","ReactiveArthritis","FrictionLow",2618052.08167019,733301.88770407,6269599.06234276
+"819","Salmonellosis","5-64","ReactiveArthritis","GP",135375.497768135,38339.0977338977,342963.454988775
+"820","Salmonellosis","5-64","ReactiveArthritis","Hospitalisation",720751.552180177,198531.339818597,1770694.1614656
+"821","Salmonellosis","5-64","ReactiveArthritis","HumanCapital",8726840.27223397,2444339.62568023,20898663.5411425
+"822","Salmonellosis","5-64","ReactiveArthritis","Medications",291300.315497364,65967.3625497557,951613.951393941
+"823","Salmonellosis","5-64","ReactiveArthritis","Tests",169140.808199986,47911.1800877184,425928.835712994
+"824","Salmonellosis","5-64","ReactiveArthritis","WTP",2638877.57957931,739134.994324085,6319471.07332298
+"825","Salmonellosis","5-64","ReactiveArthritis","WTPOngoing",896710.754551391,242737.960292505,2258149.20972615
+"826","Salmonellosis","5-64","Salmonellosis","Deaths",19233168.9902354,10931403.8594656,31316088.8515649
+"827","Salmonellosis","5-64","Salmonellosis","ED",1644781.94343767,723559.437955995,3555335.4430316
+"828","Salmonellosis","5-64","Salmonellosis","FrictionHigh",10541889.402347,6095270.7010009,19410647.9827886
+"829","Salmonellosis","5-64","Salmonellosis","FrictionLow",3953208.52588013,2285726.51287534,7278992.99354573
+"830","Salmonellosis","5-64","Salmonellosis","GP",539966.505006367,277889.983810504,1035923.70322069
+"831","Salmonellosis","5-64","Salmonellosis","Hospitalisation",3776797.98503535,2364777.66148472,5372943.13466318
+"832","Salmonellosis","5-64","Salmonellosis","HumanCapital",13177361.7529338,7619088.37625113,24263309.9784858
+"833","Salmonellosis","5-64","Salmonellosis","Medications",385595.390513568,198573.625363,710366.119170076
+"834","Salmonellosis","5-64","Salmonellosis","Tests",557355,557355,557355
+"835","Salmonellosis","5-64","Salmonellosis","WTP",5396485.45424306,3096223.03652807,9389289.88410568
+"836","Salmonellosis","5-64","Salmonellosis","WTPOngoing",0,0,0
+"837","Salmonellosis","65+","All Diseases","Deaths",69732966.84558,44776059.8001274,104186033.071706
+"838","Salmonellosis","65+","All Diseases","ED",359319.378276098,152622.80394715,798824.315673739
+"839","Salmonellosis","65+","All Diseases","FrictionHigh",2516959.65556255,1231971.41405217,7395718.16244387
+"840","Salmonellosis","65+","All Diseases","FrictionLow",943859.870835955,461989.280269565,2773394.31091645
+"841","Salmonellosis","65+","All Diseases","GP",313000.458730577,167611.976481859,567794.399114754
+"842","Salmonellosis","65+","All Diseases","Hospitalisation",5869190.04439101,3781273.57008207,8309039.44878978
+"843","Salmonellosis","65+","All Diseases","HumanCapital",3146199.56945319,1539964.26756522,9244647.70305483
+"844","Salmonellosis","65+","All Diseases","Medications",269712.29180009,130685.277096763,539418.589938965
+"845","Salmonellosis","65+","All Diseases","Tests",350016.666898871,245045.883706872,541960.437242408
+"846","Salmonellosis","65+","All Diseases","WTP",2222870.68854082,1207956.77623527,4054159.68205998
+"847","Salmonellosis","65+","All Diseases","WTPOngoing",733820.769112425,372612.137754014,1508098.75148293
+"848","Salmonellosis","65+","IBS","Deaths",2825104.30578495,1014004.03565898,7878192.61486517
+"849","Salmonellosis","65+","IBS","ED",0,0,0
+"850","Salmonellosis","65+","IBS","FrictionHigh",289910.751737937,158683.270214667,521119.731445899
+"851","Salmonellosis","65+","IBS","FrictionLow",108716.531901726,59506.2263305001,195419.899292212
+"852","Salmonellosis","65+","IBS","GP",159458.449825185,86888.6493698657,287982.404897406
+"853","Salmonellosis","65+","IBS","Hospitalisation",140902.124322205,51679.7641799787,419939.306889113
+"854","Salmonellosis","65+","IBS","HumanCapital",362388.439672421,198354.087768334,651399.664307374
+"855","Salmonellosis","65+","IBS","Medications",21524.3503096635,11610.7824539404,38883.5260073428
+"856","Salmonellosis","65+","IBS","Tests",187484.103190946,101082.851773669,341506.762369114
+"857","Salmonellosis","65+","IBS","WTP",390774.919687453,213891.488336148,702424.866903171
+"858","Salmonellosis","65+","IBS","WTPOngoing",542170.936051055,252804.855314243,1104393.15829312
+"859","Salmonellosis","65+","ReactiveArthritis","Deaths",19104.2531976673,127.708954241046,234092.156556346
+"860","Salmonellosis","65+","ReactiveArthritis","ED",0,0,0
+"861","Salmonellosis","65+","ReactiveArthritis","FrictionHigh",594070.427961334,146525.473032178,1458458.72864022
+"862","Salmonellosis","65+","ReactiveArthritis","FrictionLow",222776.4104855,54947.0523870666,546922.023240084
+"863","Salmonellosis","65+","ReactiveArthritis","GP",29084.6384377194,7152.29590860449,71276.2104694264
+"864","Salmonellosis","65+","ReactiveArthritis","Hospitalisation",142356.043923287,33365.0251131144,407057.471192049
+"865","Salmonellosis","65+","ReactiveArthritis","HumanCapital",742588.034951668,183156.841290222,1823073.41080028
+"866","Salmonellosis","65+","ReactiveArthritis","Medications",59635.1029084497,11894.5947379914,209038.864529344
+"867","Salmonellosis","65+","ReactiveArthritis","Tests",35271.8926478586,8296.31245372654,86232.6055070844
+"868","Salmonellosis","65+","ReactiveArthritis","WTP",546184.123338464,134714.47705194,1340896.57494202
+"869","Salmonellosis","65+","ReactiveArthritis","WTPOngoing",182878.2926543,44875.1576457135,483117.212526879
+"870","Salmonellosis","65+","Salmonellosis","Deaths",65753891.4365914,41379288.276655,101019200.022017
+"871","Salmonellosis","65+","Salmonellosis","ED",359319.378276098,152622.80394715,798824.315673739
+"872","Salmonellosis","65+","Salmonellosis","FrictionHigh",1518230.58783798,669630.749072192,6566996.68898632
+"873","Salmonellosis","65+","Salmonellosis","FrictionLow",569336.470439243,251111.530902072,2462623.75836987
+"874","Salmonellosis","65+","Salmonellosis","GP",121301.293473863,59598.2072974543,230553.564303862
+"875","Salmonellosis","65+","Salmonellosis","Hospitalisation",5533754.5616141,3462776.46312284,7947211.96613031
+"876","Salmonellosis","65+","Salmonellosis","HumanCapital",1897788.23479748,837038.436340241,8208745.8612329
+"877","Salmonellosis","65+","Salmonellosis","Medications",174683.762926675,86292.5478752808,346189.807107034
+"878","Salmonellosis","65+","Salmonellosis","Tests",126313.44,126313.44,126313.44
+"879","Salmonellosis","65+","Salmonellosis","WTP",1250360.29018878,727158.224728437,2134390.93856719
+"880","Salmonellosis","65+","Salmonellosis","WTPOngoing",0,0,0
+"881","Salmonellosis","All Ages","All Diseases","Deaths",92555496.412123,65386238.2198967,129121827.886248
+"882","Salmonellosis","All Ages","All Diseases","ED",2736553.09322623,1628480.66594708,4922503.41640441
+"883","Salmonellosis","All Ages","All Diseases","FrictionHigh",31482268.8075975,20276916.8357278,50758983.5524799
+"884","Salmonellosis","All Ages","All Diseases","FrictionLow",11805850.8028491,7603843.81339793,19034618.83218
+"885","Salmonellosis","All Ages","All Diseases","GP",2346641.36412837,1576498.07421246,3585918.0731763
+"886","Salmonellosis","All Ages","All Diseases","Hospitalisation",13490341.3075588,10517690.5065882,17006364.7461331
+"887","Salmonellosis","All Ages","All Diseases","HumanCapital",39352836.0094969,25346146.0446598,63448729.4405999
+"888","Salmonellosis","All Ages","All Diseases","Medications",1393795.72328553,871873.185908109,2307634.19344716
+"889","Salmonellosis","All Ages","All Diseases","Tests",2412940.73953361,1897365.59468199,3215101.41984692
+"890","Salmonellosis","All Ages","All Diseases","WTP",16626808.0827067,11094471.1590557,25243264.1753806
+"891","Salmonellosis","All Ages","All Diseases","WTPOngoing",5691185.9914898,3392400.71151431,9347943.95792814
+"892","Salmonellosis","All Ages","IBS","Deaths",3287946.27029252,1360546.07633491,8569124.23693207
+"893","Salmonellosis","All Ages","IBS","ED",0,0,0
+"894","Salmonellosis","All Ages","IBS","FrictionHigh",4706935.22852872,3003953.11719706,7372068.34094275
+"895","Salmonellosis","All Ages","IBS","FrictionLow",1765100.71069827,1126482.4189489,2764525.62785353
+"896","Salmonellosis","All Ages","IBS","GP",1206728.31859638,807175.790687706,1815528.17720358
+"897","Salmonellosis","All Ages","IBS","Hospitalisation",929716.803990626,417173.95421703,2300310.0484264
+"898","Salmonellosis","All Ages","IBS","HumanCapital",5883669.0356609,3754941.39649633,9215085.42617843
+"899","Salmonellosis","All Ages","IBS","Medications",162477.383245639,108194.574153364,245702.008411442
+"900","Salmonellosis","All Ages","IBS","Tests",1224242.04389014,811656.802802195,1824529.32316436
+"901","Salmonellosis","All Ages","IBS","WTP",2971393.18161802,1966586.64415531,4445152.88489441
+"902","Salmonellosis","All Ages","IBS","WTPOngoing",4098881.24761296,2430619.69916061,6973060.24435969
+"903","Salmonellosis","All Ages","ReactiveArthritis","Deaths",153388.278046273,21072.0256805233,632136.070409085
+"904","Salmonellosis","All Ages","ReactiveArthritis","ED",0,0,0
+"905","Salmonellosis","All Ages","ReactiveArthritis","FrictionHigh",10317671.3671171,4550924.34800413,20000092.7664143
+"906","Salmonellosis","All Ages","ReactiveArthritis","FrictionLow",3869126.7626689,1706596.63050155,7500034.78740535
+"907","Salmonellosis","All Ages","ReactiveArthritis","GP",234123.668187083,111046.57037119,448753.967698486
+"908","Salmonellosis","All Ages","ReactiveArthritis","Hospitalisation",1155987.78261,573653.02779152,2242270.44449419
+"909","Salmonellosis","All Ages","ReactiveArthritis","HumanCapital",12897089.2088963,5688655.43500516,25000115.9580178
+"910","Salmonellosis","All Ages","ReactiveArthritis","Medications",520086.476995317,208620.316366371,1206753.85281934
+"911","Salmonellosis","All Ages","ReactiveArthritis","Tests",283086.630219089,137856.560459403,555077.805493649
+"912","Salmonellosis","All Ages","ReactiveArthritis","WTP",4433036.3038497,2134352.2164812,8210034.80588768
+"913","Salmonellosis","All Ages","ReactiveArthritis","WTPOngoing",1516593.88142565,728767.760447154,2946264.14241438
+"914","Salmonellosis","All Ages","Salmonellosis","Deaths",88396224.715321,61968676.2876035,123601597.581702
+"915","Salmonellosis","All Ages","Salmonellosis","ED",2736553.09322623,1628480.66594708,4922503.41640441
+"916","Salmonellosis","All Ages","Salmonellosis","FrictionHigh",16152218.8699538,10385503.7314077,26052833.1934749
+"917","Salmonellosis","All Ages","Salmonellosis","FrictionLow",6057082.07623269,3894563.8992779,9769812.44755307
+"918","Salmonellosis","All Ages","Salmonellosis","GP",890794.01619537,583871.416592474,1420289.13219107
+"919","Salmonellosis","All Ages","Salmonellosis","Hospitalisation",11170843.6558752,8669877.5912961,14089759.2308913
+"920","Salmonellosis","All Ages","Salmonellosis","HumanCapital",20190273.5874423,12981879.6642597,32566041.4918436
+"921","Salmonellosis","All Ages","Salmonellosis","Medications",683164.450788331,439159.552005501,1045803.27651675
+"922","Salmonellosis","All Ages","Salmonellosis","Tests",897326.28,897326.28,897326.28
+"923","Salmonellosis","All Ages","Salmonellosis","WTP",9100971.5841996,6363128.82516587,13270392.8084782
+"924","Salmonellosis","All Ages","Salmonellosis","WTPOngoing",0,0,0
+"925","Shigellosis","<5","All Diseases","Deaths",83575.9755661762,8953.0152556408,397985.346415172
+"926","Shigellosis","<5","All Diseases","ED",11133.7871579994,3124.19369165587,30200.3378452519
+"927","Shigellosis","<5","All Diseases","FrictionHigh",106507.242430531,37466.3086705428,250245.08574262
+"928","Shigellosis","<5","All Diseases","FrictionLow",39940.2159114492,14049.8657514535,93841.9071534826
+"929","Shigellosis","<5","All Diseases","GP",9885.37139755509,2918.59905109096,22779.7080202971
+"930","Shigellosis","<5","All Diseases","Hospitalisation",42290.5218947195,18061.1505877558,81619.951930158
+"931","Shigellosis","<5","All Diseases","HumanCapital",133134.053038164,46832.8858381785,312806.357178275
+"932","Shigellosis","<5","All Diseases","Medications",5094.10861202828,1563.52662355528,11900.9515214323
+"933","Shigellosis","<5","All Diseases","Tests",32323.0150968136,28535.0876573714,39739.3738533622
+"934","Shigellosis","<5","All Diseases","WTP",67533.641264615,21828.18112654,150766.261826536
+"935","Shigellosis","<5","All Diseases","WTPOngoing",22106.7851784584,6610.05883867524,55075.9634680664
+"936","Shigellosis","<5","IBS","Deaths",178.622409923464,1.21244906695825,2366.08683114356
+"937","Shigellosis","<5","IBS","ED",0,0,0
+"938","Shigellosis","<5","IBS","FrictionHigh",19124.0359902782,5788.5094400953,44371.2397441889
+"939","Shigellosis","<5","IBS","FrictionLow",7171.51349635433,2170.69104003574,16639.2149040708
+"940","Shigellosis","<5","IBS","GP",5028.22235890379,1532.84450938898,11815.9357453934
+"941","Shigellosis","<5","IBS","Hospitalisation",50.5429420442821,13.0558695400699,177.255021379004
+"942","Shigellosis","<5","IBS","HumanCapital",23905.0449878478,7235.63680011912,55464.0496802361
+"943","Shigellosis","<5","IBS","Medications",680.634147910933,204.615775880877,1562.08904386775
+"944","Shigellosis","<5","IBS","Tests",4404.77707822069,1343.88487527404,10309.2180481613
+"945","Shigellosis","<5","IBS","WTP",12341.3927952068,3735.52260282791,28634.2746254872
+"946","Shigellosis","<5","IBS","WTPOngoing",16717.2086917252,4888.45276432129,43236.3326707026
+"947","Shigellosis","<5","ReactiveArthritis","Deaths",657.55045892242,6.38211706838641,7709.35350509878
+"948","Shigellosis","<5","ReactiveArthritis","ED",0,0,0
+"949","Shigellosis","<5","ReactiveArthritis","FrictionHigh",35617.9981213627,10588.6767147415,83449.7108280521
+"950","Shigellosis","<5","ReactiveArthritis","FrictionLow",13356.749295511,3970.75376802805,31293.6415605195
+"951","Shigellosis","<5","ReactiveArthritis","GP",830.735558952452,247.170297856289,1994.96883927018
+"952","Shigellosis","<5","ReactiveArthritis","Hospitalisation",3945.63559348686,1059.08807666162,12254.3637190631
+"953","Shigellosis","<5","ReactiveArthritis","HumanCapital",44522.4976517034,13235.8458934268,104312.138535065
+"954","Shigellosis","<5","ReactiveArthritis","Medications",1708.99965976503,428.916906844051,5513.68991024502
+"955","Shigellosis","<5","ReactiveArthritis","Tests",1008.76636032863,304.673280821552,2404.08900319776
+"956","Shigellosis","<5","ReactiveArthritis","WTP",15824.9258181196,4704.50424956177,37076.3533340017
+"957","Shigellosis","<5","ReactiveArthritis","WTPOngoing",5339.11445129028,1637.56336681777,13912.5233466752
+"958","Shigellosis","<5","Shigellosis","Deaths",80243.6696077581,6845.84504977001,394970.020645289
+"959","Shigellosis","<5","Shigellosis","ED",11133.7871579994,3124.19369165587,30200.3378452519
+"960","Shigellosis","<5","Shigellosis","FrictionHigh",49761.1232297993,19298.5727618052,130730.689533501
+"961","Shigellosis","<5","Shigellosis","FrictionLow",18660.4212111747,7236.96478567696,49024.0085750627
+"962","Shigellosis","<5","Shigellosis","GP",3853.94454001149,1171.95721615614,9121.94484408079
+"963","Shigellosis","<5","Shigellosis","Hospitalisation",37768.0290424247,14815.9601477588,74072.6254783805
+"964","Shigellosis","<5","Shigellosis","HumanCapital",62201.4040372492,24123.2159522565,163413.361916876
+"965","Shigellosis","<5","Shigellosis","Medications",2430.79768011748,776.582233477265,5728.09883262234
+"966","Shigellosis","<5","Shigellosis","Tests",26875.2,26875.2,26875.2
+"967","Shigellosis","<5","Shigellosis","WTP",38654.496188237,13002.017868137,85002.7455565936
+"968","Shigellosis","<5","Shigellosis","WTPOngoing",0,0,0
+"969","Shigellosis","5-64","All Diseases","Deaths",360030.314908489,103363.148904533,1020325.52250127
+"970","Shigellosis","5-64","All Diseases","ED",60257.5736898204,17632.5380012585,175526.249781561
+"971","Shigellosis","5-64","All Diseases","FrictionHigh",743296.669444603,266313.868643148,1675399.9231412
+"972","Shigellosis","5-64","All Diseases","FrictionLow",278736.251041726,99867.7007411804,628274.97117795
+"973","Shigellosis","5-64","All Diseases","GP",51966.6619774387,17453.4494424297,119092.130250545
+"974","Shigellosis","5-64","All Diseases","Hospitalisation",188922.778029725,82705.4448294218,340676.076005796
+"975","Shigellosis","5-64","All Diseases","HumanCapital",929120.836805753,332892.335803935,2094249.9039265
+"976","Shigellosis","5-64","All Diseases","Medications",34018.8576057221,10933.1519081662,82054.9089418441
+"977","Shigellosis","5-64","All Diseases","Tests",181769.747643614,160331.762946641,224987.812152392
+"978","Shigellosis","5-64","All Diseases","WTP",352884.467558598,125992.004184021,802291.655233347
+"979","Shigellosis","5-64","All Diseases","WTPOngoing",120366.150302685,38626.022700468,294548.099160228
+"980","Shigellosis","5-64","IBS","Deaths",11250.7112872161,2812.26322761828,44007.4569371636
+"981","Shigellosis","5-64","IBS","ED",0,0,0
+"982","Shigellosis","5-64","IBS","FrictionHigh",120728.378347457,41178.1665911817,273258.882669432
+"983","Shigellosis","5-64","IBS","FrictionLow",45273.1418802963,15441.8124716931,102472.081001037
+"984","Shigellosis","5-64","IBS","GP",27034.6301719123,9298.61483943506,61229.4465708361
+"985","Shigellosis","5-64","IBS","Hospitalisation",26966.9266541802,6564.28978944794,91682.9922701045
+"986","Shigellosis","5-64","IBS","HumanCapital",150910.472934321,51472.7082389771,341573.603336789
+"987","Shigellosis","5-64","IBS","Medications",3656.77948492966,1238.21617122234,8254.15595978658
+"988","Shigellosis","5-64","IBS","Tests",27472.976157356,9363.63336731398,64172.9883500715
+"989","Shigellosis","5-64","IBS","WTP",66452.767244259,22665.7821258374,150410.443476652
+"990","Shigellosis","5-64","IBS","WTPOngoing",88714.4796397525,26960.89074713,230252.003704725
+"991","Shigellosis","5-64","ReactiveArthritis","Deaths",677.890676296936,3.46721202780765,8000.74001376103
+"992","Shigellosis","5-64","ReactiveArthritis","ED",0,0,0
+"993","Shigellosis","5-64","ReactiveArthritis","FrictionHigh",221224.3010395,71609.4784404215,517701.352005086
+"994","Shigellosis","5-64","ReactiveArthritis","FrictionLow",82959.1128898124,26853.5544151581,194138.007001907
+"995","Shigellosis","5-64","ReactiveArthritis","GP",4525.90277501971,1397.90745366305,10470.3206089126
+"996","Shigellosis","5-64","ReactiveArthritis","Hospitalisation",22643.6091053651,6240.78995114035,76723.8305731975
+"997","Shigellosis","5-64","ReactiveArthritis","HumanCapital",276530.376299375,89511.8480505269,647126.690006358
+"998","Shigellosis","5-64","ReactiveArthritis","Medications",9314.27370825623,2575.75015114831,32236.8162066119
+"999","Shigellosis","5-64","ReactiveArthritis","Tests",5454.61257340514,1700.56667276595,12694.4085377753
+"1000","Shigellosis","5-64","ReactiveArthritis","WTP",83619.0175739572,27067.1630920979,195682.292804014
+"1001","Shigellosis","5-64","ReactiveArthritis","WTPOngoing",28936.2403246098,9198.79348891063,72888.3928023116
+"1002","Shigellosis","5-64","Shigellosis","Deaths",338756.152979863,86751.2974211638,1015530.53270244
+"1003","Shigellosis","5-64","Shigellosis","ED",60257.5736898204,17632.5380012585,175526.249781561
+"1004","Shigellosis","5-64","Shigellosis","FrictionHigh",394279.638118129,151840.677612264,912046.666169757
+"1005","Shigellosis","5-64","Shigellosis","FrictionLow",147854.864294298,56940.2541045991,342017.499813659
+"1006","Shigellosis","5-64","Shigellosis","GP",20487.0739823795,6270.61736753258,49402.8598057512
+"1007","Shigellosis","5-64","Shigellosis","Hospitalisation",123324.765219189,41850.9836825777,242102.2015137
+"1008","Shigellosis","5-64","Shigellosis","HumanCapital",492849.547647661,189800.84701533,1140058.3327122
+"1009","Shigellosis","5-64","Shigellosis","Medications",19143.2390079241,6631.25641397534,45246.0782024697
+"1010","Shigellosis","5-64","Shigellosis","Tests",148974.12,148974.12,148974.12
+"1011","Shigellosis","5-64","Shigellosis","WTP",202694.343930523,72570.2249672183,455444.463800192
+"1012","Shigellosis","5-64","Shigellosis","WTPOngoing",0,0,0
+"1013","Shigellosis","65+","All Diseases","Deaths",101615.425851668,25262.0575755321,404555.27058648
+"1014","Shigellosis","65+","All Diseases","ED",6710.78624891517,1893.55163792127,18615.598650556
+"1015","Shigellosis","65+","All Diseases","FrictionHigh",41364.0088459549,13706.69670329,145138.886301733
+"1016","Shigellosis","65+","All Diseases","FrictionLow",15511.5033172331,5140.01126373376,54427.08236315
+"1017","Shigellosis","65+","All Diseases","GP",5801.2450947296,1965.38061578068,13576.8639409705
+"1018","Shigellosis","65+","All Diseases","Hospitalisation",45332.3469810645,19639.6582780693,86697.9285622115
+"1019","Shigellosis","65+","All Diseases","HumanCapital",51705.0110574436,17133.3708791125,181423.607877167
+"1020","Shigellosis","65+","All Diseases","Medications",5619.15127222785,1918.50401038204,13300.9794244124
+"1021","Shigellosis","65+","All Diseases","Tests",20848.8428571263,18048.9247509043,26109.9794372845
+"1022","Shigellosis","65+","All Diseases","WTP",40242.6223515477,14656.2599956076,88402.5171124596
+"1023","Shigellosis","65+","All Diseases","WTPOngoing",13666.614308041,4445.05559460118,32931.079781522
+"1024","Shigellosis","65+","IBS","Deaths",52463.2967056278,12322.901164297,207513.236055226
+"1025","Shigellosis","65+","IBS","ED",0,0,0
+"1026","Shigellosis","65+","IBS","FrictionHigh",5597.27785250669,1923.68105137204,12821.6380223645
+"1027","Shigellosis","65+","IBS","FrictionLow",2098.97919469001,721.380394264513,4808.11425838669
+"1028","Shigellosis","65+","IBS","GP",3080.83123274584,1055.76771112537,7064.52270895033
+"1029","Shigellosis","65+","IBS","Hospitalisation",2625.03429038349,691.991160589581,9179.85298859145
+"1030","Shigellosis","65+","IBS","HumanCapital",6996.59731563336,2404.60131421505,16027.0475279556
+"1031","Shigellosis","65+","IBS","Medications",412.642860326413,141.59627540251,958.096053778763
+"1032","Shigellosis","65+","IBS","Tests",3564.64694290949,1261.92614775591,8278.26154475359
+"1033","Shigellosis","65+","IBS","WTP",7544.65224269722,2592.95767351775,17282.4724106134
+"1034","Shigellosis","65+","IBS","WTPOngoing",10189.4501354164,3205.50519387936,25656.2544748111
+"1035","Shigellosis","65+","ReactiveArthritis","Deaths",364.225786158101,1.63840729440751,3728.51611265597
+"1036","Shigellosis","65+","ReactiveArthritis","ED",0,0,0
+"1037","Shigellosis","65+","ReactiveArthritis","FrictionHigh",10504.2606845606,3311.86848285532,24557.561034327
+"1038","Shigellosis","65+","ReactiveArthritis","FrictionLow",3939.09775671021,1241.95068107075,9209.08538787261
+"1039","Shigellosis","65+","ReactiveArthritis","GP",505.49536126013,158.267824229812,1198.788828002
+"1040","Shigellosis","65+","ReactiveArthritis","Hospitalisation",2391.81152338138,681.409323557544,8103.2362280065
+"1041","Shigellosis","65+","ReactiveArthritis","HumanCapital",13130.3258557007,4139.83560356915,30696.9512929087
+"1042","Shigellosis","65+","ReactiveArthritis","Medications",1045.24785706491,264.49560095739,3833.25473007523
+"1043","Shigellosis","65+","ReactiveArthritis","Tests",614.15347793062,192.464866964591,1517.05454921285
+"1044","Shigellosis","65+","ReactiveArthritis","WTP",9657.54251226392,3044.90831184473,22578.0468334265
+"1045","Shigellosis","65+","ReactiveArthritis","WTPOngoing",3273.97765428352,1040.44612578984,8052.18896494931
+"1046","Shigellosis","65+","Shigellosis","Deaths",26847.7024873136,242.305698298052,281442.937164278
+"1047","Shigellosis","65+","Shigellosis","ED",6710.78624891517,1893.55163792127,18615.598650556
+"1048","Shigellosis","65+","Shigellosis","FrictionHigh",22471.9604581903,6353.1521950011,113757.991358896
+"1049","Shigellosis","65+","Shigellosis","FrictionLow",8426.98517182138,2382.43207312541,42659.246759586
+"1050","Shigellosis","65+","Shigellosis","GP",2199.91171086427,736.12349443701,5605.81238600124
+"1051","Shigellosis","65+","Shigellosis","Hospitalisation",38770.5089831029,13804.0645816996,78229.3770198017
+"1052","Shigellosis","65+","Shigellosis","HumanCapital",28089.9505727379,7941.44024375138,142197.48919862
+"1053","Shigellosis","65+","Shigellosis","Medications",4025.482244248,1293.11527024383,9826.53088561986
+"1054","Shigellosis","65+","Shigellosis","Tests",16613.76,16613.76,16613.76
+"1055","Shigellosis","65+","Shigellosis","WTP",22838.0931956339,8458.54892080555,50512.41799138
+"1056","Shigellosis","65+","Shigellosis","WTPOngoing",0,0,0
+"1057","Shigellosis","All Ages","All Diseases","Deaths",643154.08232564,266228.563265504,1362601.39254652
+"1058","Shigellosis","All Ages","All Diseases","ED",81128.1614843516,34826.7448015935,192744.985216053
+"1059","Shigellosis","All Ages","All Diseases","FrictionHigh",920793.964334691,427658.672288646,1850000.51683656
+"1060","Shigellosis","All Ages","All Diseases","FrictionLow",345297.736625509,160372.002108242,693750.19381371
+"1061","Shigellosis","All Ages","All Diseases","GP",69533.9348324812,32906.0055533144,137494.271390515
+"1062","Shigellosis","All Ages","All Diseases","Hospitalisation",278444.274499518,169500.882173836,433905.509004054
+"1063","Shigellosis","All Ages","All Diseases","HumanCapital",1150992.45541836,534573.340360808,2312500.6460457
+"1064","Shigellosis","All Ages","All Diseases","Medications",46088.5949122255,21466.6685222325,94903.6733782649
+"1065","Shigellosis","All Ages","All Diseases","Tests",236979.015602707,213476.70984375,280894.333496575
+"1066","Shigellosis","All Ages","All Diseases","WTP",478595.955169214,231351.154210134,920190.069866267
+"1067","Shigellosis","All Ages","All Diseases","WTPOngoing",160753.97572673,75747.9519059845,341274.235471589
+"1068","Shigellosis","All Ages","IBS","Deaths",71115.4156735584,24855.1966793901,222681.42247149
+"1069","Shigellosis","All Ages","IBS","ED",0,0,0
+"1070","Shigellosis","All Ages","IBS","FrictionHigh",148458.206977535,66164.89830842,304425.273564454
+"1071","Shigellosis","All Ages","IBS","FrictionLow",55671.8276165755,24811.8368656575,114159.47758667
+"1072","Shigellosis","All Ages","IBS","GP",36177.6578069151,17319.6900965441,72464.19888723
+"1073","Shigellosis","All Ages","IBS","Hospitalisation",30613.5027621499,9851.7051863098,96664.1172929489
+"1074","Shigellosis","All Ages","IBS","HumanCapital",185572.758721918,82706.122885525,380531.591955567
+"1075","Shigellosis","All Ages","IBS","Medications",4841.54749432634,2316.80878442977,9662.95954666045
+"1076","Shigellosis","All Ages","IBS","Tests",36748.9619105001,17320.470294562,74650.5390147339
+"1077","Shigellosis","All Ages","IBS","WTP",88967.1058736119,42379.8960951577,177033.228970789
+"1078","Shigellosis","All Ages","IBS","WTPOngoing",122094.195564052,56324.8994523814,262831.867617903
+"1079","Shigellosis","All Ages","ReactiveArthritis","Deaths",3261.3790906935,485.737821071249,13922.9456855037
+"1080","Shigellosis","All Ages","ReactiveArthritis","ED",0,0,0
+"1081","Shigellosis","All Ages","ReactiveArthritis","FrictionHigh",273726.366678281,120610.106902276,570007.940625152
+"1082","Shigellosis","All Ages","ReactiveArthritis","FrictionLow",102647.387504355,45228.7900883536,213752.977734432
+"1083","Shigellosis","All Ages","ReactiveArthritis","GP",5968.36707253477,2745.67296835699,12085.6560230641
+"1084","Shigellosis","All Ages","ReactiveArthritis","Hospitalisation",31035.3949714549,12921.1468500421,84296.7333124781
+"1085","Shigellosis","All Ages","ReactiveArthritis","HumanCapital",342157.958347851,150762.633627845,712509.925781439
+"1086","Shigellosis","All Ages","ReactiveArthritis","Medications",13235.6125034108,4872.86759159049,36142.485848561
+"1087","Shigellosis","All Ages","ReactiveArthritis","Tests",7373.28734055612,3290.42596747123,14617.3666626242
+"1088","Shigellosis","All Ages","ReactiveArthritis","WTP",113192.269663579,52462.9835979886,226110.655759485
+"1089","Shigellosis","All Ages","ReactiveArthritis","WTPOngoing",39170.4666247409,18054.6841993347,84404.5801699317
+"1090","Shigellosis","All Ages","Shigellosis","Deaths",542667.660099931,189368.746018192,1261899.8569577
+"1091","Shigellosis","All Ages","Shigellosis","ED",81128.1614843516,34826.7448015935,192744.985216053
+"1092","Shigellosis","All Ages","Shigellosis","FrictionHigh",496533.640354847,226890.896955419,1008584.45492962
+"1093","Shigellosis","All Ages","Shigellosis","FrictionLow",186200.115133068,85084.0863582821,378219.170598607
+"1094","Shigellosis","All Ages","Shigellosis","GP",27371.7916146832,12568.1325346232,56777.1303123388
+"1095","Shigellosis","All Ages","Shigellosis","Hospitalisation",205886.291939384,114734.913443995,328813.992283694
+"1096","Shigellosis","All Ages","Shigellosis","HumanCapital",620667.050443559,283613.621194274,1260730.56866202
+"1097","Shigellosis","All Ages","Shigellosis","Medications",26837.6791363255,12819.2301816365,53256.9768702371
+"1098","Shigellosis","All Ages","Shigellosis","Tests",192463.08,192463.08,192463.08
+"1099","Shigellosis","All Ages","Shigellosis","WTP",273161.441970014,134126.526704625,530422.079840731
+"1100","Shigellosis","All Ages","Shigellosis","WTPOngoing",0,0,0
+"1101","Toxoplasma","<5","All Diseases","Deaths",136566.983697032,7281.98045747366,948114.365726921
+"1102","Toxoplasma","<5","All Diseases","ED",0,0,0
+"1103","Toxoplasma","<5","All Diseases","FrictionHigh",465878.16585805,168232.5834981,1033843.00284258
+"1104","Toxoplasma","<5","All Diseases","FrictionLow",174704.312196769,63087.2188117874,387691.126065968
+"1105","Toxoplasma","<5","All Diseases","GP",38298.9262676734,14832.3764873963,74352.7651190909
+"1106","Toxoplasma","<5","All Diseases","Hospitalisation",70982.2242511299,26608.2969965364,132992.862994595
+"1107","Toxoplasma","<5","All Diseases","HumanCapital",582347.707322563,210290.729372625,1292303.75355323
+"1108","Toxoplasma","<5","All Diseases","Medications",11227.7626426005,4348.27862959542,21797.3525613645
+"1109","Toxoplasma","<5","All Diseases","Tests",20903.801046743,8095.60677957245,40582.2188972587
+"1110","Toxoplasma","<5","All Diseases","WTP",156049.183328406,62183.5797364805,279240.372843083
+"1111","Toxoplasma","<5","All Diseases","WTPOngoing",0,0,0
+"1112","Toxoplasma","<5","Toxoplasma","Deaths",136566.983697032,7281.98045747366,948114.365726921
+"1113","Toxoplasma","<5","Toxoplasma","ED",0,0,0
+"1114","Toxoplasma","<5","Toxoplasma","FrictionHigh",465878.16585805,168232.5834981,1033843.00284258
+"1115","Toxoplasma","<5","Toxoplasma","FrictionLow",174704.312196769,63087.2188117874,387691.126065968
+"1116","Toxoplasma","<5","Toxoplasma","GP",38298.9262676734,14832.3764873963,74352.7651190909
+"1117","Toxoplasma","<5","Toxoplasma","Hospitalisation",70982.2242511299,26608.2969965364,132992.862994595
+"1118","Toxoplasma","<5","Toxoplasma","HumanCapital",582347.707322563,210290.729372625,1292303.75355323
+"1119","Toxoplasma","<5","Toxoplasma","Medications",11227.7626426005,4348.27862959542,21797.3525613645
+"1120","Toxoplasma","<5","Toxoplasma","Tests",20903.801046743,8095.60677957245,40582.2188972587
+"1121","Toxoplasma","<5","Toxoplasma","WTP",156049.183328406,62183.5797364805,279240.372843083
+"1122","Toxoplasma","<5","Toxoplasma","WTPOngoing",0,0,0
+"1123","Toxoplasma","5-64","All Diseases","Deaths",4551237.14171863,1710421.03387051,9736942.76517776
+"1124","Toxoplasma","5-64","All Diseases","ED",0,0,0
+"1125","Toxoplasma","5-64","All Diseases","FrictionHigh",3329785.6017888,1478066.7541081,5980329.86981189
+"1126","Toxoplasma","5-64","All Diseases","FrictionLow",1248669.6006708,554275.032790539,2242623.70117946
+"1127","Toxoplasma","5-64","All Diseases","GP",170163.695803484,68236.9934214367,332450.565741579
+"1128","Toxoplasma","5-64","All Diseases","Hospitalisation",1245988.99907232,481334.771735381,2376563.60465414
+"1129","Toxoplasma","5-64","All Diseases","HumanCapital",4162232.002236,1847583.44263513,7475412.33726486
+"1130","Toxoplasma","5-64","All Diseases","Medications",49885.4086278085,20004.4450391618,97461.6368212732
+"1131","Toxoplasma","5-64","All Diseases","Tests",92876.442999837,37244.1912480874,181453.663624113
+"1132","Toxoplasma","5-64","All Diseases","WTP",714240.945042631,298778.91191032,1236868.00827599
+"1133","Toxoplasma","5-64","All Diseases","WTPOngoing",0,0,0
+"1134","Toxoplasma","5-64","Toxoplasma","Deaths",4551237.14171863,1710421.03387051,9736942.76517776
+"1135","Toxoplasma","5-64","Toxoplasma","ED",0,0,0
+"1136","Toxoplasma","5-64","Toxoplasma","FrictionHigh",3329785.6017888,1478066.7541081,5980329.86981189
+"1137","Toxoplasma","5-64","Toxoplasma","FrictionLow",1248669.6006708,554275.032790539,2242623.70117946
+"1138","Toxoplasma","5-64","Toxoplasma","GP",170163.695803484,68236.9934214367,332450.565741579
+"1139","Toxoplasma","5-64","Toxoplasma","Hospitalisation",1245988.99907232,481334.771735381,2376563.60465414
+"1140","Toxoplasma","5-64","Toxoplasma","HumanCapital",4162232.002236,1847583.44263513,7475412.33726486
+"1141","Toxoplasma","5-64","Toxoplasma","Medications",49885.4086278085,20004.4450391618,97461.6368212732
+"1142","Toxoplasma","5-64","Toxoplasma","Tests",92876.442999837,37244.1912480874,181453.663624113
+"1143","Toxoplasma","5-64","Toxoplasma","WTP",714240.945042631,298778.91191032,1236868.00827599
+"1144","Toxoplasma","5-64","Toxoplasma","WTPOngoing",0,0,0
+"1145","Toxoplasma","65+","All Diseases","Deaths",834907.732827602,146779.008279733,2564013.71061552
+"1146","Toxoplasma","65+","All Diseases","ED",0,0,0
+"1147","Toxoplasma","65+","All Diseases","FrictionHigh",66396.192634056,15422.1447431335,327745.746096086
+"1148","Toxoplasma","65+","All Diseases","FrictionLow",24898.572237771,5783.30427867504,122904.654786032
+"1149","Toxoplasma","65+","All Diseases","GP",5972.54463025581,1922.95056231843,12348.9940979108
+"1150","Toxoplasma","65+","All Diseases","Hospitalisation",412498.51102578,167899.4964335,798445.700678137
+"1151","Toxoplasma","65+","All Diseases","HumanCapital",82995.24079257,19277.6809289168,409682.182620108
+"1152","Toxoplasma","65+","All Diseases","Medications",1750.91889031499,563.734668075803,3620.24704392946
+"1153","Toxoplasma","65+","All Diseases","Tests",3259.85339173962,1049.55882304606,6740.16064956937
+"1154","Toxoplasma","65+","All Diseases","WTP",30423.4856698977,13376.4387982188,53815.2533912033
+"1155","Toxoplasma","65+","All Diseases","WTPOngoing",0,0,0
+"1156","Toxoplasma","65+","Toxoplasma","Deaths",834907.732827602,146779.008279733,2564013.71061552
+"1157","Toxoplasma","65+","Toxoplasma","ED",0,0,0
+"1158","Toxoplasma","65+","Toxoplasma","FrictionHigh",66396.192634056,15422.1447431335,327745.746096086
+"1159","Toxoplasma","65+","Toxoplasma","FrictionLow",24898.572237771,5783.30427867504,122904.654786032
+"1160","Toxoplasma","65+","Toxoplasma","GP",5972.54463025581,1922.95056231843,12348.9940979108
+"1161","Toxoplasma","65+","Toxoplasma","Hospitalisation",412498.51102578,167899.4964335,798445.700678137
+"1162","Toxoplasma","65+","Toxoplasma","HumanCapital",82995.24079257,19277.6809289168,409682.182620108
+"1163","Toxoplasma","65+","Toxoplasma","Medications",1750.91889031499,563.734668075803,3620.24704392946
+"1164","Toxoplasma","65+","Toxoplasma","Tests",3259.85339173962,1049.55882304606,6740.16064956937
+"1165","Toxoplasma","65+","Toxoplasma","WTP",30423.4856698977,13376.4387982188,53815.2533912033
+"1166","Toxoplasma","65+","Toxoplasma","WTPOngoing",0,0,0
+"1167","Toxoplasma","All Ages","All Diseases","Deaths",5835993.96884166,2798549.18585511,11223731.1313271
+"1168","Toxoplasma","All Ages","All Diseases","ED",0,0,0
+"1169","Toxoplasma","All Ages","All Diseases","FrictionHigh",3952264.71868598,1992147.50096792,6606149.59725497
+"1170","Toxoplasma","All Ages","All Diseases","FrictionLow",1482099.26950724,747055.31286297,2477306.09897061
+"1171","Toxoplasma","All Ages","All Diseases","GP",216788.787678826,106501.476118412,378652.951804223
+"1172","Toxoplasma","All Ages","All Diseases","Hospitalisation",1754520.5945628,914221.36103304,2928959.61407745
+"1173","Toxoplasma","All Ages","All Diseases","HumanCapital",4940330.89835748,2490184.3762099,8257686.99656871
+"1174","Toxoplasma","All Ages","All Diseases","Medications",63554.0807233926,31222.110160133,111006.38793538
+"1175","Toxoplasma","All Ages","All Diseases","Tests",118324.718952443,58129.1927717266,206671.224017015
+"1176","Toxoplasma","All Ages","All Diseases","WTP",899540.032686073,481233.39450313,1424364.15403908
+"1177","Toxoplasma","All Ages","All Diseases","WTPOngoing",0,0,0
+"1178","Toxoplasma","All Ages","Toxoplasma","Deaths",5835993.96884166,2798549.18585511,11223731.1313271
+"1179","Toxoplasma","All Ages","Toxoplasma","ED",0,0,0
+"1180","Toxoplasma","All Ages","Toxoplasma","FrictionHigh",3952264.71868598,1992147.50096792,6606149.59725497
+"1181","Toxoplasma","All Ages","Toxoplasma","FrictionLow",1482099.26950724,747055.31286297,2477306.09897061
+"1182","Toxoplasma","All Ages","Toxoplasma","GP",216788.787678826,106501.476118412,378652.951804223
+"1183","Toxoplasma","All Ages","Toxoplasma","Hospitalisation",1754520.5945628,914221.36103304,2928959.61407745
+"1184","Toxoplasma","All Ages","Toxoplasma","HumanCapital",4940330.89835748,2490184.3762099,8257686.99656871
+"1185","Toxoplasma","All Ages","Toxoplasma","Medications",63554.0807233926,31222.110160133,111006.38793538
+"1186","Toxoplasma","All Ages","Toxoplasma","Tests",118324.718952443,58129.1927717266,206671.224017015
+"1187","Toxoplasma","All Ages","Toxoplasma","WTP",899540.032686073,481233.39450313,1424364.15403908
+"1188","Toxoplasma","All Ages","Toxoplasma","WTPOngoing",0,0,0
+"1189","Typhoid Fever","<5","All Diseases","Deaths",20086.3578867677,126.797598451038,205496.385463626
+"1190","Typhoid Fever","<5","All Diseases","ED",1146.1436057215,361.58452392151,2700.50702283963
+"1191","Typhoid Fever","<5","All Diseases","FrictionHigh",2506.63939949864,790.792715141538,5906.06383727228
+"1192","Typhoid Fever","<5","All Diseases","FrictionLow",939.98977481199,296.547268178076,2214.7739389771
+"1193","Typhoid Fever","<5","All Diseases","GP",309.107833678373,95.3162038590129,783.013525534843
+"1194","Typhoid Fever","<5","All Diseases","Hospitalisation",28929.9112897645,9126.78668587611,68163.7346473321
+"1195","Typhoid Fever","<5","All Diseases","HumanCapital",3133.2992493733,988.490893926922,7382.57979659035
+"1196","Typhoid Fever","<5","All Diseases","Medications",0,0,0
+"1197","Typhoid Fever","<5","All Diseases","Tests",0,0,0
+"1198","Typhoid Fever","<5","All Diseases","WTP",2015.40180531723,635.817447873333,4748.62547933227
+"1199","Typhoid Fever","<5","All Diseases","WTPOngoing",0,0,0
+"1200","Typhoid Fever","<5","Typhoid Fever","Deaths",20086.3578867677,126.797598451038,205496.385463626
+"1201","Typhoid Fever","<5","Typhoid Fever","ED",1146.1436057215,361.58452392151,2700.50702283963
+"1202","Typhoid Fever","<5","Typhoid Fever","FrictionHigh",2506.63939949864,790.792715141538,5906.06383727228
+"1203","Typhoid Fever","<5","Typhoid Fever","FrictionLow",939.98977481199,296.547268178076,2214.7739389771
+"1204","Typhoid Fever","<5","Typhoid Fever","GP",309.107833678373,95.3162038590129,783.013525534843
+"1205","Typhoid Fever","<5","Typhoid Fever","Hospitalisation",28929.9112897645,9126.78668587611,68163.7346473321
+"1206","Typhoid Fever","<5","Typhoid Fever","HumanCapital",3133.2992493733,988.490893926922,7382.57979659035
+"1207","Typhoid Fever","<5","Typhoid Fever","Medications",0,0,0
+"1208","Typhoid Fever","<5","Typhoid Fever","Tests",0,0,0
+"1209","Typhoid Fever","<5","Typhoid Fever","WTP",2015.40180531723,635.817447873333,4748.62547933227
+"1210","Typhoid Fever","<5","Typhoid Fever","WTPOngoing",0,0,0
+"1211","Typhoid Fever","5-64","All Diseases","Deaths",169744.848981173,33096.7324807969,614666.113547961
+"1212","Typhoid Fever","5-64","All Diseases","ED",8287.27876625985,2963.04977728521,19592.88493308
+"1213","Typhoid Fever","5-64","All Diseases","FrictionHigh",23604.5219980982,8439.60673003328,55806.0970860542
+"1214","Typhoid Fever","5-64","All Diseases","FrictionLow",8851.69574928681,3164.85252376248,20927.2864072703
+"1215","Typhoid Fever","5-64","All Diseases","GP",2180.92956262485,753.359971522855,5454.59839223931
+"1216","Typhoid Fever","5-64","All Diseases","Hospitalisation",209179.930285022,74790.5993420922,494545.72725008
+"1217","Typhoid Fever","5-64","All Diseases","HumanCapital",29505.6524976227,10549.5084125416,69757.6213575678
+"1218","Typhoid Fever","5-64","All Diseases","Medications",0,0,0
+"1219","Typhoid Fever","5-64","All Diseases","Tests",0,0,0
+"1220","Typhoid Fever","5-64","All Diseases","WTP",14572.5164833714,5210.28590184929,34452.5201452787
+"1221","Typhoid Fever","5-64","All Diseases","WTPOngoing",0,0,0
+"1222","Typhoid Fever","5-64","Typhoid Fever","Deaths",169744.848981173,33096.7324807969,614666.113547961
+"1223","Typhoid Fever","5-64","Typhoid Fever","ED",8287.27876625985,2963.04977728521,19592.88493308
+"1224","Typhoid Fever","5-64","Typhoid Fever","FrictionHigh",23604.5219980982,8439.60673003328,55806.0970860542
+"1225","Typhoid Fever","5-64","Typhoid Fever","FrictionLow",8851.69574928681,3164.85252376248,20927.2864072703
+"1226","Typhoid Fever","5-64","Typhoid Fever","GP",2180.92956262485,753.359971522855,5454.59839223931
+"1227","Typhoid Fever","5-64","Typhoid Fever","Hospitalisation",209179.930285022,74790.5993420922,494545.72725008
+"1228","Typhoid Fever","5-64","Typhoid Fever","HumanCapital",29505.6524976227,10549.5084125416,69757.6213575678
+"1229","Typhoid Fever","5-64","Typhoid Fever","Medications",0,0,0
+"1230","Typhoid Fever","5-64","Typhoid Fever","Tests",0,0,0
+"1231","Typhoid Fever","5-64","Typhoid Fever","WTP",14572.5164833714,5210.28590184929,34452.5201452787
+"1232","Typhoid Fever","5-64","Typhoid Fever","WTPOngoing",0,0,0
+"1233","Typhoid Fever","65+","All Diseases","Deaths",199421.623180653,41840.6344652136,752682.909222689
+"1234","Typhoid Fever","65+","All Diseases","ED",91.2035058771923,30.2393920276432,222.061626507336
+"1235","Typhoid Fever","65+","All Diseases","FrictionHigh",182.975852197798,60.6673885283722,445.508261549953
+"1236","Typhoid Fever","65+","All Diseases","FrictionLow",68.6159445741741,22.7502706981396,167.065598081232
+"1237","Typhoid Fever","65+","All Diseases","GP",24.4105530843755,7.44596057638869,63.8796661601889
+"1238","Typhoid Fever","65+","All Diseases","Hospitalisation",2302.07569206107,763.275146717264,5605.07699353607
+"1239","Typhoid Fever","65+","All Diseases","HumanCapital",228.719815247247,75.8342356604653,556.885326937441
+"1240","Typhoid Fever","65+","All Diseases","Medications",0,0,0
+"1241","Typhoid Fever","65+","All Diseases","Tests",0,0,0
+"1242","Typhoid Fever","65+","All Diseases","WTP",160.374066110542,53.1735508360168,390.477598723624
+"1243","Typhoid Fever","65+","All Diseases","WTPOngoing",0,0,0
+"1244","Typhoid Fever","65+","Typhoid Fever","Deaths",199421.623180653,41840.6344652136,752682.909222689
+"1245","Typhoid Fever","65+","Typhoid Fever","ED",91.2035058771923,30.2393920276432,222.061626507336
+"1246","Typhoid Fever","65+","Typhoid Fever","FrictionHigh",182.975852197798,60.6673885283722,445.508261549953
+"1247","Typhoid Fever","65+","Typhoid Fever","FrictionLow",68.6159445741741,22.7502706981396,167.065598081232
+"1248","Typhoid Fever","65+","Typhoid Fever","GP",24.4105530843755,7.44596057638869,63.8796661601889
+"1249","Typhoid Fever","65+","Typhoid Fever","Hospitalisation",2302.07569206107,763.275146717264,5605.07699353607
+"1250","Typhoid Fever","65+","Typhoid Fever","HumanCapital",228.719815247247,75.8342356604653,556.885326937441
+"1251","Typhoid Fever","65+","Typhoid Fever","Medications",0,0,0
+"1252","Typhoid Fever","65+","Typhoid Fever","Tests",0,0,0
+"1253","Typhoid Fever","65+","Typhoid Fever","WTP",160.374066110542,53.1735508360168,390.477598723624
+"1254","Typhoid Fever","65+","Typhoid Fever","WTPOngoing",0,0,0
+"1255","Typhoid Fever","All Ages","All Diseases","Deaths",497201.636624862,174258.970381736,1172380.04295197
+"1256","Typhoid Fever","All Ages","All Diseases","ED",9741.71970553152,4099.4652171291,21284.2703494056
+"1257","Typhoid Fever","All Ages","All Diseases","FrictionHigh",26807.2111898485,10915.3072095957,59411.6119954512
+"1258","Typhoid Fever","All Ages","All Diseases","FrictionLow",10052.7041961932,4093.24020359838,22279.3544982942
+"1259","Typhoid Fever","All Ages","All Diseases","GP",2631.53901104456,1106.63436413767,5778.01551592303
+"1260","Typhoid Fever","All Ages","All Diseases","Hospitalisation",245891.601614238,103474.961143602,537238.134908979
+"1261","Typhoid Fever","All Ages","All Diseases","HumanCapital",33509.0139873106,13644.1340119946,74264.514994314
+"1262","Typhoid Fever","All Ages","All Diseases","Medications",0,0,0
+"1263","Typhoid Fever","All Ages","All Diseases","Tests",0,0,0
+"1264","Typhoid Fever","All Ages","All Diseases","WTP",17130.0344768432,7208.58150601138,37426.6860390927
+"1265","Typhoid Fever","All Ages","All Diseases","WTPOngoing",0,0,0
+"1266","Typhoid Fever","All Ages","Typhoid Fever","Deaths",497201.636624862,174258.970381736,1172380.04295197
+"1267","Typhoid Fever","All Ages","Typhoid Fever","ED",9741.71970553152,4099.4652171291,21284.2703494056
+"1268","Typhoid Fever","All Ages","Typhoid Fever","FrictionHigh",26807.2111898485,10915.3072095957,59411.6119954512
+"1269","Typhoid Fever","All Ages","Typhoid Fever","FrictionLow",10052.7041961932,4093.24020359838,22279.3544982942
+"1270","Typhoid Fever","All Ages","Typhoid Fever","GP",2631.53901104456,1106.63436413767,5778.01551592303
+"1271","Typhoid Fever","All Ages","Typhoid Fever","Hospitalisation",245891.601614238,103474.961143602,537238.134908979
+"1272","Typhoid Fever","All Ages","Typhoid Fever","HumanCapital",33509.0139873106,13644.1340119946,74264.514994314
+"1273","Typhoid Fever","All Ages","Typhoid Fever","Medications",0,0,0
+"1274","Typhoid Fever","All Ages","Typhoid Fever","Tests",0,0,0
+"1275","Typhoid Fever","All Ages","Typhoid Fever","WTP",17130.0344768432,7208.58150601138,37426.6860390927
+"1276","Typhoid Fever","All Ages","Typhoid Fever","WTPOngoing",0,0,0

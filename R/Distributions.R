@@ -21,7 +21,7 @@ ppert_alt <- function (q, mode = 0, lowq = -1, highq = 1,
 }
 
 qpert_alt <- function (p, mode = 0, lowq = -1, highq = 1,
-                       lowp = 0.05, highp = 0.95, median = NULL,
+                       lowp = 0.025, highp = 0.975, median = NULL,
                        shape = 4, lower.tail = TRUE,
                        log.p = FALSE) {
   if(is.null(median)){
@@ -39,7 +39,7 @@ qpert_alt <- function (p, mode = 0, lowq = -1, highq = 1,
 }
 
 dpert_alt <- function (x, mode = 0, lowq = -1, highq = 1,
-                       lowp = 0.05, highp = 0.95, median = NULL,
+                       lowp = 0.025, highp = 0.975, median = NULL,
                        shape = 4, log = FALSE) {
   if(is.null(median)){
     MinMax <- getPertMinMaxFromQuant(mode, lowq, highq,
@@ -55,7 +55,7 @@ dpert_alt <- function (x, mode = 0, lowq = -1, highq = 1,
 }
 
 rpert_alt <- function (n, mode = 0, lowq = -1, highq = 1,
-                       lowp = 0.05, highp = 0.95, median = NULL,
+                       lowp = 0.025, highp = 0.975, median = NULL,
                        shape = 4) {
   if(is.null(median)){
     MinMax <- getPertMinMaxFromQuant(mode, lowq, highq,
@@ -72,7 +72,7 @@ rpert_alt <- function (n, mode = 0, lowq = -1, highq = 1,
 
 
 getPertMinMaxFromQuant <- function(mode, lowq, highq,
-                                   lowp = 0.05, highp = 0.95,
+                                   lowp = 0.025, highp = 0.975,
                                    shape = 4){
   if(lowq > mode || highq < mode || lowq > highq){
     stop('Invalid (or extreme) distributional parameters. Arguments must satisfy lowq < mode < highq')
@@ -99,7 +99,7 @@ getPertMinMaxFromQuant <- function(mode, lowq, highq,
 }
 
 getPertMinMaxModeFromQuant <- function(median, lowq, highq,
-                                   lowp = 0.05, highp = 0.95,
+                                   lowp = 0.025, highp = 0.975,
                                    shape = 4){
 
   if(lowq > median || highq < median || lowq > highq){

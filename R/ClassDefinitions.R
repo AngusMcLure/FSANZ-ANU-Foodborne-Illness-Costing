@@ -12,13 +12,10 @@ rdist <- function(type,..., continuous = TRUE){
     warning('Distribution has been provided no parameters. This will use the default parameters for ',type,' which is rarely what is wanted' )
   } else if(is.null(nms) || any(nms == "")){
     stop("All distribution parameters for 'rdist' must be named")
-  } else if(length(unique(nms)) < length(nms)){
-    stop("Distrtribution parameter names for 'rdist' must be unique")
-  } else if("n" %in% nms){
-    stop("'n' is not an allowable parameter name for an 'rdist' object")
-  } else if(class(type) != "character"){
-    stop("'type' must be the name of a distribution, e.g. norm (normal distribution) or pert (PERT distribution) ")
   }
+  if(length(unique(nms)) < length(nms))stop("Distrtribution parameter names for 'rdist' must be unique")
+  if("n" %in% nms)stop("'n' is not an allowable parameter name for an 'rdist' object")
+  if(class(type) != "character")stop("'type' must be the name of a distribution, e.g. norm (normal distribution) or pert (PERT distribution) ")
   structure(list(type = type, params = list(...)), class = "rdist", continuous = continuous)
 }
 
@@ -98,8 +95,9 @@ alert_bounds <- function(x, lower = 0, upper = NULL, name = NULL){
 warning('check whether the fields specialist, physio and bacterial are needed')
 # functions for building disease objects
 disease <- function(
-  name, kind, notifiable = NULL, correction = NULL, domestic, underreporting = NULL,
-  foodborne, gpShort, gpLong, ed, sequelae = NULL,
+  name, kind, caseMethod, correction = NULL, domestic = NULL, underreporting = NULL,
+  symptomatic = NULL, FOI = NULL, gastroFraction = NULL,
+  foodborne, gp, gpFracLong, ed, sequelae = NULL,
   hospPrincipalDiagnosis = NULL, hospMethod, hospCodes = NULL, mortCodes, DRGCodes,
   underdiagnosis, medications, medicationsToWhom, tests,
   testsToWhom, bacterial = NULL,
@@ -110,9 +108,10 @@ disease <- function(
  ){
 
   out <- list(
-    name = name, kind = kind, notifiable = notifiable, correction = correction,
-    domestic = domestic, underreporting = underreporting, foodborne = foodborne,
-    gpShort = gpShort, gpLong = gpLong, ed = ed, sequelae = sequelae,
+    name = name, kind = kind, caseMethod = caseMethod, correction = correction,
+    domestic = domestic, underreporting = underreporting, symptomatic = symptomatic,
+    FOI = FOI, gastroFraction = gastroFraction, foodborne = foodborne,
+    gp = gp, gpFracLong = gpFracLong, ed = ed, sequelae = sequelae,
     hospPrincipalDiagnosis = hospPrincipalDiagnosis, hospMethod = hospMethod,
     hospCodes = hospCodes, mortCodes = mortCodes, DRGCodes = DRGCodes,
     underdiagnosis = underdiagnosis, medications = medications,
@@ -128,21 +127,34 @@ disease <- function(
   #out <- as.list(environment())
   out <- out[!unlist(lapply(out,is.null))] # drop all NULL arguments
 
+
   AllowedKinds <- c("sequel", "initial")
   if(!(kind %in% AllowedKinds)){
     stop("kind is listed as ", kind, ". Allowable kinds are: ", paste0(AllowedKinds, collapse = ", "))
   }
 
-  AdditionalRequiredArguments <- list(initial = c('notifiable', 'correction',
-                                                  'underreporting', 'sequelae',
-                                                  'duration', 'severity'),
-                                      sequel = c('specialist', 'propOngoing',
-                                                 'durationOngoing','propSevere',
-                                                 'missedWorkCarer','missedWorkSelf'))
+  ArgumentsKind <- list(initial = c('correction', 'sequelae',
+                                          'duration', 'severity'),
+                              sequel = c('specialist', 'propOngoing',
+                                         'durationOngoing','propSevere',
+                                         'missedWorkCarer','missedWorkSelf'))
 
-  if(!all(AdditionalRequiredArguments$kind %in% names(out))){
-    stop(paste(AdditionalRequiredArguments$kind, collapse = ", "), ' are required arguments for ', kind, 'diseases')
+  if(!all(ArgumentsKind[[kind]] %in% names(out))){
+    stop(paste(setdiff(ArgumentsKind[[kind]],names(out)), collapse = ", "), ' are required arguments for ', kind, ' diseases')
   }
+
+  # valid case estimation methods
+  AllowedCaseMethods <- c('NNDSS','sequel','GastroFraction', 'Seroprevalence')
+  if(!(caseMethod %in% AllowedCaseMethods)){stop('caseMethod must be one of: ', paste(AllowedCaseMethods, collapse = ", "))}
+
+  ArgumentsCaseMethod <- list(GastroFraction = c('gastroFraction'),
+                              NNDSS = c('domestic', 'underreporting'),
+                              Seroprevalence = c('domestic','symptomatic'),
+                              sequel = c('domestic'))
+  if(!all(ArgumentsCaseMethod[[caseMethod]] %in% names(out))){
+    stop(paste(setdiff(ArgumentsCaseMethod[[caseMethod]],names(out)), collapse = ", "), ' are required arguments for diseases where cases are estimated using the ', caseMethod, 'method.')
+  }
+
 
   #Check hospMethod
   AllowedHospMethods <- c("AIHW", "AllCases")
@@ -152,24 +164,25 @@ disease <- function(
          paste0(AllowedHospMethods, collapse = ", "), ".")
   }
 
-  AdditionalRequiredArgumentsAIHW <- c("hospPrincipalDiagnosis", "hospCodes")
-  if(hospMethod == "AIHW" && !all(AdditionalRequiredArgumentsAIHW %in% names(out))){
-    stop(paste(AdditionalRequiredArgumentsAIHW, collapse = ", "), ' are required arguments for diseases where hospitalisations estimates with from AIHW data')
+  ArgumentsAIHW <- c("hospPrincipalDiagnosis", "hospCodes")
+  if(hospMethod == "AIHW" && !all(ArgumentsAIHW %in% names(out))){
+    stop(paste(ArgumentsAIHW, collapse = ", "), ' are required arguments for diseases where hospitalisations estimates with from AIHW data')
   }
-
-
 
   # check that input classes are correct
   ArgsCorrectClasses <- list(name = "character",
                              kind = "character",
-                             notifiable = 'logical',
+                             caseMethod = 'character',
                              correction = 'numeric',
                              domestic = 'rdist',
                              underreporting = 'rdist',
+                             symptomatic = 'rdist',
+                             FOI = 'rdist',
+                             gastroFraction = 'rdist',
                              foodborne = 'rdist',
                              bacterial = 'rdist',
-                             gpShort = 'rdist',
-                             gpLong = 'rdist',
+                             gp = 'rdist',
+                             gpFracLong = 'numeric',
                              ed = 'rdist',
                              specialist = 'rdist',
                              physio = 'rdist',
@@ -200,19 +213,24 @@ disease <- function(
               ~alert_type_error(..1, class_name = ..2, x_name = ..3 ))
 
 
-  # check that input values are valid
-  # domestic, foodborne, bacterial, ongoing must be a distribution with support on a subset of [0,1]
-  alert_bounds(domestic, lower = 0, upper = 1)
-  # if(kind == 'initial'){   # CHECK THIS
-    alert_bounds(foodborne, lower = 0, upper = 1)
-  # }
-  # if(kind == 'sequel'){  # CHECK THIS
-  #   alert_bounds(bacterial, lower = 0, upper = 1)
-  # }
+  AllowedMedsTestsMethods <- c('GP', 'Cases','Notifications','None')
+  if(!(testsToWhom %in% AllowedMedsTestsMethods)){stop('testsToWhom  must be one of: ', paste(AllowedMedsTestsMethods, collapse = ", "))}
+  if(!(medicationsToWhom %in% AllowedMedsTestsMethods)){stop('medicationsToWhom  must be one of: ', paste(AllowedMedsTestsMethods, collapse = ", "))}
 
-  # gpShort, gpLong, ed, specialist, physio must be distributions of non-negative random variables
-  alert_bounds(gpShort)
-  alert_bounds(gpLong)
+
+  # check that input values are valid
+  # domestic, foodborne, gastroFraction, symptomatic must be a distribution with support on a subset of [0,1]
+
+  chkargs <- setdiff(c(ArgumentsCaseMethod[[caseMethod]], 'foodborne'), 'underreporting')
+  imap(out[chkargs], ~alert_bounds(.x, lower = 0, upper = 1,name = .y))
+
+  # under-reporting must be positive distribution
+
+
+  # gp, ed, specialist, physio must be distributions of non-negative random variables
+  # gpFracLong needs to be 0 and 1
+  alert_bounds(gp)
+  alert_bounds(gpFracLong, upper = 1)
   alert_bounds(ed)
   if(kind == 'sequel'){
     alert_bounds(specialist)
@@ -221,8 +239,10 @@ disease <- function(
     }
   }
 
-  # underdiagnosis must be a distribution for variables >= 1
+  # underdiagnosis and underreporting must be a distribution for variables >= 1
   alert_bounds(underdiagnosis, lower = 1, name = paste("underdiagnosis for disease ", name))
+  if(!is.null(underreporting)) alert_bounds(underreporting)
+
 
   # sequelae must be a named list of rdist objects, each with support on [0,1]
   if(kind == 'initial'){
@@ -295,12 +315,7 @@ disease <- function(
       stop('severity must be "severe" or "mild"')
     }
   }
-
-
-
-
   structure(out, class = c(kind, 'disease'))
-
 }
 
 alert_wellnamed <- function(x,...){

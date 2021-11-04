@@ -1,0 +1,5 @@
+AgeGroup,Income,PropNeedsCarer,PropInWorkforce
+<5,0,1.0,0
+5-64,354,0.33,0.67
+65+,275,0.33,0.15
+15-64,354,,0.8

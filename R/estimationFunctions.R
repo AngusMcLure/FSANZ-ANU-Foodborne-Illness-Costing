@@ -1,96 +1,89 @@
-estimateIncidence <- function(disease, population = NULL, ndraws = 10^6, gastroRate = NULL, notifications = NULL){
+estimateIncidence <- function(disease, ndraws = 10^6,
+                              gastroRate = NULL, notifications = NULL,
+                              population = NULL, minAge = NULL, maxAge = NULL){
   #abbreviate
   d <- disease
   n <- ndraws
 
-  if(d$notifiable){
-    if(is.null(notifications)){
-      cases = 1
-      warning("Notification numbers not provided, returning multipliers per notification")
-    }
-    total <- notifications * d$correction * draw(d$underreporting, n)
-    domestic <- total * draw(d$domestic, n)
-  }else{
-    if(is.null(gastroRate)){
-      stop("gastroRate must be supplied if disease is not notifiable")
-    }
-    domestic <- population * draw(gastroRate, n) * draw(d$fractionOfGastro, n)
-  }
-  foodborne <- domestic * draw(d$foodborne, n)
+  if(d$caseMethod == 'NNDSS' && is.null(notifications)) stop("Notification numbers must be supplied for estimates from notifiable diseases")
 
-  out <- list(Domestic = domestic, Foodborne  = foodborne)
-  if(!is.null(population)){
-    out <- c(out, list(DomesticPerMillion = domestic/population * 10^6,
-                       FoodbornePerMillion = foodborne/population * 10^6))
-  }
-  out
+  if(d$caseMethod != "NNDSS") population <- population[(minAge+1):maxAge]
+
+  domestic <- switch(d$caseMethod,
+                     NNDSS = notifications * d$correction * draw(d$underreporting, n) * draw(d$domestic, n),
+                     GastroFraction = sum(population) * draw(gastroRate, n) * draw(d$gastroFraction, n),
+                     Seroprevalence = {
+                       foi <- draw(d$FOI, ndraws)
+                       as.numeric(map(foi,~{
+                         S <- exp(-.x * (minAge:maxAge))
+                         sum(population * (S[1:(maxAge-minAge)] - S[1+(1:(maxAge-minAge))]))
+                       }))
+                     })
+  if(!is.null(d$symptomatic)) domestic <- domestic * draw(d$symptomatic, ndraws)
+
+  foodborne <- domestic * draw(d$foodborne, n)
+  foodborne
 }
 
-estimateHosp <- function(disease, population = NULL, ndraws = 10^6, separations = NULL){
+
+estimateHosp <- function(disease,
+                         #population = NULL,
+                         ndraws = 10^6, separations = NULL){
   #This estimates hospitalisations for a specific disease in a specific year
   #abbreviate
   d <- disease
   n <- ndraws
   if(is.null(separations)){
     seperations = 1
-    warning("Seperations with primary diagnoses not provided, returning multipliers per separation")
+    stop("Seperations with primary diagnoses not provided")
   }
-  total <- separations / draw(d$hospPrincipalDiagnosis, n) * draw(d$underdiagnosis, n)
-  domestic <- total * draw(d$domestic, n)
-  foodborne <- domestic * draw(d$foodborne, n)
-
-  out <- list(Domestic = domestic, Foodborne  = foodborne)
-  if(!is.null(population)){
-    out <- c(out, list(DomesticPerMillion = domestic/population * 10^6,
-                       FoodbornePerMillion = foodborne/population * 10^6))
+  out <- separations / draw(d$hospPrincipalDiagnosis, n) *
+    draw(d$underdiagnosis, n) * draw(d$foodborne, n)
+  if(d$caseMethod != 'GastroFraction'){
+    out <- out * draw(d$domestic, n)
   }
   out
 }
 
-estimateDeaths <- function(disease, ageGroup, ndraws = 10^6, reports = NULL){
-  if(is.null(reports)){ #if deaths aren't provided use the population adjusted
-
-  }
-}
+# estimateDeaths <- function(disease, ageGroup, ndraws = 10^6, reports = NULL){
+#   if(is.null(reports)){ #if deaths aren't provided use the population adjusted
+#
+#   }
+# }
 
 # estimateGP, estimateED, estimateSequelae, esimateMeds, estimateTests can all be generalised by a single function
 
-estimateGeneric <- function(items, ndraws = 10^6, incidence = NULL){
+estimateGeneric <- function(items, ndraws = 10^6, incidence){
   if(class(items) != 'list') stop('items must be a list')
   n <- ndraws
-  if(is.null(incidence)){
-    incidence = 1
-    warning("Case numbers of underlying cause are not provided, returning multipliers per case")
-  }
   if(length(incidence) != 1 & length(incidence) != n){
     stop('The length of incidence should either be 1 or equal to ndraws')
   }
   map(items, ~{draw(.x, n) * incidence})
 }
-estimateGP <- function(disease, ndraws = 10^6, incidence = NULL){
-  estimateGeneric(disease[c("gpShort","gpLong")],
-                  ndraws = ndraws, incidence = incidence)
-}
-estimateED <- function(disease, ndraws = 10^6, incidence = NULL){
-  ed = estimateGeneric(disease["ed"],
-                       ndraws = ndraws, incidence = incidence)
-}
-estimateSequelae <- function(disease, ndraws = 10^6, incidence = NULL){
+# estimateGP <- function(disease, ndraws = 10^6, incidence){
+#   estimateGeneric(disease["gp"],
+#                   ndraws = ndraws, incidence = incidence)
+# }
+# estimateED <- function(disease, ndraws = 10^6, incidence){
+#   ed = estimateGeneric(disease["ed"],
+#                        ndraws = ndraws, incidence = incidence)
+# }
+estimateSequelae <- function(disease, ndraws = 10^6, incidence){
   estimateGeneric(disease[["sequelae"]],
                   ndraws = ndraws, incidence = incidence)
 }
-estimateMeds <- function(disease, ageGroup, ndraws = 10^6, incidence = NULL){
+estimateMeds <- function(disease, ageGroup, ndraws = 10^6, incidence){
   estimateGeneric(c(disease[["medications"]][["AllAges"]], disease[["medications"]][[ageGroup]]),
                   ndraws = ndraws, incidence = incidence)
 }
-estimateTests <- function(disease, ageGroup, ndraws = 10^6, incidence = NULL){
+estimateTests <- function(disease, ageGroup, ndraws = 10^6, incidence){
   estimateGeneric(c(disease[["tests"]][["AllAges"]], disease[["tests"]][[ageGroup]]),
                   ndraws = ndraws, incidence = incidence)
 }
 
 
 costWTP <- function(disease, ageGroup, cases, separations = NULL, discount = NULL, ndraws = 10^6){
-
   if(length(cases) != 1 & length(cases) != ndraws){
     stop('The length of cases should either be 1 or equal to ndraws')
   }
@@ -109,9 +102,9 @@ costWTP <- function(disease, ageGroup, cases, separations = NULL, discount = NUL
   }else{
     WTPMild <- subset(WTPValues, severity=='mild' & symptom == disease$symptoms)$WTPvalue
     WTPSevere <- subset(WTPValues, severity=='severe' & symptom == disease$symptoms)$WTPvalue
-    FirstYear <- WTPMild * (1- disease$propSevere) + WTPSevere * disease$propSevere;
-    Ongoing <- WTPMild * draw(disease$propOngoing[[ageGroup]],ndraws) *
-      (1 - (1-discount)^disease$durationOngoing)/discount * (1 - discount)
+    FirstYear <- WTPMild * (1- disease$propSevere) + WTPSevere * disease$propSevere
+    DiscountedYears <- if(discount == 0){disease$durationOngoing}else{(1 - (1-discount)^disease$durationOngoing)/discount * (1 - discount)}
+    Ongoing <- WTPMild * draw(disease$propOngoing[[ageGroup]],ndraws) * DiscountedYears
     list(FirstYear = FirstYear * cases,
          Ongoing = Ongoing * cases)
   }
@@ -134,35 +127,42 @@ costList <- function(l){
     rowSums
 }
 
-costHumanCapital <- function(disease,ageGroup,cases,ndraws){
+costHumanCapital <- function(year, disease,ageGroup,cases,separations,ndraws){
   if(length(cases) != 1 & length(cases) != ndraws){
     stop('The length of cases should either be 1 or equal to ndraws')
   }
 
-
-  if(disease$symptoms == "GI"){
+  # Days off of non-hospitalised cases
+  if(disease$kind == "initial"){
     parsC <- subset(MissedDaysGastro, AgeGroup == ageGroup & Type == "Carer")
-    CarerDays <- cases * rlnorm(ndraws,
-                                meanlog = log(parsC$estimate.mu),
-                                sdlog = parsC$sd.mu/parsC$estimate.mu)
+    CarerDays <- (cases - separations) * rlnorm(ndraws,
+                                                meanlog = log(parsC$estimate.mu),
+                                                sdlog = parsC$sd.mu/parsC$estimate.mu)
     if(ageGroup !="<5"){
       parsS <- subset(MissedDaysGastro, AgeGroup == ageGroup & Type == "Self")
-      SelfDays <- cases * rlnorm(ndraws,
-                                 meanlog = log(parsS$estimate.mu),
-                                 sdlog = parsS$sd.mu/parsS$estimate.mu)
-    }
+      SelfDays <- (cases - separations) * rlnorm(ndraws,
+                                                 meanlog = log(parsS$estimate.mu),
+                                                 sdlog = parsS$sd.mu/parsS$estimate.mu)
+    }else SelfDays <- 0
   }else{
     CarerDays <- cases * disease$missedWorkCarer[[ageGroup]]; #warning('Carer days off work for sequelae do not have uncertainty estimates around them')
-    if(ageGroup !="<5"){
-      SelfDays <- cases * disease$missedWorkSelf[[ageGroup]]; #warning('Self days off work for sequalae do not have uncertainty estimates around them')
-    }
+    SelfDays <- cases * disease$missedWorkSelf[[ageGroup]]; #warning('Self days off work for sequalae do not have uncertainty estimates around them')
   }
 
-  Cost <- CarerDays * subset(Incomes, AgeGroup == "5-64")$Income
-  if(ageGroup !="<5"){
-    Cost <-  Cost  + SelfDays * subset(Incomes, AgeGroup == ageGroup)$Income
+  # Days off for hospitalised cases
+  if(disease$kind == "initial"){
+    SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & AgeGroup == ageGroup & FYNumeric == year)
+    meanLOS <- sum(SepData$PatientDays)/sum(SepData$Separations)
+    CarerDays <- CarerDays +
+      separations * meanLOS *
+      Workforce['15-64', 'PropInWorkforce'] *
+      Workforce[ageGroup, 'PropNeedsCarer'] * 5/7
+    SelfDays <- SelfDays +
+      separations * meanLOS *
+      Workforce[ageGroup, 'PropInWorkforce'] * 5/7
   }
-  Cost
+
+  CarerDays * Workforce["15-64",'Income'] + SelfDays * Workforce[ageGroup,'Income']
 }
 
 # costFriction <- function(disease,ageGroup,cases,ndraws,rate){
@@ -180,47 +180,33 @@ mquant <- function(x){
   map(x,~quantile(.x, probs = c(0.05,0.5,0.95)))
 }
 
-makeIncidenceList <- function(year, diseases, ndraws = 10^6){
+makeIncidenceList <- function(year, diseases, ndraws = 10^6,gastroRate){
 
   ageGroups <- c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
 
   Initial <- map(diseases,
-                 ~map(ageGroups,
-                      function(.a){
-                        if(.x$notifiable){
-                          notifications <- subset(NNDSSIncidenceAgegroup,Disease == .x$name & Year == year & AgeGroup == .a)$Cases
-                          if(length(notifications) == 0){
-                            stop('No notifications available for this time period')
-                          } else if(length(notifications) > 1){
-                            stop('More than one number found for notifications...')
-                          }
-                        }else{
-                          stop('I have not implemented the logic for non-notifiable diseases yet')
-                        }
+                 function(.x){map(ageGroups,
+                                  function(.a){
+                                    minAge <- switch(.a, `<5` = 0, `5-64` = 5,`65+` = 65,stop('invalid age group'))
+                                    maxAge <-  switch(.a, `<5` = 5, `5-64` = 65,`65+` = 101,stop('invalid age group'))
+                                    if(.x$caseMethod == "NNDSS"){
+                                      notifications <- subset(NNDSSIncidenceAgegroup,Disease == .x$name & Year == year & AgeGroup == .a)$Cases
+                                      if(length(notifications) == 0)stop('No notifications available for this time period')
+                                      else if(length(notifications) > 1)stop('More than one number found for notifications...')
+                                    } else notifications <- NULL
+                                    estimateIncidence(.x,ndraws = ndraws, notifications = notifications,
+                                                      population = subset(AusPopSingleYear, Year == year)$Persons,
+                                                      minAge = minAge,maxAge = maxAge, gastroRate = gastroRate)
+                                  })
+                 })
+  diseases <- diseases[unlist(map(diseases,~length(.x$sequelae)>0))] #drop diseases with no sequelae
 
-                        estimateIncidence(.x,
-                                          notifications = notifications,
-                                          ndraws = ndraws)$Foodborne
-                      }
-                 )
-  )
   Sequel <- imap(diseases,
-                 ~imap(ageGroups,
-                       function(.a,.n){
-                         estimateSequelae(.x,
-                                          incidence = Initial[[.y]][[.n]],
-                                          ndraws = ndraws)
-                       }
-                 )
-  ) #%>% as.data.frame() %>% pivot_longer(everything(),names_sep = "\\.", names_to = c("InitialDisease", "AgeGroup", "Disease"))
-  # bind_rows(Initial = Initial %>% as.data.frame() %>%
-  #             mutate(Draw = 1:ndraws) %>%
-  #             pivot_longer(-Draw,names_sep = "\\.", names_to = c("Disease", "AgeGroup")),
-  #           Sequel = Sequel %>% as.data.frame() %>%
-  #             mutate(Draw = 1:ndraws) %>%
-  #             pivot_longer(-Draw,names_sep = "\\.", names_to = c("InitialDisease", "AgeGroup","Disease")),
-  #           .id = "Type")
+                 ~map(ageGroups,function(.a){
+                   estimateSequelae(.x, incidence = Initial[[.y]][[.a]], ndraws = ndraws)})
+  )
+
   list(Initial = Initial, Sequel = Sequel)
 }
 
@@ -234,47 +220,82 @@ calcSequelaeFractions <- function(sequelIncidence){
     select(-Total)
 }
 
-makeDeathsList <- function(year, diseases, ndraws = 10^6){
+makeDeathList <- function(year, diseases, ndraws = 10^6){
 
   ageGroups <- c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
 
-  AusPop <- getAusPopAgeSex()
-
   # Adjust to target year
-  PopInTargetYear <- AusPop %>% subset(Year == year) %>%
-    mutate(AgeGroup = ifelse(Age<5, "<5",ifelse(Age<65,"5-64", "65+"))) %>%
-    group_by(AgeGroup) %>%
-    summarise(Population = sum(Count))
+  PopInTargetYear <- subset(AusPopAgegroup, Year == year)
 
   Deaths <- map(diseases,function(.d){
     map(ageGroups,function(.a){
       dths <- subset(Deaths,Cause %in% .d$mortCodes & AgeGroup == .a)
       #rgamma(ndraws, sum(dths$Count) + 0.5, dths$PersonYears[1]) * subset(PopInTargetYear, AgeGroup == .a)$Population *
-      rbeta(ndraws, sum(dths$Count) + 0.5, dths$PersonYears[1] - sum(dths$Count) + 0.5) * subset(PopInTargetYear, AgeGroup == .a)$Population *
+      out <- rbeta(ndraws, sum(dths$Count) + 0.5, dths$PersonYears[1] - sum(dths$Count) + 0.5) *
+        subset(PopInTargetYear, AgeGroup == .a)$Persons *
         draw(.d$underdiagnosis,ndraws) *
-        draw(.d$domestic,ndraws) *
         draw(.d$foodborne,ndraws)
+      if(.d$caseMethod != "GastroFraction"){
+        out <- out * draw(.d$domestic,ndraws)
+      }
+      if(.d$kind == 'sequel'){
+        sf <- SequelaeFractions %>% subset(Disease == .d$name & AgeGroup == .a) %>% select(-c(Draw, AgeGroup,Disease))
+        out <- as.list(out * sf)
+      }
+      out
     })
   })
   return(Deaths)
 }
 
+makeHospList <- function(year, diseases, incidenceList, ndraws = 10^6){
+  ageGroups <- c("<5","5-64","65+")
+  names(ageGroups) <- ageGroups
+  InitialCases <- incidenceList$Initial
+  SequelCases <- incidenceList$Sequel
 
+  Hosp <- list()
+  Hosp$Initial <- imap(InitialCases, ~{
+    .d <- diseases[[.y]]
+    imap(.x,function(cases,.a){
+      if(.d$hospMethod == 'AllCases'){return(cases)}
+      else if(.d$hospMethod == 'AIHW'){
+        sep <- sum(subset(Hospitalisations, DC4D %in% .d$hospCodes & AgeGroup == .a & FYNumeric == year)$Separations)
+        return(estimateHosp(.d,ndraws = ndraws,separations = sep))
+      }else  stop('I have not implemented this method of estiamting intitial disease hospitalisations')
+    })
+  })
+  Hosp$Sequel <- imap(SequelCases, ~{
+    initialDiseaseName <- .y
+    imap(.x,function(caseList,.a){
+      imap(caseList, function(cases, .sequeld){
+        .sequeld <- diseases[[.sequeld]]
+        if(.sequeld$hospMethod == 'AIHW'){
+          out <- sum(subset(Hospitalisations,DC4D %in% .sequeld$hospCodes & AgeGroup == .a & FYNumeric == year)$Separations)
+          sf <-  subset(SequelaeFractions,Disease == .sequeld$name & AgeGroup == .a)[[initialDiseaseName]]
+          return(estimateHosp(.sequeld,ndraws = ndraws,separations = out) *sf)
+        }else if(.sequeld$hospMethod == 'AllCases'){
+          return(cases)
+        }else {stop('Have not implemented hospitalisation estimation method called ', .sequeld$hospMethod)}
+      })
+    })
+  })
+  Hosp
+}
 
 estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
                           notifications = NULL, separations = NULL, deaths = NULL,
                           discount){
   d <- disease
   a <- ageGroup
-  #p <- subset(AusPopAgegroup,Year == year & AgeGroup == a)$Persons #This is unnecessary since we are not calculating rates
 
   if(is.null(notifications)){
     notifications <- subset(NNDSSIncidenceAgegroup,Year == year & AgeGroup == ageGroup & Disease == d$name)$Cases
     incidencePrimary <- IncidenceList$Initial[[d$name]][[a]]
     incidenceSequelae <- IncidenceList$Sequel[[d$name]][[a]]
   }else{
-    incidencePrimary <- estimateIncidence(d, notifications = notifications, ndraws = ndraws)$Foodborne
+    incidencePrimary <- estimateIncidence(d, notifications = notifications, ndraws = ndraws)#$Foodborne
     incidenceSequelae <- estimateSequelae(d,incidence = incidencePrimary, ndraws = ndraws)
   }
   incidence <- c(list(incidencePrimary),incidenceSequelae)
@@ -285,60 +306,53 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
 
   if(is.null(separations)){
     separations <- map(dList,~{
-      out <- sum(subset(Hospitalisations,DC4D %in% .x$hospCodes & AgeGroup == a & FYNumeric == year)$Separations)
-      if(.x$kind == "sequel"){
-        return(out * subset(SequelaeFractions, AgeGroup == a & Disease == .x$name)[,d$name, drop = TRUE])
-      }else{return(out)}
+      if(.x$kind == "sequel") HospList[['Sequel']][[d$name]][[ageGroup]][[.x$name]]
+      else HospList[['Initial']][[d$name]][[ageGroup]]
     }
     )
   }
 
   if(is.null(deaths)){
     deaths <- map(dList,~{
-      out <- DeathsList[[.x$name]][[a]]
+      out <- DeathList[[.x$name]][[a]]
       if(.x$kind == "sequel"){
-        return(out * subset(SequelaeFractions, AgeGroup == a & Disease == .x$name)[,d$name, drop = TRUE])
-      }else{return(out)}
+        out <- out[[d$name]]
+      }
+      out
     }
     )
   }
 
   out <- pmap(list(dList,incidence,separations,deaths),~{
-    GP <- estimateGP(..1, ..2, ndraws = ndraws)
-    ED <- estimateED(..1, ..2, ndraws = ndraws)
+    GP <- estimateGeneric(..1["gp"],ndraws = ndraws, incidence = ..2)
+    ED <- estimateGeneric(..1["ed"],ndraws = ndraws, incidence = ..2)
     Meds <- estimateMeds(..1, ageGroup = a,
                          incidence = switch(..1$medicationsToWhom,
-                                            GP = GP$gpShort + GP$gpLong,
+                                            GP = GP$gp,
                                             Cases = ..2,
                                             Notifications = notifications,
                                             None = rep(0,ndraws)),
                          ndraws = ndraws)
     Tests <- estimateTests(..1, ageGroup = a,
                            incidence = switch(..1$testsToWhom,
-                                              GP = GP$gpShort + GP$gpLong,
+                                              GP = GP$gp,
                                               Cases = ..2,
                                               Notifications = notifications,
                                               None = rep(0,ndraws)),
                            ndraws=ndraws)
-    Hosp <- switch(..1$hospMethod,
-                   AIHW = estimateHosp(..1,separations = ..3, ndraws = ndraws),
-                   AllCases = list(Foodborne = ..2))
 
-    HumanCapital <- costHumanCapital(..1, a, ..2, ndraws = ndraws)
-    # FrictionHigh <- costFriction(..1, a, ..2, ndraws = ndraws, FrictionRates$High)
-    # FrictionLow <- costFriction(..1, a, ..2, ndraws = ndraws, FrictionRates$Low)
+    HumanCapital <- costHumanCapital(year, ..1, a, ..2, ..3, ndraws = ndraws)
     FrictionHigh <- HumanCapital * FrictionRates$High
     FrictionLow <- HumanCapital * FrictionRates$Low
     warning('Friction costs assume time off is below the 3 month cap!')
-    Deaths <- VSL * ..4
-    WTP = costWTP(..1,a,cases = ..2, separations = ..3,discount = discount, ndraws = ndraws)
 
-    out <- list(GP = costList(GP),
+    WTP = costWTP(..1,a,cases = ..2, separations = ..3,discount = discount, ndraws = ndraws)
+    out <- list(GP = GP$gp * (Costs['gpShort','Cost'] * (1-..1$gpFracLong) + Costs['gpLong','Cost'] * ..1$gpFracLong),
                 ED = costList(ED),
                 Medications = costList(Meds),
                 Tests = costList(Tests),
-                Hospitalisation = Hosp$Foodborne * Costs[..1$DRGCodes[[a]],"Cost"],
-                Deaths = Deaths,
+                Hospitalisation = ..3 * Costs[..1$DRGCodes[[a]],"Cost"],
+                Deaths = VSL * ..4,
                 WTP = WTP$FirstYear,
                 WTPOngoing = WTP$Ongoing,
                 HumanCapital = HumanCapital,
@@ -348,13 +362,13 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
   }
   )
   out
-  #Hosp = HospPrimary$Foodborne * Costs[d$DRGCodes[[a]],"Cost"])
 }
 
 
 makeCostList <- function(year,
                          diseases,
-                         ndraws = 10^6, discount){
+                         ndraws = 10^6,
+                         discount){
   AgeGroups <- c("<5","5-64","65+")
   names(AgeGroups) <- c("<5","5-64", "65+")
 
