@@ -145,32 +145,21 @@ getValueStatisticalLife <- function(){
 }
 
 getABSDeaths <- function(year){
-  out <- readxl::read_xlsx("./Data/ABSDeathTable2001-2010.xlsx",
-                           sheet = "Table 2",
-                           range = "A9:K69",
-                           col_types = c("text",
-                                         "skip",
-                                         "text",
-                                         "text",
-                                         "text",
-                                         "text",
-                                         "skip",
-                                         "text",
-                                         "text",
-                                         "text",
-                                         "text"),
-                           col_names = c("Cause",
-                                         "Male.0-14",
-                                         "Male.15-64",
-                                         "Male.65+",
-                                         "Male.All",
-                                         "Female.0-14",
-                                         "Female.15-64",
-                                         "Female.65+",
-                                         "Female.All"
-                           )) %>%
-    as.data.frame() %>%
-    pivot_longer(-Cause, names_to = c("Sex", "AgeGroup"), names_sep = "\\.") %>%
+
+  col.types <- c("text", "skip", "text", "text", "text", "text", "skip", "text", "text", "text", "text")
+  col.names <- c("Cause", "Male.0-14", "Male.15-64", "Male.65+", "Male.All", "Female.0-14", "Female.15-64", "Female.65+", "Female.All")
+  out <- bind_rows(Underlying = readxl::read_xlsx("./Data/ABSDeathTable2001-2010.xlsx",
+                                                  sheet = "Table 1",
+                                                  range = "A9:K63",
+                                                  col_types = col.types,
+                                                  col_names = col.names) %>% as.data.frame(),
+                   Multiple = readxl::read_xlsx("./Data/ABSDeathTable2001-2010.xlsx",
+                                                sheet = "Table 2",
+                                                range = "A9:K69",
+                                                col_types = col.types,
+                                                col_names = col.names) %>% as.data.frame(),
+                   .id = "Method") %>%
+    pivot_longer(-c(Cause, Method), names_to = c("Sex", "AgeGroup"), names_sep = "\\.") %>%
     mutate(value = value %>%
              na_if('np') %>%
              recode(`–` = "0") %>%
@@ -179,7 +168,7 @@ getABSDeaths <- function(year){
            Cause = if_else(nchar(Cause)>3,
                            paste(substr(Cause, 1,3), substr(Cause, 4,nchar(Cause)), sep ='.'),
                            Cause)
-    )
+           )
 
   #Fix the missing deaths for some of the females. All Causes have a total
   #given, but there are no estimates from some age groups I am using the
@@ -199,8 +188,8 @@ getABSDeaths <- function(year){
   for(n in 1:nrow(out)){
     r <- out[n,]
     if(is.na(out$value[n])){
-      deficit <- subset(out, Cause == r$Cause & Sex == r$Sex & AgeGroup == 'All')$value -
-        sum(subset(out, Cause == r$Cause & Sex == r$Sex & AgeGroup != 'All')$value, na.rm = T)
+      deficit <- subset(out, Method == r$Method & Cause == r$Cause & Sex == r$Sex & AgeGroup == 'All')$value -
+        sum(subset(out, Method == r$Method & Cause == r$Cause & Sex == r$Sex & AgeGroup != 'All')$value, na.rm = T)
       out[n,'value'] <- deficit * subset(AgeGroupWeights, Sex == r$Sex & AgeGroup == r$AgeGroup)$Count/
         sum(subset(AgeGroupWeights, Sex == r$Sex & AgeGroup %in% subset(out, Cause == r$Cause & Sex == r$Sex & is.na(value))$AgeGroup)$Count)
     }
@@ -209,7 +198,7 @@ getABSDeaths <- function(year){
   #Collapse by sex and remove totals
 
   out <- out %>% subset(AgeGroup != "All") %>%
-    group_by(Cause, AgeGroup) %>%
+    group_by(Cause, AgeGroup, Method) %>%
     summarise(Count = sum(value))
 
   #Readjust to agegroups <5, 5-64, and 65+ -- assume rate in <5 is the same as rate in
@@ -227,7 +216,7 @@ getABSDeaths <- function(year){
                      subset(AgeGroup == "0-14") %>%
                      mutate(Count = Count * (1-Frac0to14Under5),
                             AgeGroup = "5-64")) %>%
-    group_by(Cause,AgeGroup) %>%
+    group_by(Cause,AgeGroup, Method) %>%
     summarise(Count = sum(Count))
 
   PopFinalAgeGroups <- AusPop %>% subset(Year %in% 2001:2010) %>%

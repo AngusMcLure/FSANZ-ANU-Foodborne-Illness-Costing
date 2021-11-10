@@ -61,18 +61,11 @@ estimateGeneric <- function(items, ndraws = 10^6, incidence){
   }
   map(items, ~{draw(.x, n) * incidence})
 }
-# estimateGP <- function(disease, ndraws = 10^6, incidence){
-#   estimateGeneric(disease["gp"],
+
+# estimateSequelae <- function(disease, ndraws = 10^6, incidence){
+#   estimateGeneric(disease[["sequelae"]],
 #                   ndraws = ndraws, incidence = incidence)
 # }
-# estimateED <- function(disease, ndraws = 10^6, incidence){
-#   ed = estimateGeneric(disease["ed"],
-#                        ndraws = ndraws, incidence = incidence)
-# }
-estimateSequelae <- function(disease, ndraws = 10^6, incidence){
-  estimateGeneric(disease[["sequelae"]],
-                  ndraws = ndraws, incidence = incidence)
-}
 estimateMeds <- function(disease, ageGroup, ndraws = 10^6, incidence){
   estimateGeneric(c(disease[["medications"]][["AllAges"]], disease[["medications"]][[ageGroup]]),
                   ndraws = ndraws, incidence = incidence)
@@ -114,7 +107,7 @@ costWTP <- function(disease, ageGroup, cases, separations = NULL, discount = NUL
 costList <- function(l){
   MissingCosts <- setdiff(names(l),row.names(Costs))
   if(length(MissingCosts)){
-    stop("No cost item(s) called ", cat(MissingCosts,sep = ", "))
+    stop("No cost item(s) called ", paste(MissingCosts,collapse = ", "))
   }
 
   if(!is.numeric(Costs[names(l),"Cost"]) | any(is.na(Costs[names(l),"Cost"]))){
@@ -152,7 +145,20 @@ costHumanCapital <- function(year, disease,ageGroup,cases,separations,ndraws){
   # Days off for hospitalised cases
   if(disease$kind == "initial"){
     SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & AgeGroup == ageGroup & FYNumeric == year)
+
+    if(sum(SepData$Separations) == 0){ #If there are no separations for that age-group use the data for all age-groups
+      SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & FYNumeric == year)
+      if(sum(SepData$Separations) == 0){ #If there are still no separations
+        stop('No hospital separations available for the selected year for ',
+             disease$name, '. Need another way to estimate mean LOS and time off work.')
+      }else{
+        warning('No hospital separations available for the selected year and for ',
+                disease$name, ' in age group ', ageGroup,
+                '. Using mean LOS from all agegroup to estimate time off work for this agegroup')
+      }
+    }
     meanLOS <- sum(SepData$PatientDays)/sum(SepData$Separations)
+
     CarerDays <- CarerDays +
       separations * meanLOS *
       Workforce['15-64', 'PropInWorkforce'] *
@@ -188,8 +194,8 @@ makeIncidenceList <- function(year, diseases, ndraws = 10^6,gastroRate){
   Initial <- map(diseases,
                  function(.x){map(ageGroups,
                                   function(.a){
-                                    minAge <- switch(.a, `<5` = 0, `5-64` = 5,`65+` = 65,stop('invalid age group'))
-                                    maxAge <-  switch(.a, `<5` = 5, `5-64` = 65,`65+` = 101,stop('invalid age group'))
+                                    minAge <- switch(.a, `<5` = 0, `5-64` = 5,`65+` = 65, stop('invalid age group'))
+                                    maxAge <-  switch(.a, `<5` = 5, `5-64` = 65,`65+` = 101, stop('invalid age group'))
                                     if(.x$caseMethod == "NNDSS"){
                                       notifications <- subset(NNDSSIncidenceAgegroup,Disease == .x$name & Year == year & AgeGroup == .a)$Cases
                                       if(length(notifications) == 0)stop('No notifications available for this time period')
@@ -204,7 +210,7 @@ makeIncidenceList <- function(year, diseases, ndraws = 10^6,gastroRate){
 
   Sequel <- imap(diseases,
                  ~map(ageGroups,function(.a){
-                   estimateSequelae(.x, incidence = Initial[[.y]][[.a]], ndraws = ndraws)})
+                   estimateGeneric(.x[["sequelae"]],incidence = Initial[[.y]][[.a]], ndraws = ndraws)})
   )
 
   list(Initial = Initial, Sequel = Sequel)
@@ -284,6 +290,7 @@ makeHospList <- function(year, diseases, incidenceList, ndraws = 10^6){
   Hosp
 }
 
+warning('Friction costs assume time off is below the 3 month cap!')
 estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
                           notifications = NULL, separations = NULL, deaths = NULL,
                           discount){
@@ -325,6 +332,21 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
 
   out <- pmap(list(dList,incidence,separations,deaths),~{
     GP <- estimateGeneric(..1["gp"],ndraws = ndraws, incidence = ..2)
+    Specialist <- estimateGeneric(..1["specialist"],ndraws = ndraws,
+                                  incidence = switch(..1$specialistToWhom,
+                                                     Cases = ..2,
+                                                     Hospitalisations = ..3,
+                                                     None = rep(0,ndraws)))
+    Physio <- if(!is.null(..1$physio)){
+      estimateGeneric(..1["physio"],ndraws = ndraws,incidence = ..2)
+    }else{ list(physio = rep(0,ndraws))}
+
+
+    GPSpecialist <- list(gpShort = GP$gp * (1-..1$gpFracLong),
+                         gpLong = GP$gp * ..1$gpFracLong,
+                         physio = Physio$physio,
+                         specialist = Specialist$specialist)
+
     ED <- estimateGeneric(..1["ed"],ndraws = ndraws, incidence = ..2)
     Meds <- estimateMeds(..1, ageGroup = a,
                          incidence = switch(..1$medicationsToWhom,
@@ -344,10 +366,9 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
     HumanCapital <- costHumanCapital(year, ..1, a, ..2, ..3, ndraws = ndraws)
     FrictionHigh <- HumanCapital * FrictionRates$High
     FrictionLow <- HumanCapital * FrictionRates$Low
-    warning('Friction costs assume time off is below the 3 month cap!')
 
     WTP = costWTP(..1,a,cases = ..2, separations = ..3,discount = discount, ndraws = ndraws)
-    out <- list(GP = GP$gp * (Costs['gpShort','Cost'] * (1-..1$gpFracLong) + Costs['gpLong','Cost'] * ..1$gpFracLong),
+    out <- list(GP = costList(GPSpecialist),
                 ED = costList(ED),
                 Medications = costList(Meds),
                 Tests = costList(Tests),

@@ -13,7 +13,7 @@ Hospitalisations <- getHospitalisationsAgeGroup()
 Costs <- getCosts()
 WTPValues <- getWTP()
 VSL <- getValueStatisticalLife()
-Deaths <- getABSDeaths()
+Deaths <- getABSDeaths() %>% subset(Method == "Underlying")
 MissedDaysGastro <- getMissedDaysGastro()
 FrictionRates <- getFrictionRates()
 Workforce <- getWorkforceAssumptions() ##What year is this for and does it need to change by year?
@@ -25,9 +25,11 @@ WorkingDiseases <- c("Campylobacteriosis",
                      "Salmonellosis",
                      "Shigellosis",
                      'Toxoplasma',
-                     #'Listeriosis',
+                     'Listeriosis',
                      "Typhoid Fever",
-                     "Gastroenteritis")
+                     "Gastroenteritis",
+                     "Norovirus",
+                     "Escherichia coli (Non-STEC)")
 
 
 ### CURRENTLY THE ESTIMATES COSTS FUNCTION PULLS ON INCIDENCE LIST AS A GLOBAL
@@ -50,7 +52,7 @@ DeathList <- makeDeathList(2019,
 CostList <- makeCostList(2019, DiseaseAssumptions[WorkingDiseases], ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
 
-warning('When summing across agegroups the draws of the multiplies used for each agegroup are considered independent. Making them dependent would require reworking the whole program, and is not necessarily a better assumption, but it is something to be aware of')
+warning('When summing across agegroups the draws of the multipliers used for each agegroup are considered independent. Making them dependent would require reworking the whole program, and is not necessarily a better assumption, but it is something to be aware of')
 
 #Summarise draws with median, and 90 CIs
 # Can probably reuse some code here...
@@ -144,7 +146,16 @@ CostListTotals <- CostList %>%
   bind_rows(.,
             group_by(.,Draw, Disease, AgeGroup,CostItem) %>%
               summarise(value = sum(value)) %>%
-              mutate(Pathogen = 'All Pathogens'))
+              mutate(Pathogen = 'All Pathogens')) %>%
+  bind_rows(.,
+            group_by(.,Draw, Pathogen, AgeGroup, Disease) %>%
+              summarise(Total.HumanCapital = sum(value[!(CostItem %in% c("FrictionHigh","FrictionLow"))]),
+                        Total.FrictionHigh = sum(value[!(CostItem %in% c("HumanCapital","FrictionLow"))]),
+                        Total.FrictionLow  = sum(value[!(CostItem %in% c("HumanCapital","FrictionHigh"))])
+              ) %>%
+              pivot_longer(Total.HumanCapital:Total.FrictionLow, names_to = "CostItem")
+  )
+
 
 CostTable <-  CostListTotals %>%
   group_by(Pathogen, AgeGroup, Disease, CostItem) %>%
@@ -156,16 +167,14 @@ write.csv(CostTable,'./R/CostTable.csv')
 
 DirectCat <- c('GP','ED','Hospitalisation','Tests','Medications')
 WTPCat <- c('WTP', 'WTPOngoing')
+LostProdCat <- c("HumanCapital","FrictionHigh", "FrictionLow")
 
-CostTableCategories <- CostListTotals %>%
-  group_by(Draw,Pathogen, AgeGroup, Disease) %>%
-  summarise(Direct = sum(value[CostItem %in% DirectCat]),
-            WTP = sum(value[CostItem %in% WTPCat]),
-            Deaths = value[CostItem == "Deaths"],
-            HumanCapital = value[CostItem == "HumanCapital"],
-            FrictionHigh = value[CostItem == "FrictionHigh"],
-            FrictionLow = value[CostItem == "FrictionLow"]) %>%
-  pivot_longer(Direct:FrictionLow,names_to = 'CostCategory', values_to = 'value') %>%
+CostTableCategories <- bind_rows(CostListTotals %>% subset(CostItem %in% c("Deaths",LostProdCat, paste0("Total.",LostProdCat))),
+            group_by(CostListTotals,Draw,Pathogen, AgeGroup, Disease) %>%
+              summarise(Direct = sum(value[CostItem %in% DirectCat]),
+                        WTP = sum(value[CostItem %in% WTPCat])) %>%
+              pivot_longer(Direct:WTP,names_to = 'CostItem', values_to = 'value')) %>%
+  rename(CostCategory = CostItem) %>%
   group_by(Pathogen, AgeGroup, Disease, CostCategory) %>%
   summarise(median = median(value),
             `5%` = quantile(value, 0.05),

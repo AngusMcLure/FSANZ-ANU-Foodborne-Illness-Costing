@@ -92,7 +92,6 @@ alert_bounds <- function(x, lower = 0, upper = NULL, name = NULL){
   }
 }
 
-warning('check whether the fields specialist, physio and bacterial are needed')
 # functions for building disease objects
 disease <- function(
   name, kind, caseMethod, correction = NULL, domestic = NULL, underreporting = NULL,
@@ -101,7 +100,7 @@ disease <- function(
   hospPrincipalDiagnosis = NULL, hospMethod, hospCodes = NULL, mortCodes, DRGCodes,
   underdiagnosis, medications, medicationsToWhom, tests,
   testsToWhom, bacterial = NULL,
-  specialist = NULL, physio = NULL,
+  specialist, specialistToWhom, physio = NULL,
   propOngoing = NULL, durationOngoing = NULL, propSevere = NULL,
   duration = NULL, severity = NULL, symptoms,
   missedWorkCarer = NULL, missedWorkSelf = NULL
@@ -117,7 +116,7 @@ disease <- function(
     underdiagnosis = underdiagnosis, medications = medications,
     medicationsToWhom = medicationsToWhom, tests = tests,
     testsToWhom = testsToWhom, bacterial = bacterial,
-    specialist = specialist,
+    specialist = specialist, specialistToWhom = specialistToWhom,
     physio = physio,
     propOngoing = propOngoing, durationOngoing = durationOngoing,
     propSevere = propSevere,
@@ -135,7 +134,7 @@ disease <- function(
 
   ArgumentsKind <- list(initial = c('correction', 'sequelae',
                                           'duration', 'severity'),
-                              sequel = c('specialist', 'propOngoing',
+                              sequel = c('propOngoing',
                                          'durationOngoing','propSevere',
                                          'missedWorkCarer','missedWorkSelf'))
 
@@ -185,6 +184,7 @@ disease <- function(
                              gpFracLong = 'numeric',
                              ed = 'rdist',
                              specialist = 'rdist',
+                             specialistToWhom = 'character',
                              physio = 'rdist',
                              ongoing = 'list',
                              sequelae = 'list',
@@ -217,6 +217,9 @@ disease <- function(
   if(!(testsToWhom %in% AllowedMedsTestsMethods)){stop('testsToWhom  must be one of: ', paste(AllowedMedsTestsMethods, collapse = ", "))}
   if(!(medicationsToWhom %in% AllowedMedsTestsMethods)){stop('medicationsToWhom  must be one of: ', paste(AllowedMedsTestsMethods, collapse = ", "))}
 
+  AllowedSpecialistMethods <- c('Cases','Hospitalisations','None')
+  if(!(specialistToWhom %in% AllowedSpecialistMethods)){stop('testsToWhom  must be one of: ', paste(AllowedMedsTestsMethods, collapse = ", "))}
+
 
   # check that input values are valid
   # domestic, foodborne, gastroFraction, symptomatic must be a distribution with support on a subset of [0,1]
@@ -232,12 +235,11 @@ disease <- function(
   alert_bounds(gp)
   alert_bounds(gpFracLong, upper = 1)
   alert_bounds(ed)
-  if(kind == 'sequel'){
-    alert_bounds(specialist)
-    if(!is.null(physio)){
-      alert_bounds(physio)
-    }
+  alert_bounds(specialist)
+  if(!is.null(physio)){
+    alert_bounds(physio)
   }
+
 
   # underdiagnosis and underreporting must be a distribution for variables >= 1
   alert_bounds(underdiagnosis, lower = 1, name = paste("underdiagnosis for disease ", name))

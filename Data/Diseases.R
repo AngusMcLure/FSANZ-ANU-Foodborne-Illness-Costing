@@ -72,6 +72,8 @@ DiseaseAssumptions <- list(
                             gp = rdist("pert_alt", lowq = 0.156, median = 0.196, highq = 0.234),
                             gpFracLong = 0,
                             ed = rdist("pert_alt", lowq = 0.025, median = 0.044, highq = 0.074),
+                            specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
+                            specialistToWhom = "None",
                             hospMethod = "AIHW",
                             hospCodes = c('A01.0',
                                           paste0("A02.",0:9),
@@ -101,8 +103,60 @@ DiseaseAssumptions <- list(
                             duration = c(NonHosp = 3, Hosp = 5.3),
                             severity = c(NonHosp = "mild", Hosp = "severe"),
                             symptoms = "GI"
-                            ),
-
+  ),
+  Norovirus = disease(name = 'Norovirus',
+                      kind = 'initial',
+                      caseMethod = 'GastroFraction',
+                      correction = 1,
+                      gastroFraction = rdist('pert_alt', lowq = 0.0772, median = 0.0982, highq = 0.1226),
+                      foodborne = rdist("pert_alt", lowq = 0.0503, median = 0.18, highq = 0.35, lowp = 0.05, highp = 0.95),
+                      gp = rdist("pert_alt", lowq = 0.156, median = 0.196, highq = 0.234),
+                      gpFracLong = 0,
+                      ed = rdist("pert_alt", lowq = 0.025, median = 0.044, highq = 0.074),
+                      specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
+                      specialistToWhom = "None",
+                      hospMethod = "AIHW",
+                      hospCodes = 'A08.1',
+                      mortCodes = 'A08.1',
+                      DRGCodes = GastroDRGCodes,
+                      hospPrincipalDiagnosis = rdist("discrete", value = 0.37, continuous = FALSE),
+                      underdiagnosis = rdist("pert", min = 1, mode = 2, max = 3),
+                      sequelae = list(),
+                      medications = MedicationsGastro,
+                      medicationsToWhom = "Cases",
+                      tests = list(AllAges = list(Stool_culture = rdist('pert_alt', lowq = 0.016, median = 0.031, highq = 0.057, lowp = 0.05, highp = 0.95))),
+                      testsToWhom = 'Cases',
+                      duration = c(NonHosp = 2, Hosp = 5.7),
+                      severity = c(NonHosp = "mild", Hosp = "severe"),
+                      symptoms = "GI"
+  ),
+  `Escherichia coli (Non-STEC)` = disease(
+    name = "Escherichia coli (Non-STEC)",
+    kind = 'initial',
+    caseMethod = 'GastroFraction',
+    correction = 1,
+    gastroFraction = rdist('pert_alt', lowq = 0.0525, median = 0.074, highq = 0.0914),
+    foodborne = rdist("pert_alt", lowq = 0.08, median = 0.23, highq = 0.55),
+    gp = rdist("pert_alt", lowq = 0.241, median = 0.367, highq = 0.501),
+    gpFracLong = 0,
+    ed = rdist("pert_alt", lowq = 0.06, median = 0.124, highq = 0.228),
+    specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
+    specialistToWhom = "None",
+    hospMethod = "AIHW",
+    hospCodes = paste0('A04.',c(0:2,4)),
+    mortCodes = paste0('A04.',c(0:2,4)),
+    DRGCodes = GastroDRGCodes,
+    hospPrincipalDiagnosis = rdist("discrete", value = 0.59, continuous = FALSE),
+    underdiagnosis = rdist("pert", min = 1, mode = 2, max = 3),
+    sequelae = list(),
+    medications = MedicationsBacterial,
+    medicationsToWhom = "Cases",
+    tests = list(AllAges = list(Stool_culture = rdist('pert_alt', lowq = 0.016, median = 0.031, highq = 0.057, lowp = 0.05, highp = 0.95))),
+    testsToWhom = 'Cases',
+    duration = c(NonHosp = 3, Hosp = 8.6),
+    severity = c(NonHosp = "mild", Hosp = "severe"),
+    symptoms = "GI"
+  ),
   Campylobacteriosis = disease(name = "Campylobacteriosis",
                                kind = 'initial',
                                caseMethod = "NNDSS",
@@ -113,6 +167,8 @@ DiseaseAssumptions <- list(
                                gp = GPConsultCommon,
                                gpFracLong = 0,
                                ed = rdist('pert_alt',  lowq = 0.06, median = 0.124,  highq = 0.228),
+                               specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
+                               specialistToWhom = "None",
                                hospMethod = "AIHW",
                                hospCodes = c("A04.5"),
                                mortCodes = c("A04.5"),
@@ -141,6 +197,8 @@ DiseaseAssumptions <- list(
                           gp = GPConsultCommon,
                           gpFracLong = 0,
                           ed = rdist('pert_alt',  lowq = 0.06, median = 0.124,  highq = 0.228),
+                          specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
+                          specialistToWhom = "None",
                           sequelae = list(ReactiveArthritis = rdist("pert", min = 0, mode = 0.085, max = 0.26),
                                           IBS = IBSMultiplier),
                           hospMethod = "AIHW",
@@ -176,6 +234,8 @@ DiseaseAssumptions <- list(
                         gp = GPConsultCommon,
                         gpFracLong = 0,
                         ed = rdist('pert_alt',  lowq = 0.06, median = 0.124,  highq = 0.228),
+                        specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
+                        specialistToWhom = "None",
                         medicationsToWhom = "Cases",
                         medications = MedicationsShigella,
                         testsToWhom = "Notifications",
@@ -204,8 +264,10 @@ DiseaseAssumptions <- list(
                        gp = GPConsultCommon,
                        gpFracLong = 0,
                        ed = rdist('discrete',  value = 0, continuous = FALSE), #i.e. none
+                       specialist = rdist('pert', min = 1, mode = 2, max = 3),
+                       specialistToWhom = "Hospitalisations",
                        medicationsToWhom = "GP",
-                       medications = list(AllAges = list(Antibiotics = rdist('discrete', value = 1))), #This might be the wrong cost item since toxo calls for a four week course of antibiotics which is presumably more expensive?
+                       medications = list(AllAges = list(TrimethoprimSulfamethoxazole = rdist('discrete', value = 1))), #This might be the wrong cost item since toxo calls for a four week course of antibiotics which is presumably more expensive?
                        testsToWhom = "GP",
                        tests = list(AllAges = list(FBC = rdist("discrete", value = 1, continuous = FALSE),
                                                    ESR = rdist("discrete", value = 1, continuous = FALSE))), # i.e. all gp visits have this tests
@@ -225,6 +287,8 @@ DiseaseAssumptions <- list(
                         gp = rdist('pert', min = 1, mode = 2, max = 3),
                         gpFracLong = 0.25,
                         ed = rdist("discrete", value = 1, continuous = FALSE), # all cases go to ED and then are hospitalised
+                        specialist = rdist('pert', min = 1, mode = 2, max = 3),
+                        specialistToWhom = "Cases",
                         underdiagnosis = rdist("pert", min = 1, mode = 2, max = 3),
                         #hospPrincipalDiagnosis = rdist("discrete", value = 0.48, continuous = FALSE),
                         mortCodes = 'A32',
@@ -255,6 +319,8 @@ DiseaseAssumptions <- list(
                             gp = rdist('pert', min = 1, mode = 2, max = 3),
                             gpFracLong = 0.25,
                             ed = rdist('discrete', value = 1, continuous = FALSE), #all cases are admitted to ED
+                            specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
+                            specialistToWhom = "None",
                             hospPrincipalDiagnosis = rdist("discrete", value = 0.93, continuous = FALSE),
                             hospMethod = 'AllCases',
                             hospCodes = "A01.0",## This are used to estimate how long people spend off work not for estimating admission
@@ -265,7 +331,7 @@ DiseaseAssumptions <- list(
                             underdiagnosis = rdist('pert', min = 1, mode = 2, max = 3),
                             medications = list(AllAges = list()),
                             medicationsToWhom = 'None',
-                            tests = list(AllAges = list()),
+                            tests = list(AllAges = list()), # All tests are assumed to captured in hospital costs
                             testsToWhom = 'None',
                             symptoms = "GI",
                             severity = c(NonHosp = 'severe', Hosp = "severe"), #note that all cases are assumed hospitalised
@@ -287,18 +353,6 @@ DiseaseAssumptions <- list(
                                    underreporting = rdist("lnorm_alt", mean = 7.44, sd = 2.38),
                                    foodborne = rdist("pert", min = 0.28, mode = 0.84, max = 0.94),
                                    sequelae = list(ReactiveArthritis = rdist("pert", min = 0, mode = 0.12, max = 0.231))
-  ),
-
-  `Escherichia coli (Non-STEC)` = list(name = "Escherichia coli (Non-STEC)",
-                                       notifiable = "GastroFraction",
-                                       fractionOfGastro = rdist("pert_alt", lowq = 0.0525, mode = 0.074, highq = 0.0914),
-                                       foodborne = rdist("pert_alt", lowq = 0.08, mode = 0.23, highq = 0.55, lowp = 0.05, highp = 0.95)
-  ),
-
-  Norovirus = list(name = "Norovirus",
-                   notifiable = "GastroFraction",
-                   fractionOfGastro = rdist("pert_alt", lowq = 0.0772, mode = 0.0982, highq = 0.1226),
-                   foodborne = rdist("pert_alt", lowq = 0.05, mode = 0.18, highq = 0.35, lowp = 0.05, highp = 0.95)
   )
 )
 
@@ -313,7 +367,8 @@ SequelaeAssumptions <- list(
     gp =         rdist("pert_alt", lowq = 0.66, median = 0.8, highq = 0.89),
     gpFracLong = 0.25,
     ed =         rdist("discrete", value = 0,   continuous = FALSE), #i.e. none
-    specialist = rdist("pert_alt", lowq = 0.223,highq = 0.258,median = 0.24),
+    specialist = rdist("pert_alt", lowq = 0.223,median = 0.24,highq = 0.258),
+    specialistToWhom = "Cases",
     hospPrincipalDiagnosis = rdist("discrete", value = 0.5, continuous = FALSE),
     hospMethod = "AIHW",
     hospCodes = c("M02.1", "M02.3","M02.8","M03.2"),
@@ -373,12 +428,13 @@ SequelaeAssumptions <- list(
     name = "IBS",
     kind = "sequel",
     caseMethod = 'sequel',
-    domestic =   rdist("pert_alt", lowp = 0.05,         highp = 0.95,         lowq = 0.88, highq = 0.94, median = 0.91),  #not sure what these multipliers are for exactly...
+    domestic =   rdist("pert_alt", lowq = 0.88,  median = 0.91, highq = 0.94, lowp = 0.05, highp = 0.95),  #not sure what these multipliers are for exactly...
     foodborne =  rdist("pert_alt", lowq = 0.068, median = 0.13, highq = 0.33),
-    gp      =    rdist("pert_alt", lowq = 4.27,  highq = 4.73,  median = 4.5),
+    gp      =    rdist("pert_alt", lowq = 4.27,  median = 4.5,  highq = 4.73),
     gpFracLong = 0.25,
-    ed =         rdist("discrete", value = 0,           continuous = FALSE), #i.e. none
-    specialist = rdist("pert_alt", lowq = 0.286,        highq = 0.315,        median = 0.3),
+    ed =         rdist("discrete", value = 0, continuous = FALSE), #i.e. none
+    specialist = rdist("pert_alt", lowq = 0.286, median = 0.3,  highq = 0.315),
+    specialistToWhom = 'Cases',
     hospPrincipalDiagnosis = rdist("discrete", value = 0.5, continuous = FALSE),
     hospMethod = "AIHW",
     hospCodes = c("K58.0", "K58.9"),
@@ -422,13 +478,15 @@ SequelaeAssumptions <- list(
     name = "GBS",
     kind = "sequel",
     caseMethod = 'sequel',
-    domestic =  rdist("pert", min = 0.91,  mode = 0.97,   max = 0.99),
+    domestic  = rdist("pert",     min = 0.91,  mode = 0.97,   max = 0.99),
     foodborne = rdist("pert_alt", lowq = 0.1,  median = 0.25, highq = 0.43),
-    gp      = rdist("pert_alt", lowq = 3.56,  highq = 3.66,  median = 3.6),
+    gp        = rdist("pert_alt", lowq = 3.56, highq = 3.66,  median = 3.6),
     gpFracLong =  0.25,
     ed = rdist("discrete", value = 0, continuous = FALSE), #i.e. none. CHECK THIS!
     specialist = rdist("pert_alt", lowq = 2.5, median = 3.0, highq = 3.5),
-    physio =     rdist("pert_alt", lowq = 5.5, median = 6.0, highq = 6.5),
+    specialistToWhom = 'Cases',
+    physio = rdist("pert_alt", lowq = 5.5, median = 6.0, highq = 6.5),
+    #physioToWhom = 'Cases',
     hospMethod = "AllCases",
     mortCodes = "G61.0",
     DRGCodes =  list(`<5` = "B06A",
@@ -456,11 +514,5 @@ SequelaeAssumptions <- list(
   )
 )
 warning('time off work due to non-gastro illnesses do not have uncertainty distributions')
-warning('LOTS OF THE FIGURES IN THE DISEASES FILE NEED TO BE CHECKED e.g.:
-        duration of symptoms for all the sequelae
-        many of the treatment/test multipliers have been commented out becuase the multipliers include negative numbers')
 warning('Antibiotics for toxo needs a cost?')
-warning('Check how asymptomatic multiplier for toxo interacts with WTP. Presumably there is no WTP for asymptomatic cases')
 warning('remove correction variable for disease as I think this is unused?')
-warning('we may need to add specialist and physio visits back in somehow')
-warning('Some of the basic notification multipliers for typhi I am currently using dont match newer versions of the report')

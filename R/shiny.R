@@ -3,33 +3,40 @@ library(shiny)
 library(tidyverse)
 
 #setwd("R")
-
 CostTable <- read.csv("CostTable.csv") %>%
   select(-X) %>%
-  mutate(across(c(median,X5.,X95.),~round(.x/10^6,2))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = '-')) %>%
-  rename("Cost (millions AUD)" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (millions AUD)`, `90% CI`) %>%
+  mutate(across(c(X5.,X95.),~format(.x/10^3,big.mark = ",", scientific = FALSE, digits = 0)),
+         median = round(median/10^3, digits = 0)) %>%
+  mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
+  rename("Cost (thousands AUD)" = "median") %>%
+  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
   mutate(CostItem = recode(CostItem,
                            Deaths = "Premature mortality",
                            WTPOngoing = 'WTP-Ongoing',
                            FrictionLow = 'Friction-Low',
                            FrictionHigh = 'Friction-High',
-                           HumanCapital = 'Human Capital'))
+                           HumanCapital = 'Human Capital',
+                           Total.FrictionHigh = 'Total.Friction-High',
+                           Total.FrictionLow = 'Total.Friction-Low',
+                           Total.HumanCapital = 'Total.Human Capital'))
 
 CostTableSummaries <- read.csv("CostTableCategories.csv") %>%
   select(-X) %>%
-  mutate(across(c(median,X5.,X95.),~round(.x/10^6,2))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = '-')) %>%
-  rename("Cost (millions AUD)" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, CostCategory, `Cost (millions AUD)`, `90% CI`) %>%
+  mutate(across(c(X5.,X95.),~format(.x/10^3,big.mark = ",", scientific = FALSE, digits = 0)),
+         median = round(median/10^3, digits = 0)) %>%
+  mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
+  rename("Cost (thousands AUD)" = "median") %>%
+  select(Pathogen, Disease, AgeGroup, CostCategory, `Cost (thousands AUD)`, `90% CI`) %>%
   mutate(CostCategory = recode(CostCategory,
                            Deaths = "Premature mortality",
                            FrictionLow = 'Friction-Low',
                            FrictionHigh = 'Friction-High',
-                           HumanCapital = 'Human Capital'))
+                           HumanCapital = 'Human Capital',
+                           Total.FrictionHigh = 'Total.Friction-High',
+                           Total.FrictionLow = 'Total.Friction-Low',
+                           Total.HumanCapital = 'Total.Human Capital'))
 
-
+print(CostTableSummaries)
 
 EpiTable <- read.csv('EpiTable.csv') %>%
   select(-X) %>%
@@ -39,13 +46,14 @@ EpiTable <- read.csv('EpiTable.csv') %>%
   select(Pathogen, Disease, AgeGroup, Measure, Count, `90% CI`)
 
 ProductivityOptions <- c("Human Capital", "Friction-High", "Friction-Low")
+TotalOptions <- paste0("Total.",ProductivityOptions)
 
 EpiMeasures <- unique(EpiTable$Measure)
-Measures <- c(setdiff(unique(CostTable$CostItem),ProductivityOptions), "Lost Productivity")
+Measures <- c(setdiff(unique(CostTable$CostItem),c(ProductivityOptions,TotalOptions)), "Lost Productivity", "Total")
 PathogenNames <- c(setdiff(unique(EpiTable$Pathogen), "All Pathogens"),"All Pathogens")
 Diseases <- unique(EpiTable$Disease)
-CostCategories <- c(setdiff(unique(CostTableSummaries$CostCategory), ProductivityOptions), "Lost Productivity")
-
+CostCategories <- c(setdiff(unique(CostTableSummaries$CostCategory), c(ProductivityOptions, paste0('Total.',ProductivityOptions))), "Lost Productivity", "Total")
+print(CostCategories)
 AgeGroups <- unique(EpiTable$AgeGroup)
 
 
@@ -179,24 +187,33 @@ server <- function(input, output) {
   }, rownames = FALSE)
   output$SummaryDT = DT::renderDataTable({
     CostTableSummaries %>%
-      mutate(`Cost Category` = if_else(CostCategory == input$Productivity.Summary,'Lost Productivity',CostCategory)) %>%
+      mutate(`Cost Category` = if_else(CostCategory == input$Productivity.Summary,
+                                       'Lost Productivity',
+                                       if_else(CostCategory == paste0('Total.',input$Productivity.Summary),
+                                               'Total', CostCategory))) %>%
       subset(`Cost Category` %in% CostCategories &
                AgeGroup == input$AgeGroup.Summary &
                Pathogen == input$Pathogen.Summary &
                Disease == input$Disease.Summary) %>%
-      select(`Cost Category`, `Cost (millions AUD)`,`90% CI`)
-
-  }, rownames = FALSE)
+      select(`Cost Category`, `Cost (thousands AUD)`,`90% CI`) %>%
+      DT::datatable(rownames = FALSE) %>%
+      DT::formatCurrency(columns = "Cost (thousands AUD)", currency = "", interval = 3, mark = ",", digits = 0)
+  })
   output$ComparisonDT = DT::renderDataTable({
     CostTable %>%
-      mutate(CostItem = if_else(CostItem == input$Productivity,'Lost Productivity',CostItem)) %>%
+      mutate(CostItem = if_else(CostItem == input$Productivity,
+                                'Lost Productivity',
+                                if_else(CostItem == paste0('Total.',input$Productivity),
+                                        'Total', CostItem))) %>%
       subset(CostItem %in% input$Measure &
                AgeGroup %in% input$AgeGroups &
                Pathogen %in% input$Pathogen &
                Disease %in% input$Disease) %>%
       rename(`Age group` = AgeGroup,
-             `Cost Item` = CostItem)
-  }, rownames = FALSE)
+             `Cost Item` = CostItem) %>%
+      DT::datatable(rownames = FALSE) %>%
+      DT::formatCurrency(columns = "Cost (thousands AUD)", currency = "", interval = 3, mark = ",", digits = 0)
+  })
 
 }
 
