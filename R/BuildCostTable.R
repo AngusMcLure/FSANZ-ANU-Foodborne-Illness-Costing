@@ -6,7 +6,9 @@ source("./R/loadData.R")
 source("./R/estimationFunctions.R")
 
 #Load all the data and assumptions
-NNDSSIncidenceAgegroup <- getCasesAgeGroup()
+NNDSSIncidenceAgegroup <- getCasesNNDSSAgeGroup() %>% subset(Disease != "STEC")
+StateIncidenceAgeGroup <- getCasesStateAgeGroup()
+NotificationsAgeGroup <- bind_rows(NNDSSIncidenceAgegroup,StateIncidenceAgeGroup)
 AusPopAgegroup <- getAusPopAgeGroup()
 AusPopSingleYear <- getAusPopSingleYearAge()
 Hospitalisations <- getHospitalisationsAgeGroup()
@@ -21,16 +23,6 @@ Workforce <- getWorkforceAssumptions() ##What year is this for and does it need 
 
 # Draw from all distributions
 ndraws <- 10^3
-WorkingDiseases <- c("Campylobacteriosis",
-                     "Salmonellosis",
-                     "Shigellosis",
-                     'Toxoplasma',
-                     'Listeriosis',
-                     "Typhoid Fever",
-                     "Gastroenteritis",
-                     "Norovirus",
-                     "Escherichia coli (Non-STEC)")
-
 
 ### CURRENTLY THE ESTIMATES COSTS FUNCTION PULLS ON INCIDENCE LIST AS A GLOBAL
 ### VARIABLE WITH NO REGARD FOR WHICH YEAR INCIDENCE LIST WAS CALCULATED FOR.
@@ -38,18 +30,18 @@ WorkingDiseases <- c("Campylobacteriosis",
 ### 2020 WITHOUT GETTING AN ERROR. FIX BY MAKING INCIDENCE A LIST OF LISTS
 ### WITH AND ENTRY FOR EACH YEAR?
 IncidenceList <- makeIncidenceList(2019,
-                                   diseases = DiseaseAssumptions[WorkingDiseases],
+                                   diseases = DiseaseAssumptions,
                                    ndraws = ndraws,
                                    gastroRate = gastroRate)
 SequelaeFractions <- calcSequelaeFractions(IncidenceList$Sequel)
 HospList <- makeHospList(2019,
                          IncidenceList,
-                         diseases = c(DiseaseAssumptions[WorkingDiseases],SequelaeAssumptions),
+                         diseases = c(DiseaseAssumptions,SequelaeAssumptions),
                          ndraws = ndraws)
 DeathList <- makeDeathList(2019,
-                           diseases = c(DiseaseAssumptions[WorkingDiseases],SequelaeAssumptions),
+                           diseases = c(DiseaseAssumptions,SequelaeAssumptions),
                            ndraws = ndraws)
-CostList <- makeCostList(2019, DiseaseAssumptions[WorkingDiseases], ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
+CostList <- makeCostList(2019, DiseaseAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
 
 warning('When summing across agegroups the draws of the multipliers used for each agegroup are considered independent. Making them dependent would require reworking the whole program, and is not necessarily a better assumption, but it is something to be aware of')
@@ -146,15 +138,15 @@ CostListTotals <- CostList %>%
   bind_rows(.,
             group_by(.,Draw, Disease, AgeGroup,CostItem) %>%
               summarise(value = sum(value)) %>%
-              mutate(Pathogen = 'All Pathogens')) %>%
-  bind_rows(.,
-            group_by(.,Draw, Pathogen, AgeGroup, Disease) %>%
-              summarise(Total.HumanCapital = sum(value[!(CostItem %in% c("FrictionHigh","FrictionLow"))]),
-                        Total.FrictionHigh = sum(value[!(CostItem %in% c("HumanCapital","FrictionLow"))]),
-                        Total.FrictionLow  = sum(value[!(CostItem %in% c("HumanCapital","FrictionHigh"))])
-              ) %>%
-              pivot_longer(Total.HumanCapital:Total.FrictionLow, names_to = "CostItem")
-  )
+              mutate(Pathogen = 'All Pathogens'))# %>%
+  # bind_rows(.,
+  #           group_by(.,Draw, Pathogen, AgeGroup, Disease) %>%
+  #             summarise(Total.HumanCapital = sum(value[!(CostItem %in% c("FrictionHigh","FrictionLow"))]),
+  #                       Total.FrictionHigh = sum(value[!(CostItem %in% c("HumanCapital","FrictionLow"))]),
+  #                       Total.FrictionLow  = sum(value[!(CostItem %in% c("HumanCapital","FrictionHigh"))])
+  #             ) %>%
+  #             pivot_longer(Total.HumanCapital:Total.FrictionLow, names_to = "CostItem")
+  # )
 
 
 CostTable <-  CostListTotals %>%
@@ -165,7 +157,7 @@ CostTable <-  CostListTotals %>%
 
 write.csv(CostTable,'./R/CostTable.csv')
 
-DirectCat <- c('GP','ED','Hospitalisation','Tests','Medications')
+DirectCat <- c('GPSpecialist','ED','Hospitalisation','Tests','Medications')
 WTPCat <- c('WTP', 'WTPOngoing')
 LostProdCat <- c("HumanCapital","FrictionHigh", "FrictionLow")
 

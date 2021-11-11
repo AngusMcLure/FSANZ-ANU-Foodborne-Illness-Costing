@@ -94,7 +94,7 @@ alert_bounds <- function(x, lower = 0, upper = NULL, name = NULL){
 
 # functions for building disease objects
 disease <- function(
-  name, kind, caseMethod, correction = NULL, domestic = NULL, underreporting = NULL,
+  name, kind, caseMethod, domestic = NULL, underreporting = NULL,
   symptomatic = NULL, FOI = NULL, gastroFraction = NULL,
   foodborne, gp, gpFracLong, ed, sequelae = NULL,
   hospPrincipalDiagnosis = NULL, hospMethod, hospCodes = NULL, mortCodes, DRGCodes,
@@ -107,7 +107,7 @@ disease <- function(
  ){
 
   out <- list(
-    name = name, kind = kind, caseMethod = caseMethod, correction = correction,
+    name = name, kind = kind, caseMethod = caseMethod,
     domestic = domestic, underreporting = underreporting, symptomatic = symptomatic,
     FOI = FOI, gastroFraction = gastroFraction, foodborne = foodborne,
     gp = gp, gpFracLong = gpFracLong, ed = ed, sequelae = sequelae,
@@ -132,8 +132,7 @@ disease <- function(
     stop("kind is listed as ", kind, ". Allowable kinds are: ", paste0(AllowedKinds, collapse = ", "))
   }
 
-  ArgumentsKind <- list(initial = c('correction', 'sequelae',
-                                          'duration', 'severity'),
+  ArgumentsKind <- list(initial = c('sequelae','duration', 'severity'),
                               sequel = c('propOngoing',
                                          'durationOngoing','propSevere',
                                          'missedWorkCarer','missedWorkSelf'))
@@ -143,11 +142,11 @@ disease <- function(
   }
 
   # valid case estimation methods
-  AllowedCaseMethods <- c('NNDSS','sequel','GastroFraction', 'Seroprevalence')
+  AllowedCaseMethods <- c('Notifications','sequel','GastroFraction', 'Seroprevalence')
   if(!(caseMethod %in% AllowedCaseMethods)){stop('caseMethod must be one of: ', paste(AllowedCaseMethods, collapse = ", "))}
 
   ArgumentsCaseMethod <- list(GastroFraction = c('gastroFraction'),
-                              NNDSS = c('domestic', 'underreporting'),
+                              Notifications = c('domestic', 'underreporting'),
                               Seroprevalence = c('domestic','symptomatic'),
                               sequel = c('domestic'))
   if(!all(ArgumentsCaseMethod[[caseMethod]] %in% names(out))){
@@ -172,7 +171,6 @@ disease <- function(
   ArgsCorrectClasses <- list(name = "character",
                              kind = "character",
                              caseMethod = 'character',
-                             correction = 'numeric',
                              domestic = 'rdist',
                              underreporting = 'rdist',
                              symptomatic = 'rdist',

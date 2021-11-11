@@ -5,12 +5,12 @@ estimateIncidence <- function(disease, ndraws = 10^6,
   d <- disease
   n <- ndraws
 
-  if(d$caseMethod == 'NNDSS' && is.null(notifications)) stop("Notification numbers must be supplied for estimates from notifiable diseases")
+  if(d$caseMethod == 'Notifications' && is.null(notifications)) stop("Notification numbers must be supplied for estimates from notifiable diseases")
 
-  if(d$caseMethod != "NNDSS") population <- population[(minAge+1):maxAge]
+  if(d$caseMethod != "Notifications") population <- population[(minAge+1):maxAge]
 
   domestic <- switch(d$caseMethod,
-                     NNDSS = notifications * d$correction * draw(d$underreporting, n) * draw(d$domestic, n),
+                     Notifications = notifications * draw(d$underreporting, n) * draw(d$domestic, n),
                      GastroFraction = sum(population) * draw(gastroRate, n) * draw(d$gastroFraction, n),
                      Seroprevalence = {
                        foi <- draw(d$FOI, ndraws)
@@ -75,6 +75,26 @@ estimateTests <- function(disease, ageGroup, ndraws = 10^6, incidence){
                   ndraws = ndraws, incidence = incidence)
 }
 
+estimateGPSpecialist <- function(disease, cases, separations, ndraws = 10^6){
+  GP <- estimateGeneric(disease["gp"], ndraws = ndraws, incidence = cases)
+  Specialist <- estimateGeneric(disease["specialist"], ndraws = ndraws,
+                                incidence = switch(disease$specialistToWhom,
+                                                   Cases = cases,
+                                                   Hospitalisations = separations,
+                                                   None = rep(0,ndraws)))
+  if(!is.null(disease$physio)){
+    Physio <- estimateGeneric(disease["physio"],ndraws = ndraws,incidence = cases)
+  }else{
+    Physio <- list(physio = rep(0,ndraws))}
+
+
+  GPSpecialist <- list(gpShort = GP$gp * (1-disease$gpFracLong),
+                       gpLong = GP$gp * disease$gpFracLong,
+                       physio = Physio$physio,
+                       specialistInitial = Specialist$specialist *0.5,
+                       specialistRepeat = Specialist$specialist *0.5)
+  GPSpecialist
+}
 
 costWTP <- function(disease, ageGroup, cases, separations = NULL, discount = NULL, ndraws = 10^6){
   if(length(cases) != 1 & length(cases) != ndraws){
@@ -186,7 +206,7 @@ mquant <- function(x){
   map(x,~quantile(.x, probs = c(0.05,0.5,0.95)))
 }
 
-makeIncidenceList <- function(year, diseases, ndraws = 10^6,gastroRate){
+makeIncidenceList <- function(year, diseases, ndraws = 10^6, gastroRate){
 
   ageGroups <- c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
@@ -196,10 +216,10 @@ makeIncidenceList <- function(year, diseases, ndraws = 10^6,gastroRate){
                                   function(.a){
                                     minAge <- switch(.a, `<5` = 0, `5-64` = 5,`65+` = 65, stop('invalid age group'))
                                     maxAge <-  switch(.a, `<5` = 5, `5-64` = 65,`65+` = 101, stop('invalid age group'))
-                                    if(.x$caseMethod == "NNDSS"){
-                                      notifications <- subset(NNDSSIncidenceAgegroup,Disease == .x$name & Year == year & AgeGroup == .a)$Cases
-                                      if(length(notifications) == 0)stop('No notifications available for this time period')
-                                      else if(length(notifications) > 1)stop('More than one number found for notifications...')
+                                    if(.x$caseMethod == "Notifications"){
+                                      notifications <- subset(NotificationsAgeGroup,Disease == .x$name & Year == year & AgeGroup == .a)$Cases
+                                      if(length(notifications) == 0)stop('No notifications available for for year ', year, ', agegroup ', .a, ', disease ', .x$name)
+                                      else if(length(notifications) > 1)stop('More than one number found for notifications for year ', year, ', agegroup ', .a, ', disease ', .x$name)
                                     } else notifications <- NULL
                                     estimateIncidence(.x,ndraws = ndraws, notifications = notifications,
                                                       population = subset(AusPopSingleYear, Year == year)$Persons,
@@ -298,12 +318,12 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
   a <- ageGroup
 
   if(is.null(notifications)){
-    notifications <- subset(NNDSSIncidenceAgegroup,Year == year & AgeGroup == ageGroup & Disease == d$name)$Cases
+    notifications <- subset(NotificationsAgeGroup,Year == year & AgeGroup == ageGroup & Disease == d$name)$Cases
     incidencePrimary <- IncidenceList$Initial[[d$name]][[a]]
     incidenceSequelae <- IncidenceList$Sequel[[d$name]][[a]]
   }else{
     incidencePrimary <- estimateIncidence(d, notifications = notifications, ndraws = ndraws)#$Foodborne
-    incidenceSequelae <- estimateSequelae(d,incidence = incidencePrimary, ndraws = ndraws)
+    incidenceSequelae <- estimateGeneric(d[['sequelae']],incidence = incidencePrimary, ndraws = ndraws)
   }
   incidence <- c(list(incidencePrimary),incidenceSequelae)
   names(incidence)[1] <- d$name
@@ -331,33 +351,20 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
   }
 
   out <- pmap(list(dList,incidence,separations,deaths),~{
-    GP <- estimateGeneric(..1["gp"],ndraws = ndraws, incidence = ..2)
-    Specialist <- estimateGeneric(..1["specialist"],ndraws = ndraws,
-                                  incidence = switch(..1$specialistToWhom,
-                                                     Cases = ..2,
-                                                     Hospitalisations = ..3,
-                                                     None = rep(0,ndraws)))
-    Physio <- if(!is.null(..1$physio)){
-      estimateGeneric(..1["physio"],ndraws = ndraws,incidence = ..2)
-    }else{ list(physio = rep(0,ndraws))}
-
-
-    GPSpecialist <- list(gpShort = GP$gp * (1-..1$gpFracLong),
-                         gpLong = GP$gp * ..1$gpFracLong,
-                         physio = Physio$physio,
-                         specialist = Specialist$specialist)
-
+    #Maybe make this it own function
+    GPSpecialist <- estimateGPSpecialist(disease = ..1, cases = ..2,
+                                         separations = ..3, ndraws = ndraws)
     ED <- estimateGeneric(..1["ed"],ndraws = ndraws, incidence = ..2)
     Meds <- estimateMeds(..1, ageGroup = a,
                          incidence = switch(..1$medicationsToWhom,
-                                            GP = GP$gp,
+                                            GP = GPSpecialist$gpShort + GPSpecialist$gpLong,
                                             Cases = ..2,
                                             Notifications = notifications,
                                             None = rep(0,ndraws)),
                          ndraws = ndraws)
     Tests <- estimateTests(..1, ageGroup = a,
                            incidence = switch(..1$testsToWhom,
-                                              GP = GP$gp,
+                                              GP = GPSpecialist$gpShort + GPSpecialist$gpLong,
                                               Cases = ..2,
                                               Notifications = notifications,
                                               None = rep(0,ndraws)),
@@ -368,7 +375,7 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
     FrictionLow <- HumanCapital * FrictionRates$Low
 
     WTP = costWTP(..1,a,cases = ..2, separations = ..3,discount = discount, ndraws = ndraws)
-    out <- list(GP = costList(GPSpecialist),
+    out <- list(GPSpecialist = costList(GPSpecialist),
                 ED = costList(ED),
                 Medications = costList(Meds),
                 Tests = costList(Tests),
@@ -379,6 +386,10 @@ estimateCosts <- function(disease, year, ageGroup, ndraws = 10^6,
                 HumanCapital = HumanCapital,
                 FrictionHigh = FrictionHigh,
                 FrictionLow = FrictionLow)
+    out$TotalHumanCapital <- with(out, HumanCapital + GPSpecialist + ED + Medications + Tests + Hospitalisation + Deaths + WTP + WTPOngoing)
+    out$TotalFrictionHigh <- with(out, FrictionHigh + GPSpecialist + ED + Medications + Tests + Hospitalisation + Deaths + WTP + WTPOngoing)
+    out$TotalFrictionLow <-  with(out, FrictionLow + GPSpecialist + ED + Medications + Tests + Hospitalisation + Deaths + WTP + WTPOngoing)
+
     map(out, ~{if(length(.x) == 0){rep(0, ndraws)}else{.x}})
   }
   )

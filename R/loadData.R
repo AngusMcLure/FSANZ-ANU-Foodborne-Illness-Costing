@@ -7,10 +7,10 @@ getAusPopAgeGroup <- function(){
   AusPopAgeGroup
 }
 
-getAusPopSingleYearAge <- function(){
-  AusPop <- readxl::read_xls("./Data/AustralianPopulationByAge.xls",
-                                     sheet = 'Data1',
-                                     range = "A1:GU59")
+getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xls"){
+  AusPop <- readxl::read_xls(file,
+                             sheet = 'Data1',
+                             range = "A1:GU59")
   AusPop <- AusPop[10:nrow(AusPop),] %>%
     rename(Year = `...1`) %>%
     pivot_longer(-Year,names_sep = ";",names_to = c(NA,'Sex','Age',NA),values_to = "Count") %>%
@@ -75,7 +75,7 @@ getAusPopAgeSex <- function(){
 #     summarise(Cases = sum(Cases))
 # }
 
-getCasesAgeGroup <- function(){
+getCasesNNDSSAgeGroup <- function(){
   readxl::read_xlsx("./Data/NNDSS Disease by AgeGroup and Year.xlsx") %>%
     pivot_longer(`0 - 4`:`85+`, names_to = 'AgeGroup', values_to = "Cases") %>%
     mutate(AgeGroup = recode(AgeGroup,
@@ -101,6 +101,68 @@ getCasesAgeGroup <- function(){
     group_by(Year, Disease, AgeGroup) %>%
     summarise(Cases = sum(Cases))
 }
+
+getCasesStateAgeGroup <- function(){
+  #Loads state specific data for Yersinia entercolictica and STEC and then population adjusts them to the 2018 or 2019 populations
+  TargetYears <- 2018:2019
+  DataYears <- 2013:2015
+  PopFiles <- list.files('./Data', pattern = 'PopulationAgeYear-*', full.names = T)
+  names(PopFiles) <- PopFiles %>%
+    sub(pattern = "./Data/PopulationAgeYear-", replacement = '') %>%
+    sub(pattern = ".xls", replacement = '')
+  StatePop <- bind_rows(map(PopFiles, getAusPopSingleYearAge),.id = "State") %>%
+    subset(Year %in% c(DataYears,TargetYears)) %>%
+    mutate(AgegroupMin = Age %/% 5 * 5,
+           AgegroupMax = AgegroupMin + 4,
+           AgeGroup = ifelse(Age>=85, "85+", paste(AgegroupMin,AgegroupMax,sep = "-"))) %>%
+    select(-c(Age,AgegroupMin,AgegroupMax)) %>%
+    group_by(State, Year, AgeGroup) %>%
+    summarise(Persons = sum(Persons))
+
+  AusPopTargetYears <- subset(StatePop, Year %in% TargetYears) %>%
+    group_by(AgeGroup,Year) %>%
+    summarise(Persons = sum(Persons))
+
+  Yersinia <- read.csv("./Data/Yersinia-SelectStates2013-2015.csv",check.names = F) %>%
+    pivot_longer(-c(Year, State), names_sep = 1, names_to = c("Sex", "AgeGroup")) %>%
+    group_by(Year, State, AgeGroup) %>%
+    summarise(Count = sum(value)) %>%
+    mutate(Disease = "Yersinia Enterocolitica")
+
+  STEC <- read.csv("./Data/STEC-SouthAustralia2013-2015.csv") %>%
+    mutate(State = "SA",
+           Disease = "STEC") %>%
+    rename(AgeGroup = Agegroup)
+
+  bind_rows(STEC, Yersinia) %>%
+    merge(StatePop) %>%
+    group_by(AgeGroup, Disease) %>%
+    summarise(Rate = sum(Count)/sum(Persons)) %>%
+    merge(AusPopTargetYears) %>%
+    mutate(Cases = Rate * Persons,
+           AgeGroup = recode(AgeGroup,
+                             `0-4` = '<5',
+                             `5-9` = '5-64',
+                             `10-14` = '5-64',
+                             `15-19` = '5-64',
+                             `20-24` = '5-64',
+                             `25-29` = '5-64',
+                             `30-34` = '5-64',
+                             `35-39` = '5-64',
+                             `40-44` = '5-64',
+                             `45-49` = '5-64',
+                             `50-54` = '5-64',
+                             `55-59` = '5-64',
+                             `60-64` = '5-64',
+                             `65-69` = '65+',
+                             `70-74` = '65+',
+                             `75-79` = '65+',
+                             `80-84` = '65+',
+                             `85+`   = '65+')) %>%
+    group_by(Year,Disease,AgeGroup) %>%
+    summarise(Cases = sum(Cases))
+}
+
 
 getHospitalisationsAgeGroup <- function(){
   HospFiles <- list.files("./Data", "Principal_diagnosis_data_cube_")
