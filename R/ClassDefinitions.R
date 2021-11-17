@@ -94,7 +94,7 @@ alert_bounds <- function(x, lower = 0, upper = NULL, name = NULL){
 
 # functions for building disease objects
 disease <- function(
-  name, kind, caseMethod, domestic = NULL, underreporting = NULL,
+  name, kind, pathogen = NULL, caseMethod, domestic = NULL, underreporting = NULL,
   symptomatic = NULL, FOI = NULL, gastroFraction = NULL,
   foodborne, gp, gpFracLong, ed, sequelae = NULL,
   hospPrincipalDiagnosis = NULL, hospMethod, hospCodes = NULL, mortCodes, DRGCodes,
@@ -107,7 +107,7 @@ disease <- function(
  ){
 
   out <- list(
-    name = name, kind = kind, caseMethod = caseMethod,
+    name = name, kind = kind, pathogen = pathogen, caseMethod = caseMethod,
     domestic = domestic, underreporting = underreporting, symptomatic = symptomatic,
     FOI = FOI, gastroFraction = gastroFraction, foodborne = foodborne,
     gp = gp, gpFracLong = gpFracLong, ed = ed, sequelae = sequelae,
@@ -132,7 +132,7 @@ disease <- function(
     stop("kind is listed as ", kind, ". Allowable kinds are: ", paste0(AllowedKinds, collapse = ", "))
   }
 
-  ArgumentsKind <- list(initial = c('sequelae','duration', 'severity'),
+  ArgumentsKind <- list(initial = c('sequelae','duration', 'severity', 'pathogen'),
                               sequel = c('propOngoing',
                                          'durationOngoing','propSevere',
                                          'missedWorkCarer','missedWorkSelf'))
@@ -170,6 +170,7 @@ disease <- function(
   # check that input classes are correct
   ArgsCorrectClasses <- list(name = "character",
                              kind = "character",
+                             pathogen = 'character',
                              caseMethod = 'character',
                              domestic = 'rdist',
                              underreporting = 'rdist',

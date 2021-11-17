@@ -1,457 +1,373 @@
-"","Measure","Pathogen","AgeGroup","Disease","median","5%","95%","Kind"
-"1","Deaths","All Pathogens","<5","All Diseases",2.39646060358219,1.48284814091307,3.58624920129165,NA
-"2","Deaths","All Pathogens","<5","GBS",0.0103825837202263,0.000126296512823855,0.118492280677125,NA
-"3","Deaths","All Pathogens","<5","HUS",0.108427830115997,0.0193026864501297,0.394323715943287,NA
-"4","Deaths","All Pathogens","<5","IBS",0.00652436980994076,8.0179314019047e-05,0.0661877858753264,NA
-"5","Deaths","All Pathogens","<5","ReactiveArthritis",0.0225783382214295,0.000230583352259224,0.186401708594075,NA
-"6","Deaths","All Pathogens","5-64","All Diseases",20.0373710606817,15.4362671763492,26.4592546865061,NA
-"7","Deaths","All Pathogens","5-64","GBS",1.02034273599582,0.417715367173503,2.01921934813439,NA
-"8","Deaths","All Pathogens","5-64","HUS",1.19825785254735,0.553765041435437,2.2972346603937,NA
-"9","Deaths","All Pathogens","5-64","IBS",0.0065584116058608,8.71359071521694e-05,0.0738540439783495,NA
-"10","Deaths","All Pathogens","5-64","ReactiveArthritis",0.0205095636281995,0.00016663212912265,0.206170990179594,NA
-"11","Deaths","All Pathogens","65+","All Diseases",55.7277465122812,39.6395876937262,79.5388038031678,NA
-"12","Deaths","All Pathogens","65+","GBS",6.42855693340523,2.96187448372166,11.8629397039707,NA
-"13","Deaths","All Pathogens","65+","HUS",0.205824758422035,0.05008184589363,0.617586175437483,NA
-"14","Deaths","All Pathogens","65+","IBS",0.359473319465841,0.145752383900149,0.984101222014308,NA
-"15","Deaths","All Pathogens","65+","ReactiveArthritis",0.0300582989210728,0.000217380958887873,0.278752557450144,NA
-"16","Deaths","All Pathogens","All Ages","All Diseases",78.6186990599118,61.7853238883189,103.465570499829,NA
-"17","Deaths","All Pathogens","All Ages","GBS",7.61216980033641,4.07980294965001,13.153611279811,NA
-"18","Deaths","All Pathogens","All Ages","HUS",1.6101672913034,0.891551290467204,2.79118893128516,NA
-"19","Deaths","All Pathogens","All Ages","IBS",0.399164634374783,0.171165718824553,1.01457369813984,NA
-"20","Deaths","All Pathogens","All Ages","ReactiveArthritis",0.129915773930507,0.0192151105695597,0.45552438001126,NA
-"21","Deaths","Campylobacteriosis","<5","All Diseases",0.320879527480106,0.084636528928839,0.869586623384846,NA
-"22","Deaths","Campylobacteriosis","<5","Campylobacteriosis",0.247494878413612,0.043370054762863,0.797538478542436,NA
-"23","Deaths","Campylobacteriosis","<5","GBS",0.0103825837202263,0.000126296512823855,0.118492280677125,NA
-"24","Deaths","Campylobacteriosis","<5","IBS",0.00399500071693282,4.82887730924262e-05,0.041590786579433,NA
-"25","Deaths","Campylobacteriosis","<5","ReactiveArthritis",0.0110879091906032,0.000121682104413674,0.100791304388976,NA
-"26","Deaths","Campylobacteriosis","5-64","All Diseases",2.52044388150186,1.5307867756558,3.99904856108753,NA
-"27","Deaths","Campylobacteriosis","5-64","Campylobacteriosis",1.36076028186518,0.680544666043535,2.453680702859,NA
-"28","Deaths","Campylobacteriosis","5-64","GBS",1.02034273599582,0.417715367173503,2.01921934813439,NA
-"29","Deaths","Campylobacteriosis","5-64","IBS",0.00545526330456927,6.81533822965108e-05,0.0575188207361509,NA
-"30","Deaths","Campylobacteriosis","5-64","ReactiveArthritis",0.0158611427719778,0.000111597094879641,0.159997036457592,NA
-"31","Deaths","Campylobacteriosis","65+","All Diseases",8.80147183793782,5.12257166477207,14.5901307087249,NA
-"32","Deaths","Campylobacteriosis","65+","Campylobacteriosis",1.80892023708257,0.860234913805914,3.37447766066181,NA
-"33","Deaths","Campylobacteriosis","65+","GBS",6.42855693340523,2.96187448372166,11.8629397039707,NA
-"34","Deaths","Campylobacteriosis","65+","IBS",0.300961082298288,0.124175877908598,0.825801725171017,NA
-"35","Deaths","Campylobacteriosis","65+","ReactiveArthritis",0.0230628905333217,0.000162053838407376,0.213887359692875,NA
-"36","Deaths","Campylobacteriosis","All Ages","All Diseases",11.8110430239869,7.87061564493625,17.5275381028255,NA
-"37","Deaths","Campylobacteriosis","All Ages","Campylobacteriosis",3.5714108117811,2.21518617535618,5.49207350718794,NA
-"38","Deaths","Campylobacteriosis","All Ages","GBS",7.61216980033641,4.07980294965001,13.153611279811,NA
-"39","Deaths","Campylobacteriosis","All Ages","IBS",0.330742244776504,0.142998039336711,0.839870468058258,NA
-"40","Deaths","Campylobacteriosis","All Ages","ReactiveArthritis",0.0877375174935152,0.0125102779767752,0.328147312216935,NA
-"41","Deaths","Escherichia coli (Non-STEC)","<5","All Diseases",0.0126821553791612,0.00014883265830175,0.142154127194305,NA
-"42","Deaths","Escherichia coli (Non-STEC)","<5","Escherichia coli (Non-STEC)",0.0126821553791612,0.00014883265830175,0.142154127194305,NA
-"43","Deaths","Escherichia coli (Non-STEC)","5-64","All Diseases",0.380993129813784,0.117554811354072,1.12280824077234,NA
-"44","Deaths","Escherichia coli (Non-STEC)","5-64","Escherichia coli (Non-STEC)",0.380993129813784,0.117554811354072,1.12280824077234,NA
-"45","Deaths","Escherichia coli (Non-STEC)","65+","All Diseases",0.138936076860438,0.0305860957953793,0.533635829468889,NA
-"46","Deaths","Escherichia coli (Non-STEC)","65+","Escherichia coli (Non-STEC)",0.138936076860438,0.0305860957953793,0.533635829468889,NA
-"47","Deaths","Escherichia coli (Non-STEC)","All Ages","All Diseases",0.59686798981822,0.258108836958032,1.35591542808508,NA
-"48","Deaths","Escherichia coli (Non-STEC)","All Ages","Escherichia coli (Non-STEC)",0.59686798981822,0.258108836958032,1.35591542808508,NA
-"49","Deaths","Gastroenteritis","<5","All Diseases",0.834582887491991,0.367314630392618,1.68779875291727,NA
-"50","Deaths","Gastroenteritis","<5","Gastroenteritis",0.834582887491991,0.367314630392618,1.68779875291727,NA
-"51","Deaths","Gastroenteritis","5-64","All Diseases",6.10621512381935,3.05792513173677,11.2586178790357,NA
-"52","Deaths","Gastroenteritis","5-64","Gastroenteritis",6.10621512381935,3.05792513173677,11.2586178790357,NA
-"53","Deaths","Gastroenteritis","65+","All Diseases",29.3029079539124,15.3612334172704,52.1954239454877,NA
-"54","Deaths","Gastroenteritis","65+","Gastroenteritis",29.3029079539124,15.3612334172704,52.1954239454877,NA
-"55","Deaths","Gastroenteritis","All Ages","All Diseases",37.1356342374834,21.8981656421623,60.1226147162457,NA
-"56","Deaths","Gastroenteritis","All Ages","Gastroenteritis",37.1356342374834,21.8981656421623,60.1226147162457,NA
-"57","Deaths","Listeriosis","<5","All Diseases",0.0467358787567099,0.000445203710825521,0.44280659560442,NA
-"58","Deaths","Listeriosis","<5","Listeriosis",0.0467358787567099,0.000445203710825521,0.44280659560442,NA
-"59","Deaths","Listeriosis","5-64","All Diseases",4.43474821608331,2.61098140645979,6.88893291850347,NA
-"60","Deaths","Listeriosis","5-64","Listeriosis",4.43474821608331,2.61098140645979,6.88893291850347,NA
-"61","Deaths","Listeriosis","65+","All Diseases",7.52950803025205,4.78301117762565,11.7078986214984,NA
-"62","Deaths","Listeriosis","65+","Listeriosis",7.52950803025205,4.78301117762565,11.7078986214984,NA
-"63","Deaths","Listeriosis","All Ages","All Diseases",12.2325990522231,8.68125800100787,17.0088057930995,NA
-"64","Deaths","Listeriosis","All Ages","Listeriosis",12.2325990522231,8.68125800100787,17.0088057930995,NA
-"65","Deaths","Norovirus","<5","All Diseases",0.0076506434453709,4.97695281211966e-05,0.0876933004449683,NA
-"66","Deaths","Norovirus","<5","Norovirus",0.0076506434453709,4.97695281211966e-05,0.0876933004449683,NA
-"67","Deaths","Norovirus","5-64","All Diseases",0.290404878857281,0.0669109288012928,0.769519359351573,NA
-"68","Deaths","Norovirus","5-64","Norovirus",0.290404878857281,0.0669109288012928,0.769519359351573,NA
-"69","Deaths","Norovirus","65+","All Diseases",0.461649788628109,0.101643056433844,1.19932224353526,NA
-"70","Deaths","Norovirus","65+","Norovirus",0.461649788628109,0.101643056433844,1.19932224353526,NA
-"71","Deaths","Norovirus","All Ages","All Diseases",0.82489295944878,0.322329111707439,1.66532474576279,NA
-"72","Deaths","Norovirus","All Ages","Norovirus",0.82489295944878,0.322329111707439,1.66532474576279,NA
-"73","Deaths","Salmonellosis","<5","All Diseases",0.553428712770515,0.191646284978143,1.3081267719696,NA
-"74","Deaths","Salmonellosis","<5","IBS",0.00217751383153089,2.73864200307141e-05,0.0241748793728562,NA
-"75","Deaths","Salmonellosis","<5","ReactiveArthritis",0.00760641056767657,6.21192541606831e-05,0.0742349350129184,NA
-"76","Deaths","Salmonellosis","<5","Salmonellosis",0.531338899349126,0.176143653022065,1.28408933093632,NA
-"77","Deaths","Salmonellosis","5-64","All Diseases",3.1753177136565,1.77623056536066,5.02405409845034,NA
-"78","Deaths","Salmonellosis","5-64","IBS",0.00110150790925861,1.57618126896557e-05,0.0132329426215775,NA
-"79","Deaths","Salmonellosis","5-64","ReactiveArthritis",0.00358328511109286,2.80929209371517e-05,0.0467696237816394,NA
-"80","Deaths","Salmonellosis","5-64","Salmonellosis",3.16547038000149,1.75791822053357,4.98714112695193,NA
-"81","Deaths","Salmonellosis","65+","All Diseases",7.54286884107477,4.51128442555937,11.470537000278,NA
-"82","Deaths","Salmonellosis","65+","IBS",0.0514009970265587,0.0155286638670625,0.169108804843003,NA
-"83","Deaths","Salmonellosis","65+","ReactiveArthritis",0.00439022870208344,2.63442795602527e-05,0.0556823613239449,NA
-"84","Deaths","Salmonellosis","65+","Salmonellosis",7.48170262048879,4.46069486232089,11.3902230978424,NA
-"85","Deaths","Salmonellosis","All Ages","All Diseases",11.5574737383454,7.90164598241487,15.918600552567,NA
-"86","Deaths","Salmonellosis","All Ages","IBS",0.0610533288757822,0.022344324032798,0.175255898201504,NA
-"87","Deaths","Salmonellosis","All Ages","ReactiveArthritis",0.0296372331578071,0.00379340688203227,0.125491044703869,NA
-"88","Deaths","Salmonellosis","All Ages","Salmonellosis",11.430437864175,7.76449897080106,15.7328525111452,NA
-"89","Deaths","Shigellosis","<5","All Diseases",0.0295866088390637,0.00438706650610648,0.121071923240986,NA
-"90","Deaths","Shigellosis","<5","IBS",4.08969719328583e-05,4.27172432986345e-07,0.000478524943712214,NA
-"91","Deaths","Shigellosis","<5","ReactiveArthritis",0.000127333557359001,9.24242197848568e-07,0.00147453105385286,NA
-"92","Deaths","Shigellosis","<5","Shigellosis",0.0289397555154119,0.00362757517903435,0.121058992635306,NA
-"93","Deaths","Shigellosis","5-64","All Diseases",0.0923520813122237,0.0260498336081891,0.248544881354936,NA
-"94","Deaths","Shigellosis","5-64","IBS",3.97690049757575e-05,4.32224383884125e-07,0.000482411115241254,NA
-"95","Deaths","Shigellosis","5-64","ReactiveArthritis",0.000124618163182976,8.16747477077563e-07,0.00163284314477259,NA
-"96","Deaths","Shigellosis","5-64","Shigellosis",0.091587786416858,0.0253403155333154,0.248507015523542,NA
-"97","Deaths","Shigellosis","65+","All Diseases",0.0070723519150561,0.000970778530889887,0.0592212301913124,NA
-"98","Deaths","Shigellosis","65+","IBS",0.000930219455576198,0.000204297448770956,0.00381903733194621,NA
-"99","Deaths","Shigellosis","65+","ReactiveArthritis",7.55666653369015e-05,4.99757974321224e-07,0.000991326018436343,NA
-"100","Deaths","Shigellosis","65+","Shigellosis",0.00544247564573038,6.68792839262907e-05,0.0574767618876002,NA
-"101","Deaths","Shigellosis","All Ages","All Diseases",0.150117144442459,0.0603904952485625,0.325565873987915,NA
-"102","Deaths","Shigellosis","All Ages","IBS",0.00119455055546184,0.000350103746806845,0.00414586105039911,NA
-"103","Deaths","Shigellosis","All Ages","ReactiveArthritis",0.000633406632308438,7.93998490458599e-05,0.00292457580789444,NA
-"104","Deaths","Shigellosis","All Ages","Shigellosis",0.148217950508886,0.0574303196876743,0.322091018580326,NA
-"105","Deaths","STEC","<5","All Diseases",0.171663706462921,0.0345232759946345,0.50277332607178,NA
-"106","Deaths","STEC","<5","HUS",0.108427830115997,0.0193026864501297,0.394323715943287,NA
-"107","Deaths","STEC","<5","IBS",0,0,0,NA
-"108","Deaths","STEC","<5","STEC",0.0276017114044916,0.000251085494976256,0.26802947904484,NA
-"109","Deaths","STEC","5-64","All Diseases",1.26753067094236,0.60899744455967,2.41625674596036,NA
-"110","Deaths","STEC","5-64","HUS",1.19825785254735,0.553765041435437,2.2972346603937,NA
-"111","Deaths","STEC","5-64","IBS",0,0,0,NA
-"112","Deaths","STEC","5-64","STEC",0.0284036472191853,0.000256376079532147,0.262804728976743,NA
-"113","Deaths","STEC","65+","All Diseases",0.281932097130801,0.0844211098300273,0.778173298076474,NA
-"114","Deaths","STEC","65+","HUS",0.205824758422035,0.05008184589363,0.617586175437483,NA
-"115","Deaths","STEC","65+","IBS",0,0,0,NA
-"116","Deaths","STEC","65+","STEC",0.0389145737330799,0.000363702113942262,0.307571733755081,NA
-"117","Deaths","STEC","All Ages","All Diseases",1.8218426499989,1.02551623285863,3.05417484959429,NA
-"118","Deaths","STEC","All Ages","HUS",1.6101672913034,0.891551290467204,2.79118893128516,NA
-"119","Deaths","STEC","All Ages","IBS",0,0,0,NA
-"120","Deaths","STEC","All Ages","STEC",0.159970030751816,0.0238657893556027,0.601887375269637,NA
-"121","Deaths","Toxoplasma","<5","All Diseases",0.012328664801701,0.000133299236139242,0.134145089132145,NA
-"122","Deaths","Toxoplasma","<5","Toxoplasma",0.012328664801701,0.000133299236139242,0.134145089132145,NA
-"123","Deaths","Toxoplasma","5-64","All Diseases",0.501099881192869,0.155732763185566,1.21294520451125,NA
-"124","Deaths","Toxoplasma","5-64","Toxoplasma",0.501099881192869,0.155732763185566,1.21294520451125,NA
-"125","Deaths","Toxoplasma","65+","All Diseases",0.332645627382794,0.100388740466765,0.913503315808306,NA
-"126","Deaths","Toxoplasma","65+","Toxoplasma",0.332645627382794,0.100388740466765,0.913503315808306,NA
-"127","Deaths","Toxoplasma","All Ages","All Diseases",0.934918573634095,0.435464833277653,1.77423297832938,NA
-"128","Deaths","Toxoplasma","All Ages","Toxoplasma",0.934918573634095,0.435464833277653,1.77423297832938,NA
-"129","Deaths","Typhoid Fever","<5","All Diseases",0.00387573216075426,3.21077772227768e-05,0.0379925348888058,NA
-"130","Deaths","Typhoid Fever","<5","Typhoid Fever",0.00387573216075426,3.21077772227768e-05,0.0379925348888058,NA
-"131","Deaths","Typhoid Fever","5-64","All Diseases",0.0036100366287587,2.49605086339571e-05,0.0355465450279742,NA
-"132","Deaths","Typhoid Fever","5-64","Typhoid Fever",0.0036100366287587,2.49605086339571e-05,0.0355465450279742,NA
-"133","Deaths","Typhoid Fever","65+","All Diseases",0.0047311180458979,3.07496361465226e-05,0.0422383370221234,NA
-"134","Deaths","Typhoid Fever","65+","Typhoid Fever",0.0047311180458979,3.07496361465226e-05,0.0422383370221234,NA
-"135","Deaths","Typhoid Fever","All Ages","All Diseases",0.0213108801480753,0.00314150877257715,0.0836730932832807,NA
-"136","Deaths","Typhoid Fever","All Ages","Typhoid Fever",0.0213108801480753,0.00314150877257715,0.0836730932832807,NA
-"137","Deaths","Yersinia Enterocolitica","<5","All Diseases",0.0362797722162172,0.00141886429703125,0.292334884118805,NA
-"138","Deaths","Yersinia Enterocolitica","<5","IBS",0,0,0,NA
-"139","Deaths","Yersinia Enterocolitica","<5","ReactiveArthritis",0.000661353726150528,7.26606867905973e-06,0.0073308050489612,NA
-"140","Deaths","Yersinia Enterocolitica","<5","Yersinia Enterocolitica",0.0346337904089338,0.000464351500535225,0.290637829080365,NA
-"141","Deaths","Yersinia Enterocolitica","5-64","All Diseases",0.524630373531545,0.172192472372249,1.2518895359517,NA
-"142","Deaths","Yersinia Enterocolitica","5-64","IBS",0,0,0,NA
-"143","Deaths","Yersinia Enterocolitica","5-64","ReactiveArthritis",0.000583013457149428,4.03260589790647e-06,0.00777483996237593,NA
-"144","Deaths","Yersinia Enterocolitica","5-64","Yersinia Enterocolitica",0.520616508037366,0.168753954349806,1.25140708519928,NA
-"145","Deaths","Yersinia Enterocolitica","65+","All Diseases",0.0480149073927907,0.0016840118643204,0.338783573598325,NA
-"146","Deaths","Yersinia Enterocolitica","65+","IBS",0,0,0,NA
-"147","Deaths","Yersinia Enterocolitica","65+","ReactiveArthritis",0.000771754315799543,4.50561571981492e-06,0.00995256462338531,NA
-"148","Deaths","Yersinia Enterocolitica","65+","Yersinia Enterocolitica",0.0444136109379728,0.000504462680668818,0.33847078348761,NA
-"149","Deaths","Yersinia Enterocolitica","All Ages","All Diseases",0.692850317093995,0.272958121817914,1.47896518994445,NA
-"150","Deaths","Yersinia Enterocolitica","All Ages","IBS",0,0,0,NA
-"151","Deaths","Yersinia Enterocolitica","All Ages","ReactiveArthritis",0.00407852879330389,0.000570366989371125,0.0197596948788552,NA
-"152","Deaths","Yersinia Enterocolitica","All Ages","Yersinia Enterocolitica",0.685011076999924,0.268273953695645,1.47261389830772,NA
-"153","Hospitalisations","All Pathogens","<5","All Diseases",6507.21633015728,4188.47590498085,10141.9939516919,NA
-"154","Hospitalisations","All Pathogens","<5","GBS",9.80360900056201,4.84848560094538,18.7167444324299,NA
-"155","Hospitalisations","All Pathogens","<5","HUS",12.2388527379538,4.91892906749462,30.8596651004999,NA
-"156","Hospitalisations","All Pathogens","<5","IBS",4.61478413568442,2.5834033073575,8.65569997889607,NA
-"157","Hospitalisations","All Pathogens","<5","ReactiveArthritis",101.684936460914,73.0035512364149,134.35339945914,NA
-"158","Hospitalisations","All Pathogens","5-64","All Diseases",34996.0429975228,22829.538928512,56271.41690842,NA
-"159","Hospitalisations","All Pathogens","5-64","GBS",69.823906405188,34.3390112917298,144.201501690615,NA
-"160","Hospitalisations","All Pathogens","5-64","HUS",51.5866557113736,19.606564069337,134.169046690851,NA
-"161","Hospitalisations","All Pathogens","5-64","IBS",2386.46794927241,1252.23854600684,4832.97331191557,NA
-"162","Hospitalisations","All Pathogens","5-64","ReactiveArthritis",565.302542924182,397.31988234221,792.594781416929,NA
-"163","Hospitalisations","All Pathogens","65+","All Diseases",19557.8864174767,12567.2549272709,31150.5517494282,NA
-"164","Hospitalisations","All Pathogens","65+","GBS",19.6864006820995,9.67414924510191,40.114571105831,NA
-"165","Hospitalisations","All Pathogens","65+","HUS",13.7822517044884,5.17939603289402,34.5370660242361,NA
-"166","Hospitalisations","All Pathogens","65+","IBS",543.524574123579,281.742568562557,1156.95158457782,NA
-"167","Hospitalisations","All Pathogens","65+","ReactiveArthritis",148.111375096653,101.40306307538,203.273656764925,NA
-"168","Hospitalisations","All Pathogens","All Ages","All Diseases",62730.7530091828,46950.7911089662,85921.1293733597,NA
-"169","Hospitalisations","All Pathogens","All Ages","GBS",101.870988785193,62.5152581508295,178.039732110565,NA
-"170","Hospitalisations","All Pathogens","All Ages","HUS",83.4370293491068,42.2904999980628,165.908478173063,NA
-"171","Hospitalisations","All Pathogens","All Ages","IBS",2983.60392322405,1757.22973077503,5521.79094698331,NA
-"172","Hospitalisations","All Pathogens","All Ages","ReactiveArthritis",826.248607824349,636.828973508401,1040.02258405484,NA
-"173","Hospitalisations","Campylobacteriosis","<5","All Diseases",329.513096165877,234.314801238664,434.562206945448,NA
-"174","Hospitalisations","Campylobacteriosis","<5","Campylobacteriosis",257.044045066815,172.451943273398,353.533034968527,NA
-"175","Hospitalisations","Campylobacteriosis","<5","GBS",9.80360900056201,4.84848560094538,18.7167444324299,NA
-"176","Hospitalisations","Campylobacteriosis","<5","IBS",2.68771588755948,1.21138516760665,6.51163254032792,NA
-"177","Hospitalisations","Campylobacteriosis","<5","ReactiveArthritis",54.4074343367033,22.7986152592276,97.1493684728691,NA
-"178","Hospitalisations","Campylobacteriosis","5-64","All Diseases",5547.39076860521,3874.84399158751,8204.84594285569,NA
-"179","Hospitalisations","Campylobacteriosis","5-64","Campylobacteriosis",3050.69977498202,2038.57070085032,4302.36359198866,NA
-"180","Hospitalisations","Campylobacteriosis","5-64","GBS",69.823906405188,34.3390112917298,144.201501690615,NA
-"181","Hospitalisations","Campylobacteriosis","5-64","IBS",1848.48698837584,867.924206901198,4327.78526718931,NA
-"182","Hospitalisations","Campylobacteriosis","5-64","ReactiveArthritis",422.844166661616,232.578482883007,675.299684797259,NA
-"183","Hospitalisations","Campylobacteriosis","65+","All Diseases",2839.13174732745,2047.12543099603,3906.99184996006,NA
-"184","Hospitalisations","Campylobacteriosis","65+","Campylobacteriosis",2206.90591677269,1473.14534150198,3087.64745134868,NA
-"185","Hospitalisations","Campylobacteriosis","65+","GBS",19.6864006820995,9.67414924510191,40.114571105831,NA
-"186","Hospitalisations","Campylobacteriosis","65+","IBS",432.050279853226,211.675290630982,1092.31119352594,NA
-"187","Hospitalisations","Campylobacteriosis","65+","ReactiveArthritis",113.00161597516,68.999773628853,176.794468788178,NA
-"188","Hospitalisations","Campylobacteriosis","All Ages","All Diseases",8788.12194130678,6862.84286342951,11894.20734909,NA
-"189","Hospitalisations","Campylobacteriosis","All Ages","Campylobacteriosis",5569.691113872,4285.72121136169,7081.05287938057,NA
-"190","Hospitalisations","Campylobacteriosis","All Ages","GBS",101.870988785193,62.5152581508295,178.039732110565,NA
-"191","Hospitalisations","Campylobacteriosis","All Ages","IBS",2339.41326902311,1274.91729218209,4959.43617927651,NA
-"192","Hospitalisations","Campylobacteriosis","All Ages","ReactiveArthritis",591.989747463641,398.142221886647,853.761758907546,NA
-"193","Hospitalisations","Escherichia coli (Non-STEC)","<5","All Diseases",1.51751349674562,0.562553421321073,3.5780182546984,NA
-"194","Hospitalisations","Escherichia coli (Non-STEC)","<5","Escherichia coli (Non-STEC)",1.51751349674562,0.562553421321073,3.5780182546984,NA
-"195","Hospitalisations","Escherichia coli (Non-STEC)","5-64","All Diseases",20.527041378873,7.77927788873472,46.3642110259372,NA
-"196","Hospitalisations","Escherichia coli (Non-STEC)","5-64","Escherichia coli (Non-STEC)",20.527041378873,7.77927788873472,46.3642110259372,NA
-"197","Hospitalisations","Escherichia coli (Non-STEC)","65+","All Diseases",16.1810134671089,6.35795580711566,37.462361642147,NA
-"198","Hospitalisations","Escherichia coli (Non-STEC)","65+","Escherichia coli (Non-STEC)",16.1810134671089,6.35795580711566,37.462361642147,NA
-"199","Hospitalisations","Escherichia coli (Non-STEC)","All Ages","All Diseases",40.7167240083834,21.0695715206892,71.2716961972811,NA
-"200","Hospitalisations","Escherichia coli (Non-STEC)","All Ages","Escherichia coli (Non-STEC)",40.7167240083834,21.0695715206892,71.2716961972811,NA
-"201","Hospitalisations","Gastroenteritis","<5","All Diseases",4682.28916962977,2445.7151454539,8243.32757729131,NA
-"202","Hospitalisations","Gastroenteritis","<5","Gastroenteritis",4682.28916962977,2445.7151454539,8243.32757729131,NA
-"203","Hospitalisations","Gastroenteritis","5-64","All Diseases",25922.1691410291,13852.6873147883,46218.2329746241,NA
-"204","Hospitalisations","Gastroenteritis","5-64","Gastroenteritis",25922.1691410291,13852.6873147883,46218.2329746241,NA
-"205","Hospitalisations","Gastroenteritis","65+","All Diseases",15115.3541591122,8252.29159585429,26497.6797294425,NA
-"206","Hospitalisations","Gastroenteritis","65+","Gastroenteritis",15115.3541591122,8252.29159585429,26497.6797294425,NA
-"207","Hospitalisations","Gastroenteritis","All Ages","All Diseases",46863.7846431509,31492.0577831039,70455.2356370486,NA
-"208","Hospitalisations","Gastroenteritis","All Ages","Gastroenteritis",46863.7846431509,31492.0577831039,70455.2356370486,NA
-"209","Hospitalisations","Listeriosis","<5","All Diseases",9.75260949225282,4.72818246784496,14.7775764044444,NA
-"210","Hospitalisations","Listeriosis","<5","Listeriosis",9.75260949225282,4.72818246784496,14.7775764044444,NA
-"211","Hospitalisations","Listeriosis","5-64","All Diseases",28.7431654409303,14.5311193820097,44.2836260910508,NA
-"212","Hospitalisations","Listeriosis","5-64","Listeriosis",28.7431654409303,14.5311193820097,44.2836260910508,NA
-"213","Hospitalisations","Listeriosis","65+","All Diseases",61.2092433448179,30.2826696733156,92.4506031756497,NA
-"214","Hospitalisations","Listeriosis","65+","Listeriosis",61.2092433448179,30.2826696733156,92.4506031756497,NA
-"215","Hospitalisations","Listeriosis","All Ages","All Diseases",99.365865322002,64.2124867157318,135.924814383927,NA
-"216","Hospitalisations","Listeriosis","All Ages","Listeriosis",99.365865322002,64.2124867157318,135.924814383927,NA
-"217","Hospitalisations","Norovirus","<5","All Diseases",465.083579695227,133.073923512004,915.609951062991,NA
-"218","Hospitalisations","Norovirus","<5","Norovirus",465.083579695227,133.073923512004,915.609951062991,NA
-"219","Hospitalisations","Norovirus","5-64","All Diseases",509.713526605577,139.971533604986,1093.50159176086,NA
-"220","Hospitalisations","Norovirus","5-64","Norovirus",509.713526605577,139.971533604986,1093.50159176086,NA
-"221","Hospitalisations","Norovirus","65+","All Diseases",462.544131207421,123.994876792396,989.226971483879,NA
-"222","Hospitalisations","Norovirus","65+","Norovirus",462.544131207421,123.994876792396,989.226971483879,NA
-"223","Hospitalisations","Norovirus","All Ages","All Diseases",1505.2334178581,794.5114030419,2296.90616850364,NA
-"224","Hospitalisations","Norovirus","All Ages","Norovirus",1505.2334178581,794.5114030419,2296.90616850364,NA
-"225","Hospitalisations","Salmonellosis","<5","All Diseases",968.06367071348,614.18984598061,1374.46437516696,NA
-"226","Hospitalisations","Salmonellosis","<5","IBS",1.47258586243646,0.636438297736556,3.99353681221658,NA
-"227","Hospitalisations","Salmonellosis","<5","ReactiveArthritis",37.219668901722,11.0039500141937,77.9595664397351,NA
-"228","Hospitalisations","Salmonellosis","<5","Salmonellosis",926.402332594672,568.918560942584,1332.30443210701,NA
-"229","Hospitalisations","Salmonellosis","5-64","All Diseases",2508.72415003935,1622.56855483749,3526.00765428442,NA
-"230","Hospitalisations","Salmonellosis","5-64","IBS",372.071052884777,137.546655362867,1138.75826746533,NA
-"231","Hospitalisations","Salmonellosis","5-64","ReactiveArthritis",104.06315271112,27.2408889230177,265.504086903007,NA
-"232","Hospitalisations","Salmonellosis","5-64","Salmonellosis",1923.76390099576,1234.46482145191,2723.35958202926,NA
-"233","Hospitalisations","Salmonellosis","65+","All Diseases",1003.98610840895,666.33783061631,1422.64109326321,NA
-"234","Hospitalisations","Salmonellosis","65+","IBS",74.7555964833709,26.5954286565341,227.833927428582,NA
-"235","Hospitalisations","Salmonellosis","65+","ReactiveArthritis",24.529154252743,5.93310476230227,58.447609336816,NA
-"236","Hospitalisations","Salmonellosis","65+","Salmonellosis",884.011926489089,562.546317683758,1283.24476918377,NA
-"237","Hospitalisations","Salmonellosis","All Ages","All Diseases",4512.33569185862,3455.63774568132,5702.36301508547,NA
-"238","Hospitalisations","Salmonellosis","All Ages","IBS",465.308316260344,207.826420043037,1204.3287488518,NA
-"239","Hospitalisations","Salmonellosis","All Ages","ReactiveArthritis",171.536198104936,82.3666650584086,345.629943960371,NA
-"240","Hospitalisations","Salmonellosis","All Ages","Salmonellosis",3749.78363537111,2865.57691238206,4749.88625623865,NA
-"241","Hospitalisations","Shigellosis","<5","All Diseases",19.6468362907746,7.14433535380124,38.1406772245021,NA
-"242","Hospitalisations","Shigellosis","<5","IBS",0.0286341607514864,0.00755878192751506,0.093586348787407,NA
-"243","Hospitalisations","Shigellosis","<5","ReactiveArthritis",0.57832508696048,0.166613229983779,1.85489228568127,NA
-"244","Hospitalisations","Shigellosis","<5","Shigellosis",19.0054492517531,6.25262726301776,37.474127020427,NA
-"245","Hospitalisations","Shigellosis","5-64","All Diseases",87.1267377584496,38.4247822469183,155.043469364682,NA
-"246","Hospitalisations","Shigellosis","5-64","IBS",13.6416367940992,3.18837783423977,48.4333821188909,NA
-"247","Hospitalisations","Shigellosis","5-64","ReactiveArthritis",3.56855425752112,0.896375433439782,11.4444173006564,NA
-"248","Hospitalisations","Shigellosis","5-64","Shigellosis",63.0680100106717,22.9039939527229,125.540338935142,NA
-"249","Hospitalisations","Shigellosis","65+","All Diseases",8.73037216122806,4.04996109284566,16.1862705536526,NA
-"250","Hospitalisations","Shigellosis","65+","IBS",1.25034157744263,0.321823631005309,4.89982301180719,NA
-"251","Hospitalisations","Shigellosis","65+","ReactiveArthritis",0.383621385323486,0.0988597498036324,1.11278862450726,NA
-"252","Hospitalisations","Shigellosis","65+","Shigellosis",6.59868154939849,2.55485624914748,13.1659285008647,NA
-"253","Hospitalisations","Shigellosis","All Ages","All Diseases",117.026065429256,63.9294439517641,185.544653383784,NA
-"254","Hospitalisations","Shigellosis","All Ages","IBS",15.7152460712687,4.87490484753549,50.4749357452054,NA
-"255","Hospitalisations","Shigellosis","All Ages","ReactiveArthritis",4.71793206208302,1.86713243767172,12.5289129582841,NA
-"256","Hospitalisations","Shigellosis","All Ages","Shigellosis",90.5923220029217,45.696722578805,154.938922045485,NA
-"257","Hospitalisations","STEC","<5","All Diseases",12.2388527379538,4.91892906749462,30.8596651004999,NA
-"258","Hospitalisations","STEC","<5","HUS",12.2388527379538,4.91892906749462,30.8596651004999,NA
-"259","Hospitalisations","STEC","<5","IBS",0,0,0,NA
-"260","Hospitalisations","STEC","<5","STEC",0,0,0,NA
-"261","Hospitalisations","STEC","5-64","All Diseases",59.5051056190607,26.4663700059766,141.715518922874,NA
-"262","Hospitalisations","STEC","5-64","HUS",51.5866557113736,19.606564069337,134.169046690851,NA
-"263","Hospitalisations","STEC","5-64","IBS",0,0,0,NA
-"264","Hospitalisations","STEC","5-64","STEC",7.25763126437518,3.94112004105544,11.7829284460972,NA
-"265","Hospitalisations","STEC","65+","All Diseases",15.4939504763341,7.1131603553583,37.07272189173,NA
-"266","Hospitalisations","STEC","65+","HUS",13.7822517044884,5.17939603289402,34.5370660242361,NA
-"267","Hospitalisations","STEC","65+","IBS",0,0,0,NA
-"268","Hospitalisations","STEC","65+","STEC",1.82469088718852,0.962242440848898,2.97402776977732,NA
-"269","Hospitalisations","STEC","All Ages","All Diseases",92.9003371577703,51.2959400968029,173.386801775429,NA
-"270","Hospitalisations","STEC","All Ages","HUS",83.4370293491068,42.2904999980628,165.908478173063,NA
-"271","Hospitalisations","STEC","All Ages","IBS",0,0,0,NA
-"272","Hospitalisations","STEC","All Ages","STEC",9.24071330676986,5.59646331987385,13.9612473382443,NA
-"273","Hospitalisations","Toxoplasma","<5","All Diseases",1.35094347333352,0.483242812687326,2.58440036972583,NA
-"274","Hospitalisations","Toxoplasma","<5","Toxoplasma",1.35094347333352,0.483242812687326,2.58440036972583,NA
-"275","Hospitalisations","Toxoplasma","5-64","All Diseases",24.9279285471332,9.58065621204027,47.8026192426774,NA
-"276","Hospitalisations","Toxoplasma","5-64","Toxoplasma",24.9279285471332,9.58065621204027,47.8026192426774,NA
-"277","Hospitalisations","Toxoplasma","65+","All Diseases",8.17340463696782,3.36571426293709,15.9624841674072,NA
-"278","Hospitalisations","Toxoplasma","65+","Toxoplasma",8.17340463696782,3.36571426293709,15.9624841674072,NA
-"279","Hospitalisations","Toxoplasma","All Ages","All Diseases",34.8463491525644,18.6053104427757,59.2332639352619,NA
-"280","Hospitalisations","Toxoplasma","All Ages","Toxoplasma",34.8463491525644,18.6053104427757,59.2332639352619,NA
-"281","Hospitalisations","Typhoid Fever","<5","All Diseases",3.46314733620019,1.18221795509344,7.57752652317637,NA
-"282","Hospitalisations","Typhoid Fever","<5","Typhoid Fever",3.46314733620019,1.18221795509344,7.57752652317637,NA
-"283","Hospitalisations","Typhoid Fever","5-64","All Diseases",24.5091431414845,7.92610605189615,55.491810455176,NA
-"284","Hospitalisations","Typhoid Fever","5-64","Typhoid Fever",24.5091431414845,7.92610605189615,55.491810455176,NA
-"285","Hospitalisations","Typhoid Fever","65+","All Diseases",0.287170674489865,0.0972997939439174,0.673957516026508,NA
-"286","Hospitalisations","Typhoid Fever","65+","Typhoid Fever",0.287170674489865,0.0972997939439174,0.673957516026508,NA
-"287","Hospitalisations","Typhoid Fever","All Ages","All Diseases",28.8563336354322,11.9646285685022,59.7363704970496,NA
-"288","Hospitalisations","Typhoid Fever","All Ages","Typhoid Fever",28.8563336354322,11.9646285685022,59.7363704970496,NA
-"289","Hospitalisations","Yersinia Enterocolitica","<5","All Diseases",10.0545209779781,6.3246431266168,16.8415395913767,NA
-"290","Hospitalisations","Yersinia Enterocolitica","<5","IBS",0,0,0,NA
-"291","Hospitalisations","Yersinia Enterocolitica","<5","ReactiveArthritis",3.28074211723577,1.05196524846449,9.92890998299805,NA
-"292","Hospitalisations","Yersinia Enterocolitica","<5","Yersinia Enterocolitica",6.38040937793864,3.98347973702957,8.93682422371077,NA
-"293","Hospitalisations","Yersinia Enterocolitica","5-64","All Diseases",37.5091776909466,22.3315666693286,68.9046857132006,NA
-"294","Hospitalisations","Yersinia Enterocolitica","5-64","IBS",0,0,0,NA
-"295","Hospitalisations","Yersinia Enterocolitica","5-64","ReactiveArthritis",16.043206024481,4.31747993031612,47.2798055537816,NA
-"296","Hospitalisations","Yersinia Enterocolitica","5-64","Yersinia Enterocolitica",20.7272644098621,13.5242465525814,30.1716487268181,NA
-"297","Hospitalisations","Yersinia Enterocolitica","65+","All Diseases",15.0856435247249,9.42139972580445,22.9486160657128,NA
-"298","Hospitalisations","Yersinia Enterocolitica","65+","IBS",0,0,0,NA
-"299","Hospitalisations","Yersinia Enterocolitica","65+","ReactiveArthritis",4.1840034696498,1.22863592265508,11.2187218181589,NA
-"300","Hospitalisations","Yersinia Enterocolitica","65+","Yersinia Enterocolitica",10.4505048397083,6.63111213238413,14.9840348949048,NA
-"301","Hospitalisations","Yersinia Enterocolitica","All Ages","All Diseases",64.4358154064433,46.5449262271474,95.4433038770814,NA
-"302","Hospitalisations","Yersinia Enterocolitica","All Ages","IBS",0,0,0,NA
-"303","Hospitalisations","Yersinia Enterocolitica","All Ages","ReactiveArthritis",25.2206434535312,11.4793696538728,57.1962031724238,NA
-"304","Hospitalisations","Yersinia Enterocolitica","All Ages","Yersinia Enterocolitica",37.9253236661264,28.7944608185534,47.963765762188,NA
-"305","Cases","Campylobacteriosis","<5","Campylobacteriosis",26051.6632298454,16230.6359990549,41792.5351556936,"Initial"
-"306","Cases","Campylobacteriosis","5-64","Campylobacteriosis",184266.954558025,116862.116640601,301890.831018599,"Initial"
-"307","Cases","Campylobacteriosis","65+","Campylobacteriosis",52216.8268319323,33086.6404708756,87377.6408705732,"Initial"
-"308","Cases","Escherichia coli (Non-STEC)","<5","Escherichia coli (Non-STEC)",20018.2623194268,7550.61284559926,45509.4840601527,"Initial"
-"309","Cases","Escherichia coli (Non-STEC)","5-64","Escherichia coli (Non-STEC)",249563.032477133,90956.8840798952,556134.114211416,"Initial"
-"310","Cases","Escherichia coli (Non-STEC)","65+","Escherichia coli (Non-STEC)",51236.6836090292,18600.5756366263,110906.935188764,"Initial"
-"311","Cases","Gastroenteritis","<5","Gastroenteritis",287231.056853717,165845.644294277,479420.960360726,"Initial"
-"312","Cases","Gastroenteritis","5-64","Gastroenteritis",3638604.31111023,2065152.70111425,5911132.53255771,"Initial"
-"313","Cases","Gastroenteritis","65+","Gastroenteritis",749726.32696961,406750.760160492,1186153.46297008,"Initial"
-"314","Cases","Listeriosis","<5","Listeriosis",9.75260949225282,4.72818246784496,14.7775764044444,"Initial"
-"315","Cases","Listeriosis","5-64","Listeriosis",28.7431654409303,14.5311193820097,44.2836260910508,"Initial"
-"316","Cases","Listeriosis","65+","Listeriosis",61.2092433448179,30.2826696733156,92.4506031756497,"Initial"
-"317","Cases","Norovirus","<5","Norovirus",20167.258155386,5368.03648644507,41954.5199550965,"Initial"
-"318","Cases","Norovirus","5-64","Norovirus",253225.527882117,66128.4995123685,515719.843611465,"Initial"
-"319","Cases","Norovirus","65+","Norovirus",50195.5253296252,13684.6561928543,104360.315937239,"Initial"
-"320","Cases","Salmonellosis","<5","Salmonellosis",14538.6873932014,8256.97649872389,26088.2105984824,"Initial"
-"321","Cases","Salmonellosis","5-64","Salmonellosis",37759.2944488212,21474.5237697811,66781.919931038,"Initial"
-"322","Cases","Salmonellosis","65+","Salmonellosis",8887.72526332005,4746.81979490788,15631.4399824011,"Initial"
-"323","Cases","Shigellosis","<5","Shigellosis",265.534271770387,98.6063207937173,643.06913136775,"Initial"
-"324","Cases","Shigellosis","5-64","Shigellosis",1442.0521734821,478.97360630626,3295.84197231159,"Initial"
-"325","Cases","Shigellosis","65+","Shigellosis",163.114771654973,53.9758728807803,367.982681193763,"Initial"
-"326","Cases","STEC","<5","STEC",405.443465080256,188.509813152994,878.594120401508,"Initial"
-"327","Cases","STEC","5-64","STEC",1744.5712481482,764.112673782923,3773.15381792252,"Initial"
-"328","Cases","STEC","65+","STEC",467.92579138804,203.692466887577,1010.58637958572,"Initial"
-"329","Cases","Toxoplasma","<5","Toxoplasma",2701.16203777015,1118.63074464161,4951.12974968217,"Initial"
-"330","Cases","Toxoplasma","5-64","Toxoplasma",12376.7686501329,4783.77649553377,21813.4800758955,"Initial"
-"331","Cases","Toxoplasma","65+","Toxoplasma",441.201455888992,129.106287782894,876.039222119326,"Initial"
-"332","Cases","Typhoid Fever","<5","Typhoid Fever",3.46314733620019,1.18221795509344,7.57752652317637,"Initial"
-"333","Cases","Typhoid Fever","5-64","Typhoid Fever",24.5091431414845,7.92610605189615,55.491810455176,"Initial"
-"334","Cases","Typhoid Fever","65+","Typhoid Fever",0.287170674489865,0.0972997939439174,0.673957516026508,"Initial"
-"335","Cases","Yersinia Enterocolitica","<5","Yersinia Enterocolitica",1133.53772392483,622.110724152562,1922.72277759772,"Initial"
-"336","Cases","Yersinia Enterocolitica","5-64","Yersinia Enterocolitica",4721.0904699116,2673.64027052758,8329.1970882555,"Initial"
-"337","Cases","Yersinia Enterocolitica","65+","Yersinia Enterocolitica",1264.34909214962,744.704243959899,2253.80861675842,"Initial"
-"338","Cases","Campylobacteriosis","<5","GBS",9.80360900056201,4.84848560094538,18.7167444324299,"Sequel"
-"339","Cases","Campylobacteriosis","<5","IBS",2263.94160019155,1391.71287786624,3654.70321642167,"Sequel"
-"340","Cases","Campylobacteriosis","<5","ReactiveArthritis",1942.36398229973,850.629052247064,3739.57599732517,"Sequel"
-"341","Cases","Campylobacteriosis","5-64","GBS",69.823906405188,34.3390112917298,144.201501690615,"Sequel"
-"342","Cases","Campylobacteriosis","5-64","IBS",16082.9976607315,9745.57087857129,27436.7502414868,"Sequel"
-"343","Cases","Campylobacteriosis","5-64","ReactiveArthritis",13822.462146964,6432.1374271933,27897.6816037179,"Sequel"
-"344","Cases","Campylobacteriosis","65+","GBS",19.6864006820995,9.67414924510191,40.114571105831,"Sequel"
-"345","Cases","Campylobacteriosis","65+","IBS",4611.04769613423,2788.30962169516,7666.29960264219,"Sequel"
-"346","Cases","Campylobacteriosis","65+","ReactiveArthritis",3951.28875897441,1889.63472759937,7976.50627158921,"Sequel"
-"347","Cases","Salmonellosis","<5","IBS",1279.87168868345,713.313394593109,2308.97542822141,"Sequel"
-"348","Cases","Salmonellosis","<5","ReactiveArthritis",1368.41818894832,364.03484650147,3452.97776938792,"Sequel"
-"349","Cases","Salmonellosis","5-64","IBS",3329.18004991436,1848.7771387425,5848.04684314897,"Sequel"
-"350","Cases","Salmonellosis","5-64","ReactiveArthritis",3522.02058993718,1016.80908092445,8487.05276593244,"Sequel"
-"351","Cases","Salmonellosis","65+","IBS",780.847454663539,414.762240870729,1388.09938630477,"Sequel"
-"352","Cases","Salmonellosis","65+","ReactiveArthritis",830.580229342723,211.356415633042,2099.26496496402,"Sequel"
-"353","Cases","Shigellosis","<5","IBS",23.320153317517,8.34011245776958,58.045106635299,"Sequel"
-"354","Cases","Shigellosis","<5","ReactiveArthritis",21.7667454620491,7.38457323444367,54.5902320106868,"Sequel"
-"355","Cases","Shigellosis","5-64","IBS",125.491726264497,41.1154110771074,306.552085457426,"Sequel"
-"356","Cases","Shigellosis","5-64","ReactiveArthritis",119.652366357462,39.1111805982559,286.145643641078,"Sequel"
-"357","Cases","Shigellosis","65+","IBS",14.1830398062939,4.68323325269588,33.1274154054921,"Sequel"
-"358","Cases","Shigellosis","65+","ReactiveArthritis",13.6672805109973,4.37556810580819,31.5992245144019,"Sequel"
-"359","Cases","STEC","<5","HUS",12.2388527379538,4.91892906749462,30.8596651004999,"Sequel"
-"360","Cases","STEC","<5","IBS",0,0,0,"Sequel"
-"361","Cases","STEC","5-64","HUS",51.5866557113736,19.606564069337,134.169046690851,"Sequel"
-"362","Cases","STEC","5-64","IBS",0,0,0,"Sequel"
-"363","Cases","STEC","65+","HUS",13.7822517044884,5.17939603289402,34.5370660242361,"Sequel"
-"364","Cases","STEC","65+","IBS",0,0,0,"Sequel"
-"365","Cases","Yersinia Enterocolitica","<5","IBS",0,0,0,"Sequel"
-"366","Cases","Yersinia Enterocolitica","<5","ReactiveArthritis",128.16108913861,41.1509914579349,286.340270269738,"Sequel"
-"367","Cases","Yersinia Enterocolitica","5-64","IBS",0,0,0,"Sequel"
-"368","Cases","Yersinia Enterocolitica","5-64","ReactiveArthritis",544.364930431895,172.820552537197,1147.32435165557,"Sequel"
-"369","Cases","Yersinia Enterocolitica","65+","IBS",0,0,0,"Sequel"
-"370","Cases","Yersinia Enterocolitica","65+","ReactiveArthritis",152.894602935262,51.720879380401,320.119521380425,"Sequel"
-"371","Cases","All Pathogens","<5","All Diseases",387093.819097695,255653.165143354,579244.610011539,NA
-"372","Cases","All Pathogens","<5","GBS",9.80360900056201,4.84848560094538,18.7167444324299,NA
-"373","Cases","All Pathogens","<5","HUS",12.2388527379538,4.91892906749462,30.8596651004999,NA
-"374","Cases","All Pathogens","<5","IBS",3677.59233518575,2515.02695004295,5384.28360337355,NA
-"375","Cases","All Pathogens","<5","ReactiveArthritis",3664.23976088869,1977.59320498068,6095.11297700982,NA
-"376","Cases","All Pathogens","5-64","All Diseases",4497864.33810932,2859645.74525833,6741151.20739157,NA
-"377","Cases","All Pathogens","5-64","GBS",69.823906405188,34.3390112917298,144.201501690615,NA
-"378","Cases","All Pathogens","5-64","HUS",51.5866557113736,19.606564069337,134.169046690851,NA
-"379","Cases","All Pathogens","5-64","IBS",19654.820054812,13135.6178653184,31579.8313316344,NA
-"380","Cases","All Pathogens","5-64","ReactiveArthritis",18802.6250717888,10106.8886293945,33271.9465360044,NA
-"381","Cases","All Pathogens","65+","All Diseases",937082.889710344,580636.077202416,1356215.31906154,NA
-"382","Cases","All Pathogens","65+","GBS",19.6864006820995,9.67414924510191,40.114571105831,NA
-"383","Cases","All Pathogens","65+","HUS",13.7822517044884,5.17939603289402,34.5370660242361,NA
-"384","Cases","All Pathogens","65+","IBS",5428.5282508342,3541.44918325624,8489.01640046599,NA
-"385","Cases","All Pathogens","65+","ReactiveArthritis",5116.40303365906,2815.18139409691,9174.00522792681,NA
-"386","Cases","All Pathogens","All Ages","All Diseases",5862685.86730271,4108757.1689001,8273241.41236933,NA
-"387","Cases","All Pathogens","All Ages","GBS",101.870988785193,62.5152581508295,178.039732110565,NA
-"388","Cases","All Pathogens","All Ages","HUS",83.4370293491068,42.2904999980628,165.908478173063,NA
-"389","Cases","All Pathogens","All Ages","IBS",29394.4172827783,22083.6105400851,41447.6795864659,NA
-"390","Cases","All Pathogens","All Ages","ReactiveArthritis",28107.0858386096,18201.1841918424,43585.0548202878,NA
-"391","Cases","Campylobacteriosis","<5","All Diseases",30289.1687063348,19032.552257144,48254.4399187299,NA
-"392","Cases","Campylobacteriosis","5-64","All Diseases",215078.132250481,135572.378227708,355378.841383352,NA
-"393","Cases","Campylobacteriosis","65+","All Diseases",61135.0326033138,38516.0953589111,102528.606882479,NA
-"394","Cases","Campylobacteriosis","All Ages","All Diseases",309970.667837487,221293.929883966,456898.6736282,NA
-"395","Cases","Campylobacteriosis","All Ages","Campylobacteriosis",265385.630101774,190961.131467548,393096.152307172,NA
-"396","Cases","Campylobacteriosis","All Ages","GBS",101.870988785193,62.5152581508295,178.039732110565,NA
-"397","Cases","Campylobacteriosis","All Ages","IBS",23282.7020230269,16271.9406523312,35286.4546615081,NA
-"398","Cases","Campylobacteriosis","All Ages","ReactiveArthritis",20094.2119060393,11954.3415910816,34897.5441895,NA
-"399","Cases","Escherichia coli (Non-STEC)","<5","All Diseases",20018.2623194268,7550.61284559926,45509.4840601527,NA
-"400","Cases","Escherichia coli (Non-STEC)","5-64","All Diseases",249563.032477133,90956.8840798952,556134.114211416,NA
-"401","Cases","Escherichia coli (Non-STEC)","65+","All Diseases",51236.6836090292,18600.5756366263,110906.935188764,NA
-"402","Cases","Escherichia coli (Non-STEC)","All Ages","All Diseases",328467.49779759,162615.7297291,647400.05240396,NA
-"403","Cases","Escherichia coli (Non-STEC)","All Ages","Escherichia coli (Non-STEC)",328467.49779759,162615.7297291,647400.05240396,NA
-"404","Cases","Gastroenteritis","<5","All Diseases",287231.056853717,165845.644294277,479420.960360726,NA
-"405","Cases","Gastroenteritis","5-64","All Diseases",3638604.31111023,2065152.70111425,5911132.53255771,NA
-"406","Cases","Gastroenteritis","65+","All Diseases",749726.32696961,406750.760160492,1186153.46297008,NA
-"407","Cases","Gastroenteritis","All Ages","All Diseases",4718839.03168681,3020066.45946537,7041858.18274477,NA
-"408","Cases","Gastroenteritis","All Ages","Gastroenteritis",4718839.03168681,3020066.45946537,7041858.18274477,NA
-"409","Cases","Listeriosis","<5","All Diseases",9.75260949225282,4.72818246784496,14.7775764044444,NA
-"410","Cases","Listeriosis","5-64","All Diseases",28.7431654409303,14.5311193820097,44.2836260910508,NA
-"411","Cases","Listeriosis","65+","All Diseases",61.2092433448179,30.2826696733156,92.4506031756497,NA
-"412","Cases","Listeriosis","All Ages","All Diseases",99.365865322002,64.2124867157318,135.924814383927,NA
-"413","Cases","Listeriosis","All Ages","Listeriosis",99.365865322002,64.2124867157318,135.924814383927,NA
-"414","Cases","Norovirus","<5","All Diseases",20167.258155386,5368.03648644507,41954.5199550965,NA
-"415","Cases","Norovirus","5-64","All Diseases",253225.527882117,66128.4995123685,515719.843611465,NA
-"416","Cases","Norovirus","65+","All Diseases",50195.5253296252,13684.6561928543,104360.315937239,NA
-"417","Cases","Norovirus","All Ages","All Diseases",328155.982831911,138688.997582486,604596.041539634,NA
-"418","Cases","Norovirus","All Ages","Norovirus",328155.982831911,138688.997582486,604596.041539634,NA
-"419","Cases","Salmonellosis","<5","All Diseases",17269.5992337946,9797.78964245707,30825.0028146833,NA
-"420","Cases","Salmonellosis","5-64","All Diseases",44939.1032055337,25748.1444074033,77931.7332849864,NA
-"421","Cases","Salmonellosis","65+","All Diseases",10529.6372768079,5621.44698769807,18666.1585724596,NA
-"422","Cases","Salmonellosis","All Ages","All Diseases",74745.7238447578,50963.3543671707,110059.152277652,NA
-"423","Cases","Salmonellosis","All Ages","IBS",5493.1586458128,3759.62029092426,8348.55469057707,NA
-"424","Cases","Salmonellosis","All Ages","ReactiveArthritis",6034.2851132435,2785.09817354991,11460.6948727341,NA
-"425","Cases","Salmonellosis","All Ages","Salmonellosis",63151.6213098951,42473.9328463995,93292.6868852682,NA
-"426","Cases","Shigellosis","<5","All Diseases",310.732474065668,115.617101252851,762.420349759136,NA
-"427","Cases","Shigellosis","5-64","All Diseases",1688.06038937929,565.316700422553,3893.45604206701,NA
-"428","Cases","Shigellosis","65+","All Diseases",191.398140830237,63.670726976259,429.027247120174,NA
-"429","Cases","Shigellosis","All Ages","All Diseases",2281.39960261321,1065.79722605354,4545.20615079811,NA
-"430","Cases","Shigellosis","All Ages","IBS",169.65113568646,79.0071189511169,348.931031081301,NA
-"431","Cases","Shigellosis","All Ages","ReactiveArthritis",159.579473321357,74.5338525623517,326.421697358979,NA
-"432","Cases","Shigellosis","All Ages","Shigellosis",1947.41816131043,912.532307849965,3897.43919550346,NA
-"433","Cases","STEC","<5","All Diseases",417.622799808651,194.823373286395,910.915282820909,NA
-"434","Cases","STEC","5-64","All Diseases",1804.52371249098,786.75309556267,3893.85776837108,NA
-"435","Cases","STEC","65+","All Diseases",482.704840127918,209.56908076501,1049.18663667626,NA
-"436","Cases","STEC","All Ages","All Diseases",2847.37380725218,1563.05817141847,5078.35981597472,NA
-"437","Cases","STEC","All Ages","HUS",83.4370293491068,42.2904999980628,165.908478173063,NA
-"438","Cases","STEC","All Ages","IBS",0,0,0,NA
-"439","Cases","STEC","All Ages","STEC",2761.65773885143,1521.9083965458,4921.55649629882,NA
-"440","Cases","Toxoplasma","<5","All Diseases",2701.16203777015,1118.63074464161,4951.12974968217,NA
-"441","Cases","Toxoplasma","5-64","All Diseases",12376.7686501329,4783.77649553377,21813.4800758955,NA
-"442","Cases","Toxoplasma","65+","All Diseases",441.201455888992,129.106287782894,876.039222119326,NA
-"443","Cases","Toxoplasma","All Ages","All Diseases",15489.1058902812,7807.20369093165,25542.6913347731,NA
-"444","Cases","Toxoplasma","All Ages","Toxoplasma",15489.1058902812,7807.20369093165,25542.6913347731,NA
-"445","Cases","Typhoid Fever","<5","All Diseases",3.46314733620019,1.18221795509344,7.57752652317637,NA
-"446","Cases","Typhoid Fever","5-64","All Diseases",24.5091431414845,7.92610605189615,55.491810455176,NA
-"447","Cases","Typhoid Fever","65+","All Diseases",0.287170674489865,0.0972997939439174,0.673957516026508,NA
-"448","Cases","Typhoid Fever","All Ages","All Diseases",28.8563336354322,11.9646285685022,59.7363704970496,NA
-"449","Cases","Typhoid Fever","All Ages","Typhoid Fever",28.8563336354322,11.9646285685022,59.7363704970496,NA
-"450","Cases","Yersinia Enterocolitica","<5","All Diseases",1270.00066161118,679.948264041609,2162.91658272341,NA
-"451","Cases","Yersinia Enterocolitica","5-64","All Diseases",5334.06994545896,2982.19597771451,9383.92799958677,NA
-"452","Cases","Yersinia Enterocolitica","65+","All Diseases",1431.86103371901,814.947756389388,2558.06921277742,NA
-"453","Cases","Yersinia Enterocolitica","All Ages","All Diseases",8111.41857760849,5531.19714455647,12373.6405318538,NA
-"454","Cases","Yersinia Enterocolitica","All Ages","IBS",0,0,0,NA
-"455","Cases","Yersinia Enterocolitica","All Ages","ReactiveArthritis",845.385449547901,435.649247880874,1478.67086837918,NA
-"456","Cases","Yersinia Enterocolitica","All Ages","Yersinia Enterocolitica",7232.02653447682,5042.41089269973,11055.6385161316,NA
+"","Measure","Pathogen","Disease","AgeGroup","median","5%","95%"
+"1","Deaths","All gastro pathogens","All Diseases","<5",0.830753265285286,0.388976839041951,1.62386504863227
+"2","Deaths","All gastro pathogens","All Diseases","5-64",6.09711895043739,3.10901516951388,11.4964657614481
+"3","Deaths","All gastro pathogens","All Diseases","65+",29.2531665726818,15.5569115791137,53.1542871514406
+"4","Deaths","All gastro pathogens","All Diseases","All Ages",36.5800710995929,22.7689656894883,61.7246701145141
+"5","Deaths","All gastro pathogens","Gastroenteritis","<5",0.830753265285286,0.388976839041951,1.62386504863227
+"6","Deaths","All gastro pathogens","Gastroenteritis","5-64",6.09711895043739,3.10901516951388,11.4964657614481
+"7","Deaths","All gastro pathogens","Gastroenteritis","65+",29.2531665726818,15.5569115791137,53.1542871514406
+"8","Deaths","All gastro pathogens","Gastroenteritis","All Ages",36.5800710995929,22.7689656894883,61.7246701145141
+"9","Deaths","Campylobacter","All Diseases","<5",0.330260602660901,0.0935247150809397,0.891129592651552
+"10","Deaths","Campylobacter","All Diseases","5-64",2.55893131381326,1.37957789484512,4.07423164356292
+"11","Deaths","Campylobacter","All Diseases","65+",8.75931300229642,4.91750160632971,14.2729013223666
+"12","Deaths","Campylobacter","All Diseases","All Ages",11.7267316121537,7.41306924016746,17.7657472704099
+"13","Deaths","Campylobacter","Campylobacteriosis","<5",0.26096213131287,0.0458543360184054,0.837920984849051
+"14","Deaths","Campylobacter","Campylobacteriosis","5-64",1.38538312932317,0.633633912103924,2.50285167271929
+"15","Deaths","Campylobacter","Campylobacteriosis","65+",1.7222444127387,0.810052039685765,3.31601947135824
+"16","Deaths","Campylobacter","Campylobacteriosis","All Ages",3.54482303931326,2.21103990654285,5.46019342395589
+"17","Deaths","Campylobacter","GBS","<5",0.0125358380994952,0.000145556976610277,0.113014868276563
+"18","Deaths","Campylobacter","GBS","5-64",0.995787539858062,0.402592294619339,2.04180771520068
+"19","Deaths","Campylobacter","GBS","65+",6.44623640651172,2.87509475222645,11.9687187315783
+"20","Deaths","Campylobacter","GBS","All Ages",7.62720616408327,3.87534606596917,13.1058970732639
+"21","Deaths","Campylobacter","IBS","<5",0.0037131583617785,2.99332671032245e-05,0.0414388626992525
+"22","Deaths","Campylobacter","IBS","5-64",0.00552281187260113,3.25843307521443e-05,0.0575253961172998
+"23","Deaths","Campylobacter","IBS","65+",0.314494358723773,0.120485404715963,0.843084146430526
+"24","Deaths","Campylobacter","IBS","All Ages",0.335267119436802,0.137981354122779,0.879306232929541
+"25","Deaths","Campylobacter","ReactiveArthritis","<5",0.0117051424962767,0.000106800922435586,0.107048678888984
+"26","Deaths","Campylobacter","ReactiveArthritis","5-64",0.0174120621441879,0.000104733440385785,0.154636234160059
+"27","Deaths","Campylobacter","ReactiveArthritis","65+",0.0205514731568351,0.00017066635083985,0.18627980598053
+"28","Deaths","Campylobacter","ReactiveArthritis","All Ages",0.0838900181633785,0.01254980228929,0.322789287249887
+"29","Deaths","Escherichia coli (Non-STEC)","All Diseases","<5",0.0110342595591343,0.00012125155569358,0.123175580279839
+"30","Deaths","Escherichia coli (Non-STEC)","All Diseases","5-64",0.389526264723353,0.112640872556735,1.10865211332196
+"31","Deaths","Escherichia coli (Non-STEC)","All Diseases","65+",0.146607625930953,0.0277003727845312,0.575691698029623
+"32","Deaths","Escherichia coli (Non-STEC)","All Diseases","All Ages",0.617551721706789,0.242566666937652,1.39417541315654
+"33","Deaths","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5",0.0110342595591343,0.00012125155569358,0.123175580279839
+"34","Deaths","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64",0.389526264723353,0.112640872556735,1.10865211332196
+"35","Deaths","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+",0.146607625930953,0.0277003727845312,0.575691698029623
+"36","Deaths","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages",0.617551721706789,0.242566666937652,1.39417541315654
+"37","Deaths","Listeria monocytogenes","All Diseases","<5",0.0496308131507951,0.000340875948296386,0.442729366435701
+"38","Deaths","Listeria monocytogenes","All Diseases","5-64",4.40782388504116,2.6838454198669,6.9763039593868
+"39","Deaths","Listeria monocytogenes","All Diseases","65+",7.58767520056881,4.59716769501827,11.4263472898758
+"40","Deaths","Listeria monocytogenes","All Diseases","All Ages",12.1970763630023,8.71439207393439,16.6091045303958
+"41","Deaths","Listeria monocytogenes","Listeriosis","<5",0.0496308131507951,0.000340875948296386,0.442729366435701
+"42","Deaths","Listeria monocytogenes","Listeriosis","5-64",4.40782388504116,2.6838454198669,6.9763039593868
+"43","Deaths","Listeria monocytogenes","Listeriosis","65+",7.58767520056881,4.59716769501827,11.4263472898758
+"44","Deaths","Listeria monocytogenes","Listeriosis","All Ages",12.1970763630023,8.71439207393439,16.6091045303958
+"45","Deaths","Non-typhoidal salmonella","All Diseases","<5",0.525435968890021,0.198089035506341,1.32203913175921
+"46","Deaths","Non-typhoidal salmonella","All Diseases","5-64",3.19137208499099,1.79154407793741,5.32158637896745
+"47","Deaths","Non-typhoidal salmonella","All Diseases","65+",7.64295007809736,4.57430801737207,11.6400047199537
+"48","Deaths","Non-typhoidal salmonella","All Diseases","All Ages",11.6676325020778,8.0457534999807,15.92101309607
+"49","Deaths","Non-typhoidal salmonella","IBS","<5",0.00204443637549883,1.62238726129382e-05,0.0245774490093633
+"50","Deaths","Non-typhoidal salmonella","IBS","5-64",0.0010485305961307,1.00832785278352e-05,0.0147718387000413
+"51","Deaths","Non-typhoidal salmonella","IBS","65+",0.0504778459914159,0.0156973066765224,0.159867895692573
+"52","Deaths","Non-typhoidal salmonella","IBS","All Ages",0.0603872013876922,0.0217212017301899,0.16842230671099
+"53","Deaths","Non-typhoidal salmonella","ReactiveArthritis","<5",0.00807081985800418,9.9876081552551e-05,0.0872251244222
+"54","Deaths","Non-typhoidal salmonella","ReactiveArthritis","5-64",0.00360958769395377,2.40625627872702e-05,0.0445744421658187
+"55","Deaths","Non-typhoidal salmonella","ReactiveArthritis","65+",0.00500407813040684,3.77099629966513e-05,0.0486722842134273
+"56","Deaths","Non-typhoidal salmonella","ReactiveArthritis","All Ages",0.0292983985285453,0.00463591624129661,0.138310889383972
+"57","Deaths","Non-typhoidal salmonella","Salmonellosis","<5",0.498966350264597,0.169573446037085,1.30703685958962
+"58","Deaths","Non-typhoidal salmonella","Salmonellosis","5-64",3.16439943541097,1.78503460847952,5.31738634513229
+"59","Deaths","Non-typhoidal salmonella","Salmonellosis","65+",7.56998628399469,4.49629597653183,11.517968201258
+"60","Deaths","Non-typhoidal salmonella","Salmonellosis","All Ages",11.5509485766586,7.94501870496481,15.7732087270395
+"61","Deaths","Norovirus","All Diseases","<5",0.00710746890665918,4.42067214174498e-05,0.0818768862248737
+"62","Deaths","Norovirus","All Diseases","5-64",0.281002277563511,0.0644414530117237,0.778055721625386
+"63","Deaths","Norovirus","All Diseases","65+",0.455469500276249,0.126615357844363,1.21730206101663
+"64","Deaths","Norovirus","All Diseases","All Ages",0.801926053770827,0.338159767945927,1.69250990159357
+"65","Deaths","Norovirus","Norovirus","<5",0.00710746890665918,4.42067214174498e-05,0.0818768862248737
+"66","Deaths","Norovirus","Norovirus","5-64",0.281002277563511,0.0644414530117237,0.778055721625386
+"67","Deaths","Norovirus","Norovirus","65+",0.455469500276249,0.126615357844363,1.21730206101663
+"68","Deaths","Norovirus","Norovirus","All Ages",0.801926053770827,0.338159767945927,1.69250990159357
+"69","Deaths","Salmonella Typhi","All Diseases","<5",0.00383359080506832,2.59280218654789e-05,0.035200620834418
+"70","Deaths","Salmonella Typhi","All Diseases","5-64",0.00323921901829631,2.33326009250842e-05,0.0358861163099734
+"71","Deaths","Salmonella Typhi","All Diseases","65+",0.00434635443098443,4.37350221574071e-05,0.0421262035533394
+"72","Deaths","Salmonella Typhi","All Diseases","All Ages",0.0204504192358716,0.00299866450367988,0.0856786860633662
+"73","Deaths","Salmonella Typhi","Typhoid Fever","<5",0.00383359080506832,2.59280218654789e-05,0.035200620834418
+"74","Deaths","Salmonella Typhi","Typhoid Fever","5-64",0.00323921901829631,2.33326009250842e-05,0.0358861163099734
+"75","Deaths","Salmonella Typhi","Typhoid Fever","65+",0.00434635443098443,4.37350221574071e-05,0.0421262035533394
+"76","Deaths","Salmonella Typhi","Typhoid Fever","All Ages",0.0204504192358716,0.00299866450367988,0.0856786860633662
+"77","Deaths","Shigella","All Diseases","<5",0.0291656271777073,0.00567760959278506,0.122881622543618
+"78","Deaths","Shigella","All Diseases","5-64",0.0924157836332966,0.0270420665845681,0.246446050130914
+"79","Deaths","Shigella","All Diseases","65+",0.00751524518675518,0.000838192570900236,0.0585858708911714
+"80","Deaths","Shigella","All Diseases","All Ages",0.151332594868003,0.061273999213682,0.31670613252427
+"81","Deaths","Shigella","IBS","<5",3.7510577849578e-05,2.73803155425914e-07,0.000538045169170595
+"82","Deaths","Shigella","IBS","5-64",3.51437294046337e-05,3.02382975083213e-07,0.000546543247589727
+"83","Deaths","Shigella","IBS","65+",0.00092929388046555,0.000212394873853872,0.00380908744676642
+"84","Deaths","Shigella","IBS","All Ages",0.00118879197590863,0.00032855575260131,0.00417708395018839
+"85","Deaths","Shigella","ReactiveArthritis","<5",0.000134347412259961,7.76939959196444e-07,0.0017694962544979
+"86","Deaths","Shigella","ReactiveArthritis","5-64",0.000132176844595433,1.20283687179356e-06,0.00181004982084614
+"87","Deaths","Shigella","ReactiveArthritis","65+",7.02915252543789e-05,4.98139220644946e-07,0.00105051097377387
+"88","Deaths","Shigella","ReactiveArthritis","All Ages",0.000714502003384297,8.9139148791281e-05,0.00346305287551767
+"89","Deaths","Shigella","Shigellosis","<5",0.0287140066424285,0.00502045309044377,0.122869608287182
+"90","Deaths","Shigella","Shigellosis","5-64",0.0919336656629438,0.0269294288396243,0.24449975817087
+"91","Deaths","Shigella","Shigellosis","65+",0.00568244032864228,5.16127016040215e-05,0.0559186641856614
+"92","Deaths","Shigella","Shigellosis","All Ages",0.14935114723111,0.0593012756856737,0.313043858416444
+"93","Deaths","STEC","All Diseases","<5",0.164980016805883,0.0305340048913623,0.521130252723138
+"94","Deaths","STEC","All Diseases","5-64",1.26803094045834,0.599640486953475,2.41499393543196
+"95","Deaths","STEC","All Diseases","65+",0.285440722247887,0.0739317346870824,0.7958090799845
+"96","Deaths","STEC","All Diseases","All Ages",1.83031384117466,1.02910007400586,3.0463609828389
+"97","Deaths","STEC","HUS","<5",0.105701280711717,0.017326230001175,0.391027967270157
+"98","Deaths","STEC","HUS","5-64",1.19960424761782,0.563603329825413,2.32318996441551
+"99","Deaths","STEC","HUS","65+",0.200704974625469,0.0420078943170139,0.65227381804591
+"100","Deaths","STEC","HUS","All Ages",1.61427731931893,0.859333564118408,2.82101974486934
+"101","Deaths","STEC","STEC","<5",0.0279492909463213,0.000274636161723207,0.268322138298488
+"102","Deaths","STEC","STEC","5-64",0.0284378545023838,0.000336468856226666,0.261665246529277
+"103","Deaths","STEC","STEC","65+",0.0330166350427087,0.000437813516997871,0.32751981074005
+"104","Deaths","STEC","STEC","All Ages",0.167609706661562,0.0245334282153099,0.596396917395996
+"105","Deaths","Toxoplasma gondii","All Diseases","<5",0.0128449512990389,0.000112589207185667,0.122281178387637
+"106","Deaths","Toxoplasma gondii","All Diseases","5-64",0.503255205777313,0.157851162803422,1.21890724907505
+"107","Deaths","Toxoplasma gondii","All Diseases","65+",0.332313982742155,0.0961838867628932,0.92154997301476
+"108","Deaths","Toxoplasma gondii","All Diseases","All Ages",0.922183027661703,0.435780366023804,1.77584071643642
+"109","Deaths","Toxoplasma gondii","Toxoplasmosis","<5",0.0128449512990389,0.000112589207185667,0.122281178387637
+"110","Deaths","Toxoplasma gondii","Toxoplasmosis","5-64",0.503255205777313,0.157851162803422,1.21890724907505
+"111","Deaths","Toxoplasma gondii","Toxoplasmosis","65+",0.332313982742155,0.0961838867628932,0.92154997301476
+"112","Deaths","Toxoplasma gondii","Toxoplasmosis","All Ages",0.922183027661703,0.435780366023804,1.77584071643642
+"113","Deaths","Yersinia Enterocolitica","All Diseases","<5",0.0379394234278591,0.00127268060308363,0.307395005829328
+"114","Deaths","Yersinia Enterocolitica","All Diseases","5-64",0.494813821012796,0.151696512059456,1.18612107898841
+"115","Deaths","Yersinia Enterocolitica","All Diseases","65+",0.053038019480191,0.00122694322738988,0.437242656451038
+"116","Deaths","Yersinia Enterocolitica","All Diseases","All Ages",0.682653927111817,0.26976616281868,1.4591236082204
+"117","Deaths","Yersinia Enterocolitica","ReactiveArthritis","<5",0.000716803051024257,5.59771867437458e-06,0.00914867940539616
+"118","Deaths","Yersinia Enterocolitica","ReactiveArthritis","5-64",0.000550455560150406,2.5550769413574e-06,0.00715280245250673
+"119","Deaths","Yersinia Enterocolitica","ReactiveArthritis","65+",0.000734508595773867,3.31626646990625e-06,0.00883500686746016
+"120","Deaths","Yersinia Enterocolitica","ReactiveArthritis","All Ages",0.00403915901268547,0.00054868058846379,0.0166761385689424
+"121","Deaths","Yersinia Enterocolitica","Yersiniosis","<5",0.0355033141865289,0.000321354970477055,0.29983300775723
+"122","Deaths","Yersinia Enterocolitica","Yersiniosis","5-64",0.494035203830887,0.151274328257924,1.18603267987479
+"123","Deaths","Yersinia Enterocolitica","Yersiniosis","65+",0.0511912189040776,0.000404358583892674,0.436765215750354
+"124","Deaths","Yersinia Enterocolitica","Yersiniosis","All Ages",0.677723441293598,0.262075887857275,1.45303611895309
+"125","Hospitalisations","All gastro pathogens","All Diseases","<5",4670.84011053272,2527.33589186986,8130.61578548968
+"126","Hospitalisations","All gastro pathogens","All Diseases","5-64",26457.5919758455,14153.6988359549,47306.946685162
+"127","Hospitalisations","All gastro pathogens","All Diseases","65+",15380.771183704,8095.47088694815,26916.8758701129
+"128","Hospitalisations","All gastro pathogens","All Diseases","All Ages",48211.0936263787,32746.5959555054,71533.0139040992
+"129","Hospitalisations","All gastro pathogens","Gastroenteritis","<5",4670.84011053272,2527.33589186986,8130.61578548968
+"130","Hospitalisations","All gastro pathogens","Gastroenteritis","5-64",26457.5919758455,14153.6988359549,47306.946685162
+"131","Hospitalisations","All gastro pathogens","Gastroenteritis","65+",15380.771183704,8095.47088694815,26916.8758701129
+"132","Hospitalisations","All gastro pathogens","Gastroenteritis","All Ages",48211.0936263787,32746.5959555054,71533.0139040992
+"133","Hospitalisations","Campylobacter","All Diseases","<5",331.205851677035,233.216989211063,434.43167039197
+"134","Hospitalisations","Campylobacter","All Diseases","5-64",5553.50955334376,3844.6285168838,7991.19127296303
+"135","Hospitalisations","Campylobacter","All Diseases","65+",2825.80910581932,2023.05081574086,3842.06406766546
+"136","Hospitalisations","Campylobacter","All Diseases","All Ages",8814.81000560426,6781.7020866212,11526.4546729388
+"137","Hospitalisations","Campylobacter","Campylobacteriosis","<5",258.296489866753,171.537322570988,354.766030805382
+"138","Hospitalisations","Campylobacter","Campylobacteriosis","5-64",3106.73753049523,2028.05407760687,4327.12674054334
+"139","Hospitalisations","Campylobacter","Campylobacteriosis","65+",2205.99194765618,1470.88927539986,3138.97511238018
+"140","Hospitalisations","Campylobacter","Campylobacteriosis","All Ages",5593.94932816558,4318.16849411278,7145.30710110426
+"141","Hospitalisations","Campylobacter","GBS","<5",9.61246636044709,4.70165197797565,19.3804710819332
+"142","Hospitalisations","Campylobacter","GBS","5-64",69.5149887934967,34.3924445046425,138.179970576301
+"143","Hospitalisations","Campylobacter","GBS","65+",19.2631769876598,9.88027262678737,38.7528997127915
+"144","Hospitalisations","Campylobacter","GBS","All Ages",101.73475123748,62.3809197804569,170.884493436594
+"145","Hospitalisations","Campylobacter","IBS","<5",2.72063733003996,1.19855945988804,6.47205938961491
+"146","Hospitalisations","Campylobacter","IBS","5-64",1782.87007495011,816.804411945806,4267.96194490881
+"147","Hospitalisations","Campylobacter","IBS","65+",421.277910699935,205.82039842121,981.840608067153
+"148","Hospitalisations","Campylobacter","IBS","All Ages",2312.66032503419,1209.41062023788,4763.05735292805
+"149","Hospitalisations","Campylobacter","ReactiveArthritis","<5",53.8483727725869,25.6423392455996,96.0860746986195
+"150","Hospitalisations","Campylobacter","ReactiveArthritis","5-64",422.149298676691,247.58317541895,659.256982031523
+"151","Hospitalisations","Campylobacter","ReactiveArthritis","65+",111.872991954383,67.0867329398136,174.825883386532
+"152","Hospitalisations","Campylobacter","ReactiveArthritis","All Ages",595.116028852028,402.201269083301,847.511873438797
+"153","Hospitalisations","Escherichia coli (Non-STEC)","All Diseases","<5",1.47368649277665,0.578882271921859,3.5786949451099
+"154","Hospitalisations","Escherichia coli (Non-STEC)","All Diseases","5-64",20.6724897293949,7.6656950598528,50.9506133058319
+"155","Hospitalisations","Escherichia coli (Non-STEC)","All Diseases","65+",16.1587150566682,6.1218078642328,36.6298183422336
+"156","Hospitalisations","Escherichia coli (Non-STEC)","All Diseases","All Ages",40.7433816595235,20.5113667361983,74.1949615820214
+"157","Hospitalisations","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5",1.47368649277665,0.578882271921859,3.5786949451099
+"158","Hospitalisations","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64",20.6724897293949,7.6656950598528,50.9506133058319
+"159","Hospitalisations","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+",16.1587150566682,6.1218078642328,36.6298183422336
+"160","Hospitalisations","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages",40.7433816595235,20.5113667361983,74.1949615820214
+"161","Hospitalisations","Listeria monocytogenes","All Diseases","<5",9.59750826700624,4.72044256428471,14.7693424000193
+"162","Hospitalisations","Listeria monocytogenes","All Diseases","5-64",29.697297254101,14.9923766053411,43.8145405638236
+"163","Hospitalisations","Listeria monocytogenes","All Diseases","65+",61.1900330956282,31.2261823705105,91.0857470264133
+"164","Hospitalisations","Listeria monocytogenes","All Diseases","All Ages",99.909529661056,65.0395993910847,136.098774233438
+"165","Hospitalisations","Listeria monocytogenes","Listeriosis","<5",9.59750826700624,4.72044256428471,14.7693424000193
+"166","Hospitalisations","Listeria monocytogenes","Listeriosis","5-64",29.697297254101,14.9923766053411,43.8145405638236
+"167","Hospitalisations","Listeria monocytogenes","Listeriosis","65+",61.1900330956282,31.2261823705105,91.0857470264133
+"168","Hospitalisations","Listeria monocytogenes","Listeriosis","All Ages",99.909529661056,65.0395993910847,136.098774233438
+"169","Hospitalisations","Non-typhoidal salmonella","All Diseases","<5",967.22660569308,621.361657865087,1366.53866386978
+"170","Hospitalisations","Non-typhoidal salmonella","All Diseases","5-64",2440.77722138122,1656.41421068031,3526.27858369499
+"171","Hospitalisations","Non-typhoidal salmonella","All Diseases","65+",1005.52064305347,659.192636184969,1410.84049346909
+"172","Hospitalisations","Non-typhoidal salmonella","All Diseases","All Ages",4457.97417063533,3473.91359555206,5674.61765857373
+"173","Hospitalisations","Non-typhoidal salmonella","IBS","<5",1.47943659206689,0.632771558056959,3.92254137505596
+"174","Hospitalisations","Non-typhoidal salmonella","IBS","5-64",360.393283583936,133.990672247234,1092.45686018703
+"175","Hospitalisations","Non-typhoidal salmonella","IBS","65+",70.0061415982951,26.3575982825431,208.526767628724
+"176","Hospitalisations","Non-typhoidal salmonella","IBS","All Ages",451.001557001323,209.390300209186,1201.0146651753
+"177","Hospitalisations","Non-typhoidal salmonella","ReactiveArthritis","<5",37.4961502509945,12.1130363724006,78.639361619071
+"178","Hospitalisations","Non-typhoidal salmonella","ReactiveArthritis","5-64",104.326603644733,27.0669958792789,283.107393120803
+"179","Hospitalisations","Non-typhoidal salmonella","ReactiveArthritis","65+",23.3268497560647,6.04391108897368,61.2881148493339
+"180","Hospitalisations","Non-typhoidal salmonella","ReactiveArthritis","All Ages",176.121191565278,79.9309798241153,354.23930204626
+"181","Hospitalisations","Non-typhoidal salmonella","Salmonellosis","<5",926.183123473504,581.597841381233,1313.01581532063
+"182","Hospitalisations","Non-typhoidal salmonella","Salmonellosis","5-64",1893.7239282801,1199.41765522606,2787.08509797541
+"183","Hospitalisations","Non-typhoidal salmonella","Salmonellosis","65+",889.607381273025,563.934140920809,1288.9203462585
+"184","Hospitalisations","Non-typhoidal salmonella","Salmonellosis","All Ages",3728.83591326997,2867.8457051658,4744.79789634307
+"185","Hospitalisations","Norovirus","All Diseases","<5",458.954507602797,126.874573196516,983.118820274434
+"186","Hospitalisations","Norovirus","All Diseases","5-64",529.627195019744,162.922702297981,1162.63213031889
+"187","Hospitalisations","Norovirus","All Diseases","65+",452.080342828076,124.73839237125,1005.37408048675
+"188","Hospitalisations","Norovirus","All Diseases","All Ages",1540.79832521261,827.577457159114,2395.51411031634
+"189","Hospitalisations","Norovirus","Norovirus","<5",458.954507602797,126.874573196516,983.118820274434
+"190","Hospitalisations","Norovirus","Norovirus","5-64",529.627195019744,162.922702297981,1162.63213031889
+"191","Hospitalisations","Norovirus","Norovirus","65+",452.080342828076,124.73839237125,1005.37408048675
+"192","Hospitalisations","Norovirus","Norovirus","All Ages",1540.79832521261,827.577457159114,2395.51411031634
+"193","Hospitalisations","Salmonella Typhi","All Diseases","<5",3.4734650806397,1.11725682365661,7.42601125403275
+"194","Hospitalisations","Salmonella Typhi","All Diseases","5-64",24.3139358896308,8.35476740920808,55.3233029496469
+"195","Hospitalisations","Salmonella Typhi","All Diseases","65+",0.290090845448553,0.0940597167318553,0.652246640331088
+"196","Hospitalisations","Salmonella Typhi","All Diseases","All Ages",28.6853386395463,12.3012661101958,60.2675038289147
+"197","Hospitalisations","Salmonella Typhi","Typhoid Fever","<5",3.4734650806397,1.11725682365661,7.42601125403275
+"198","Hospitalisations","Salmonella Typhi","Typhoid Fever","5-64",24.3139358896308,8.35476740920808,55.3233029496469
+"199","Hospitalisations","Salmonella Typhi","Typhoid Fever","65+",0.290090845448553,0.0940597167318553,0.652246640331088
+"200","Hospitalisations","Salmonella Typhi","Typhoid Fever","All Ages",28.6853386395463,12.3012661101958,60.2675038289147
+"201","Hospitalisations","Shigella","All Diseases","<5",19.9627033751848,7.51325160217,37.261046498438
+"202","Hospitalisations","Shigella","All Diseases","5-64",85.1506241019719,37.8584738190538,158.290875866498
+"203","Hospitalisations","Shigella","All Diseases","65+",8.87822433828709,4.04113885760181,16.082885948987
+"204","Hospitalisations","Shigella","All Diseases","All Ages",114.815300238688,65.4815424556506,193.399459168202
+"205","Hospitalisations","Shigella","IBS","<5",0.0283962337066182,0.00694777379709101,0.0934271472757962
+"206","Hospitalisations","Shigella","IBS","5-64",13.4883590974768,3.36554170015885,53.4810143802002
+"207","Hospitalisations","Shigella","IBS","65+",1.35513553931869,0.374977732068692,4.88317161721255
+"208","Hospitalisations","Shigella","IBS","All Ages",15.2837438457315,4.76831993047352,55.6466967976986
+"209","Hospitalisations","Shigella","ReactiveArthritis","<5",0.591723729282842,0.174346118604009,1.78479395536516
+"210","Hospitalisations","Shigella","ReactiveArthritis","5-64",3.53036360223839,0.890340746933523,11.4478160415328
+"211","Hospitalisations","Shigella","ReactiveArthritis","65+",0.375865721656766,0.11029298107483,1.25508667341668
+"212","Hospitalisations","Shigella","ReactiveArthritis","All Ages",4.85934527292088,1.85018162090723,12.7746788401052
+"213","Hospitalisations","Shigella","Shigellosis","<5",19.0719398334804,6.7135632134455,36.4038003496342
+"214","Hospitalisations","Shigella","Shigellosis","5-64",63.3669632849871,20.8365763072261,126.35084593169
+"215","Hospitalisations","Shigella","Shigellosis","65+",6.61192551271819,2.26172988751441,12.8988163791654
+"216","Hospitalisations","Shigella","Shigellosis","All Ages",90.2387412304914,46.6730937800337,153.187027544893
+"217","Hospitalisations","STEC","All Diseases","<5",12.4385032355738,4.6206011839282,29.391582483908
+"218","Hospitalisations","STEC","All Diseases","5-64",61.4181490243873,27.6553302596978,146.222304391002
+"219","Hospitalisations","STEC","All Diseases","65+",15.86663231995,7.06604662747918,35.6346787001118
+"220","Hospitalisations","STEC","All Diseases","All Ages",93.4206624620391,53.6372942739373,178.194628685746
+"221","Hospitalisations","STEC","HUS","<5",12.4385032355738,4.6206011839282,29.391582483908
+"222","Hospitalisations","STEC","HUS","5-64",53.890313848038,20.3668860439764,137.287460135679
+"223","Hospitalisations","STEC","HUS","65+",13.9781277301123,5.23140186135972,33.4503633448035
+"224","Hospitalisations","STEC","HUS","All Ages",84.1331116232116,44.690409913434,167.0841193175
+"225","Hospitalisations","STEC","STEC","<5",0,0,0
+"226","Hospitalisations","STEC","STEC","5-64",7.122766015392,3.56139488570833,11.986868501198
+"227","Hospitalisations","STEC","STEC","65+",1.83204731705481,0.986159163233885,3.00437372259328
+"228","Hospitalisations","STEC","STEC","All Ages",8.99573077005345,5.29428940308386,13.9514197225508
+"229","Hospitalisations","Toxoplasma gondii","All Diseases","<5",1.34419878879421,0.493178399666446,2.62177456192997
+"230","Hospitalisations","Toxoplasma gondii","All Diseases","5-64",25.8139001128792,9.76515847416798,48.5065822232949
+"231","Hospitalisations","Toxoplasma gondii","All Diseases","65+",8.38425004026149,3.54311288564901,15.7785830105106
+"232","Hospitalisations","Toxoplasma gondii","All Diseases","All Ages",36.0657954953213,19.0892948151702,59.814135065748
+"233","Hospitalisations","Toxoplasma gondii","Toxoplasmosis","<5",1.34419878879421,0.493178399666446,2.62177456192997
+"234","Hospitalisations","Toxoplasma gondii","Toxoplasmosis","5-64",25.8139001128792,9.76515847416798,48.5065822232949
+"235","Hospitalisations","Toxoplasma gondii","Toxoplasmosis","65+",8.38425004026149,3.54311288564901,15.7785830105106
+"236","Hospitalisations","Toxoplasma gondii","Toxoplasmosis","All Ages",36.0657954953213,19.0892948151702,59.814135065748
+"237","Hospitalisations","Yersinia Enterocolitica","All Diseases","<5",10.2631463454407,6.24345504254347,16.6235980136079
+"238","Hospitalisations","Yersinia Enterocolitica","All Diseases","5-64",38.1841226957196,23.5097897920092,67.0864463210682
+"239","Hospitalisations","Yersinia Enterocolitica","All Diseases","65+",15.5801697407707,9.89074937296371,24.054343063034
+"240","Hospitalisations","Yersinia Enterocolitica","All Diseases","All Ages",64.8529962931746,47.5342600875598,95.9093434819573
+"241","Hospitalisations","Yersinia Enterocolitica","ReactiveArthritis","<5",3.5386643515777,1.02488019435233,9.60821364452836
+"242","Hospitalisations","Yersinia Enterocolitica","ReactiveArthritis","5-64",16.0734347054991,4.66214140786976,43.8839834876432
+"243","Hospitalisations","Yersinia Enterocolitica","ReactiveArthritis","65+",4.16204670728278,1.3244723008519,12.3035805919399
+"244","Hospitalisations","Yersinia Enterocolitica","ReactiveArthritis","All Ages",25.7136248117578,11.8661233017764,55.8972084384429
+"245","Hospitalisations","Yersinia Enterocolitica","Yersiniosis","<5",6.43377963064271,4.16291279881236,9.2974278812285
+"246","Hospitalisations","Yersinia Enterocolitica","Yersiniosis","5-64",21.3386791063414,13.656940393485,30.5442451241431
+"247","Hospitalisations","Yersinia Enterocolitica","Yersiniosis","65+",10.8390612026824,6.61975258192451,15.5349747428639
+"248","Hospitalisations","Yersinia Enterocolitica","Yersiniosis","All Ages",38.6531755316003,29.8265193437569,49.3842175904166
+"249","Cases","All gastro pathogens","All Diseases","<5",287166.126603549,152310.798321019,465186.108780712
+"250","Cases","All gastro pathogens","All Diseases","5-64",3726263.36571757,2030024.20135957,5947440.85585312
+"251","Cases","All gastro pathogens","All Diseases","65+",742378.580959023,423345.127011499,1208753.4257151
+"252","Cases","All gastro pathogens","All Diseases","All Ages",4851825.86159176,3074903.23672268,7022985.42999316
+"253","Cases","All gastro pathogens","Gastroenteritis","<5",287166.126603549,152310.798321019,465186.108780712
+"254","Cases","All gastro pathogens","Gastroenteritis","5-64",3726263.36571757,2030024.20135957,5947440.85585312
+"255","Cases","All gastro pathogens","Gastroenteritis","65+",742378.580959023,423345.127011499,1208753.4257151
+"256","Cases","All gastro pathogens","Gastroenteritis","All Ages",4851825.86159176,3074903.23672268,7022985.42999316
+"257","Cases","Campylobacter","All Diseases","<5",30049.7114167816,17994.3777960178,49071.0816224826
+"258","Cases","Campylobacter","All Diseases","5-64",214265.434704249,134454.945897431,343085.593349088
+"259","Cases","Campylobacter","All Diseases","65+",61668.9812313994,36979.2937014936,98219.8598586551
+"260","Cases","Campylobacter","All Diseases","All Ages",311329.899443857,222507.403676265,444646.14097315
+"261","Cases","Campylobacter","Campylobacteriosis","<5",25736.8398411568,15289.5915221259,41716.7519017903
+"262","Cases","Campylobacter","Campylobacteriosis","5-64",183619.092041944,115344.650094926,294030.810621226
+"263","Cases","Campylobacter","Campylobacteriosis","65+",52982.8505397154,31828.7734005336,84728.7216183289
+"264","Cases","Campylobacter","Campylobacteriosis","All Ages",267620.522329563,191973.032931704,380186.109409294
+"265","Cases","Campylobacter","GBS","<5",9.61246636044709,4.70165197797565,19.3804710819332
+"266","Cases","Campylobacter","GBS","5-64",69.5149887934967,34.3924445046425,138.179970576301
+"267","Cases","Campylobacter","GBS","65+",19.2631769876598,9.88027262678737,38.7528997127915
+"268","Cases","Campylobacter","GBS","All Ages",101.73475123748,62.3809197804569,170.884493436594
+"269","Cases","Campylobacter","IBS","<5",2286.73829282241,1333.32896491206,3737.13198921195
+"270","Cases","Campylobacter","IBS","5-64",16273.9746573197,9682.30633613228,26133.7712303235
+"271","Cases","Campylobacter","IBS","65+",4618.2338019149,2739.29718773639,7669.59231463371
+"272","Cases","Campylobacter","IBS","All Ages",23521.5038254907,16427.6103605062,33780.9774820797
+"273","Cases","Campylobacter","ReactiveArthritis","<5",1904.54995781578,895.102495052319,3812.4081387461
+"274","Cases","Campylobacter","ReactiveArthritis","5-64",13944.504909507,6271.56852437235,28609.7846728171
+"275","Cases","Campylobacter","ReactiveArthritis","65+",3931.35166292242,1825.6689390265,7582.97356901311
+"276","Cases","Campylobacter","ReactiveArthritis","All Ages",20482.0352348121,12037.5816947466,34711.4091578112
+"277","Cases","Escherichia coli (Non-STEC)","All Diseases","<5",19462.8541402448,7462.7199941249,44487.3983851655
+"278","Cases","Escherichia coli (Non-STEC)","All Diseases","5-64",237490.432556923,94005.8489694304,563631.439807327
+"279","Cases","Escherichia coli (Non-STEC)","All Diseases","65+",50051.2901138948,18216.5848949129,112635.158929988
+"280","Cases","Escherichia coli (Non-STEC)","All Diseases","All Ages",319562.245920309,158747.936179517,627036.719325212
+"281","Cases","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5",19462.8541402448,7462.7199941249,44487.3983851655
+"282","Cases","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64",237490.432556923,94005.8489694304,563631.439807327
+"283","Cases","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+",50051.2901138948,18216.5848949129,112635.158929988
+"284","Cases","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages",319562.245920309,158747.936179517,627036.719325212
+"285","Cases","Listeria monocytogenes","All Diseases","<5",9.59750826700624,4.72044256428471,14.7693424000193
+"286","Cases","Listeria monocytogenes","All Diseases","5-64",29.697297254101,14.9923766053411,43.8145405638236
+"287","Cases","Listeria monocytogenes","All Diseases","65+",61.1900330956282,31.2261823705105,91.0857470264133
+"288","Cases","Listeria monocytogenes","All Diseases","All Ages",99.909529661056,65.0395993910847,136.098774233438
+"289","Cases","Listeria monocytogenes","Listeriosis","<5",9.59750826700624,4.72044256428471,14.7693424000193
+"290","Cases","Listeria monocytogenes","Listeriosis","5-64",29.697297254101,14.9923766053411,43.8145405638236
+"291","Cases","Listeria monocytogenes","Listeriosis","65+",61.1900330956282,31.2261823705105,91.0857470264133
+"292","Cases","Listeria monocytogenes","Listeriosis","All Ages",99.909529661056,65.0395993910847,136.098774233438
+"293","Cases","Non-typhoidal salmonella","All Diseases","<5",17493.6702625565,9023.88122499827,30985.0469327683
+"294","Cases","Non-typhoidal salmonella","All Diseases","5-64",45901.5271433025,24390.653910928,77834.8411240023
+"295","Cases","Non-typhoidal salmonella","All Diseases","65+",9977.5041891116,5812.2915510791,18148.7708664849
+"296","Cases","Non-typhoidal salmonella","All Diseases","All Ages",74554.9237588781,51221.7393352058,110456.058760078
+"297","Cases","Non-typhoidal salmonella","IBS","<5",1294.90090807112,655.694230004549,2331.40780250888
+"298","Cases","Non-typhoidal salmonella","IBS","5-64",3378.59457459517,1763.23111095576,5900.68510076064
+"299","Cases","Non-typhoidal salmonella","IBS","65+",741.422256495574,415.143873960937,1357.14818734063
+"300","Cases","Non-typhoidal salmonella","IBS","All Ages",5518.63993505628,3725.18484337002,8245.84827401066
+"301","Cases","Non-typhoidal salmonella","ReactiveArthritis","<5",1398.59173163609,360.889357436601,3344.71817678508
+"302","Cases","Non-typhoidal salmonella","ReactiveArthritis","5-64",3440.0070745928,946.261635961726,8338.89308198297
+"303","Cases","Non-typhoidal salmonella","ReactiveArthritis","65+",829.260474992482,209.241237416221,1983.98785097531
+"304","Cases","Non-typhoidal salmonella","ReactiveArthritis","All Ages",5987.76912658517,2795.51902505,11253.630159265
+"305","Cases","Non-typhoidal salmonella","Salmonellosis","<5",14716.1463683926,7660.57870391413,26157.397813881
+"306","Cases","Non-typhoidal salmonella","Salmonellosis","5-64",38441.6954582623,20471.8603397587,66190.4402936375
+"307","Cases","Non-typhoidal salmonella","Salmonellosis","65+",8367.20491095086,4864.55968901568,14740.0212010387
+"308","Cases","Non-typhoidal salmonella","Salmonellosis","All Ages",62863.0783781405,43351.3551403028,93408.5110480897
+"309","Cases","Norovirus","All Diseases","<5",20581.1735879574,5487.75533954888,42329.8247221475
+"310","Cases","Norovirus","All Diseases","5-64",262343.934740107,69635.3352797625,525737.572062427
+"311","Cases","Norovirus","All Diseases","65+",54277.9996857661,14416.7216644516,105842.617365036
+"312","Cases","Norovirus","All Diseases","All Ages",339827.21862173,140978.147514689,605928.434601056
+"313","Cases","Norovirus","Norovirus","<5",20581.1735879574,5487.75533954888,42329.8247221475
+"314","Cases","Norovirus","Norovirus","5-64",262343.934740107,69635.3352797625,525737.572062427
+"315","Cases","Norovirus","Norovirus","65+",54277.9996857661,14416.7216644516,105842.617365036
+"316","Cases","Norovirus","Norovirus","All Ages",339827.21862173,140978.147514689,605928.434601056
+"317","Cases","Salmonella Typhi","All Diseases","<5",3.4734650806397,1.11725682365661,7.42601125403275
+"318","Cases","Salmonella Typhi","All Diseases","5-64",24.3139358896308,8.35476740920808,55.3233029496469
+"319","Cases","Salmonella Typhi","All Diseases","65+",0.290090845448553,0.0940597167318553,0.652246640331088
+"320","Cases","Salmonella Typhi","All Diseases","All Ages",28.6853386395463,12.3012661101958,60.2675038289147
+"321","Cases","Salmonella Typhi","Typhoid Fever","<5",3.4734650806397,1.11725682365661,7.42601125403275
+"322","Cases","Salmonella Typhi","Typhoid Fever","5-64",24.3139358896308,8.35476740920808,55.3233029496469
+"323","Cases","Salmonella Typhi","Typhoid Fever","65+",0.290090845448553,0.0940597167318553,0.652246640331088
+"324","Cases","Salmonella Typhi","Typhoid Fever","All Ages",28.6853386395463,12.3012661101958,60.2675038289147
+"325","Cases","Shigella","All Diseases","<5",315.061561243335,116.781455072687,715.033813324103
+"326","Cases","Shigella","All Diseases","5-64",1725.38780338798,565.627662400716,4138.69810368716
+"327","Cases","Shigella","All Diseases","65+",194.461252719454,66.5268582635781,447.335029590722
+"328","Cases","Shigella","All Diseases","All Ages",2315.30367991906,1041.31595475059,4808.00625878844
+"329","Cases","Shigella","IBS","<5",23.7914509790303,8.62603206490076,55.5420944746841
+"330","Cases","Shigella","IBS","5-64",128.382325169655,41.5806975303909,317.533722937735
+"331","Cases","Shigella","IBS","65+",14.7582553207908,4.83945654612247,34.1819629455006
+"332","Cases","Shigella","IBS","All Ages",171.793583441249,77.1645839424756,360.542278494237
+"333","Cases","Shigella","ReactiveArthritis","<5",22.4103402395425,7.70378866121966,51.5189429778229
+"334","Cases","Shigella","ReactiveArthritis","5-64",122.145373837159,39.4640204801512,301.293553836634
+"335","Cases","Shigella","ReactiveArthritis","65+",13.5980903908599,4.53900732323832,32.8175912229354
+"336","Cases","Shigella","ReactiveArthritis","All Ages",161.809091266001,73.1554286400301,349.104779859982
+"337","Cases","Shigella","Shigellosis","<5",267.70344362096,98.3058927372792,614.667910080488
+"338","Cases","Shigella","Shigellosis","5-64",1475.89022614185,477.05303611051,3521.84419631515
+"339","Cases","Shigella","Shigellosis","65+",165.941574430896,56.9005956519761,377.92796682157
+"340","Cases","Shigella","Shigellosis","All Ages",1978.4455161483,892.174897222818,4119.82454865947
+"341","Cases","STEC","All Diseases","<5",422.056762551667,177.950237794598,945.192230354159
+"342","Cases","STEC","All Diseases","5-64",1883.61647550245,792.619597223874,4034.55966530562
+"343","Cases","STEC","All Diseases","65+",467.548723500869,217.618498756259,1011.09206146333
+"344","Cases","STEC","All Diseases","All Ages",2891.72036879553,1619.78625558345,5030.50138781321
+"345","Cases","STEC","HUS","<5",12.4385032355738,4.6206011839282,29.391582483908
+"346","Cases","STEC","HUS","5-64",53.890313848038,20.3668860439764,137.287460135679
+"347","Cases","STEC","HUS","65+",13.9781277301123,5.23140186135972,33.4503633448035
+"348","Cases","STEC","HUS","All Ages",84.1331116232116,44.690409913434,167.0841193175
+"349","Cases","STEC","STEC","<5",409.497437620319,172.484207219905,914.347917082352
+"350","Cases","STEC","STEC","5-64",1840.49103832063,768.391428856875,3921.7997451477
+"351","Cases","STEC","STEC","65+",452.790489840769,212.522512935111,966.396045693525
+"352","Cases","STEC","STEC","All Ages",2801.71516527232,1569.1747146268,4891.37058585441
+"353","Cases","Toxoplasma gondii","All Diseases","<5",2736.00046097166,1024.43717387185,5016.5617586541
+"354","Cases","Toxoplasma gondii","All Diseases","5-64",12235.9839830627,5035.22833327199,22034.1678732089
+"355","Cases","Toxoplasma gondii","All Diseases","65+",452.251571653257,126.185861159658,865.838982216568
+"356","Cases","Toxoplasma gondii","All Diseases","All Ages",15669.80467934,8090.75348181133,25329.317178411
+"357","Cases","Toxoplasma gondii","Toxoplasmosis","<5",2736.00046097166,1024.43717387185,5016.5617586541
+"358","Cases","Toxoplasma gondii","Toxoplasmosis","5-64",12235.9839830627,5035.22833327199,22034.1678732089
+"359","Cases","Toxoplasma gondii","Toxoplasmosis","65+",452.251571653257,126.185861159658,865.838982216568
+"360","Cases","Toxoplasma gondii","Toxoplasmosis","All Ages",15669.80467934,8090.75348181133,25329.317178411
+"361","Cases","Yersinia Enterocolitica","All Diseases","<5",1277.27908333747,721.059925271371,2236.28173132707
+"362","Cases","Yersinia Enterocolitica","All Diseases","5-64",5326.13750741626,2902.50225827573,9756.06813057846
+"363","Cases","Yersinia Enterocolitica","All Diseases","65+",1489.01291249019,817.143932860748,2543.22738122497
+"364","Cases","Yersinia Enterocolitica","All Diseases","All Ages",8231.78511853447,5545.05953685116,12750.199625791
+"365","Cases","Yersinia Enterocolitica","ReactiveArthritis","<5",133.398488445941,45.5442272986302,278.475959048906
+"366","Cases","Yersinia Enterocolitica","ReactiveArthritis","5-64",528.036427781686,190.976034591829,1255.59165724674
+"367","Cases","Yersinia Enterocolitica","ReactiveArthritis","65+",149.550462812951,53.9833619958449,340.569226612485
+"368","Cases","Yersinia Enterocolitica","ReactiveArthritis","All Ages",857.107878996261,455.690523179738,1551.55862648512
+"369","Cases","Yersinia Enterocolitica","Yersiniosis","<5",1140.08829950929,645.619666795671,2004.37008632703
+"370","Cases","Yersinia Enterocolitica","Yersiniosis","5-64",4764.12662187113,2652.53326115019,8612.23740650816
+"371","Cases","Yersinia Enterocolitica","Yersiniosis","65+",1343.63267254799,727.332017108391,2251.61526370009
+"372","Cases","Yersinia Enterocolitica","Yersiniosis","All Ages",7385.00310670069,4997.60073933787,11513.2404188149

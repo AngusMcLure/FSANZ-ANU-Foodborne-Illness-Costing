@@ -127,7 +127,7 @@ getCasesStateAgeGroup <- function(){
     pivot_longer(-c(Year, State), names_sep = 1, names_to = c("Sex", "AgeGroup")) %>%
     group_by(Year, State, AgeGroup) %>%
     summarise(Count = sum(value)) %>%
-    mutate(Disease = "Yersinia Enterocolitica")
+    mutate(Disease = "Yersiniosis")
 
   STEC <- read.csv("./Data/STEC-SouthAustralia2013-2015.csv") %>%
     mutate(State = "SA",

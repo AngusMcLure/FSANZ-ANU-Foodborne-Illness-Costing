@@ -53,7 +53,7 @@ TotalOptions <- paste0("Total.",ProductivityOptions)
 
 EpiMeasures <- unique(EpiTable$Measure)
 Measures <- c(setdiff(unique(CostTable$CostItem),c(ProductivityOptions,TotalOptions)), "Lost Productivity", "Total")
-PathogenNames <- c(setdiff(unique(EpiTable$Pathogen), "All Pathogens"),"All Pathogens")
+PathogenNames <- unique(EpiTable$Pathogen)
 Diseases <- unique(EpiTable$Disease)
 CostCategories <- c(setdiff(unique(CostTableSummaries$CostCategory), c(ProductivityOptions, paste0('Total.',ProductivityOptions))), "Lost Productivity", "Total")
 AgeGroups <- unique(EpiTable$AgeGroup)
@@ -180,13 +180,18 @@ ui <- fluidPage(
 
 server <- function(input, output) {
 
-  output$EpiDT = DT::renderDataTable({
-    EpiTable %>%
-      subset(Measure %in% input$EpiMeasures &
-               AgeGroup %in% input$AgeGroups1 &
-               Pathogen %in% input$Pathogen1 &
-               Disease %in% input$Disease1)
-  }, rownames = FALSE)
+  output$EpiDT = DT::renderDataTable(EpiTable %>%
+                                       subset(Measure %in% input$EpiMeasures &
+                                                AgeGroup %in% input$AgeGroups1 &
+                                                Pathogen %in% input$Pathogen1 &
+                                                Disease %in% input$Disease1),
+                                     rownames = FALSE,
+                                     server = FALSE,
+                                     extensions = c("Buttons"),
+                                     options = list(dom = 'Bfrtip',
+                                                    buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+                                                    )
+                                     )
   output$SummaryDT = DT::renderDataTable({
     CostTableSummaries %>%
       mutate(`Cost Category` = if_else(CostCategory == input$Productivity.Summary,
@@ -198,7 +203,7 @@ server <- function(input, output) {
                Pathogen == input$Pathogen.Summary &
                Disease == input$Disease.Summary) %>%
       select(`Cost Category`, `Cost (thousands AUD)`,`90% CI`) %>%
-      DT::datatable(rownames = FALSE, options = list(order = list(2, 'asc'))) %>%
+      DT::datatable(rownames = FALSE,options = list(order = list(2, 'asc'))) %>%
       DT::formatCurrency(columns = "Cost (thousands AUD)", currency = "", interval = 3, mark = ",", digits = 0)
   })
   output$ComparisonDT = DT::renderDataTable({
@@ -213,10 +218,15 @@ server <- function(input, output) {
                Disease %in% input$Disease) %>%
       rename(`Age group` = AgeGroup,
              `Cost Item` = CostItem) %>%
-      DT::datatable(rownames = FALSE) %>%
+      DT::datatable(rownames = FALSE,
+                    extensions = c("Buttons"),
+                    options = list(dom = 'Bfrtip',
+                                   buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))
+                    ) %>%
       DT::formatCurrency(columns = "Cost (thousands AUD)", currency = "", interval = 3, mark = ",", digits = 0)
-  })
-
+  },
+  server = FALSE
+  )
 }
 
 shinyApp(ui, server)

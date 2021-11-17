@@ -2,7 +2,7 @@ library(DT)
 library(shiny)
 
 source("./R/Trial Script.R")
-DiseaseNames <- names(DiseaseAssumptions)
+DiseaseNames <- names(PathogenAssumptions)
 
 Years <- intersect(NNDSSIncidenceAgegroup$Year, AusPopAgegroup$Year)
 Measures <- c("Domestic", "Foodborne",
@@ -71,7 +71,7 @@ ui <- fluidPage(
 server <- function(input, output) {
 
   output$mytable1 = shiny::renderTable({
-    estimateIncidence(DiseaseAssumptions[[input$Disease]],
+    estimateIncidence(PathogenAssumptions[[input$Disease]],
                       gastroRate = gastroRate,
                       population = subset(AusPopAgegroup,
                                           Year == input$Year &
@@ -93,7 +93,7 @@ server <- function(input, output) {
     cbind(Combinations,
           pmap_df(Combinations,
                   function(Disease, Year, AgeGroup){
-                    estimateIncidence(DiseaseAssumptions[[Disease]],
+                    estimateIncidence(PathogenAssumptions[[Disease]],
                                       gastroRate = gastroRate,
                                       population = subset(AusPopAgegroup,
                                                           Year == Year &
