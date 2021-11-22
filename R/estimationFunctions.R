@@ -1,28 +1,52 @@
 estimateIncidence <- function(disease, ndraws = 10^6,
                               gastroRate = NULL, notifications = NULL,
-                              population = NULL, minAge = NULL, maxAge = NULL){
+                              population = NULL){
   #abbreviate
   d <- disease
   n <- ndraws
 
+  ageGroups = c("<5","5-64","65+")
+  names(ageGroups) <- ageGroups
+
   if(d$caseMethod == 'Notifications' && is.null(notifications)) stop("Notification numbers must be supplied for estimates from notifiable diseases")
 
-  if(d$caseMethod != "Notifications") population <- population[(minAge+1):maxAge]
+  draws <- switch(d$caseMethod,
+                  Notifications = draw(d$underreporting, n) * draw(d$domestic, n),
+                  GastroFraction = draw(gastroRate, n) * draw(d$gastroFraction, n),
+                  Seroprevalence = draw(d$FOI, n))
+  foodborne <- draw(d$foodborne, n)
+  if(!is.null(d$symptomatic)){
+    symptomatic <- draw(d$symptomatic, n)
+  }else{
+    symptomatic <- 1
+  }
 
-  domestic <- switch(d$caseMethod,
-                     Notifications = notifications * draw(d$underreporting, n) * draw(d$domestic, n),
-                     GastroFraction = sum(population) * draw(gastroRate, n) * draw(d$gastroFraction, n),
-                     Seroprevalence = {
-                       foi <- draw(d$FOI, ndraws)
-                       as.numeric(map(foi,~{
-                         S <- exp(-.x * (minAge:maxAge))
-                         sum(population * (S[1:(maxAge-minAge)] - S[1+(1:(maxAge-minAge))]))
-                       }))
-                     })
-  if(!is.null(d$symptomatic)) domestic <- domestic * draw(d$symptomatic, ndraws)
+  map(ageGroups, function(.a){
+    minAge <- switch(.a, `<5` = 0, `5-64` = 5,`65+` = 65)
+    maxAge <-  switch(.a, `<5` = 5, `5-64` = 65,`65+` = 101)
+    if(d$caseMethod != "Notifications") population <- population[(minAge+1):maxAge]
+    incidence <- switch(d$caseMethod,
+                        Notifications = notifications[[.a]] * draws * foodborne * symptomatic,
+                        GastroFraction = sum(population) * draws * foodborne * symptomatic,
+                        Seroprevalence = {
+                          as.numeric(map(draws,~{
+                            S <- exp(-.x * (minAge:maxAge))
+                            sum(population * (S[1:(maxAge-minAge)] - S[1+(1:(maxAge-minAge))]))
+                          })) * symptomatic * foodborne
+                        })
+    incidence
+  })
+}
 
-  foodborne <- domestic * draw(d$foodborne, n)
-  foodborne
+estimateSequelae <- function(pathogen, initialCases){
+  ageGroups = c("<5","5-64","65+")
+  names(ageGroups) <- ageGroups
+
+  map(pathogen[["sequelae"]],function(.s){
+    map(ageGroups,function(.a){
+      draw(.s, ndraws) * initialCases[[.a]]
+    })
+  })
 }
 
 
@@ -45,18 +69,13 @@ estimateHosp <- function(disease,
   out
 }
 
-# estimateDeaths <- function(disease, ageGroup, ndraws = 10^6, reports = NULL){
-#   if(is.null(reports)){ #if deaths aren't provided use the population adjusted
-#
-#   }
-# }
-
 # estimateGP, estimateED, estimateSequelae, esimateMeds, estimateTests can all be generalised by a single function
 
 estimateGeneric <- function(items, ndraws = 10^6, incidence){
   if(class(items) != 'list') stop('items must be a list')
   n <- ndraws
   if(length(incidence) != 1 & length(incidence) != n){
+    print(incidence)
     stop('The length of incidence should either be 1 or equal to ndraws')
   }
   map(items, ~{draw(.x, n) * incidence})
@@ -71,8 +90,6 @@ estimateMeds <- function(disease, ageGroup, ndraws = 10^6, incidence){
                   ndraws = ndraws, incidence = incidence)
 }
 estimateTests <- function(disease, ageGroup, ndraws = 10^6, incidence){
-  print(incidence)
-  print(class(incidence))
   estimateGeneric(c(disease[["tests"]][["AllAges"]], disease[["tests"]][[ageGroup]]),
                   ndraws = ndraws, incidence = incidence)
 }
@@ -215,31 +232,23 @@ makeIncidenceList <- function(year, pathogens, ndraws = 10^6, gastroRate){
 
   Initial <- map(pathogens,
                  function(.p){
-                   out <- list(map(ageGroups,
-                                      function(.a){
-                                        minAge <- switch(.a, `<5` = 0, `5-64` = 5,`65+` = 65, stop('invalid age group'))
-                                        maxAge <-  switch(.a, `<5` = 5, `5-64` = 65,`65+` = 101, stop('invalid age group'))
-                                        if(.p$caseMethod == "Notifications"){
-                                          notifications <- subset(NotificationsAgeGroup,Disease == .p$name & Year == year & AgeGroup == .a)$Cases
-                                          if(length(notifications) == 0)stop('No notifications available for for year ', year, ', agegroup ', .a, ', disease ', .p$name)
-                                          else if(length(notifications) > 1)stop('More than one number found for notifications for year ', year, ', agegroup ', .a, ', disease ', .p$name)
-                                        } else notifications <- NULL
-                                        estimateIncidence(.p,ndraws = ndraws, notifications = notifications,
-                                                          population = subset(AusPopSingleYear, Year == year)$Persons,
-                                                          minAge = minAge,maxAge = maxAge, gastroRate = gastroRate)
+                   if(.p$caseMethod == "Notifications"){
+                     ntfcs <- subset(NotificationsAgeGroup,Disease == .p$name & Year == year & AgeGroup %in% ageGroups)
+                     if(nrow(ntfcs) == 0)stop('No notifications available for for year ', year, ', disease ', .p$name)
+                     else if(nrow(ntfcs) > length(ageGroups))stop('More than one number found for notifications for year ', year, ', disease ', .p$name)
+                     notifications <- as.list(ntfcs$Cases)
+                     names(notifications) <- ntfcs$AgeGroup
+                   } else notifications <- NULL
+                   out <- estimateIncidence(.p,ndraws = ndraws, notifications = notifications,
+                                            population = subset(AusPopSingleYear, Year == year)$Persons,
+                                            gastroRate = gastroRate)
 
-                                      })
-                   )
-                 names(out) <- .p$name
-                 out
+                   out <- list(out)
+                   names(out) <- .p$name
+                   out
                  })
-  Sequel <- map(pathogens,function(.p){
-    map(.p[["sequelae"]],function(.s){
-      map(ageGroups,function(.a){
-        draw(.s, ndraws) * Initial[[.p$pathogen]][[.p$name]][[.a]]
-      })
-    })
-  })
+  Sequel <- map(pathogens,
+                function(.p){estimateSequelae(.p,Initial[[.p$pathogen]][[.p$name]])})
 
   #combine
   imap(pathogens, ~c(Initial[[.y]], Sequel[[.y]]))

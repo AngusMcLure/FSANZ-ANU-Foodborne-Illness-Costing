@@ -155,7 +155,7 @@ disease <- function(
 
 
   #Check hospMethod
-  AllowedHospMethods <- c("AIHW", "AllCases")
+  AllowedHospMethods <- c("AIHW", "AllCases","CaseFraction")
   if(!(hospMethod %in% AllowedHospMethods)){
     stop(hospMethod, " is not a valid value for argument hospMethod.",
          "There are two options for estimating hospitalisations: ",
