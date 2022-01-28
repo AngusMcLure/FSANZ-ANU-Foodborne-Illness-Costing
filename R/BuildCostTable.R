@@ -5,6 +5,7 @@ source("./Data/Diseases.R")
 source("./R/loadData.R")
 source("./R/estimationFunctions.R")
 
+
 #Load all the data and assumptions
 NNDSSIncidenceAgegroup <- getCasesNNDSSAgeGroup() %>% subset(Disease != "STEC")
 StateIncidenceAgeGroup <- getCasesStateAgeGroup()
@@ -42,6 +43,51 @@ DeathList <- makeDeathList(2019,
                            pathogens = PathogenAssumptions,
                            ndraws = ndraws)
 CostList <- makeCostList(2019, PathogenAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
+
+#Note this includes all sequelae for the purpose of counting costs, but only the initial cases for the purpose of counting cases.
+CostPerCase <- merge(CostList %>%
+                       rapply(enquote, how="unlist") %>%
+                       lapply(eval) %>%
+                       as.data.frame(check.names = F) %>%
+                       mutate(Draw = row.names(.)) %>%
+                       pivot_longer(-Draw, names_sep = "\\.",
+                                    names_to = c("Pathogen", "Disease","AgeGroup","CostItem")) %>%
+                       subset(CostItem == "TotalHumanCapital") %>%
+                       group_by(.,Draw, Pathogen) %>%
+                       summarise(Cost = sum(value)),
+                     IncidenceList %>%
+                       rapply(enquote, how="unlist") %>%
+                       lapply(eval) %>%
+                       as.data.frame(check.names = F) %>%
+                       mutate(Draw = row.names(.)) %>%
+                       pivot_longer(-Draw, names_sep = "\\.",
+                                    names_to = c("Pathogen", "Disease","AgeGroup")) %>%
+                       subset(!(Disease %in% names(SequelaeAssumptions))) %>%
+                       group_by(.,Draw, Pathogen) %>%
+                       summarise(Cases = sum(value))) %>%
+  mutate(CostPerCase = Cost/Cases) %>%
+  group_by(Pathogen) %>%
+  summarise(median = median(CostPerCase),
+            `5%` = quantile(CostPerCase, 0.05),
+            `95%` = quantile(CostPerCase, 0.95))
+write.csv(CostPerCase, './R/CostPerCase.csv')
+
+CostAllGastroIncludingSequelae <- CostList %>%
+  rapply(enquote, how="unlist") %>%
+  lapply(eval) %>%
+  as.data.frame(check.names = F) %>%
+  mutate(Draw = row.names(.)) %>%
+  pivot_longer(-Draw, names_sep = "\\.",
+               names_to = c("Pathogen", "Disease","AgeGroup","CostItem")) %>%
+  subset(Disease %in% c("Gastroenteritis",names(SequelaeAssumptions))) %>%
+  subset(CostItem == "TotalHumanCapital") %>%
+  group_by(.,Draw) %>%
+  summarise(Cost = sum(value)) %>%
+  summarise(median = median(Cost),
+            `5%` = quantile(Cost, 0.05),
+            `95%` = quantile(Cost, 0.95))
+write.csv(CostAllGastroIncludingSequelae, './R/CostAllGastroIncludingSequelae.csv')
+
 
 
 warning('When summing across agegroups the draws of the multipliers used for each agegroup are considered independent. Making them dependent would require reworking the whole program, and is not necessarily a better assumption, but it is something to be aware of')

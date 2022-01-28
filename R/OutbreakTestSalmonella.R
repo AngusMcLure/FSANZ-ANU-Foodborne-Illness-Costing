@@ -9,12 +9,12 @@ names(ageGroups) <- ageGroups
 ##################################################
 
 SalmOutbreakTyphimurium <- PathogenAssumptions$`Non-typhoidal salmonella`
+SalmOutbreakTyphimurium$ed <- rdist('discrete', value = 91/203, continuous = FALSE)
 
 warning('In the document we specifically say that LOS was 5 days, but this is not reflected in our costing in any way')
-
 SalmOutbreakCost <- estimateCosts(SalmOutbreakTyphimurium,
                                   notifications = list(`<5` = 0, `5-64` = 91, `65+` = 0),
-                                  cases = list(Salmonellosis = list(`<5` = 0, `5-64` = 32, `65+` = 0),
+                                  cases = list(Salmonellosis = list(`<5` = 0, `5-64` = 203, `65+` = 0),
                                                IBS = list(`<5` = 0, `5-64` = 0, `65+` = 0),
                                                ReactiveArthiritis = list(`<5` = 0, `5-64` = 0, `65+` = 0)),
                                   separations = list(Salmonellosis = list(`<5` = 0, `5-64` = 32, `65+` = 0),
@@ -28,6 +28,15 @@ SalmOutbreakCost <- estimateCosts(SalmOutbreakTyphimurium,
                                   ndraws = ndraws) #We are not even using discounting any more so I might drop this argument all together?
 SalmOutbreakCost.Summaries <- summariseCostList(list(Salmonella = SalmOutbreakCost))
 View(SalmOutbreakCost.Summaries$Categorised)
+View(SalmOutbreakCost.Summaries$Detailed)
+
+SalmOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "gpShort")$Cost)
+
+
 ## Salmonella Enteridis Outbreak 2019
 
 ##################################################
@@ -45,8 +54,8 @@ warning('We dont have a good way to estimate hospitalisations out of the box')
 #Perhaps we could use the empirical distribution of Listeria hospitalisations / Listeria cases to get a multiplier to estimate the number of hospitalisations?
 
 ListeriaOutbreak.notifications <- list(`<5` = 0, `5-64` = 22-10, `65+` = 10)
-ListeriaOutbreak.cases <- estimateIncidence(disease = ListeriaOutbreak, ndraws = ndraws, notifications = ListeriaOutbreak.notifications)
-ListeriaOutbreak.deaths <- list(`<5` = 1, `5-64` = 7, `65+` = 10)
+ListeriaOutbreak.cases <- estimateIncidence(pathogen = ListeriaOutbreak, ndraws = ndraws, notifications = ListeriaOutbreak.notifications)
+ListeriaOutbreak.deaths <- list(`<5` = 1, `5-64` = 7, `65+` = 0)
 ListeriaOutbreak.separations <- map(ageGroups,
                                     ~{HospList$`Listeria monocytogenes`$Listeriosis[[.x]]/
                                         IncidenceList$`Listeria monocytogenes`$Listeriosis[[.x]] *
@@ -64,6 +73,32 @@ ListeriaOutbreakCost <- estimateCosts(ListeriaOutbreak,
 ListeriaOutbreakCost.Summaries <- summariseCostList(list(`Listeria monocytogenes` = ListeriaOutbreakCost))
 View(ListeriaOutbreakCost.Summaries$Detailed)
 
+ListeriaOutbreakCostAlt <- costOutbreak(ListeriaOutbreak, ndraws = ndraws,
+                                        notifications = ListeriaOutbreak.notifications,
+                                        deaths = list(Listeriosis = ListeriaOutbreak.deaths))
+ListeriaOutbreakCost.SummariesAlt <- summariseCostList(list(`Listeria monocytogenes` = ListeriaOutbreakCostAlt))
+View(ListeriaOutbreakCost.SummariesAlt$Detailed)
+
+ListeriaOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "ED") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "ed")$Cost)
+
+ListeriaOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "Hospitalisation") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "T01A/T01B")$Cost)
+
+ListeriaOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "GPSpecialist") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "gpShort")$Cost * 0.75 + subset(Costs, Name == "gpLong")$Cost *0.25 +
+        subset(Costs, Name == "specialistInitial")$Cost * 0.5 + subset(Costs, Name == "specialistRepeat")$Cost *0.5)
+
+
 ##################################################
 #######Salmonella enteritidis in eggs (2019)######
 ##################################################
@@ -76,7 +111,7 @@ EnteritidisOutbreak.cases <- estimateIncidence(disease = EnteritidisOutbreak,
                                                ndraws = ndraws,
                                                notifications = EnteritidisOutbreak.notifications)
 EnteritidisOutbreak.deaths <- list(`<5` = 0, `5-64` = 1, `65+` = 0)
-EnteritidisOutbreak.sequelae <- estimateSequelae(EnteritidisOutbreak, EnteritidisOutbreak.cases)
+EnteritidisOutbreak.sequelae <- estimateSequelae(EnteritidisOutbreak, EnteritidisOutbreak.cases, ndraws = ndraws)
 EnteritidisOutbreak.cases <- c(list(Salmonellosis = EnteritidisOutbreak.cases),EnteritidisOutbreak.sequelae)
 EnteritidisOutbreak.separations <- imap(EnteritidisOutbreak.cases,
                                         function(.c,.dn){map(ageGroups,
@@ -104,6 +139,35 @@ EnteritidisOutbreakCost.Summaries <- summariseCostList(list(`Salmonella Enteriti
 View(EnteritidisOutbreakCost.Summaries$Detailed)
 View(EnteritidisOutbreakCost.Summaries$Categorised)
 
+EnteritidisOutbreakCost <- costOutbreak(EnteritidisOutbreak, ndraws = ndraws,
+                                        notifications = EnteritidisOutbreak.notifications,
+                                        deaths = list(Salmonellosis = list(`<5` = 0, `5-64` = 1, `65+` = 0),
+                                                      IBS = NULL, ReactiveArthritis = NULL))
+
+EnteritidisOutbreakCost
+
+# reverse engineer number of ED visits, separations etc!!!
+# (If I knew I wanted this information I would have written the program differently
+# --- might still do this if wanted for the outbreak tab)
+
+EnteritidisOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "ED") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "ed")$Cost)
+
+EnteritidisOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "Hospitalisation") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "G67B")$Cost)
+
+EnteritidisOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "gpShort")$Cost)
+
 
 ##################################################
 #######Salmonella Weltevreden in eggs (2019)######
@@ -117,7 +181,7 @@ WeltevredenOutbreak.cases <- estimateIncidence(disease = WeltevredenOutbreak,
                                                ndraws = ndraws,
                                                notifications = WeltevredenOutbreak.notifications)
 WeltevredenOutbreak.deaths <- list(`<5` = 0, `5-64` = 0, `65+` = 0)
-WeltevredenOutbreak.sequelae <- estimateSequelae(WeltevredenOutbreak, WeltevredenOutbreak.cases)
+WeltevredenOutbreak.sequelae <- estimateSequelae(WeltevredenOutbreak, WeltevredenOutbreak.cases, ndraws = ndraws)
 WeltevredenOutbreak.cases <- c(list(Salmonellosis = WeltevredenOutbreak.cases),WeltevredenOutbreak.sequelae)
 WeltevredenOutbreak.separations <- imap(WeltevredenOutbreak.cases,
                                         function(.c,.dn){map(ageGroups,
@@ -141,10 +205,37 @@ WeltevredenOutbreakCost <- estimateCosts(WeltevredenOutbreak,
                                          year = 2019, #Year is used to estimate LOS -- should there be an option for NA or ALL which uses all data available?
                                          discount = 0) #We are not even using discounting any more so I might drop this argument all together?
 
-WeltevredenOutbreakCost.Summaries <- summariseCostList(list(`Salmonella Enteritidis` = WeltevredenOutbreakCost))
+WeltevredenOutbreakCost.Summaries <- summariseCostList(list(`Salmonella Enteritidis` = WeltevredenOutbreakCost$costs))
 View(WeltevredenOutbreakCost.Summaries$Detailed)
 View(WeltevredenOutbreakCost.Summaries$Categorised)
 
 
+WeltevredenOutbreakCost <- costOutbreak(WeltevredenOutbreak, ndraws = ndraws,
+                                        notifications = WeltevredenOutbreak.notifications,
+                                        deaths = list(Salmonellosis = list(`<5` = 0, `5-64` = 0, `65+` = 0),
+                                                      IBS = NULL, ReactiveArthritis = NULL))
+
+
+# reverse engineer number of ED visits, separations etc!!!
+# (If I knew I wanted this information I would have written the program differently
+# --- might still do this if wanted for the outbreak tab)
+
+WeltevredenOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "ED") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "ed")$Cost)
+
+EnteritidisOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "Hospitalisation") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "G67B")$Cost)
+
+EnteritidisOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
+  ungroup %>%
+  select(median:`95%`) %>%
+  `/`(subset(Costs, Name == "gpShort")$Cost)
 
 

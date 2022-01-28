@@ -165,7 +165,7 @@ getCasesStateAgeGroup <- function(){
 
 
 getHospitalisationsAgeGroup <- function(){
-  HospFiles <- list.files("./Data", "Principal_diagnosis_data_cube_")
+  HospFiles <- list.files("./Data", "^Principal_diagnosis_data_cube_")
   Years <- sub("\\.xlsx.*", "", sub(".*Principal_diagnosis_data_cube_", "", HospFiles))
   out <- map(HospFiles,function(x){
     readxl::read_xlsx(paste0("./Data/",x),

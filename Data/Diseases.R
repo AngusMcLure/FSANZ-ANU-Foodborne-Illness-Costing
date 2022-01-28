@@ -358,7 +358,7 @@ PathogenAssumptions <- list(
                  underdiagnosis = rdist("pert", min = 1, mode = 2, max = 3),
                  hospPrincipalDiagnosis = rdist("discrete", value = 0.59, continuous = FALSE),
                  mortCodes = 'A04.3',
-                 hospCodes = "A04.1",
+                 hospCodes = "A04.3",
                  hospMethod = 'AIHW',
                  medications = MedicationsGastro,
                  medicationsToWhom = "Cases",
@@ -367,7 +367,7 @@ PathogenAssumptions <- list(
                  DRGCodes = GastroDRGCodes,
                  symptoms = "GI",
                  severity = c(NonHosp = 'severe', Hosp = "severe"),
-                 duration = c(NonHosp = 6, Hosp = 10^10)
+                 duration = c(NonHosp = 6, Hosp =  6 + 3.5) #LOS figure of 3.5 taken from AIHW data cubes for 2015-2016, 2016-2017, and 2019-2020
   ),
 
   `Yersinia Enterocolitica` = list(name = "Yersiniosis",

@@ -1,22 +1,22 @@
-estimateIncidence <- function(disease, ndraws = 10^6,
+estimateIncidence <- function(pathogen, ndraws = 10^6,
                               gastroRate = NULL, notifications = NULL,
                               population = NULL){
   #abbreviate
-  d <- disease
+  p <- pathogen
   n <- ndraws
 
   ageGroups = c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
 
-  if(d$caseMethod == 'Notifications' && is.null(notifications)) stop("Notification numbers must be supplied for estimates from notifiable diseases")
+  if(p$caseMethod == 'Notifications' && is.null(notifications)) stop("Notification numbers must be supplied for estimates from notifiable diseases")
 
-  draws <- switch(d$caseMethod,
-                  Notifications = draw(d$underreporting, n) * draw(d$domestic, n),
-                  GastroFraction = draw(gastroRate, n) * draw(d$gastroFraction, n),
-                  Seroprevalence = draw(d$FOI, n))
-  foodborne <- draw(d$foodborne, n)
-  if(!is.null(d$symptomatic)){
-    symptomatic <- draw(d$symptomatic, n)
+  draws <- switch(p$caseMethod,
+                  Notifications = draw(p$underreporting, n) * draw(p$domestic, n),
+                  GastroFraction = draw(gastroRate, n) * draw(p$gastroFraction, n),
+                  Seroprevalence = draw(p$FOI, n))
+  foodborne <- draw(p$foodborne, n)
+  if(!is.null(p$symptomatic)){
+    symptomatic <- draw(p$symptomatic, n)
   }else{
     symptomatic <- 1
   }
@@ -24,8 +24,8 @@ estimateIncidence <- function(disease, ndraws = 10^6,
   map(ageGroups, function(.a){
     minAge <- switch(.a, `<5` = 0, `5-64` = 5,`65+` = 65)
     maxAge <-  switch(.a, `<5` = 5, `5-64` = 65,`65+` = 101)
-    if(d$caseMethod != "Notifications") population <- population[(minAge+1):maxAge]
-    incidence <- switch(d$caseMethod,
+    if(p$caseMethod != "Notifications") population <- population[(minAge+1):maxAge]
+    incidence <- switch(p$caseMethod,
                         Notifications = notifications[[.a]] * draws * foodborne * symptomatic,
                         GastroFraction = sum(population) * draws * foodborne * symptomatic,
                         Seroprevalence = {
@@ -38,13 +38,14 @@ estimateIncidence <- function(disease, ndraws = 10^6,
   })
 }
 
-estimateSequelae <- function(pathogen, initialCases){
+estimateSequelae <- function(pathogen, initialCases, ndraws){
   ageGroups = c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
 
-  map(pathogen[["sequelae"]],function(.s){
+  map(pathogen$sequelae,function(.s){
+    sMult <- draw(.s, ndraws)
     map(ageGroups,function(.a){
-      draw(.s, ndraws) * initialCases[[.a]]
+      sMult * initialCases[[.a]]
     })
   })
 }
@@ -184,16 +185,32 @@ costHumanCapital <- function(year, disease,ageGroup,cases,separations,ndraws){
   # Days off for hospitalised cases
   if(disease$kind == "initial"){
     SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & AgeGroup == ageGroup & FYNumeric == year)
-
-    if(sum(SepData$Separations) == 0){ #If there are no separations for that age-group use the data for all age-groups
+    if(sum(SepData$Separations) == 0){
+      warning('No hospital separations available for ', disease$name,
+              ' in age group ', ageGroup,
+              ' in year ', year,
+              '. Trying mean LOS across all age groups in this year to estimate time off work for this age group')
       SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & FYNumeric == year)
-      if(sum(SepData$Separations) == 0){ #If there are still no separations
-        stop('No hospital separations available for the selected year for ',
-             disease$name, '. Need another way to estimate mean LOS and time off work.')
-      }else{
-        warning('No hospital separations available for the selected year and for ',
-                disease$name, ' in age group ', ageGroup,
-                '. Using mean LOS from all agegroup to estimate time off work for this agegroup')
+      if(sum(SepData$Separations) == 0){
+        warning('No hospital separations available for ', disease$name,
+                ' in any age group',
+                ' in year ', year,
+                '. Trying mean LOS for ', ageGroup ,' in other years for which data is available to estimate time off work for this agegroup and year')
+        SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & AgeGroup == ageGroup)
+        if(sum(SepData$Separations) == 0){
+          warning('No hospital separations available for ', disease$name,
+                  ' in age group ', ageGroup,
+                  ' in year ', year,
+                  ' or any other year for which data is available',
+                  '. Trying mean LOS in all age groups in other years for which data is available to estimate time off work for this agegroup and year')
+          SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode)
+          if(sum(SepData$Separations) == 0){
+            stop('No hospital separations available for ', disease$name,
+                 ' in any age group',
+                 ' in year ', year,
+                 ' or any other year for which data is available.')
+          }
+        }
       }
     }
     meanLOS <- sum(SepData$PatientDays)/sum(SepData$Separations)
@@ -248,7 +265,7 @@ makeIncidenceList <- function(year, pathogens, ndraws = 10^6, gastroRate){
                    out
                  })
   Sequel <- map(pathogens,
-                function(.p){estimateSequelae(.p,Initial[[.p$pathogen]][[.p$name]])})
+                function(.p){estimateSequelae(.p,Initial[[.p$pathogen]][[.p$name]],ndraws = ndraws)})
 
   #combine
   imap(pathogens, ~c(Initial[[.y]], Sequel[[.y]]))
@@ -304,6 +321,8 @@ makeHospList <- function(year, pathogens, incidenceList, ndraws = 10^6){
   # InitialCases <- incidenceList$Initial
   # SequelCases <- incidenceList$Sequel
 
+
+
   Hosp <- map(pathogens, function(.p){
     dlist <- c(list(.p), SequelaeAssumptions[names(.p$sequelae)])
     names(dlist)[1] <- .p$name
@@ -312,6 +331,20 @@ makeHospList <- function(year, pathogens, incidenceList, ndraws = 10^6){
         if(.d$hospMethod == 'AllCases'){return(incidenceList[[.p$pathogen]][[.d$name]][[.a]])}
         else if(.d$hospMethod == 'AIHW'){
           sep <- sum(subset(Hospitalisations, DC4D %in% .d$hospCodes & AgeGroup == .a & FYNumeric == year)$Separations)
+          if(sep == 0){
+            sep <- subset(Hospitalisations, DC4D %in% .d$hospCodes & AgeGroup == .a)
+            DataYears <- unique(sep$FYNumeric)
+            if(length(DataYears) == 0){
+              error('No separations recorded for ', .d$name ,' in agegroup ', .a ,
+                    ' for any of the years for which we have separations data: ', paste(DataYears,collapse = ", "))
+            }
+            sep <- sum(sep$Separations)/length(DataYears)
+            warning('No separations recorded for ', .d$name ,' in agegroup ', .a , ' for ', year,
+                    ' . Using mean number of separations from years: ',
+                    paste(DataYears,collapse = ", "))
+            print(sep)
+
+          }
           hosp <- estimateHosp(.d,ndraws = ndraws,separations = sep)
           if(.d$kind == 'sequel'){
             hosp <- hosp * subset(SequelaeFractions,Disease == .d$name & AgeGroup == .a)[[.p$pathogen]]
