@@ -3,7 +3,7 @@ library(shiny)
 library(tidyverse)
 source("ClassDefinitions.R")
 source("Distributions.R")
-source("../Data/Diseases.R")
+source("Diseases.R")
 source("Outbreak.R")
 source('estimationFunctions.R')
 

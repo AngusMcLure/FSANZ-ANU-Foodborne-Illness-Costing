@@ -1,5 +1,10 @@
 warning('assumes that ndraws is the same for this and for HospList, DeathsList, and IncidenceList')
 warning('Year 2019 is used to estimate LOS -- should there be an option for year or an options to use all data available?')
+
+
+#NEED TO LOAD WORKSPACE FROM AFTER RUNNING BUILD COST TABLE FOR THIS TO WORK AT ALL...
+
+
 costOutbreak <- function(pathogen,
                          notifications,
                          cases = NULL,

@@ -1,7 +1,7 @@
 library(tidyverse)
 source("./R/Distributions.R")
 source("./R/ClassDefinitions.R")
-source("./Data/Diseases.R")
+source("./R/Diseases.R")
 source("./R/loadData.R")
 source("./R/estimationFunctions.R")
 
@@ -42,6 +42,7 @@ HospList <- makeHospList(2019,
 DeathList <- makeDeathList(2019,
                            pathogens = PathogenAssumptions,
                            ndraws = ndraws)
+
 CostList <- makeCostList(2019, PathogenAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
 #Note this includes all sequelae for the purpose of counting costs, but only the initial cases for the purpose of counting cases.
