@@ -97,6 +97,7 @@ LostProductivityCosts <- CostList %>%
   quantilesNestedList(2,names_to = c('Pathogen','CostItem')) %>%
   rename(X5. = `5%`, X95. = `95%`) %>%
   medianCIformat %>%
+  select(Pathogen,CostItem,Cost) %>%
   pivot_wider(names_from = CostItem, values_from = Cost) %>%
   as.data.frame %>%
   `rownames<-`(.$Pathogen) %>%
@@ -104,9 +105,9 @@ LostProductivityCosts <- CostList %>%
         "Non-typhoidal salmonella","Norovirus","Shigella","STEC",
         "Escherichia coli (Non-STEC)","Salmonella Typhi",
         "Toxoplasma gondii","Yersinia Enterocolitica"),) %>%
-  select(Disease,FrictionLow,FrictionHigh,HumanCapital)
+  select(Pathogen,FrictionLow,FrictionHigh,HumanCapital)
 
-str(LostProductivityCosts)
+write_excel_csv(LostProductivityCosts,'./Report/SensitivityLostProductivity.csv')
 
 #
 # mutate(CostItem = recode(CostItem,
