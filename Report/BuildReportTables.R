@@ -110,8 +110,21 @@ CostAllGastroIncludingSequelae <- CategorisedCosts %>%
 write_excel_csv(CostAllGastroIncludingSequelae, './Report/TotalCostAllGastroIncludingSequelae.csv')
 
 
+### Lost productivity sensitivity analysis
+LostProductivityCosts <- imap(SequelaeAssumptions,
+       function(.s,.sn){
+         map(CostList,~.x[[.sn]])
+       }) %>%
+  map(~{.x[!unlist(map(.x,is.null))]}) %>% #drop pathogens with no sequelae
+  map_depth(1,~do.call(add2,.x)) %>% #Sum over pathogens for each sequelae
 
 
+map_depth(3,~{.x[c("HumanCapital","FrictionHigh","FrictionLow")]}) %>%
+
+  map_depth(2,~do.call(add,.x)) %>% #Sum over age groups %>%
+
+  map_depth(1,~do.call(add,unname(.x))) #Sum over diseases (initial and sequelae)
+str(LostProductivityCosts)
 
 #
 # mutate(CostItem = recode(CostItem,

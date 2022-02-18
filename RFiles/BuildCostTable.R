@@ -46,6 +46,23 @@ DeathList <- makeDeathList(Year,
 
 CostList <- makeCostList(Year, PathogenAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
+### Add all sequelae to 'All gastro'
+
+appendSequelaeToAllGastro <- function(List, .f){
+  List$`All gastro pathogens` <- c(List$`All gastro pathogens`,
+                                   imap(SequelaeAssumptions, #re-nest list with sequelae above pathogens and dropping initial diseases
+                                        function(.s,.sn){
+                                          map(List,~.x[[.sn]])
+                                        }) %>%
+                                     map(~{.x[!unlist(map(.x,is.null))]}) %>% #drop pathogens with no sequelae
+                                     map(~do.call(.f,unname(.x)))) #sum over pathogens by sequelae
+  List
+}
+CostList <- appendSequelaeToAllGastro(CostList,add2)
+HospList <- appendSequelaeToAllGastro(HospList,add)
+DeathList <- appendSequelaeToAllGastro(DeathList,add)
+IncidenceList <- appendSequelaeToAllGastro(IncidenceList,add)
+
 warning('When summing across agegroups the draws of the multipliers used for each agegroup are considered independent. Making them dependent would require reworking the whole program, and is not necessarily a better assumption, but it is something to be aware of')
 
 #Include `All ages` and `All diseases` sums, calculate median, and 90 CIs, then reformat as data.frame
@@ -115,11 +132,9 @@ write.csv(CostSummaries$Categorised,'./Outputs/CostTableCategories.csv')
 
 # save workspace in two versions; one light version to be used by the shiny app
 # and another larger version with everything
+save.image('AusFBDiseaseImage.RData')
 UnusedLargeObjects <- c('CostList','SequelaeFractions','TotalCostByPathogen',
                         'TotalIncidence')
-
-save.image('AusFBDiseaseImage.RData')
-
 #trim DeathList, HospList, and IncidenceList down to 1000 draws
 trim <- 1000
 DeathList <- DeathList %>% map_depth(3,~.x[1:trim])
