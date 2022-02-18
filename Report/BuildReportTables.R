@@ -74,13 +74,8 @@ CategorisedCosts <- CostList %>%
 
 # Cost of sequelae by category
 
-CostSequelae <- imap(SequelaeAssumptions,
-     function(.s,.sn){
-       map(CategorisedCosts,~.x[[.sn]])
-     }) %>% #keep only sequel diseases
-  map(~{.x[!unlist(map(.x,is.null))]}) %>% #drop pathogens with no sequelae
-  map_depth(2,~do.call(add,.x)) %>% #Sum over age groups
-  map_depth(1,~do.call(add,.x)) %>% #Sum over diseases (initial and sequelae)
+CostSequelae <- CategorisedCosts$`All gastro pathogens`[2:5] %>%
+  map(~do.call(add,.x)) %>% #Sum over age groups
   quantilesNestedList(2,names_to = c("Disease", "CostItem")) %>%
   rename(X5. = `5%`, X95. = `95%`) %>%
   medianCIformat %>%
@@ -92,38 +87,25 @@ CostSequelae <- imap(SequelaeAssumptions,
   select(Disease,Direct, HumanCapital,WTP,Deaths,TotalHumanCapital)
 
 write_excel_csv(CostSequelae, './Report/TotalCostSequelae.csv')
-# Cost of gastro + sequelae by category
-
-CostAllGastroIncludingSequelae <- CategorisedCosts %>%
-  map(~.x[names(.x) %in% c("Gastroenteritis",names(SequelaeAssumptions))]) %>% #keep only 'All Gastroenteritis' and sequelae
-  map_depth(2,~do.call(add,.x)) %>% #Sum over age groups
-  map_depth(1,~do.call(add,unname(.x))) %>% #Sum over diseases (initial and sequelae)
-  `[`(!unlist(map(.,~is.null(.x)))) %>% #drop pathogens without sequelae
-  do.call(add,.) %>% #sum across pathogens
-  quantilesNestedList(1,names_to = "CostItem") %>%
-  rename(X5. = `5%`, X95. = `95%`) %>%
-  medianCIformat %>%
-  select(CostItem, Cost) %>%
-  pivot_wider(names_from = CostItem, values_from = Cost) %>%
-  select(Direct, HumanCapital,WTP,Deaths,TotalHumanCapital)
-
-write_excel_csv(CostAllGastroIncludingSequelae, './Report/TotalCostAllGastroIncludingSequelae.csv')
 
 
 ### Lost productivity sensitivity analysis
-LostProductivityCosts <- imap(SequelaeAssumptions,
-       function(.s,.sn){
-         map(CostList,~.x[[.sn]])
-       }) %>%
-  map(~{.x[!unlist(map(.x,is.null))]}) %>% #drop pathogens with no sequelae
-  map_depth(1,~do.call(add2,.x)) %>% #Sum over pathogens for each sequelae
-
-
-map_depth(3,~{.x[c("HumanCapital","FrictionHigh","FrictionLow")]}) %>%
-
+LostProductivityCosts <- CostList %>%
+  map_depth(3,~{.x[c("HumanCapital","FrictionHigh","FrictionLow")]}) %>%
   map_depth(2,~do.call(add,.x)) %>% #Sum over age groups %>%
+  map_depth(1,~do.call(add,unname(.x))) %>% #Sum over diseases (initial and sequelae)
+  quantilesNestedList(2,names_to = c('Pathogen','CostItem')) %>%
+  rename(X5. = `5%`, X95. = `95%`) %>%
+  medianCIformat %>%
+  pivot_wider(names_from = CostItem, values_from = Cost) %>%
+  as.data.frame %>%
+  `rownames<-`(.$Pathogen) %>%
+  `[`(c("All gastro pathogens","Campylobacter","Listeria monocytogenes",
+        "Non-typhoidal salmonella","Norovirus","Shigella","STEC",
+        "Escherichia coli (Non-STEC)","Salmonella Typhi",
+        "Toxoplasma gondii","Yersinia Enterocolitica"),) %>%
+  select(Disease,FrictionLow,FrictionHigh,HumanCapital)
 
-  map_depth(1,~do.call(add,unname(.x))) #Sum over diseases (initial and sequelae)
 str(LostProductivityCosts)
 
 #
