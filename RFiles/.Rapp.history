@@ -1,0 +1,12 @@
+source("/Users/angus/Documents/AustralianFoodborneIllnessCosting/RFiles/shiny.R")
+getwd
+getwd()
+setwd('./Documents')
+ls
+ls()
+clear()
+setwd(./AustralianFoodborneIllnessCosting/R)
+setwd('./AustralianFoodborneIllnessCosting/R')
+getwd()
+source("/Users/angus/Documents/AustralianFoodborneIllnessCosting/RFiles/shiny.R")
+runApp(shinyApp(ui,server))

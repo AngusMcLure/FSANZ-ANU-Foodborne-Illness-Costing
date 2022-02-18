@@ -1,0 +1,1117 @@
+"","Pathogen","Disease","AgeGroup","CostItem","median","5%","95%"
+"1","All gastro pathogens","Gastroenteritis","<5","Deaths",4086926.09847618,1864222.28295226,8279619.28081182
+"2","All gastro pathogens","Gastroenteritis","<5","HumanCapital",62685351.2056819,30540835.6831146,124633635.238164
+"3","All gastro pathogens","Gastroenteritis","<5","FrictionHigh",50148280.9645455,24432668.5464917,99706908.1905311
+"4","All gastro pathogens","Gastroenteritis","<5","FrictionLow",18805605.3617046,9162250.70493439,37390090.5714492
+"5","All gastro pathogens","Gastroenteritis","<5","TotalHumanCapital",96455883.0188936,56135036.4636657,166647222.716401
+"6","All gastro pathogens","Gastroenteritis","<5","TotalFrictionHigh",83920318.7514337,49837611.6812783,141857060.760587
+"7","All gastro pathogens","Gastroenteritis","<5","TotalFrictionLow",52453045.9252266,33515488.6653385,80672854.9963503
+"8","All gastro pathogens","Gastroenteritis","<5","Direct",18854131.7922003,12054720.324115,27883296.0207298
+"9","All gastro pathogens","Gastroenteritis","<5","WTP",9666560.1140731,5543617.22114479,15526284.6520034
+"10","All gastro pathogens","Gastroenteritis","5-64","Deaths",30411133.2500882,15657112.6172023,54686598.7727303
+"11","All gastro pathogens","Gastroenteritis","5-64","HumanCapital",1186818661.85245,650679001.442971,1983862521.06107
+"12","All gastro pathogens","Gastroenteritis","5-64","FrictionHigh",949454929.481957,520543201.154377,1587090016.84886
+"13","All gastro pathogens","Gastroenteritis","5-64","FrictionLow",356045598.555734,195203700.432891,595158756.318322
+"14","All gastro pathogens","Gastroenteritis","5-64","TotalHumanCapital",1505821412.99464,869846349.494136,2431463606.44001
+"15","All gastro pathogens","Gastroenteritis","5-64","TotalFrictionHigh",1268365324.73992,739272007.873388,2036627638.42073
+"16","All gastro pathogens","Gastroenteritis","5-64","TotalFrictionLow",674217240.342094,411344902.976678,1048852667.28312
+"17","All gastro pathogens","Gastroenteritis","5-64","Direct",165173192.688098,104232146.994722,250665191.214081
+"18","All gastro pathogens","Gastroenteritis","5-64","WTP",118845610.097748,66932276.9368209,192708653.306297
+"19","All gastro pathogens","Gastroenteritis","65+","Deaths",148032101.690711,76767690.4823608,260656200.187446
+"20","All gastro pathogens","Gastroenteritis","65+","HumanCapital",129061662.449875,37235589.8442632,640988746.994779
+"21","All gastro pathogens","Gastroenteritis","65+","FrictionHigh",103249329.9599,29788471.8754106,512790997.595823
+"22","All gastro pathogens","Gastroenteritis","65+","FrictionLow",38718498.7349625,11170676.953279,192296624.098434
+"23","All gastro pathogens","Gastroenteritis","65+","TotalHumanCapital",447835830.79083,280482278.103635,965365881.091089
+"24","All gastro pathogens","Gastroenteritis","65+","TotalFrictionHigh",421951396.786658,268810987.995458,841470439.412484
+"25","All gastro pathogens","Gastroenteritis","65+","TotalFrictionLow",352556894.549067,234725326.430551,547884523.439702
+"26","All gastro pathogens","Gastroenteritis","65+","Direct",119086610.489074,71698233.567667,191532418.146161
+"27","All gastro pathogens","Gastroenteritis","65+","WTP",25225092.4499106,14587789.8383242,40326077.2245535
+"28","All gastro pathogens","Gastroenteritis","All Ages","Deaths",184989711.557904,110646985.536787,299258456.945246
+"29","All gastro pathogens","Gastroenteritis","All Ages","HumanCapital",1432485868.26076,776235528.988401,2491725942.72988
+"30","All gastro pathogens","Gastroenteritis","All Ages","FrictionHigh",1145988694.60861,620988423.190721,1993380754.1839
+"31","All gastro pathogens","Gastroenteritis","All Ages","FrictionLow",429745760.478227,232870658.69652,747517782.818964
+"32","All gastro pathogens","Gastroenteritis","All Ages","TotalHumanCapital",2092535406.23859,1297492174.21935,3313456531.7482
+"33","All gastro pathogens","Gastroenteritis","All Ages","TotalFrictionHigh",1805410595.66156,1139374073.41843,2815919264.06731
+"34","All gastro pathogens","Gastroenteritis","All Ages","TotalFrictionLow",1088889129.30245,740113164.652535,1584520711.64107
+"35","All gastro pathogens","Gastroenteritis","All Ages","Direct",308103033.597092,214520033.354527,426928235.09901
+"36","All gastro pathogens","Gastroenteritis","All Ages","WTP",153717495.121915,87128904.1651591,248522861.058562
+"37","All gastro pathogens","Initial and Sequel Disease","<5","Deaths",4086926.09847618,1864222.28295226,8279619.28081182
+"38","All gastro pathogens","Initial and Sequel Disease","<5","HumanCapital",62685351.2056819,30540835.6831146,124633635.238164
+"39","All gastro pathogens","Initial and Sequel Disease","<5","FrictionHigh",50148280.9645455,24432668.5464917,99706908.1905311
+"40","All gastro pathogens","Initial and Sequel Disease","<5","FrictionLow",18805605.3617046,9162250.70493439,37390090.5714492
+"41","All gastro pathogens","Initial and Sequel Disease","<5","TotalHumanCapital",96455883.0188936,56135036.4636657,166647222.716401
+"42","All gastro pathogens","Initial and Sequel Disease","<5","TotalFrictionHigh",83920318.7514337,49837611.6812783,141857060.760587
+"43","All gastro pathogens","Initial and Sequel Disease","<5","TotalFrictionLow",52453045.9252266,33515488.6653385,80672854.9963503
+"44","All gastro pathogens","Initial and Sequel Disease","<5","Direct",18854131.7922003,12054720.324115,27883296.0207298
+"45","All gastro pathogens","Initial and Sequel Disease","<5","WTP",9666560.1140731,5543617.22114479,15526284.6520034
+"46","All gastro pathogens","Initial and Sequel Disease","5-64","Deaths",30411133.2500882,15657112.6172023,54686598.7727303
+"47","All gastro pathogens","Initial and Sequel Disease","5-64","HumanCapital",1186818661.85245,650679001.442971,1983862521.06107
+"48","All gastro pathogens","Initial and Sequel Disease","5-64","FrictionHigh",949454929.481957,520543201.154377,1587090016.84886
+"49","All gastro pathogens","Initial and Sequel Disease","5-64","FrictionLow",356045598.555734,195203700.432891,595158756.318322
+"50","All gastro pathogens","Initial and Sequel Disease","5-64","TotalHumanCapital",1505821412.99464,869846349.494136,2431463606.44001
+"51","All gastro pathogens","Initial and Sequel Disease","5-64","TotalFrictionHigh",1268365324.73992,739272007.873388,2036627638.42073
+"52","All gastro pathogens","Initial and Sequel Disease","5-64","TotalFrictionLow",674217240.342094,411344902.976678,1048852667.28312
+"53","All gastro pathogens","Initial and Sequel Disease","5-64","Direct",165173192.688098,104232146.994722,250665191.214081
+"54","All gastro pathogens","Initial and Sequel Disease","5-64","WTP",118845610.097748,66932276.9368209,192708653.306297
+"55","All gastro pathogens","Initial and Sequel Disease","65+","Deaths",148032101.690711,76767690.4823608,260656200.187446
+"56","All gastro pathogens","Initial and Sequel Disease","65+","HumanCapital",129061662.449875,37235589.8442632,640988746.994779
+"57","All gastro pathogens","Initial and Sequel Disease","65+","FrictionHigh",103249329.9599,29788471.8754106,512790997.595823
+"58","All gastro pathogens","Initial and Sequel Disease","65+","FrictionLow",38718498.7349625,11170676.953279,192296624.098434
+"59","All gastro pathogens","Initial and Sequel Disease","65+","TotalHumanCapital",447835830.79083,280482278.103635,965365881.091089
+"60","All gastro pathogens","Initial and Sequel Disease","65+","TotalFrictionHigh",421951396.786658,268810987.995458,841470439.412484
+"61","All gastro pathogens","Initial and Sequel Disease","65+","TotalFrictionLow",352556894.549067,234725326.430551,547884523.439702
+"62","All gastro pathogens","Initial and Sequel Disease","65+","Direct",119086610.489074,71698233.567667,191532418.146161
+"63","All gastro pathogens","Initial and Sequel Disease","65+","WTP",25225092.4499106,14587789.8383242,40326077.2245535
+"64","All gastro pathogens","Initial and Sequel Disease","All Ages","Deaths",184989711.557904,110646985.536787,299258456.945246
+"65","All gastro pathogens","Initial and Sequel Disease","All Ages","HumanCapital",1432485868.26076,776235528.988401,2491725942.72988
+"66","All gastro pathogens","Initial and Sequel Disease","All Ages","FrictionHigh",1145988694.60861,620988423.190721,1993380754.1839
+"67","All gastro pathogens","Initial and Sequel Disease","All Ages","FrictionLow",429745760.478227,232870658.69652,747517782.818964
+"68","All gastro pathogens","Initial and Sequel Disease","All Ages","TotalHumanCapital",2092535406.23859,1297492174.21935,3313456531.7482
+"69","All gastro pathogens","Initial and Sequel Disease","All Ages","TotalFrictionHigh",1805410595.66156,1139374073.41843,2815919264.06731
+"70","All gastro pathogens","Initial and Sequel Disease","All Ages","TotalFrictionLow",1088889129.30245,740113164.652535,1584520711.64107
+"71","All gastro pathogens","Initial and Sequel Disease","All Ages","Direct",308103033.597092,214520033.354527,426928235.09901
+"72","All gastro pathogens","Initial and Sequel Disease","All Ages","WTP",153717495.121915,87128904.1651591,248522861.058562
+"73","Norovirus","Norovirus","<5","Deaths",39769.3542849509,311.466126705232,448989.211759892
+"74","Norovirus","Norovirus","<5","HumanCapital",4447546.88255134,1259496.32553586,10649023.4134478
+"75","Norovirus","Norovirus","<5","FrictionHigh",3558037.50604107,1007597.06042869,8519218.7307582
+"76","Norovirus","Norovirus","<5","FrictionLow",1334264.0647654,377848.897660759,3194707.02403433
+"77","Norovirus","Norovirus","<5","TotalHumanCapital",6731643.42449757,2588238.87625152,13903206.8204639
+"78","Norovirus","Norovirus","<5","TotalFrictionHigh",5839611.57594136,2313086.4807405,11801500.2554493
+"79","Norovirus","Norovirus","<5","TotalFrictionLow",3612380.83560417,1581712.81210829,6606430.13981645
+"80","Norovirus","Norovirus","<5","Direct",1609063.61128103,725040.117267875,2813063.59156724
+"81","Norovirus","Norovirus","<5","WTP",486017.233028463,170825.895818645,950951.169562559
+"82","Norovirus","Norovirus","5-64","Deaths",1408312.44365408,334069.12162775,3774796.41651094
+"83","Norovirus","Norovirus","5-64","HumanCapital",83349547.2628971,22955132.0043564,174734465.003572
+"84","Norovirus","Norovirus","5-64","FrictionHigh",66679637.8103177,18364105.6034851,139787572.002858
+"85","Norovirus","Norovirus","5-64","FrictionLow",25004864.1788691,6886539.60130691,52420339.5010716
+"86","Norovirus","Norovirus","5-64","TotalHumanCapital",99586014.8007509,29458766.6803402,204161730.227934
+"87","Norovirus","Norovirus","5-64","TotalFrictionHigh",82910692.3372502,24873358.2214918,169149306.285192
+"88","Norovirus","Norovirus","5-64","TotalFrictionLow",41228736.3099563,13332628.8423773,82037858.6122786
+"89","Norovirus","Norovirus","5-64","Direct",8813376.39107086,3134083.93179683,17717663.8326624
+"90","Norovirus","Norovirus","5-64","WTP",5509514.07190713,1567203.86294746,11318704.3291793
+"91","Norovirus","Norovirus","65+","Deaths",2284436.32574312,566498.13987456,5929698.12508302
+"92","Norovirus","Norovirus","65+","HumanCapital",8756881.11587873,1795523.89247137,49153466.6926066
+"93","Norovirus","Norovirus","65+","FrictionHigh",7005504.89270299,1436419.11397709,39322773.3540852
+"94","Norovirus","Norovirus","65+","FrictionLow",2627064.33476362,538657.16774141,14746040.007782
+"95","Norovirus","Norovirus","65+","TotalHumanCapital",17917968.1779915,7670540.20528556,59121904.9196589
+"96","Norovirus","Norovirus","65+","TotalFrictionHigh",16172815.5218018,7196915.33472032,49352207.143397
+"97","Norovirus","Norovirus","65+","TotalFrictionLow",11725631.6529568,5791116.65940768,25293115.1582713
+"98","Norovirus","Norovirus","65+","Direct",4636969.03945645,2046425.94808179,8185591.07501571
+"99","Norovirus","Norovirus","65+","WTP",1166515.63203525,358971.572571861,2354823.72935756
+"100","Norovirus","Norovirus","All Ages","Deaths",4070535.49384831,1689236.82444116,8202343.45229303
+"101","Norovirus","Norovirus","All Ages","HumanCapital",100831174.804455,27877396.6942016,217767707.566545
+"102","Norovirus","Norovirus","All Ages","FrictionHigh",80664939.8435644,22301917.3553613,174214166.053236
+"103","Norovirus","Norovirus","All Ages","FrictionLow",30249352.4413366,8363219.00826048,65330312.2699635
+"104","Norovirus","Norovirus","All Ages","TotalHumanCapital",128194181.688097,42211929.7834454,262009909.030254
+"105","Norovirus","Norovirus","All Ages","TotalFrictionHigh",107978370.409876,36572571.1109127,218530767.41685
+"106","Norovirus","Norovirus","All Ages","TotalFrictionLow",57409776.3139613,22488418.4504433,109872387.69326
+"107","Norovirus","Norovirus","All Ages","Direct",15242325.658612,7264655.92931512,26761468.4937258
+"108","Norovirus","Norovirus","All Ages","WTP",7161113.04325285,2100148.48044908,14618382.4634612
+"109","Norovirus","Initial and Sequel Disease","<5","Deaths",39769.3542849509,311.466126705232,448989.211759892
+"110","Norovirus","Initial and Sequel Disease","<5","HumanCapital",4447546.88255134,1259496.32553586,10649023.4134478
+"111","Norovirus","Initial and Sequel Disease","<5","FrictionHigh",3558037.50604107,1007597.06042869,8519218.7307582
+"112","Norovirus","Initial and Sequel Disease","<5","FrictionLow",1334264.0647654,377848.897660759,3194707.02403433
+"113","Norovirus","Initial and Sequel Disease","<5","TotalHumanCapital",6731643.42449757,2588238.87625152,13903206.8204639
+"114","Norovirus","Initial and Sequel Disease","<5","TotalFrictionHigh",5839611.57594136,2313086.4807405,11801500.2554493
+"115","Norovirus","Initial and Sequel Disease","<5","TotalFrictionLow",3612380.83560417,1581712.81210829,6606430.13981645
+"116","Norovirus","Initial and Sequel Disease","<5","Direct",1609063.61128103,725040.117267875,2813063.59156724
+"117","Norovirus","Initial and Sequel Disease","<5","WTP",486017.233028463,170825.895818645,950951.169562559
+"118","Norovirus","Initial and Sequel Disease","5-64","Deaths",1408312.44365408,334069.12162775,3774796.41651094
+"119","Norovirus","Initial and Sequel Disease","5-64","HumanCapital",83349547.2628971,22955132.0043564,174734465.003572
+"120","Norovirus","Initial and Sequel Disease","5-64","FrictionHigh",66679637.8103177,18364105.6034851,139787572.002858
+"121","Norovirus","Initial and Sequel Disease","5-64","FrictionLow",25004864.1788691,6886539.60130691,52420339.5010716
+"122","Norovirus","Initial and Sequel Disease","5-64","TotalHumanCapital",99586014.8007509,29458766.6803402,204161730.227934
+"123","Norovirus","Initial and Sequel Disease","5-64","TotalFrictionHigh",82910692.3372502,24873358.2214918,169149306.285192
+"124","Norovirus","Initial and Sequel Disease","5-64","TotalFrictionLow",41228736.3099563,13332628.8423773,82037858.6122786
+"125","Norovirus","Initial and Sequel Disease","5-64","Direct",8813376.39107086,3134083.93179683,17717663.8326624
+"126","Norovirus","Initial and Sequel Disease","5-64","WTP",5509514.07190713,1567203.86294746,11318704.3291793
+"127","Norovirus","Initial and Sequel Disease","65+","Deaths",2284436.32574312,566498.13987456,5929698.12508302
+"128","Norovirus","Initial and Sequel Disease","65+","HumanCapital",8756881.11587873,1795523.89247137,49153466.6926066
+"129","Norovirus","Initial and Sequel Disease","65+","FrictionHigh",7005504.89270299,1436419.11397709,39322773.3540852
+"130","Norovirus","Initial and Sequel Disease","65+","FrictionLow",2627064.33476362,538657.16774141,14746040.007782
+"131","Norovirus","Initial and Sequel Disease","65+","TotalHumanCapital",17917968.1779915,7670540.20528556,59121904.9196589
+"132","Norovirus","Initial and Sequel Disease","65+","TotalFrictionHigh",16172815.5218018,7196915.33472032,49352207.143397
+"133","Norovirus","Initial and Sequel Disease","65+","TotalFrictionLow",11725631.6529568,5791116.65940768,25293115.1582713
+"134","Norovirus","Initial and Sequel Disease","65+","Direct",4636969.03945645,2046425.94808179,8185591.07501571
+"135","Norovirus","Initial and Sequel Disease","65+","WTP",1166515.63203525,358971.572571861,2354823.72935756
+"136","Norovirus","Initial and Sequel Disease","All Ages","Deaths",4070535.49384831,1689236.82444116,8202343.45229303
+"137","Norovirus","Initial and Sequel Disease","All Ages","HumanCapital",100831174.804455,27877396.6942016,217767707.566545
+"138","Norovirus","Initial and Sequel Disease","All Ages","FrictionHigh",80664939.8435644,22301917.3553613,174214166.053236
+"139","Norovirus","Initial and Sequel Disease","All Ages","FrictionLow",30249352.4413366,8363219.00826048,65330312.2699635
+"140","Norovirus","Initial and Sequel Disease","All Ages","TotalHumanCapital",128194181.688097,42211929.7834454,262009909.030254
+"141","Norovirus","Initial and Sequel Disease","All Ages","TotalFrictionHigh",107978370.409876,36572571.1109127,218530767.41685
+"142","Norovirus","Initial and Sequel Disease","All Ages","TotalFrictionLow",57409776.3139613,22488418.4504433,109872387.69326
+"143","Norovirus","Initial and Sequel Disease","All Ages","Direct",15242325.658612,7264655.92931512,26761468.4937258
+"144","Norovirus","Initial and Sequel Disease","All Ages","WTP",7161113.04325285,2100148.48044908,14618382.4634612
+"145","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","Deaths",55357.1825275367,481.142783708685,601807.711365295
+"146","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","HumanCapital",4172097.22547752,1427679.16145293,10933415.7177119
+"147","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","FrictionHigh",3337677.78038202,1142143.32916234,8746732.57416954
+"148","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","FrictionLow",1251629.16764326,428303.748435879,3280024.71531358
+"149","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","TotalHumanCapital",6302170.03211306,2346904.75067174,15246332.2485609
+"150","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","TotalFrictionHigh",5460136.41323961,2051149.64618776,13079520.1746005
+"151","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","TotalFrictionLow",3347775.84520043,1289440.44608317,7752395.02018442
+"152","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","Direct",1262843.07231594,450766.568251786,3163167.94535315
+"153","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","<5","WTP",617536.864596281,233846.599645756,1422036.89382935
+"154","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","Deaths",1838973.82157571,580124.129090134,5258593.66702799
+"155","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","HumanCapital",79300939.5695596,29797859.5851162,185041633.631168
+"156","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","FrictionHigh",63440751.6556477,23838287.6680929,148033306.904934
+"157","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","FrictionLow",23790281.8708679,8939357.87553485,55512490.0893503
+"158","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","TotalHumanCapital",106795451.936138,41743427.4147984,244549989.807628
+"159","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","TotalFrictionHigh",90909728.9719808,35716047.9205804,207605639.042942
+"160","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","TotalFrictionLow",51163691.7273978,20626896.0297585,115495009.707874
+"161","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","Direct",16818580.2576868,6064734.80211788,41910099.7273891
+"162","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","5-64","WTP",7786506.69801804,2949290.85138319,17926923.622181
+"163","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","Deaths",693539.412779642,139869.322716944,2605190.91054836
+"164","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","HumanCapital",8571436.77123308,1796712.27703068,49415737.8925577
+"165","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","FrictionHigh",6857149.41698647,1437369.82162454,39532590.3140462
+"166","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","FrictionLow",2571431.03136993,539013.683109203,14824721.3677673
+"167","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","TotalHumanCapital",16205033.4850106,5548088.43777415,60186025.7846194
+"168","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","TotalFrictionHigh",14469032.6067352,5128994.61737953,50354221.7860392
+"169","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","TotalFrictionLow",9938413.68853077,3929595.23978475,26528354.9622254
+"170","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","Direct",4126573.61019303,1569508.44534703,9878374.26117757
+"171","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","65+","WTP",1593675.35777234,604877.509270348,3666197.23884333
+"172","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","Deaths",2953893.74738637,1197250.21682321,6729317.06997214
+"173","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","HumanCapital",95981231.597632,35710115.5773781,230403106.913644
+"174","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","FrictionHigh",76784985.2781056,28568092.4619025,184322485.530915
+"175","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","FrictionLow",28794369.4792896,10713034.6732134,69120932.0740932
+"176","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","TotalHumanCapital",132477519.615871,51847606.6985469,308405976.542898
+"177","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","TotalFrictionHigh",113244082.437328,44642325.8520023,262232873.530687
+"178","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","TotalFrictionLow",65160611.2497754,26605509.3492843,147278925.294374
+"179","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","Direct",22458581.3123667,8365277.82316955,53948382.618822
+"180","Escherichia coli (Non-STEC)","Escherichia coli (Non-STEC)","All Ages","WTP",9997394.92954758,3788176.49187973,23014508.7611915
+"181","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","Deaths",55357.1825275367,481.142783708685,601807.711365295
+"182","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","HumanCapital",4172097.22547752,1427679.16145293,10933415.7177119
+"183","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","FrictionHigh",3337677.78038202,1142143.32916234,8746732.57416954
+"184","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","FrictionLow",1251629.16764326,428303.748435879,3280024.71531358
+"185","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","TotalHumanCapital",6302170.03211306,2346904.75067174,15246332.2485609
+"186","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","TotalFrictionHigh",5460136.41323961,2051149.64618776,13079520.1746005
+"187","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","TotalFrictionLow",3347775.84520043,1289440.44608317,7752395.02018442
+"188","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","Direct",1262843.07231594,450766.568251786,3163167.94535315
+"189","Escherichia coli (Non-STEC)","Initial and Sequel Disease","<5","WTP",617536.864596281,233846.599645756,1422036.89382935
+"190","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","Deaths",1838973.82157571,580124.129090134,5258593.66702799
+"191","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","HumanCapital",79300939.5695596,29797859.5851162,185041633.631168
+"192","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","FrictionHigh",63440751.6556477,23838287.6680929,148033306.904934
+"193","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","FrictionLow",23790281.8708679,8939357.87553485,55512490.0893503
+"194","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","TotalHumanCapital",106795451.936138,41743427.4147984,244549989.807628
+"195","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","TotalFrictionHigh",90909728.9719808,35716047.9205804,207605639.042942
+"196","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","TotalFrictionLow",51163691.7273978,20626896.0297585,115495009.707874
+"197","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","Direct",16818580.2576868,6064734.80211788,41910099.7273891
+"198","Escherichia coli (Non-STEC)","Initial and Sequel Disease","5-64","WTP",7786506.69801804,2949290.85138319,17926923.622181
+"199","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","Deaths",693539.412779642,139869.322716944,2605190.91054836
+"200","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","HumanCapital",8571436.77123308,1796712.27703068,49415737.8925577
+"201","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","FrictionHigh",6857149.41698647,1437369.82162454,39532590.3140462
+"202","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","FrictionLow",2571431.03136993,539013.683109203,14824721.3677673
+"203","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","TotalHumanCapital",16205033.4850106,5548088.43777415,60186025.7846194
+"204","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","TotalFrictionHigh",14469032.6067352,5128994.61737953,50354221.7860392
+"205","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","TotalFrictionLow",9938413.68853077,3929595.23978475,26528354.9622254
+"206","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","Direct",4126573.61019303,1569508.44534703,9878374.26117757
+"207","Escherichia coli (Non-STEC)","Initial and Sequel Disease","65+","WTP",1593675.35777234,604877.509270348,3666197.23884333
+"208","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","Deaths",2953893.74738637,1197250.21682321,6729317.06997214
+"209","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","HumanCapital",95981231.597632,35710115.5773781,230403106.913644
+"210","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","FrictionHigh",76784985.2781056,28568092.4619025,184322485.530915
+"211","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","FrictionLow",28794369.4792896,10713034.6732134,69120932.0740932
+"212","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","TotalHumanCapital",132477519.615871,51847606.6985469,308405976.542898
+"213","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","TotalFrictionHigh",113244082.437328,44642325.8520023,262232873.530687
+"214","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","TotalFrictionLow",65160611.2497754,26605509.3492843,147278925.294374
+"215","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","Direct",22458581.3123667,8365277.82316955,53948382.618822
+"216","Escherichia coli (Non-STEC)","Initial and Sequel Disease","All Ages","WTP",9997394.92954758,3788176.49187973,23014508.7611915
+"217","Campylobacter","Campylobacteriosis","<5","Deaths",1219675.16988716,226327.897304297,3889322.9626299
+"218","Campylobacter","Campylobacteriosis","<5","HumanCapital",5662896.45443032,2866097.18169047,11289410.8439296
+"219","Campylobacter","Campylobacteriosis","<5","FrictionHigh",4530317.16354426,2292877.74535238,9031528.67514367
+"220","Campylobacter","Campylobacteriosis","<5","FrictionLow",1698868.9363291,859829.154507142,3386823.25317888
+"221","Campylobacter","Campylobacteriosis","<5","TotalHumanCapital",13324177.58744,8259298.62301553,21813661.3108802
+"222","Campylobacter","Campylobacteriosis","<5","TotalFrictionHigh",12181603.5152846,7620353.81577117,19666521.8148652
+"223","Campylobacter","Campylobacteriosis","<5","TotalFrictionLow",9277484.62597379,5950979.46292135,14522760.2466943
+"224","Campylobacter","Campylobacteriosis","<5","Direct",2371240.13401,1571268.74084107,3820595.05168571
+"225","Campylobacter","Campylobacteriosis","<5","WTP",3591610.7333793,2191443.05007644,5874149.16911574
+"226","Campylobacter","Campylobacteriosis","5-64","Deaths",6572401.85390506,3119757.76642044,12548120.9529249
+"227","Campylobacter","Campylobacteriosis","5-64","HumanCapital",61510861.2023825,36662123.0656875,103852321.71568
+"228","Campylobacter","Campylobacteriosis","5-64","FrictionHigh",49208688.961906,29329698.45255,83081857.3725438
+"229","Campylobacter","Campylobacteriosis","5-64","FrictionLow",18453258.3607147,10998636.9197062,31155696.5147039
+"230","Campylobacter","Campylobacteriosis","5-64","TotalHumanCapital",115139905.219626,75085513.9854581,181343022.007888
+"231","Campylobacter","Campylobacteriosis","5-64","TotalFrictionHigh",102845335.783799,67606185.2986228,160579964.214662
+"232","Campylobacter","Campylobacteriosis","5-64","TotalFrictionLow",72045118.8498097,48724532.9882028,109486632.114405
+"233","Campylobacter","Campylobacteriosis","5-64","Direct",20306026.5819842,14003999.2713783,31203148.1249569
+"234","Campylobacter","Campylobacteriosis","5-64","WTP",25911360.8077896,15856286.5559225,42330038.190514
+"235","Campylobacter","Campylobacteriosis","65+","Deaths",8628983.68550612,4150421.0264197,16366926.3940444
+"236","Campylobacter","Campylobacteriosis","65+","HumanCapital",9736002.99660308,3322719.86880102,45337772.8104323
+"237","Campylobacter","Campylobacteriosis","65+","FrictionHigh",7788802.39728247,2658175.89504081,36270218.2483459
+"238","Campylobacter","Campylobacteriosis","65+","FrictionLow",2920800.89898093,996815.960640305,13601331.8431297
+"239","Campylobacter","Campylobacteriosis","65+","TotalHumanCapital",46545802.1937813,32614000.9115653,84250908.4494805
+"240","Campylobacter","Campylobacteriosis","65+","TotalFrictionHigh",44537428.9026316,31630757.0393378,75524468.0850475
+"241","Campylobacter","Campylobacteriosis","65+","TotalFrictionLow",39230791.3520864,28892022.0529978,55598523.1208705
+"242","Campylobacter","Campylobacteriosis","65+","Direct",18649545.6475273,13388097.9068948,24765170.1274371
+"243","Campylobacter","Campylobacteriosis","65+","WTP",7431285.56064216,4590246.97383303,12062053.5785167
+"244","Campylobacter","Campylobacteriosis","All Ages","Deaths",17257314.8855756,10624149.2737585,26754914.432758
+"245","Campylobacter","Campylobacteriosis","All Ages","HumanCapital",80380938.3244276,47085009.2428498,144921748.963828
+"246","Campylobacter","Campylobacteriosis","All Ages","FrictionHigh",64304750.6595421,37668007.3942799,115937399.171063
+"247","Campylobacter","Campylobacteriosis","All Ages","FrictionLow",24114281.4973283,14125502.772855,43476524.6891485
+"248","Campylobacter","Campylobacteriosis","All Ages","TotalHumanCapital",177407207.040284,121968421.607844,274049178.833068
+"249","Campylobacter","Campylobacteriosis","All Ages","TotalFrictionHigh",161299889.340118,112302541.60852,245454579.941078
+"250","Campylobacter","Campylobacteriosis","All Ages","TotalFrictionLow",121005450.531808,87765084.395331,174434112.549233
+"251","Campylobacter","Campylobacteriosis","All Ages","Direct",41576652.2493656,31638558.6180809,56360583.1779988
+"252","Campylobacter","Campylobacteriosis","All Ages","WTP",36933723.9408084,22637216.6623625,60260219.5988627
+"253","Campylobacter","ReactiveArthritis","<5","Deaths",58054.1114298543,509.876339210219,567213.510980837
+"254","Campylobacter","ReactiveArthritis","<5","HumanCapital",3922896.22966193,1829503.33742117,7856994.19860449
+"255","Campylobacter","ReactiveArthritis","<5","FrictionHigh",3138316.98372955,1463602.66993694,6285595.35888359
+"256","Campylobacter","ReactiveArthritis","<5","FrictionLow",1176868.86889858,548851.001226351,2357098.25958135
+"257","Campylobacter","ReactiveArthritis","<5","TotalHumanCapital",6646525.99907756,3190152.47388266,12984585.9429049
+"258","Campylobacter","ReactiveArthritis","<5","TotalFrictionHigh",5862360.29126087,2820949.34021071,11423485.1875501
+"259","Campylobacter","ReactiveArthritis","<5","TotalFrictionLow",3895305.43634029,1891171.47261839,7525273.50444911
+"260","Campylobacter","ReactiveArthritis","<5","Direct",723210.146297075,358270.863715689,1302366.72443075
+"261","Campylobacter","ReactiveArthritis","<5","WTP",1841200.65981073,845721.511042301,3756957.52180192
+"262","Campylobacter","ReactiveArthritis","5-64","Deaths",82112.07107141,675.458031399526,746337.774460368
+"263","Campylobacter","ReactiveArthritis","5-64","HumanCapital",33130473.5713917,15450908.8236648,66355550.4423518
+"264","Campylobacter","ReactiveArthritis","5-64","FrictionHigh",26504378.8571134,12360727.0589319,53084440.3538814
+"265","Campylobacter","ReactiveArthritis","5-64","FrictionLow",9939142.07141752,4635272.64709945,19906665.1327055
+"266","Campylobacter","ReactiveArthritis","5-64","TotalHumanCapital",52082564.3569819,25219544.5117249,101903112.028086
+"267","Campylobacter","ReactiveArthritis","5-64","TotalFrictionHigh",45445289.0860845,22120694.9675006,88682490.6905777
+"268","Campylobacter","ReactiveArthritis","5-64","TotalFrictionLow",28862822.9336609,14340096.7560359,55556111.6906501
+"269","Campylobacter","ReactiveArthritis","5-64","Direct",5383612.58200796,3017505.28975406,9154830.5938881
+"270","Campylobacter","ReactiveArthritis","5-64","WTP",13231927.9423788,6080151.35629168,26987522.6021768
+"271","Campylobacter","ReactiveArthritis","65+","Deaths",109792.333746769,903.408856765318,988539.740954567
+"272","Campylobacter","ReactiveArthritis","65+","HumanCapital",3848821.10866592,1794957.25892504,7708632.43682097
+"273","Campylobacter","ReactiveArthritis","65+","FrictionHigh",3079056.88693274,1435965.80714003,6166905.94945677
+"274","Campylobacter","ReactiveArthritis","65+","FrictionLow",1154646.33259978,538487.177677512,2312589.73104629
+"275","Campylobacter","ReactiveArthritis","65+","TotalHumanCapital",9348606.47799802,4659985.14534382,17981815.6889048
+"276","Campylobacter","ReactiveArthritis","65+","TotalFrictionHigh",8578616.68188355,4292455.89582266,16440040.5076794
+"277","Campylobacter","ReactiveArthritis","65+","TotalFrictionLow",6649719.28593868,3376527.37360346,12624971.5821519
+"278","Campylobacter","ReactiveArthritis","65+","Direct",1477872.99703927,845724.817872104,2533554.83560485
+"279","Campylobacter","ReactiveArthritis","65+","WTP",3739234.34869812,1715536.67101745,7648472.67825685
+"280","Campylobacter","ReactiveArthritis","All Ages","Deaths",435552.356313555,61221.6231269568,1624239.38874962
+"281","Campylobacter","ReactiveArthritis","All Ages","HumanCapital",40902190.9097196,19075369.420011,81921177.0777772
+"282","Campylobacter","ReactiveArthritis","All Ages","FrictionHigh",32721752.7277757,15260295.5360088,65536941.6622218
+"283","Campylobacter","ReactiveArthritis","All Ages","FrictionLow",12270657.2729159,5722610.82600331,24576353.1233332
+"284","Campylobacter","ReactiveArthritis","All Ages","TotalHumanCapital",68091798.3262134,33125323.2730651,132810073.006698
+"285","Campylobacter","ReactiveArthritis","All Ages","TotalFrictionHigh",59905182.5936328,29318373.0736008,116451912.674655
+"286","Campylobacter","ReactiveArthritis","All Ages","TotalFrictionLow",39419289.8942137,19712992.4035631,75579151.3773973
+"287","Campylobacter","ReactiveArthritis","All Ages","Direct",7646924.25577693,4403349.50632523,12589808.5196756
+"288","Campylobacter","ReactiveArthritis","All Ages","WTP",18815606.9772973,8656778.76000355,38389100.097263
+"289","Campylobacter","IBS","<5","Deaths",18751.0178946402,156.510929154166,201927.532552502
+"290","Campylobacter","IBS","<5","HumanCapital",2324093.99152473,1380015.7388489,3904602.94415655
+"291","Campylobacter","IBS","<5","FrictionHigh",1859275.19321979,1104012.59107912,3123682.35532524
+"292","Campylobacter","IBS","<5","FrictionLow",697228.19745742,414004.721654669,1171380.88324697
+"293","Campylobacter","IBS","<5","TotalHumanCapital",6115795.97789119,3488586.52248039,10704353.1832282
+"294","Campylobacter","IBS","<5","TotalFrictionHigh",5649050.90722244,3197507.62379573,9953002.21035538
+"295","Campylobacter","IBS","<5","TotalFrictionLow",4475692.07455618,2459910.84013997,8096317.9399756
+"296","Campylobacter","IBS","<5","Direct",1027356.63921574,611595.652806309,1725728.35486924
+"297","Campylobacter","IBS","<5","WTP",2676358.52926658,1254383.16202284,5354329.83912861
+"298","Campylobacter","IBS","5-64","Deaths",25086.885194146,208.758640155755,260839.129549398
+"299","Campylobacter","IBS","5-64","HumanCapital",19577421.1598083,11624809.2483059,32891120.8317483
+"300","Campylobacter","IBS","5-64","FrictionHigh",15661936.9278466,9299847.39864469,26312896.6653986
+"301","Campylobacter","IBS","5-64","FrictionLow",5873226.34794248,3487442.77449176,9867336.24952448
+"302","Campylobacter","IBS","5-64","TotalHumanCapital",51103529.2789824,30289112.741364,86692894.1355347
+"303","Campylobacter","IBS","5-64","TotalFrictionHigh",47171966.4954361,27836687.4314287,80374751.4472854
+"304","Campylobacter","IBS","5-64","TotalFrictionLow",37275220.7178424,21594691.4918011,64607156.9971262
+"305","Campylobacter","IBS","5-64","Direct",11808933.7915182,7317636.36643202,18952974.1518661
+"306","Campylobacter","IBS","5-64","WTP",19207702.4316075,9012064.79646008,38465535.0625344
+"307","Campylobacter","IBS","65+","Deaths",1489346.50637832,587488.496819163,4067562.47383898
+"308","Campylobacter","IBS","65+","HumanCapital",2259049.86325238,1341393.41072323,3795325.30922505
+"309","Campylobacter","IBS","65+","FrictionHigh",1807239.8906019,1073114.72857858,3036260.24738004
+"310","Campylobacter","IBS","65+","FrictionLow",677714.958975713,402418.023216969,1138597.59276752
+"311","Campylobacter","IBS","65+","TotalHumanCapital",12927915.809058,7848614.65968796,21355120.3862624
+"312","Campylobacter","IBS","65+","TotalFrictionHigh",12471466.459486,7550776.50585889,20637841.7944426
+"313","Campylobacter","IBS","65+","TotalFrictionLow",11321282.6133979,6805520.37257434,18856346.5741496
+"314","Campylobacter","IBS","65+","Direct",3339520.80591971,2084716.16859459,5291086.55037214
+"315","Campylobacter","IBS","65+","WTP",5417030.46762972,2543716.99781174,10883673.5192128
+"316","Campylobacter","IBS","All Ages","Deaths",1607962.96525913,672633.041132628,4189160.59798785
+"317","Campylobacter","IBS","All Ages","HumanCapital",24160565.0145854,14346218.397878,40591049.0851299
+"318","Campylobacter","IBS","All Ages","FrictionHigh",19328452.0116683,11476974.7183024,32472839.2681039
+"319","Campylobacter","IBS","All Ages","FrictionLow",7248169.50437561,4303865.5193634,12177314.725539
+"320","Campylobacter","IBS","All Ages","TotalHumanCapital",70233713.5360074,42154443.3779338,117974444.861359
+"321","Campylobacter","IBS","All Ages","TotalFrictionHigh",65350523.7809201,39157438.1088553,110086893.579185
+"322","Campylobacter","IBS","All Ages","TotalFrictionLow",53175568.4800064,31464277.7658772,90588211.6283356
+"323","Campylobacter","IBS","All Ages","Direct",16257713.4619651,10330671.3656914,25370025.0608258
+"324","Campylobacter","IBS","All Ages","WTP",27494159.9479815,13104573.296167,53709157.2348582
+"325","Campylobacter","GBS","<5","Deaths",57416.1242892081,489.81757591072,566405.869662212
+"326","Campylobacter","GBS","<5","HumanCapital",175122.052623503,86121.6390209252,360525.490646907
+"327","Campylobacter","GBS","<5","FrictionHigh",140097.642098802,68897.3112167402,288420.392517525
+"328","Campylobacter","GBS","<5","FrictionLow",52536.6157870509,25836.4917062776,108157.647194072
+"329","Campylobacter","GBS","<5","TotalHumanCapital",596568.21918679,283874.556177269,1280846.36771569
+"330","Campylobacter","GBS","<5","TotalFrictionHigh",559671.381421386,264584.124994035,1217718.44034403
+"331","Campylobacter","GBS","<5","TotalFrictionLow",466195.646080606,216335.769901122,1060762.16377379
+"332","Campylobacter","GBS","<5","Direct",284910.681903559,140126.391526116,586415.661538062
+"333","Campylobacter","GBS","<5","WTP",15835.2547650294,7763.79932278384,32612.791792961
+"334","Campylobacter","GBS","5-64","Deaths",4899867.82768918,2001400.29526054,10051262.2892961
+"335","Campylobacter","GBS","5-64","HumanCapital",1473652.50918269,724713.806952484,3033822.90212392
+"336","Campylobacter","GBS","5-64","FrictionHigh",1178922.00734615,579771.045561987,2427058.32169914
+"337","Campylobacter","GBS","5-64","FrictionLow",442095.752754806,217414.142085745,910146.870637176
+"338","Campylobacter","GBS","5-64","TotalHumanCapital",8944162.12999846,5008150.80726501,15041467.4853652
+"339","Campylobacter","GBS","5-64","TotalFrictionHigh",8627464.26734491,4808484.92640733,14561187.3999917
+"340","Campylobacter","GBS","5-64","TotalFrictionLow",7833523.2004716,4284149.04243505,13430687.2686283
+"341","Campylobacter","GBS","5-64","Direct",2046965.62524588,1006601.49763559,4213420.61569144
+"342","Campylobacter","GBS","5-64","WTP",135829.266306742,66513.2214084009,280074.018597057
+"343","Campylobacter","GBS","65+","Deaths",31952758.2626707,13881267.8953424,59345432.0449711
+"344","Campylobacter","GBS","65+","HumanCapital",169868.944281463,83538.2619213913,349710.864881259
+"345","Campylobacter","GBS","65+","FrictionHigh",135895.155425171,66830.609537113,279768.691905008
+"346","Campylobacter","GBS","65+","FrictionLow",50960.683284439,25061.4785764174,104913.259464378
+"347","Campylobacter","GBS","65+","TotalHumanCapital",32831751.4573645,14779088.8028742,60252218.3084598
+"348","Campylobacter","GBS","65+","TotalFrictionHigh",32797038.9490554,14742322.7196707,60209881.5139546
+"349","Campylobacter","GBS","65+","TotalFrictionLow",32703685.3533256,14647836.8234377,60112833.8821105
+"350","Campylobacter","GBS","65+","Direct",578512.755657032,284433.203984352,1190621.05478357
+"351","Campylobacter","GBS","65+","WTP",62328.4893201251,30429.6533742863,128484.987352828
+"352","Campylobacter","GBS","All Ages","Deaths",37399126.6102681,18848683.3963474,65263305.4531493
+"353","Campylobacter","GBS","All Ages","HumanCapital",1818643.50608765,894373.707894801,3744059.25765209
+"354","Campylobacter","GBS","All Ages","FrictionHigh",1454914.80487012,715498.966315841,2995247.40612167
+"355","Campylobacter","GBS","All Ages","FrictionLow",545593.051826296,268312.11236844,1123217.77729563
+"356","Campylobacter","GBS","All Ages","TotalHumanCapital",42895819.6121002,23857063.3089631,71042615.9188454
+"357","Campylobacter","GBS","All Ages","TotalFrictionHigh",42499229.7915671,23524656.1623072,70608067.3606111
+"358","Campylobacter","GBS","All Ages","TotalFrictionLow",41482611.6470762,22634214.5212632,69439846.3156697
+"359","Campylobacter","GBS","All Ages","Direct",2910347.2597582,1431147.544607,5990781.67967938
+"360","Campylobacter","GBS","All Ages","WTP",214052.480397949,104796.553610915,441031.773659523
+"361","Campylobacter","Initial and Sequel Disease","<5","Deaths",1571638.34437823,442158.291627405,4290123.16198268
+"362","Campylobacter","Initial and Sequel Disease","<5","HumanCapital",12310443.0359939,6988520.85415521,21780567.5651275
+"363","Campylobacter","Initial and Sequel Disease","<5","FrictionHigh",9848354.42879514,5590816.68332416,17424454.052102
+"364","Campylobacter","Initial and Sequel Disease","<5","FrictionLow",3693132.91079818,2096556.25624656,6534170.26953826
+"365","Campylobacter","Initial and Sequel Disease","<5","TotalHumanCapital",27018997.1013753,16740249.915957,44032324.9345511
+"366","Campylobacter","Initial and Sequel Disease","<5","TotalFrictionHigh",24549835.5251318,15307180.4294047,39787959.3276557
+"367","Campylobacter","Initial and Sequel Disease","<5","TotalFrictionLow",18369114.518092,11645238.8689036,29229880.8210192
+"368","Campylobacter","Initial and Sequel Disease","<5","Direct",4467503.43974073,2955358.74945867,6968506.17164205
+"369","Campylobacter","Initial and Sequel Disease","<5","WTP",8247193.95246883,4813041.95122741,14080593.0913853
+"370","Campylobacter","Initial and Sequel Disease","5-64","Deaths",12157169.7105306,7051211.27038628,19688570.5457911
+"371","Campylobacter","Initial and Sequel Disease","5-64","HumanCapital",116897870.113513,69484412.9488302,197226283.442189
+"372","Campylobacter","Initial and Sequel Disease","5-64","FrictionHigh",93518296.0908106,55587530.3590642,157781026.753751
+"373","Campylobacter","Initial and Sequel Disease","5-64","FrictionLow",35069361.034054,20845323.8846491,59167885.0326567
+"374","Campylobacter","Initial and Sequel Disease","5-64","TotalHumanCapital",229266339.331162,146671956.042951,366686706.888007
+"375","Campylobacter","Initial and Sequel Disease","5-64","TotalFrictionHigh",205876832.219658,132605802.798159,327370523.154314
+"376","Campylobacter","Initial and Sequel Disease","5-64","TotalFrictionLow",147365158.490156,97273392.8512666,229392649.195047
+"377","Campylobacter","Initial and Sequel Disease","5-64","Direct",40055712.2796811,27903717.9534456,59203859.5430692
+"378","Campylobacter","Initial and Sequel Disease","5-64","WTP",59347472.016886,34695261.8806165,101371820.579698
+"379","Campylobacter","Initial and Sequel Disease","65+","Deaths",43285857.2429687,24085172.4309956,71504431.1712157
+"380","Campylobacter","Initial and Sequel Disease","65+","HumanCapital",16750007.8119552,8018900.12344058,53568837.3640163
+"381","Campylobacter","Initial and Sequel Disease","65+","FrictionHigh",13400006.2495642,6415120.09875247,42855069.891213
+"382","Campylobacter","Initial and Sequel Disease","65+","FrictionLow",5025002.34358656,2405670.03703217,16070651.2092049
+"383","Campylobacter","Initial and Sequel Disease","65+","TotalHumanCapital",105306550.494895,74241102.2295244,156184151.491882
+"384","Campylobacter","Initial and Sequel Disease","65+","TotalFrictionHigh",101676498.401991,71984870.8604294,147476203.32163
+"385","Campylobacter","Initial and Sequel Disease","65+","TotalFrictionLow",92067295.116421,66002424.9668052,127512040.007756
+"386","Campylobacter","Initial and Sequel Disease","65+","Direct",24225113.8559964,18014821.2986012,31747148.6723705
+"387","Campylobacter","Initial and Sequel Disease","65+","WTP",16913695.6135282,9950959.09778039,28817840.4750757
+"388","Campylobacter","Initial and Sequel Disease","All Ages","Deaths",57796410.8859326,37415942.5969002,86816687.8893689
+"389","Campylobacter","Initial and Sequel Disease","All Ages","HumanCapital",149374442.025624,87948273.6700048,257735005.079193
+"390","Campylobacter","Initial and Sequel Disease","All Ages","FrictionHigh",119499553.620499,70358618.9360038,206188004.063354
+"391","Campylobacter","Initial and Sequel Disease","All Ages","FrictionLow",44812332.6076872,26384482.1010014,77320501.5237578
+"392","Campylobacter","Initial and Sequel Disease","All Ages","TotalHumanCapital",363458456.854146,248842223.598632,552581372.230822
+"393","Campylobacter","Initial and Sequel Disease","All Ages","TotalFrictionHigh",333547059.522397,230885810.70155,501486993.355453
+"394","Campylobacter","Initial and Sequel Disease","All Ages","TotalFrictionLow",258668878.516164,184798784.728346,374736885.069198
+"395","Campylobacter","Initial and Sequel Disease","All Ages","Direct",68785644.022138,51268293.0512986,95390177.3278826
+"396","Campylobacter","Initial and Sequel Disease","All Ages","WTP",84573637.1628407,49635068.0830862,143771537.125804
+"397","Non-typhoidal salmonella","Salmonellosis","<5","Deaths",2537641.19618914,877523.898810303,5915521.36629229
+"398","Non-typhoidal salmonella","Salmonellosis","<5","HumanCapital",3477007.48523031,1829320.61918562,6947696.85512714
+"399","Non-typhoidal salmonella","Salmonellosis","<5","FrictionHigh",2781605.98818425,1463456.49534849,5558157.48410171
+"400","Non-typhoidal salmonella","Salmonellosis","<5","FrictionLow",1043102.24556909,548796.185755685,2084309.05653814
+"401","Non-typhoidal salmonella","Salmonellosis","<5","TotalHumanCapital",11513452.6020073,7655638.1788893,17703832.7744742
+"402","Non-typhoidal salmonella","Salmonellosis","<5","TotalFrictionHigh",10797485.7453311,7216385.391947,16437742.1243242
+"403","Non-typhoidal salmonella","Salmonellosis","<5","TotalFrictionLow",8982290.3290537,6064005.93361118,13468046.1740294
+"404","Non-typhoidal salmonella","Salmonellosis","<5","Direct",2996990.75089213,2116482.67473271,4157037.63247208
+"405","Non-typhoidal salmonella","Salmonellosis","<5","WTP",2103785.71843843,1207453.0602642,3654611.47001164
+"406","Non-typhoidal salmonella","Salmonellosis","5-64","Deaths",15396463.7948826,8640302.10385475,25600785.9343022
+"407","Non-typhoidal salmonella","Salmonellosis","5-64","HumanCapital",13332146.9767359,7648530.75537323,23464253.1998769
+"408","Non-typhoidal salmonella","Salmonellosis","5-64","FrictionHigh",10665717.5813887,6118824.60429859,18771402.5599015
+"409","Non-typhoidal salmonella","Salmonellosis","5-64","FrictionLow",3999644.09302076,2294559.22661197,7039275.95996306
+"410","Non-typhoidal salmonella","Salmonellosis","5-64","TotalHumanCapital",42074193.4203942,29433284.1947163,60372865.8420607
+"411","Non-typhoidal salmonella","Salmonellosis","5-64","TotalFrictionHigh",39382631.7297291,27647084.2497301,56079624.3268497
+"412","Non-typhoidal salmonella","Salmonellosis","5-64","TotalFrictionLow",32546243.6580928,22977387.9669074,45733653.2549388
+"413","Non-typhoidal salmonella","Salmonellosis","5-64","Direct",6996451.60151,4951394.90379418,9856880.32364589
+"414","Non-typhoidal salmonella","Salmonellosis","5-64","WTP",5445855.00808876,3108907.75373975,9493418.68269981
+"415","Non-typhoidal salmonella","Salmonellosis","65+","Deaths",36608065.3084335,21758246.3079088,57726135.9257444
+"416","Non-typhoidal salmonella","Salmonellosis","65+","HumanCapital",1879822.69026829,844933.044598824,7666866.94822151
+"417","Non-typhoidal salmonella","Salmonellosis","65+","FrictionHigh",1503858.15221463,675946.435679059,6133493.55857721
+"418","Non-typhoidal salmonella","Salmonellosis","65+","FrictionLow",563946.807080488,253479.913379647,2300060.08446645
+"419","Non-typhoidal salmonella","Salmonellosis","65+","TotalHumanCapital",47115502.4854859,31435440.9074127,69163562.9104124
+"420","Non-typhoidal salmonella","Salmonellosis","65+","TotalFrictionHigh",46592634.7337276,31068518.5037199,68321104.8357088
+"421","Non-typhoidal salmonella","Salmonellosis","65+","TotalFrictionLow",45237329.0017297,30017462.0740384,66517342.9450127
+"422","Non-typhoidal salmonella","Salmonellosis","65+","Direct",6341250.63244141,4266447.02745847,8833500.23996335
+"423","Non-typhoidal salmonella","Salmonellosis","65+","WTP",1274626.68244146,743833.766131407,2192062.84601027
+"424","Non-typhoidal salmonella","Salmonellosis","All Ages","Deaths",55639486.8949563,38204781.3322102,78457944.2155248
+"425","Non-typhoidal salmonella","Salmonellosis","All Ages","HumanCapital",19384318.768059,11115864.2194479,35050350.1418692
+"426","Non-typhoidal salmonella","Salmonellosis","All Ages","FrictionHigh",15507455.0144472,8892691.37555834,28040280.1134953
+"427","Non-typhoidal salmonella","Salmonellosis","All Ages","FrictionLow",5815295.63041771,3334759.26583438,10515105.0425607
+"428","Non-typhoidal salmonella","Salmonellosis","All Ages","TotalHumanCapital",101886421.918289,77538165.4052038,134339189.76592
+"429","Non-typhoidal salmonella","Salmonellosis","All Ages","TotalFrictionHigh",97927721.1184712,74686796.9167065,128155654.308062
+"430","Non-typhoidal salmonella","Salmonellosis","All Ages","TotalFrictionLow",87804185.5523749,67212146.0380916,113920485.717313
+"431","Non-typhoidal salmonella","Salmonellosis","All Ages","Direct",16435099.2788637,12917993.4412147,20945215.8033931
+"432","Non-typhoidal salmonella","Salmonellosis","All Ages","WTP",8825067.57005715,5062648.05066551,15336165.5756658
+"433","Non-typhoidal salmonella","ReactiveArthritis","<5","Deaths",37592.3802903256,322.270708994024,405332.424817236
+"434","Non-typhoidal salmonella","ReactiveArthritis","<5","HumanCapital",2771116.60367459,728310.774973177,6880711.11665511
+"435","Non-typhoidal salmonella","ReactiveArthritis","<5","FrictionHigh",2216893.28293967,582648.619978542,5504568.89332408
+"436","Non-typhoidal salmonella","ReactiveArthritis","<5","FrictionLow",831334.981102377,218493.232491953,2064213.33499653
+"437","Non-typhoidal salmonella","ReactiveArthritis","<5","TotalHumanCapital",4689198.54980083,1268867.27270229,11343309.1952888
+"438","Non-typhoidal salmonella","ReactiveArthritis","<5","TotalFrictionHigh",4135804.67084373,1123038.53851075,9971997.86395972
+"439","Non-typhoidal salmonella","ReactiveArthritis","<5","TotalFrictionLow",2748695.29179255,755976.671531009,6554646.88640394
+"440","Non-typhoidal salmonella","ReactiveArthritis","<5","Direct",505848.942114944,151790.642137363,1105035.48131011
+"441","Non-typhoidal salmonella","ReactiveArthritis","<5","WTP",1295391.29876908,338546.172834903,3271416.10104186
+"442","Non-typhoidal salmonella","ReactiveArthritis","5-64","Deaths",18854.8969157082,152.957938395354,225561.621857297
+"443","Non-typhoidal salmonella","ReactiveArthritis","5-64","HumanCapital",8497042.98983656,2233210.95788684,21098245.408128
+"444","Non-typhoidal salmonella","ReactiveArthritis","5-64","FrictionHigh",6797634.39186925,1786568.76630947,16878596.3265024
+"445","Non-typhoidal salmonella","ReactiveArthritis","5-64","FrictionLow",2549112.89695097,669963.287366053,6329473.62243841
+"446","Non-typhoidal salmonella","ReactiveArthritis","5-64","TotalHumanCapital",13376705.7077234,3561389.69201208,32802679.6708342
+"447","Non-typhoidal salmonella","ReactiveArthritis","5-64","TotalFrictionHigh",11680159.7714657,3112319.35344676,28595552.6630546
+"448","Non-typhoidal salmonella","ReactiveArthritis","5-64","TotalFrictionLow",7422911.56720553,1986008.63523189,18057227.3683674
+"449","Non-typhoidal salmonella","ReactiveArthritis","5-64","Direct",1388208.12587055,374341.886251403,3316374.97749082
+"450","Non-typhoidal salmonella","ReactiveArthritis","5-64","WTP",3381534.21500866,883421.359691919,8562753.63309746
+"451","Non-typhoidal salmonella","ReactiveArthritis","65+","Deaths",20366.8168576376,164.41265755892,245849.451243024
+"452","Non-typhoidal salmonella","ReactiveArthritis","65+","HumanCapital",791692.568912935,208074.329185895,1965780.81653765
+"453","Non-typhoidal salmonella","ReactiveArthritis","65+","FrictionHigh",633354.055130348,166459.463348716,1572624.65323012
+"454","Non-typhoidal salmonella","ReactiveArthritis","65+","FrictionLow",237507.770673881,62422.2987557684,589734.244961294
+"455","Non-typhoidal salmonella","ReactiveArthritis","65+","TotalHumanCapital",1930389.09232089,514968.797022687,4717936.060675
+"456","Non-typhoidal salmonella","ReactiveArthritis","65+","TotalFrictionHigh",1771596.44015185,472911.742641183,4327886.71535637
+"457","Non-typhoidal salmonella","ReactiveArthritis","65+","TotalFrictionLow",1373512.35764918,367334.054886826,3355412.7324375
+"458","Non-typhoidal salmonella","ReactiveArthritis","65+","Direct",306540.803251608,81743.750714114,754048.176711883
+"459","Non-typhoidal salmonella","ReactiveArthritis","65+","WTP",766136.132442092,200373.092699416,1940856.48021525
+"460","Non-typhoidal salmonella","ReactiveArthritis","All Ages","Deaths",138327.19276919,14616.6264005422,669217.319076536
+"461","Non-typhoidal salmonella","ReactiveArthritis","All Ages","HumanCapital",12059852.1624241,3169596.06204591,29944737.3413208
+"462","Non-typhoidal salmonella","ReactiveArthritis","All Ages","FrictionHigh",9647881.72993927,2535676.84963673,23955789.8730566
+"463","Non-typhoidal salmonella","ReactiveArthritis","All Ages","FrictionLow",3617955.64872723,950878.818613774,8983421.20239623
+"464","Non-typhoidal salmonella","ReactiveArthritis","All Ages","TotalHumanCapital",20008230.8337415,5347183.954176,48840670.4184158
+"465","Non-typhoidal salmonella","ReactiveArthritis","All Ages","TotalFrictionHigh",17585936.5415907,4709270.36826721,42856074.4493721
+"466","Non-typhoidal salmonella","ReactiveArthritis","All Ages","TotalFrictionLow",11558999.2680406,3119008.52452676,27884390.7948018
+"467","Non-typhoidal salmonella","ReactiveArthritis","All Ages","Direct",2231321.37364262,624149.758440108,5070861.27528475
+"468","Non-typhoidal salmonella","ReactiveArthritis","All Ages","WTP",5448133.74008027,1423710.13006672,13771475.753577
+"469","Non-typhoidal salmonella","IBS","<5","Deaths",10533.5592768905,87.8003338198517,116318.89232422
+"470","Non-typhoidal salmonella","IBS","<5","HumanCapital",1317692.31098553,718450.812885745,2385470.89448345
+"471","Non-typhoidal salmonella","IBS","<5","FrictionHigh",1054153.84878842,574760.650308596,1908376.71558676
+"472","Non-typhoidal salmonella","IBS","<5","FrictionLow",395307.693295658,215535.243865723,715641.268345035
+"473","Non-typhoidal salmonella","IBS","<5","TotalHumanCapital",3463114.84817521,1827522.027287,6506650.56001678
+"474","Non-typhoidal salmonella","IBS","<5","TotalFrictionHigh",3196941.7298178,1675573.63832141,6047380.55504838
+"475","Non-typhoidal salmonella","IBS","<5","TotalFrictionLow",2530961.92124572,1293679.58766353,4905428.02823678
+"476","Non-typhoidal salmonella","IBS","<5","Direct",582162.315805161,317641.984178945,1054823.14728074
+"477","Non-typhoidal salmonella","IBS","<5","WTP",1512137.98616674,671047.589688086,3214596.00346117
+"478","Non-typhoidal salmonella","IBS","5-64","Deaths",5027.78612439294,40.3329597101881,58374.3763974496
+"479","Non-typhoidal salmonella","IBS","5-64","HumanCapital",4030027.39972851,2197308.45899925,7295719.17956557
+"480","Non-typhoidal salmonella","IBS","5-64","FrictionHigh",3224021.91978281,1757846.7671994,5836575.34365246
+"481","Non-typhoidal salmonella","IBS","5-64","FrictionLow",1209008.21991855,659192.537699776,2188715.75386967
+"482","Non-typhoidal salmonella","IBS","5-64","TotalHumanCapital",10524575.2803818,5607372.38201131,19538033.8631424
+"483","Non-typhoidal salmonella","IBS","5-64","TotalFrictionHigh",9714582.29041046,5147858.39049841,18123872.7266934
+"484","Non-typhoidal salmonella","IBS","5-64","TotalFrictionLow",7679171.44879925,3984716.596176,14576426.306783
+"485","Non-typhoidal salmonella","IBS","5-64","Direct",2422115.87586323,1271767.76802119,4603520.65210003
+"486","Non-typhoidal salmonella","IBS","5-64","WTP",3948205.78405332,1746234.29517611,8380908.61956534
+"487","Non-typhoidal salmonella","IBS","65+","Deaths",248056.20366929,77753.0346143497,809481.892863669
+"488","Non-typhoidal salmonella","IBS","65+","HumanCapital",372964.076691101,203352.741639278,675191.728916665
+"489","Non-typhoidal salmonella","IBS","65+","FrictionHigh",298371.261352881,162682.193311422,540153.383133332
+"490","Non-typhoidal salmonella","IBS","65+","FrictionLow",111889.22300733,61005.8224917833,202557.518675
+"491","Non-typhoidal salmonella","IBS","65+","TotalHumanCapital",2135423.63744281,1111622.62202264,4023966.29314614
+"492","Non-typhoidal salmonella","IBS","65+","TotalFrictionHigh",2060167.45181367,1067814.01986867,3898297.18417087
+"493","Non-typhoidal salmonella","IBS","65+","TotalFrictionLow",1871180.4036616,958267.138846158,3577513.72462095
+"494","Non-typhoidal salmonella","IBS","65+","Direct",550178.430740022,290576.533452037,1034168.69795377
+"495","Non-typhoidal salmonella","IBS","65+","WTP",893503.518390271,397385.058646068,1900194.45361517
+"496","Non-typhoidal salmonella","IBS","All Ages","Deaths",291257.194798909,96344.2524385804,875645.692169208
+"497","Non-typhoidal salmonella","IBS","All Ages","HumanCapital",5720683.78740514,3119112.01352428,10356381.8029657
+"498","Non-typhoidal salmonella","IBS","All Ages","FrictionHigh",4576547.02992411,2495289.61081942,8285105.44237255
+"499","Non-typhoidal salmonella","IBS","All Ages","FrictionLow",1716205.13622154,935733.604057283,3106914.54088971
+"500","Non-typhoidal salmonella","IBS","All Ages","TotalHumanCapital",16161660.8643326,8629780.30019459,29829945.6308996
+"501","Non-typhoidal salmonella","IBS","All Ages","TotalFrictionHigh",15015136.7349273,7982835.28642978,27828105.5277967
+"502","Non-typhoidal salmonella","IBS","All Ages","TotalFrictionLow",12134730.1667948,6336712.76572117,22815444.0888011
+"503","Non-typhoidal salmonella","IBS","All Ages","Direct",3578828.28732044,1918995.74725804,6565816.2520296
+"504","Non-typhoidal salmonella","IBS","All Ages","WTP",6404058.29584738,2890852.02814202,13250671.7947645
+"505","Non-typhoidal salmonella","Initial and Sequel Disease","<5","Deaths",2667543.40617086,981931.75529294,6056790.00413092
+"506","Non-typhoidal salmonella","Initial and Sequel Disease","<5","HumanCapital",7727449.48214593,3974619.75285578,14961931.6650282
+"507","Non-typhoidal salmonella","Initial and Sequel Disease","<5","FrictionHigh",6181959.58571674,3179695.80228462,11969545.3320226
+"508","Non-typhoidal salmonella","Initial and Sequel Disease","<5","FrictionLow",2318234.84464378,1192385.92585673,4488579.49950847
+"509","Non-typhoidal salmonella","Initial and Sequel Disease","<5","TotalHumanCapital",19924908.5196922,12375546.1795033,33105768.7949477
+"510","Non-typhoidal salmonella","Initial and Sequel Disease","<5","TotalFrictionHigh",18373076.8730849,11522692.9632441,30174244.1087644
+"511","Non-typhoidal salmonella","Initial and Sequel Disease","<5","TotalFrictionLow",14482588.9791857,9322773.78341139,22955603.8059732
+"512","Non-typhoidal salmonella","Initial and Sequel Disease","<5","Direct",4121183.98227238,2882228.11413359,5915685.88628738
+"513","Non-typhoidal salmonella","Initial and Sequel Disease","<5","WTP",5008017.76557391,2656715.4062936,9364449.44465753
+"514","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","Deaths",15468225.069084,8714165.74741,25669978.320246
+"515","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","HumanCapital",26174767.1938959,14042573.3314511,48861529.2243334
+"516","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","FrictionHigh",20939813.7551167,11234058.6651609,39089223.3794667
+"517","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","FrictionLow",7852430.15816876,4212771.99943533,14658458.7673
+"518","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","TotalHumanCapital",66562422.6251027,43384364.9821703,105783935.854144
+"519","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","TotalFrictionHigh",61344328.3966253,40380914.156365,96136879.9039036
+"520","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","TotalFrictionLow",48264551.1614078,32673970.5976378,72526176.86833
+"521","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","Direct",10954096.989046,7460109.52316195,16480010.2796683
+"522","Non-typhoidal salmonella","Initial and Sequel Disease","5-64","WTP",13034494.4667444,6883042.3031069,24353364.5324587
+"523","Non-typhoidal salmonella","Initial and Sequel Disease","65+","Deaths",36975828.3394728,22124167.5912244,58081326.1125979
+"524","Non-typhoidal salmonella","Initial and Sequel Disease","65+","HumanCapital",3226907.44807097,1591825.8462185,9333691.48533659
+"525","Non-typhoidal salmonella","Initial and Sequel Disease","65+","FrictionHigh",2581525.95845677,1273460.6769748,7466953.18826927
+"526","Non-typhoidal salmonella","Initial and Sequel Disease","65+","FrictionLow",968072.23442129,477547.75386555,2800107.44560098
+"527","Non-typhoidal salmonella","Initial and Sequel Disease","65+","TotalHumanCapital",51629456.1549853,35286849.8481556,74138594.9477881
+"528","Non-typhoidal salmonella","Initial and Sequel Disease","65+","TotalFrictionHigh",50851488.1277413,34716854.6525511,73011484.6592818
+"529","Non-typhoidal salmonella","Initial and Sequel Disease","65+","TotalFrictionLow",48845130.8170468,33213215.6035783,70362296.0810011
+"530","Non-typhoidal salmonella","Initial and Sequel Disease","65+","Direct",7272439.07281579,5038312.56030966,9946798.8829642
+"531","Non-typhoidal salmonella","Initial and Sequel Disease","65+","WTP",2993312.35559015,1599536.91356635,5566945.9575762
+"532","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","Deaths",56229536.1235962,38765717.4932632,79008903.9328592
+"533","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","HumanCapital",37722718.2017778,20223638.9484071,70719816.6871061
+"534","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","FrictionHigh",30178174.5614223,16178911.1587257,56575853.3496849
+"535","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","FrictionLow",11316815.4605333,6067091.68452214,21215945.0061318
+"536","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","TotalHumanCapital",139187424.169708,100515529.290476,200531441.276098
+"537","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","TotalFrictionHigh",131638923.189113,95893942.8011945,186722064.053935
+"538","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","TotalFrictionLow",112676963.806773,83998766.2156728,153338070.359625
+"539","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","Direct",22384283.0627687,16785287.6807002,30817386.78012
+"540","Non-typhoidal salmonella","Initial and Sequel Disease","All Ages","WTP",21044351.2372462,11180198.7565138,39201639.1570983
+"541","Shigella","Shigellosis","<5","Deaths",138075.384702836,21446.0684516154,547290.788870812
+"542","Shigella","Shigellosis","<5","HumanCapital",64218.6747489367,25010.8233081439,156052.909679142
+"543","Shigella","Shigellosis","<5","FrictionHigh",51374.9397991493,20008.6586465151,124842.327743313
+"544","Shigella","Shigellosis","<5","FrictionLow",19265.602424681,7503.24699244316,46815.8729037426
+"545","Shigella","Shigellosis","<5","TotalHumanCapital",349375.364989508,173772.329861747,771724.483849493
+"546","Shigella","Shigellosis","<5","TotalFrictionHigh",333880.987394916,165799.139630757,752086.104577008
+"547","Shigella","Shigellosis","<5","TotalFrictionLow",294545.125871289,145034.834400499,707019.707158594
+"548","Shigella","Shigellosis","<5","Direct",83637.5368100147,54441.6718661881,126059.955237174
+"549","Shigella","Shigellosis","<5","WTP",38628.5165422029,14312.7206247152,85294.0377224341
+"550","Shigella","Shigellosis","5-64","Deaths",468479.691314718,132932.912445231,1291510.76210501
+"551","Shigella","Shigellosis","5-64","HumanCapital",515835.030523738,195973.932363907,1154783.62685167
+"552","Shigella","Shigellosis","5-64","FrictionHigh",412668.024418991,156779.145891125,923826.901481334
+"553","Shigella","Shigellosis","5-64","FrictionLow",154750.509157121,58792.179709172,346435.0880555
+"554","Shigella","Shigellosis","5-64","TotalHumanCapital",1674507.88959628,926484.892470371,2928006.83451136
+"555","Shigella","Shigellosis","5-64","TotalFrictionHigh",1567440.84749128,874915.194536203,2729145.34887687
+"556","Shigella","Shigellosis","5-64","TotalFrictionLow",1290474.28617585,736018.080940661,2256095.3656046
+"557","Shigella","Shigellosis","5-64","Direct",389457.731760954,268097.588276704,573564.436554888
+"558","Shigella","Shigellosis","5-64","WTP",210922.356109393,76155.0555031167,469039.169008725
+"559","Shigella","Shigellosis","65+","Deaths",26301.0872527968,216.053513385317,275293.178329099
+"560","Shigella","Shigellosis","65+","HumanCapital",29821.9686055367,7945.55770700291,161661.757802165
+"561","Shigella","Shigellosis","65+","FrictionHigh",23857.5748844293,6356.44616560233,129329.406241732
+"562","Shigella","Shigellosis","65+","FrictionLow",8946.590581661,2383.66731210087,48498.5273406494
+"563","Shigella","Shigellosis","65+","TotalHumanCapital",182209.412603545,89024.7103416886,481375.064767774
+"564","Shigella","Shigellosis","65+","TotalFrictionHigh",174141.195622979,86267.2377415753,456926.853083412
+"565","Shigella","Shigellosis","65+","TotalFrictionLow",151998.34818253,78142.5976400978,402154.208811782
+"566","Shigella","Shigellosis","65+","Direct",72682.4271620173,43147.9298489257,115316.90107528
+"567","Shigella","Shigellosis","65+","WTP",23464.0833516705,8456.74366612652,52337.6277133842
+"568","Shigella","Shigellosis","All Ages","Deaths",732192.234678727,283962.126357589,1649403.6825592
+"569","Shigella","Shigellosis","All Ages","HumanCapital",626549.088059965,238558.739801501,1411635.76891586
+"570","Shigella","Shigellosis","All Ages","FrictionHigh",501239.270447972,190846.991841201,1129308.61513269
+"571","Shigella","Shigellosis","All Ages","FrictionLow",187964.72641799,71567.6219404504,423490.730674757
+"572","Shigella","Shigellosis","All Ages","TotalHumanCapital",2276626.29205729,1350959.25681047,3788119.73677233
+"573","Shigella","Shigellosis","All Ages","TotalFrictionHigh",2147287.57098896,1288230.96706885,3538766.00462553
+"574","Shigella","Shigellosis","All Ages","TotalFrictionLow",1814068.08312336,1117845.68631563,2945011.59481868
+"575","Shigella","Shigellosis","All Ages","Direct",549132.364639429,404103.109454324,766171.078078403
+"576","Shigella","Shigellosis","All Ages","WTP",272989.251608695,98876.1842623366,606479.677526372
+"577","Shigella","ReactiveArthritis","<5","Deaths",612.180425521601,4.65371884380872,7631.45821280812
+"578","Shigella","ReactiveArthritis","<5","HumanCapital",44447.6506584857,14836.0856060598,104381.742067055
+"579","Shigella","ReactiveArthritis","<5","FrictionHigh",35558.1205267886,11868.8684848479,83505.3936536438
+"580","Shigella","ReactiveArthritis","<5","FrictionLow",13334.2951975457,4450.82568181795,31314.5226201164
+"581","Shigella","ReactiveArthritis","<5","TotalHumanCapital",75409.5295801343,25122.3118094903,178183.792435699
+"582","Shigella","ReactiveArthritis","<5","TotalFrictionHigh",66453.6216641439,22133.2871323397,157386.329121675
+"583","Shigella","ReactiveArthritis","<5","TotalFrictionLow",44105.313051383,14639.6894849206,105386.34832014
+"584","Shigella","ReactiveArthritis","<5","Direct",8084.64691312686,2523.55833593596,21132.8748774693
+"585","Shigella","ReactiveArthritis","<5","WTP",20832.6268787217,6895.60210560289,49861.2178865981
+"586","Shigella","ReactiveArthritis","5-64","Deaths",664.034603679187,5.18751976926776,8327.86522156107
+"587","Shigella","ReactiveArthritis","5-64","HumanCapital",289606.21758593,96667.0357712542,680116.970351022
+"588","Shigella","ReactiveArthritis","5-64","FrictionHigh",231684.974068744,77333.6286170034,544093.576280817
+"589","Shigella","ReactiveArthritis","5-64","FrictionLow",86881.865275779,29000.1107313763,204035.091105306
+"590","Shigella","ReactiveArthritis","5-64","TotalHumanCapital",456043.969927218,152070.516886818,1075030.94719514
+"591","Shigella","ReactiveArthritis","5-64","TotalFrictionHigh",398145.949758275,132796.681382076,938846.790122578
+"592","Shigella","ReactiveArthritis","5-64","TotalFrictionLow",253266.721322419,84275.2592092616,599239.511783882
+"593","Shigella","ReactiveArthritis","5-64","Direct",47011.1538941626,14733.3442123704,123231.395489155
+"594","Shigella","ReactiveArthritis","5-64","WTP",115480.057167506,38127.2821360806,276044.22970469
+"595","Shigella","ReactiveArthritis","65+","Deaths",345.967948365873,2.79614221108513,4447.87812207946
+"596","Shigella","ReactiveArthritis","65+","HumanCapital",13278.1043381274,4432.0698558461,31182.5628942944
+"597","Shigella","ReactiveArthritis","65+","FrictionHigh",10622.4834705019,3545.65588467688,24946.0503154355
+"598","Shigella","ReactiveArthritis","65+","FrictionLow",3983.43130143822,1329.62095675383,9354.76886828831
+"599","Shigella","ReactiveArthritis","65+","TotalHumanCapital",32395.8156442801,10749.6597843614,77106.2861674567
+"600","Shigella","ReactiveArthritis","65+","TotalFrictionHigh",29727.1247070926,9857.79907259508,70885.5020331247
+"601","Shigella","ReactiveArthritis","65+","TotalFrictionLow",23041.5167419551,7622.83410448803,55321.4245470268
+"602","Shigella","ReactiveArthritis","65+","Direct",5112.6435735517,1598.3551690041,13459.6730696517
+"603","Shigella","ReactiveArthritis","65+","WTP",12890.9278928793,4261.18118367145,30823.6383758855
+"604","Shigella","ReactiveArthritis","All Ages","Deaths",2854.53125103889,310.786639845904,16177.7614889993
+"605","Shigella","ReactiveArthritis","All Ages","HumanCapital",347331.972582543,115935.19123316,815681.275312371
+"606","Shigella","ReactiveArthritis","All Ages","FrictionHigh",277865.578066035,92748.1529865281,652545.020249897
+"607","Shigella","ReactiveArthritis","All Ages","FrictionLow",104199.591774763,34780.557369948,244704.382593711
+"608","Shigella","ReactiveArthritis","All Ages","TotalHumanCapital",564184.73980034,188390.820917915,1330310.51701743
+"609","Shigella","ReactiveArthritis","All Ages","TotalFrictionHigh",494468.439174008,165077.778749077,1166540.93676996
+"610","Shigella","ReactiveArthritis","All Ages","TotalFrictionLow",320763.283349965,106770.707141554,759278.382719259
+"611","Shigella","ReactiveArthritis","All Ages","Direct",60610.4230460455,19237.0194135639,155824.701804637
+"612","Shigella","ReactiveArthritis","All Ages","WTP",149307.51223923,49362.358616825,356606.741578865
+"613","Shigella","IBS","<5","Deaths",182.507204867286,1.44002382992795,2430.15893766592
+"614","Shigella","IBS","<5","HumanCapital",24134.0600828318,8262.53367388973,55512.892421756
+"615","Shigella","IBS","<5","FrictionHigh",19307.2480662654,6610.02693911179,44410.3139374048
+"616","Shigella","IBS","<5","FrictionLow",7240.21802484954,2478.76010216692,16653.8677265268
+"617","Shigella","IBS","<5","TotalHumanCapital",63344.3996183962,21281.0405935995,150188.009481574
+"618","Shigella","IBS","<5","TotalFrictionHigh",58474.0043778033,19589.2257268275,139284.726019493
+"619","Shigella","IBS","<5","TotalFrictionLow",46220.3134328654,15288.5938381019,112206.822718235
+"620","Shigella","IBS","<5","Direct",10658.0024757178,3652.20653690524,24558.1145936623
+"621","Shigella","IBS","<5","WTP",27325.3548600734,8361.9488828137,71981.8463902646
+"622","Shigella","IBS","5-64","Deaths",185.394927795186,1.5141962095715,2533.32740939194
+"623","Shigella","IBS","5-64","HumanCapital",156844.91116214,53697.4034044655,360772.893179195
+"624","Shigella","IBS","5-64","FrictionHigh",125475.928929712,42957.9227235724,288618.314543356
+"625","Shigella","IBS","5-64","FrictionLow",47053.4733486421,16109.2210213397,108231.867953759
+"626","Shigella","IBS","5-64","TotalHumanCapital",409366.100613606,138013.397288554,963485.714734486
+"627","Shigella","IBS","5-64","TotalFrictionHigh",377579.722942968,126808.544113862,892201.43441615
+"628","Shigella","IBS","5-64","TotalFrictionLow",298319.312631251,99196.4556596405,715550.610154815
+"629","Shigella","IBS","5-64","Direct",93922.8082892648,31300.4089855386,231503.44866918
+"630","Shigella","IBS","5-64","WTP",151460.082457367,46063.0635672637,397964.921170854
+"631","Shigella","IBS","65+","Deaths",4636.36435692421,1077.65740074811,18421.5140194998
+"632","Shigella","IBS","65+","HumanCapital",7142.80640497675,2445.4102726453,16429.8026187054
+"633","Shigella","IBS","65+","FrictionHigh",5714.2451239814,1956.32821811624,13143.8420949643
+"634","Shigella","IBS","65+","FrictionLow",2142.84192149303,733.623081793589,4928.94078561162
+"635","Shigella","IBS","65+","TotalHumanCapital",40701.4631453937,13470.3165191363,98472.8576707747
+"636","Shigella","IBS","65+","TotalFrictionHigh",39262.9928258385,12960.0034962885,95296.6160958916
+"637","Shigella","IBS","65+","TotalFrictionLow",35645.7868299378,11677.8135632916,87376.2869569837
+"638","Shigella","IBS","65+","Direct",10482.0233715638,3499.11813870932,25474.429918724
+"639","Shigella","IBS","65+","WTP",16878.5522846848,5168.4832234987,44563.4776326991
+"640","Shigella","IBS","All Ages","Deaths",5666.30758150749,1379.35452959358,20917.1223209695
+"641","Shigella","IBS","All Ages","HumanCapital",188121.777649949,64405.3473510006,432715.588219657
+"642","Shigella","IBS","All Ages","FrictionHigh",150497.422119959,51524.2778808005,346172.470575725
+"643","Shigella","IBS","All Ages","FrictionLow",56436.5332949846,19321.6042053002,129814.676465897
+"644","Shigella","IBS","All Ages","TotalHumanCapital",514554.133336494,173240.037721659,1209424.5162552
+"645","Shigella","IBS","All Ages","TotalFrictionHigh",476453.094353458,160108.246706992,1124454.5311778
+"646","Shigella","IBS","All Ages","TotalFrictionLow",381253.02122348,127087.983089763,910323.964192358
+"647","Shigella","IBS","All Ages","Direct",115585.139752506,38708.0207631677,279561.540519031
+"648","Shigella","IBS","All Ages","WTP",196853.815274878,60423.8737887708,509613.773690217
+"649","Shigella","Initial and Sequel Disease","<5","Deaths",140600.603746723,23598.1033272385,549547.16875527
+"650","Shigella","Initial and Sequel Disease","<5","HumanCapital",134863.843311735,50000.6891450792,307062.552529633
+"651","Shigella","Initial and Sequel Disease","<5","FrictionHigh",107891.074649388,40000.5513160633,245650.042023706
+"652","Shigella","Initial and Sequel Disease","<5","FrictionLow",40459.1529935206,15000.2067435237,92118.7657588899
+"653","Shigella","Initial and Sequel Disease","<5","TotalHumanCapital",507500.594954847,248139.593056619,1009379.28497062
+"654","Shigella","Initial and Sequel Disease","<5","TotalFrictionHigh",477905.833447517,234563.859478191,958286.194221984
+"655","Shigella","Initial and Sequel Disease","<5","TotalFrictionLow",402150.596823916,198786.747767831,842298.739447094
+"656","Shigella","Initial and Sequel Disease","<5","Direct",103738.602317665,65393.4842776468,161789.963647981
+"657","Shigella","Initial and Sequel Disease","<5","WTP",88093.3980709702,31021.3443983385,200967.921742551
+"658","Shigella","Initial and Sequel Disease","5-64","Deaths",470914.636617406,135657.626737009,1294469.67085248
+"659","Shigella","Initial and Sequel Disease","5-64","HumanCapital",968331.050172032,352595.88632673,2168350.9081291
+"660","Shigella","Initial and Sequel Disease","5-64","FrictionHigh",774664.840137626,282076.709061384,1734680.72650328
+"661","Shigella","Initial and Sequel Disease","5-64","FrictionLow",290499.31505161,105778.765898019,650505.272438731
+"662","Shigella","Initial and Sequel Disease","5-64","TotalHumanCapital",2564299.40903168,1302848.12977341,4790599.22357727
+"663","Shigella","Initial and Sequel Disease","5-64","TotalFrictionHigh",2368737.60580619,1221847.98734629,4372539.5095563
+"664","Shigella","Initial and Sequel Disease","5-64","TotalFrictionLow",1878051.43529116,1008777.05958994,3353144.37712795
+"665","Shigella","Initial and Sequel Disease","5-64","Direct",536503.813792465,337205.666427951,885019.731458394
+"666","Shigella","Initial and Sequel Disease","5-64","WTP",485116.405542667,169134.862466286,1112849.63282701
+"667","Shigella","Initial and Sequel Disease","65+","Deaths",34838.3663824808,4273.15948858526,283080.037538819
+"668","Shigella","Initial and Sequel Disease","65+","HumanCapital",53239.6542579443,17195.8455539197,196471.074999383
+"669","Shigella","Initial and Sequel Disease","65+","FrictionHigh",42591.7234063554,13756.6764431358,157176.859999506
+"670","Shigella","Initial and Sequel Disease","65+","FrictionLow",15971.8962773833,5158.75366617591,58941.3224998148
+"671","Shigella","Initial and Sequel Disease","65+","TotalHumanCapital",266267.482476557,126727.144178415,602034.329973862
+"672","Shigella","Initial and Sequel Disease","65+","TotalFrictionHigh",253843.201208759,121983.702984422,570065.800243443
+"673","Shigella","Initial and Sequel Disease","65+","TotalFrictionLow",220914.435669893,109556.146645172,493492.07155626
+"674","Shigella","Initial and Sequel Disease","65+","Direct",90110.4423832685,53416.9076709386,143177.247613141
+"675","Shigella","Initial and Sequel Disease","65+","WTP",54039.3848983046,18774.0000313789,124351.653808852
+"676","Shigella","Initial and Sequel Disease","All Ages","Deaths",744644.702538607,296483.477989081,1662203.73297353
+"677","Shigella","Initial and Sequel Disease","All Ages","HumanCapital",1169779.33342247,426286.783464187,2628838.80544571
+"678","Shigella","Initial and Sequel Disease","All Ages","FrictionHigh",935823.466737974,341029.426771349,2103071.04435657
+"679","Shigella","Initial and Sequel Disease","All Ages","FrictionLow",350933.80002674,127886.035039256,788651.641633714
+"680","Shigella","Initial and Sequel Disease","All Ages","TotalHumanCapital",3377088.89971449,1823103.21876753,6126843.37054004
+"681","Shigella","Initial and Sequel Disease","All Ages","TotalFrictionHigh",3143922.62788097,1721651.03674514,5617086.93804538
+"682","Shigella","Initial and Sequel Disease","All Ages","TotalFrictionLow",2554179.79516886,1463612.70966047,4364868.81721977
+"683","Shigella","Initial and Sequel Disease","All Ages","Direct",730325.447339546,486397.509057708,1162049.78129517
+"684","Shigella","Initial and Sequel Disease","All Ages","WTP",627580.190361247,219407.158743475,1435537.77605911
+"685","Toxoplasma gondii","Toxoplasmosis","<5","Deaths",64781.5298095965,551.035645061309,662138.866904276
+"686","Toxoplasma gondii","Toxoplasmosis","<5","HumanCapital",584879.979794014,208504.563213088,1331626.28369812
+"687","Toxoplasma gondii","Toxoplasmosis","<5","FrictionHigh",467903.983835211,166803.65057047,1065301.0269585
+"688","Toxoplasma gondii","Toxoplasmosis","<5","FrictionLow",175463.993938204,62551.3689639264,399487.885109436
+"689","Toxoplasma gondii","Toxoplasmosis","<5","TotalHumanCapital",1068490.78588162,466448.224936682,2136635.73073161
+"690","Toxoplasma gondii","Toxoplasmosis","<5","TotalFrictionHigh",946904.16479664,418119.32990466,1891764.95550076
+"691","Toxoplasma gondii","Toxoplasmosis","<5","TotalFrictionLow",632963.181685651,292029.100501464,1313801.33398566
+"692","Toxoplasma gondii","Toxoplasmosis","<5","Direct",169741.788054953,89684.6231301822,282105.593135265
+"693","Toxoplasma gondii","Toxoplasmosis","<5","WTP",152115.360310523,58826.1653282023,298774.635324979
+"694","Toxoplasma gondii","Toxoplasmosis","5-64","Deaths",2490233.25039692,817307.142959105,5961665.41244316
+"695","Toxoplasma gondii","Toxoplasmosis","5-64","HumanCapital",4173038.37179544,1740675.7415241,7536843.6424227
+"696","Toxoplasma gondii","Toxoplasmosis","5-64","FrictionHigh",3338430.69743635,1392540.59321928,6029474.91393816
+"697","Toxoplasma gondii","Toxoplasmosis","5-64","FrictionLow",1251911.51153863,522202.72245723,2261053.09272681
+"698","Toxoplasma gondii","Toxoplasmosis","5-64","TotalHumanCapital",9450612.95919225,5400220.14011876,14707952.1095546
+"699","Toxoplasma gondii","Toxoplasmosis","5-64","TotalFrictionHigh",8588299.34568417,4953636.00673947,13357683.0677841
+"700","Toxoplasma gondii","Toxoplasmosis","5-64","TotalFrictionLow",6409221.33185167,3758734.08109372,10286009.0666527
+"701","Toxoplasma gondii","Toxoplasmosis","5-64","Direct",1718441.35306533,860169.941863009,2908490.47503162
+"702","Toxoplasma gondii","Toxoplasmosis","5-64","WTP",695353.48811816,281397.757649963,1283813.46008915
+"703","Toxoplasma gondii","Toxoplasmosis","65+","Deaths",1582988.68326278,442579.169267042,4382993.77926619
+"704","Toxoplasma gondii","Toxoplasmosis","65+","HumanCapital",78642.5867006916,20129.2151265987,413103.532200019
+"705","Toxoplasma gondii","Toxoplasmosis","65+","FrictionHigh",62914.0693605533,16103.372101279,330482.825760015
+"706","Toxoplasma gondii","Toxoplasmosis","65+","FrictionLow",23592.7760102075,6038.76453797961,123931.059660006
+"707","Toxoplasma gondii","Toxoplasmosis","65+","TotalHumanCapital",2220148.48194929,983334.681715526,5051687.66331787
+"708","Toxoplasma gondii","Toxoplasmosis","65+","TotalFrictionHigh",2193875.38420017,967015.674227811,5017329.10545386
+"709","Toxoplasma gondii","Toxoplasmosis","65+","TotalFrictionLow",2125187.81989175,918876.598827091,4939844.48918586
+"710","Toxoplasma gondii","Toxoplasmosis","65+","Direct",439343.208447744,179750.405059281,821402.90219666
+"711","Toxoplasma gondii","Toxoplasmosis","65+","WTP",30991.1075465171,13228.1604420643,56619.380081404
+"712","Toxoplasma gondii","Toxoplasmosis","All Ages","Deaths",4542008.22406411,2074227.07565699,8805455.07989798
+"713","Toxoplasma gondii","Toxoplasmosis","All Ages","HumanCapital",4929148.38483542,2043131.05520812,8899212.10156867
+"714","Toxoplasma gondii","Toxoplasmosis","All Ages","FrictionHigh",3943318.70786834,1634504.8441665,7119369.68125493
+"715","Toxoplasma gondii","Toxoplasmosis","All Ages","FrictionLow",1478744.51545063,612939.316562437,2669763.6304706
+"716","Toxoplasma gondii","Toxoplasmosis","All Ages","TotalHumanCapital",13091395.7276726,8069837.74564211,19476109.2900046
+"717","Toxoplasma gondii","Toxoplasmosis","All Ages","TotalFrictionHigh",12081652.1356045,7535976.57051354,17913030.1431833
+"718","Toxoplasma gondii","Toxoplasmosis","All Ages","TotalFrictionLow",9505758.82628167,6064400.56936139,14283030.4935835
+"719","Toxoplasma gondii","Toxoplasmosis","All Ages","Direct",2363769.51124723,1408745.99733728,3611600.8040409
+"720","Toxoplasma gondii","Toxoplasmosis","All Ages","WTP",881760.717895129,358040.296759864,1625777.14360142
+"721","Toxoplasma gondii","Initial and Sequel Disease","<5","Deaths",64781.5298095965,551.035645061309,662138.866904276
+"722","Toxoplasma gondii","Initial and Sequel Disease","<5","HumanCapital",584879.979794014,208504.563213088,1331626.28369812
+"723","Toxoplasma gondii","Initial and Sequel Disease","<5","FrictionHigh",467903.983835211,166803.65057047,1065301.0269585
+"724","Toxoplasma gondii","Initial and Sequel Disease","<5","FrictionLow",175463.993938204,62551.3689639264,399487.885109436
+"725","Toxoplasma gondii","Initial and Sequel Disease","<5","TotalHumanCapital",1068490.78588162,466448.224936682,2136635.73073161
+"726","Toxoplasma gondii","Initial and Sequel Disease","<5","TotalFrictionHigh",946904.16479664,418119.32990466,1891764.95550076
+"727","Toxoplasma gondii","Initial and Sequel Disease","<5","TotalFrictionLow",632963.181685651,292029.100501464,1313801.33398566
+"728","Toxoplasma gondii","Initial and Sequel Disease","<5","Direct",169741.788054953,89684.6231301822,282105.593135265
+"729","Toxoplasma gondii","Initial and Sequel Disease","<5","WTP",152115.360310523,58826.1653282023,298774.635324979
+"730","Toxoplasma gondii","Initial and Sequel Disease","5-64","Deaths",2490233.25039692,817307.142959105,5961665.41244316
+"731","Toxoplasma gondii","Initial and Sequel Disease","5-64","HumanCapital",4173038.37179544,1740675.7415241,7536843.6424227
+"732","Toxoplasma gondii","Initial and Sequel Disease","5-64","FrictionHigh",3338430.69743635,1392540.59321928,6029474.91393816
+"733","Toxoplasma gondii","Initial and Sequel Disease","5-64","FrictionLow",1251911.51153863,522202.72245723,2261053.09272681
+"734","Toxoplasma gondii","Initial and Sequel Disease","5-64","TotalHumanCapital",9450612.95919225,5400220.14011876,14707952.1095546
+"735","Toxoplasma gondii","Initial and Sequel Disease","5-64","TotalFrictionHigh",8588299.34568417,4953636.00673947,13357683.0677841
+"736","Toxoplasma gondii","Initial and Sequel Disease","5-64","TotalFrictionLow",6409221.33185167,3758734.08109372,10286009.0666527
+"737","Toxoplasma gondii","Initial and Sequel Disease","5-64","Direct",1718441.35306533,860169.941863009,2908490.47503162
+"738","Toxoplasma gondii","Initial and Sequel Disease","5-64","WTP",695353.48811816,281397.757649963,1283813.46008915
+"739","Toxoplasma gondii","Initial and Sequel Disease","65+","Deaths",1582988.68326278,442579.169267042,4382993.77926619
+"740","Toxoplasma gondii","Initial and Sequel Disease","65+","HumanCapital",78642.5867006916,20129.2151265987,413103.532200019
+"741","Toxoplasma gondii","Initial and Sequel Disease","65+","FrictionHigh",62914.0693605533,16103.372101279,330482.825760015
+"742","Toxoplasma gondii","Initial and Sequel Disease","65+","FrictionLow",23592.7760102075,6038.76453797961,123931.059660006
+"743","Toxoplasma gondii","Initial and Sequel Disease","65+","TotalHumanCapital",2220148.48194929,983334.681715526,5051687.66331787
+"744","Toxoplasma gondii","Initial and Sequel Disease","65+","TotalFrictionHigh",2193875.38420017,967015.674227811,5017329.10545386
+"745","Toxoplasma gondii","Initial and Sequel Disease","65+","TotalFrictionLow",2125187.81989175,918876.598827091,4939844.48918586
+"746","Toxoplasma gondii","Initial and Sequel Disease","65+","Direct",439343.208447744,179750.405059281,821402.90219666
+"747","Toxoplasma gondii","Initial and Sequel Disease","65+","WTP",30991.1075465171,13228.1604420643,56619.380081404
+"748","Toxoplasma gondii","Initial and Sequel Disease","All Ages","Deaths",4542008.22406411,2074227.07565699,8805455.07989798
+"749","Toxoplasma gondii","Initial and Sequel Disease","All Ages","HumanCapital",4929148.38483542,2043131.05520812,8899212.10156867
+"750","Toxoplasma gondii","Initial and Sequel Disease","All Ages","FrictionHigh",3943318.70786834,1634504.8441665,7119369.68125493
+"751","Toxoplasma gondii","Initial and Sequel Disease","All Ages","FrictionLow",1478744.51545063,612939.316562437,2669763.6304706
+"752","Toxoplasma gondii","Initial and Sequel Disease","All Ages","TotalHumanCapital",13091395.7276726,8069837.74564211,19476109.2900046
+"753","Toxoplasma gondii","Initial and Sequel Disease","All Ages","TotalFrictionHigh",12081652.1356045,7535976.57051354,17913030.1431833
+"754","Toxoplasma gondii","Initial and Sequel Disease","All Ages","TotalFrictionLow",9505758.82628167,6064400.56936139,14283030.4935835
+"755","Toxoplasma gondii","Initial and Sequel Disease","All Ages","Direct",2363769.51124723,1408745.99733728,3611600.8040409
+"756","Toxoplasma gondii","Initial and Sequel Disease","All Ages","WTP",881760.717895129,358040.296759864,1625777.14360142
+"757","Listeria monocytogenes","Listeriosis","<5","Deaths",14401761.3909478,7923123.67582147,24369751.2635068
+"758","Listeria monocytogenes","Listeriosis","<5","HumanCapital",26899.3003883581,13513.1467971701,40446.6990240177
+"759","Listeria monocytogenes","Listeriosis","<5","FrictionHigh",21519.4403106865,10810.5174377361,32357.3592192142
+"760","Listeria monocytogenes","Listeriosis","<5","FrictionLow",8069.79011650744,4053.94403915102,12134.0097072053
+"761","Listeria monocytogenes","Listeriosis","<5","TotalHumanCapital",14784820.4980688,8309327.41623958,24763006.4635491
+"762","Listeria monocytogenes","Listeriosis","<5","TotalFrictionHigh",14780093.9187552,8302564.27292343,24756611.2030868
+"763","Listeria monocytogenes","Listeriosis","<5","TotalFrictionLow",14767049.8635722,8288766.05747068,24742046.3484281
+"764","Listeria monocytogenes","Listeriosis","<5","Direct",341920.264896083,171804.481354302,514049.916371425
+"765","Listeria monocytogenes","Listeriosis","<5","WTP",6273.33349058849,3139.35072280459,9493.03982325807
+"766","Listeria monocytogenes","Listeriosis","5-64","Deaths",21683332.5882296,12806992.6822143,34555683.5092349
+"767","Listeria monocytogenes","Listeriosis","5-64","HumanCapital",88583.4926900713,44500.8503286223,133197.139539073
+"768","Listeria monocytogenes","Listeriosis","5-64","FrictionHigh",70866.794152057,35600.6802628978,106557.711631259
+"769","Listeria monocytogenes","Listeriosis","5-64","FrictionLow",26575.0478070214,13350.2550985867,39959.141861722
+"770","Listeria monocytogenes","Listeriosis","5-64","TotalHumanCapital",22826825.5174859,13905716.8268704,35704155.317049
+"771","Listeria monocytogenes","Listeriosis","5-64","TotalFrictionHigh",22808990.6084329,13888824.2165928,35684723.0284049
+"772","Listeria monocytogenes","Listeriosis","5-64","TotalFrictionLow",22766008.2221154,13846081.829236,35636729.5630158
+"773","Listeria monocytogenes","Listeriosis","5-64","Direct",1025762.94244502,515230.451346086,1542115.06659478
+"774","Listeria monocytogenes","Listeriosis","5-64","WTP",18820.0004717655,9418.05216841378,28479.1194697742
+"775","Listeria monocytogenes","Listeriosis","65+","Deaths",36952339.923132,22608259.9638845,56454987.2887825
+"776","Listeria monocytogenes","Listeriosis","65+","HumanCapital",83957.6741970832,42177.0216992403,126241.602197046
+"777","Listeria monocytogenes","Listeriosis","65+","FrictionHigh",67166.1393576666,33741.6173593923,100993.281757637
+"778","Listeria monocytogenes","Listeriosis","65+","FrictionLow",25187.302259125,12653.1065097721,37872.4806591139
+"779","Listeria monocytogenes","Listeriosis","65+","TotalHumanCapital",39279623.1549323,24915993.748358,58785816.5933516
+"780","Listeria monocytogenes","Listeriosis","65+","TotalFrictionHigh",39263487.6536645,24899881.5822671,58770957.3267405
+"781","Listeria monocytogenes","Listeriosis","65+","TotalFrictionLow",39218959.9801998,24856483.0997125,58731070.9790807
+"782","Listeria monocytogenes","Listeriosis","65+","Direct",2188246.55254449,1098957.95413491,3289800.60618312
+"783","Listeria monocytogenes","Listeriosis","65+","WTP",40149.3343397664,20091.8446259494,60755.4548688516
+"784","Listeria monocytogenes","Listeriosis","All Ages","Deaths",74569671.220223,54919223.6762682,98602593.7743949
+"785","Listeria monocytogenes","Listeriosis","All Ages","HumanCapital",199440.467275513,100191.018825033,299885.440760138
+"786","Listeria monocytogenes","Listeriosis","All Ages","FrictionHigh",159552.37382041,80152.8150600261,239908.35260811
+"787","Listeria monocytogenes","Listeriosis","All Ages","FrictionLow",59832.1401826538,30057.3056475098,89965.6322280413
+"788","Listeria monocytogenes","Listeriosis","All Ages","TotalHumanCapital",78396506.5925335,58696227.0575262,102534869.899917
+"789","Listeria monocytogenes","Listeriosis","All Ages","TotalFrictionHigh",78357571.4801497,58656566.4676599,102502538.138696
+"790","Listeria monocytogenes","Listeriosis","All Ages","TotalFrictionLow",78253192.884821,58562246.6039924,102389917.780369
+"791","Listeria monocytogenes","Listeriosis","All Ages","Direct",3555846.48746306,1785886.06828206,5346055.62952867
+"792","Listeria monocytogenes","Listeriosis","All Ages","WTP",65242.6683021203,32649.2475171678,98727.6141618839
+"793","Listeria monocytogenes","Initial and Sequel Disease","<5","Deaths",14401761.3909478,7923123.67582147,24369751.2635068
+"794","Listeria monocytogenes","Initial and Sequel Disease","<5","HumanCapital",26899.3003883581,13513.1467971701,40446.6990240177
+"795","Listeria monocytogenes","Initial and Sequel Disease","<5","FrictionHigh",21519.4403106865,10810.5174377361,32357.3592192142
+"796","Listeria monocytogenes","Initial and Sequel Disease","<5","FrictionLow",8069.79011650744,4053.94403915102,12134.0097072053
+"797","Listeria monocytogenes","Initial and Sequel Disease","<5","TotalHumanCapital",14784820.4980688,8309327.41623958,24763006.4635491
+"798","Listeria monocytogenes","Initial and Sequel Disease","<5","TotalFrictionHigh",14780093.9187552,8302564.27292343,24756611.2030868
+"799","Listeria monocytogenes","Initial and Sequel Disease","<5","TotalFrictionLow",14767049.8635722,8288766.05747068,24742046.3484281
+"800","Listeria monocytogenes","Initial and Sequel Disease","<5","Direct",341920.264896083,171804.481354302,514049.916371425
+"801","Listeria monocytogenes","Initial and Sequel Disease","<5","WTP",6273.33349058849,3139.35072280459,9493.03982325807
+"802","Listeria monocytogenes","Initial and Sequel Disease","5-64","Deaths",21683332.5882296,12806992.6822143,34555683.5092349
+"803","Listeria monocytogenes","Initial and Sequel Disease","5-64","HumanCapital",88583.4926900713,44500.8503286223,133197.139539073
+"804","Listeria monocytogenes","Initial and Sequel Disease","5-64","FrictionHigh",70866.794152057,35600.6802628978,106557.711631259
+"805","Listeria monocytogenes","Initial and Sequel Disease","5-64","FrictionLow",26575.0478070214,13350.2550985867,39959.141861722
+"806","Listeria monocytogenes","Initial and Sequel Disease","5-64","TotalHumanCapital",22826825.5174859,13905716.8268704,35704155.317049
+"807","Listeria monocytogenes","Initial and Sequel Disease","5-64","TotalFrictionHigh",22808990.6084329,13888824.2165928,35684723.0284049
+"808","Listeria monocytogenes","Initial and Sequel Disease","5-64","TotalFrictionLow",22766008.2221154,13846081.829236,35636729.5630158
+"809","Listeria monocytogenes","Initial and Sequel Disease","5-64","Direct",1025762.94244502,515230.451346086,1542115.06659478
+"810","Listeria monocytogenes","Initial and Sequel Disease","5-64","WTP",18820.0004717655,9418.05216841378,28479.1194697742
+"811","Listeria monocytogenes","Initial and Sequel Disease","65+","Deaths",36952339.923132,22608259.9638845,56454987.2887825
+"812","Listeria monocytogenes","Initial and Sequel Disease","65+","HumanCapital",83957.6741970832,42177.0216992403,126241.602197046
+"813","Listeria monocytogenes","Initial and Sequel Disease","65+","FrictionHigh",67166.1393576666,33741.6173593923,100993.281757637
+"814","Listeria monocytogenes","Initial and Sequel Disease","65+","FrictionLow",25187.302259125,12653.1065097721,37872.4806591139
+"815","Listeria monocytogenes","Initial and Sequel Disease","65+","TotalHumanCapital",39279623.1549323,24915993.748358,58785816.5933516
+"816","Listeria monocytogenes","Initial and Sequel Disease","65+","TotalFrictionHigh",39263487.6536645,24899881.5822671,58770957.3267405
+"817","Listeria monocytogenes","Initial and Sequel Disease","65+","TotalFrictionLow",39218959.9801998,24856483.0997125,58731070.9790807
+"818","Listeria monocytogenes","Initial and Sequel Disease","65+","Direct",2188246.55254449,1098957.95413491,3289800.60618312
+"819","Listeria monocytogenes","Initial and Sequel Disease","65+","WTP",40149.3343397664,20091.8446259494,60755.4548688516
+"820","Listeria monocytogenes","Initial and Sequel Disease","All Ages","Deaths",74569671.220223,54919223.6762682,98602593.7743949
+"821","Listeria monocytogenes","Initial and Sequel Disease","All Ages","HumanCapital",199440.467275513,100191.018825033,299885.440760138
+"822","Listeria monocytogenes","Initial and Sequel Disease","All Ages","FrictionHigh",159552.37382041,80152.8150600261,239908.35260811
+"823","Listeria monocytogenes","Initial and Sequel Disease","All Ages","FrictionLow",59832.1401826538,30057.3056475098,89965.6322280413
+"824","Listeria monocytogenes","Initial and Sequel Disease","All Ages","TotalHumanCapital",78396506.5925335,58696227.0575262,102534869.899917
+"825","Listeria monocytogenes","Initial and Sequel Disease","All Ages","TotalFrictionHigh",78357571.4801497,58656566.4676599,102502538.138696
+"826","Listeria monocytogenes","Initial and Sequel Disease","All Ages","TotalFrictionLow",78253192.884821,58562246.6039924,102389917.780369
+"827","Listeria monocytogenes","Initial and Sequel Disease","All Ages","Direct",3555846.48746306,1785886.06828206,5346055.62952867
+"828","Listeria monocytogenes","Initial and Sequel Disease","All Ages","WTP",65242.6683021203,32649.2475171678,98727.6141618839
+"829","Salmonella Typhi","Typhoid Fever","<5","Deaths",17200.3219454167,141.193439755802,185122.547875172
+"830","Salmonella Typhi","Typhoid Fever","<5","HumanCapital",3200.28104705749,1084.1110466289,7236.17659173218
+"831","Salmonella Typhi","Typhoid Fever","<5","FrictionHigh",2560.22483764599,867.28883730312,5788.94127338574
+"832","Salmonella Typhi","Typhoid Fever","<5","FrictionLow",960.084314117248,325.23331398867,2170.85297751965
+"833","Salmonella Typhi","Typhoid Fever","<5","TotalHumanCapital",63418.2770102196,20146.2305433504,228975.154621247
+"834","Salmonella Typhi","Typhoid Fever","<5","TotalFrictionHigh",62633.388405066,19844.2774170691,228051.176755142
+"835","Salmonella Typhi","Typhoid Fever","<5","TotalFrictionLow",60665.4439800777,19117.1358368095,225798.268577503
+"836","Salmonella Typhi","Typhoid Fever","<5","Direct",31048.0790580159,10516.9341630767,70191.8064687282
+"837","Salmonella Typhi","Typhoid Fever","<5","WTP",2060.3357648982,696.624041848983,4653.43296252225
+"838","Salmonella Typhi","Typhoid Fever","5-64","Deaths",17667.7523001554,145.85134280087,187330.632381681
+"839","Salmonella Typhi","Typhoid Fever","5-64","HumanCapital",30564.6890734428,10353.9397240638,69110.0201371926
+"840","Salmonella Typhi","Typhoid Fever","5-64","FrictionHigh",24451.7512587543,8283.15177925102,55288.0161097541
+"841","Salmonella Typhi","Typhoid Fever","5-64","FrictionLow",9169.40672203285,3106.18191721913,20733.0060411578
+"842","Salmonella Typhi","Typhoid Fever","5-64","TotalHumanCapital",318305.462363486,114854.003287059,690814.862797424
+"843","Salmonella Typhi","Typhoid Fever","5-64","TotalFrictionHigh",312072.403273977,112525.972701387,677449.507917072
+"844","Salmonella Typhi","Typhoid Fever","5-64","TotalFrictionLow",296486.866981303,106833.02713148,644780.252689105
+"845","Salmonella Typhi","Typhoid Fever","5-64","Direct",227669.376945145,77122.4975019729,514705.407742536
+"846","Salmonella Typhi","Typhoid Fever","5-64","WTP",15109.1289425868,5108.57630689255,34125.1750584965
+"847","Salmonella Typhi","Typhoid Fever","65+","Deaths",22332.7671074212,185.057599273473,233942.369564101
+"848","Salmonella Typhi","Typhoid Fever","65+","HumanCapital",244.644971280036,82.8746950555345,553.16835878814
+"849","Salmonella Typhi","Typhoid Fever","65+","FrictionHigh",195.715977024028,66.2997560444276,442.534687030512
+"850","Salmonella Typhi","Typhoid Fever","65+","FrictionLow",73.3934913840106,24.8624085166604,165.950507636442
+"851","Salmonella Typhi","Typhoid Fever","65+","TotalHumanCapital",25768.7254645452,2841.07900914678,237332.773611924
+"852","Salmonella Typhi","Typhoid Fever","65+","TotalFrictionHigh",25712.9876419863,2805.02948233317,237287.317280633
+"853","Salmonella Typhi","Typhoid Fever","65+","TotalFrictionLow",25570.0129428429,2715.86423905179,237156.407098426
+"854","Salmonella Typhi","Typhoid Fever","65+","Direct",2586.68340046658,876.024869069031,5850.67567655484
+"855","Salmonella Typhi","Typhoid Fever","65+","WTP",171.69464707485,58.0520034874153,387.786080210187
+"856","Salmonella Typhi","Typhoid Fever","All Ages","Deaths",106788.238168026,14291.6234740689,427575.253406522
+"857","Salmonella Typhi","Typhoid Fever","All Ages","HumanCapital",34009.6150917803,11520.9254657482,76899.3650877129
+"858","Salmonella Typhi","Typhoid Fever","All Ages","FrictionHigh",27207.6920734243,9216.74037259857,61519.4920701703
+"859","Salmonella Typhi","Typhoid Fever","All Ages","FrictionLow",10202.8845275341,3456.27763972446,23069.8095263139
+"860","Salmonella Typhi","Typhoid Fever","All Ages","TotalHumanCapital",458058.086997841,184174.234896485,936373.060847078
+"861","Salmonella Typhi","Typhoid Fever","All Ages","TotalFrictionHigh",450911.9311438,181325.356735305,923037.352593726
+"862","Salmonella Typhi","Typhoid Fever","All Ages","TotalFrictionLow",433130.032904856,174106.3413285,888490.429136109
+"863","Salmonella Typhi","Typhoid Fever","All Ages","Direct",261325.433408276,88536.6262487072,590766.672354122
+"864","Salmonella Typhi","Typhoid Fever","All Ages","WTP",17341.1593545598,5863.25235222894,39166.3941012289
+"865","Salmonella Typhi","Initial and Sequel Disease","<5","Deaths",17200.3219454167,141.193439755802,185122.547875172
+"866","Salmonella Typhi","Initial and Sequel Disease","<5","HumanCapital",3200.28104705749,1084.1110466289,7236.17659173218
+"867","Salmonella Typhi","Initial and Sequel Disease","<5","FrictionHigh",2560.22483764599,867.28883730312,5788.94127338574
+"868","Salmonella Typhi","Initial and Sequel Disease","<5","FrictionLow",960.084314117248,325.23331398867,2170.85297751965
+"869","Salmonella Typhi","Initial and Sequel Disease","<5","TotalHumanCapital",63418.2770102196,20146.2305433504,228975.154621247
+"870","Salmonella Typhi","Initial and Sequel Disease","<5","TotalFrictionHigh",62633.388405066,19844.2774170691,228051.176755142
+"871","Salmonella Typhi","Initial and Sequel Disease","<5","TotalFrictionLow",60665.4439800777,19117.1358368095,225798.268577503
+"872","Salmonella Typhi","Initial and Sequel Disease","<5","Direct",31048.0790580159,10516.9341630767,70191.8064687282
+"873","Salmonella Typhi","Initial and Sequel Disease","<5","WTP",2060.3357648982,696.624041848983,4653.43296252225
+"874","Salmonella Typhi","Initial and Sequel Disease","5-64","Deaths",17667.7523001554,145.85134280087,187330.632381681
+"875","Salmonella Typhi","Initial and Sequel Disease","5-64","HumanCapital",30564.6890734428,10353.9397240638,69110.0201371926
+"876","Salmonella Typhi","Initial and Sequel Disease","5-64","FrictionHigh",24451.7512587543,8283.15177925102,55288.0161097541
+"877","Salmonella Typhi","Initial and Sequel Disease","5-64","FrictionLow",9169.40672203285,3106.18191721913,20733.0060411578
+"878","Salmonella Typhi","Initial and Sequel Disease","5-64","TotalHumanCapital",318305.462363486,114854.003287059,690814.862797424
+"879","Salmonella Typhi","Initial and Sequel Disease","5-64","TotalFrictionHigh",312072.403273977,112525.972701387,677449.507917072
+"880","Salmonella Typhi","Initial and Sequel Disease","5-64","TotalFrictionLow",296486.866981303,106833.02713148,644780.252689105
+"881","Salmonella Typhi","Initial and Sequel Disease","5-64","Direct",227669.376945145,77122.4975019729,514705.407742536
+"882","Salmonella Typhi","Initial and Sequel Disease","5-64","WTP",15109.1289425868,5108.57630689255,34125.1750584965
+"883","Salmonella Typhi","Initial and Sequel Disease","65+","Deaths",22332.7671074212,185.057599273473,233942.369564101
+"884","Salmonella Typhi","Initial and Sequel Disease","65+","HumanCapital",244.644971280036,82.8746950555345,553.16835878814
+"885","Salmonella Typhi","Initial and Sequel Disease","65+","FrictionHigh",195.715977024028,66.2997560444276,442.534687030512
+"886","Salmonella Typhi","Initial and Sequel Disease","65+","FrictionLow",73.3934913840106,24.8624085166604,165.950507636442
+"887","Salmonella Typhi","Initial and Sequel Disease","65+","TotalHumanCapital",25768.7254645452,2841.07900914678,237332.773611924
+"888","Salmonella Typhi","Initial and Sequel Disease","65+","TotalFrictionHigh",25712.9876419863,2805.02948233317,237287.317280633
+"889","Salmonella Typhi","Initial and Sequel Disease","65+","TotalFrictionLow",25570.0129428429,2715.86423905179,237156.407098426
+"890","Salmonella Typhi","Initial and Sequel Disease","65+","Direct",2586.68340046658,876.024869069031,5850.67567655484
+"891","Salmonella Typhi","Initial and Sequel Disease","65+","WTP",171.69464707485,58.0520034874153,387.786080210187
+"892","Salmonella Typhi","Initial and Sequel Disease","All Ages","Deaths",106788.238168026,14291.6234740689,427575.253406522
+"893","Salmonella Typhi","Initial and Sequel Disease","All Ages","HumanCapital",34009.6150917803,11520.9254657482,76899.3650877129
+"894","Salmonella Typhi","Initial and Sequel Disease","All Ages","FrictionHigh",27207.6920734243,9216.74037259857,61519.4920701703
+"895","Salmonella Typhi","Initial and Sequel Disease","All Ages","FrictionLow",10202.8845275341,3456.27763972446,23069.8095263139
+"896","Salmonella Typhi","Initial and Sequel Disease","All Ages","TotalHumanCapital",458058.086997841,184174.234896485,936373.060847078
+"897","Salmonella Typhi","Initial and Sequel Disease","All Ages","TotalFrictionHigh",450911.9311438,181325.356735305,923037.352593726
+"898","Salmonella Typhi","Initial and Sequel Disease","All Ages","TotalFrictionLow",433130.032904856,174106.3413285,888490.429136109
+"899","Salmonella Typhi","Initial and Sequel Disease","All Ages","Direct",261325.433408276,88536.6262487072,590766.672354122
+"900","Salmonella Typhi","Initial and Sequel Disease","All Ages","WTP",17341.1593545598,5863.25235222894,39166.3941012289
+"901","STEC","STEC","<5","Deaths",136558.084376923,1178.67576101432,1268720.55770589
+"902","STEC","STEC","<5","HumanCapital",88373.7121569703,33998.3447924499,222345.634138606
+"903","STEC","STEC","<5","FrictionHigh",70698.9697255762,27198.6758339599,177876.507310885
+"904","STEC","STEC","<5","FrictionLow",26512.1136470911,10199.503437735,66703.6902415818
+"905","STEC","STEC","<5","TotalHumanCapital",364989.948470755,125059.659009567,1485646.25209849
+"906","STEC","STEC","<5","TotalFrictionHigh",342141.612186119,115274.574283739,1463468.21035123
+"907","STEC","STEC","<5","TotalFrictionLow",282750.076713825,88892.2105981487,1408507.45724066
+"908","STEC","STEC","<5","Direct",35317.0644419506,19446.747744288,72235.6776200594
+"909","STEC","STEC","<5","WTP",55864.8356415045,24304.2568420721,123351.194566568
+"910","STEC","STEC","5-64","Deaths",138508.146089108,1140.53982999859,1293088.8041054
+"911","STEC","STEC","5-64","HumanCapital",583929.982048398,254305.689852624,1304448.41755305
+"912","STEC","STEC","5-64","FrictionHigh",467143.985638718,203444.551882099,1043558.73404244
+"913","STEC","STEC","5-64","FrictionLow",175178.994614519,76291.7069557872,391334.525265915
+"914","STEC","STEC","5-64","TotalHumanCapital",1295170.78760403,590538.767962438,2859491.86309909
+"915","STEC","STEC","5-64","TotalFrictionHigh",1169444.63731511,531603.087583232,2634552.87180348
+"916","STEC","STEC","5-64","TotalFrictionLow",847105.285214245,380704.512758123,2109042.99746729
+"917","STEC","STEC","5-64","Direct",177808.118479172,106204.232762227,335307.605452542
+"918","STEC","STEC","5-64","WTP",244540.511502371,107099.910903011,538611.130172972
+"919","STEC","STEC","65+","Deaths",171568.109122784,1463.65130237429,1638186.27662227
+"920","STEC","STEC","65+","HumanCapital",81843.5598162809,20838.2676361682,448339.107264412
+"921","STEC","STEC","65+","FrictionHigh",65474.8478530247,16670.6141089346,358671.285811529
+"922","STEC","STEC","65+","FrictionLow",24553.0679448843,6251.48029085048,134501.732179323
+"923","STEC","STEC","65+","TotalHumanCapital",501719.037126491,183674.698088923,2016390.70660329
+"924","STEC","STEC","65+","TotalFrictionHigh",474421.644526123,175480.352916241,1965960.32365589
+"925","STEC","STEC","65+","TotalFrictionLow",400449.413709079,152354.010263814,1857747.4384344
+"926","STEC","STEC","65+","Direct",95087.9682339892,59155.4161852284,147400.678653626
+"927","STEC","STEC","65+","WTP",64019.525892959,28204.546255286,140659.325761983
+"928","STEC","STEC","All Ages","Deaths",796436.604484578,112645.453613074,2918330.95122814
+"929","STEC","STEC","All Ages","HumanCapital",789795.107875008,338306.142973659,1831603.75011922
+"930","STEC","STEC","All Ages","FrictionHigh",631836.086300006,270644.914378927,1465283.00009538
+"931","STEC","STEC","All Ages","FrictionLow",236938.532362502,101491.842892098,549481.125035767
+"932","STEC","STEC","All Ages","TotalHumanCapital",2460929.19756836,1177890.826563,5033002.6392142
+"933","STEC","STEC","All Ages","TotalFrictionHigh",2287292.49868173,1087275.17331037,4742443.22275192
+"934","STEC","STEC","All Ages","TotalFrictionLow",1839599.83310782,850271.461059215,4068204.70381587
+"935","STEC","STEC","All Ages","Direct",310000.885262563,201621.190643736,532227.56243926
+"936","STEC","STEC","All Ages","WTP",364420.032612856,159632.449668459,802642.312668975
+"937","STEC","HUS","<5","Deaths",525864.897976836,92387.8084841515,1857176.67455722
+"938","STEC","HUS","<5","HumanCapital",55573.3597927562,21069.7585689851,140796.322088956
+"939","STEC","HUS","<5","FrictionHigh",44458.687834205,16855.8068551881,112637.057671165
+"940","STEC","HUS","<5","FrictionLow",16672.0079378269,6320.92757069554,42238.8966266868
+"941","STEC","HUS","<5","TotalHumanCapital",719575.090115215,239463.553253874,2052395.67248884
+"942","STEC","HUS","<5","TotalFrictionHigh",705436.086161806,230549.472208259,2037958.66662018
+"943","STEC","HUS","<5","TotalFrictionLow",671299.639122992,208096.16873963,2001702.49000116
+"944","STEC","HUS","<5","Direct",74391.6678106659,28216.2929374605,188491.197542314
+"945","STEC","HUS","<5","WTP",28421.4221176389,10619.0332273481,73154.00189514
+"946","STEC","HUS","5-64","Deaths",5802871.21174707,2694007.83251795,11419515.0184892
+"947","STEC","HUS","5-64","HumanCapital",284650.825857055,107920.849119727,721169.090904617
+"948","STEC","HUS","5-64","FrictionHigh",227720.660685644,86336.6792957819,576935.272723694
+"949","STEC","HUS","5-64","FrictionLow",85395.2477571164,32376.2547359182,216350.727271385
+"950","STEC","HUS","5-64","TotalHumanCapital",6675357.35666689,3446412.3810549,12343130.9515287
+"951","STEC","HUS","5-64","TotalFrictionHigh",6609384.63305213,3396603.0298063,12269298.028953
+"952","STEC","HUS","5-64","TotalFrictionLow",6438758.19391602,3259133.2708361,12076161.7519473
+"953","STEC","HUS","5-64","Direct",324235.08937327,122973.778575176,821778.92300627
+"954","STEC","HUS","5-64","WTP",123857.655100513,46220.9492782116,319376.650455671
+"955","STEC","HUS","65+","Deaths",991566.117825857,230439.182013902,3009389.33318449
+"956","STEC","HUS","65+","HumanCapital",30552.1925371423,11583.3795709189,77404.6477849263
+"957","STEC","HUS","65+","FrictionHigh",24441.7540297138,9266.70365673509,61923.7182279411
+"958","STEC","HUS","65+","FrictionLow",9165.65776114267,3475.01387127566,23221.3943354779
+"959","STEC","HUS","65+","TotalHumanCapital",1166923.01644058,380064.559302999,3185382.46107642
+"960","STEC","HUS","65+","TotalFrictionHigh",1159707.11884122,374819.749099618,3177645.82836708
+"961","STEC","HUS","65+","TotalFrictionLow",1140788.56020915,361184.515698137,3159759.53621281
+"962","STEC","HUS","65+","Direct",84473.520066252,32027.6728015772,214233.003588678
+"963","STEC","HUS","65+","WTP",32188.508720272,12064.6262590745,82835.780935949
+"964","STEC","HUS","All Ages","Deaths",7750737.62581347,4187830.00581396,13683331.0086969
+"965","STEC","HUS","All Ages","HumanCapital",370776.378186953,140573.987259631,939370.0607785
+"966","STEC","HUS","All Ages","FrictionHigh",296621.102549563,112459.189807705,751496.0486228
+"967","STEC","HUS","All Ages","FrictionLow",111232.913456086,42172.1961778894,281811.01823355
+"968","STEC","HUS","All Ages","TotalHumanCapital",8971755.12888172,5221224.93713177,15027567.8704468
+"969","STEC","HUS","All Ages","TotalFrictionHigh",8884207.23288609,5157558.10654731,14921760.4851125
+"970","STEC","HUS","All Ages","TotalFrictionLow",8663448.13488063,4994907.54656297,14667816.0930017
+"971","STEC","HUS","All Ages","Direct",483255.793870334,183145.529198606,1223890.91299804
+"972","STEC","HUS","All Ages","WTP",185161.92782922,69512.0862616305,472833.934932511
+"973","STEC","Initial and Sequel Disease","<5","Deaths",815907.56979877,182512.828391836,2507301.17051919
+"974","STEC","Initial and Sequel Disease","<5","HumanCapital",147097.531198983,59507.1750167306,348433.066605127
+"975","STEC","Initial and Sequel Disease","<5","FrictionHigh",117678.024959186,47605.7400133844,278746.453284102
+"976","STEC","Initial and Sequel Disease","<5","FrictionLow",44129.2593596948,17852.1525050192,104529.919981538
+"977","STEC","Initial and Sequel Disease","<5","TotalHumanCapital",1221461.35163101,491012.403217026,2939929.73392217
+"978","STEC","Initial and Sequel Disease","<5","TotalFrictionHigh",1185589.09453261,469078.843765365,2899512.21341246
+"979","STEC","Initial and Sequel Disease","<5","TotalFrictionLow",1097920.78105159,411447.976043692,2803010.88294908
+"980","STEC","Initial and Sequel Disease","<5","Direct",111167.758143077,49930.3947735006,253713.421520377
+"981","STEC","Initial and Sequel Disease","<5","WTP",85181.0312468795,36324.157257607,192223.417100971
+"982","STEC","Initial and Sequel Disease","5-64","Deaths",6137342.1828105,2939470.8362574,11815291.2263396
+"983","STEC","Initial and Sequel Disease","5-64","HumanCapital",879240.138312904,377712.491376988,1979415.58900723
+"984","STEC","Initial and Sequel Disease","5-64","FrictionHigh",703392.110650323,302169.99310159,1583532.47120578
+"985","STEC","Initial and Sequel Disease","5-64","FrictionLow",263772.041493871,113313.747413096,593824.676702169
+"986","STEC","Initial and Sequel Disease","5-64","TotalHumanCapital",8146450.98638214,4560152.66733275,14090319.3414041
+"987","STEC","Initial and Sequel Disease","5-64","TotalFrictionHigh",7948083.72079562,4420549.09663308,13833041.2384743
+"988","STEC","Initial and Sequel Disease","5-64","TotalFrictionLow",7447347.93609246,4062920.29682857,13223284.5085481
+"989","STEC","Initial and Sequel Disease","5-64","Direct",508241.915280895,241798.894429766,1127680.47224883
+"990","STEC","Initial and Sequel Disease","5-64","WTP",372219.531383192,159291.830862145,837625.454036442
+"991","STEC","Initial and Sequel Disease","65+","Deaths",1376433.61068216,375212.436349967,3786976.26393232
+"992","STEC","Initial and Sequel Disease","65+","HumanCapital",118029.23627185,38572.4537163762,499721.290367606
+"993","STEC","Initial and Sequel Disease","65+","FrictionHigh",94423.3890174803,30857.9629731009,399777.032294085
+"994","STEC","Initial and Sequel Disease","65+","FrictionLow",35408.7708815551,11571.7361149128,149916.387110282
+"995","STEC","Initial and Sequel Disease","65+","TotalHumanCapital",1868230.66837326,770402.290488444,4343697.84584584
+"996","STEC","Initial and Sequel Disease","65+","TotalFrictionHigh",1831682.60507361,750467.672805961,4289627.56637271
+"997","STEC","Initial and Sequel Disease","65+","TotalFrictionLow",1741555.66183664,694027.736221327,4171405.86951906
+"998","STEC","Initial and Sequel Disease","65+","Direct",181105.062194542,103048.006911892,343880.134333344
+"999","STEC","Initial and Sequel Disease","65+","WTP",97320.0386983478,41822.8014295976,218535.660599287
+"1000","STEC","Initial and Sequel Disease","All Ages","Deaths",8818024.52035474,4982108.02319028,14940819.4574347
+"1001","STEC","Initial and Sequel Disease","All Ages","HumanCapital",1178143.70918516,500965.772014614,2702945.74889693
+"1002","STEC","Initial and Sequel Disease","All Ages","FrictionHigh",942514.967348126,400772.617611691,2162356.59911754
+"1003","STEC","Initial and Sequel Disease","All Ages","FrictionLow",353443.112755547,150289.731604384,810883.724669079
+"1004","STEC","Initial and Sequel Disease","All Ages","TotalHumanCapital",11683472.7404991,7266635.43000884,18352755.5414065
+"1005","STEC","Initial and Sequel Disease","All Ages","TotalFrictionHigh",11421767.0505912,7093674.9022983,17977724.3491736
+"1006","STEC","Initial and Sequel Disease","All Ages","TotalFrictionLow",10755638.9768127,6617514.19618451,17089592.2173529
+"1007","STEC","Initial and Sequel Disease","All Ages","Direct",800082.01961082,402735.133604355,1717883.29350585
+"1008","STEC","Initial and Sequel Disease","All Ages","WTP",554650.229834209,237640.108834826,1246456.79637804
+"1009","Yersinia Enterocolitica","Yersiniosis","<5","Deaths",172825.108496393,1475.00640175586,1551888.08511885
+"1010","Yersinia Enterocolitica","Yersiniosis","<5","HumanCapital",247479.13911094,116674.22831251,516993.93057616
+"1011","Yersinia Enterocolitica","Yersiniosis","<5","FrictionHigh",197983.311288752,93339.382650008,413595.144460928
+"1012","Yersinia Enterocolitica","Yersiniosis","<5","FrictionLow",74243.7417332819,35002.268493753,155098.179172848
+"1013","Yersinia Enterocolitica","Yersiniosis","<5","TotalHumanCapital",763876.232444004,365055.029198597,2133701.25828011
+"1014","Yersinia Enterocolitica","Yersiniosis","<5","TotalFrictionHigh",704312.153505918,335352.074037617,2070733.23966859
+"1015","Yersinia Enterocolitica","Yersiniosis","<5","TotalFrictionLow",553731.513048734,256503.672937151,1919941.45821342
+"1016","Yersinia Enterocolitica","Yersiniosis","<5","Direct",99556.3843582374,62204.8090231387,171219.681036257
+"1017","Yersinia Enterocolitica","Yersiniosis","<5","WTP",156459.502028835,86485.9305297022,274394.34223646
+"1018","Yersinia Enterocolitica","Yersiniosis","5-64","Deaths",2477860.15896206,783986.704248098,6101414.1350877
+"1019","Yersinia Enterocolitica","Yersiniosis","5-64","HumanCapital",1533001.39443494,828850.863777659,2769728.84742953
+"1020","Yersinia Enterocolitica","Yersiniosis","5-64","FrictionHigh",1226401.11554795,663080.691022127,2215783.07794363
+"1021","Yersinia Enterocolitica","Yersiniosis","5-64","FrictionLow",459900.418330483,248655.259133298,830918.65422886
+"1022","Yersinia Enterocolitica","Yersiniosis","5-64","TotalHumanCapital",5255412.25861326,2975007.33125575,9228519.8944896
+"1023","Yersinia Enterocolitica","Yersiniosis","5-64","TotalFrictionHigh",4925819.92767118,2754794.76948579,8816816.63469328
+"1024","Yersinia Enterocolitica","Yersiniosis","5-64","TotalFrictionLow",4096489.76786781,2162094.6230994,7821566.49663453
+"1025","Yersinia Enterocolitica","Yersiniosis","5-64","Direct",393731.601433039,243586.433274328,686400.736926756
+"1026","Yersinia Enterocolitica","Yersiniosis","5-64","WTP",649056.86033092,358740.320446474,1138761.77767967
+"1027","Yersinia Enterocolitica","Yersiniosis","65+","Deaths",223371.93044464,1928.2536725162,1986146.83852639
+"1028","Yersinia Enterocolitica","Yersiniosis","65+","HumanCapital",235742.273032931,64044.7997320537,1204267.34973832
+"1029","Yersinia Enterocolitica","Yersiniosis","65+","FrictionHigh",188593.818426345,51235.839785643,963413.879790657
+"1030","Yersinia Enterocolitica","Yersiniosis","65+","FrictionLow",70722.6819098792,19213.4399196161,361280.204921496
+"1031","Yersinia Enterocolitica","Yersiniosis","65+","TotalHumanCapital",991017.626210981,429786.243692346,3049243.80760141
+"1032","Yersinia Enterocolitica","Yersiniosis","65+","TotalFrictionHigh",924348.077179604,408378.02531683,2875571.51935918
+"1033","Yersinia Enterocolitica","Yersiniosis","65+","TotalFrictionLow",744718.029737961,346312.198860301,2521398.73274819
+"1034","Yersinia Enterocolitica","Yersiniosis","65+","Direct",169729.249098268,117192.349021238,257540.348945856
+"1035","Yersinia Enterocolitica","Yersiniosis","65+","WTP",184197.998228495,101944.115925345,322898.31819933
+"1036","Yersinia Enterocolitica","Yersiniosis","All Ages","Deaths",3378990.73141215,1264514.54832287,7457540.79870137
+"1037","Yersinia Enterocolitica","Yersiniosis","All Ages","HumanCapital",2116660.29115468,1124802.79706315,4058621.50157934
+"1038","Yersinia Enterocolitica","Yersiniosis","All Ages","FrictionHigh",1693328.23292374,899842.237650519,3246897.20126347
+"1039","Yersinia Enterocolitica","Yersiniosis","All Ages","FrictionLow",634998.087346404,337440.839118945,1217586.4504738
+"1040","Yersinia Enterocolitica","Yersiniosis","All Ages","TotalHumanCapital",7444941.16823097,4436028.47129134,12291133.7065609
+"1041","Yersinia Enterocolitica","Yersiniosis","All Ages","TotalFrictionHigh",6997385.55580665,4136479.07509068,11644289.8486606
+"1042","Yersinia Enterocolitica","Yersiniosis","All Ages","TotalFrictionLow",5844537.96018858,3345385.73052714,10123485.5284897
+"1043","Yersinia Enterocolitica","Yersiniosis","All Ages","Direct",669192.894734001,447341.464629188,1070559.25337518
+"1044","Yersinia Enterocolitica","Yersiniosis","All Ages","WTP",989709.9730932,547173.273767653,1735968.73261293
+"1045","Yersinia Enterocolitica","ReactiveArthritis","<5","Deaths",3625.19183391012,28.9089517653008,43375.1670112467
+"1046","Yersinia Enterocolitica","ReactiveArthritis","<5","HumanCapital",260691.381926012,88830.8353378645,566425.484703895
+"1047","Yersinia Enterocolitica","ReactiveArthritis","<5","FrictionHigh",208553.10554081,71064.6682702916,453140.387763116
+"1048","Yersinia Enterocolitica","ReactiveArthritis","<5","FrictionLow",78207.4145778037,26649.2506013594,169927.645411168
+"1049","Yersinia Enterocolitica","ReactiveArthritis","<5","TotalHumanCapital",441578.752608909,150409.123133044,959846.180353253
+"1050","Yersinia Enterocolitica","ReactiveArthritis","<5","TotalFrictionHigh",389193.726166394,132508.729333586,847585.93734264
+"1051","Yersinia Enterocolitica","ReactiveArthritis","<5","TotalFrictionLow",258504.75249489,87692.1303824391,567239.733405532
+"1052","Yersinia Enterocolitica","ReactiveArthritis","<5","Direct",47181.4650642339,15325.748188855,113801.262332199
+"1053","Yersinia Enterocolitica","ReactiveArthritis","<5","WTP",122387.578148794,41341.1538565253,270334.738429926
+"1054","Yersinia Enterocolitica","ReactiveArthritis","5-64","Deaths",2858.66124559657,23.6771555241495,35424.6626671765
+"1055","Yersinia Enterocolitica","ReactiveArthritis","5-64","HumanCapital",1272023.039831,433443.055778757,2763828.48396303
+"1056","Yersinia Enterocolitica","ReactiveArthritis","5-64","FrictionHigh",1017618.4318648,346754.444623006,2211062.78717043
+"1057","Yersinia Enterocolitica","ReactiveArthritis","5-64","FrictionLow",381606.911949301,130032.916733627,829148.54518891
+"1058","Yersinia Enterocolitica","ReactiveArthritis","5-64","TotalHumanCapital",2001891.55349802,684753.102019213,4357822.10056027
+"1059","Yersinia Enterocolitica","ReactiveArthritis","5-64","TotalFrictionHigh",1747420.80099893,597305.78544552,3806583.59463472
+"1060","Yersinia Enterocolitica","ReactiveArthritis","5-64","TotalFrictionLow",1110732.72863457,379695.448587108,2429322.19066111
+"1061","Yersinia Enterocolitica","ReactiveArthritis","5-64","Direct",206023.07320736,66381.8954121701,499731.020423295
+"1062","Yersinia Enterocolitica","ReactiveArthritis","5-64","WTP",506992.581078982,172236.865081958,1121921.9663639
+"1063","Yersinia Enterocolitica","ReactiveArthritis","65+","Deaths",3857.02290857892,30.8788932006755,47479.5718136317
+"1064","Yersinia Enterocolitica","ReactiveArthritis","65+","HumanCapital",148100.647411773,50465.435897686,321790.388218444
+"1065","Yersinia Enterocolitica","ReactiveArthritis","65+","FrictionHigh",118480.517929419,40372.3487181488,257432.310574755
+"1066","Yersinia Enterocolitica","ReactiveArthritis","65+","FrictionLow",44430.1942235319,15139.6307693058,96537.1164655333
+"1067","Yersinia Enterocolitica","ReactiveArthritis","65+","TotalHumanCapital",360740.696116947,122767.30783393,792327.46176283
+"1068","Yersinia Enterocolitica","ReactiveArthritis","65+","TotalFrictionHigh",331030.773371196,112580.403922015,728724.890536428
+"1069","Yersinia Enterocolitica","ReactiveArthritis","65+","TotalFrictionLow",256470.735777655,87042.0547527999,568781.915896337
+"1070","Yersinia Enterocolitica","ReactiveArthritis","65+","Direct",56820.1238760633,18330.0314171674,138006.728375646
+"1071","Yersinia Enterocolitica","ReactiveArthritis","65+","WTP",143774.470878354,48651.5413931895,318467.976570591
+"1072","Yersinia Enterocolitica","ReactiveArthritis","All Ages","Deaths",18531.1969718573,2058.58463885086,97974.0063354743
+"1073","Yersinia Enterocolitica","ReactiveArthritis","All Ages","HumanCapital",1680815.06916879,572739.327014307,3652044.35688537
+"1074","Yersinia Enterocolitica","ReactiveArthritis","All Ages","FrictionHigh",1344652.05533503,458191.461611446,2921635.4855083
+"1075","Yersinia Enterocolitica","ReactiveArthritis","All Ages","FrictionLow",504244.520750637,171821.798104292,1095613.30706561
+"1076","Yersinia Enterocolitica","ReactiveArthritis","All Ages","TotalHumanCapital",2806001.53321374,959880.172612271,6107129.72922735
+"1077","Yersinia Enterocolitica","ReactiveArthritis","All Ages","TotalFrictionHigh",2469980.43486713,844113.953786541,5376521.61143311
+"1078","Yersinia Enterocolitica","ReactiveArthritis","All Ages","TotalFrictionLow",1628362.49053793,554836.252231807,3556966.43687697
+"1079","Yersinia Enterocolitica","ReactiveArthritis","All Ages","Direct",313479.041571971,103135.704942523,737649.376152961
+"1080","Yersinia Enterocolitica","ReactiveArthritis","All Ages","WTP",773220.010983931,262488.976831314,1710285.89485648
+"1081","Yersinia Enterocolitica","Initial and Sequel Disease","<5","Deaths",184414.055055852,6063.97409481404,1563618.59810054
+"1082","Yersinia Enterocolitica","Initial and Sequel Disease","<5","HumanCapital",517137.996432334,246848.309586758,1012586.86189319
+"1083","Yersinia Enterocolitica","Initial and Sequel Disease","<5","FrictionHigh",413710.397145868,197478.647669406,810069.489514553
+"1084","Yersinia Enterocolitica","Initial and Sequel Disease","<5","FrictionLow",155141.3989297,74054.4928760273,303776.058567957
+"1085","Yersinia Enterocolitica","Initial and Sequel Disease","<5","TotalHumanCapital",1270143.64151652,618776.179433212,2768132.36431475
+"1086","Yersinia Enterocolitica","Initial and Sequel Disease","<5","TotalFrictionHigh",1157169.90547553,560254.682337639,2612197.03738437
+"1087","Yersinia Enterocolitica","Initial and Sequel Disease","<5","TotalFrictionLow",865393.54577199,410453.898639399,2244169.49730336
+"1088","Yersinia Enterocolitica","Initial and Sequel Disease","<5","Direct",149446.455668992,86516.3922284168,266580.397400849
+"1089","Yersinia Enterocolitica","Initial and Sequel Disease","<5","WTP",280096.516667818,144390.747982293,523594.237938469
+"1090","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","Deaths",2486991.56698464,792443.585189276,6107661.50539232
+"1091","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","HumanCapital",2822924.82211312,1442311.2662283,5299446.19897676
+"1092","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","FrictionHigh",2258339.85769049,1153849.01298264,4239556.9591814
+"1093","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","FrictionLow",846877.446633935,432693.379868491,1589833.85969303
+"1094","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","TotalHumanCapital",7408874.61266015,4227779.45486642,12501784.480288
+"1095","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","TotalFrictionHigh",6820015.35726938,3873649.99487667,11582210.3352973
+"1096","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","TotalFrictionLow",5335504.18367457,2950164.89056188,9398958.41695696
+"1097","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","Direct",611516.933407404,349269.285981492,1107945.55382242
+"1098","Yersinia Enterocolitica","Initial and Sequel Disease","5-64","WTP",1162544.41057613,599413.328742011,2174133.95066171
+"1099","Yersinia Enterocolitica","Initial and Sequel Disease","65+","Deaths",235763.173318233,7151.13873134079,1997471.66693074
+"1100","Yersinia Enterocolitica","Initial and Sequel Disease","65+","HumanCapital",406207.442312988,156948.645607803,1412949.20235875
+"1101","Yersinia Enterocolitica","Initial and Sequel Disease","65+","FrictionHigh",324965.95385039,125558.916486242,1130359.361887
+"1102","Yersinia Enterocolitica","Initial and Sequel Disease","65+","FrictionLow",121862.232693896,47084.5936823409,423884.760707623
+"1103","Yersinia Enterocolitica","Initial and Sequel Disease","65+","TotalHumanCapital",1412095.71947945,662732.443591777,3536575.75491054
+"1104","Yersinia Enterocolitica","Initial and Sequel Disease","65+","TotalFrictionHigh",1314640.52096411,620386.315890666,3322855.75896107
+"1105","Yersinia Enterocolitica","Initial and Sequel Disease","65+","TotalFrictionLow",1053013.53047352,507534.200191126,2842421.5719387
+"1106","Yersinia Enterocolitica","Initial and Sequel Disease","65+","Direct",229519.590726844,149290.552304432,371127.600952316
+"1107","Yersinia Enterocolitica","Initial and Sequel Disease","65+","WTP",329529.690542699,169918.756455668,616551.576556679
+"1108","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","Deaths",3408964.24090009,1296363.43141309,7488375.54571321
+"1109","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","HumanCapital",3841133.21529878,1942563.66796303,7338936.68000581
+"1110","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","FrictionHigh",3072906.57223903,1554050.93437042,5871149.34400465
+"1111","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","FrictionLow",1152339.96458963,582769.100388908,2201681.00400174
+"1112","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","TotalHumanCapital",10408948.0758976,6150694.33291876,17072090.1240676
+"1113","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","TotalFrictionHigh",9620397.83049958,5686483.91334044,15744523.597656
+"1114","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","TotalFrictionLow",7628012.17443454,4470381.46149422,12599914.1619893
+"1115","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","Direct",995514.064731198,604242.229863663,1712986.61450066
+"1116","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","WTP",1772832.43359871,914100.920806568,3316432.881707
