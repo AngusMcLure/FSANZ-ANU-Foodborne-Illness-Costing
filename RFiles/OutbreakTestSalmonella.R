@@ -1,6 +1,8 @@
-source("./RFiles/BuildCostTable.R")
+load('AusFBDiseaseImage.RData')
+source('./Outbreak.R')
 
-ndraws <- 10^3
+ndraws <- 10^5
+set.seed(20220222)
 ageGroups <- c("<5","5-64","65+")
 names(ageGroups) <- ageGroups
 
@@ -10,7 +12,6 @@ names(ageGroups) <- ageGroups
 
 SalmOutbreakTyphimurium <- PathogenAssumptions$`Non-typhoidal salmonella`
 SalmOutbreakTyphimurium$ed <- rdist('discrete', value = 91/203, continuous = FALSE)
-
 warning('In the document we specifically say that LOS was 5 days, but this is not reflected in our costing in any way')
 SalmOutbreakCost <- estimateCosts(SalmOutbreakTyphimurium,
                                   notifications = list(`<5` = 0, `5-64` = 91, `65+` = 0),
@@ -37,63 +38,43 @@ SalmOutbreakCost.Summaries$Detailed %>%
   `/`(subset(Costs, Name == "gpShort")$Cost)
 
 
-## Salmonella Enteridis Outbreak 2019
-
 ##################################################
 ######Listeria outbreak in rockmelons (2018)######
 ##################################################
 
 ListeriaOutbreak <- PathogenAssumptions$`Listeria monocytogenes`
-
 ListeriaOutbreak$domestic <- rdist("discrete", value = 1)
-
-warning('We are assuming 10 cases were 65+ and the remainder 5-64')
-warning('How are we costing the miscarriage? One additional death? (for a total of 8?)')
-warning('We dont have a good way to estimate hospitalisations out of the box')
-
-#Perhaps we could use the empirical distribution of Listeria hospitalisations / Listeria cases to get a multiplier to estimate the number of hospitalisations?
-
-ListeriaOutbreak.notifications <- list(`<5` = 0, `5-64` = 22-10, `65+` = 10)
-ListeriaOutbreak.cases <- estimateIncidence(pathogen = ListeriaOutbreak, ndraws = ndraws, notifications = ListeriaOutbreak.notifications)
-ListeriaOutbreak.deaths <- list(`<5` = 1, `5-64` = 7, `65+` = 0)
-ListeriaOutbreak.separations <- map(ageGroups,
-                                    ~{HospList$`Listeria monocytogenes`$Listeriosis[[.x]]/
-                                        IncidenceList$`Listeria monocytogenes`$Listeriosis[[.x]] *
-                                        ListeriaOutbreak.cases[[.x]]})
-
-ListeriaOutbreakCost <- estimateCosts(ListeriaOutbreak,
-                                      ndraws = ndraws,
-                                      cases = list(Listeriosis = ListeriaOutbreak.cases),
-                                      notifications = list(Listeriosis = ListeriaOutbreak.notifications),
-                                      separations = list(Listeriosis = ListeriaOutbreak.separations),
-                                      deaths = list(Listeriosis = ListeriaOutbreak.deaths),
-                                      year = 2019, #Year is used to estimate LOS -- should there be an option for NA or ALL which uses all data available?
-                                      discount = 0) #We are not even using discounting any more so I might drop this argument all together?
-
+ListeriaOutbreak$foodborne <- rdist("discrete", value = 1)
+ListeriaOutbreak.notifications <- list(`<5` = 0, `5-64` = 22-10, `65+` = 10) #We are assuming 10 cases were 65+ and the remainder 5-64
+ListeriaOutbreak.deaths <- list(`<5` = 1, `5-64` = 7, `65+` = 0) #7 deaths (assumed to be 5-64) and one miscarriage (costed as an additional death)
+ListeriaOutbreakCost <- costOutbreak(ListeriaOutbreak, ndraws = ndraws,
+                                     notifications = ListeriaOutbreak.notifications,
+                                     deaths = list(Listeriosis = ListeriaOutbreak.deaths))
 ListeriaOutbreakCost.Summaries <- summariseCostList(list(`Listeria monocytogenes` = ListeriaOutbreakCost))
-View(ListeriaOutbreakCost.Summaries$Detailed)
-
-ListeriaOutbreakCostAlt <- costOutbreak(ListeriaOutbreak, ndraws = ndraws,
-                                        notifications = ListeriaOutbreak.notifications,
-                                        deaths = list(Listeriosis = ListeriaOutbreak.deaths))
-ListeriaOutbreakCost.SummariesAlt <- summariseCostList(list(`Listeria monocytogenes` = ListeriaOutbreakCostAlt))
-View(ListeriaOutbreakCost.SummariesAlt$Detailed)
+ListeriaOutbreakCost.Summaries$Detailed %>%
+  subset(AgeGroup == 'All Ages' &
+           Disease == 'Listeriosis') %>%
+  as.data.frame %>%
+  select(CostItem, median, X5. = `5%`, X95. = `95%`) %>%
+  medianCIformat(unit = 1,newline = FALSE) %>%
+  select(CostItem, Cost) %>%
+  `rownames<-`(.$CostItem) %>%
+  `[`(c('GPSpecialist','ED','Hospitalisation','Tests','Medications','HumanCapital',
+        'WTP','Deaths','TotalHumanCapital'),) %>%
+  write_excel_csv('./Report/ListeriaOutbreak.csv')
 
 ListeriaOutbreakCost.Summaries$Detailed %>%
   subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "ED") %>%
-  ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "ed")$Cost)
 
 ListeriaOutbreakCost.Summaries$Detailed %>%
   subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "Hospitalisation") %>%
-  ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "T01A/T01B")$Cost)
 
 ListeriaOutbreakCost.Summaries$Detailed %>%
   subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "GPSpecialist") %>%
-  ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "gpShort")$Cost * 0.75 + subset(Costs, Name == "gpLong")$Cost *0.25 +
         subset(Costs, Name == "specialistInitial")$Cost * 0.5 + subset(Costs, Name == "specialistRepeat")$Cost *0.5)

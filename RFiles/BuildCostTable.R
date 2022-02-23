@@ -25,7 +25,7 @@ Workforce <- getWorkforceAssumptions() ##What year is this for and does it need 
 
 # Draw from all distributions
 ndraws <- 10^5
-set.seed(20220218) #Date at time of final run
+set.seed(20220222) #Date at time of final run
 Year <- 2019
 
 WTPList <- getWTP(ndraws)
@@ -43,7 +43,6 @@ HospList <- makeHospList(Year,
 DeathList <- makeDeathList(Year,
                            pathogens = PathogenAssumptions,
                            ndraws = ndraws)
-
 CostList <- makeCostList(Year, PathogenAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
 ### Add all sequelae to 'All gastro'

@@ -9,8 +9,11 @@ source("Outbreak.R")
 
 CostTable <- read.csv("Outputs/CostTable.csv") %>%
   select(-X) %>%
-  mutate(across(c(X5.,X95.),~format(.x/10^3,big.mark = ",", scientific = FALSE, digits = 0)),
-         median = round(median/10^3, digits = 0)) %>%
+  mutate(across(c(median,X5.,X95.),~format(ifelse(.x/1000<0.1, round(.x/1000,digits = 3),signif(.x/1000,3)),
+                                           big.mark = ",",
+                                           scientific = FALSE,
+                                           trim = T,
+                                           drop0trailing = TRUE))) %>%
   mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
   rename("Cost (thousands AUD)" = "median") %>%
   select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
@@ -31,8 +34,11 @@ CostTable <- read.csv("Outputs/CostTable.csv") %>%
 
 CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
   select(-X) %>%
-  mutate(across(c(X5.,X95.),~format(.x/10^3,big.mark = ",", scientific = FALSE, digits = 0)),
-         median = round(median/10^3, digits = 0)) %>%
+  mutate(across(c(median,X5.,X95.),~format(ifelse(.x/1000<0.1, round(.x/1000,digits = 3),signif(.x/1000,3)),
+                                           big.mark = ",",
+                                           scientific = FALSE,
+                                           trim = T,
+                                           drop0trailing = TRUE))) %>%
   mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
   rename("Cost (thousands AUD)" = "median") %>%
   select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
@@ -51,8 +57,11 @@ CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
 EpiTable <- read.csv('Outputs/EpiTable.csv') %>%
   select(-X) %>%
   subset(!(Disease == "IBS" & Pathogen %in% c("STEC", "Yersinia Enterocolitica"))) %>%
-  mutate(across(c(median,X5.,X95.),~round(.x,2))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
+  mutate(across(c(median,X5.,X95.),~format(ifelse(.x<1000, round(.x,digits = 0),signif(.x,3)),
+                                           big.mark = ",",
+                                           scientific = FALSE,
+                                           trim = T,
+                                           drop0trailing = TRUE))) %>%  mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
          Disease = ifelse(Disease == unlist(map(PathogenAssumptions, ~.x$name))[Pathogen],
                           'Initial Disease',
                           Disease)) %>%
@@ -355,11 +364,14 @@ server <- function(input, output) {
                                  notifications = read.input(input$NotificationsOutbreak),
                                  separations = separations,
                                  deaths = deaths,
-                                 ndraws = 10^3)
+                                 ndraws = 10^3)$costs
 
     summariseCostList(list(Outbreak = OutbreakCost))[['Categorised']] %>%
-      mutate(across(c(`5%`,`95%`),~format(.x,big.mark = ",", scientific = FALSE, digits = 0)),
-             median = round(median, digits = 0)) %>%
+      mutate(across(c(median,`5%`,`95%`),~format(ifelse(.x<1000, round(.x,digits = 0),signif(.x,3)),
+                                                 big.mark = ",",
+                                                 scientific = FALSE,
+                                                 trim = T,
+                                                 drop0trailing = TRUE))) %>%
       mutate(`90% CI` = paste(`5%`,`95%`,sep = ' - ')) %>%
       rename("Cost (AUD)" = "median") %>%
       select(-c(`5%`, `95%`)) %>%
@@ -448,8 +460,8 @@ renderCostTableSummaries <- function(input,.CostTableSummaries,tabname,.Pathogen
                   options = list(searching = FALSE,
                                  order = list(2, 'asc'),
                                  dom = 'Bfrtip',
-                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))) %>%
-    DT::formatCurrency(columns = CostCols, currency = "", interval = 3, mark = ",", digits = 0)
+                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))) #%>%
+    #DT::formatCurrency(columns = CostCols, currency = "", interval = 3, mark = ",", digits = 0)
 }
 
 
@@ -476,9 +488,8 @@ renderCostTableDetailed <- function(input,.CostTableDetailed, tabname,.Pathogen 
     DT::datatable(rownames = FALSE,
                   extensions = c("Buttons"),
                   options = list(dom = 'Bfrtip',
-                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))
-    ) %>%
-    DT::formatCurrency(columns = "Cost (thousands AUD)", currency = "", interval = 3, mark = ",", digits = 0)
+                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))) # %>%
+    # DT::formatCurrency(columns = "Cost (thousands AUD)", currency = "", interval = 3, mark = ",", digits = 0)
 
 }
 

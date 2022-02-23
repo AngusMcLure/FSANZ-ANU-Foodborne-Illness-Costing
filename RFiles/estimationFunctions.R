@@ -160,21 +160,21 @@ costHumanCapital <- function(year, disease,ageGroup,cases,separations,ndraws){
   # Days off of non-hospitalised cases
   if(disease$kind == "initial"){
     parsC <- subset(MissedDaysGastro, AgeGroup == ageGroup & Type == "Carer")
-    CarerDays <- (cases - separations) * rlnorm(ndraws,
-                                                meanlog = log(parsC$estimate.mu),
-                                                sdlog = parsC$sd.mu/parsC$estimate.mu)
+    CarerDays <- (cases) * rlnorm(ndraws,
+                                  meanlog = log(parsC$estimate.mu),
+                                  sdlog = parsC$sd.mu/parsC$estimate.mu)
     if(ageGroup !="<5"){
       parsS <- subset(MissedDaysGastro, AgeGroup == ageGroup & Type == "Self")
-      SelfDays <- (cases - separations) * rlnorm(ndraws,
-                                                 meanlog = log(parsS$estimate.mu),
-                                                 sdlog = parsS$sd.mu/parsS$estimate.mu)
+      SelfDays <- (cases) * rlnorm(ndraws,
+                                   meanlog = log(parsS$estimate.mu),
+                                   sdlog = parsS$sd.mu/parsS$estimate.mu)
     }else SelfDays <- 0
   }else{
     CarerDays <- cases * disease$missedWorkCarer[[ageGroup]]; #warning('Carer days off work for sequelae do not have uncertainty estimates around them')
     SelfDays <- cases * disease$missedWorkSelf[[ageGroup]]; #warning('Self days off work for sequalae do not have uncertainty estimates around them')
   }
 
-  # Days off for hospitalised cases
+  # Additional days off for hospitalised cases based on hospital LOS
   if(disease$kind == "initial"){
     SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & AgeGroup == ageGroup & FYNumeric == year)
     if(sum(SepData$Separations) == 0){

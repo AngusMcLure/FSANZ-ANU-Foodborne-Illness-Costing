@@ -64,7 +64,6 @@ costOutbreak <- function(pathogen,
                          deaths = deaths,
                          year = 2019, #Year is used to estimate LOS -- should there be an option for NA or ALL which uses all data available?
                          discount = 0) #We are not even using discounting any more so I might drop this argument all together?
-  #out <- list(cases = cases, deaths = deaths, separations = separations, costs = costs)
-  costs
+  out <- list(cases = cases, deaths = deaths, separations = separations, costs = costs)
 }
 

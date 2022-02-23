@@ -4,10 +4,9 @@ source("./RFiles/ClassDefinitions.R")
 source("./RFiles/Diseases.R")
 library(tidyverse)
 library(plotly)
-#library(ggpattern) #for making patterned barcharts. Only available from github via remotes::install_github("coolbutuseless/ggpattern")
 SequelaeNames <- names(SequelaeAssumptions)
 
-CostSummaries.Detailed <- read.csv('./RFiles/CostTable.csv') %>%
+CostSummaries.Detailed <- read.csv('./Outputs/CostTable.csv') %>%
   #subset(CostItem %in% c('GPSpecialist','ED','Deaths','WTPOngoing','HumanCapital','Medications','Tests'))
   mutate(CostItem = recode(CostItem,
                            GPSpecialist = 'GP and Specialist Vists',
@@ -16,18 +15,18 @@ CostSummaries.Detailed <- read.csv('./RFiles/CostTable.csv') %>%
                            WTPOngoing = 'WTP-Ongoing',
                            HumanCapital = 'Human Capital'))
 
-PathogenByCost <- CostSummaries.Detailed %>%
+ItemByCost <- CostSummaries.Detailed %>%
   subset(AgeGroup == 'All Ages' &
-           Disease == 'All Diseases' &
-           Pathogen != 'All gastro pathogens' &
+           Disease == 'Initial and Sequel Disease' &
+           Pathogen == 'All gastro pathogens' &
            CostItem == 'TotalHumanCapital') %>%
   with(Pathogen[order(median)])
 
-CostPerCase <- read.csv('./RFiles/CostPerCase.csv')
+CostPerCase <- read.csv('./Outputs/CostPerCase.csv')
 
 
-CostSummaries.Categorised <- read.csv('./RFiles/CostTableCategories.csv') %>%
-  subset(!(CostItem %in% c('FrictionLow', 'FrictionHigh'))) %>%
+CostSummaries.Categorised <- read.csv('./Outputs/CostTableCategories.csv') %>%
+  subset(!(CostItem %in% c('FrictionLow', 'FrictionHigh','TotalFrictionHigh','TotalFrictionLow','TotalHumanCapital'))) %>%
   subset(!(Pathogen %in% c('All gastro pathogens'))) %>%
   subset(Disease != 'All Diseases') %>%
   mutate(SequelOrInitial = if_else(Disease %in% SequelaeNames, 'Sequel Disease(s)', 'Initial Disease')) %>%
@@ -50,14 +49,6 @@ P.TotalCost <-  CostTotals %>%
   geom_bar(stat = 'identity',
            position = 'stack',
            color = 'black') +
-  # geom_bar_pattern(stat = 'identity', position = 'stack',
-  #                  pattern_fill = 'black',
-  #                  pattern_alpha = 0.3,
-  #                  pattern_angle = 45,
-  #                  pattern_density = 0.1,
-  #                  pattern_spacing = 0.025,
-  #                  pattern_key_scale_factor = 0.6) +
-  # scale_pattern_manual(values = c(Initial = "none", Sequel = "stripe")) +
   scale_alpha_manual(values = c(`Initial Disease` = 1, `Sequel Disease(s)` = 0.5)) +
   guides(fill = guide_legend(override.aes = list(pattern = "none"),
                              title = 'Cost Category'),
@@ -85,9 +76,11 @@ ggplotly(P.CostPerPase)
 ggsave(P.CostPerPase,filename = 'Report/CostPerCase.png')
 
 
-P.AllGastroByCat <- CostSummaries.Detailed %>%
+
+
+ItemByCost.AllGastro <- CostSummaries.Detailed %>%
   subset(AgeGroup == 'All Ages' &
-           Disease == 'All Diseases' &
+           Disease == 'Initial and Sequel Disease' &
            Pathogen == 'All gastro pathogens' &
            !(CostItem %in% c('WTP-Ongoing',
                              'TotalHumanCapital',
@@ -95,12 +88,33 @@ P.AllGastroByCat <- CostSummaries.Detailed %>%
                              'TotalFrictionLow',
                              'FrictionHigh',
                              'FrictionLow'))) %>%
-  ggplot(aes(x = fct_reorder(CostItem,median), y = median/10^6, label = round(median/10^6))) +
+  with(CostItem[order(median)])
+
+P.AllGastroByCat <- CostSummaries.Detailed %>%
+  subset(AgeGroup == 'All Ages' &
+           Disease != 'Initial and Sequel Disease' &
+           Pathogen == 'All gastro pathogens' &
+           !(CostItem %in% c('WTP-Ongoing',
+                             'TotalHumanCapital',
+                             'TotalFrictionHigh',
+                             'TotalFrictionLow',
+                             'FrictionHigh',
+                             'FrictionLow'))) %>%
+ mutate(CostItem = factor(CostItem,levels =ItemByCost.AllGastro),
+        SequelOrInitial = if_else(Disease %in% SequelaeNames,
+                                  'Sequel Diseases',
+                                  'Initial Disease')) %>%
+  ggplot(aes(x = CostItem,
+             y = median/10^6,
+             label = round(median/10^6),
+             alpha = fct_rev(SequelOrInitial))) +
   geom_bar(stat = 'identity') +
   #geom_text() +
   xlab('Category') +
   ylab('Annual Cost (millions AUD)') +
-  coord_flip()
+  coord_flip() +
+  scale_alpha_manual(values = c(`Initial Diseases` = 1, `Sequel Diseases` = 0.5)) +
+  guides(alpha = guide_legend(title = 'Sequel vs Initial'))
 P.AllGastroByCat
 ggsave(P.AllGastroByCat, filename = 'Report/CostAllGastroByCat.png')
 

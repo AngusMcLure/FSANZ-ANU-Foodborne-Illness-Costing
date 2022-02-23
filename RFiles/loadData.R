@@ -329,7 +329,7 @@ getMissedDaysGastro <- function(){
     group_by(AgeGroup, Type) %>%
     group_modify(~{
       invisible(capture.output(a <- fitdistrplus::fitdist(.x$Days,'nbinom'))) #invisible(capture.output(...)) is used to suppress the unnecessary printing to screen
-      #plot(a)
+      plot(a)
       as.data.frame(as.list(c(estimate = a$estimate["mu"], sd = a$sd["mu"])))})
   rbind(fits, data.frame(AgeGroup = '<5', Type = "Self", estimate.mu = 0, sd.mu = 0))
 }
