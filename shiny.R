@@ -56,12 +56,12 @@ CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
 
 EpiTable <- read.csv('Outputs/EpiTable.csv') %>%
   select(-X) %>%
-  subset(!(Disease == "IBS" & Pathogen %in% c("STEC", "Yersinia Enterocolitica"))) %>%
   mutate(across(c(median,X5.,X95.),~format(ifelse(.x<1000, round(.x,digits = 0),signif(.x,3)),
                                            big.mark = ",",
                                            scientific = FALSE,
                                            trim = T,
-                                           drop0trailing = TRUE))) %>%  mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
+                                           drop0trailing = TRUE))) %>%
+  mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
          Disease = ifelse(Disease == unlist(map(PathogenAssumptions, ~.x$name))[Pathogen],
                           'Initial Disease',
                           Disease)) %>%
@@ -341,7 +341,8 @@ server <- function(input, output) {
 
   output$SummaryDT = DT::renderDataTable({
     renderCostTableSummaries(input,CostTableSummaries,"Summary")
-  })
+  },
+  server = FALSE)
 
   OutbreakSummary <- reactive({
     Outbreak <- PathogenAssumptions[[input$PathogenOutbreak]]
@@ -416,7 +417,8 @@ server <- function(input, output) {
                                OutbreakSummary(),
                                'Outbreak','Outbreak')
     }
-  })
+  },
+  server = FALSE)
 }
 
 
@@ -452,13 +454,12 @@ renderCostTableSummaries <- function(input,.CostTableSummaries,tabname,.Pathogen
              AgeGroup == .AgeGroup &
              Pathogen == .Pathogen &
              Disease == .Disease) %>%
-    ungroup %>%
     select(-c(AgeGroup, Pathogen, Disease, CostItem)) %>%
     relocate(`Cost Category`) %>%
     DT::datatable(rownames = FALSE,
                   extensions = c("Buttons"),
                   options = list(searching = FALSE,
-                                 order = list(2, 'asc'),
+                                 order = list(1, 'asc'),
                                  dom = 'Bfrtip',
                                  buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))) #%>%
     #DT::formatCurrency(columns = CostCols, currency = "", interval = 3, mark = ",", digits = 0)
