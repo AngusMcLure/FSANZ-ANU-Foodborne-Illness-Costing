@@ -72,11 +72,17 @@ ProductivityOptions <- c("Human Capital", "Friction-High", "Friction-Low")
 TotalOptions <- paste0("Total.",ProductivityOptions)
 
 EpiMeasures <- unique(EpiTable$Measure)
-Measures <- c(setdiff(unique(CostTable$CostItem),c(ProductivityOptions,TotalOptions)), "Lost Productivity", "Total")
+CostItems <- c(setdiff(unique(CostTable$CostItem),c(ProductivityOptions,TotalOptions)), "Lost Productivity", "Total")
 PathogenNames <- unique(EpiTable$Pathogen)
 Diseases <- unique(EpiTable$Disease)
 CostCategories <- c(setdiff(unique(CostTableSummaries$CostItem), c(ProductivityOptions, paste0('Total.',ProductivityOptions))), "Lost Productivity", "Total")
 AgeGroups <- unique(EpiTable$AgeGroup)
+
+PathogenSelect <- c('All gastro pathogens','Norovirus','Campylobacter')
+DiseaseSelect <- c('Initial Disease','Initial and Sequel Disease')
+MeasureSelect <- c('Hospitalisations','Cases')
+CostItemSelect <- c('Total','Hospitalisation')
+AgeGroupSelect <- 'All Ages'
 
 explainer_text <-
   paste0("The value of this multiplier is pathogen-specific, inlcudes uncertainty, ",
@@ -94,7 +100,7 @@ ui <- fluidPage(
                                          "Pathogen.Epi",
                                          "Pathogen",
                                          PathogenNames,
-                                         selected = PathogenNames,
+                                         selected = PathogenSelect,
                                          multiple = TRUE
                                        )),
                                 column(width = 3,
@@ -102,15 +108,15 @@ ui <- fluidPage(
                                          "Disease.Epi",
                                          "Disease",
                                          Diseases,
-                                         selected = Diseases,
+                                         selected = DiseaseSelect,
                                          multiple = TRUE
                                        )),
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Epi",
-                                         "AgeGroups",
+                                         "Age Group",
                                          AgeGroups,
-                                         selected = AgeGroups,
+                                         selected = AgeGroupSelect,
                                          multiple = TRUE
                                        )),
                                 column(width = 3,
@@ -118,7 +124,7 @@ ui <- fluidPage(
                                          "Measures.Epi",
                                          "Measure",
                                          EpiMeasures,
-                                         selected = EpiMeasures,
+                                         selected = MeasureSelect,
                                          multiple = TRUE
                                        ))
                        ),
@@ -143,7 +149,7 @@ ui <- fluidPage(
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Summary",
-                                         "Age group",
+                                         "Age Group",
                                          AgeGroups,
                                          selected = 'All Ages',
                                          multiple = FALSE
@@ -162,33 +168,33 @@ ui <- fluidPage(
                        fluidRow(column(width = 3,
                                        selectInput(
                                          "Pathogen.Detailed",
-                                         "Pathogens",
+                                         "Pathogen",
                                          PathogenNames,
-                                         selected = PathogenNames,
+                                         selected = PathogenSelect,
                                          multiple = TRUE
                                        )),
                                 column(width = 3,
                                        selectInput(
                                          "Disease.Detailed",
-                                         "Diseases",
+                                         "Disease",
                                          Diseases,
-                                         selected = Diseases,
+                                         selected = DiseaseSelect,
                                          multiple = TRUE
                                        )),
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Detailed",
-                                         "Age groups",
+                                         "Age Group",
                                          AgeGroups,
-                                         selected = AgeGroups,
+                                         selected = AgeGroupSelect,
                                          multiple = TRUE
                                        )),
                                 column(width = 3,
                                        selectInput(
-                                         "Measure.Detailed",
+                                         "CostItem.Detailed",
                                          "Cost Items",
-                                         Measures,
-                                         selected = Measures,
+                                         CostItems,
+                                         selected = CostItemSelect,
                                          multiple = TRUE
                                        ))
                        ),
@@ -290,7 +296,7 @@ ui <- fluidPage(
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Outbreak",
-                                         "Age group",
+                                         "Age Group",
                                          AgeGroups,
                                          selected = 'All Ages',
                                          multiple = FALSE
@@ -473,18 +479,18 @@ renderCostTableDetailed <- function(input,.CostTableDetailed, tabname,.Pathogen 
     .Pathogen <- input[[paste0("Pathogen.", tabname)]]
   }
   .Disease  <- input[[paste0("Disease.", tabname)]]
-  .Measure  <- input[[paste0("Measure.", tabname)]]
+  .CostItem  <- input[[paste0("CostItem.", tabname)]]
 
   CostTable %>%
     mutate(CostItem = if_else(CostItem == .Productivity,
                               'Lost Productivity',
                               if_else(CostItem == paste0('Total.',.Productivity),
                                       'Total', CostItem))) %>%
-    subset(CostItem %in% .Measure &
+    subset(CostItem %in% .CostItem &
              AgeGroup %in% .AgeGroup &
              Pathogen %in% .Pathogen &
              Disease %in% .Disease) %>%
-    rename(`Age group` = AgeGroup,
+    rename(`Age Group` = AgeGroup,
            `Cost Item` = CostItem) %>%
     DT::datatable(rownames = FALSE,
                   extensions = c("Buttons"),
