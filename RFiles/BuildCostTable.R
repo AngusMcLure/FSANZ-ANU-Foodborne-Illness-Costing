@@ -45,7 +45,7 @@ DeathList <- makeDeathList(Year,
                            ndraws = ndraws)
 CostList <- makeCostList(Year, PathogenAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
-### Add all sequelae to 'All gastro'
+### Inluce sequelae as part of 'All gastro'
 
 appendSequelaeToAllGastro <- function(List, .f){
   List$`All gastro pathogens` <- c(List$`All gastro pathogens`,
@@ -61,6 +61,24 @@ CostList <- appendSequelaeToAllGastro(CostList,add2)
 HospList <- appendSequelaeToAllGastro(HospList,add)
 DeathList <- appendSequelaeToAllGastro(DeathList,add)
 IncidenceList <- appendSequelaeToAllGastro(IncidenceList,add)
+
+### Create a new category called all pathogens (which includes all pathogens, not just those that cause gastro)
+appendAllPathogens <- function(List, .f){
+  List$`All pathogens`<- c(list(Initial = .f(List$`All gastro pathogens`$Gastroenteritis,
+                                             List$`Salmonella Typhi`$`Typhoid Fever`,
+                                             List$`Toxoplasma gondii`$Toxoplasmosis,
+                                             List$`Listeria monocytogenes`$Listeriosis)),
+                           List$`All gastro pathogens`[names(List$`All gastro pathogens`) != 'Gastroenteritis']
+  )
+  List
+}
+
+CostList <- appendAllPathogens(CostList,add2)
+HospList <- appendAllPathogens(HospList,add)
+DeathList <- appendAllPathogens(DeathList,add)
+IncidenceList <- appendAllPathogens(IncidenceList,add)
+
+
 
 warning('When summing across agegroups the draws of the multipliers used for each agegroup are considered independent. Making them dependent would require reworking the whole program, and is not necessarily a better assumption, but it is something to be aware of')
 
@@ -80,7 +98,6 @@ summariseCostList <- function(list){
   totals <- list %>%
     map_depth(2,~{.x$`All Ages` <- do.call(add,unname(.x));.x}) %>%
     map(~{.x$`Initial and Sequel Disease` <- do.call(add2,unname(.x));.x})
-
   Detailed <- totals %>% quantilesNestedList(4, c("Pathogen", "Disease","AgeGroup","CostItem"))
 
   DirectCat <- c('GPSpecialist','ED','Hospitalisation','Tests','Medications')

@@ -7,6 +7,8 @@ library(mc2d) #for the standard PERT distribution parameterised by min, mode, ma
 load('Outputs/AusFBDiseaseImage-Light.RData', globalenv())
 source("Outbreak.R")
 
+InitialDiseaseNames <- c(unlist(map(PathogenAssumptions, ~.x$name)), `All pathogens` = 'Initial')
+
 CostTable <- read.csv("Outputs/CostTable.csv") %>%
   select(-X) %>%
   mutate(across(c(median,X5.,X95.),~format(ifelse(.x/1000<0.1, round(.x/1000,digits = 3),signif(.x/1000,3)),
@@ -28,7 +30,7 @@ CostTable <- read.csv("Outputs/CostTable.csv") %>%
                            TotalFrictionHigh = 'Total.Friction-High',
                            TotalFrictionLow = 'Total.Friction-Low',
                            TotalHumanCapital = 'Total.Human Capital'),
-         Disease = ifelse(Disease == unlist(map(PathogenAssumptions, ~.x$name))[Pathogen],
+         Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
                           'Initial Disease',
                           Disease))
 
@@ -50,7 +52,7 @@ CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
                            TotalFrictionHigh = 'Total.Friction-High',
                            TotalFrictionLow = 'Total.Friction-Low',
                            TotalHumanCapital = 'Total.Human Capital'),
-         Disease = ifelse(Disease == unlist(map(PathogenAssumptions, ~.x$name))[Pathogen],
+         Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
                           'Initial Disease',
                           Disease))
 
@@ -62,7 +64,7 @@ EpiTable <- read.csv('Outputs/EpiTable.csv') %>%
                                            trim = T,
                                            drop0trailing = TRUE))) %>%
   mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
-         Disease = ifelse(Disease == unlist(map(PathogenAssumptions, ~.x$name))[Pathogen],
+         Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
                           'Initial Disease',
                           Disease)) %>%
   rename("Count" = "median") %>%
@@ -73,12 +75,12 @@ TotalOptions <- paste0("Total.",ProductivityOptions)
 
 EpiMeasures <- unique(EpiTable$Measure)
 CostItems <- c(setdiff(unique(CostTable$CostItem),c(ProductivityOptions,TotalOptions)), "Lost Productivity", "Total")
-PathogenNames <- unique(EpiTable$Pathogen)
-Diseases <- unique(EpiTable$Disease)
+PathogenNames <- unique(EpiTable$Pathogen) %>% setdiff(c('All pathogens', 'All gastro pathogens')) %>% sort %>% c('All pathogens', 'All gastro pathogens',.)
+DiseaseNames <- unique(EpiTable$Disease) %>% setdiff(c('Initial Disease', 'Initial and Sequel Disease')) %>% sort %>% c('Initial Disease', 'Initial and Sequel Disease',.)
 CostCategories <- c(setdiff(unique(CostTableSummaries$CostItem), c(ProductivityOptions, paste0('Total.',ProductivityOptions))), "Lost Productivity", "Total")
 AgeGroups <- unique(EpiTable$AgeGroup)
 
-PathogenSelect <- c('All gastro pathogens','Norovirus','Campylobacter')
+PathogenSelect <- c('All pathogens','Norovirus','Campylobacter')
 DiseaseSelect <- c('Initial Disease','Initial and Sequel Disease')
 MeasureSelect <- c('Hospitalisations','Cases')
 CostItemSelect <- c('Total','Hospitalisation')
@@ -107,7 +109,7 @@ ui <- fluidPage(
                                        selectInput(
                                          "Disease.Epi",
                                          "Disease",
-                                         Diseases,
+                                         DiseaseNames,
                                          selected = DiseaseSelect,
                                          multiple = TRUE
                                        )),
@@ -142,7 +144,7 @@ ui <- fluidPage(
                                        selectInput(
                                          "Disease.Summary",
                                          "Disease",
-                                         Diseases,
+                                         DiseaseNames,
                                          selected = 'All Diseases',
                                          multiple = FALSE
                                        )),
@@ -177,7 +179,7 @@ ui <- fluidPage(
                                        selectInput(
                                          "Disease.Detailed",
                                          "Disease",
-                                         Diseases,
+                                         DiseaseNames,
                                          selected = DiseaseSelect,
                                          multiple = TRUE
                                        )),
@@ -212,7 +214,7 @@ ui <- fluidPage(
                                        selectInput(
                                          "PathogenOutbreak",
                                          "Pathogen",
-                                         setdiff(PathogenNames,"All gastro pathogens"),
+                                         setdiff(PathogenNames,c("All gastro pathogens",'All pathogens')),
                                          selected = "Non-typhoidal salmonella",
                                          multiple = FALSE
                                        )),
@@ -289,7 +291,7 @@ ui <- fluidPage(
                                        selectInput(
                                          "Disease.Outbreak",
                                          "Disease",
-                                         Diseases,
+                                         DiseaseNames,
                                          selected = 'All Diseases',
                                          multiple = FALSE
                                        )),

@@ -1959,3 +1959,339 @@
 "1958","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","TotalHumanCapital",10445262.0541284,6145242.1229841,17108588.1338291
 "1959","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","TotalFrictionHigh",9653344.86458576,5679956.29524543,15783302.6622957
 "1960","Yersinia Enterocolitica","Initial and Sequel Disease","All Ages","TotalFrictionLow",7644224.55497011,4448252.35621755,12619480.7439392
+"1961","All pathogens","Initial","<5","GPSpecialist",2212072.94802733,1236678.17073348,3666694.83387911
+"1962","All pathogens","Initial","<5","ED",4319590.61952818,2052195.14188493,8602946.43963094
+"1963","All pathogens","Initial","<5","Medications",2050855.25767716,1089166.26971676,3614683.29312945
+"1964","All pathogens","Initial","<5","Tests",558107.976928915,251125.220451812,1217283.62938951
+"1965","All pathogens","Initial","<5","Hospitalisation",9567264.02029958,5210719.22625317,16432864.8329459
+"1966","All pathogens","Initial","<5","Deaths",19076352.0946314,11813116.897799,29529837.2961667
+"1967","All pathogens","Initial","<5","WTP",9818205.18446633,5713429.27285838,15718884.8671955
+"1968","All pathogens","Initial","<5","WTPOngoing",0,0,0
+"1969","All pathogens","Initial","<5","HumanCapital",64397014.6847419,31964477.3893756,126664647.194837
+"1970","All pathogens","Initial","<5","FrictionHigh",51517611.7477935,25571581.9115005,101331717.755869
+"1971","All pathogens","Initial","<5","FrictionLow",19319104.4054226,9589343.21681267,37999394.158451
+"1972","All pathogens","Initial","<5","TotalHumanCapital",114120081.563161,72535694.5825341,184895338.453412
+"1973","All pathogens","Initial","<5","TotalFrictionHigh",101231776.105824,65805676.6490736,159952082.80603
+"1974","All pathogens","Initial","<5","TotalFrictionLow",68969969.4225577,48074227.6441524,98355013.8054128
+"1975","All pathogens","Initial","5-64","GPSpecialist",27550341.048082,15208270.5496839,45786311.7064352
+"1976","All pathogens","Initial","5-64","ED",54408373.2269081,25790124.7747506,108447629.841443
+"1977","All pathogens","Initial","5-64","Medications",19106329.9262589,10586091.4944258,31624946.0959892
+"1978","All pathogens","Initial","5-64","Tests",6833543.89392878,2980585.0367176,15142251.9110939
+"1979","All pathogens","Initial","5-64","Hospitalisation",54987915.6911731,29858784.8334168,94376888.4878343
+"1980","All pathogens","Initial","5-64","Deaths",55889336.2272529,37330614.4133281,82375128.082425
+"1981","All pathogens","Initial","5-64","WTP",119425430.654448,67698322.7728836,193767050.877735
+"1982","All pathogens","Initial","5-64","WTPOngoing",0,0,0
+"1983","All pathogens","Initial","5-64","HumanCapital",1197021375.42838,664489530.400646,1999280950.09136
+"1984","All pathogens","Initial","5-64","FrictionHigh",957617100.342701,531591624.320516,1599424760.07309
+"1985","All pathogens","Initial","5-64","FrictionLow",359106412.628513,199346859.120194,599784285.027409
+"1986","All pathogens","Initial","5-64","TotalHumanCapital",1546084030.17994,912966306.138947,2476247186.29353
+"1987","All pathogens","Initial","5-64","TotalFrictionHigh",1306654935.44864,779846782.920956,2076827825.06328
+"1988","All pathogens","Initial","5-64","TotalFrictionLow",707311380.93676,444081397.902305,1082456135.86069
+"1989","All pathogens","Initial","65+","GPSpecialist",5619239.6021224,3098199.40796939,9380064.27143068
+"1990","All pathogens","Initial","65+","ED",11133202.0756748,5318480.92385197,22083407.0118519
+"1991","All pathogens","Initial","65+","Medications",5370550.8815181,2811873.04764477,9546610.57461486
+"1992","All pathogens","Initial","65+","Tests",1383961.28428493,594560.252675939,3073009.17770149
+"1993","All pathogens","Initial","65+","Hospitalisation",96621120.1860921,51668072.785108,167672086.450872
+"1994","All pathogens","Initial","65+","Deaths",188086519.144683,114851979.778149,301951550.880068
+"1995","All pathogens","Initial","65+","WTP",25251344.953,14681929.7240344,40439944.8664543
+"1996","All pathogens","Initial","65+","WTPOngoing",0,0,0
+"1997","All pathogens","Initial","65+","HumanCapital",132914757.583989,38321259.0441572,650635394.483556
+"1998","All pathogens","Initial","65+","FrictionHigh",106331806.067191,30657007.2353258,520508315.586845
+"1999","All pathogens","Initial","65+","FrictionLow",39874427.2751966,11496377.7132472,195190618.345067
+"2000","All pathogens","Initial","65+","TotalHumanCapital",495089722.730535,324552287.262563,1018021725.3846
+"2001","All pathogens","Initial","65+","TotalFrictionHigh",468250743.694443,312495108.307549,890707522.876917
+"2002","All pathogens","Initial","65+","TotalFrictionLow",396244559.928177,276978502.930269,594077356.984995
+"2003","All pathogens","Initial","All Ages","GPSpecialist",35468425.2529634,19755778.7159678,58243430.5444427
+"2004","All pathogens","Initial","All Ages","ED",71001732.6085938,35900247.0994611,132314244.181231
+"2005","All pathogens","Initial","All Ages","Medications",26696761.4564233,14873927.2350166,43804929.6121946
+"2006","All pathogens","Initial","All Ages","Tests",9009068.92696805,4327940.6704657,18195638.9491971
+"2007","All pathogens","Initial","All Ages","Hospitalisation",164907711.265446,109006963.28644,242852924.287701
+"2008","All pathogens","Initial","All Ages","Deaths",265478157.737589,187888399.342926,381509470.511356
+"2009","All pathogens","Initial","All Ages","WTP",154538239.361473,88173570.5824614,249876801.780203
+"2010","All pathogens","Initial","All Ages","WTPOngoing",0,0,0
+"2011","All pathogens","Initial","All Ages","HumanCapital",1450761372.60608,795213102.169077,2522713514.85592
+"2012","All pathogens","Initial","All Ages","FrictionHigh",1160609098.08487,636170481.735262,2018170811.88474
+"2013","All pathogens","Initial","All Ages","FrictionLow",435228411.781824,238563930.650723,756814054.456777
+"2014","All pathogens","Initial","All Ages","TotalHumanCapital",2197369868.80103,1405000573.73491,3435638813.1913
+"2015","All pathogens","Initial","All Ages","TotalFrictionHigh",1907333287.64324,1244582436.64252,2932804872.32322
+"2016","All pathogens","Initial","All Ages","TotalFrictionLow",1182542871.50984,834656345.291691,1683266009.92091
+"2017","All pathogens","ReactiveArthritis","<5","GPSpecialist",188683.051081442,101444.445437054,328413.726764738
+"2018","All pathogens","ReactiveArthritis","<5","ED",0,0,0
+"2019","All pathogens","ReactiveArthritis","<5","Medications",310536.963450798,132709.665015827,719239.505988346
+"2020","All pathogens","ReactiveArthritis","<5","Tests",169111.008737375,89200.4193367176,302042.159100309
+"2021","All pathogens","ReactiveArthritis","<5","Hospitalisation",639520.666433554,467079.833203075,850920.930719602
+"2022","All pathogens","ReactiveArthritis","<5","Deaths",166767.842656717,18708.0833725254,774039.150667859
+"2023","All pathogens","ReactiveArthritis","<5","WTP",2571142.657597,1372578.73394133,4520953.39373391
+"2024","All pathogens","ReactiveArthritis","<5","WTPOngoing",882937.444991147,450217.525964435,1630647.55396777
+"2025","All pathogens","ReactiveArthritis","<5","HumanCapital",7362236.0608259,3969828.12276274,12754016.2923511
+"2026","All pathogens","ReactiveArthritis","<5","FrictionHigh",5889788.84866072,3175862.49821019,10203213.0338809
+"2027","All pathogens","ReactiveArthritis","<5","FrictionLow",2208670.81824777,1190948.43682882,3826204.88770534
+"2028","All pathogens","ReactiveArthritis","<5","TotalHumanCapital",12426324.768846,7082279.12924115,20951996.8071197
+"2029","All pathogens","ReactiveArthritis","<5","TotalFrictionHigh",10950746.1070322,6278290.89827079,18400394.6426817
+"2030","All pathogens","ReactiveArthritis","<5","TotalFrictionLow",7268545.87530985,4275924.06471949,12048293.5947796
+"2031","All pathogens","ReactiveArthritis","5-64","GPSpecialist",973716.783258276,531011.654631485,1737890.57995907
+"2032","All pathogens","ReactiveArthritis","5-64","ED",0,0,0
+"2033","All pathogens","ReactiveArthritis","5-64","Medications",1574602.20588079,668522.509862652,3912543.6812026
+"2034","All pathogens","ReactiveArthritis","5-64","Tests",871817.713645798,464416.294490224,1600120.61880786
+"2035","All pathogens","ReactiveArthritis","5-64","Hospitalisation",3647940.28781652,2575249.74019614,5000924.21590591
+"2036","All pathogens","ReactiveArthritis","5-64","Deaths",156544.087957394,16190.0493356919,840638.734681838
+"2037","All pathogens","ReactiveArthritis","5-64","WTP",13256775.8615759,7173695.3860353,23884487.8838937
+"2038","All pathogens","ReactiveArthritis","5-64","WTPOngoing",4536795.88074967,2348317.74246476,8639785.55933052
+"2039","All pathogens","ReactiveArthritis","5-64","HumanCapital",44648973.4438306,24453088.6137532,79283326.4876361
+"2040","All pathogens","ReactiveArthritis","5-64","FrictionHigh",35719178.7550645,19562470.8910025,63426661.1901089
+"2041","All pathogens","ReactiveArthritis","5-64","FrictionLow",13394692.0331492,7335926.58412595,23784997.9462908
+"2042","All pathogens","ReactiveArthritis","5-64","TotalHumanCapital",70075325.2029445,40116183.6223242,121729873.693377
+"2043","All pathogens","ReactiveArthritis","5-64","TotalFrictionHigh",61153420.5815761,35217596.358884,105912222.811474
+"2044","All pathogens","ReactiveArthritis","5-64","TotalFrictionLow",38785209.1918485,22891939.8052197,66399691.6820974
+"2045","All pathogens","ReactiveArthritis","65+","GPSpecialist",262087.998642697,141740.477125641,474130.325811291
+"2046","All pathogens","ReactiveArthritis","65+","ED",0,0,0
+"2047","All pathogens","ReactiveArthritis","65+","Medications",421724.242995722,175564.49430268,1070902.6666903
+"2048","All pathogens","ReactiveArthritis","65+","Tests",234071.169878465,124093.885124037,437401.594245686
+"2049","All pathogens","ReactiveArthritis","65+","Hospitalisation",933224.083975066,652875.732118958,1290327.93766923
+"2050","All pathogens","ReactiveArthritis","65+","Deaths",192123.483944522,18389.7702792249,1081690.24271246
+"2051","All pathogens","ReactiveArthritis","65+","WTP",3565878.77828948,1914718.42871439,6512079.31886487
+"2052","All pathogens","ReactiveArthritis","65+","WTPOngoing",1221785.48799083,623608.266817525,2362356.61404607
+"2053","All pathogens","ReactiveArthritis","65+","HumanCapital",4938171.33761759,2682693.8229876,8887029.36929818
+"2054","All pathogens","ReactiveArthritis","65+","FrictionHigh",3950537.07009407,2146155.05839008,7109623.49543855
+"2055","All pathogens","ReactiveArthritis","65+","FrictionLow",1481451.40128528,804808.146896281,2666108.81078945
+"2056","All pathogens","ReactiveArthritis","65+","TotalHumanCapital",11982726.9052507,7022657.23387741,20702770.0405828
+"2057","All pathogens","ReactiveArthritis","65+","TotalFrictionHigh",10994813.4651614,6473270.2836991,18927513.1639775
+"2058","All pathogens","ReactiveArthritis","65+","TotalFrictionLow",8523735.27492137,5109244.81156244,14520587.3608825
+"2059","All pathogens","ReactiveArthritis","All Ages","GPSpecialist",1427286.88775664,781766.163484312,2522421.6579703
+"2060","All pathogens","ReactiveArthritis","All Ages","ED",0,0,0
+"2061","All pathogens","ReactiveArthritis","All Ages","Medications",2407621.36372924,1152783.69148623,5178199.85114364
+"2062","All pathogens","ReactiveArthritis","All Ages","Tests",1282191.83935875,693007.115440601,2298402.47665743
+"2063","All pathogens","ReactiveArthritis","All Ages","Hospitalisation",5243838.77784636,4104541.94082136,6647213.78705455
+"2064","All pathogens","ReactiveArthritis","All Ages","Deaths",700973.543352935,206161.408216942,1919013.31543992
+"2065","All pathogens","ReactiveArthritis","All Ages","WTP",19431123.3072853,10523049.5675029,34764548.8384525
+"2066","All pathogens","ReactiveArthritis","All Ages","WTPOngoing",6682753.25094099,3515272.43581888,12392210.7717162
+"2067","All pathogens","ReactiveArthritis","All Ages","HumanCapital",57015940.6338292,31324015.0657714,100457495.054077
+"2068","All pathogens","ReactiveArthritis","All Ages","FrictionHigh",45612752.5070634,25059212.0526171,80365996.0432614
+"2069","All pathogens","ReactiveArthritis","All Ages","FrictionLow",17104782.1901488,9397204.51973142,30137248.516223
+"2070","All pathogens","ReactiveArthritis","All Ages","TotalHumanCapital",94701707.3279814,54608293.4469503,162429758.999459
+"2071","All pathogens","ReactiveArthritis","All Ages","TotalFrictionHigh",83276142.8794371,48316207.1004677,142425048.672784
+"2072","All pathogens","ReactiveArthritis","All Ages","TotalFrictionLow",54698057.3892979,32570860.1952878,92399981.1434715
+"2073","All pathogens","IBS","<5","GPSpecialist",852367.721947535,572936.405771684,1269386.8898803
+"2074","All pathogens","IBS","<5","ED",0,0,0
+"2075","All pathogens","IBS","<5","Medications",106522.76089617,71726.6419231247,158590.013920077
+"2076","All pathogens","IBS","<5","Tests",694508.080059826,467094.113116594,1033743.77183111
+"2077","All pathogens","IBS","<5","Hospitalisation",8867.30544214341,4943.74090987751,16837.0311407605
+"2078","All pathogens","IBS","<5","Deaths",47302.5496118385,3717.14598830214,259442.726569695
+"2079","All pathogens","IBS","<5","WTP",1856931.1568118,1145271.51467481,2939900.12121045
+"2080","All pathogens","IBS","<5","WTPOngoing",2498304.98192244,1011410.64558607,4954532.13083623
+"2081","All pathogens","IBS","<5","HumanCapital",3762431.09443014,2531977.36799113,5596411.08690901
+"2082","All pathogens","IBS","<5","FrictionHigh",3009944.87554411,2025581.8943929,4477128.86952721
+"2083","All pathogens","IBS","<5","FrictionLow",1128729.32832904,759593.210397339,1678923.3260727
+"2084","All pathogens","IBS","<5","TotalHumanCapital",9901196.24407747,6369601.21075147,15397545.4025083
+"2085","All pathogens","IBS","<5","TotalFrictionHigh",9142651.5426881,5833962.20221701,14315743.6698775
+"2086","All pathogens","IBS","<5","TotalFrictionLow",7252489.31966885,4476728.96933138,11661305.5486314
+"2087","All pathogens","IBS","5-64","GPSpecialist",4659360.83539148,3020002.54274206,7277320.67841134
+"2088","All pathogens","IBS","5-64","ED",0,0,0
+"2089","All pathogens","IBS","5-64","Medications",582380.810424943,377557.292428143,909780.069583051
+"2090","All pathogens","IBS","5-64","Tests",4426823.78214032,2861588.62105438,6931038.45785141
+"2091","All pathogens","IBS","5-64","Hospitalisation",4456762.08606214,2438487.89676665,9277879.88685812
+"2092","All pathogens","IBS","5-64","Deaths",42044.9316538673,3085.05658903639,282878.762169738
+"2093","All pathogens","IBS","5-64","WTP",10156721.107116,6082774.68016177,16766383.077966
+"2094","All pathogens","IBS","5-64","WTPOngoing",13541324.0885432,5336523.23050531,28424237.6174689
+"2095","All pathogens","IBS","5-64","HumanCapital",24112932.0688254,15658130.7191127,37644057.0975843
+"2096","All pathogens","IBS","5-64","FrictionHigh",19290345.6550603,12526504.5752901,30115245.6780674
+"2097","All pathogens","IBS","5-64","FrictionLow",7233879.62064761,4697439.2157338,11293217.1292753
+"2098","All pathogens","IBS","5-64","TotalHumanCapital",62931088.5087009,40829270.7896023,99025115.8311612
+"2099","All pathogens","IBS","5-64","TotalFrictionHigh",58082240.3600443,37521334.196823,91750447.8440036
+"2100","All pathogens","IBS","5-64","TotalFrictionLow",45952178.5496955,29123473.4239386,73867701.5402108
+"2101","All pathogens","IBS","65+","GPSpecialist",1263335.10682419,808940.091648394,1999258.39580124
+"2102","All pathogens","IBS","65+","ED",0,0,0
+"2103","All pathogens","IBS","65+","Medications",157968.346613345,101161.14926124,249862.229008503
+"2104","All pathogens","IBS","65+","Tests",1371387.49404316,875475.960877524,2175462.63110633
+"2105","All pathogens","IBS","65+","Hospitalisation",1037125.52765572,560127.270733148,2197887.2139312
+"2106","All pathogens","IBS","65+","Deaths",1829494.02157086,854785.115361796,4377386.09780174
+"2107","All pathogens","IBS","65+","WTP",2754324.73743905,1632631.21048348,4595869.44314089
+"2108","All pathogens","IBS","65+","WTPOngoing",3665760.57415828,1425919.69317972,7787978.43592819
+"2109","All pathogens","IBS","65+","HumanCapital",2669980.64414906,1713132.95778772,4220259.74536555
+"2110","All pathogens","IBS","65+","FrictionHigh",2135984.51531925,1370506.36623018,3376207.79629244
+"2111","All pathogens","IBS","65+","FrictionLow",800994.193244718,513939.887336316,1266077.92360967
+"2112","All pathogens","IBS","65+","TotalHumanCapital",15281741.8861383,10067680.7769755,23740814.8794838
+"2113","All pathogens","IBS","65+","TotalFrictionHigh",14741713.8475407,9689531.03011169,22955097.1564277
+"2114","All pathogens","IBS","65+","TotalFrictionLow",13387919.9646369,8728667.13169832,20996328.6776804
+"2115","All pathogens","IBS","All Ages","GPSpecialist",6778763.78333505,4422149.577257,10517701.913685
+"2116","All pathogens","IBS","All Ages","ED",0,0,0
+"2117","All pathogens","IBS","All Ages","Medications",847303.46237628,552645.918855617,1314513.36487972
+"2118","All pathogens","IBS","All Ages","Tests",6497281.15692398,4226111.49827528,10101746.4748741
+"2119","All pathogens","IBS","All Ages","Hospitalisation",5667786.40525683,3427166.47080089,10514315.0283422
+"2120","All pathogens","IBS","All Ages","Deaths",1995737.17514012,983665.074225297,4546076.14496365
+"2121","All pathogens","IBS","All Ages","WTP",14772965.7410355,8888072.60232847,24250900.4684471
+"2122","All pathogens","IBS","All Ages","WTPOngoing",19999897.6765352,8244660.33072838,39642010.3401444
+"2123","All pathogens","IBS","All Ages","HumanCapital",30561168.7188138,19975119.6262676,47367997.7408109
+"2124","All pathogens","IBS","All Ages","FrictionHigh",24448934.975051,15980095.701014,37894398.1926487
+"2125","All pathogens","IBS","All Ages","FrictionLow",9168350.61564414,5992535.88788027,14210399.3222433
+"2126","All pathogens","IBS","All Ages","TotalHumanCapital",88247411.7009998,58051565.2004469,137120807.563824
+"2127","All pathogens","IBS","All Ages","TotalFrictionHigh",82090087.3603316,53820673.3118954,127868031.515312
+"2128","All pathogens","IBS","All Ages","TotalFrictionLow",66743007.5674543,43138728.3619592,105205886.92437
+"2129","All pathogens","GBS","<5","GPSpecialist",6510.67923220189,3189.50268179419,13402.6335266162
+"2130","All pathogens","GBS","<5","ED",0,0,0
+"2131","All pathogens","GBS","<5","Medications",0,0,0
+"2132","All pathogens","GBS","<5","Tests",0,0,0
+"2133","All pathogens","GBS","<5","Hospitalisation",278696.597479526,136713.74177045,572936.205153987
+"2134","All pathogens","GBS","<5","Deaths",57660.0405996251,471.526803106429,560815.794109239
+"2135","All pathogens","GBS","<5","WTP",13129.8470371407,6439.2615069117,27059.1731935764
+"2136","All pathogens","GBS","<5","WTPOngoing",2694.87207306483,1290.00758127535,5690.58771859295
+"2137","All pathogens","GBS","<5","HumanCapital",175305.140840684,85995.3870003248,360387.11288761
+"2138","All pathogens","GBS","<5","FrictionHigh",140244.112672547,68796.3096002599,288309.690310088
+"2139","All pathogens","GBS","<5","FrictionLow",52591.5422522052,25798.6161000974,108116.133866283
+"2140","All pathogens","GBS","<5","TotalHumanCapital",596905.630063242,283063.958478574,1276652.82005554
+"2141","All pathogens","GBS","<5","TotalFrictionHigh",559811.610016946,263978.833367227,1212685.88461429
+"2142","All pathogens","GBS","<5","TotalFrictionLow",466177.185072953,215776.128791926,1055053.82733277
+"2143","All pathogens","GBS","5-64","GPSpecialist",46778.6621059809,22884.3906733742,96256.6621607967
+"2144","All pathogens","GBS","5-64","ED",0,0,0
+"2145","All pathogens","GBS","5-64","Medications",0,0,0
+"2146","All pathogens","GBS","5-64","Tests",0,0,0
+"2147","All pathogens","GBS","5-64","Hospitalisation",2002407.86874391,982274.899522884,4116490.74966872
+"2148","All pathogens","GBS","5-64","Deaths",4888155.79029095,1995392.71989312,10043921.0819742
+"2149","All pathogens","GBS","5-64","WTP",94336.6702727898,46265.4658397363,194417.52003629
+"2150","All pathogens","GBS","5-64","WTPOngoing",41277.2197161011,19842.3180244886,87061.8276328159
+"2151","All pathogens","GBS","5-64","HumanCapital",1475193.19698647,723651.395884547,3032658.45293464
+"2152","All pathogens","GBS","5-64","FrictionHigh",1180154.55758918,578921.116707637,2426126.76234771
+"2153","All pathogens","GBS","5-64","FrictionLow",442557.959095941,217095.418765364,909797.535880391
+"2154","All pathogens","GBS","5-64","TotalHumanCapital",8923169.50568363,5002516.19699979,15053076.3267884
+"2155","All pathogens","GBS","5-64","TotalFrictionHigh",8602603.10793446,4798783.96542842,14577517.7529751
+"2156","All pathogens","GBS","5-64","TotalFrictionLow",7809814.24170753,4267843.38427559,13417631.7164373
+"2157","All pathogens","GBS","65+","GPSpecialist",13208.3113001894,6466.87364280006,27225.4656154986
+"2158","All pathogens","GBS","65+","ED",0,0,0
+"2159","All pathogens","GBS","65+","Medications",0,0,0
+"2160","All pathogens","GBS","65+","Tests",0,0,0
+"2161","All pathogens","GBS","65+","Hospitalisation",565824.220101916,277563.296481086,1163204.66191993
+"2162","All pathogens","GBS","65+","Deaths",31861224.2995816,13835474.3536045,59218554.3721934
+"2163","All pathogens","GBS","65+","WTP",26656.8932919728,13073.3211425312,54936.9303655844
+"2164","All pathogens","GBS","65+","WTPOngoing",35610.9941890167,17225.8300777666,74344.040132024
+"2165","All pathogens","GBS","65+","HumanCapital",170046.540430532,83415.7970625599,349576.638017585
+"2166","All pathogens","GBS","65+","FrictionHigh",136037.232344426,66732.6376500479,279661.310414068
+"2167","All pathogens","GBS","65+","FrictionLow",51013.9621291596,25024.739118768,104872.991405276
+"2168","All pathogens","GBS","65+","TotalHumanCapital",32756407.2361154,14712249.0411365,60110401.516437
+"2169","All pathogens","GBS","65+","TotalFrictionHigh",32717312.4916049,14678327.1074743,60073159.3637923
+"2170","All pathogens","GBS","65+","TotalFrictionLow",32626504.0448722,14587947.138366,59966615.3035028
+"2171","All pathogens","GBS","All Ages","GPSpecialist",66510.9945660728,32580.227690285,136619.316711463
+"2172","All pathogens","GBS","All Ages","ED",0,0,0
+"2173","All pathogens","GBS","All Ages","Medications",0,0,0
+"2174","All pathogens","GBS","All Ages","Tests",0,0,0
+"2175","All pathogens","GBS","All Ages","Hospitalisation",2846928.68632535,1396551.93777442,5852631.61674264
+"2176","All pathogens","GBS","All Ages","Deaths",37347436.3474344,18783301.690046,64981434.1661534
+"2177","All pathogens","GBS","All Ages","WTP",134123.410601903,65778.0484891792,276413.62359545
+"2178","All pathogens","GBS","All Ages","WTPOngoing",79649.9359780615,38496.4638812227,166798.856658525
+"2179","All pathogens","GBS","All Ages","HumanCapital",1820544.87825769,893062.579947431,3742622.20383983
+"2180","All pathogens","GBS","All Ages","FrictionHigh",1456435.90260615,714450.063957945,2994097.76307186
+"2181","All pathogens","GBS","All Ages","FrictionLow",546163.463477306,267918.773984229,1122786.66115195
+"2182","All pathogens","GBS","All Ages","TotalHumanCapital",42838353.7672905,23859555.9689544,70680758.6542054
+"2183","All pathogens","GBS","All Ages","TotalFrictionHigh",42428496.0196705,23508858.9942237,70247503.4293739
+"2184","All pathogens","GBS","All Ages","TotalFrictionLow",41418060.9340305,22624709.8493277,69181963.6810765
+"2185","All pathogens","HUS","<5","GPSpecialist",1633.75968232607,467.795452840889,4865.65579078722
+"2186","All pathogens","HUS","<5","ED",0,0,0
+"2187","All pathogens","HUS","<5","Medications",0,0,0
+"2188","All pathogens","HUS","<5","Tests",0,0,0
+"2189","All pathogens","HUS","<5","Hospitalisation",73029.4497242088,27752.6826731848,183803.40465775
+"2190","All pathogens","HUS","<5","Deaths",528426.6116241,92429.0791278235,1859471.83774802
+"2191","All pathogens","HUS","<5","WTP",19477.6568726218,7409.14250697988,49003.6378513286
+"2192","All pathogens","HUS","<5","WTPOngoing",8771.06370285623,2830.92349039356,25220.5364699486
+"2193","All pathogens","HUS","<5","HumanCapital",55839.533413198,21220.1633353054,140539.144065928
+"2194","All pathogens","HUS","<5","FrictionHigh",44671.6267305584,16976.1306682443,112431.315252742
+"2195","All pathogens","HUS","<5","FrictionLow",16751.8600239594,6366.04900059161,42161.7432197783
+"2196","All pathogens","HUS","<5","TotalHumanCapital",721561.786026615,239446.371241401,2060778.37730433
+"2197","All pathogens","HUS","<5","TotalFrictionHigh",707633.124358515,230996.629470774,2045146.12456574
+"2198","All pathogens","HUS","<5","TotalFrictionLow",672363.960643614,208428.465800616,2006733.8103151
+"2199","All pathogens","HUS","5-64","GPSpecialist",7143.39501522166,2048.42210787918,21180.1161048948
+"2200","All pathogens","HUS","5-64","ED",0,0,0
+"2201","All pathogens","HUS","5-64","Medications",0,0,0
+"2202","All pathogens","HUS","5-64","Tests",0,0,0
+"2203","All pathogens","HUS","5-64","Hospitalisation",318195.76677344,120920.891182433,800847.678594163
+"2204","All pathogens","HUS","5-64","Deaths",5787375.0727924,2691172.95012228,11411897.0542885
+"2205","All pathogens","HUS","5-64","WTP",84865.8724246056,32282.2887211299,213513.181047872
+"2206","All pathogens","HUS","5-64","WTPOngoing",38157.0468447265,12326.5049682167,109892.533720085
+"2207","All pathogens","HUS","5-64","HumanCapital",286014.18666811,108691.233366884,719851.806203453
+"2208","All pathogens","HUS","5-64","FrictionHigh",228811.349334488,86952.9866935071,575881.444962762
+"2209","All pathogens","HUS","5-64","FrictionLow",85804.2560004329,32607.3700100651,215955.541861036
+"2210","All pathogens","HUS","5-64","TotalHumanCapital",6666934.2191495,3426764.24831038,12328508.8294465
+"2211","All pathogens","HUS","5-64","TotalFrictionHigh",6596455.53037176,3376438.21557515,12255675.8137607
+"2212","All pathogens","HUS","5-64","TotalFrictionLow",6425049.63740284,3243738.10161354,12066479.5946168
+"2213","All pathogens","HUS","65+","GPSpecialist",1851.48858313309,528.629242584488,5530.26803614758
+"2214","All pathogens","HUS","65+","ED",0,0,0
+"2215","All pathogens","HUS","65+","Medications",0,0,0
+"2216","All pathogens","HUS","65+","Tests",0,0,0
+"2217","All pathogens","HUS","65+","Hospitalisation",82930.1831741158,31515.1636271658,208721.961809339
+"2218","All pathogens","HUS","65+","Deaths",989303.976819397,232884.175686164,2987046.23423581
+"2219","All pathogens","HUS","65+","WTP",22118.2777406803,8413.613242156,55647.1489043901
+"2220","All pathogens","HUS","65+","WTPOngoing",9943.08647870051,3232.91175180874,28782.0571281911
+"2221","All pathogens","HUS","65+","HumanCapital",30698.525019655,11666.0665885161,77263.2607515494
+"2222","All pathogens","HUS","65+","FrictionHigh",24558.820015724,9332.85327081287,61810.6086012395
+"2223","All pathogens","HUS","65+","FrictionLow",9209.55750589649,3499.81997655482,23178.9782254648
+"2224","All pathogens","HUS","65+","TotalHumanCapital",1166670.51395981,384876.706412658,3165698.03172979
+"2225","All pathogens","HUS","65+","TotalFrictionHigh",1159256.63416645,379293.610680348,3158433.89854915
+"2226","All pathogens","HUS","65+","TotalFrictionLow",1140468.44867695,365658.816492912,3138899.04428842
+"2227","All pathogens","HUS","All Ages","GPSpecialist",10887.8396855951,3688.02473113394,30018.9011226738
+"2228","All pathogens","HUS","All Ages","ED",0,0,0
+"2229","All pathogens","HUS","All Ages","Medications",0,0,0
+"2230","All pathogens","HUS","All Ages","Tests",0,0,0
+"2231","All pathogens","HUS","All Ages","Hospitalisation",474155.399671765,180188.737482783,1193373.04506125
+"2232","All pathogens","HUS","All Ages","Deaths",7737518.14675733,4177146.42821652,13648289.4801831
+"2233","All pathogens","HUS","All Ages","WTP",126461.807037908,48105.0444702658,318163.967803591
+"2234","All pathogens","HUS","All Ages","WTPOngoing",58193.9167222828,20453.3468934148,157483.614147248
+"2235","All pathogens","HUS","All Ages","HumanCapital",372552.245100963,141577.463290705,937654.21102093
+"2236","All pathogens","HUS","All Ages","FrictionHigh",298041.79608077,113261.970632564,750123.368816744
+"2237","All pathogens","HUS","All Ages","FrictionLow",111765.673530289,42473.2389872116,281296.263306279
+"2238","All pathogens","HUS","All Ages","TotalHumanCapital",8973580.49881399,5203338.10060945,14997276.2885606
+"2239","All pathogens","HUS","All Ages","TotalFrictionHigh",8887426.9974201,5135532.16186214,14879961.3405193
+"2240","All pathogens","HUS","All Ages","TotalFrictionLow",8665245.29151183,4974719.95439337,14632424.0786983
+"2241","All pathogens","Initial and Sequel Disease","<5","GPSpecialist",3304426.73938953,2227764.3833072,4813163.82399467
+"2242","All pathogens","Initial and Sequel Disease","<5","ED",4319590.61952818,2052195.14188493,8602946.43963094
+"2243","All pathogens","Initial and Sequel Disease","<5","Medications",2516638.77237383,1499373.49797953,4112089.43651009
+"2244","All pathogens","Initial and Sequel Disease","<5","Tests",1468591.6495994,993546.497938576,2209342.58759713
+"2245","All pathogens","Initial and Sequel Disease","<5","Hospitalisation",10614580.8604757,6245057.13635803,17483649.1157194
+"2246","All pathogens","Initial and Sequel Disease","<5","Deaths",20253654.1592239,12867820.4535368,30793484.795984
+"2247","All pathogens","Initial and Sequel Disease","<5","WTP",14532905.9905386,9868590.32196414,20771422.4851311
+"2248","All pathogens","Initial and Sequel Disease","<5","WTPOngoing",3433734.81986536,1757262.30702391,6187939.16703328
+"2249","All pathogens","Initial and Sequel Disease","<5","HumanCapital",76292013.4647333,43378993.5651509,138748559.24747
+"2250","All pathogens","Initial and Sequel Disease","<5","FrictionHigh",61033610.7717867,34703194.8521207,110998847.397976
+"2251","All pathogens","Initial and Sequel Disease","<5","FrictionLow",22887604.03942,13013698.0695453,41624567.7742409
+"2252","All pathogens","Initial and Sequel Disease","<5","TotalHumanCapital",139083670.548983,95989109.2031104,210743246.750074
+"2253","All pathogens","Initial and Sequel Disease","<5","TotalFrictionHigh",123796800.69216,86985929.7120055,183293599.913315
+"2254","All pathogens","Initial and Sequel Disease","<5","TotalFrictionLow",85554740.3520539,63628929.7278962,115809013.264938
+"2255","All pathogens","Initial and Sequel Disease","5-64","GPSpecialist",33524777.0277147,20862587.614974,51860366.6796091
+"2256","All pathogens","Initial and Sequel Disease","5-64","ED",54408373.2269081,25790124.7747506,108447629.841443
+"2257","All pathogens","Initial and Sequel Disease","5-64","Medications",21558648.7054469,12809172.3187757,34234393.4705711
+"2258","All pathogens","Initial and Sequel Disease","5-64","Tests",12467658.2879171,7809763.00842461,21095772.8652695
+"2259","All pathogens","Initial and Sequel Disease","5-64","Hospitalisation",66291177.872283,40793982.230692,105841147.286818
+"2260","All pathogens","Initial and Sequel Disease","5-64","Deaths",67921537.2430514,48181782.3820597,94908210.8753394
+"2261","All pathogens","Initial and Sequel Disease","5-64","WTP",144522695.912054,91293769.2803331,219424119.514043
+"2262","All pathogens","Initial and Sequel Disease","5-64","WTPOngoing",18401845.1550322,9113476.5118612,34959849.9203034
+"2263","All pathogens","Initial and Sequel Disease","5-64","HumanCapital",1272049276.99591,737452942.855003,2074458503.37172
+"2264","All pathogens","Initial and Sequel Disease","5-64","FrictionHigh",1017639421.59672,589962354.284002,1659566802.69738
+"2265","All pathogens","Initial and Sequel Disease","5-64","FrictionLow",381614783.098772,221235882.856501,622337551.011517
+"2266","All pathogens","Initial and Sequel Disease","5-64","TotalHumanCapital",1701687986.23789,1065299056.92849,2633992659.45605
+"2267","All pathogens","Initial and Sequel Disease","5-64","TotalFrictionHigh",1447444048.15374,917015149.631769,2220442180.8255
+"2268","All pathogens","Initial and Sequel Disease","5-64","TotalFrictionLow",811347086.95118,544803709.765333,1189130221.02429
+"2269","All pathogens","Initial and Sequel Disease","65+","GPSpecialist",7239329.0572634,4597320.77656662,11053895.7253869
+"2270","All pathogens","Initial and Sequel Disease","65+","ED",11133202.0756748,5318480.92385197,22083407.0118519
+"2271","All pathogens","Initial and Sequel Disease","65+","Medications",6033838.00795748,3418851.63989182,10243303.3179116
+"2272","All pathogens","Initial and Sequel Disease","65+","Tests",3094163.6018291,1991346.96506381,4932614.2071325
+"2273","All pathogens","Initial and Sequel Disease","65+","Hospitalisation",99442084.8384871,54458902.8078974,170600287.497009
+"2274","All pathogens","Initial and Sequel Disease","65+","Deaths",225508691.995962,148325272.549578,341697616.47107
+"2275","All pathogens","Initial and Sequel Disease","65+","WTP",32057995.1144662,20909685.4695053,47537321.5646697
+"2276","All pathogens","Initial and Sequel Disease","65+","WTPOngoing",5007032.9568564,2469388.8481295,9618168.72313802
+"2277","All pathogens","Initial and Sequel Disease","65+","HumanCapital",141102904.153866,46459059.4046003,659082515.306064
+"2278","All pathogens","Initial and Sequel Disease","65+","FrictionHigh",112882323.323093,37167247.5236802,527266012.244851
+"2279","All pathogens","Initial and Sequel Disease","65+","FrictionLow",42330871.2461598,13937717.8213801,197724754.591819
+"2280","All pathogens","Initial and Sequel Disease","65+","TotalHumanCapital",559918658.262652,386709753.08646,1082292947.30242
+"2281","All pathogens","Initial and Sequel Disease","65+","TotalFrictionHigh",531452728.570893,372991310.803632,953244057.702557
+"2282","All pathogens","Initial and Sequel Disease","65+","TotalFrictionLow",455225001.688141,332915049.426358,654184198.925976
+"2283","All pathogens","Initial and Sequel Disease","All Ages","GPSpecialist",44138331.3691365,27954837.5522895,67082588.5305172
+"2284","All pathogens","Initial and Sequel Disease","All Ages","ED",71001732.6085938,35900247.0994611,132314244.181231
+"2285","All pathogens","Initial and Sequel Disease","All Ages","Medications",30283612.4021549,18210170.7893216,47515683.2117989
+"2286","All pathogens","Initial and Sequel Disease","All Ages","Tests",17250260.7036731,11335214.283298,26968379.5953213
+"2287","All pathogens","Initial and Sequel Disease","All Ages","Hospitalisation",180082744.301189,123853099.11537,258226284.919561
+"2288","All pathogens","Initial and Sequel Disease","All Ages","Deaths",316032370.359781,234226946.633221,434370682.374002
+"2289","All pathogens","Initial and Sequel Disease","All Ages","WTP",191054401.554588,122304666.381808,287533003.78478
+"2290","All pathogens","Initial and Sequel Disease","All Ages","WTPOngoing",27100887.5382186,13826770.8887674,49336693.5398036
+"2291","All pathogens","Initial and Sequel Disease","All Ages","HumanCapital",1545110764.56537,886980491.2374,2617308377.27778
+"2292","All pathogens","Initial and Sequel Disease","All Ages","FrictionHigh",1236088611.65229,709584392.98992,2093846701.82222
+"2293","All pathogens","Initial and Sequel Disease","All Ages","FrictionLow",463533229.36961,266094147.37122,785192513.183333
+"2294","All pathogens","Initial and Sequel Disease","All Ages","TotalHumanCapital",2443695486.55989,1645052736.60144,3681128910.81732
+"2295","All pathogens","Initial and Sequel Disease","All Ages","TotalFrictionHigh",2134913356.15892,1464854158.46347,3161358762.54241
+"2296","All pathogens","Initial and Sequel Disease","All Ages","TotalFrictionLow",1361458275.06747,1007841768.91993,1865365482.99909

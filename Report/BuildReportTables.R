@@ -1,9 +1,13 @@
 load('AusFBDiseaseImage.RData')
 library(tidyverse)
+library(mc2d) #for the standrd PERT distribution parameterised by min, mode, max
+
 CostItems.Ordered <- c('GPSpecialist','ED','Hospitalisation','Tests','Medications',
                        'HumanCapital','WTP','Deaths','WTPOngoing','TotalHumanCapital')
 
 Diseases.Ordered <- c("Initial Disease", "IBS", "ReactiveArthritis", "GBS", 'HUS')
+
+InitialDiseaseNames <- c(unlist(map(PathogenAssumptions, ~.x$name)), `All pathogens` = 'Initial')
 
 
 medianCIformat <- function(df,unit = 1000,newline = TRUE,round = FALSE,digits.round = NULL,dropnullinterval = TRUE){
@@ -36,7 +40,7 @@ EpiMeasures.Ordered <- c("Cases",'Hospitalisations', 'Deaths')
 
 read.csv('Outputs/EpiTable.csv') %>%
   select(-X) %>%
-  mutate(Disease = ifelse(Disease == unlist(map(PathogenAssumptions, ~.x$name))[Pathogen],
+  mutate(Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
                           'Initial Disease',
                           Disease)) %>%
   subset(Pathogen %in% PathogensWithSequelae | Disease == 'Initial Disease') %>%
@@ -63,7 +67,7 @@ read.csv('Outputs/EpiTable.csv') %>%
 
 read.csv("Outputs/CostTable.csv") %>%
   select(-X) %>%
-  mutate(Disease = ifelse(Disease == unlist(map(PathogenAssumptions, ~.x$name))[Pathogen],
+  mutate(Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
                           'Initial Disease',
                           Disease)) %>%
   subset(Pathogen %in% PathogensWithSequelae | Disease == 'Initial Disease') %>%
@@ -94,7 +98,7 @@ PathogenSummaryTable <- read.csv("Outputs/CostTableCategories.csv") %>%
   select(Pathogen,Direct, HumanCapital,WTP,Deaths,TotalHumanCapital) %>%
   as.data.frame
 rownames(PathogenSummaryTable) <- PathogenSummaryTable$Pathogen
-PathogenSummaryTable[c("All gastro pathogens","Campylobacter","Listeria monocytogenes",
+PathogenSummaryTable[c("All pathogens","All gastro pathogens","Campylobacter","Listeria monocytogenes",
                        "Non-typhoidal salmonella","Norovirus","Shigella","STEC",
                        "Escherichia coli (Non-STEC)","Salmonella Typhi",
                        "Toxoplasma gondii","Yersinia Enterocolitica"),] %>%
@@ -140,7 +144,7 @@ LostProductivityCosts <- CostList %>%
   pivot_wider(names_from = CostItem, values_from = Cost) %>%
   as.data.frame %>%
   `rownames<-`(.$Pathogen) %>%
-  `[`(c("All gastro pathogens","Campylobacter","Listeria monocytogenes",
+  `[`(c("All pathogens","All gastro pathogens","Campylobacter","Listeria monocytogenes",
         "Non-typhoidal salmonella","Norovirus","Shigella","STEC",
         "Escherichia coli (Non-STEC)","Salmonella Typhi",
         "Toxoplasma gondii","Yersinia Enterocolitica"),) %>%
@@ -181,7 +185,7 @@ Table1 <- CaseTable %>%
   merge(CostPerCaseTable, by = 'Pathogen') %>%
   merge(TotalCostWithWithoutSequelae, by = 'Pathogen') %>%
   `rownames<-`(.$Pathogen) %>%
-  `[`(c("All gastro pathogens","Campylobacter","Listeria monocytogenes",
+  `[`(c("All pathogens","All gastro pathogens","Campylobacter","Listeria monocytogenes",
         "Non-typhoidal salmonella","Norovirus","Shigella","STEC",
         "Escherichia coli (Non-STEC)","Salmonella Typhi",
         "Toxoplasma gondii","Yersinia Enterocolitica"),)
@@ -246,7 +250,7 @@ TimeOffWork <- map(PathogenAssumptions, function(.p){
   pivot_wider(Pathogen,names_from = c('Kind','AgeGroup'),names_sort = T) %>%
   as.data.frame() %>%
   `rownames<-`(.$Pathogen) %>%
-  `[`(c("All gastro pathogens","Campylobacter","Listeria monocytogenes",
+  `[`(c("All pathogens","All gastro pathogens","Campylobacter","Listeria monocytogenes",
         "Non-typhoidal salmonella","Shigella","STEC",
         "Escherichia coli (Non-STEC)","Salmonella Typhi",
         "Yersinia Enterocolitica","Toxoplasma gondii","Norovirus"),)
@@ -259,7 +263,7 @@ WTPValues <- data.frame(Disease = c('Gastroenteritis', 'Campylobacteriosis', 'Sa
                         UK = c(124,159,159,15617,3263,28125),
                         Aus = c(33,138,138,1371,717,530))
 
-WTPComparions <- EpiTable %>%
+WTPComparions <- read.csv('./Outputs/EpiTable.csv') %>%
   subset(Pathogen %in% c("Non-typhoidal salmonella", 'Campylobacter', 'All gastro pathogens') &
            AgeGroup == 'All Ages' &
            Measure == 'Cases' &
@@ -326,7 +330,7 @@ set.seed(20220222)
 writeOutbreakTable <- function(Outbreak,OutbreakEst,filename){
   CostSummary <- summariseCostList(list(Outbreak = OutbreakEst$costs))$Detailed %>%
     subset(AgeGroup == 'All Ages' &
-             !(Disease %in% c('Initial and Sequel Disease', SequelaeNames))) %>% #only interested in initial disease costs for the report
+             !(Disease %in% c('Initial and Sequel Disease', names(SequelaeAssumptions)))) %>% #only interested in initial disease costs for the report
     as.data.frame
 
   CostSummary %>%
@@ -403,11 +407,11 @@ writeOutbreakTable(WeltevredenOutbreak,WeltevredenOutbreak.Est,'Weltevreden')
 ##################################################
 
 TyphimuriumOutbreak <- PathogenAssumptions$`Non-typhoidal salmonella`
-TyphimuriumOutbreak$ed <- rdist('discrete', value = 58/203, continuous = FALSE)
+TyphimuriumOutbreak$ed <- rdist('discrete', value = 58/203, continuous = FALSE) #get exactly 58 ed visits
+TyphimuriumOutbreak$gp <- rdist('discrete', value = 74/203, continuous = FALSE) #get exactly 74 gp visits
 TyphimuriumOutbreak$domestic <- rdist("discrete", value = 1, continuous = FALSE)
 TyphimuriumOutbreak$foodborne <- rdist("discrete", value = 1, continuous = FALSE)
-TyphimuriumOutbreak$underreporting <- rdist("discrete", value = 203/91, continuous = FALSE)
-warning('In the document we specifically say that LOS was 5 days, but this is not reflected in our costing in any way')
+TyphimuriumOutbreak$underreporting <- rdist("discrete", value = 203/91, continuous = FALSE) # get exactly 203 cases (but only 91 tests)
 TyphimuriumOutbreak.notifications <- list(`<5` = 0, `5-64` = 91, `65+` = 0)
 TyphimuriumOutbreak.separations <- list(`<5` = 0, `5-64` = 32, `65+` = 0)
 TyphimuriumOutbreak.deaths <- list(`<5` = 0, `5-64` = 0, `65+` = 0)
