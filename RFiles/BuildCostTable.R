@@ -85,8 +85,8 @@ warning('When summing across agegroups the draws of the multipliers used for eac
 #Include `All ages` and `All diseases` sums, calculate median, and 90 CIs, then reformat as data.frame
 summariseEpiList <- function(list){
   list %>%
-    map_depth(2,~{.x$`All Ages` <- reduce(.x,`+`);.x}) %>%
-    map(~{.x$`Initial and Sequel Disease` <- do.call(add,unname(.x));.x}) %>%
+    map_depth(2,~{.x$`All ages` <- reduce(.x,`+`);.x}) %>%
+    map(~{.x$`Initial and sequel disease` <- do.call(add,unname(.x));.x}) %>%
     quantilesNestedList(3, c("Pathogen", "Disease","AgeGroup"))
 }
 
@@ -94,10 +94,10 @@ summariseEpiList <- function(list){
 # reformat as data.frame. Outputs are returned in categorised format (Deaths,
 # Human Captial, Direct, WTP) or detailed (Tests, Medications, Hospitalisation...)
 summariseCostList <- function(list){
-  #Add totals for `All Ages` and `All diseases` (aka initial and sequel diseases)
+  #Add totals for `All ages` and `All diseases` (aka initial and sequel diseases)
   totals <- list %>%
-    map_depth(2,~{.x$`All Ages` <- do.call(add,unname(.x));.x}) %>%
-    map(~{.x$`Initial and Sequel Disease` <- do.call(add2,unname(.x));.x})
+    map_depth(2,~{.x$`All ages` <- do.call(add,unname(.x));.x}) %>%
+    map(~{.x$`Initial and sequel disease` <- do.call(add2,unname(.x));.x})
   Detailed <- totals %>% quantilesNestedList(4, c("Pathogen", "Disease","AgeGroup","CostItem"))
 
   DirectCat <- c('GPSpecialist','ED','Hospitalisation','Tests','Medications')
@@ -108,7 +108,9 @@ summariseCostList <- function(list){
     map_depth(3,~{
       .x$Direct <- reduce(.x[DirectCat],`+`) #sum over direct costs
       .x$WTP <- reduce(.x[WTPCat],`+`) #sum of WTP and WTP-onging
-      .x[c("Deaths",LostProdCat, paste0("Total",LostProdCat),"Direct","WTP")] #drop sub-categories
+      .x <- .x[c("Deaths",LostProdCat, paste0("Total",LostProdCat),"Direct","WTP")] #drop sub-categories
+      names(.x) <- c("Premature mortality", LostProdCat, paste0("Total",LostProdCat), 'Direct','Pain and suffering')
+      .x
     }) %>%
     quantilesNestedList(4, c("Pathogen", "Disease","AgeGroup","CostItem"))
 
@@ -137,9 +139,7 @@ DeathTable <- summariseEpiList(DeathList)
 EpiTable <- bind_rows(Deaths = DeathTable,
                       Hospitalisations = HospTable,
                       Cases = IncidenceTable,
-                      .id = 'Measure') %>%
-  subset(!(Disease %in% names(PathogenAssumptions) & Pathogen == 'All Pathogens'))
-
+                      .id = 'Measure')
 write.csv(EpiTable,'./Outputs/EpiTable.csv')
 
 CostSummaries <- summariseCostList(CostList)

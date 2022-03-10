@@ -20,18 +20,19 @@ CostTable <- read.csv("Outputs/CostTable.csv") %>%
   rename("Cost (thousands AUD)" = "median") %>%
   select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
   mutate(CostItem = recode(CostItem,
-                           GPSpecialist = 'GP and Specialist Vists',
-                           ED = 'ED Visits',
-                           Deaths = "Premature Mortality",
-                           WTPOngoing = 'WTP-Ongoing',
-                           FrictionLow = 'Friction-Low',
-                           FrictionHigh = 'Friction-High',
-                           HumanCapital = 'Human Capital',
-                           TotalFrictionHigh = 'Total.Friction-High',
-                           TotalFrictionLow = 'Total.Friction-Low',
-                           TotalHumanCapital = 'Total.Human Capital'),
+                           GPSpecialist = 'GP and specialist vists',
+                           ED = 'Emergency department visits',
+                           Deaths = "Premature mortality",
+                           WTP = "Pain and suffering",
+                           WTPOngoing = "Pain and suffering (ongoing illness)",
+                           FrictionLow = 'Friction (low)',
+                           FrictionHigh = 'Friction (high)',
+                           HumanCapital = 'Human capital',
+                           TotalFrictionHigh = 'Total.Friction (high)',
+                           TotalFrictionLow = 'Total.Friction (low)',
+                           TotalHumanCapital = 'Total.Human capital'),
          Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
-                          'Initial Disease',
+                          'Initial disease',
                           Disease))
 
 CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
@@ -46,14 +47,14 @@ CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
   select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
   mutate(CostItem = recode(CostItem,
                            Deaths = "Premature Mortality",
-                           FrictionLow = 'Friction-Low',
-                           FrictionHigh = 'Friction-High',
-                           HumanCapital = 'Human Capital',
-                           TotalFrictionHigh = 'Total.Friction-High',
-                           TotalFrictionLow = 'Total.Friction-Low',
-                           TotalHumanCapital = 'Total.Human Capital'),
+                           FrictionLow = 'Friction (low)',
+                           FrictionHigh = 'Friction (high)',
+                           HumanCapital = 'Human capital',
+                           TotalFrictionHigh = 'Total.Friction (high)',
+                           TotalFrictionLow = 'Total.Friction (low)',
+                           TotalHumanCapital = 'Total.Human capital'),
          Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
-                          'Initial Disease',
+                          'Initial disease',
                           Disease))
 
 EpiTable <- read.csv('Outputs/EpiTable.csv') %>%
@@ -65,26 +66,26 @@ EpiTable <- read.csv('Outputs/EpiTable.csv') %>%
                                            drop0trailing = TRUE))) %>%
   mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
          Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
-                          'Initial Disease',
+                          'Initial disease',
                           Disease)) %>%
   rename("Count" = "median") %>%
   select(Pathogen, Disease, AgeGroup, Measure, Count, `90% CI`)
 
-ProductivityOptions <- c("Human Capital", "Friction-High", "Friction-Low")
+ProductivityOptions <- c("Human capital", "Friction (high)", "Friction (low)")
 TotalOptions <- paste0("Total.",ProductivityOptions)
 
 EpiMeasures <- unique(EpiTable$Measure)
-CostItems <- c(setdiff(unique(CostTable$CostItem),c(ProductivityOptions,TotalOptions)), "Lost Productivity", "Total")
+CostItems <- c(setdiff(unique(CostTable$CostItem),c(ProductivityOptions,TotalOptions)), "Non-fatal productivity losses", "Total")
 PathogenNames <- unique(EpiTable$Pathogen) %>% setdiff(c('All pathogens', 'All gastro pathogens')) %>% sort %>% c('All pathogens', 'All gastro pathogens',.)
-DiseaseNames <- unique(EpiTable$Disease) %>% setdiff(c('Initial Disease', 'Initial and Sequel Disease')) %>% sort %>% c('Initial Disease', 'Initial and Sequel Disease',.)
-CostCategories <- c(setdiff(unique(CostTableSummaries$CostItem), c(ProductivityOptions, paste0('Total.',ProductivityOptions))), "Lost Productivity", "Total")
+DiseaseNames <- unique(EpiTable$Disease) %>% setdiff(c('Initial disease', 'Initial and sequel disease')) %>% sort %>% c('Initial disease', 'Initial and sequel disease',.)
+CostCategories <- c(setdiff(unique(CostTableSummaries$CostItem), c(ProductivityOptions, paste0('Total.',ProductivityOptions))), "Non-fatal productivity losses", "Total")
 AgeGroups <- unique(EpiTable$AgeGroup)
 
 PathogenSelect <- c('All pathogens','Norovirus','Campylobacter')
-DiseaseSelect <- c('Initial Disease','Initial and Sequel Disease')
+DiseaseSelect <- c('Initial disease','Initial and sequel disease')
 MeasureSelect <- c('Hospitalisations','Cases')
 CostItemSelect <- c('Total','Hospitalisation')
-AgeGroupSelect <- 'All Ages'
+AgeGroupSelect <- 'All ages'
 
 explainer_text <-
   paste0("The value of this multiplier is pathogen-specific, inlcudes uncertainty, ",
@@ -116,7 +117,7 @@ ui <- fluidPage(
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Epi",
-                                         "Age Group",
+                                         "Age group",
                                          AgeGroups,
                                          selected = AgeGroupSelect,
                                          multiple = TRUE
@@ -151,15 +152,15 @@ ui <- fluidPage(
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Summary",
-                                         "Age Group",
+                                         "Age group",
                                          AgeGroups,
-                                         selected = 'All Ages',
+                                         selected = 'All ages',
                                          multiple = FALSE
                                        )),
                                 column(width = 3,
                                        selectInput(
                                          "Productivity.Summary",
-                                         "Productivity Costs Method",
+                                         "Non-fatal productivity losses method",
                                          ProductivityOptions,
                                          selected = "HumanCapital",
                                          multiple = FALSE
@@ -186,7 +187,7 @@ ui <- fluidPage(
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Detailed",
-                                         "Age Group",
+                                         "Age group",
                                          AgeGroups,
                                          selected = AgeGroupSelect,
                                          multiple = TRUE
@@ -194,7 +195,7 @@ ui <- fluidPage(
                                 column(width = 3,
                                        selectInput(
                                          "CostItem.Detailed",
-                                         "Cost Items",
+                                         "Cost items",
                                          CostItems,
                                          selected = CostItemSelect,
                                          multiple = TRUE
@@ -203,7 +204,7 @@ ui <- fluidPage(
                        fluidRow(column(width = 3,
                                        selectInput(
                                          "Productivity.Detailed",
-                                         "Productivity Costs Method",
+                                         "Non-fatal productivity losses method",
                                          ProductivityOptions,
                                          selected = "HumanCapital",
                                          multiple = FALSE
@@ -298,15 +299,15 @@ ui <- fluidPage(
                                 column(width = 3,
                                        selectInput(
                                          "AgeGroup.Outbreak",
-                                         "Age Group",
+                                         "Age group",
                                          AgeGroups,
-                                         selected = 'All Ages',
+                                         selected = 'All ages',
                                          multiple = FALSE
                                        )),
                                 column(width = 3,
                                        selectInput(
                                          "Productivity.Outbreak",
-                                         "Productivity Costs Method",
+                                         "Non-fatal productivity losses method",
                                          ProductivityOptions,
                                          selected = "HumanCapital",
                                          multiple = FALSE
@@ -386,14 +387,14 @@ server <- function(input, output) {
       select(-c(`5%`, `95%`)) %>%
       mutate(CostItem = recode(CostItem,
                                Deaths = "Premature Mortality",
-                               FrictionLow = 'Friction-Low',
-                               FrictionHigh = 'Friction-High',
-                               HumanCapital = 'Human Capital',
-                               TotalFrictionHigh = 'Total.Friction-High',
-                               TotalFrictionLow = 'Total.Friction-Low',
-                               TotalHumanCapital = 'Total.Human Capital'),
+                               FrictionLow = 'Friction (low)',
+                               FrictionHigh = 'Friction (high)',
+                               HumanCapital = 'Human capital',
+                               TotalFrictionHigh = 'Total.Friction (high)',
+                               TotalFrictionLow = 'Total.Friction (low)',
+                               TotalHumanCapital = 'Total.Human capital'),
              Disease = ifelse(Disease == Outbreak$name,
-                              'Initial Disease',
+                              'Initial disease',
                               Disease))
   })
 
@@ -455,7 +456,7 @@ renderCostTableSummaries <- function(input,.CostTableSummaries,tabname,.Pathogen
 
   .CostTableSummaries %>%
     mutate(`Cost Category` = if_else(CostItem == .Productivity,
-                                     'Lost Productivity',
+                                     'Non-fatal productivity losses',
                                      if_else(CostItem == paste0('Total.',.Productivity),
                                              'Total', CostItem))) %>%
     subset(`Cost Category` %in% CostCategories &
@@ -485,14 +486,14 @@ renderCostTableDetailed <- function(input,.CostTableDetailed, tabname,.Pathogen 
 
   CostTable %>%
     mutate(CostItem = if_else(CostItem == .Productivity,
-                              'Lost Productivity',
+                              'Non-fatal productivity losses',
                               if_else(CostItem == paste0('Total.',.Productivity),
                                       'Total', CostItem))) %>%
     subset(CostItem %in% .CostItem &
              AgeGroup %in% .AgeGroup &
              Pathogen %in% .Pathogen &
              Disease %in% .Disease) %>%
-    rename(`Age Group` = AgeGroup,
+    rename(`Age group` = AgeGroup,
            `Cost Item` = CostItem) %>%
     DT::datatable(rownames = FALSE,
                   extensions = c("Buttons"),

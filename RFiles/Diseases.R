@@ -178,9 +178,9 @@ PathogenAssumptions <- list(
                           DRGCodes = GastroDRGCodes,
                           hospPrincipalDiagnosis = rdist("discrete", value = 0.79, continuous = FALSE),
                           underdiagnosis = rdist("pert", min = 1, mode = 2, max = 3),
-                          sequelae = list(ReactiveArthritis = rdist("pert", min = 0.028,    mode = 0.07,     max = 0.16),
-                                          IBS = IBSMultiplier,
-                                          GBS =               rdist("pert", min = 0.000192, mode = 0.000304, max = 0.000945)),
+                          sequelae = list(`Reactive arthritis`       = rdist("pert", min = 0.028,    mode = 0.07,     max = 0.16),
+                                          `Irritable bowel syndrome` = IBSMultiplier,
+                                          `Guillain-Barré syndrome`  = rdist("pert", min = 0.000192, mode = 0.000304, max = 0.000945)),
                           medications = MedicationsBacterial,
                           medicationsToWhom = "Cases",
                           tests = list(AllAges = list(Stool_culture = rdist("discrete", value = 1, continuous = FALSE))), # i.e. all notifications have tests
@@ -190,9 +190,9 @@ PathogenAssumptions <- list(
                           symptoms = "GI"
   ),
 
-  `Non-typhoidal salmonella` = disease(
+  `Non-typhoidal Salmonella` = disease(
     name = "Salmonellosis",
-    pathogen = 'Non-typhoidal salmonella',
+    pathogen = 'Non-typhoidal Salmonella',
     kind = 'initial',
     caseMethod = "Notifications",
     domestic = rdist("pert", min = 0.7, mode = 0.85, max = 0.95),
@@ -203,8 +203,8 @@ PathogenAssumptions <- list(
     ed = EDCommon,
     specialist = rdist('discrete', value = 0, continuous = FALSE), #i.e. none
     specialistToWhom = "None",
-    sequelae = list(ReactiveArthritis = rdist("pert", min = 0, mode = 0.085, max = 0.26),
-                    IBS = IBSMultiplier),
+    sequelae = list(`Reactive arthritis` = rdist("pert", min = 0, mode = 0.085, max = 0.26),
+                    `Irritable bowel syndrome` = IBSMultiplier),
     hospMethod = "AIHW",
     hospPrincipalDiagnosis = rdist("discrete", value = 0.77, continuous = FALSE),
     hospCodes = paste0("A02.",0:9),
@@ -227,8 +227,8 @@ PathogenAssumptions <- list(
                      domestic = rdist("pert", min = 0.45, mode = 0.7, max = 0.84),
                      underreporting = rdist("lnorm_alt", mean = 7.44, sd = 2.38),
                      foodborne = rdist("pert_alt", lowq = 0.05, mode = 0.12, highq = 0.23, lowp = 0.05, highp = 0.95),
-                     sequelae = list(ReactiveArthritis = rdist("pert", min = 0.012, mode = 0.097, max = 0.098),
-                                     IBS = IBSMultiplier),
+                     sequelae = list(`Reactive arthritis` = rdist("pert", min = 0.012, mode = 0.097, max = 0.098),
+                                     `Irritable bowel syndrome` = IBSMultiplier),
                      hospMethod = "AIHW",
                      hospCodes = paste0("A03.",0:9),
                      mortCodes = "A03",
@@ -345,7 +345,7 @@ PathogenAssumptions <- list(
   STEC = disease(name = "STEC",
                  pathogen = 'STEC',
                  kind = 'initial',
-                 sequelae = list(HUS = rdist('pert_alt', lowq = 0.017, median = 0.03, highq = 0.051)),
+                 sequelae = list(`Haemolytic uremic syndrome` = rdist('pert_alt', lowq = 0.017, median = 0.03, highq = 0.051)),
                  caseMethod = "Notifications",
                  domestic = rdist('pert', min = 0.93, mode = 0.99, max = 1),
                  underreporting = rdist("lnorm_alt", mean = 8.83, sd = 3.7),
@@ -377,7 +377,7 @@ PathogenAssumptions <- list(
                                    domestic = rdist("pert", min = 0.8, mode = 0.9, max = 1),
                                    underreporting = rdist("lnorm_alt", mean = 7.44, sd = 2.38),
                                    foodborne = rdist("pert", min = 0.28, mode = 0.84, max = 0.94),
-                                   sequelae = list(ReactiveArthritis = rdist("pert", min = 0, mode = 0.12, max = 0.231)),
+                                   sequelae = list(`Reactive arthritis` = rdist("pert", min = 0, mode = 0.12, max = 0.231)),
                                    gp = GPConsultCommon,
                                    gpFracLong = 0,
                                    ed = EDCommon,
@@ -400,8 +400,8 @@ PathogenAssumptions <- list(
 )
 
 SequelaeAssumptions <- list(
-  ReactiveArthritis = disease(
-    name = "ReactiveArthritis",
+  `Reactive arthritis` = disease(
+    name = "Reactive arthritis",
     kind = 'sequel',
     caseMethod = 'sequel',
     domestic =   rdist("pert_alt", lowq = 0.86, median = 0.91,highq = 0.95, lowp = 0.05, highp = 0.95),  #These are just for hospitalisations and deaths
@@ -467,8 +467,8 @@ SequelaeAssumptions <- list(
                           `5-64` = 4.8,
                           `65+` = 1.1)
   ),
-  IBS = disease(
-    name = "IBS",
+  `Irritable bowel syndrome` = disease(
+    name = "Irritable bowel syndrome",
     kind = "sequel",
     caseMethod = 'sequel',
     domestic =   rdist("pert_alt", lowq = 0.88,  median = 0.91, highq = 0.94, lowp = 0.05, highp = 0.95),  #not sure what these multipliers are for exactly...
@@ -517,8 +517,8 @@ SequelaeAssumptions <- list(
                           `5-64` = 2.4,
                           `65+` = 0.5)
   ),
-  GBS = disease(
-    name = "GBS",
+  `Guillain-Barré syndrome` = disease(
+    name = "Guillain-Barré syndrome",
     kind = "sequel",
     caseMethod = 'sequel',
     domestic  = rdist("pert",     min = 0.91,  mode = 0.97,   max = 0.99),
@@ -547,7 +547,7 @@ SequelaeAssumptions <- list(
     durationOngoing = 5, # changing this to 5 to take a cross-sectional approach to the costing so we are costing the ongoing illness arising from the past five years of cases (with the assumption that the incidence over the past five years has been the same as in the current year)
     #severityOngoing = 'mild',
     propSevere = 1,
-    symptoms = "GBS",
+    symptoms = "Guillain-Barré syndrome",
     missedWorkCarer = list(`<5` = 51.4,
                            `5-64` = 17.1,
                            `65+` = 17.1),
@@ -555,8 +555,8 @@ SequelaeAssumptions <- list(
                           `5-64` = 43.1,
                           `65+` = 9.6)
   ),
-  HUS = disease(
-    name = "HUS",
+  `Haemolytic uremic syndrome` = disease(
+    name = "Haemolytic uremic syndrome",
     kind = "sequel",
     caseMethod = 'sequel',
     domestic  = rdist("pert",     min = 0.93,  mode = 0.99,   max = 1),

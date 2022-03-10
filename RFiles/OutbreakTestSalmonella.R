@@ -32,7 +32,7 @@ View(SalmOutbreakCost.Summaries$Categorised)
 View(SalmOutbreakCost.Summaries$Detailed)
 
 SalmOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
+  subset(AgeGroup == "All ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
   ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "gpShort")$Cost)
@@ -52,7 +52,7 @@ ListeriaOutbreakCost <- costOutbreak(ListeriaOutbreak, ndraws = ndraws,
                                      deaths = list(Listeriosis = ListeriaOutbreak.deaths))
 ListeriaOutbreakCost.Summaries <- summariseCostList(list(`Listeria monocytogenes` = ListeriaOutbreakCost))
 ListeriaOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == 'All Ages' &
+  subset(AgeGroup == 'All ages' &
            Disease == 'Listeriosis') %>%
   as.data.frame %>%
   select(CostItem, median, X5. = `5%`, X95. = `95%`) %>%
@@ -64,17 +64,17 @@ ListeriaOutbreakCost.Summaries$Detailed %>%
   write_excel_csv('./Report/ListeriaOutbreak.csv')
 
 ListeriaOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "ED") %>%
+  subset(AgeGroup == "All ages" & Disease == "Listeriosis" & CostItem == "ED") %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "ed")$Cost)
 
 ListeriaOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "Hospitalisation") %>%
+  subset(AgeGroup == "All ages" & Disease == "Listeriosis" & CostItem == "Hospitalisation") %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "T01A/T01B")$Cost)
 
 ListeriaOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Listeriosis" & CostItem == "GPSpecialist") %>%
+  subset(AgeGroup == "All ages" & Disease == "Listeriosis" & CostItem == "GPSpecialist") %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "gpShort")$Cost * 0.75 + subset(Costs, Name == "gpLong")$Cost *0.25 +
         subset(Costs, Name == "specialistInitial")$Cost * 0.5 + subset(Costs, Name == "specialistRepeat")$Cost *0.5)
@@ -132,19 +132,19 @@ EnteritidisOutbreakCost
 # --- might still do this if wanted for the outbreak tab)
 
 EnteritidisOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "ED") %>%
+  subset(AgeGroup == "All ages" & Disease == "Salmonellosis" & CostItem == "ED") %>%
   ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "ed")$Cost)
 
 EnteritidisOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "Hospitalisation") %>%
+  subset(AgeGroup == "All ages" & Disease == "Salmonellosis" & CostItem == "Hospitalisation") %>%
   ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "G67B")$Cost)
 
 EnteritidisOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
+  subset(AgeGroup == "All ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
   ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "gpShort")$Cost)
@@ -202,19 +202,19 @@ WeltevredenOutbreakCost <- costOutbreak(WeltevredenOutbreak, ndraws = ndraws,
 # --- might still do this if wanted for the outbreak tab)
 
 WeltevredenOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "ED") %>%
+  subset(AgeGroup == "All ages" & Disease == "Salmonellosis" & CostItem == "ED") %>%
   ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "ed")$Cost)
 
 EnteritidisOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "Hospitalisation") %>%
+  subset(AgeGroup == "All ages" & Disease == "Salmonellosis" & CostItem == "Hospitalisation") %>%
   ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "G67B")$Cost)
 
 EnteritidisOutbreakCost.Summaries$Detailed %>%
-  subset(AgeGroup == "All Ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
+  subset(AgeGroup == "All ages" & Disease == "Salmonellosis" & CostItem == "GPSpecialist") %>%
   ungroup %>%
   select(median:`95%`) %>%
   `/`(subset(Costs, Name == "gpShort")$Cost)
