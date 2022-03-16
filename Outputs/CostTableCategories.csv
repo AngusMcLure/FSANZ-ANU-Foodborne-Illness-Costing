@@ -111,38 +111,38 @@
 "110","All gastro pathogens","Guillain-Barré syndrome","<5","HumanCapital",175305.140840684,85995.3870003248,360387.11288761
 "111","All gastro pathogens","Guillain-Barré syndrome","<5","FrictionHigh",140244.112672547,68796.3096002599,288309.690310088
 "112","All gastro pathogens","Guillain-Barré syndrome","<5","FrictionLow",52591.5422522052,25798.6161000974,108116.133866283
-"113","All gastro pathogens","Guillain-Barré syndrome","<5","TotalHumanCapital",580233.285528528,274439.036632359,1246841.76746655
-"114","All gastro pathogens","Guillain-Barré syndrome","<5","TotalFrictionHigh",543157.302696907,255387.129703664,1183888.1533929
-"115","All gastro pathogens","Guillain-Barré syndrome","<5","TotalFrictionLow",449153.020019967,206968.417912365,1028596.18253173
+"113","All gastro pathogens","Guillain-Barré syndrome","<5","TotalHumanCapital",596905.630063242,283063.958478574,1276652.82005554
+"114","All gastro pathogens","Guillain-Barré syndrome","<5","TotalFrictionHigh",559811.610016946,263978.833367227,1212685.88461429
+"115","All gastro pathogens","Guillain-Barré syndrome","<5","TotalFrictionLow",466177.185072953,215776.128791926,1055053.82733277
 "116","All gastro pathogens","Guillain-Barré syndrome","<5","Direct",285202.576617699,139889.923380017,586384.151073594
-"117","All gastro pathogens","Guillain-Barré syndrome","<5","Pain and suffering",0,0,0
+"117","All gastro pathogens","Guillain-Barré syndrome","<5","Pain and suffering",15831.5644659541,7758.49906817816,32635.0081430866
 "118","All gastro pathogens","Guillain-Barré syndrome","5-64","Premature mortality",4888155.79029095,1995392.71989312,10043921.0819742
 "119","All gastro pathogens","Guillain-Barré syndrome","5-64","HumanCapital",1475193.19698647,723651.395884547,3032658.45293464
 "120","All gastro pathogens","Guillain-Barré syndrome","5-64","FrictionHigh",1180154.55758918,578921.116707637,2426126.76234771
 "121","All gastro pathogens","Guillain-Barré syndrome","5-64","FrictionLow",442557.959095941,217095.418765364,909797.535880391
-"122","All gastro pathogens","Guillain-Barré syndrome","5-64","TotalHumanCapital",8775733.47912748,4909054.22715398,14838197.656681
-"123","All gastro pathogens","Guillain-Barré syndrome","5-64","TotalFrictionHigh",8458570.89000718,4702699.55723693,14354063.4452332
-"124","All gastro pathogens","Guillain-Barré syndrome","5-64","TotalFrictionLow",7662132.89677914,4171674.86447858,13209377.6024675
+"122","All gastro pathogens","Guillain-Barré syndrome","5-64","TotalHumanCapital",8923169.50568363,5002516.19699979,15053076.3267884
+"123","All gastro pathogens","Guillain-Barré syndrome","5-64","TotalFrictionHigh",8602603.10793446,4798783.96542842,14577517.7529751
+"124","All gastro pathogens","Guillain-Barré syndrome","5-64","TotalFrictionLow",7809814.24170753,4267843.38427559,13417631.7164373
 "125","All gastro pathogens","Guillain-Barré syndrome","5-64","Direct",2049161.49495533,1005242.16268662,4212604.92468202
-"126","All gastro pathogens","Guillain-Barré syndrome","5-64","Pain and suffering",0,0,0
+"126","All gastro pathogens","Guillain-Barré syndrome","5-64","Pain and suffering",135757.329781664,66402.4029052454,280056.797101846
 "127","All gastro pathogens","Guillain-Barré syndrome","65+","Premature mortality",31861224.2995816,13835474.3536045,59218554.3721934
 "128","All gastro pathogens","Guillain-Barré syndrome","65+","HumanCapital",170046.540430532,83415.7970625599,349576.638017585
 "129","All gastro pathogens","Guillain-Barré syndrome","65+","FrictionHigh",136037.232344426,66732.6376500479,279661.310414068
 "130","All gastro pathogens","Guillain-Barré syndrome","65+","FrictionLow",51013.9621291596,25024.739118768,104872.991405276
-"131","All gastro pathogens","Guillain-Barré syndrome","65+","TotalHumanCapital",32687872.0226495,14645099.8367995,60035518.853701
-"132","All gastro pathogens","Guillain-Barré syndrome","65+","TotalFrictionHigh",32650636.3581339,14610045.9576782,59994250.9713387
-"133","All gastro pathogens","Guillain-Barré syndrome","65+","TotalFrictionLow",32559015.7251859,14520832.3309943,59904792.1913436
+"131","All gastro pathogens","Guillain-Barré syndrome","65+","TotalHumanCapital",32756407.2361154,14712249.0411365,60110401.516437
+"132","All gastro pathogens","Guillain-Barré syndrome","65+","TotalFrictionHigh",32717312.4916049,14678327.1074743,60073159.3637923
+"133","All gastro pathogens","Guillain-Barré syndrome","65+","TotalFrictionLow",32626504.0448722,14587947.138366,59966615.3035028
 "134","All gastro pathogens","Guillain-Barré syndrome","65+","Direct",579045.77724035,283982.568751209,1190592.73259843
-"135","All gastro pathogens","Guillain-Barré syndrome","65+","Pain and suffering",0,0,0
+"135","All gastro pathogens","Guillain-Barré syndrome","65+","Pain and suffering",62289.1149161282,30414.9775507818,128801.441969734
 "136","All gastro pathogens","Guillain-Barré syndrome","All ages","Premature mortality",37347436.3474344,18783301.690046,64981434.1661534
 "137","All gastro pathogens","Guillain-Barré syndrome","All ages","HumanCapital",1820544.87825769,893062.579947431,3742622.20383983
 "138","All gastro pathogens","Guillain-Barré syndrome","All ages","FrictionHigh",1456435.90260615,714450.063957945,2994097.76307186
 "139","All gastro pathogens","Guillain-Barré syndrome","All ages","FrictionLow",546163.463477306,267918.773984229,1122786.66115195
-"140","All gastro pathogens","Guillain-Barré syndrome","All ages","TotalHumanCapital",42600897.3155342,23648876.9885094,70430119.2271779
-"141","All gastro pathogens","Guillain-Barré syndrome","All ages","TotalFrictionHigh",42187223.945059,23306327.0107552,70000445.7707801
-"142","All gastro pathogens","Guillain-Barré syndrome","All ages","TotalFrictionLow",41181994.7292531,22423659.3094445,68931189.6190287
+"140","All gastro pathogens","Guillain-Barré syndrome","All ages","TotalHumanCapital",42838353.7672905,23859555.9689544,70680758.6542054
+"141","All gastro pathogens","Guillain-Barré syndrome","All ages","TotalFrictionHigh",42428496.0196705,23508858.9942237,70247503.4293739
+"142","All gastro pathogens","Guillain-Barré syndrome","All ages","TotalFrictionLow",41418060.9340305,22624709.8493277,69181963.6810765
 "143","All gastro pathogens","Guillain-Barré syndrome","All ages","Direct",2913344.14058098,1429227.20456573,5989836.95576818
-"144","All gastro pathogens","Guillain-Barré syndrome","All ages","Pain and suffering",0,0,0
+"144","All gastro pathogens","Guillain-Barré syndrome","All ages","Pain and suffering",213908.110576299,104664.251548908,440727.380837246
 "145","All gastro pathogens","Haemolytic uremic syndrome","<5","Premature mortality",528426.6116241,92429.0791278235,1859471.83774802
 "146","All gastro pathogens","Haemolytic uremic syndrome","<5","HumanCapital",55839.533413198,21220.1633353054,140539.144065928
 "147","All gastro pathogens","Haemolytic uremic syndrome","<5","FrictionHigh",44671.6267305584,16976.1306682443,112431.315252742
@@ -183,38 +183,38 @@
 "182","All gastro pathogens","Initial and sequel disease","<5","HumanCapital",75605742.2012437,42667790.362286,138036866.573301
 "183","All gastro pathogens","Initial and sequel disease","<5","FrictionHigh",60484593.7609949,34134232.2898288,110429493.258641
 "184","All gastro pathogens","Initial and sequel disease","<5","FrictionLow",22681722.6603731,12800337.1086858,41411059.9719904
-"185","All gastro pathogens","Initial and sequel disease","<5","TotalHumanCapital",122331508.49943,80236875.9653466,193545066.440825
-"186","All gastro pathogens","Initial and sequel disease","<5","TotalFrictionHigh",107173145.459282,71526208.5671243,166129772.893308
-"187","All gastro pathogens","Initial and sequel disease","<5","TotalFrictionLow",69265878.6162407,49065185.1417633,98337434.4639294
+"185","All gastro pathogens","Initial and sequel disease","<5","TotalHumanCapital",122348363.520247,80251276.1906942,193565251.055341
+"186","All gastro pathogens","Initial and sequel disease","<5","TotalFrictionHigh",107190060.025769,71539989.9654261,166146314.533008
+"187","All gastro pathogens","Initial and sequel disease","<5","TotalFrictionLow",69281377.8727726,49081852.4854497,98360195.6901838
 "188","All gastro pathogens","Initial and sequel disease","<5","Direct",22326592.8556316,15469903.1950401,31399088.5429316
-"189","All gastro pathogens","Initial and sequel disease","<5","Pain and suffering",17963332.1505516,12322586.0930084,25287763.4175793
+"189","All gastro pathogens","Initial and sequel disease","<5","Pain and suffering",17979419.1529666,12337349.931775,25309295.2626556
 "190","All gastro pathogens","Initial and sequel disease","5-64","Premature mortality",42344946.0086236,26253716.9486116,67257901.5195339
 "191","All gastro pathogens","Initial and sequel disease","5-64","HumanCapital",1267641031.00693,732882789.653468,2070340092.73483
 "192","All gastro pathogens","Initial and sequel disease","5-64","FrictionHigh",1014112824.80554,586306231.722774,1656272074.18787
 "193","All gastro pathogens","Initial and sequel disease","5-64","FrictionLow",380292309.302078,219864836.89604,621102027.82045
-"194","All gastro pathogens","Initial and sequel disease","5-64","TotalHumanCapital",1668207183.08108,1031711936.06335,2601176086.028
-"195","All gastro pathogens","Initial and sequel disease","5-64","TotalFrictionHigh",1414673461.00527,884181464.112225,2187925792.10922
-"196","All gastro pathogens","Initial and sequel disease","5-64","TotalFrictionLow",780837987.543028,514265535.603791,1159607463.67513
+"194","All gastro pathogens","Initial and sequel disease","5-64","TotalHumanCapital",1668368338.3062,1031861453.16791,2601233161.33927
+"195","All gastro pathogens","Initial and sequel disease","5-64","TotalFrictionHigh",1414848055.15822,884264348.423169,2188127693.31413
+"196","All gastro pathogens","Initial and sequel disease","5-64","TotalFrictionLow",780975104.760737,514466536.32697,1159798288.35302
 "197","All gastro pathogens","Initial and sequel disease","5-64","Direct",190344339.037411,128755666.748823,276223652.616148
-"198","All gastro pathogens","Initial and sequel disease","5-64","Pain and suffering",163550788.429075,106535758.828147,241044636.188873
+"198","All gastro pathogens","Initial and sequel disease","5-64","Pain and suffering",163713854.591205,106655904.63615,241232435.375411
 "199","All gastro pathogens","Initial and sequel disease","65+","Premature mortality",185516658.932809,110360555.509742,300429801.91919
 "200","All gastro pathogens","Initial and sequel disease","65+","HumanCapital",140850235.37837,46191555.4390264,658826939.803021
 "201","All gastro pathogens","Initial and sequel disease","65+","FrictionHigh",112680188.302696,36953244.3512212,527061551.842417
 "202","All gastro pathogens","Initial and sequel disease","65+","FrictionLow",42255070.6135111,13857466.6317079,197648081.940906
-"203","All gastro pathogens","Initial and sequel disease","65+","TotalHumanCapital",516808751.378174,345161073.410685,1039754817.897
-"204","All gastro pathogens","Initial and sequel disease","65+","TotalFrictionHigh",488206436.774165,331327209.543671,910389267.001805
-"205","All gastro pathogens","Initial and sequel disease","65+","TotalFrictionLow",412381896.002332,291473282.729658,610672882.192416
+"203","All gastro pathogens","Initial and sequel disease","65+","TotalHumanCapital",516872917.218507,345203155.109259,1039825189.662
+"204","All gastro pathogens","Initial and sequel disease","65+","TotalFrictionHigh",488266179.229858,331398875.731686,910482994.405357
+"205","All gastro pathogens","Initial and sequel disease","65+","TotalFrictionLow",412444481.47043,291543008.240501,610716371.915741
 "206","All gastro pathogens","Initial and sequel disease","65+","Direct",126139417.948112,78593516.3176908,198548032.927127
-"207","All gastro pathogens","Initial and sequel disease","65+","Pain and suffering",37320370.6269872,24987196.0122496,53888536.962452
+"207","All gastro pathogens","Initial and sequel disease","65+","Pain and suffering",37385735.4309997,25043232.5949115,53959495.350683
 "208","All gastro pathogens","Initial and sequel disease","All ages","Premature mortality",235466646.717009,157273101.374829,351438296.355838
 "209","All gastro pathogens","Initial and sequel disease","All ages","HumanCapital",1539727821.3815,881498991.440918,2612613126.80014
 "210","All gastro pathogens","Initial and sequel disease","All ages","FrictionHigh",1231782257.1052,705199193.152734,2090090501.44011
 "211","All gastro pathogens","Initial and sequel disease","All ages","FrictionLow",461918346.41445,264449697.432275,783783938.040041
-"212","All gastro pathogens","Initial and sequel disease","All ages","TotalHumanCapital",2350349686.80439,1552669454.45183,3589124466.13908
-"213","All gastro pathogens","Initial and sequel disease","All ages","TotalFrictionHigh",2042672084.87455,1374244465.70737,3068112382.59312
-"214","All gastro pathogens","Initial and sequel disease","All ages","TotalFrictionLow",1272200208.00399,919514136.352267,1774818334.62879
+"212","All gastro pathogens","Initial and sequel disease","All ages","TotalHumanCapital",2350573185.64262,1552827749.51602,3589321538.27226
+"213","All gastro pathogens","Initial and sequel disease","All ages","TotalFrictionHigh",2042823407.09606,1374456457.65721,3068261972.69311
+"214","All gastro pathogens","Initial and sequel disease","All ages","TotalFrictionLow",1272417677.75543,919724287.405167,1775034567.31536
 "215","All gastro pathogens","Initial and sequel disease","All ages","Direct",343305585.861214,250150047.103623,463488174.98162
-"216","All gastro pathogens","Initial and sequel disease","All ages","Pain and suffering",218854247.913572,144394913.161453,319354660.404396
+"216","All gastro pathogens","Initial and sequel disease","All ages","Pain and suffering",219079931.601479,144607304.669504,319627158.495022
 "217","Norovirus","Norovirus","<5","Premature mortality",39371.9415730739,309.399128144209,444529.789877536
 "218","Norovirus","Norovirus","<5","HumanCapital",4545029.63165251,1341043.23366269,10765216.839276
 "219","Norovirus","Norovirus","<5","FrictionHigh",3636023.70532201,1072834.58693015,8612173.47142078
@@ -471,74 +471,74 @@
 "470","Campylobacter","Guillain-Barré syndrome","<5","HumanCapital",175305.140840684,85995.3870003248,360387.11288761
 "471","Campylobacter","Guillain-Barré syndrome","<5","FrictionHigh",140244.112672547,68796.3096002599,288309.690310088
 "472","Campylobacter","Guillain-Barré syndrome","<5","FrictionLow",52591.5422522052,25798.6161000974,108116.133866283
-"473","Campylobacter","Guillain-Barré syndrome","<5","TotalHumanCapital",580233.285528528,274439.036632359,1246841.76746655
-"474","Campylobacter","Guillain-Barré syndrome","<5","TotalFrictionHigh",543157.302696907,255387.129703664,1183888.1533929
-"475","Campylobacter","Guillain-Barré syndrome","<5","TotalFrictionLow",449153.020019967,206968.417912365,1028596.18253173
+"473","Campylobacter","Guillain-Barré syndrome","<5","TotalHumanCapital",596905.630063242,283063.958478574,1276652.82005554
+"474","Campylobacter","Guillain-Barré syndrome","<5","TotalFrictionHigh",559811.610016946,263978.833367227,1212685.88461429
+"475","Campylobacter","Guillain-Barré syndrome","<5","TotalFrictionLow",466177.185072953,215776.128791926,1055053.82733277
 "476","Campylobacter","Guillain-Barré syndrome","<5","Direct",285202.576617699,139889.923380017,586384.151073594
-"477","Campylobacter","Guillain-Barré syndrome","<5","Pain and suffering",0,0,0
+"477","Campylobacter","Guillain-Barré syndrome","<5","Pain and suffering",15831.5644659541,7758.49906817816,32635.0081430866
 "478","Campylobacter","Guillain-Barré syndrome","5-64","Premature mortality",4888155.79029095,1995392.71989312,10043921.0819742
 "479","Campylobacter","Guillain-Barré syndrome","5-64","HumanCapital",1475193.19698647,723651.395884547,3032658.45293464
 "480","Campylobacter","Guillain-Barré syndrome","5-64","FrictionHigh",1180154.55758918,578921.116707637,2426126.76234771
 "481","Campylobacter","Guillain-Barré syndrome","5-64","FrictionLow",442557.959095941,217095.418765364,909797.535880391
-"482","Campylobacter","Guillain-Barré syndrome","5-64","TotalHumanCapital",8775733.47912748,4909054.22715398,14838197.656681
-"483","Campylobacter","Guillain-Barré syndrome","5-64","TotalFrictionHigh",8458570.89000718,4702699.55723693,14354063.4452332
-"484","Campylobacter","Guillain-Barré syndrome","5-64","TotalFrictionLow",7662132.89677914,4171674.86447858,13209377.6024675
+"482","Campylobacter","Guillain-Barré syndrome","5-64","TotalHumanCapital",8923169.50568363,5002516.19699979,15053076.3267884
+"483","Campylobacter","Guillain-Barré syndrome","5-64","TotalFrictionHigh",8602603.10793446,4798783.96542842,14577517.7529751
+"484","Campylobacter","Guillain-Barré syndrome","5-64","TotalFrictionLow",7809814.24170753,4267843.38427559,13417631.7164373
 "485","Campylobacter","Guillain-Barré syndrome","5-64","Direct",2049161.49495533,1005242.16268662,4212604.92468202
-"486","Campylobacter","Guillain-Barré syndrome","5-64","Pain and suffering",0,0,0
+"486","Campylobacter","Guillain-Barré syndrome","5-64","Pain and suffering",135757.329781664,66402.4029052454,280056.797101846
 "487","Campylobacter","Guillain-Barré syndrome","65+","Premature mortality",31861224.2995816,13835474.3536045,59218554.3721934
 "488","Campylobacter","Guillain-Barré syndrome","65+","HumanCapital",170046.540430532,83415.7970625599,349576.638017585
 "489","Campylobacter","Guillain-Barré syndrome","65+","FrictionHigh",136037.232344426,66732.6376500479,279661.310414068
 "490","Campylobacter","Guillain-Barré syndrome","65+","FrictionLow",51013.9621291596,25024.739118768,104872.991405276
-"491","Campylobacter","Guillain-Barré syndrome","65+","TotalHumanCapital",32687872.0226495,14645099.8367995,60035518.853701
-"492","Campylobacter","Guillain-Barré syndrome","65+","TotalFrictionHigh",32650636.3581339,14610045.9576782,59994250.9713387
-"493","Campylobacter","Guillain-Barré syndrome","65+","TotalFrictionLow",32559015.7251859,14520832.3309943,59904792.1913436
+"491","Campylobacter","Guillain-Barré syndrome","65+","TotalHumanCapital",32756407.2361154,14712249.0411365,60110401.516437
+"492","Campylobacter","Guillain-Barré syndrome","65+","TotalFrictionHigh",32717312.4916049,14678327.1074743,60073159.3637923
+"493","Campylobacter","Guillain-Barré syndrome","65+","TotalFrictionLow",32626504.0448722,14587947.138366,59966615.3035028
 "494","Campylobacter","Guillain-Barré syndrome","65+","Direct",579045.77724035,283982.568751209,1190592.73259843
-"495","Campylobacter","Guillain-Barré syndrome","65+","Pain and suffering",0,0,0
+"495","Campylobacter","Guillain-Barré syndrome","65+","Pain and suffering",62289.1149161282,30414.9775507818,128801.441969734
 "496","Campylobacter","Guillain-Barré syndrome","All ages","Premature mortality",37347436.3474344,18783301.690046,64981434.1661534
 "497","Campylobacter","Guillain-Barré syndrome","All ages","HumanCapital",1820544.87825769,893062.579947431,3742622.20383983
 "498","Campylobacter","Guillain-Barré syndrome","All ages","FrictionHigh",1456435.90260615,714450.063957945,2994097.76307186
 "499","Campylobacter","Guillain-Barré syndrome","All ages","FrictionLow",546163.463477306,267918.773984229,1122786.66115195
-"500","Campylobacter","Guillain-Barré syndrome","All ages","TotalHumanCapital",42600897.3155342,23648876.9885094,70430119.2271779
-"501","Campylobacter","Guillain-Barré syndrome","All ages","TotalFrictionHigh",42187223.945059,23306327.0107552,70000445.7707801
-"502","Campylobacter","Guillain-Barré syndrome","All ages","TotalFrictionLow",41181994.7292531,22423659.3094445,68931189.6190287
+"500","Campylobacter","Guillain-Barré syndrome","All ages","TotalHumanCapital",42838353.7672905,23859555.9689544,70680758.6542054
+"501","Campylobacter","Guillain-Barré syndrome","All ages","TotalFrictionHigh",42428496.0196705,23508858.9942237,70247503.4293739
+"502","Campylobacter","Guillain-Barré syndrome","All ages","TotalFrictionLow",41418060.9340305,22624709.8493277,69181963.6810765
 "503","Campylobacter","Guillain-Barré syndrome","All ages","Direct",2913344.14058098,1429227.20456573,5989836.95576818
-"504","Campylobacter","Guillain-Barré syndrome","All ages","Pain and suffering",0,0,0
+"504","Campylobacter","Guillain-Barré syndrome","All ages","Pain and suffering",213908.110576299,104664.251548908,440727.380837246
 "505","Campylobacter","Initial and sequel disease","<5","Premature mortality",1574372.53660909,439063.281542971,4319709.87254522
 "506","Campylobacter","Initial and sequel disease","<5","HumanCapital",12376333.323899,7014091.34109781,21867180.7727747
 "507","Campylobacter","Initial and sequel disease","<5","FrictionHigh",9901066.65911916,5611273.07287825,17493744.6182198
 "508","Campylobacter","Initial and sequel disease","<5","FrictionLow",3712899.99716969,2104227.40232934,6560154.23183241
-"509","Campylobacter","Initial and sequel disease","<5","TotalHumanCapital",27090317.0658358,16786519.9596358,44082100.4030227
-"510","Campylobacter","Initial and sequel disease","<5","TotalFrictionHigh",24600741.5681452,15342067.4037063,39789996.3102808
-"511","Campylobacter","Initial and sequel disease","<5","TotalFrictionLow",18381778.7595578,11639750.5594551,29186775.0552168
+"509","Campylobacter","Initial and sequel disease","<5","TotalHumanCapital",27108283.3664192,16797467.185073,44109076.6852615
+"510","Campylobacter","Initial and sequel disease","<5","TotalFrictionHigh",24616685.7769289,15350961.5608895,39813896.1195316
+"511","Campylobacter","Initial and sequel disease","<5","TotalFrictionLow",18399787.757312,11651454.3493284,29217559.1217389
 "512","Campylobacter","Initial and sequel disease","<5","Direct",4473544.19586313,2944970.91931018,6968277.12018711
-"513","Campylobacter","Initial and sequel disease","<5","Pain and suffering",8220915.04306911,4793685.92036624,14052549.3151496
+"513","Campylobacter","Initial and sequel disease","<5","Pain and suffering",8237552.19258107,4803408.08089896,14078074.0508054
 "514","Campylobacter","Initial and sequel disease","5-64","Premature mortality",12141857.6275899,7035511.35637222,19603652.6886408
 "515","Campylobacter","Initial and sequel disease","5-64","HumanCapital",117867875.468794,70267443.6207306,198105227.788062
 "516","Campylobacter","Initial and sequel disease","5-64","FrictionHigh",94294300.3750354,56213954.8965845,158484182.230449
 "517","Campylobacter","Initial and sequel disease","5-64","FrictionLow",35360362.6406383,21080233.0862192,59431568.3364185
-"518","Campylobacter","Initial and sequel disease","5-64","TotalHumanCapital",230351502.522185,147344755.092342,367624353.564648
-"519","Campylobacter","Initial and sequel disease","5-64","TotalFrictionHigh",206703485.410896,133140693.567826,328071304.757212
-"520","Campylobacter","Initial and sequel disease","5-64","TotalFrictionLow",147753944.56565,97481564.2734458,229598341.67972
+"518","Campylobacter","Initial and sequel disease","5-64","TotalHumanCapital",230488799.528534,147436448.867919,367851801.242295
+"519","Campylobacter","Initial and sequel disease","5-64","TotalFrictionHigh",206852908.670473,133238092.888397,328296176.64156
+"520","Campylobacter","Initial and sequel disease","5-64","TotalFrictionLow",147888942.957661,97572480.5412935,229856013.639282
 "521","Campylobacter","Initial and sequel disease","5-64","Direct",40055795.6431636,27853822.881813,59174724.8303006
-"522","Campylobacter","Initial and sequel disease","5-64","Pain and suffering",59202273.5984105,34542686.7778297,100941050.526854
+"522","Campylobacter","Initial and sequel disease","5-64","Pain and suffering",59348258.7527991,34639799.3250434,101149960.572605
 "523","Campylobacter","Initial and sequel disease","65+","Premature mortality",43254579.9520731,23955918.9458819,71367882.9445174
 "524","Campylobacter","Initial and sequel disease","65+","HumanCapital",17184553.7106227,8185371.1738433,55849430.4140402
 "525","Campylobacter","Initial and sequel disease","65+","FrictionHigh",13747642.9684982,6548296.93907464,44679544.3312322
 "526","Campylobacter","Initial and sequel disease","65+","FrictionLow",5155366.11318682,2455611.35215299,16754829.1242121
-"527","Campylobacter","Initial and sequel disease","65+","TotalHumanCapital",105812450.291682,74500778.6231923,157991350.395795
-"528","Campylobacter","Initial and sequel disease","65+","TotalFrictionHigh",102067950.882587,72230471.0629316,148630811.787813
-"529","Campylobacter","Initial and sequel disease","65+","TotalFrictionLow",92189176.5326087,66102514.1342531,127797125.21499
+"527","Campylobacter","Initial and sequel disease","65+","TotalHumanCapital",105880499.744028,74553118.9883125,158067203.048003
+"528","Campylobacter","Initial and sequel disease","65+","TotalFrictionHigh",102130397.64174,72274904.2487556,148726738.035071
+"529","Campylobacter","Initial and sequel disease","65+","TotalFrictionLow",92257606.0360568,66160292.1702136,127882014.112541
 "530","Campylobacter","Initial and sequel disease","65+","Direct",24229765.0254837,18028241.1787707,31780013.5219626
-"531","Campylobacter","Initial and sequel disease","65+","Pain and suffering",16836933.1520596,9882576.32717828,28655974.3782248
+"531","Campylobacter","Initial and sequel disease","65+","Pain and suffering",16901621.735565,9924277.08531201,28756995.8645733
 "532","Campylobacter","Initial and sequel disease","All ages","Premature mortality",57767877.7114642,37256297.3103746,86617459.5319525
 "533","Campylobacter","Initial and sequel disease","All ages","HumanCapital",151165373.213223,89478627.5346638,260352524.502701
 "534","Campylobacter","Initial and sequel disease","All ages","FrictionHigh",120932298.570578,71582902.0277311,208282019.602161
 "535","Campylobacter","Initial and sequel disease","All ages","FrictionLow",45349611.9639668,26843588.2603991,78105757.3508104
-"536","Campylobacter","Initial and sequel disease","All ages","TotalHumanCapital",364988376.767238,249925942.185988,553068597.665624
-"537","Campylobacter","Initial and sequel disease","All ages","TotalFrictionHigh",334705100.785925,231577519.778952,501638444.904769
-"538","Campylobacter","Initial and sequel disease","All ages","TotalFrictionLow",258784577.104614,184971826.058428,374161801.262689
+"536","Campylobacter","Initial and sequel disease","All ages","TotalHumanCapital",365227393.316209,250066005.258903,553445131.390002
+"537","Campylobacter","Initial and sequel disease","All ages","TotalFrictionHigh",334928909.056301,231725276.513397,501975150.151987
+"538","Campylobacter","Initial and sequel disease","All ages","TotalFrictionLow",258996561.577428,185100873.574123,374482977.586758
 "539","Campylobacter","Initial and sequel disease","All ages","Direct",68835469.4286103,51184532.8194635,95390618.8643037
-"540","Campylobacter","Initial and sequel disease","All ages","Pain and suffering",84347855.4346005,49440981.1715585,143298048.1091
+"540","Campylobacter","Initial and sequel disease","All ages","Pain and suffering",84567494.5869184,49573016.4427132,143656345.548958
 "541","Non-typhoidal Salmonella","Salmonellosis","<5","Premature mortality",2536304.78635836,883571.417426683,5919586.54637332
 "542","Non-typhoidal Salmonella","Salmonellosis","<5","HumanCapital",3682512.10002802,1976694.76307556,7251613.7625893
 "543","Non-typhoidal Salmonella","Salmonellosis","<5","FrictionHigh",2946009.68002242,1581355.81046045,5801291.01007144
@@ -1371,38 +1371,38 @@
 "1370","All pathogens","Guillain-Barré syndrome","<5","HumanCapital",175305.140840684,85995.3870003248,360387.11288761
 "1371","All pathogens","Guillain-Barré syndrome","<5","FrictionHigh",140244.112672547,68796.3096002599,288309.690310088
 "1372","All pathogens","Guillain-Barré syndrome","<5","FrictionLow",52591.5422522052,25798.6161000974,108116.133866283
-"1373","All pathogens","Guillain-Barré syndrome","<5","TotalHumanCapital",580233.285528528,274439.036632359,1246841.76746655
-"1374","All pathogens","Guillain-Barré syndrome","<5","TotalFrictionHigh",543157.302696907,255387.129703664,1183888.1533929
-"1375","All pathogens","Guillain-Barré syndrome","<5","TotalFrictionLow",449153.020019967,206968.417912365,1028596.18253173
+"1373","All pathogens","Guillain-Barré syndrome","<5","TotalHumanCapital",596905.630063242,283063.958478574,1276652.82005554
+"1374","All pathogens","Guillain-Barré syndrome","<5","TotalFrictionHigh",559811.610016946,263978.833367227,1212685.88461429
+"1375","All pathogens","Guillain-Barré syndrome","<5","TotalFrictionLow",466177.185072953,215776.128791926,1055053.82733277
 "1376","All pathogens","Guillain-Barré syndrome","<5","Direct",285202.576617699,139889.923380017,586384.151073594
-"1377","All pathogens","Guillain-Barré syndrome","<5","Pain and suffering",0,0,0
+"1377","All pathogens","Guillain-Barré syndrome","<5","Pain and suffering",15831.5644659541,7758.49906817816,32635.0081430866
 "1378","All pathogens","Guillain-Barré syndrome","5-64","Premature mortality",4888155.79029095,1995392.71989312,10043921.0819742
 "1379","All pathogens","Guillain-Barré syndrome","5-64","HumanCapital",1475193.19698647,723651.395884547,3032658.45293464
 "1380","All pathogens","Guillain-Barré syndrome","5-64","FrictionHigh",1180154.55758918,578921.116707637,2426126.76234771
 "1381","All pathogens","Guillain-Barré syndrome","5-64","FrictionLow",442557.959095941,217095.418765364,909797.535880391
-"1382","All pathogens","Guillain-Barré syndrome","5-64","TotalHumanCapital",8775733.47912748,4909054.22715398,14838197.656681
-"1383","All pathogens","Guillain-Barré syndrome","5-64","TotalFrictionHigh",8458570.89000718,4702699.55723693,14354063.4452332
-"1384","All pathogens","Guillain-Barré syndrome","5-64","TotalFrictionLow",7662132.89677914,4171674.86447858,13209377.6024675
+"1382","All pathogens","Guillain-Barré syndrome","5-64","TotalHumanCapital",8923169.50568363,5002516.19699979,15053076.3267884
+"1383","All pathogens","Guillain-Barré syndrome","5-64","TotalFrictionHigh",8602603.10793446,4798783.96542842,14577517.7529751
+"1384","All pathogens","Guillain-Barré syndrome","5-64","TotalFrictionLow",7809814.24170753,4267843.38427559,13417631.7164373
 "1385","All pathogens","Guillain-Barré syndrome","5-64","Direct",2049161.49495533,1005242.16268662,4212604.92468202
-"1386","All pathogens","Guillain-Barré syndrome","5-64","Pain and suffering",0,0,0
+"1386","All pathogens","Guillain-Barré syndrome","5-64","Pain and suffering",135757.329781664,66402.4029052454,280056.797101846
 "1387","All pathogens","Guillain-Barré syndrome","65+","Premature mortality",31861224.2995816,13835474.3536045,59218554.3721934
 "1388","All pathogens","Guillain-Barré syndrome","65+","HumanCapital",170046.540430532,83415.7970625599,349576.638017585
 "1389","All pathogens","Guillain-Barré syndrome","65+","FrictionHigh",136037.232344426,66732.6376500479,279661.310414068
 "1390","All pathogens","Guillain-Barré syndrome","65+","FrictionLow",51013.9621291596,25024.739118768,104872.991405276
-"1391","All pathogens","Guillain-Barré syndrome","65+","TotalHumanCapital",32687872.0226495,14645099.8367995,60035518.853701
-"1392","All pathogens","Guillain-Barré syndrome","65+","TotalFrictionHigh",32650636.3581339,14610045.9576782,59994250.9713387
-"1393","All pathogens","Guillain-Barré syndrome","65+","TotalFrictionLow",32559015.7251859,14520832.3309943,59904792.1913436
+"1391","All pathogens","Guillain-Barré syndrome","65+","TotalHumanCapital",32756407.2361154,14712249.0411365,60110401.516437
+"1392","All pathogens","Guillain-Barré syndrome","65+","TotalFrictionHigh",32717312.4916049,14678327.1074743,60073159.3637923
+"1393","All pathogens","Guillain-Barré syndrome","65+","TotalFrictionLow",32626504.0448722,14587947.138366,59966615.3035028
 "1394","All pathogens","Guillain-Barré syndrome","65+","Direct",579045.77724035,283982.568751209,1190592.73259843
-"1395","All pathogens","Guillain-Barré syndrome","65+","Pain and suffering",0,0,0
+"1395","All pathogens","Guillain-Barré syndrome","65+","Pain and suffering",62289.1149161282,30414.9775507818,128801.441969734
 "1396","All pathogens","Guillain-Barré syndrome","All ages","Premature mortality",37347436.3474344,18783301.690046,64981434.1661534
 "1397","All pathogens","Guillain-Barré syndrome","All ages","HumanCapital",1820544.87825769,893062.579947431,3742622.20383983
 "1398","All pathogens","Guillain-Barré syndrome","All ages","FrictionHigh",1456435.90260615,714450.063957945,2994097.76307186
 "1399","All pathogens","Guillain-Barré syndrome","All ages","FrictionLow",546163.463477306,267918.773984229,1122786.66115195
-"1400","All pathogens","Guillain-Barré syndrome","All ages","TotalHumanCapital",42600897.3155342,23648876.9885094,70430119.2271779
-"1401","All pathogens","Guillain-Barré syndrome","All ages","TotalFrictionHigh",42187223.945059,23306327.0107552,70000445.7707801
-"1402","All pathogens","Guillain-Barré syndrome","All ages","TotalFrictionLow",41181994.7292531,22423659.3094445,68931189.6190287
+"1400","All pathogens","Guillain-Barré syndrome","All ages","TotalHumanCapital",42838353.7672905,23859555.9689544,70680758.6542054
+"1401","All pathogens","Guillain-Barré syndrome","All ages","TotalFrictionHigh",42428496.0196705,23508858.9942237,70247503.4293739
+"1402","All pathogens","Guillain-Barré syndrome","All ages","TotalFrictionLow",41418060.9340305,22624709.8493277,69181963.6810765
 "1403","All pathogens","Guillain-Barré syndrome","All ages","Direct",2913344.14058098,1429227.20456573,5989836.95576818
-"1404","All pathogens","Guillain-Barré syndrome","All ages","Pain and suffering",0,0,0
+"1404","All pathogens","Guillain-Barré syndrome","All ages","Pain and suffering",213908.110576299,104664.251548908,440727.380837246
 "1405","All pathogens","Haemolytic uremic syndrome","<5","Premature mortality",528426.6116241,92429.0791278235,1859471.83774802
 "1406","All pathogens","Haemolytic uremic syndrome","<5","HumanCapital",55839.533413198,21220.1633353054,140539.144065928
 "1407","All pathogens","Haemolytic uremic syndrome","<5","FrictionHigh",44671.6267305584,16976.1306682443,112431.315252742
@@ -1443,35 +1443,35 @@
 "1442","All pathogens","Initial and sequel disease","<5","HumanCapital",76292013.4647333,43378993.5651509,138748559.24747
 "1443","All pathogens","Initial and sequel disease","<5","FrictionHigh",61033610.7717867,34703194.8521207,110998847.397976
 "1444","All pathogens","Initial and sequel disease","<5","FrictionLow",22887604.03942,13013698.0695453,41624567.7742409
-"1445","All pathogens","Initial and sequel disease","<5","TotalHumanCapital",139068628.243703,95974442.5701979,210726339.637376
-"1446","All pathogens","Initial and sequel disease","<5","TotalFrictionHigh",123775309.202554,86969350.3858289,183272808.798914
-"1447","All pathogens","Initial and sequel disease","<5","TotalFrictionLow",85538930.6554728,63610306.5472377,115788746.46846
+"1445","All pathogens","Initial and sequel disease","<5","TotalHumanCapital",139083670.548983,95989109.2031104,210743246.750074
+"1446","All pathogens","Initial and sequel disease","<5","TotalFrictionHigh",123796800.69216,86985929.7120055,183293599.913315
+"1447","All pathogens","Initial and sequel disease","<5","TotalFrictionLow",85554740.3520539,63628929.7278962,115809013.264938
 "1448","All pathogens","Initial and sequel disease","<5","Direct",22874462.5720573,16031979.3291499,31955378.0177911
-"1449","All pathogens","Initial and sequel disease","<5","Pain and suffering",18134161.5345887,12495656.7132856,25451447.5606678
+"1449","All pathogens","Initial and sequel disease","<5","Pain and suffering",18152947.9819159,12509605.7601711,25476394.489115
 "1450","All pathogens","Initial and sequel disease","5-64","Premature mortality",67921537.2430514,48181782.3820597,94908210.8753394
 "1451","All pathogens","Initial and sequel disease","5-64","HumanCapital",1272049276.99591,737452942.855003,2074458503.37172
 "1452","All pathogens","Initial and sequel disease","5-64","FrictionHigh",1017639421.59672,589962354.284002,1659566802.69738
 "1453","All pathogens","Initial and sequel disease","5-64","FrictionLow",381614783.098772,221235882.856501,622337551.011517
-"1454","All pathogens","Initial and sequel disease","5-64","TotalHumanCapital",1701574215.08643,1065120333.99398,2633753385.70155
-"1455","All pathogens","Initial and sequel disease","5-64","TotalFrictionHigh",1447242714.4987,916829630.610191,2220279536.11888
-"1456","All pathogens","Initial and sequel disease","5-64","TotalFrictionLow",811182122.260872,544689087.751194,1188981078.21847
+"1454","All pathogens","Initial and sequel disease","5-64","TotalHumanCapital",1701687986.23789,1065299056.92849,2633992659.45605
+"1455","All pathogens","Initial and sequel disease","5-64","TotalFrictionHigh",1447444048.15374,917015149.631769,2220442180.8255
+"1456","All pathogens","Initial and sequel disease","5-64","TotalFrictionLow",811347086.95118,544803709.765333,1189130221.02429
 "1457","All pathogens","Initial and sequel disease","5-64","Direct",193391608.389937,131831817.950795,279353742.722636
-"1458","All pathogens","Initial and sequel disease","5-64","Pain and suffering",164330789.113311,107293073.56368,241802825.412668
+"1458","All pathogens","Initial and sequel disease","5-64","Pain and suffering",164476312.495953,107421961.59082,241975010.352695
 "1459","All pathogens","Initial and sequel disease","65+","Premature mortality",225508691.995962,148325272.549578,341697616.47107
 "1460","All pathogens","Initial and sequel disease","65+","HumanCapital",141102904.153866,46459059.4046003,659082515.306064
 "1461","All pathogens","Initial and sequel disease","65+","FrictionHigh",112882323.323093,37167247.5236802,527266012.244851
 "1462","All pathogens","Initial and sequel disease","65+","FrictionLow",42330871.2461598,13937717.8213801,197724754.591819
-"1463","All pathogens","Initial and sequel disease","65+","TotalHumanCapital",559861401.021811,386628944.52041,1082246531.82768
-"1464","All pathogens","Initial and sequel disease","65+","TotalFrictionHigh",531363041.103008,372913927.014705,953145028.653301
-"1465","All pathogens","Initial and sequel disease","65+","TotalFrictionLow",455155922.102958,332844573.41531,654110178.052244
+"1463","All pathogens","Initial and sequel disease","65+","TotalHumanCapital",559918658.262652,386709753.08646,1082292947.30242
+"1464","All pathogens","Initial and sequel disease","65+","TotalFrictionHigh",531452728.570893,372991310.803632,953244057.702557
+"1465","All pathogens","Initial and sequel disease","65+","TotalFrictionLow",455225001.688141,332915049.426358,654184198.925976
 "1466","All pathogens","Initial and sequel disease","65+","Direct",128755898.545842,81248973.6853568,201210709.423673
-"1467","All pathogens","Initial and sequel disease","65+","Pain and suffering",37391265.9790001,25062207.6623201,53962459.1037164
+"1467","All pathogens","Initial and sequel disease","65+","Pain and suffering",37462003.724883,25116630.6652833,54030174.8857153
 "1468","All pathogens","Initial and sequel disease","All ages","Premature mortality",316032370.359781,234226946.633221,434370682.374002
 "1469","All pathogens","Initial and sequel disease","All ages","HumanCapital",1545110764.56537,886980491.2374,2617308377.27778
 "1470","All pathogens","Initial and sequel disease","All ages","FrictionHigh",1236088611.65229,709584392.98992,2093846701.82222
 "1471","All pathogens","Initial and sequel disease","All ages","FrictionLow",463533229.36961,266094147.37122,785192513.183333
-"1472","All pathogens","Initial and sequel disease","All ages","TotalHumanCapital",2443394072.16838,1644781970.3254,3680827432.20735
-"1473","All pathogens","Initial and sequel disease","All ages","TotalFrictionHigh",2134643669.14787,1464711753.959,3161078179.94727
-"1474","All pathogens","Initial and sequel disease","All ages","TotalFrictionLow",1361203759.20792,1007621936.66841,1865143261.73385
+"1472","All pathogens","Initial and sequel disease","All ages","TotalHumanCapital",2443695486.55989,1645052736.60144,3681128910.81732
+"1473","All pathogens","Initial and sequel disease","All ages","TotalFrictionHigh",2134913356.15892,1464854158.46347,3161358762.54241
+"1474","All pathogens","Initial and sequel disease","All ages","TotalFrictionLow",1361458275.06747,1007841768.91993,1865365482.99909
 "1475","All pathogens","Initial and sequel disease","All ages","Direct",349562695.103889,256292226.049392,469846777.271366
-"1476","All pathogens","Initial and sequel disease","All ages","Pain and suffering",219845609.984391,145364059.710128,320448264.829133
+"1476","All pathogens","Initial and sequel disease","All ages","Pain and suffering",220082151.624182,145545850.57169,320661078.054781

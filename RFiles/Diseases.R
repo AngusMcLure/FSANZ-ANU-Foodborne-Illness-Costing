@@ -547,7 +547,7 @@ SequelaeAssumptions <- list(
     durationOngoing = 5, # changing this to 5 to take a cross-sectional approach to the costing so we are costing the ongoing illness arising from the past five years of cases (with the assumption that the incidence over the past five years has been the same as in the current year)
     #severityOngoing = 'mild',
     propSevere = 1,
-    symptoms = "Guillain-Barré syndrome",
+    symptoms = "GBS",
     missedWorkCarer = list(`<5` = 51.4,
                            `5-64` = 17.1,
                            `65+` = 17.1),
