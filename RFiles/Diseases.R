@@ -590,7 +590,3 @@ SequelaeAssumptions <- list(
                           `65+` = 2.5)
   )
 )
-#warning('time off work due to non-gastro illnesses do not have uncertainty distributions')
-warning('check STEC hospitalisation and mort codes --- looks like they might change following discussion?')
-warning('get a duration of symptoms for hospitalised cases for STEC. Currently a stupidly high number so I do not forget')
-#warning('Using popultion adjusted notification rates for STEC and yersinia to estimate number of tests may overestimate tests, since we notifications rates are extrapoloted from states with the highest testing rates. however this might not be an issue since SA for instance achieves higher testing rates for STEC by testing all submitted stools with bloody diarrhea. however these are already been submitted for other tests in SA and other jurisdictions, so the number of tests might be the same (just not all will actually test for STEC)')
