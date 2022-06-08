@@ -1,10 +1,12 @@
 # Make figures for the report
-source("./RFiles/Distributions.R")
-source("./RFiles/ClassDefinitions.R")
-source("./RFiles/Diseases.R")
 library(tidyverse)
 library(plotly)
 library(ggtext)
+
+source("./RFiles/Distributions.R")
+source("./RFiles/ClassDefinitions.R")
+source("./RFiles/Diseases.R")
+
 SequelaeNames <- names(SequelaeAssumptions)
 
 CostSummaries.Detailed <- read.csv('./Outputs/CostTable.csv') %>%
@@ -22,7 +24,7 @@ CostPerCase <- read.csv('./Outputs/CostPerCase.csv')
 CostSummaries.Categorised <- read.csv('./Outputs/CostTableCategories.csv') %>%
   subset(!(CostItem %in% c('FrictionLow', 'FrictionHigh','TotalFrictionHigh','TotalFrictionLow','TotalHumanCapital'))) %>%
   subset(!(Pathogen %in% c('All gastro pathogens', 'All pathogens'))) %>%
-  subset(Disease != 'All Diseases') %>%
+  subset(Disease != 'Initial and sequel disease') %>%
   mutate(SequelOrInitial = if_else(Disease %in% SequelaeNames, 'Sequel disease(s)', 'Initial disease')) %>%
   subset(AgeGroup == 'All ages') %>%
   mutate(CostItem = recode(CostItem,
@@ -128,7 +130,15 @@ ggsave(P.AllGastroByCat, filename = 'Report/CostAllGastroByCat.png')
 # Figures for paper and presentations #
 #######################################
 
-P.TotalCost.AllPathogens <-  CostSummaries.Categorised %>%
+P.TotalCost.AllPathogens <-  read.csv('./Outputs/CostTableCategories.csv') %>%
+  subset(!(CostItem %in% c('FrictionLow', 'FrictionHigh','TotalFrictionHigh','TotalFrictionLow','TotalHumanCapital'))) %>%
+  subset(Pathogen == 'All pathogens') %>%
+  subset(Disease != 'Initial and sequel disease') %>%
+  mutate(SequelOrInitial = if_else(Disease %in% SequelaeNames, 'Sequel disease(s)', 'Initial disease')) %>%
+  subset(AgeGroup == 'All ages') %>%
+  mutate(CostItem = recode(CostItem,
+                           Deaths = "Premature Mortality",
+                           HumanCapital = 'Non-fatal productivity losses')) %>%
   mutate(SequelOrInitial = forcats::fct_rev(SequelOrInitial)) %>%
   group_by(CostItem, SequelOrInitial) %>%
   summarise(`Annual cost (millions AUD)` = sum(median)/10^6) %>%
