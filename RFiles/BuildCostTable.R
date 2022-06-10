@@ -149,6 +149,10 @@ write.csv(CostSummaries$Categorised,'./Outputs/CostTableCategories.csv')
 # save workspace in two versions; one light version to be used by the shiny app
 # and another larger version with everything
 save.image('AusFBDiseaseImage.RData')
+saveRDS(object = CostList, file = 'CostList.rds')
+saveRDS(object = DeathList, file = 'DeathList.rds')
+saveRDS(object = HospList, file = 'HospList.rds')
+saveRDS(object = IncidenceList, file = 'IncidenceList.rds')
 UnusedLargeObjects <- c('CostList','SequelaeFractions','TotalCostByPathogen',
                         'TotalIncidence')
 #trim DeathList, HospList, and IncidenceList down to 1000 draws

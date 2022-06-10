@@ -13,15 +13,39 @@ add <- function(...){
   }
 }
 
-#add lists of lists of numeric vectors elementwise across the list
+#add lists of lists of numeric vectors element-wise across the list
 add2 <- function(...){
   args <- list(...)
-  if(nargs() == 0){
+  if(length(args) == 0){
     return(NULL)
-  }else if(nargs() == 1){
+  }else if(length(args) == 1){
     return(args[[1]])
   }else  pmap(args,add)
 }
+
+addn <- function(...,.n){
+  if(!is.numeric(.n) || .n%%1 || .n < 0){
+    stop('.n must be a non-negative integer')
+  }
+  args <- list(...)
+  if(length(args) == 0){
+    return(NULL)
+  }else if(length(args) == 1){
+    return(args[[1]])
+  }else{
+    if(.n == 0){
+      reduce(args,`+`)
+    }else if(.n == 1){
+      add(...)
+    }else{
+      pmap(args,addn,.n = .n - 1)
+    }
+  }
+}
+
+laddn <- function(l,.n){do.call(addn,c(unname(l),.n = .n))}
+ladd <- function(l){laddn(l,1)}
+
 
 #Traverse n-level nested lists, calculate quantiles, then reformat nested list to a dataframe
 quantilesNestedList <- function(list,depth,names_to,probs = c(0.5,0.05,0.95),quant_names = c('median', '5%','95%')){

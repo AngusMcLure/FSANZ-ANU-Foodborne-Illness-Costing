@@ -3,3 +3,7 @@
 Old\ Outputs/
 AusFBDiseaseImage.RData
 .Rhistory
+CostList.rds
+DeathList.rds
+HospList.rds
+IncidenceList.rds
