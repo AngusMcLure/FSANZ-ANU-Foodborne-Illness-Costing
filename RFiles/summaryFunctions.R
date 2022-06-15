@@ -46,11 +46,24 @@ addn <- function(...,.n){
 laddn <- function(l,.n){do.call(addn,c(unname(l),.n = .n))}
 ladd <- function(l){laddn(l,1)}
 
+#make a n-level nested list into a rectangular tibble with the lowest level list stored in a column list
+rectangle <- function(x, names_to, values_to){
+  x %>%
+    rapply(enquote,how = "unlist") %>% #make a dataframe (very wide)
+    lapply(eval) %>%
+    as.data.frame(check.names = F) %>%
+    summarise(across(.fns = list)) %>% #make the draws list columns so they take up less space with we lengthen the dataframe
+    pivot_longer(everything(), #lengthen dataframe
+                 names_sep = "\\.",
+                 names_to = names_to,
+                 values_to = values_to)
+}
+
 
 #Traverse n-level nested lists, calculate quantiles, then reformat nested list to a dataframe
-quantilesNestedList <- function(list,depth,names_to,probs = c(0.5,0.05,0.95),quant_names = c('median', '5%','95%')){
+quantilesNestedList <- function(x,depth,names_to,probs = c(0.5,0.05,0.95),quant_names = c('median', '5%','95%')){
   if(length(names_to)!=depth) stop('Each nesting level of the list needs a name')
-  list %>%
+  x %>%
     map_depth(depth, ~unname(quantile(.x,probs = probs))) %>% #get median and intervals
     rapply(enquote,how = "unlist") %>% #make a dataframe (very wide)
     lapply(eval) %>%
