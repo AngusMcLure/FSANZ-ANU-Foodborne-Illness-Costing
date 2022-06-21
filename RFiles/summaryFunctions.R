@@ -75,3 +75,41 @@ quantilesNestedList <- function(x,depth,names_to,probs = c(0.5,0.05,0.95),quant_
     pivot_wider(names_from = "Quantile", values_from = 'value')
 
 }
+
+appendGroupTotals <- function(.d, val_col, group_cols){
+  iwalk(group_cols, #for every column to do sums over
+       ~{.d <<- .d %>%
+         group_by(across(!all_of(c(val_col, .y)))) %>% #group over everything but the selectd value and group column so that sums are across every subgroup
+         bind_rows(.,summarise(.,across(all_of(val_col), ~list(reduce(.x, `+`)))) %>% # assumes that val_col is a list column and returns it again as such
+                     mutate('{.y}' := .x)) #gives the name .x to the new total category for variable .y
+       })
+  .d
+}
+
+quantileListColumn <- function(.d, .col, probs = c(0.5,0.05,0.95)){
+  .d$out <- map(.d[,.col,drop = T],~quantile(.x, probs = probs))
+  .d %>%
+    unnest_wider(out) %>%
+    select(!all_of(.col))
+}
+
+tidyNumber <- function(n,unit = 1000, round = TRUE, digits.round = 0, sf = 3){
+  format(ifelse(n/unit<10^sf & round, round(n/unit,digits = digits.round),signif(n/unit,sf)), #format to three significant figures (potentially rounding to closest integer)
+         big.mark = ",",
+         scientific = FALSE,
+         nsmall = 0,
+         trim = T,
+         drop0trailing = TRUE)
+}
+
+medianCIformat <- function(df,unit = 1000,newline = TRUE,round = FALSE,digits.round = NULL,dropnullinterval = TRUE){
+  df %>%
+    mutate(across(c(X5.,X95.,median),~tidyNumber(.x,unit, round, digits.round))) %>%
+    mutate(across(c(X5.,X95.),           #remove intervals when they are the same as the point estimate
+                  ~if_else(.x == median & dropnullinterval,
+                           '',
+                           .x))) %>%
+    mutate(Cost = if_else(X5. == '',  #merge cost and and interval into a single line
+                          median,
+                          paste0(median, ifelse(newline,'\n',' '), '(',X5.,' - ',X95.,')')))
+}

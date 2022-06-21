@@ -1,4 +1,5 @@
 load('AusFBDiseaseImage.RData')
+source('RFiles/summaryFunctions.R')
 library(tidyverse)
 library(mc2d) #for the standard PERT distribution parameterised by min, mode, max
 
@@ -9,23 +10,6 @@ Diseases.Ordered <- c("Initial disease", "Irritable bowel disease", "Reactive ar
 
 InitialDiseaseNames <- c(unlist(map(PathogenAssumptions, ~.x$name)), `All pathogens` = 'Initial')
 
-
-medianCIformat <- function(df,unit = 1000,newline = TRUE,round = FALSE,digits.round = NULL,dropnullinterval = TRUE){
-  df %>%
-    mutate(across(c(X5.,X95.,median),~format(ifelse(.x/unit<100 & round, round(.x/unit,digits = digits.round),signif(.x/unit,3)), #format to three significant figures (potentially rounding to closest integer)
-                                             big.mark = ",",
-                                             scientific = FALSE,
-                                             nsmall = 0,
-                                             trim = T,
-                                             drop0trailing = TRUE))) %>%
-    mutate(across(c(X5.,X95.),           #remove intervals when they are the same as the point estimate
-                  ~if_else(.x == median & dropnullinterval,
-                           '',
-                           .x))) %>%
-    mutate(Cost = if_else(X5. == '',  #merge cost and and interval into a single line
-                          median,
-                          paste0(median, ifelse(newline,'\n',' '), '(',X5.,' - ',X95.,')')))
-}
 
 PathogensWithSequelae <- map(PathogenAssumptions,~ifelse(length(.x$sequelae),
                                                          .x$pathogen,

@@ -2,8 +2,13 @@
 library(tidyverse)
 library(grid)
 library(gridExtra)
+library(pluralize)
+library(stringr)
 
 source('RFiles/summaryFunctions.R')
+source('RFiles/Distributions.R')
+source('RFiles/ClassDefinitions.R')
+source('RFiles/Diseases.R')
 
 ## Load cost and epi estimates
 CostList <- readRDS('CostList.rds')
@@ -35,7 +40,8 @@ loadAttrProps <- function(ndraws){
                                               Dairy = runif(ndraws)),
               STEC = list(Beef = runif(ndraws)/10,
                           Chicken = runif(ndraws)/10,
-                          Pork = runif(ndraws)/10)) %>%
+                          Pork = runif(ndraws)/10,
+                          Eggs = runif(ndraws)/10)) %>%
     map(~{.x$AllFood = rep(1,ndraws); .x})
   out %>% map(~t(as.matrix(as.data.frame(.x))))
 }
@@ -48,7 +54,7 @@ warning('Code currently does not return an error if the food categories are diff
 CommonPathogens <- intersect(names(AttrProps), names(CostList))
 MissingPathogens <- setdiff(names(CostList), names(AttrProps))
 if(length(MissingPathogens)){
-warning('Attribution data is not available for some pathogens for which cost data is available:\n', paste0(MissingPathogens,col = ',\n'))
+  warning('Attribution data is not available for some pathogens for which cost data is available:\n', paste0(MissingPathogens,col = ',\n'))
 }
 ExtraPathogens <- setdiff(names(AttrProps),names(CostList))
 if(length(ExtraPathogens)){
@@ -65,21 +71,21 @@ rm(IncidenceList,HospList,DeathList)
 
 ##Attributed costs, cases, etc.
 CostList <- map2(CostList, AttrProps,
-                     function(.c, .a){
-                       map_depth(.c, 3, ~{as.list(as.data.frame(t(.x * .a)))})
-                       }
-                     )
+                 function(.c, .a){
+                   map_depth(.c, 3, ~{as.list(as.data.frame(t(.x * .a)))})
+                 }
+)
 EpiList <- map(EpiList,~{
   map2(.x,AttrProps,
        function(.e,.a){
          map_depth(.e,2,
                    function(.n){as.list(as.data.frame(t(.n * .a)))}
-                   )}
-       )}
-  )
+         )}
+  )}
+)
 
 
-#Tidy up attributed costs and epi figures ready for plotting and turning into figures
+####Tidy up attributed costs and epi figures ready for plotting and turning into figures
 
 #rectangualrise the nested lists
 CostList <- CostList %>% rectangle(names_to = c("Pathogen", "Disease",'Agegroup', "CostItem", "Source"), values_to = 'Cost')
@@ -93,31 +99,16 @@ CostList <- CostList %>%
                                    CostItem %in% WTPCat ~ 'WTP',
                                    TRUE ~ CostItem)) %>%
   group_by(across(-c(CostItem, Cost))) %>%
-  summarise(Cost = list(laddn(Cost, .n = 0)))
+  summarise(Cost = list(reduce(Cost, `+`)))
+
+#change specific initial illness names all to 'initial'
+CostList <- CostList %>% mutate(Disease = ifelse(Disease %in% names(SequelaeAssumptions), Disease, 'Initial'))
+EpiList <- EpiList %>% mutate(Disease = ifelse(Disease %in% names(SequelaeAssumptions), Disease, 'Initial'))
 
 #Make totals across agegroups, pathogens and diseases and then calculate quantiles
-appendGroupTotals <- function(.d, .col){
-  .d %>%
-    rename_with(function(.cn){if_else(.cn == .col, '...x', .cn)}) %>%
-    group_by(across(-c(...x, Agegroup))) %>%
-    bind_rows(.,summarise(.,...x = list(laddn(...x,.n=0))) %>% mutate(Agegroup = 'All Ages')) %>%
-    group_by(across(-c(...x, Disease))) %>%
-    bind_rows(.,summarise(.,...x = list(laddn(...x,.n=0))) %>% mutate(Disease = 'Initial and sequel disease')) %>%
-    group_by(across(-c(...x, Pathogen))) %>%
-    bind_rows(.,summarise(.,...x = list(laddn(...x,.n=0))) %>% mutate(Pathogen = 'All pathogens')) %>%
-    rename_with(function(.cn){if_else(.cn == '...x', .col, .cn)})
-}
-quantileListColumn <- function(.d, .col, probs = c(0.5,0.05,0.95)){
-  .d$out <- map(.d[,.col,drop = T],~quantile(.x, probs = probs))
-  .d %>%
-    unnest_wider(out) %>%
-    select(!all_of(.col))
-}
-
-CostList <- CostList %>% appendGroupTotals('Cost') %>% quantileListColumn('Cost') %>% rename(median = `50%`)
-EpiList <- EpiList %>% appendGroupTotals('Count') %>% quantileListColumn('Count') %>% rename(median = `50%`)
-
-
+group_cols <- list(Pathogen = 'All pathogens', Agegroup = 'All ages', `Disease` = 'Initial and sequel disease')
+CostList <- CostList %>% appendGroupTotals('Cost', group_cols) %>% quantileListColumn('Cost') %>% rename(median = `50%`)
+EpiList <- EpiList %>% appendGroupTotals('Count',group_cols) %>% quantileListColumn('Count') %>% rename(median = `50%`)
 
 ## Make the tables for the report
 
@@ -152,11 +143,11 @@ CostList %>%
       write_excel_csv(paste('AttributionReport/CostTable',
                             paste(.y,collapse = '.'),
                             'csv',sep = '.'))
-    })
+  })
 
 P.CostProp <- CostList %>%
   subset(Disease == "Initial and sequel disease" &
-           Agegroup == 'All Ages' &
+           Agegroup == 'All ages' &
            CostCategory == "TotalHumanCapital" &
            Pathogen != 'All pathogens') %>%
   mutate(SourceCat = if_else(Source == 'AllFood', 'All Food', "Individual Items"),
@@ -180,7 +171,7 @@ ggsave(filename = 'AttributionReport/CostBySourcePathogen.png',P.CostProp)
 
 P.CostPropAlt <- CostList %>%
   subset(Disease == "Initial and sequel disease" &
-           Agegroup == 'All Ages' &
+           Agegroup == 'All ages' &
            CostCategory == "TotalHumanCapital" &
            Source != 'AllFood') %>%
   mutate(PathogenCat = if_else(Pathogen == 'All pathogens', 'All Pathogens', "Individual Pathogens")) %>%
@@ -200,4 +191,145 @@ P.CostPropAlt$heights[13] <- unit(length(unique(CostList$Source))-1, "null")
 grid.newpage(); grid.draw(P.CostPropAlt)
 P.CostPropAlt <- arrangeGrob(P.CostPropAlt)
 ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt)
+
+
+## Generate summary sentences for each pathogen and for the top sources
+
+textlist <- function(cl, conj = 'and', oxford = TRUE){
+  n <- length(cl)
+  if(n == 0) return(character(0))
+  else if(n == 1) return(as.character(cl))
+  else if(n == 2) return(paste(cl[1], conj, cl[2]))
+  else return(paste0(paste(cl[1:(n-1)], collapse = ', '), if(oxford){','}else{''},' ', conj, ' ', cl[n]))
+}
+
+textCountObj <- function(n, name, plural = NULL){
+  plural <- pluralize(name)
+  if(n == 1){return(paste(n, name))}
+  else{return(paste(n, plural))}
+}
+
+matchVerbNoun <- function(verb, noun){
+  if(is_plural(noun)){
+    return(pluralize(verb))
+  }else{
+      return(singularize(verb))
+    }
+}
+
+attribtionSentencesPathogen <- function(pathogen){
+  cl <- CostList %>% subset(Pathogen == pathogen &
+                              Agegroup == 'All ages' &
+                              CostCategory == "TotalHumanCapital")
+  el <- EpiList %>% subset(Pathogen == pathogen &
+                             Agegroup == 'All ages')
+
+  InitDisease <- PathogenAssumptions[[pathogen]]$name
+  SequelDiseases <- names(PathogenAssumptions[[pathogen]]$sequelae)
+
+  TotalCost <- subset(cl, Source == 'AllFood' &
+                        Disease == 'Initial and sequel disease')$median #not tidied until later as it is needed for calculation fractions
+  CasesInit <- subset(el, Source == 'AllFood' &
+                        Measure == 'Cases' &
+                        Disease == 'Initial')$median %>% tidyNumber(unit = 1)
+  CasesSequel <- subset(el, Source == 'AllFood' &
+                          Measure == 'Cases' &
+                          Disease %in% SequelDiseases)$median %>% sum %>% tidyNumber(unit = 1)
+  Hosp <- subset(el, Source == 'AllFood' &
+                   Measure == 'Hospitalisations' &
+                   Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+  Deaths <- subset(el, Source == 'AllFood' &
+                     Measure == 'Deaths' &
+                     Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+  SourceCosts <-  subset(cl, Disease == 'Initial and sequel disease' & Source != 'AllFood') %>% arrange(desc(median))
+  SourcesOrdered <- SourceCosts$Source
+  SourceCostsOrdered <- SourceCosts$median
+  SourcePropOrdered <- round(SourceCostsOrdered/TotalCost* 100)
+  SourceCostsOrdered <- SourceCostsOrdered %>% tidyNumber(unit = 10^6, round = FALSE)
+  TotalCost <- TotalCost %>% tidyNumber(unit = 10^6, round = FALSE)
+
+
+  LeadingSourceCases <- subset(el, Source == SourcesOrdered[1] &
+                                 Measure == 'Cases' &
+                                 Disease == 'Initial')$median %>% tidyNumber(unit = 1)
+  LeadingSourceCasesSequel <- subset(el, Source == SourcesOrdered[1] &
+                                       Measure == 'Cases' &
+                                       Disease %in% SequelDiseases)$median %>% sum %>% tidyNumber(unit = 1)
+  LeadingSourceHosp <- subset(el, Source == SourcesOrdered[1] &
+                                Measure == 'Hospitalisations' &
+                                Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+  LeadingSourceDeaths <- subset(el, Source == SourcesOrdered[1] &
+                                  Measure == 'Deaths' &
+                                  Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+  hasSequel <- length(SequelDiseases) > 0
+  str_glue(
+    '{pathogen} resulted in an annual cost of approximately {TotalCost} million
+    AUD circa 2019 arising from {CasesInit} cases of',
+    if(hasSequel){' initial '}else{' '},'illness, ',
+    if(hasSequel){'{CasesSequel} cases of sequel illness ({textlist(tolower(SequelDiseases),conj = "or")}), '}else{''},
+    '{Hosp} hospitalisations, and {textCountObj(Deaths, "death")}. {SourcesOrdered[1]}
+    {matchVerbNoun("was",SourcesOrdered[1])} the leading source ({SourcePropOrdered[1]}%)
+    with a total annual cost of {SourceCostsOrdered[1]} million AUD arising from
+    {LeadingSourceCases} cases of', if(hasSequel){' initial '}else{' '},'illness, ',
+    if(hasSequel){'{LeadingSourceCasesSequel} cases of sequel illness, '}else{''},
+    '{LeadingSourceHosp} hospitalisations, and {LeadingSourceDeaths} deaths. The
+    next three most frequent sources were {tolower(SourcesOrdered[2])}
+    ({SourcePropOrdered[2]}%), {tolower(SourcesOrdered[3])} ({SourcePropOrdered[3]}%),
+    and {tolower(SourcesOrdered[4])} ({SourcePropOrdered[4]}%).'
+  ) %>%
+    gsub('\n',' ',., fixed = TRUE)
+}
+
+attributionSentencesSource <- function(){
+  cl <- CostList %>% subset(Agegroup == 'All ages' &
+                              CostCategory == "TotalHumanCapital")
+  el <- EpiList %>% subset(Measure == 'Cases' &
+                             Agegroup == 'All ages'&
+                             Disease == 'Initial')
+
+  SourceCosts <-  subset(cl, Disease == 'Initial and sequel disease' &
+                           Pathogen == 'All pathogens' &
+                           Source != 'AllFood') %>% arrange(desc(median))
+  SourcesCostOrdered <- SourceCosts$Source
+  SourcesCostOrderedCosts <- SourceCosts$median %>% tidyNumber(unit = 10^6, round = FALSE)
+
+  LeadingSourceCosts <- subset(cl, Disease == 'Initial and sequel disease' &
+                                 Pathogen != 'All pathogens' &
+                                 Source == SourcesCostOrdered[1]) %>% arrange(desc(median))
+  PathogensCostOrdered <- LeadingSourceCosts$Pathogen
+  PathogensCostOrderedCosts <- LeadingSourceCosts$median %>% tidyNumber(unit = 10^6, round = FALSE)
+
+  ## Sources by number of
+  SourceCases <-  subset(el, Pathogen == 'All pathogens' &
+                           Source != 'AllFood') %>% arrange(desc(median))
+  SourcesCaseOrdered <- SourceCases$Source
+  SourcesCaseOrderedCases <- SourceCases$median %>% tidyNumber(unit = 1, round = TRUE)
+
+  LeadingSourceCases <- subset(el, Pathogen != 'All pathogens' &
+                                 Source == SourcesCaseOrdered[1]) %>% arrange(desc(median))
+  PathogensCaseOrdered <- LeadingSourceCases$Pathogen
+  PathogensCaseOrderedCases <- LeadingSourceCases$median %>% tidyNumber(unit = 1, round = TRUE)
+
+  str_glue(
+    'Among the pathogens and food categories considered, {tolower(SourcesCostOrdered[1])} was
+    associated with the greatest cost of foodborne illness, with a total cost of
+    {SourcesCostOrderedCosts[1]} million AUD. Of this total ',
+    textlist(glue('{PathogensCostOrderedCosts} million AUD was due to {PathogensCostOrdered}')),
+    '. The food category associated with the most cases of foodborne illness circa 2019
+    was', if(SourcesCaseOrdered[1] == SourcesCostOrdered[1]){' also '}else{' '},
+    '{tolower(SourcesCaseOrdered[1])}, with a total burden of {SourcesCaseOrderedCases[1]} cases. Of this total, ',
+    textlist(glue('{PathogensCaseOrderedCases} cases were due to {PathogensCaseOrdered}')),'.'
+  )%>%
+    gsub('\n',' ',., fixed = TRUE)
+}
+
+attributionSentencesSource() %>% write_lines('AttributionReport/PathogenAttributionSummariesText.txt',
+                                             sep = '\n\n')
+
+CommonPathogens %>%
+  map(attribtionSentencesPathogen) %>%
+  write_lines('AttributionReport/PathogenAttributionSummariesText.txt',
+              sep = '\n\n', append = TRUE)
+
+
 
