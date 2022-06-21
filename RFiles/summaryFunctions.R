@@ -113,3 +113,19 @@ medianCIformat <- function(df,unit = 1000,newline = TRUE,round = FALSE,digits.ro
                           median,
                           paste0(median, ifelse(newline,'\n',' '), '(',X5.,' - ',X95.,')')))
 }
+
+
+
+group_map_named <- function(.data, .f, ..., .keep = FALSE){
+  group_vars <- .data %>% group_keys %>% colnames
+  ngv <- length(group_vars)
+  if(ngv == 1){
+    group_map(.data, .f, ..., .keep = .keep) %>% `names<-`(.data %>% group_keys %>% unlist)
+  }else if(ngv > 1){
+    .data <- .data %>% ungroup %>% group_by(across(all_of(group_vars[1])))
+    .data %>% group_map(~{.x %>%
+        group_by(across(all_of(group_vars[2:ngv]))) %>%
+        group_map_named(.f, ..., .keep = .keep)}) %>%
+      `names<-`(.data %>% group_keys %>% unlist)
+  }
+}

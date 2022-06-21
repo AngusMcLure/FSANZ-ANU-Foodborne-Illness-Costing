@@ -4,6 +4,7 @@ library(grid)
 library(gridExtra)
 library(pluralize)
 library(stringr)
+library(glue)
 
 source('RFiles/summaryFunctions.R')
 source('RFiles/Distributions.R')
@@ -17,33 +18,25 @@ HospList <- readRDS('HospList.rds')
 IncidenceList <- readRDS('IncidenceList.rds')
 
 ## This kind of trimming doesn't quite work for Costs since some costs only have a single 0 element so selecting 1:100 produces many NAs
-#trim <- 100
-#CostList <- CostList %>% map_depth(4,~.x[1:trim])
-#DeathList <- DeathList %>% map_depth(3,~.x[1:trim])
-#HospList <- HospList %>% map_depth(3,~.x[1:trim])
-#IncidenceList <- IncidenceList %>% map_depth(3,~.x[1:trim])
+trim <- 10000
+CostList <- CostList %>% map_depth(4,~.x[1:min(trim,length(.x))])
+DeathList <- DeathList %>% map_depth(3,~.x[1:min(trim,length(.x))])
+HospList <- HospList %>% map_depth(3,~.x[1:min(trim,length(.x))])
+IncidenceList <- IncidenceList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 
 ## Load attribution proportions
 ndraws <- length(CostList[[1]][[1]][[1]][[1]])
 loadAttrProps <- function(ndraws){
-  out <- list(`Non-typhoidal Salmonella` = list(Beef = runif(ndraws)/10,
-                                                Chicken = runif(ndraws) * 0.8,
-                                                Pork = runif(ndraws)/10,
-                                                Eggs = runif(ndraws) * 0.8),
-              Norovirus = list(Beef = runif(ndraws)/10,
-                               Chicken = runif(ndraws)/10,
-                               Pork = runif(ndraws)/10,
-                               Eggs = runif(ndraws)/10),
-              `Listeria monocytogenes` = list(Beef = runif(ndraws)/10,
-                                              Chicken = runif(ndraws)/10,
-                                              Pork = runif(ndraws)/10,
-                                              Dairy = runif(ndraws)),
-              STEC = list(Beef = runif(ndraws)/10,
-                          Chicken = runif(ndraws)/10,
-                          Pork = runif(ndraws)/10,
-                          Eggs = runif(ndraws)/10)) %>%
-    map(~{.x$AllFood = rep(1,ndraws); .x})
-  out %>% map(~t(as.matrix(as.data.frame(.x))))
+  Attr <- readxl::read_excel('Data/AttributionProportions.xlsx',sheet = 'Gamma parameters') %>%
+    mutate(across(c(shape, rate), .f  = ~as.numeric(na_if(.x, "NA")))) %>%
+    mutate(Commodity = gsub('.', ' ', Commodity, fixed = TRUE)) %>% #tidying up commodity names to remove any periods
+    drop_na
+
+  Attr <- Attr %>% group_by(Pathogen, Commodity) %>%
+    group_map_named(~{#print(1 - pgamma(1, shape = .x$shape, rate  = .x$rate))
+      rgamma(ndraws, shape = .x$shape, rate  = .x$rate)}) %>%
+    map(~{.x$AllFood = rep(1,ndraws); .x}) %>%
+    map(~t(as.matrix(as.data.frame(.x,check.names = FALSE))))
 }
 
 AttrProps <- loadAttrProps(ndraws)
@@ -145,13 +138,21 @@ CostList %>%
                             'csv',sep = '.'))
   })
 
+FoodCatOrdered <- CostList %>% subset(Pathogen == 'All pathogens' &
+                                           CostCategory == 'TotalHumanCapital' &
+                                           Agegroup == 'All ages' &
+                                           Disease == "Initial and sequel disease") %>%
+  arrange(median) %>% `[`(,'Source', drop = TRUE)
 P.CostProp <- CostList %>%
   subset(Disease == "Initial and sequel disease" &
            Agegroup == 'All ages' &
            CostCategory == "TotalHumanCapital" &
            Pathogen != 'All pathogens') %>%
   mutate(SourceCat = if_else(Source == 'AllFood', 'All Food', "Individual Items"),
-         Source = recode(Source, AllFood = 'All Food')) %>%
+         Source = factor(Source,FoodCatOrdered),
+         Source = recode(Source, AllFood = 'All Food'),
+         Source = fct_relevel(Source, 'Other', after = 0)
+         ) %>%
   ggplot(aes(x = Source,
              y = median/10^6,
              fill = Pathogen,
@@ -160,7 +161,8 @@ P.CostProp <- CostList %>%
   xlab('Food product') +
   ylab('Annual cost (millions AUD)') +
   coord_flip() +
-  facet_wrap(vars(SourceCat), scales = 'free',nrow = 2)
+  facet_wrap(vars(SourceCat), scales = 'free',nrow = 2) +
+  theme(legend.position = c(0.70, 0.25))
 P.CostProp
 P.CostProp <- ggplotGrob(P.CostProp)
 P.CostProp$heights[8] <- unit(1, "null")
@@ -187,7 +189,7 @@ P.CostPropAlt <- CostList %>%
 P.CostPropAlt
 P.CostPropAlt <- ggplotGrob(P.CostPropAlt)
 P.CostPropAlt$heights[8] <- unit(1, "null")
-P.CostPropAlt$heights[13] <- unit(length(unique(CostList$Source))-1, "null")
+P.CostPropAlt$heights[13] <- unit(length(unique(CostList$Pathogen))-1, "null")
 grid.newpage(); grid.draw(P.CostPropAlt)
 P.CostPropAlt <- arrangeGrob(P.CostPropAlt)
 ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt)
@@ -311,9 +313,10 @@ attributionSentencesSource <- function(){
   PathogensCaseOrderedCases <- LeadingSourceCases$median %>% tidyNumber(unit = 1, round = TRUE)
 
   str_glue(
-    'Among the pathogens and food categories considered, {tolower(SourcesCostOrdered[1])} was
-    associated with the greatest cost of foodborne illness, with a total cost of
-    {SourcesCostOrderedCosts[1]} million AUD. Of this total ',
+    'Among the pathogens and food categories considered, {tolower(SourcesCostOrdered[1])}
+    {matchVerbNoun("was",SourcesCostOrdered[1])} associated with the greatest cost
+    of foodborne illness, with a total cost of {SourcesCostOrderedCosts[1]} million AUD.
+    Of this total, ',
     textlist(glue('{PathogensCostOrderedCosts} million AUD was due to {PathogensCostOrdered}')),
     '. The food category associated with the most cases of foodborne illness circa 2019
     was', if(SourcesCaseOrdered[1] == SourcesCostOrdered[1]){' also '}else{' '},
