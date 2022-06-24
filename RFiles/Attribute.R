@@ -17,7 +17,7 @@ DeathList <- readRDS('DeathList.rds')
 HospList <- readRDS('HospList.rds')
 IncidenceList <- readRDS('IncidenceList.rds')
 
-## This kind of trimming doesn't quite work for Costs since some costs only have a single 0 element so selecting 1:100 produces many NAs
+## Reduce size of files by dropping most draws from the distributions. Since some costs only have a single 0 element simply selecting 1:trim produces many NAs
 trim <- 10000
 CostList <- CostList %>% map_depth(4,~.x[1:min(trim,length(.x))])
 DeathList <- DeathList %>% map_depth(3,~.x[1:min(trim,length(.x))])
@@ -36,7 +36,8 @@ loadAttrProps <- function(ndraws){
     group_map_named(~{#print(1 - pgamma(1, shape = .x$shape, rate  = .x$rate))
       rgamma(ndraws, shape = .x$shape, rate  = .x$rate)}) %>%
     map(~{.x$AllFood = rep(1,ndraws); .x}) %>%
-    map(~t(as.matrix(as.data.frame(.x,check.names = FALSE))))
+    map(~as.matrix(as.data.frame(.x,check.names = FALSE)))
+  Attr
 }
 
 AttrProps <- loadAttrProps(ndraws)
@@ -65,14 +66,14 @@ rm(IncidenceList,HospList,DeathList)
 ##Attributed costs, cases, etc.
 CostList <- map2(CostList, AttrProps,
                  function(.c, .a){
-                   map_depth(.c, 3, ~{as.list(as.data.frame(t(.x * .a)))})
+                   map_depth(.c, 3, ~{as.list(as.data.frame(.x * .a))})
                  }
 )
 EpiList <- map(EpiList,~{
   map2(.x,AttrProps,
        function(.e,.a){
          map_depth(.e,2,
-                   function(.n){as.list(as.data.frame(t(.n * .a)))}
+                   function(.n){as.list(as.data.frame(.n * .a))}
          )}
   )}
 )
@@ -138,38 +139,74 @@ CostList %>%
                             'csv',sep = '.'))
   })
 
+#Order Food by cost
 FoodCatOrdered <- CostList %>% subset(Pathogen == 'All pathogens' &
                                            CostCategory == 'TotalHumanCapital' &
                                            Agegroup == 'All ages' &
                                            Disease == "Initial and sequel disease") %>%
   arrange(median) %>% `[`(,'Source', drop = TRUE)
-P.CostProp <- CostList %>%
+
+#Combine the summary data for cost and epi
+CombinedSummaries <- EpiList %>% ungroup %>%
+  bind_rows(CostList %>% ungroup %>%
+              subset(CostCategory == 'TotalHumanCapital') %>%
+              select(-CostCategory) %>%
+              mutate(Measure = 'Cost')
+  ) %>%
   subset(Disease == "Initial and sequel disease" &
-           Agegroup == 'All ages' &
-           CostCategory == "TotalHumanCapital" &
-           Pathogen != 'All pathogens') %>%
+           Agegroup == 'All ages') %>%
   mutate(SourceCat = if_else(Source == 'AllFood', 'All Food', "Individual Items"),
+         #Source = factor(Source,FoodCatOrderedCases),
          Source = factor(Source,FoodCatOrdered),
          Source = recode(Source, AllFood = 'All Food'),
          Source = fct_relevel(Source, 'Other', after = 0)
-         ) %>%
+  )
+
+P.CostProp <- CombinedSummaries %>%
+  subset(Measure == "Cost" &
+           Pathogen != 'All pathogens') %>%
   ggplot(aes(x = Source,
-             y = median/10^6,
+             y = median * 10^-6,
              fill = Pathogen,
-             label = round(median/10^6))) +
+             label = round(median * 10^-6))) +
   geom_bar(stat = 'identity') +
   xlab('Food product') +
   ylab('Annual cost (millions AUD)') +
   coord_flip() +
-  facet_wrap(vars(SourceCat), scales = 'free',nrow = 2) +
-  theme(legend.position = c(0.70, 0.25))
+  ggh4x::facet_grid2("SourceCat", scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
+  theme(legend.position = c(0.70, 0.25),
+        strip.text.y = element_blank())
 P.CostProp
-P.CostProp <- ggplotGrob(P.CostProp)
-P.CostProp$heights[8] <- unit(1, "null")
-P.CostProp$heights[13] <- unit(length(unique(CostList$Source))-1, "null")
-grid.newpage(); grid.draw(P.CostProp)
-P.CostProp <- arrangeGrob(P.CostProp)
 ggsave(filename = 'AttributionReport/CostBySourcePathogen.png',P.CostProp)
+
+### Figure for proportion of cases and deaths by food and pathogen
+
+P.EpiProp <- CombinedSummaries %>%
+  subset(Pathogen != 'All pathogens')
+  mutate(median = if_else(Measure == 'Cases', median/1000,
+                          if_else(Measure == "Costs", median/1000000, median))) %>%
+  mutate(Measure = recode(Measure,
+                          Cases = 'Cases (thousands)',
+                          Cost = 'Cost (millions AUD)')) %>%
+  mutate(Measure = factor(Measure, levels = c('Cases (thousands)', 'Hospitalisations', "Deaths",
+                                              'Cost (millions AUD)'))) %>%
+  ggplot(aes(x = Source,
+             y = median,
+             fill = Pathogen,
+             label = round(median/10^6))) +
+  geom_bar(stat = 'identity') +
+  xlab('Food product') +
+  ylab('') +
+  coord_flip() +
+  ggh4x::facet_grid2(SourceCat~Measure, scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
+  theme(legend.position = 'bottom', legend.direction = 'horizontal',
+    #legend.position = c(0.9,0.125),
+        strip.placement = 'outside',
+        strip.text.y = element_blank(),
+        strip.background.x = element_rect('white'))
+P.EpiProp
+ggsave(filename = 'AttributionReport/EpiBySourcePathogen.png',P.EpiProp, width = 11)
+
 
 P.CostPropAlt <- CostList %>%
   subset(Disease == "Initial and sequel disease" &
@@ -194,6 +231,13 @@ grid.newpage(); grid.draw(P.CostPropAlt)
 P.CostPropAlt <- arrangeGrob(P.CostPropAlt)
 ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt)
 
+
+## Calculate cost per case by food product
+
+CombinedSummaries %>% select(-c(`5%`,`95%`)) %>%
+  pivot_wider(names_from = Measure, values_from = median) %>%
+  mutate(CostPerCase = Cost/Cases) %>%
+  subset(Pathogen == "All pathogens")
 
 ## Generate summary sentences for each pathogen and for the top sources
 
