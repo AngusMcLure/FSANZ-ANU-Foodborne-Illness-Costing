@@ -182,9 +182,9 @@ ggsave(filename = 'AttributionReport/CostBySourcePathogen.png',P.CostProp)
 ### Figure for proportion of cases and deaths by food and pathogen
 
 P.EpiProp <- CombinedSummaries %>%
-  subset(Pathogen != 'All pathogens')
+  subset(Pathogen != 'All pathogens') %>%
   mutate(median = if_else(Measure == 'Cases', median/1000,
-                          if_else(Measure == "Costs", median/1000000, median))) %>%
+                          if_else(Measure == "Cost", median/1000000, median))) %>%
   mutate(Measure = recode(Measure,
                           Cases = 'Cases (thousands)',
                           Cost = 'Cost (millions AUD)')) %>%
@@ -234,11 +234,15 @@ ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt)
 
 ## Calculate cost per case by food product
 
-CombinedSummaries %>% select(-c(`5%`,`95%`)) %>%
+CostPerCase <- CombinedSummaries %>% select(-c(`5%`,`95%`,Agegroup,SourceCat,Disease)) %>%
   pivot_wider(names_from = Measure, values_from = median) %>%
-  mutate(CostPerCase = Cost/Cases) %>%
-  subset(Pathogen == "All pathogens")
-
+  mutate(`Cost per case (AUD)` = signif(Cost/Cases,3),
+         `Hospitalisations per million cases` = signif(Hospitalisations/Cases * 1000000,3),
+         `Deaths per million cases` = signif(Deaths/Cases * 1000000,3)) %>%
+  subset(Pathogen == "All pathogens") %>%
+  select(!c(Pathogen, Cost, Deaths, Hospitalisations)) %>%
+  arrange(`Cost per case (AUD)`)
+CostPerCase %>% write.csv('AttributionReport/CostPerCaseByFood.csv')
 ## Generate summary sentences for each pathogen and for the top sources
 
 textlist <- function(cl, conj = 'and', oxford = TRUE){
