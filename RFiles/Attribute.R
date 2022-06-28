@@ -25,6 +25,12 @@ DeathList <- DeathList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 HospList <- HospList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 IncidenceList <- IncidenceList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 
+## Reduce CostList further by dropping unused cost measures --- The below should all work with all kinds of costs split up, but these aren't been used for now
+
+UsedCosts <- c('TotalHumanCapital')
+CostList <- CostList %>% map_depth(3, ~.x[UsedCosts])
+
+
 ## Load attribution proportions
 ndraws <- length(CostList[[1]][[1]][[1]][[1]])
 loadAttrProps <- function(ndraws){
@@ -112,7 +118,7 @@ EpiList %>%
   subset(Pathogen == 'All pathogens'  & Disease == "Initial") %>%
   ungroup %>%
   group_by(Measure) %>%
-  group_walk(~{ print(.y);.x %>%
+  group_walk(~{.x %>%
       rename(X5. = '5%', X95. = '95%') %>%
       medianCIformat(unit = 1) %>%
       select(Agegroup, Source, Count = Cost) %>%
