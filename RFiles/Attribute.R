@@ -1,15 +1,16 @@
 ##### Calculate attributed cases and costs for food-borne pathogens
 library(tidyverse)
-library(grid)
-library(gridExtra)
 library(pluralize)
 library(stringr)
 library(glue)
+library(english)
 
 source('RFiles/summaryFunctions.R')
 source('RFiles/Distributions.R')
 source('RFiles/ClassDefinitions.R')
 source('RFiles/Diseases.R')
+
+set.seed(20220628)
 
 ## Load cost and epi estimates
 CostList <- readRDS('CostList.rds')
@@ -18,7 +19,7 @@ HospList <- readRDS('HospList.rds')
 IncidenceList <- readRDS('IncidenceList.rds')
 
 ## Reduce size of files by dropping most draws from the distributions. Since some costs only have a single 0 element simply selecting 1:trim produces many NAs
-trim <- 10000
+trim <- 10^5
 CostList <- CostList %>% map_depth(4,~.x[1:min(trim,length(.x))])
 DeathList <- DeathList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 HospList <- HospList %>% map_depth(3,~.x[1:min(trim,length(.x))])
@@ -81,7 +82,7 @@ EpiList <- map(EpiList,~{
 
 ####Tidy up attributed costs and epi figures ready for plotting and turning into figures
 
-#rectangualrise the nested lists
+#rectangularise the nested lists
 CostList <- CostList %>% rectangle(names_to = c("Pathogen", "Disease",'Agegroup', "CostItem", "Source"), values_to = 'Cost')
 EpiList <- EpiList %>% rectangle(names_to = c("Measure","Pathogen", "Disease",'Agegroup', "Source"), values_to = 'Count')
 
@@ -108,15 +109,15 @@ EpiList <- EpiList %>% appendGroupTotals('Count',group_cols) %>% quantileListCol
 
 #Epi tables
 EpiList %>%
-  subset(Pathogen == 'All pathogens'  & Disease == "Initial and sequel disease") %>%
+  subset(Pathogen == 'All pathogens'  & Disease == "Initial") %>%
   ungroup %>%
   group_by(Measure) %>%
-  group_walk(~{ .x %>%
+  group_walk(~{ print(.y);.x %>%
       rename(X5. = '5%', X95. = '95%') %>%
       medianCIformat(unit = 1) %>%
       select(Agegroup, Source, Count = Cost) %>%
       pivot_wider(names_from = Agegroup, values_from = Count) %>%
-      mutate(Source = factor(Source) %>% fct_relevel('AllFood', after = Inf)) %>%
+      mutate(Source = factor(Source) %>% fct_relevel('Other','AllFood', after = Inf)) %>%
       arrange(Source) %>%
       write_excel_csv(paste('AttributionReport/EpiTable',
                             paste(.y,collapse = '.'),
@@ -130,9 +131,10 @@ CostList %>%
   group_walk(~{.x %>%
       rename(X5. = '5%', X95. = '95%') %>%
       medianCIformat() %>%
+      mutate(Cost = if_else(Cost == "0", "0*", Cost)) %>%
       select(Agegroup, Source, Cost) %>%
       pivot_wider(names_from = Agegroup, values_from = Cost) %>%
-      mutate(Source = factor(Source) %>% fct_relevel('AllFood', after = Inf)) %>%
+      mutate(Source = factor(Source) %>% fct_relevel('Other','AllFood', after = Inf)) %>%
       arrange(Source) %>%
       write_excel_csv(paste('AttributionReport/CostTable',
                             paste(.y,collapse = '.'),
@@ -222,13 +224,11 @@ P.CostPropAlt <- CostList %>%
   xlab('Pathogen') +
   ylab('Annual cost (millions AUD)') +
   coord_flip() +
-  facet_wrap(vars(PathogenCat), scales = 'free',nrow = 2)
+  ggh4x::facet_grid2(PathogenCat~., scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
+  theme(strip.placement = 'outside',
+                strip.text.y = element_blank())
+
 P.CostPropAlt
-P.CostPropAlt <- ggplotGrob(P.CostPropAlt)
-P.CostPropAlt$heights[8] <- unit(1, "null")
-P.CostPropAlt$heights[13] <- unit(length(unique(CostList$Pathogen))-1, "null")
-grid.newpage(); grid.draw(P.CostPropAlt)
-P.CostPropAlt <- arrangeGrob(P.CostPropAlt)
 ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt)
 
 
@@ -255,7 +255,7 @@ textlist <- function(cl, conj = 'and', oxford = TRUE){
 
 textCountObj <- function(n, name, plural = NULL){
   plural <- pluralize(name)
-  if(n == 1){return(paste(n, name))}
+  if(n == 1 || n == 'one'){return(paste(n, name))}
   else{return(paste(n, plural))}
 }
 
@@ -270,9 +270,11 @@ matchVerbNoun <- function(verb, noun){
 attribtionSentencesPathogen <- function(pathogen){
   cl <- CostList %>% subset(Pathogen == pathogen &
                               Agegroup == 'All ages' &
-                              CostCategory == "TotalHumanCapital")
+                              CostCategory == "TotalHumanCapital" &
+                              median != 0)
   el <- EpiList %>% subset(Pathogen == pathogen &
-                             Agegroup == 'All ages')
+                             Agegroup == 'All ages' &
+                             median != 0)
 
   InitDisease <- PathogenAssumptions[[pathogen]]$name
   SequelDiseases <- names(PathogenAssumptions[[pathogen]]$sequelae)
@@ -281,16 +283,16 @@ attribtionSentencesPathogen <- function(pathogen){
                         Disease == 'Initial and sequel disease')$median #not tidied until later as it is needed for calculation fractions
   CasesInit <- subset(el, Source == 'AllFood' &
                         Measure == 'Cases' &
-                        Disease == 'Initial')$median %>% tidyNumber(unit = 1)
+                        Disease == 'Initial')$median %>% tidyNumber(unit = 1, max.word = 21)
   CasesSequel <- subset(el, Source == 'AllFood' &
                           Measure == 'Cases' &
-                          Disease %in% SequelDiseases)$median %>% sum %>% tidyNumber(unit = 1)
+                          Disease %in% SequelDiseases)$median %>% sum %>% tidyNumber(unit = 1, max.word = 21)
   Hosp <- subset(el, Source == 'AllFood' &
                    Measure == 'Hospitalisations' &
-                   Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+                   Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1, max.word = 21)
   Deaths <- subset(el, Source == 'AllFood' &
                      Measure == 'Deaths' &
-                     Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+                     Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1, max.word = 21)
   SourceCosts <-  subset(cl, Disease == 'Initial and sequel disease' & Source != 'AllFood') %>% arrange(desc(median))
   SourcesOrdered <- SourceCosts$Source
   SourceCostsOrdered <- SourceCosts$median
@@ -301,16 +303,16 @@ attribtionSentencesPathogen <- function(pathogen){
 
   LeadingSourceCases <- subset(el, Source == SourcesOrdered[1] &
                                  Measure == 'Cases' &
-                                 Disease == 'Initial')$median %>% tidyNumber(unit = 1)
+                                 Disease == 'Initial')$median %>% tidyNumber(unit = 1, max.word = 21)
   LeadingSourceCasesSequel <- subset(el, Source == SourcesOrdered[1] &
                                        Measure == 'Cases' &
-                                       Disease %in% SequelDiseases)$median %>% sum %>% tidyNumber(unit = 1)
+                                       Disease %in% SequelDiseases)$median %>% sum %>% tidyNumber(unit = 1, max.word = 21)
   LeadingSourceHosp <- subset(el, Source == SourcesOrdered[1] &
                                 Measure == 'Hospitalisations' &
-                                Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+                                Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1, max.word = 21)
   LeadingSourceDeaths <- subset(el, Source == SourcesOrdered[1] &
                                   Measure == 'Deaths' &
-                                  Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1)
+                                  Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1, max.word = 21)
   hasSequel <- length(SequelDiseases) > 0
   str_glue(
     '{pathogen} resulted in an annual cost of approximately {TotalCost} million
@@ -322,21 +324,25 @@ attribtionSentencesPathogen <- function(pathogen){
     with a total annual cost of {SourceCostsOrdered[1]} million AUD arising from
     {LeadingSourceCases} cases of', if(hasSequel){' initial '}else{' '},'illness, ',
     if(hasSequel){'{LeadingSourceCasesSequel} cases of sequel illness, '}else{''},
-    '{LeadingSourceHosp} hospitalisations, and {LeadingSourceDeaths} deaths. The
-    next three most frequent sources were {tolower(SourcesOrdered[2])}
-    ({SourcePropOrdered[2]}%), {tolower(SourcesOrdered[3])} ({SourcePropOrdered[3]}%),
-    and {tolower(SourcesOrdered[4])} ({SourcePropOrdered[4]}%).'
+    '{LeadingSourceHosp} hospitalisations, and {textCountObj(LeadingSourceDeaths, "death")}. The
+    next three most frequent sources were ',
+    textlist(glue('{tolower(SourcesOrdered[2:4])} ({SourcePropOrdered[2:4]}%)')), '.'
   ) %>%
     gsub('\n',' ',., fixed = TRUE)
 }
 
 attributionSentencesSource <- function(){
   cl <- CostList %>% subset(Agegroup == 'All ages' &
-                              CostCategory == "TotalHumanCapital")
+                              CostCategory == "TotalHumanCapital" &
+                              median != 0)
   el <- EpiList %>% subset(Measure == 'Cases' &
                              Agegroup == 'All ages'&
-                             Disease == 'Initial')
-
+                             Disease == 'Initial' &
+                             median != 0)
+  PathogenNames <- setdiff(unique(CostList$Pathogen), 'All pathogens')
+  TotalCost <- subset(cl, Disease == 'Initial and sequel disease' &
+                        Pathogen == 'All pathogens' &
+                        Source == 'AllFood')$median %>% tidyNumber(unit = 10^6, round = FALSE)
   SourceCosts <-  subset(cl, Disease == 'Initial and sequel disease' &
                            Pathogen == 'All pathogens' &
                            Source != 'AllFood') %>% arrange(desc(median))
@@ -350,18 +356,22 @@ attributionSentencesSource <- function(){
   PathogensCostOrderedCosts <- LeadingSourceCosts$median %>% tidyNumber(unit = 10^6, round = FALSE)
 
   ## Sources by number of
+  TotalCases <- subset(el, Pathogen == 'All pathogens' &
+                         Source == 'AllFood')$median %>% tidyNumber(unit = 1, max.word = 21)
   SourceCases <-  subset(el, Pathogen == 'All pathogens' &
                            Source != 'AllFood') %>% arrange(desc(median))
   SourcesCaseOrdered <- SourceCases$Source
-  SourcesCaseOrderedCases <- SourceCases$median %>% tidyNumber(unit = 1, round = TRUE)
+  SourcesCaseOrderedCases <- SourceCases$median %>% tidyNumber(unit = 1, max.word = 21)
 
   LeadingSourceCases <- subset(el, Pathogen != 'All pathogens' &
                                  Source == SourcesCaseOrdered[1]) %>% arrange(desc(median))
   PathogensCaseOrdered <- LeadingSourceCases$Pathogen
-  PathogensCaseOrderedCases <- LeadingSourceCases$median %>% tidyNumber(unit = 1, round = TRUE)
+  PathogensCaseOrderedCases <- LeadingSourceCases$median %>% tidyNumber(unit = 1, max.word = 21)
 
   str_glue(
-    'Among the pathogens and food categories considered, {tolower(SourcesCostOrdered[1])}
+    textlist(glue('{PathogenNames}')),
+    ' have an estimated annual burden of {TotalCases} cases and {TotalCost} million AUD.
+    Among the pathogens and food categories considered, {tolower(SourcesCostOrdered[1])}
     {matchVerbNoun("was",SourcesCostOrdered[1])} associated with the greatest cost
     of foodborne illness, with a total cost of {SourcesCostOrderedCosts[1]} million AUD.
     Of this total, ',
@@ -382,5 +392,9 @@ CommonPathogens %>%
   write_lines('AttributionReport/PathogenAttributionSummariesText.txt',
               sep = '\n\n', append = TRUE)
 
+
+#Write Cost and Epi List summaries for further analysis -- e.g. could be used to build an interactive tool
+write.csv(CostList, 'AttributionReport/AttrCostTable.csv')
+write.csv(EpiList, 'AttributionReport/EpiCostTable.csv')
 
 

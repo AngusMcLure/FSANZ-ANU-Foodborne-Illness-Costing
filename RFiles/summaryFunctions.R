@@ -93,16 +93,20 @@ quantileListColumn <- function(.d, .col, probs = c(0.5,0.05,0.95)){
     select(!all_of(.col))
 }
 
-tidyNumber <- function(n,unit = 1000, round = TRUE, digits.round = 0, sf = 3){
-  format(ifelse(n/unit<10^sf & round, round(n/unit,digits = digits.round),signif(n/unit,sf)), #format to three significant figures (potentially rounding to closest integer)
-         big.mark = ",",
-         scientific = FALSE,
-         nsmall = 0,
-         trim = T,
-         drop0trailing = TRUE)
+tidyNumber <- function(n,unit = 1000, round = TRUE, digits.round = 0, sf = 3, max.word = 0){
+  ifelse(round & digits.round <= 0 & abs(n/unit) < max.word,
+         paste0(ifelse(sign(n/unit) == -1,'negative ',''),
+                english::english(abs(round(n/unit, digits = digits.round)))),
+         format(ifelse(n/unit<10^sf & round, round(n/unit,digits = digits.round),signif(n/unit,sf)), #format to three significant figures (potentially rounding to closest integer)
+                big.mark = ",",
+                scientific = FALSE,
+                nsmall = 0,
+                trim = T,
+                drop0trailing = TRUE)
+         )
 }
 
-medianCIformat <- function(df,unit = 1000,newline = TRUE,round = FALSE,digits.round = NULL,dropnullinterval = TRUE){
+medianCIformat <- function(df,unit = 1000,newline = TRUE,round = FALSE,digits.round = 0,dropnullinterval = TRUE){
   df %>%
     mutate(across(c(X5.,X95.,median),~tidyNumber(.x,unit, round, digits.round))) %>%
     mutate(across(c(X5.,X95.),           #remove intervals when they are the same as the point estimate
