@@ -60,7 +60,7 @@ P.TotalCost <-  CostTotals %>%
   coord_flip() +
   theme(legend.position = c(0.75, 0.25))
 P.TotalCost
-ggsave(P.TotalCost,filename = 'Report/TotalCostBCatSequel.png')
+ggsave(P.TotalCost,filename = 'Report/TotalCostBCatSequel.png', width = 1904, height = 1512, unit = 'px')
 
 P.CostPerPase <- CostPerCase %>%
   select(-c(X, X5., X95.)) %>%
@@ -78,7 +78,7 @@ P.CostPerPase <- CostPerCase %>%
   theme(legend.position = c(0.75, 0.15))
 P.CostPerPase
 ggplotly(P.CostPerPase)
-ggsave(P.CostPerPase,filename = 'Report/CostPerCase.png')
+ggsave(P.CostPerPase,filename = 'Report/CostPerCase.png', width = 1904, height = 1512, units = 'px')
 
 ggsave(P.CostPerPase + theme(text = element_text(size = 14),
                              axis.title.y=element_blank(),
@@ -124,7 +124,7 @@ P.AllGastroByCat <- CostAllGastro %>%
   theme(legend.position = c(0.75, 0.15))
 
 P.AllGastroByCat
-ggsave(P.AllGastroByCat, filename = 'Report/CostAllGastroByCat.png')
+ggsave(P.AllGastroByCat, filename = 'Report/CostAllGastroByCat.png', width = 1904, height = 1512, units = 'px')
 
 #######################################
 # Figures for paper and presentations #
