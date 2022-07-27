@@ -31,6 +31,7 @@ CostSummaries.Categorised <- read.csv('./Outputs/CostTableCategories.csv') %>%
                            Deaths = "Premature Mortality",
                            HumanCapital = 'Non-fatal productivity losses'))
 
+
 PathogenByCost <- CostSummaries.Detailed %>%
   subset(!(Pathogen %in% c("All pathogens", "All gastro pathogens")) &
            Disease == 'Initial and sequel disease' &
@@ -44,6 +45,26 @@ CostTotals <- CostSummaries.Categorised %>%
          SequelOrInitial = forcats::fct_rev(SequelOrInitial)) %>%
   group_by(CostItem, SequelOrInitial, Pathogen) %>%
   summarise(`Annual cost (millions AUD)` = sum(median)/10^6)
+
+CostTotalsOnly <- read.csv('./Outputs/CostTableCategories.csv') %>%
+  subset(Disease == 'Initial and sequel disease' &
+           CostItem == 'TotalHumanCapital' &
+           AgeGroup == 'All ages'&
+           !(Pathogen %in% c('All gastro pathogens', 'All pathogens'))) %>%
+  mutate(Cost = median/10^6) %>%
+  select(Pathogen, Cost) %>%
+  mutate(Pathogen = fct_reorder(Pathogen, Cost),
+         PathogenTidy = recode(Pathogen,
+                               `Salmonella Typhi` = '*Salmonella<br />Typhi*',
+                               Shigella = '*Shigella spp.*',
+                               `Yersinia Enterocolitica` = '*Yersinia<br />Enterocolitica*',
+                               `Toxoplasma gondii`  = "*Toxoplasma<br />gondii*",
+                               `Listeria monocytogenes` = "*Listeria<br />monocytogenes*",
+                               `Escherichia coli (Non-STEC)` = "*Escherichia coli*<br />(non-STEC)",
+                               `Non-typhoidal Salmonella` = "Non-typhoidal<br />*Salmonella*",
+                               `Campylobacter` = "*Campylobacter<br />spp.*"
+         ))
+
 P.TotalCost <-  CostTotals %>%
   ggplot(aes(x = Pathogen, y = `Annual cost (millions AUD)`,
              fill = CostItem,
@@ -177,9 +198,6 @@ CostTotalsSequel <- CostTotals %>%
                                `Campylobacter` = "*Campylobacter<br />spp.*"
   ))
 
-CostTotalsOnly <- CostTotalsSequel %>%
-  group_by(PathogenTidy) %>%
-  summarise(Cost = sum(Cost))
 
 P.CostTotalsSequel <- CostTotalsSequel  %>%
   ggplot(aes(x = PathogenTidy, y = Cost, alpha = SequelOrInitial)) +
@@ -196,7 +214,7 @@ P.CostTotalsSequel <- CostTotalsSequel  %>%
         text = element_text(size =  12),
         axis.text.y = element_markdown(size = 12),
         axis.title.y=element_blank()) +
-  ylim(0, 875) +
+  ylim(0, 425) +
   ylab('Annual cost\n(millions AUD)')
 
 P.CostTotalsSequel
@@ -215,7 +233,7 @@ P.CostTotalsOnly <- CostTotalsOnly %>%
   theme(text = element_text(size =  12),
         axis.text.y = element_markdown(size = 12),
         axis.title.y=element_blank()) +
-  ylim(0, 875) +
+  ylim(0, 425) +
   ylab('Annual cost\n(millions AUD)')
 
 P.CostTotalsOnly
