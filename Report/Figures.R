@@ -127,6 +127,7 @@ ItemByCost.AllGastro <- CostAllGastro %>%
   with(CostItem[order(median)])
 
 P.AllGastroByCat <- CostAllGastro %>%
+  subset(Disease != 'Initial and sequel disease') %>%
   mutate(CostItem = factor(CostItem,levels =ItemByCost.AllGastro),
          SequelOrInitial = if_else(Disease %in% SequelaeNames,
                                    'Sequel diseases',
