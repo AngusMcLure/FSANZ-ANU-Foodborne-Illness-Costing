@@ -240,6 +240,9 @@ P.CostTotalsOnly <- CostTotalsOnly %>%
 P.CostTotalsOnly
 ggsave(P.CostTotalsOnly,filename = 'Paper and Presentations/CostTotalsOnly.png',
        height = 12/2.54, width = 10.5/2.54)
+P.CostTotalsOnly$layers[[1]]$aes_params <- list(color = 'black')
+ggsave(P.CostTotalsOnly + theme(axis.title.y=element_text(size =12)) + xlab('Pathogen'),filename = 'Paper and Presentations/CostTotalsOnlyWide.png',
+       height = 12/2.54, width = 15.5/2.54)
 
 P.CostProportions <-  CostTotals %>%
   group_by(Pathogen) %>%
