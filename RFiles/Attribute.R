@@ -19,11 +19,11 @@ HospList <- readRDS('HospList.rds')
 IncidenceList <- readRDS('IncidenceList.rds')
 
 ## Reduce size of files by dropping most draws from the distributions. Since some costs only have a single 0 element simply selecting 1:trim produces many NAs
-trim <- 10^5
-CostList <- CostList %>% map_depth(4,~.x[1:min(trim,length(.x))])
-DeathList <- DeathList %>% map_depth(3,~.x[1:min(trim,length(.x))])
-HospList <- HospList %>% map_depth(3,~.x[1:min(trim,length(.x))])
-IncidenceList <- IncidenceList %>% map_depth(3,~.x[1:min(trim,length(.x))])
+# trim <- 10^5
+# CostList <- CostList %>% map_depth(4,~.x[1:min(trim,length(.x))])
+# DeathList <- DeathList %>% map_depth(3,~.x[1:min(trim,length(.x))])
+# HospList <- HospList %>% map_depth(3,~.x[1:min(trim,length(.x))])
+# IncidenceList <- IncidenceList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 
 ## Reduce CostList further by dropping unused cost measures --- The below should all work with all kinds of costs split up, but these aren't been used for now
 
@@ -49,7 +49,7 @@ loadAttrProps <- function(ndraws){
 
 AttrProps <- loadAttrProps(ndraws)
 
-warning('Code currently does not return an error if the food categories are different for each pathogen. This might be a good thing if future surveys use lsightly different categories, however it could lead to fairly confusing tables and inconsistent sums over categories.')
+warning('Code currently does not return an error if the food categories are different for each pathogen. This might be a good thing if future surveys use slightly different categories, however it could lead to fairly confusing tables and inconsistent sums over categories.')
 
 ## Check for missing-ness of cost and/or attribution data and ensure that pathogens have the same order in both
 CommonPathogens <- intersect(names(AttrProps), names(CostList))
@@ -185,7 +185,7 @@ P.CostProp <- CombinedSummaries %>%
   theme(legend.position = c(0.70, 0.25),
         strip.text.y = element_blank())
 P.CostProp
-ggsave(filename = 'AttributionReport/CostBySourcePathogen.png',P.CostProp)
+ggsave(filename = 'AttributionReport/CostBySourcePathogen.png',P.CostProp, width = 1941, height = 1787, units = 'px')
 
 ### Figure for proportion of cases and deaths by food and pathogen
 
@@ -213,7 +213,7 @@ P.EpiProp <- CombinedSummaries %>%
         strip.text.y = element_blank(),
         strip.background.x = element_rect('white'))
 P.EpiProp
-ggsave(filename = 'AttributionReport/EpiBySourcePathogen.png',P.EpiProp, width = 11)
+ggsave(filename = 'AttributionReport/EpiBySourcePathogen.png',P.EpiProp, width = 3300, height = 1787, units = 'px')
 
 
 P.CostPropAlt <- CostList %>%
@@ -235,7 +235,7 @@ P.CostPropAlt <- CostList %>%
                 strip.text.y = element_blank())
 
 P.CostPropAlt
-ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt)
+ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt, width = 1941, height = 1787, units = 'px')
 
 
 ## Calculate cost per case by food product
