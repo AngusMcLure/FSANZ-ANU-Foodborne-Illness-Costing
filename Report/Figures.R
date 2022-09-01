@@ -246,7 +246,15 @@ ggsave(P.CostTotalsOnly + theme(axis.title.y=element_text(size =12)) + xlab('Pat
 
 P.CostProportions <-  CostTotals %>%
   group_by(Pathogen) %>%
-  mutate(Proportion = `Annual cost (millions AUD)`/ sum(`Annual cost (millions AUD)`)) %>%
+  mutate(Proportion = `Annual cost (millions AUD)`/ sum(`Annual cost (millions AUD)`),
+         CostItem = recode(CostItem,
+                           Direct = 'Direct Costs',
+                           `Non-fatal productivity losses` = 'Lost Productivity',
+                           `Pain and suffering` = 'Pain & Suffering',
+                           `Premature mortality` = 'Premature Mortality'),
+         SequelOrInitial = recode(SequelOrInitial,
+                                  `Initial disease` = 'Initial Disease',
+                                  `Sequel disease(s)` = 'Sequel Disease(s)')) %>%
   ggplot(aes(x = Pathogen, y = Proportion,
              fill = CostItem,
              alpha = SequelOrInitial,
@@ -255,17 +263,19 @@ P.CostProportions <-  CostTotals %>%
   geom_bar(stat = 'identity',
            position = 'stack',
            color = 'black') +
-  scale_alpha_manual(values = c(`Initial disease` = 1, `Sequel disease(s)` = 0.5)) +
+  scale_alpha_manual(values = c(`Initial Disease` = 1, `Sequel Disease(s)` = 0.5)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
   guides(fill = guide_legend(override.aes = list(pattern = "none"),
-                             title = 'Cost category'),
-         alpha = guide_legend(title = 'Sequel vs initial')) +
+                             title = 'Cost Category'),
+         alpha = guide_legend(title = 'Sequel vs Initial')) +
   coord_flip() +
   theme(axis.title.y=element_blank(),
         axis.text.y=element_blank(),
         axis.ticks.y=element_blank(),
         text = element_text(size =  12),
-        legend.direction = 'horizontal') +
+        legend.direction = 'horizontal',
+        legend.box.background = element_rect(fill = 'white', color = 'white'),
+        legend.spacing.y = unit(1,'mm')) +
   ylab('Proportion of cost\n')
 P.CostProportions
 library(ggpubr)
