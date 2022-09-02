@@ -167,731 +167,619 @@
 "166","Non-typhoidal Salmonella","Initial","65+","Seeds and grains","TotalHumanCapital",733484.562882798,424634.188501846,1231555.46465225
 "167","Non-typhoidal Salmonella","Initial","65+","Shellfish","TotalHumanCapital",141291.294567137,76367.9769560823,247873.291324516
 "168","Non-typhoidal Salmonella","Initial","65+","Vegetables","TotalHumanCapital",3894124.3883856,2362942.51738519,6278990.76391657
-"169","Norovirus","Initial","<5","AllFood","TotalHumanCapital",6825507.06262459,2637716.41927036,14018248.2056326
-"170","Norovirus","Initial","<5","Beef","TotalHumanCapital",0,0,0
-"171","Norovirus","Initial","<5","Dairy","TotalHumanCapital",0,0,0
-"172","Norovirus","Initial","<5","Eggs","TotalHumanCapital",0,0,0
-"173","Norovirus","Initial","<5","Fin fish","TotalHumanCapital",27025.8960383396,9765.41659813376,61691.5359882244
-"174","Norovirus","Initial","<5","Fruit","TotalHumanCapital",480556.868242402,169404.489535218,1131690.65562879
-"175","Norovirus","Initial","<5","Lamb","TotalHumanCapital",0,0,0
-"176","Norovirus","Initial","<5","Nuts","TotalHumanCapital",0,0,0
-"177","Norovirus","Initial","<5","Other","TotalHumanCapital",491642.119280685,183804.666272466,1071830.63597456
-"178","Norovirus","Initial","<5","Pork","TotalHumanCapital",0,0,0
-"179","Norovirus","Initial","<5","Poultry","TotalHumanCapital",0,0,0
-"180","Norovirus","Initial","<5","Seeds and grains","TotalHumanCapital",0,0,0
-"181","Norovirus","Initial","<5","Shellfish","TotalHumanCapital",4723196.27594942,1824675.51841585,9705914.08926766
-"182","Norovirus","Initial","<5","Vegetables","TotalHumanCapital",907056.254396732,330209.77985066,2051559.38157352
-"183","Norovirus","Initial","5-64","AllFood","TotalHumanCapital",99506811.5002012,29494958.2095506,204805995.1788
-"184","Norovirus","Initial","5-64","Beef","TotalHumanCapital",0,0,0
-"185","Norovirus","Initial","5-64","Dairy","TotalHumanCapital",0,0,0
-"186","Norovirus","Initial","5-64","Eggs","TotalHumanCapital",0,0,0
-"187","Norovirus","Initial","5-64","Fin fish","TotalHumanCapital",392278.025815313,110905.81842973,903064.24159836
-"188","Norovirus","Initial","5-64","Fruit","TotalHumanCapital",6957176.02266717,1922478.67999472,16625598.8092425
-"189","Norovirus","Initial","5-64","Lamb","TotalHumanCapital",0,0,0
-"190","Norovirus","Initial","5-64","Nuts","TotalHumanCapital",0,0,0
-"191","Norovirus","Initial","5-64","Other","TotalHumanCapital",7137058.83543152,2072680.51036862,15706480.5253349
-"192","Norovirus","Initial","5-64","Pork","TotalHumanCapital",0,0,0
-"193","Norovirus","Initial","5-64","Poultry","TotalHumanCapital",0,0,0
-"194","Norovirus","Initial","5-64","Seeds and grains","TotalHumanCapital",0,0,0
-"195","Norovirus","Initial","5-64","Shellfish","TotalHumanCapital",68867602.5895788,20355542.717948,141672882.980672
-"196","Norovirus","Initial","5-64","Vegetables","TotalHumanCapital",13154930.228491,3727140.45950042,29897345.9500271
-"197","Norovirus","Initial","65+","AllFood","TotalHumanCapital",18050144.5140891,7695476.37528002,59501673.0027755
-"198","Norovirus","Initial","65+","Beef","TotalHumanCapital",0,0,0
-"199","Norovirus","Initial","65+","Dairy","TotalHumanCapital",0,0,0
-"200","Norovirus","Initial","65+","Eggs","TotalHumanCapital",0,0,0
-"201","Norovirus","Initial","65+","Fin fish","TotalHumanCapital",72656.3230077416,28020.4965666178,251532.482813092
-"202","Norovirus","Initial","65+","Fruit","TotalHumanCapital",1299389.79945059,483885.825067286,4528596.1726589
-"203","Norovirus","Initial","65+","Lamb","TotalHumanCapital",0,0,0
-"204","Norovirus","Initial","65+","Nuts","TotalHumanCapital",0,0,0
-"205","Norovirus","Initial","65+","Other","TotalHumanCapital",1313380.88609693,531975.022986933,4424054.71763589
-"206","Norovirus","Initial","65+","Pork","TotalHumanCapital",0,0,0
-"207","Norovirus","Initial","65+","Poultry","TotalHumanCapital",0,0,0
-"208","Norovirus","Initial","65+","Seeds and grains","TotalHumanCapital",0,0,0
-"209","Norovirus","Initial","65+","Shellfish","TotalHumanCapital",12485287.0501797,5313557.87136254,41062375.3368601
-"210","Norovirus","Initial","65+","Vegetables","TotalHumanCapital",2429666.96712452,949354.236579734,8364233.33523742
-"211","STEC","Haemolytic uremic syndrome","<5","AllFood","TotalHumanCapital",721561.786026615,239446.371241401,2060778.37730433
-"212","STEC","Haemolytic uremic syndrome","<5","Beef","TotalHumanCapital",249335.256640108,82801.9662368166,712670.674427428
-"213","STEC","Haemolytic uremic syndrome","<5","Dairy","TotalHumanCapital",108107.442903136,35683.374005873,310711.310857461
-"214","STEC","Haemolytic uremic syndrome","<5","Eggs","TotalHumanCapital",2243.23194968242,619.618394790005,7491.92330035167
-"215","STEC","Haemolytic uremic syndrome","<5","Fin fish","TotalHumanCapital",0,0,0
-"216","STEC","Haemolytic uremic syndrome","<5","Fruit","TotalHumanCapital",30300.3391949879,10024.8354542261,87005.6045899828
-"217","STEC","Haemolytic uremic syndrome","<5","Lamb","TotalHumanCapital",48623.6550070836,16093.2743653995,138852.359974162
-"218","STEC","Haemolytic uremic syndrome","<5","Nuts","TotalHumanCapital",0,0,0
-"219","STEC","Haemolytic uremic syndrome","<5","Other","TotalHumanCapital",28391.6863519077,9223.78382583698,82356.7418679096
-"220","STEC","Haemolytic uremic syndrome","<5","Pork","TotalHumanCapital",53493.7121530098,17723.1877005616,152782.472268815
-"221","STEC","Haemolytic uremic syndrome","<5","Poultry","TotalHumanCapital",30297.3097639577,10000.9398137485,86770.4221538752
-"222","STEC","Haemolytic uremic syndrome","<5","Seeds and grains","TotalHumanCapital",30351.0988692264,10014.4807607028,86604.471507503
-"223","STEC","Haemolytic uremic syndrome","<5","Shellfish","TotalHumanCapital",0,0,0
-"224","STEC","Haemolytic uremic syndrome","<5","Vegetables","TotalHumanCapital",142357.475323236,47203.79626789,407053.752417299
-"225","STEC","Haemolytic uremic syndrome","5-64","AllFood","TotalHumanCapital",6666934.2191495,3426764.24831038,12328508.8294465
-"226","STEC","Haemolytic uremic syndrome","5-64","Beef","TotalHumanCapital",2301661.46838949,1182911.21805523,4261351.15559791
-"227","STEC","Haemolytic uremic syndrome","5-64","Dairy","TotalHumanCapital",998567.024238811,508113.963727731,1871935.68390565
-"228","STEC","Haemolytic uremic syndrome","5-64","Eggs","TotalHumanCapital",20697.7123066938,8175.9996210592,48442.1586068297
-"229","STEC","Haemolytic uremic syndrome","5-64","Fin fish","TotalHumanCapital",0,0,0
-"230","STEC","Haemolytic uremic syndrome","5-64","Fruit","TotalHumanCapital",279622.607138624,142869.095536834,522291.183333404
-"231","STEC","Haemolytic uremic syndrome","5-64","Lamb","TotalHumanCapital",448673.657825023,229944.134527318,832774.783112507
-"232","STEC","Haemolytic uremic syndrome","5-64","Nuts","TotalHumanCapital",0,0,0
-"233","STEC","Haemolytic uremic syndrome","5-64","Other","TotalHumanCapital",261486.618164774,130650.818193051,503636.855951787
-"234","STEC","Haemolytic uremic syndrome","5-64","Pork","TotalHumanCapital",494135.150270067,253910.595215788,914765.764149953
-"235","STEC","Haemolytic uremic syndrome","5-64","Poultry","TotalHumanCapital",280007.568158787,142753.908184911,522324.572821125
-"236","STEC","Haemolytic uremic syndrome","5-64","Seeds and grains","TotalHumanCapital",279689.823225458,142358.665401771,522991.453496193
-"237","STEC","Haemolytic uremic syndrome","5-64","Shellfish","TotalHumanCapital",0,0,0
-"238","STEC","Haemolytic uremic syndrome","5-64","Vegetables","TotalHumanCapital",1316181.02211258,673793.980848551,2442989.69262139
-"239","STEC","Haemolytic uremic syndrome","65+","AllFood","TotalHumanCapital",1166670.51395981,384876.706412658,3165698.03172979
-"240","STEC","Haemolytic uremic syndrome","65+","Beef","TotalHumanCapital",402856.168815966,132933.286152704,1097684.30966489
-"241","STEC","Haemolytic uremic syndrome","65+","Dairy","TotalHumanCapital",174960.884104291,57380.58732314,478238.27678418
-"242","STEC","Haemolytic uremic syndrome","65+","Eggs","TotalHumanCapital",3601.58101158661,997.83572970422,11621.8022355067
-"243","STEC","Haemolytic uremic syndrome","65+","Fin fish","TotalHumanCapital",0,0,0
-"244","STEC","Haemolytic uremic syndrome","65+","Fruit","TotalHumanCapital",48989.5313848101,16111.982580016,134188.448508137
-"245","STEC","Haemolytic uremic syndrome","65+","Lamb","TotalHumanCapital",78517.4192742013,25869.6642465425,213964.65374775
-"246","STEC","Haemolytic uremic syndrome","65+","Nuts","TotalHumanCapital",0,0,0
-"247","STEC","Haemolytic uremic syndrome","65+","Other","TotalHumanCapital",45825.5629144933,14869.4932775271,127334.492163041
-"248","STEC","Haemolytic uremic syndrome","65+","Pork","TotalHumanCapital",86487.0984965164,28538.4655620964,234569.471840126
-"249","STEC","Haemolytic uremic syndrome","65+","Poultry","TotalHumanCapital",49027.2835892406,16123.3106689027,133991.080473658
-"250","STEC","Haemolytic uremic syndrome","65+","Seeds and grains","TotalHumanCapital",48984.0705418981,16131.1812563208,133921.208554701
-"251","STEC","Haemolytic uremic syndrome","65+","Shellfish","TotalHumanCapital",0,0,0
-"252","STEC","Haemolytic uremic syndrome","65+","Vegetables","TotalHumanCapital",230330.053287942,76096.6904056481,628116.026802061
-"253","STEC","Initial","<5","AllFood","TotalHumanCapital",364270.909705208,126007.81937341,1490144.60648761
-"254","STEC","Initial","<5","Beef","TotalHumanCapital",125811.505824998,43498.0465998873,514273.174483426
-"255","STEC","Initial","<5","Dairy","TotalHumanCapital",54549.1307556208,18738.6058067758,224567.525274848
-"256","STEC","Initial","<5","Eggs","TotalHumanCapital",1145.03301485808,323.926177564148,5152.48209563009
-"257","STEC","Initial","<5","Fin fish","TotalHumanCapital",0,0,0
-"258","STEC","Initial","<5","Fruit","TotalHumanCapital",15295.1246901788,5258.97079486005,62821.7343406922
-"259","STEC","Initial","<5","Lamb","TotalHumanCapital",24526.7437561675,8449.06220935524,100394.559911071
-"260","STEC","Initial","<5","Nuts","TotalHumanCapital",0,0,0
-"261","STEC","Initial","<5","Other","TotalHumanCapital",14335.3452705048,4844.35202967617,59366.5819826978
-"262","STEC","Initial","<5","Pork","TotalHumanCapital",26987.1450754279,9329.99223229735,110454.733723754
-"263","STEC","Initial","<5","Poultry","TotalHumanCapital",15271.463989851,5251.28629026926,62870.0472891716
-"264","STEC","Initial","<5","Seeds and grains","TotalHumanCapital",15311.1330553891,5247.17336269379,62702.8604452941
-"265","STEC","Initial","<5","Shellfish","TotalHumanCapital",0,0,0
-"266","STEC","Initial","<5","Vegetables","TotalHumanCapital",71927.9461050058,24834.8717912076,294000.221860928
-"267","STEC","Initial","5-64","AllFood","TotalHumanCapital",1297899.9289523,598269.230746623,2828115.68372864
-"268","STEC","Initial","5-64","Beef","TotalHumanCapital",448372.265260531,206299.654102817,979709.144632613
-"269","STEC","Initial","5-64","Dairy","TotalHumanCapital",194441.5463025,88764.5216321951,427886.186262197
-"270","STEC","Initial","5-64","Eggs","TotalHumanCapital",4042.19556855169,1467.49709159364,10681.3968586998
-"271","STEC","Initial","5-64","Fin fish","TotalHumanCapital",0,0,0
-"272","STEC","Initial","5-64","Fruit","TotalHumanCapital",54508.6253775985,24905.4326432632,119649.406108717
-"273","STEC","Initial","5-64","Lamb","TotalHumanCapital",87384.5462790139,40157.3010471841,191437.435846471
-"274","STEC","Initial","5-64","Nuts","TotalHumanCapital",0,0,0
-"275","STEC","Initial","5-64","Other","TotalHumanCapital",50962.8152734573,22894.7960269681,114254.896813146
-"276","STEC","Initial","5-64","Pork","TotalHumanCapital",96229.1463097112,44303.3033950761,209796.221617145
-"277","STEC","Initial","5-64","Poultry","TotalHumanCapital",54517.2472339675,24880.8142804971,119827.26166183
-"278","STEC","Initial","5-64","Seeds and grains","TotalHumanCapital",54497.825394088,24976.3123366164,119622.915636147
-"279","STEC","Initial","5-64","Shellfish","TotalHumanCapital",0,0,0
-"280","STEC","Initial","5-64","Vegetables","TotalHumanCapital",256231.175297798,117520.188534944,559785.765054006
-"281","STEC","Initial","65+","AllFood","TotalHumanCapital",504147.216726613,185339.786634247,1998231.81599028
-"282","STEC","Initial","65+","Beef","TotalHumanCapital",174124.896760697,63975.8331636497,690723.631543769
-"283","STEC","Initial","65+","Dairy","TotalHumanCapital",75605.1164877851,27513.8520906452,301149.674433459
-"284","STEC","Initial","65+","Eggs","TotalHumanCapital",1590.29774009383,471.655698794953,6961.79327766603
-"285","STEC","Initial","65+","Fin fish","TotalHumanCapital",0,0,0
-"286","STEC","Initial","65+","Fruit","TotalHumanCapital",21151.8799754673,7726.06876061934,84535.9965019336
-"287","STEC","Initial","65+","Lamb","TotalHumanCapital",33962.4462074001,12443.5925906989,134967.528976691
-"288","STEC","Initial","65+","Nuts","TotalHumanCapital",0,0,0
-"289","STEC","Initial","65+","Other","TotalHumanCapital",19844.6493941971,7099.25545745075,79941.131323174
-"290","STEC","Initial","65+","Pork","TotalHumanCapital",37392.2761387706,13720.5365617448,148549.09706539
-"291","STEC","Initial","65+","Poultry","TotalHumanCapital",21176.4334691844,7722.10234928528,84557.9401933463
-"292","STEC","Initial","65+","Seeds and grains","TotalHumanCapital",21188.1426364876,7722.16806338917,84560.9857624736
-"293","STEC","Initial","65+","Shellfish","TotalHumanCapital",0,0,0
-"294","STEC","Initial","65+","Vegetables","TotalHumanCapital",99504.4207007922,36524.0180182529,395811.808194042
-"295","All pathogens","Haemolytic uremic syndrome","<5","AllFood","TotalHumanCapital",721561.786026615,239446.371241401,2060778.37730433
-"296","All pathogens","Haemolytic uremic syndrome","<5","Beef","TotalHumanCapital",249335.256640108,82801.9662368166,712670.674427428
-"297","All pathogens","Haemolytic uremic syndrome","<5","Dairy","TotalHumanCapital",108107.442903136,35683.374005873,310711.310857461
-"298","All pathogens","Haemolytic uremic syndrome","<5","Eggs","TotalHumanCapital",2243.23194968242,619.618394790005,7491.92330035167
-"299","All pathogens","Haemolytic uremic syndrome","<5","Fin fish","TotalHumanCapital",0,0,0
-"300","All pathogens","Haemolytic uremic syndrome","<5","Fruit","TotalHumanCapital",30300.3391949879,10024.8354542261,87005.6045899828
-"301","All pathogens","Haemolytic uremic syndrome","<5","Lamb","TotalHumanCapital",48623.6550070836,16093.2743653995,138852.359974162
-"302","All pathogens","Haemolytic uremic syndrome","<5","Nuts","TotalHumanCapital",0,0,0
-"303","All pathogens","Haemolytic uremic syndrome","<5","Other","TotalHumanCapital",28391.6863519077,9223.78382583698,82356.7418679096
-"304","All pathogens","Haemolytic uremic syndrome","<5","Pork","TotalHumanCapital",53493.7121530098,17723.1877005616,152782.472268815
-"305","All pathogens","Haemolytic uremic syndrome","<5","Poultry","TotalHumanCapital",30297.3097639577,10000.9398137485,86770.4221538752
-"306","All pathogens","Haemolytic uremic syndrome","<5","Seeds and grains","TotalHumanCapital",30351.0988692264,10014.4807607028,86604.471507503
-"307","All pathogens","Haemolytic uremic syndrome","<5","Shellfish","TotalHumanCapital",0,0,0
-"308","All pathogens","Haemolytic uremic syndrome","<5","Vegetables","TotalHumanCapital",142357.475323236,47203.79626789,407053.752417299
-"309","All pathogens","Haemolytic uremic syndrome","5-64","AllFood","TotalHumanCapital",6666934.2191495,3426764.24831038,12328508.8294465
-"310","All pathogens","Haemolytic uremic syndrome","5-64","Beef","TotalHumanCapital",2301661.46838949,1182911.21805523,4261351.15559791
-"311","All pathogens","Haemolytic uremic syndrome","5-64","Dairy","TotalHumanCapital",998567.024238811,508113.963727731,1871935.68390565
-"312","All pathogens","Haemolytic uremic syndrome","5-64","Eggs","TotalHumanCapital",20697.7123066938,8175.9996210592,48442.1586068297
-"313","All pathogens","Haemolytic uremic syndrome","5-64","Fin fish","TotalHumanCapital",0,0,0
-"314","All pathogens","Haemolytic uremic syndrome","5-64","Fruit","TotalHumanCapital",279622.607138624,142869.095536834,522291.183333404
-"315","All pathogens","Haemolytic uremic syndrome","5-64","Lamb","TotalHumanCapital",448673.657825023,229944.134527318,832774.783112507
-"316","All pathogens","Haemolytic uremic syndrome","5-64","Nuts","TotalHumanCapital",0,0,0
-"317","All pathogens","Haemolytic uremic syndrome","5-64","Other","TotalHumanCapital",261486.618164774,130650.818193051,503636.855951787
-"318","All pathogens","Haemolytic uremic syndrome","5-64","Pork","TotalHumanCapital",494135.150270067,253910.595215788,914765.764149953
-"319","All pathogens","Haemolytic uremic syndrome","5-64","Poultry","TotalHumanCapital",280007.568158787,142753.908184911,522324.572821125
-"320","All pathogens","Haemolytic uremic syndrome","5-64","Seeds and grains","TotalHumanCapital",279689.823225458,142358.665401771,522991.453496193
-"321","All pathogens","Haemolytic uremic syndrome","5-64","Shellfish","TotalHumanCapital",0,0,0
-"322","All pathogens","Haemolytic uremic syndrome","5-64","Vegetables","TotalHumanCapital",1316181.02211258,673793.980848551,2442989.69262139
-"323","All pathogens","Haemolytic uremic syndrome","65+","AllFood","TotalHumanCapital",1166670.51395981,384876.706412658,3165698.03172979
-"324","All pathogens","Haemolytic uremic syndrome","65+","Beef","TotalHumanCapital",402856.168815966,132933.286152704,1097684.30966489
-"325","All pathogens","Haemolytic uremic syndrome","65+","Dairy","TotalHumanCapital",174960.884104291,57380.58732314,478238.27678418
-"326","All pathogens","Haemolytic uremic syndrome","65+","Eggs","TotalHumanCapital",3601.58101158661,997.83572970422,11621.8022355067
-"327","All pathogens","Haemolytic uremic syndrome","65+","Fin fish","TotalHumanCapital",0,0,0
-"328","All pathogens","Haemolytic uremic syndrome","65+","Fruit","TotalHumanCapital",48989.5313848101,16111.982580016,134188.448508137
-"329","All pathogens","Haemolytic uremic syndrome","65+","Lamb","TotalHumanCapital",78517.4192742013,25869.6642465425,213964.65374775
-"330","All pathogens","Haemolytic uremic syndrome","65+","Nuts","TotalHumanCapital",0,0,0
-"331","All pathogens","Haemolytic uremic syndrome","65+","Other","TotalHumanCapital",45825.5629144933,14869.4932775271,127334.492163041
-"332","All pathogens","Haemolytic uremic syndrome","65+","Pork","TotalHumanCapital",86487.0984965164,28538.4655620964,234569.471840126
-"333","All pathogens","Haemolytic uremic syndrome","65+","Poultry","TotalHumanCapital",49027.2835892406,16123.3106689027,133991.080473658
-"334","All pathogens","Haemolytic uremic syndrome","65+","Seeds and grains","TotalHumanCapital",48984.0705418981,16131.1812563208,133921.208554701
-"335","All pathogens","Haemolytic uremic syndrome","65+","Shellfish","TotalHumanCapital",0,0,0
-"336","All pathogens","Haemolytic uremic syndrome","65+","Vegetables","TotalHumanCapital",230330.053287942,76096.6904056481,628116.026802061
-"337","All pathogens","Initial","<5","AllFood","TotalHumanCapital",34854157.9607088,25114947.0716805,47877625.0505431
-"338","All pathogens","Initial","<5","Beef","TotalHumanCapital",930303.352267057,544836.765356597,1610182.14132233
-"339","All pathogens","Initial","<5","Dairy","TotalHumanCapital",5301199.4192849,3058767.89334008,8745411.70991844
-"340","All pathogens","Initial","<5","Eggs","TotalHumanCapital",4285041.91954971,2554486.42591197,7176433.09539209
-"341","All pathogens","Initial","<5","Fin fish","TotalHumanCapital",154143.300072979,89683.7929367297,265547.835505655
-"342","All pathogens","Initial","<5","Fruit","TotalHumanCapital",3219407.44505782,2054233.94634719,4931562.17667602
-"343","All pathogens","Initial","<5","Lamb","TotalHumanCapital",661915.409325146,375056.620826044,1161237.07178476
-"344","All pathogens","Initial","<5","Nuts","TotalHumanCapital",522509.382001752,268122.222267629,988656.940708533
-"345","All pathogens","Initial","<5","Other","TotalHumanCapital",1238046.49661003,777479.218019463,1944952.2370523
-"346","All pathogens","Initial","<5","Pork","TotalHumanCapital",2259517.19142856,1483323.99163548,3374290.85438234
-"347","All pathogens","Initial","<5","Poultry","TotalHumanCapital",3970450.26605519,2555005.51406593,6266670.95582874
-"348","All pathogens","Initial","<5","Seeds and grains","TotalHumanCapital",566162.68952071,363174.160370694,881588.005445864
-"349","All pathogens","Initial","<5","Shellfish","TotalHumanCapital",5918691.98884071,2935446.75876409,10940006.6855473
-"350","All pathogens","Initial","<5","Vegetables","TotalHumanCapital",4923336.81653763,3343368.62256943,7128441.01263106
-"351","All pathogens","Initial","5-64","AllFood","TotalHumanCapital",168606460.359446,95609135.5716446,275246071.427754
-"352","All pathogens","Initial","5-64","Beef","TotalHumanCapital",3179976.48063403,1957825.2966066,5139448.56220301
-"353","All pathogens","Initial","5-64","Dairy","TotalHumanCapital",8593291.18609408,5494076.41053457,13048540.9643177
-"354","All pathogens","Initial","5-64","Eggs","TotalHumanCapital",15571503.7839961,9750232.09220826,24729601.2862438
-"355","All pathogens","Initial","5-64","Fin fish","TotalHumanCapital",628409.766064067,319713.168460145,1150281.94109389
-"356","All pathogens","Initial","5-64","Fruit","TotalHumanCapital",11931196.1477784,6485091.18009461,21740226.1204113
-"357","All pathogens","Initial","5-64","Lamb","TotalHumanCapital",2293471.46737191,1312015.88032565,3934936.32787562
-"358","All pathogens","Initial","5-64","Nuts","TotalHumanCapital",1817360.29242421,925559.718566614,3371399.42298969
-"359","All pathogens","Initial","5-64","Other","TotalHumanCapital",8736957.67216529,3635463.72354317,17337963.8316657
-"360","All pathogens","Initial","5-64","Pork","TotalHumanCapital",5681537.99187138,3744963.63993979,8655657.87467191
-"361","All pathogens","Initial","5-64","Poultry","TotalHumanCapital",11976792.6347909,7509370.0256021,19228167.89206
-"362","All pathogens","Initial","5-64","Seeds and grains","TotalHumanCapital",1294907.70126189,893411.000800031,1854703.48711949
-"363","All pathogens","Initial","5-64","Shellfish","TotalHumanCapital",70756750.9638378,22205475.4565123,143568315.550711
-"364","All pathogens","Initial","5-64","Vegetables","TotalHumanCapital",21601510.9909182,11714428.367418,38485266.0979729
-"365","All pathogens","Initial","65+","AllFood","TotalHumanCapital",109519235.990284,81584914.9966749,157177110.035335
-"366","All pathogens","Initial","65+","Beef","TotalHumanCapital",3241946.71337656,1866395.28594892,5491515.95327605
-"367","All pathogens","Initial","65+","Dairy","TotalHumanCapital",14184486.2705959,9175058.49647749,21070477.7522471
-"368","All pathogens","Initial","65+","Eggs","TotalHumanCapital",17262678.9651312,10377894.6539054,27908038.3175416
-"369","All pathogens","Initial","65+","Fin fish","TotalHumanCapital",440392.998098699,269213.04385511,743857.645690246
-"370","All pathogens","Initial","65+","Fruit","TotalHumanCapital",9095571.25110908,6240971.72264179,13578279.9733289
-"371","All pathogens","Initial","65+","Lamb","TotalHumanCapital",2513427.15250309,1389415.44766917,4406300.29877504
-"372","All pathogens","Initial","65+","Nuts","TotalHumanCapital",2043130.93514684,1036041.71104075,3837601.33525069
-"373","All pathogens","Initial","65+","Other","TotalHumanCapital",3588362.45358296,2355738.86291036,6769116.9869019
-"374","All pathogens","Initial","65+","Pork","TotalHumanCapital",7321729.19935994,4928822.67645148,10859047.7926819
-"375","All pathogens","Initial","65+","Poultry","TotalHumanCapital",14270718.6255533,9062375.80582891,22713129.853495
-"376","All pathogens","Initial","65+","Seeds and grains","TotalHumanCapital",1731477.28271643,1174016.98583705,2513710.36151273
-"377","All pathogens","Initial","65+","Shellfish","TotalHumanCapital",15676668.655563,8336062.78055184,44274414.829647
-"378","All pathogens","Initial","65+","Vegetables","TotalHumanCapital",14510656.8417826,10416272.4785397,21462218.1971771
-"379","All pathogens","Irritable bowel syndrome","<5","AllFood","TotalHumanCapital",3471719.03236305,1828839.82018804,6468603.09258788
-"380","All pathogens","Irritable bowel syndrome","<5","Beef","TotalHumanCapital",210093.757020324,96148.0771977968,447995.967120584
-"381","All pathogens","Irritable bowel syndrome","<5","Dairy","TotalHumanCapital",38341.1306130248,18047.4354244503,79158.6485448614
-"382","All pathogens","Irritable bowel syndrome","<5","Eggs","TotalHumanCapital",1261256.96907374,617846.675152849,2518986.93316915
-"383","All pathogens","Irritable bowel syndrome","<5","Fin fish","TotalHumanCapital",4119.40346147732,1944.09353474575,8518.9319979245
-"384","All pathogens","Irritable bowel syndrome","<5","Fruit","TotalHumanCapital",85436.5052794413,35781.6707988041,191691.960980933
-"385","All pathogens","Irritable bowel syndrome","<5","Lamb","TotalHumanCapital",172347.828857517,77040.256730738,371961.229341688
-"386","All pathogens","Irritable bowel syndrome","<5","Nuts","TotalHumanCapital",141385.573514444,58905.7680290736,322116.419147014
-"387","All pathogens","Irritable bowel syndrome","<5","Other","TotalHumanCapital",59813.9255876862,29229.125734875,120644.184353599
-"388","All pathogens","Irritable bowel syndrome","<5","Pork","TotalHumanCapital",300512.008881413,133973.236975715,653891.930927307
-"389","All pathogens","Irritable bowel syndrome","<5","Poultry","TotalHumanCapital",819971.245543608,378386.316659165,1734603.38102465
-"390","All pathogens","Irritable bowel syndrome","<5","Seeds and grains","TotalHumanCapital",53597.3979976303,25528.5371693,109798.030601811
-"391","All pathogens","Irritable bowel syndrome","<5","Shellfish","TotalHumanCapital",10307.7989044631,4674.26477878947,21887.6928386563
-"392","All pathogens","Irritable bowel syndrome","<5","Vegetables","TotalHumanCapital",283939.944427851,140744.281691554,565631.95090577
-"393","All pathogens","Irritable bowel syndrome","5-64","AllFood","TotalHumanCapital",10540334.698029,5607069.12562443,19420092.1409764
-"394","All pathogens","Irritable bowel syndrome","5-64","Beef","TotalHumanCapital",639392.569127711,294359.467259527,1349134.98540142
-"395","All pathogens","Irritable bowel syndrome","5-64","Dairy","TotalHumanCapital",116572.835701404,55176.205966711,238563.577173104
-"396","All pathogens","Irritable bowel syndrome","5-64","Eggs","TotalHumanCapital",3837592.48370311,1894792.6436466,7572870.72022031
-"397","All pathogens","Irritable bowel syndrome","5-64","Fin fish","TotalHumanCapital",12537.6609818443,5955.78355637998,25596.760246446
-"398","All pathogens","Irritable bowel syndrome","5-64","Fruit","TotalHumanCapital",258911.568444903,109638.445913277,577413.981320286
-"399","All pathogens","Irritable bowel syndrome","5-64","Lamb","TotalHumanCapital",523930.717663932,235771.316239708,1116727.3381434
-"400","All pathogens","Irritable bowel syndrome","5-64","Nuts","TotalHumanCapital",429453.782763006,179846.296019414,969080.457171824
-"401","All pathogens","Irritable bowel syndrome","5-64","Other","TotalHumanCapital",181987.681857702,89375.8126120129,362055.418290347
-"402","All pathogens","Irritable bowel syndrome","5-64","Pork","TotalHumanCapital",912584.495844068,409197.211168723,1966148.4908398
-"403","All pathogens","Irritable bowel syndrome","5-64","Poultry","TotalHumanCapital",2487207.79289704,1159933.89250708,5208829.98349716
-"404","All pathogens","Irritable bowel syndrome","5-64","Seeds and grains","TotalHumanCapital",162822.956880539,78477.6491956615,330076.768533673
-"405","All pathogens","Irritable bowel syndrome","5-64","Shellfish","TotalHumanCapital",31305.4923963366,14348.2870013755,65880.4895439283
-"406","All pathogens","Irritable bowel syndrome","5-64","Vegetables","TotalHumanCapital",863222.176428061,432823.377754887,1703885.65967284
-"407","All pathogens","Irritable bowel syndrome","65+","AllFood","TotalHumanCapital",2137248.05856934,1113137.57353528,4015204.91713055
-"408","All pathogens","Irritable bowel syndrome","65+","Beef","TotalHumanCapital",129715.879637181,58406.054005468,277265.110456007
-"409","All pathogens","Irritable bowel syndrome","65+","Dairy","TotalHumanCapital",23604.1804457988,11012.3207563855,49102.7111173712
-"410","All pathogens","Irritable bowel syndrome","65+","Eggs","TotalHumanCapital",777888.27434635,377769.921373549,1558973.4947343
-"411","All pathogens","Irritable bowel syndrome","65+","Fin fish","TotalHumanCapital",2541.10695391157,1188.87373496745,5281.0178139389
-"412","All pathogens","Irritable bowel syndrome","65+","Fruit","TotalHumanCapital",52593.0762612011,21904.1842587656,118846.618816389
-"413","All pathogens","Irritable bowel syndrome","65+","Lamb","TotalHumanCapital",106271.607947812,46848.9047060824,229984.700080625
-"414","All pathogens","Irritable bowel syndrome","65+","Nuts","TotalHumanCapital",87075.6410254006,35891.4137098386,199651.690295367
-"415","All pathogens","Irritable bowel syndrome","65+","Other","TotalHumanCapital",36915.346990348,17796.0689322227,74632.9842852443
-"416","All pathogens","Irritable bowel syndrome","65+","Pork","TotalHumanCapital",185295.765268703,81685.5835208538,403839.333654281
-"417","All pathogens","Irritable bowel syndrome","65+","Poultry","TotalHumanCapital",505052.625311253,231474.472932263,1074091.81900824
-"418","All pathogens","Irritable bowel syndrome","65+","Seeds and grains","TotalHumanCapital",33068.9810794466,15587.1284264554,67945.9653478291
-"419","All pathogens","Irritable bowel syndrome","65+","Shellfish","TotalHumanCapital",6348.59297894306,2852.63686795767,13565.936475627
-"420","All pathogens","Irritable bowel syndrome","65+","Vegetables","TotalHumanCapital",175252.880042036,86106.8060634709,350188.773723109
-"421","All pathogens","Reactive arthritis","<5","AllFood","TotalHumanCapital",4688353.14558888,1265849.73004994,11267156.9808746
-"422","All pathogens","Reactive arthritis","<5","Beef","TotalHumanCapital",280777.465270779,71190.3492306467,758565.614885555
-"423","All pathogens","Reactive arthritis","<5","Dairy","TotalHumanCapital",51278.064020893,13225.4724641145,135364.306828782
-"424","All pathogens","Reactive arthritis","<5","Eggs","TotalHumanCapital",1691941.63958682,444958.685754135,4307467.41620604
-"425","All pathogens","Reactive arthritis","<5","Fin fish","TotalHumanCapital",5514.21364780565,1411.72203261509,14510.1855281335
-"426","All pathogens","Reactive arthritis","<5","Fruit","TotalHumanCapital",112240.33337106,27523.7923339814,322799.404471988
-"427","All pathogens","Reactive arthritis","<5","Lamb","TotalHumanCapital",228847.269770924,57723.9390280317,625760.431599913
-"428","All pathogens","Reactive arthritis","<5","Nuts","TotalHumanCapital",186577.093905803,45525.2660891695,538805.425481614
-"429","All pathogens","Reactive arthritis","<5","Other","TotalHumanCapital",80391.9494465215,20963.2183088578,206436.369545817
-"430","All pathogens","Reactive arthritis","<5","Pork","TotalHumanCapital",399581.279147158,100226.410699001,1100073.92691737
-"431","All pathogens","Reactive arthritis","<5","Poultry","TotalHumanCapital",1094541.81888981,278675.964052488,2908849.92921539
-"432","All pathogens","Reactive arthritis","<5","Seeds and grains","TotalHumanCapital",71824.6653796941,18640.4420500928,187219.900778105
-"433","All pathogens","Reactive arthritis","<5","Shellfish","TotalHumanCapital",13739.4938141114,3468.08163520253,37170.5558922448
-"434","All pathogens","Reactive arthritis","<5","Vegetables","TotalHumanCapital",382526.758728173,100838.25931933,970210.169813876
-"435","All pathogens","Reactive arthritis","5-64","AllFood","TotalHumanCapital",13383951.8123697,3541427.54877076,32588472.7915115
-"436","All pathogens","Reactive arthritis","5-64","Beef","TotalHumanCapital",800976.886598831,199997.36953619,2191913.39628566
-"437","All pathogens","Reactive arthritis","5-64","Dairy","TotalHumanCapital",146166.577772764,36997.6428508988,391326.478272636
-"438","All pathogens","Reactive arthritis","5-64","Eggs","TotalHumanCapital",4825440.50414523,1244433.06352053,12453562.9624782
-"439","All pathogens","Reactive arthritis","5-64","Fin fish","TotalHumanCapital",15735.0743416249,3956.50083508679,41878.8027691427
-"440","All pathogens","Reactive arthritis","5-64","Fruit","TotalHumanCapital",320370.055260517,77337.0399787207,930864.661505878
-"441","All pathogens","Reactive arthritis","5-64","Lamb","TotalHumanCapital",652248.816402823,161593.010810602,1805489.70872519
-"442","All pathogens","Reactive arthritis","5-64","Nuts","TotalHumanCapital",532768.853442929,127762.863723137,1557420.21312465
-"443","All pathogens","Reactive arthritis","5-64","Other","TotalHumanCapital",229323.046788963,58789.7955848109,595428.134757348
-"444","All pathogens","Reactive arthritis","5-64","Pork","TotalHumanCapital",1139638.71189466,280204.413474649,3175656.48222588
-"445","All pathogens","Reactive arthritis","5-64","Poultry","TotalHumanCapital",3120617.76708683,778216.54288555,8414555.67433972
-"446","All pathogens","Reactive arthritis","5-64","Seeds and grains","TotalHumanCapital",204779.722772903,52199.2982833723,540704.518232336
-"447","All pathogens","Reactive arthritis","5-64","Shellfish","TotalHumanCapital",39242.9989016592,9698.09937713465,107356.189400453
-"448","All pathogens","Reactive arthritis","5-64","Vegetables","TotalHumanCapital",1091774.88354385,281734.129780138,2803229.80000245
-"449","All pathogens","Reactive arthritis","65+","AllFood","TotalHumanCapital",1928609.33230445,512031.024970354,4689773.33188364
-"450","All pathogens","Reactive arthritis","65+","Beef","TotalHumanCapital",115702.424112715,28791.0167618401,315149.036136382
-"451","All pathogens","Reactive arthritis","65+","Dairy","TotalHumanCapital",21101.9535158947,5347.14145280891,56384.555498122
-"452","All pathogens","Reactive arthritis","65+","Eggs","TotalHumanCapital",697708.821150328,179797.638666207,1796692.68262563
-"453","All pathogens","Reactive arthritis","65+","Fin fish","TotalHumanCapital",2272.45243236235,573.183475140143,6032.28924667113
-"454","All pathogens","Reactive arthritis","65+","Fruit","TotalHumanCapital",46217.168754022,11193.711488406,134117.553826132
-"455","All pathogens","Reactive arthritis","65+","Lamb","TotalHumanCapital",94363.2367334446,23339.3870976993,260271.817461108
-"456","All pathogens","Reactive arthritis","65+","Nuts","TotalHumanCapital",76889.0419344242,18428.0814480385,224129.96024122
-"457","All pathogens","Reactive arthritis","65+","Other","TotalHumanCapital",33106.7261905706,8465.77442648146,85758.0861935166
-"458","All pathogens","Reactive arthritis","65+","Pork","TotalHumanCapital",164677.038439725,40523.0983516185,456743.488251079
-"459","All pathogens","Reactive arthritis","65+","Poultry","TotalHumanCapital",450718.081545062,112449.908583326,1211756.73408377
-"460","All pathogens","Reactive arthritis","65+","Seeds and grains","TotalHumanCapital",29597.0557121187,7524.85713826769,77834.1561915964
-"461","All pathogens","Reactive arthritis","65+","Shellfish","TotalHumanCapital",5659.43819407736,1396.94061476279,15415.644132319
-"462","All pathogens","Reactive arthritis","65+","Vegetables","TotalHumanCapital",157641.750524645,40609.5734851142,403174.958302664
-"463","All pathogens","Haemolytic uremic syndrome","All ages","AllFood","TotalHumanCapital",8973580.49881399,5203338.10060945,14997276.2885606
-"464","All pathogens","Haemolytic uremic syndrome","All ages","Beef","TotalHumanCapital",3098772.28737393,1794182.25347928,5184997.05784485
-"465","All pathogens","Haemolytic uremic syndrome","All ages","Dairy","TotalHumanCapital",1345416.8910141,769704.947558059,2279022.70549386
-"466","All pathogens","Haemolytic uremic syndrome","All ages","Eggs","TotalHumanCapital",28000.2468748532,11916.4049588721,60627.4802728075
-"467","All pathogens","Haemolytic uremic syndrome","All ages","Fin fish","TotalHumanCapital",0,0,0
-"468","All pathogens","Haemolytic uremic syndrome","All ages","Fruit","TotalHumanCapital",376433.813800237,217133.605358117,637541.80803992
-"469","All pathogens","Haemolytic uremic syndrome","All ages","Lamb","TotalHumanCapital",604672.949462631,349576.647386936,1013924.52852828
-"470","All pathogens","Haemolytic uremic syndrome","All ages","Nuts","TotalHumanCapital",0,0,0
-"471","All pathogens","Haemolytic uremic syndrome","All ages","Other","TotalHumanCapital",352315.63449363,197079.080381821,616256.992091319
-"472","All pathogens","Haemolytic uremic syndrome","All ages","Pork","TotalHumanCapital",665303.407314332,385722.675239006,1111727.54527256
-"473","All pathogens","Haemolytic uremic syndrome","All ages","Poultry","TotalHumanCapital",377001.84279882,216395.708640104,636166.766448282
-"474","All pathogens","Haemolytic uremic syndrome","All ages","Seeds and grains","TotalHumanCapital",376942.265813508,216262.976709185,636856.526787769
-"475","All pathogens","Haemolytic uremic syndrome","All ages","Shellfish","TotalHumanCapital",0,0,0
-"476","All pathogens","Haemolytic uremic syndrome","All ages","Vegetables","TotalHumanCapital",1771961.55769991,1025160.65054153,2976132.65782751
-"477","All pathogens","Initial","All ages","AllFood","TotalHumanCapital",315715350.896256,221387375.642064,453871201.561193
-"478","All pathogens","Initial","All ages","Beef","TotalHumanCapital",7439487.42978946,4722145.26301101,11538171.9477721
-"479","All pathogens","Initial","All ages","Dairy","TotalHumanCapital",28581993.8719441,21642176.2635467,37185581.4514388
-"480","All pathogens","Initial","All ages","Eggs","TotalHumanCapital",37588742.8978761,24882295.5066316,56109053.9249129
-"481","All pathogens","Initial","All ages","Fin fish","TotalHumanCapital",1250061.64566362,768515.701219678,1982363.57883573
-"482","All pathogens","Initial","All ages","Fruit","TotalHumanCapital",24523735.9477495,16865112.8321172,37386848.8663073
-"483","All pathogens","Initial","All ages","Lamb","TotalHumanCapital",5540679.74936938,3282551.87143213,9062522.27872435
-"484","All pathogens","Initial","All ages","Nuts","TotalHumanCapital",4436385.59506502,2363884.2530858,7839773.57954002
-"485","All pathogens","Initial","All ages","Other","TotalHumanCapital",13774084.184764,7333498.32250606,24774803.4354716
-"486","All pathogens","Initial","All ages","Pork","TotalHumanCapital",15347253.1032678,10997099.0694467,21755376.4186603
-"487","All pathogens","Initial","All ages","Poultry","TotalHumanCapital",30515386.7847858,20450958.5661442,45788418.7575592
-"488","All pathogens","Initial","All ages","Seeds and grains","TotalHumanCapital",3629996.41944242,2660792.73393817,4896309.6391712
-"489","All pathogens","Initial","All ages","Shellfish","TotalHumanCapital",95014185.9973918,35498434.4547398,188022134.965876
-"490","All pathogens","Initial","All ages","Vegetables","TotalHumanCapital",41377350.817588,28265056.8693305,63499286.308014
-"491","All pathogens","Irritable bowel syndrome","All ages","AllFood","TotalHumanCapital",16182240.5864952,8632250.94572286,29686384.0834768
-"492","All pathogens","Irritable bowel syndrome","All ages","Beef","TotalHumanCapital",981834.759757118,452928.482043355,2068172.15187696
-"493","All pathogens","Irritable bowel syndrome","All ages","Dairy","TotalHumanCapital",178819.476990623,84976.2288958955,364073.894755563
-"494","All pathogens","Irritable bowel syndrome","All ages","Eggs","TotalHumanCapital",5890589.33391226,2921787.98057858,11571198.7731437
-"495","All pathogens","Irritable bowel syndrome","All ages","Fin fish","TotalHumanCapital",19248.1779497096,9173.67142782246,39136.5527207222
-"496","All pathogens","Irritable bowel syndrome","All ages","Fruit","TotalHumanCapital",397792.440377944,168733.779823048,884306.848753836
-"497","All pathogens","Irritable bowel syndrome","All ages","Lamb","TotalHumanCapital",803537.62073478,362677.125390964,1706700.78743487
-"498","All pathogens","Irritable bowel syndrome","All ages","Nuts","TotalHumanCapital",659947.828004049,276609.685695846,1483137.25321938
-"499","All pathogens","Irritable bowel syndrome","All ages","Other","TotalHumanCapital",279461.689685701,137619.630114304,553557.165698381
-"500","All pathogens","Irritable bowel syndrome","All ages","Pork","TotalHumanCapital",1402747.17633905,630424.241033336,3008746.54681303
-"501","All pathogens","Irritable bowel syndrome","All ages","Poultry","TotalHumanCapital",3822662.3734727,1782679.77043499,7974840.92691112
-"502","All pathogens","Irritable bowel syndrome","All ages","Seeds and grains","TotalHumanCapital",250219.451004938,120755.325476044,505925.734390295
-"503","All pathogens","Irritable bowel syndrome","All ages","Shellfish","TotalHumanCapital",48082.9043872126,22064.0861005221,100769.605822168
-"504","All pathogens","Irritable bowel syndrome","All ages","Vegetables","TotalHumanCapital",1325863.3978076,666011.252678245,2600930.80430246
-"505","All pathogens","Reactive arthritis","All ages","AllFood","TotalHumanCapital",20008350.2560454,5318345.24927272,48516154.5836225
-"506","All pathogens","Reactive arthritis","All ages","Beef","TotalHumanCapital",1197906.34434321,300719.887636644,3263512.42725774
-"507","All pathogens","Reactive arthritis","All ages","Dairy","TotalHumanCapital",218518.993221424,55680.1173523752,582602.369985349
-"508","All pathogens","Reactive arthritis","All ages","Eggs","TotalHumanCapital",7216515.64650743,1871877.83376171,18536529.2521528
-"509","All pathogens","Reactive arthritis","All ages","Fin fish","TotalHumanCapital",23538.6800267042,5951.18395483636,62443.4037398403
-"510","All pathogens","Reactive arthritis","All ages","Fruit","TotalHumanCapital",478790.991561579,116251.455004845,1387325.01751333
-"511","All pathogens","Reactive arthritis","All ages","Lamb","TotalHumanCapital",975626.577639176,243490.12069287,2690811.19617179
-"512","All pathogens","Reactive arthritis","All ages","Nuts","TotalHumanCapital",796930.921228897,191804.338122091,2319167.28799473
-"513","All pathogens","Reactive arthritis","All ages","Other","TotalHumanCapital",342822.516529801,88212.2934491556,886814.635974259
-"514","All pathogens","Reactive arthritis","All ages","Pork","TotalHumanCapital",1705027.13755043,421049.033205065,4731665.79229988
-"515","All pathogens","Reactive arthritis","All ages","Poultry","TotalHumanCapital",4667641.78958063,1169981.52279314,12526812.05519
-"516","All pathogens","Reactive arthritis","All ages","Seeds and grains","TotalHumanCapital",306134.713092447,78488.2884011066,805092.960837397
-"517","All pathogens","Reactive arthritis","All ages","Shellfish","TotalHumanCapital",58653.9214305185,14579.7458135335,159786.655646606
-"518","All pathogens","Reactive arthritis","All ages","Vegetables","TotalHumanCapital",1633054.95942795,424034.421595267,4174889.2728546
-"519","Listeria monocytogenes","Initial","All ages","AllFood","TotalHumanCapital",78394098.3708693,58620323.1929733,102676633.869509
-"520","Listeria monocytogenes","Initial","All ages","Beef","TotalHumanCapital",193923.961991256,90101.6282155343,368201.461595124
-"521","Listeria monocytogenes","Initial","All ages","Dairy","TotalHumanCapital",26979795.695604,20095421.7930837,35558242.3059062
-"522","Listeria monocytogenes","Initial","All ages","Eggs","TotalHumanCapital",0,0,0
-"523","Listeria monocytogenes","Initial","All ages","Fin fish","TotalHumanCapital",579435.999021506,323775.451229303,979700.299096121
-"524","Listeria monocytogenes","Initial","All ages","Fruit","TotalHumanCapital",12407361.0337178,9142459.63851943,16533299.7940712
-"525","Listeria monocytogenes","Initial","All ages","Lamb","TotalHumanCapital",193507.645666314,90105.3142914455,369243.075186753
-"526","Listeria monocytogenes","Initial","All ages","Nuts","TotalHumanCapital",192898.614387462,89574.4295050253,369620.144988158
-"527","Listeria monocytogenes","Initial","All ages","Other","TotalHumanCapital",2509770.93721853,1484993.56196687,4058160.93484388
-"528","Listeria monocytogenes","Initial","All ages","Pork","TotalHumanCapital",6045480.0013066,4518074.095866,7931068.55061608
-"529","Listeria monocytogenes","Initial","All ages","Poultry","TotalHumanCapital",5850071.68605735,4371636.51386879,7670174.14157228
-"530","Listeria monocytogenes","Initial","All ages","Seeds and grains","TotalHumanCapital",1862033.68040081,1185100.31634945,2831454.30337028
-"531","Listeria monocytogenes","Initial","All ages","Shellfish","TotalHumanCapital",5852619.96004394,4371228.19878873,7668354.90384199
-"532","Listeria monocytogenes","Initial","All ages","Vegetables","TotalHumanCapital",14812064.3129626,11025219.2202884,19526500.8924669
-"533","Non-typhoidal Salmonella","Initial","All ages","AllFood","TotalHumanCapital",102963838.835323,78761979.9509074,135448761.413854
-"534","Non-typhoidal Salmonella","Initial","All ages","Beef","TotalHumanCapital",6298194.43490044,3668095.96414162,10346773.0469388
-"535","Non-typhoidal Salmonella","Initial","All ages","Dairy","TotalHumanCapital",1144396.64058438,704974.653530237,1801935.74252685
-"536","Non-typhoidal Salmonella","Initial","All ages","Eggs","TotalHumanCapital",37581559.1780225,24876197.8560071,56100497.8277493
-"537","Non-typhoidal Salmonella","Initial","All ages","Fin fish","TotalHumanCapital",123086.780871115,75932.8783414851,193827.151599581
-"538","Non-typhoidal Salmonella","Initial","All ages","Fruit","TotalHumanCapital",2548422.67799015,1330953.78413289,4527907.0606333
-"539","Non-typhoidal Salmonella","Initial","All ages","Lamb","TotalHumanCapital",5151887.03769001,2905366.2236331,8666082.51371342
-"540","Non-typhoidal Salmonella","Initial","All ages","Nuts","TotalHumanCapital",4228198.5324767,2162512.5011722,7632173.43920125
-"541","Non-typhoidal Salmonella","Initial","All ages","Other","TotalHumanCapital",1784563.69708646,1165453.06540255,2692672.34590137
-"542","Non-typhoidal Salmonella","Initial","All ages","Pork","TotalHumanCapital",9006080.59217058,5053949.08191753,15206797.9666898
-"543","Non-typhoidal Salmonella","Initial","All ages","Poultry","TotalHumanCapital",24457288.5654003,14567182.1191388,39636717.5290634
-"544","Non-typhoidal Salmonella","Initial","All ages","Seeds and grains","TotalHumanCapital",1601587.32612526,1006108.61582217,2479181.80624888
-"545","Non-typhoidal Salmonella","Initial","All ages","Shellfish","TotalHumanCapital",308093.248639766,179201.721025734,504989.173104671
-"546","Non-typhoidal Salmonella","Initial","All ages","Vegetables","TotalHumanCapital",8484329.38027925,5658019.55940919,12553662.8716487
-"547","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","AllFood","TotalHumanCapital",16182240.5864952,8632250.94572286,29686384.0834768
-"548","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Beef","TotalHumanCapital",981834.759757118,452928.482043355,2068172.15187696
-"549","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Dairy","TotalHumanCapital",178819.476990623,84976.2288958955,364073.894755563
-"550","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Eggs","TotalHumanCapital",5890589.33391226,2921787.98057858,11571198.7731437
-"551","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Fin fish","TotalHumanCapital",19248.1779497096,9173.67142782246,39136.5527207222
-"552","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Fruit","TotalHumanCapital",397792.440377944,168733.779823048,884306.848753836
-"553","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Lamb","TotalHumanCapital",803537.62073478,362677.125390964,1706700.78743487
-"554","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Nuts","TotalHumanCapital",659947.828004049,276609.685695846,1483137.25321938
-"555","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Other","TotalHumanCapital",279461.689685701,137619.630114304,553557.165698381
-"556","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Pork","TotalHumanCapital",1402747.17633905,630424.241033336,3008746.54681303
-"557","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Poultry","TotalHumanCapital",3822662.3734727,1782679.77043499,7974840.92691112
-"558","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Seeds and grains","TotalHumanCapital",250219.451004938,120755.325476044,505925.734390295
-"559","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Shellfish","TotalHumanCapital",48082.9043872126,22064.0861005221,100769.605822168
-"560","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Vegetables","TotalHumanCapital",1325863.3978076,666011.252678245,2600930.80430246
-"561","Non-typhoidal Salmonella","Reactive arthritis","All ages","AllFood","TotalHumanCapital",20008350.2560454,5318345.24927272,48516154.5836225
-"562","Non-typhoidal Salmonella","Reactive arthritis","All ages","Beef","TotalHumanCapital",1197906.34434321,300719.887636644,3263512.42725774
-"563","Non-typhoidal Salmonella","Reactive arthritis","All ages","Dairy","TotalHumanCapital",218518.993221424,55680.1173523752,582602.369985349
-"564","Non-typhoidal Salmonella","Reactive arthritis","All ages","Eggs","TotalHumanCapital",7216515.64650743,1871877.83376171,18536529.2521528
-"565","Non-typhoidal Salmonella","Reactive arthritis","All ages","Fin fish","TotalHumanCapital",23538.6800267042,5951.18395483636,62443.4037398403
-"566","Non-typhoidal Salmonella","Reactive arthritis","All ages","Fruit","TotalHumanCapital",478790.991561579,116251.455004845,1387325.01751333
-"567","Non-typhoidal Salmonella","Reactive arthritis","All ages","Lamb","TotalHumanCapital",975626.577639176,243490.12069287,2690811.19617179
-"568","Non-typhoidal Salmonella","Reactive arthritis","All ages","Nuts","TotalHumanCapital",796930.921228897,191804.338122091,2319167.28799473
-"569","Non-typhoidal Salmonella","Reactive arthritis","All ages","Other","TotalHumanCapital",342822.516529801,88212.2934491556,886814.635974259
-"570","Non-typhoidal Salmonella","Reactive arthritis","All ages","Pork","TotalHumanCapital",1705027.13755043,421049.033205065,4731665.79229988
-"571","Non-typhoidal Salmonella","Reactive arthritis","All ages","Poultry","TotalHumanCapital",4667641.78958063,1169981.52279314,12526812.05519
-"572","Non-typhoidal Salmonella","Reactive arthritis","All ages","Seeds and grains","TotalHumanCapital",306134.713092447,78488.2884011066,805092.960837397
-"573","Non-typhoidal Salmonella","Reactive arthritis","All ages","Shellfish","TotalHumanCapital",58653.9214305185,14579.7458135335,159786.655646606
-"574","Non-typhoidal Salmonella","Reactive arthritis","All ages","Vegetables","TotalHumanCapital",1633054.95942795,424034.421595267,4174889.2728546
-"575","Norovirus","Initial","All ages","AllFood","TotalHumanCapital",128350086.774365,42489142.0410267,262226046.211169
-"576","Norovirus","Initial","All ages","Beef","TotalHumanCapital",0,0,0
-"577","Norovirus","Initial","All ages","Dairy","TotalHumanCapital",0,0,0
-"578","Norovirus","Initial","All ages","Eggs","TotalHumanCapital",0,0,0
-"579","Norovirus","Initial","All ages","Fin fish","TotalHumanCapital",506513.863083531,158867.010147644,1156412.58988561
-"580","Norovirus","Initial","All ages","Fruit","TotalHumanCapital",8975708.30329088,2756334.38084153,21342696.5330332
-"581","Norovirus","Initial","All ages","Lamb","TotalHumanCapital",0,0,0
-"582","Norovirus","Initial","All ages","Nuts","TotalHumanCapital",0,0,0
-"583","Norovirus","Initial","All ages","Other","TotalHumanCapital",9206328.15681975,2974117.08111303,20149212.1285098
-"584","Norovirus","Initial","All ages","Pork","TotalHumanCapital",0,0,0
-"585","Norovirus","Initial","All ages","Poultry","TotalHumanCapital",0,0,0
-"586","Norovirus","Initial","All ages","Seeds and grains","TotalHumanCapital",0,0,0
-"587","Norovirus","Initial","All ages","Shellfish","TotalHumanCapital",88744534.586956,29308964.7552598,181805393.107446
-"588","Norovirus","Initial","All ages","Vegetables","TotalHumanCapital",16987577.0925539,5346748.43800502,38534215.992818
-"589","STEC","Haemolytic uremic syndrome","All ages","AllFood","TotalHumanCapital",8973580.49881399,5203338.10060945,14997276.2885606
-"590","STEC","Haemolytic uremic syndrome","All ages","Beef","TotalHumanCapital",3098772.28737393,1794182.25347928,5184997.05784485
-"591","STEC","Haemolytic uremic syndrome","All ages","Dairy","TotalHumanCapital",1345416.8910141,769704.947558059,2279022.70549386
-"592","STEC","Haemolytic uremic syndrome","All ages","Eggs","TotalHumanCapital",28000.2468748532,11916.4049588721,60627.4802728075
-"593","STEC","Haemolytic uremic syndrome","All ages","Fin fish","TotalHumanCapital",0,0,0
-"594","STEC","Haemolytic uremic syndrome","All ages","Fruit","TotalHumanCapital",376433.813800237,217133.605358117,637541.80803992
-"595","STEC","Haemolytic uremic syndrome","All ages","Lamb","TotalHumanCapital",604672.949462631,349576.647386936,1013924.52852828
-"596","STEC","Haemolytic uremic syndrome","All ages","Nuts","TotalHumanCapital",0,0,0
-"597","STEC","Haemolytic uremic syndrome","All ages","Other","TotalHumanCapital",352315.63449363,197079.080381821,616256.992091319
-"598","STEC","Haemolytic uremic syndrome","All ages","Pork","TotalHumanCapital",665303.407314332,385722.675239006,1111727.54527256
-"599","STEC","Haemolytic uremic syndrome","All ages","Poultry","TotalHumanCapital",377001.84279882,216395.708640104,636166.766448282
-"600","STEC","Haemolytic uremic syndrome","All ages","Seeds and grains","TotalHumanCapital",376942.265813508,216262.976709185,636856.526787769
-"601","STEC","Haemolytic uremic syndrome","All ages","Shellfish","TotalHumanCapital",0,0,0
-"602","STEC","Haemolytic uremic syndrome","All ages","Vegetables","TotalHumanCapital",1771961.55769991,1025160.65054153,2976132.65782751
-"603","STEC","Initial","All ages","AllFood","TotalHumanCapital",2466967.39222827,1190743.2109148,5020567.32586311
-"604","STEC","Initial","All ages","Beef","TotalHumanCapital",851903.734013639,410934.449699335,1736036.93090757
-"605","STEC","Initial","All ages","Dairy","TotalHumanCapital",370423.278898756,176857.993587129,758561.730351544
-"606","STEC","Initial","All ages","Eggs","TotalHumanCapital",7707.67084534316,2901.42775314216,19221.218842427
-"607","STEC","Initial","All ages","Fin fish","TotalHumanCapital",0,0,0
-"608","STEC","Initial","All ages","Fruit","TotalHumanCapital",103660.300500476,49632.0303767591,212267.19110448
-"609","STEC","Initial","All ages","Lamb","TotalHumanCapital",166029.664924029,80143.4120846391,339052.465271758
-"610","STEC","Initial","All ages","Nuts","TotalHumanCapital",0,0,0
-"611","STEC","Initial","All ages","Other","TotalHumanCapital",96957.8021425975,45686.7075405529,202944.76188966
-"612","STEC","Initial","All ages","Pork","TotalHumanCapital",182964.331086866,88233.4777848013,372049.569572771
-"613","STEC","Initial","All ages","Poultry","TotalHumanCapital",103607.460568854,49598.2084677719,212446.550749517
-"614","STEC","Initial","All ages","Seeds and grains","TotalHumanCapital",103584.770187074,49760.4319652509,212054.315471798
-"615","STEC","Initial","All ages","Shellfish","TotalHumanCapital",0,0,0
-"616","STEC","Initial","All ages","Vegetables","TotalHumanCapital",487311.653835495,234562.073077632,993708.069019446
-"617","All pathogens","Initial and sequel disease","<5","AllFood","TotalHumanCapital",44495206.4081892,32116556.9449943,61355326.6516073
-"618","All pathogens","Initial and sequel disease","<5","Beef","TotalHumanCapital",1759520.45217503,1037782.70166114,2981721.18692907
-"619","All pathogens","Initial and sequel disease","<5","Dairy","TotalHumanCapital",5535488.21176508,3283956.62746181,8989032.00570512
-"620","All pathogens","Initial and sequel disease","<5","Eggs","TotalHumanCapital",7350252.85502305,4160150.49364264,13097589.692457
-"621","All pathogens","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",165242.01125607,99007.3577772209,277575.71613273
-"622","All pathogens","Initial and sequel disease","<5","Fruit","TotalHumanCapital",3489333.42557678,2275416.30083559,5235845.72771918
-"623","All pathogens","Initial and sequel disease","<5","Lamb","TotalHumanCapital",1141640.19645125,630047.736337864,2099891.00015632
-"624","All pathogens","Initial and sequel disease","<5","Nuts","TotalHumanCapital",865400.289681599,419547.459364698,1749136.39792118
-"625","All pathogens","Initial and sequel disease","<5","Other","TotalHumanCapital",1433157.02775686,934662.170738491,2168842.42990777
-"626","All pathogens","Initial and sequel disease","<5","Pork","TotalHumanCapital",3069248.01214565,1967451.66695161,4851950.32119192
-"627","All pathogens","Initial and sequel disease","<5","Poultry","TotalHumanCapital",5993594.36260813,3623924.67783697,10328060.9351593
-"628","All pathogens","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",743187.074537791,488413.207921444,1123903.16906268
-"629","All pathogens","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",5945200.61882026,2963246.01494227,10970955.9188911
-"630","All pathogens","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",5843196.70542639,4067285.34674371,8262024.93994282
-"631","All pathogens","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",202174179.8777,124242616.866813,313054495.224683
-"632","All pathogens","Initial and sequel disease","5-64","Beef","TotalHumanCapital",7171082.62428196,4653353.32347477,11062136.8812202
-"633","All pathogens","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",9969448.26110862,6738604.21916292,14494455.1667635
-"634","All pathogens","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",24545033.3402146,14507804.1285548,42187568.175743
-"635","All pathogens","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",660766.33960563,348581.022892872,1184811.08089579
-"636","All pathogens","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",12923777.0242339,7356522.5861849,22769092.4157238
-"637","All pathogens","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",4002489.5266381,2349888.72980338,6982695.60471111
-"638","All pathogens","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",2824949.29345523,1372104.33132673,5581518.81853973
-"639","All pathogens","Initial and sequel disease","5-64","Other","TotalHumanCapital",9496617.0545718,4339424.6002914,18114820.3122022
-"640","All pathogens","Initial and sequel disease","5-64","Pork","TotalHumanCapital",8353962.66273842,5329075.59519074,13626579.5938317
-"641","All pathogens","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",18095020.8405551,10717329.0495787,31432302.6505127
-"642","All pathogens","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",1985330.05520366,1390836.13217631,2871170.71058851
-"643","All pathogens","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",70835450.6831162,22292258.1912657,143663989.507854
-"644","All pathogens","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",25245233.2055852,14951168.8942443,42310250.5661934
-"645","All pathogens","Initial and sequel disease","65+","AllFood","TotalHumanCapital",115419948.805696,87014301.7078505,163393515.620879
-"646","All pathogens","Initial and sequel disease","65+","Beef","TotalHumanCapital",3998772.85813969,2443128.08945957,6439333.115174
-"647","All pathogens","Initial and sequel disease","65+","Dairy","TotalHumanCapital",14437065.6763875,9436022.35638608,21347126.6144785
-"648","All pathogens","Initial and sequel disease","65+","Eggs","TotalHumanCapital",18905055.4408252,11577543.4610918,30101788.2441737
-"649","All pathogens","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",445977.617479808,274209.413082876,749362.631827436
-"650","All pathogens","Initial and sequel disease","65+","Fruit","TotalHumanCapital",9270795.33256814,6397019.20842009,13769352.9865064
-"651","All pathogens","Initial and sequel disease","65+","Lamb","TotalHumanCapital",2831647.08721743,1618695.62636244,4843310.86158375
-"652","All pathogens","Initial and sequel disease","65+","Nuts","TotalHumanCapital",2227576.98376584,1138356.27816865,4138567.6210261
-"653","All pathogens","Initial and sequel disease","65+","Other","TotalHumanCapital",3725103.10625263,2477479.88279039,6903901.02456225
-"654","All pathogens","Initial and sequel disease","65+","Pork","TotalHumanCapital",7813870.88858774,5295993.61617291,11548337.2550509
-"655","All pathogens","Initial and sequel disease","65+","Poultry","TotalHumanCapital",15394662.3074788,9832809.93787882,24336919.2715968
-"656","All pathogens","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",1860833.14999703,1284239.69039104,2661047.1969584
-"657","All pathogens","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",15692077.0157629,8352394.3396178,44289136.3981862
-"658","All pathogens","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",15162317.241395,10995038.184015,22179240.2592442
-"659","All pathogens","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",365054162.25408,262249385.821512,510787038.38339
-"660","All pathogens","Initial and sequel disease","All ages","Beef","TotalHumanCapital",13024091.9608417,8788996.0955517,19555469.0791892
-"661","All pathogens","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",30453869.4730606,23422808.9195825,39113022.1609792
-"662","All pathogens","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",51326995.6148626,32691521.6005335,81275406.9726345
-"663","All pathogens","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",1299535.21536532,811478.038584488,2036177.72962388
-"664","All pathogens","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",25967652.1434005,18068624.0764556,38930467.5886024
-"665","All pathogens","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",8058018.73978645,4847959.33653588,13409874.8465186
-"666","All pathogens","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",5983856.48326909,3086314.93743224,11048488.1088355
-"667","All pathogens","Initial and sequel disease","All ages","Other","TotalHumanCapital",14862694.8632561,8340351.80686417,25900621.5415091
-"668","All pathogens","Initial and sequel disease","All ages","Pork","TotalHumanCapital",19335924.9761254,13415368.6601232,28881024.9830002
-"669","All pathogens","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",39859086.4784657,25579656.0490499,63414763.2115127
-"670","All pathogens","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",4626487.66656587,3422375.74375061,6278385.15681933
-"671","All pathogens","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",95124976.2239036,35626407.8481588,188144232.386395
-"672","All pathogens","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",46628857.841985,32784947.4748904,69092720.4383693
-"673","Listeria monocytogenes","Initial and sequel disease","<5","AllFood","TotalHumanCapital",14766530.7164118,8299518.02008253,24663529.691766
-"674","Listeria monocytogenes","Initial and sequel disease","<5","Beef","TotalHumanCapital",36191.9048771811,14683.7136058584,79508.9309007846
-"675","Listeria monocytogenes","Initial and sequel disease","<5","Dairy","TotalHumanCapital",5084236.19591259,2846015.0322288,8523294.51614467
-"676","Listeria monocytogenes","Initial and sequel disease","<5","Eggs","TotalHumanCapital",0,0,0
-"677","Listeria monocytogenes","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",108524.445868784,50755.6135032388,215971.156049936
-"678","Listeria monocytogenes","Initial and sequel disease","<5","Fruit","TotalHumanCapital",2335918.50737925,1300514.97611922,3942770.51513891
-"679","Listeria monocytogenes","Initial and sequel disease","<5","Lamb","TotalHumanCapital",36061.1392283926,14697.0240207825,79636.6856105388
-"680","Listeria monocytogenes","Initial and sequel disease","<5","Nuts","TotalHumanCapital",35974.4684571,14568.5578912947,79969.2892973698
-"681","Listeria monocytogenes","Initial and sequel disease","<5","Other","TotalHumanCapital",470992.838310696,229675.712798227,906654.354959703
-"682","Listeria monocytogenes","Initial and sequel disease","<5","Pork","TotalHumanCapital",1138563.30632475,638844.979805211,1902772.68293347
-"683","Listeria monocytogenes","Initial and sequel disease","<5","Poultry","TotalHumanCapital",1102474.23303987,618825.199318686,1842335.62884562
-"684","Listeria monocytogenes","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",349679.074025328,179237.920533739,643203.150228085
-"685","Listeria monocytogenes","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",1102789.33542666,618455.3551103,1843548.02598451
-"686","Listeria monocytogenes","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",2789575.72916577,1560690.31980531,4674860.84350737
-"687","Listeria monocytogenes","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",22889987.6638997,13950079.1317178,35655842.6854702
-"688","Listeria monocytogenes","Initial and sequel disease","5-64","Beef","TotalHumanCapital",56094.0864455196,23891.0987663908,117944.917389642
-"689","Listeria monocytogenes","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",7873638.26699429,4789476.28731742,12330695.6732091
-"690","Listeria monocytogenes","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",0,0,0
-"691","Listeria monocytogenes","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",168148.241093226,83499.8236053759,317813.610754188
-"692","Listeria monocytogenes","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",3619883.63022828,2191619.31152906,5708109.45704152
-"693","Listeria monocytogenes","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",56005.1358929319,23877.8605261795,117543.950575309
-"694","Listeria monocytogenes","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",55863.8527029545,23734.9799988984,118311.012349605
-"695","Listeria monocytogenes","Initial and sequel disease","5-64","Other","TotalHumanCapital",729245.248019703,378854.849632508,1335945.10691987
-"696","Listeria monocytogenes","Initial and sequel disease","5-64","Pork","TotalHumanCapital",1764974.67161343,1075883.92637211,2753521.34462419
-"697","Listeria monocytogenes","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",1708601.90987848,1039009.59877837,2662804.98459595
-"698","Listeria monocytogenes","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",542282.608870462,297567.645034942,940737.917374088
-"699","Listeria monocytogenes","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",1707670.03180244,1040679.78347594,2663952.07684401
-"700","Listeria monocytogenes","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",4324035.85978481,2627761.13515037,6769240.15059631
-"701","Listeria monocytogenes","Initial and sequel disease","65+","AllFood","TotalHumanCapital",39295727.1115352,24869438.5763944,58981648.3487899
-"702","Listeria monocytogenes","Initial and sequel disease","65+","Beef","TotalHumanCapital",96392.7797633944,42031.6389088839,198281.073623943
-"703","Listeria monocytogenes","Initial and sequel disease","65+","Dairy","TotalHumanCapital",13520983.3026744,8540948.6586812,20410742.1177064
-"704","Listeria monocytogenes","Initial and sequel disease","65+","Eggs","TotalHumanCapital",0,0,0
-"705","Listeria monocytogenes","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",288685.047075703,146655.161177051,535626.193398014
-"706","Listeria monocytogenes","Initial and sequel disease","65+","Fruit","TotalHumanCapital",6216742.15930099,3898194.31133603,9447033.65031418
-"707","Listeria monocytogenes","Initial and sequel disease","65+","Lamb","TotalHumanCapital",96260.5173927453,41853.1118656338,198304.765570858
-"708","Listeria monocytogenes","Initial and sequel disease","65+","Nuts","TotalHumanCapital",95980.9888121281,41533.6410666391,198886.021183609
-"709","Listeria monocytogenes","Initial and sequel disease","65+","Other","TotalHumanCapital",1252131.18501779,671085.135348393,2220567.79961075
-"710","Listeria monocytogenes","Initial and sequel disease","65+","Pork","TotalHumanCapital",3029294.68018295,1915504.41563097,4551026.54490396
-"711","Listeria monocytogenes","Initial and sequel disease","65+","Poultry","TotalHumanCapital",2931078.13066886,1852995.10948341,4403855.80664827
-"712","Listeria monocytogenes","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",930168.035626776,528686.030096236,1570310.88593278
-"713","Listeria monocytogenes","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",2932249.39754143,1850315.8157899,4406446.06709094
-"714","Listeria monocytogenes","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",7420428.72575928,4682827.49422574,11181775.5571837
-"715","Listeria monocytogenes","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",78394098.3708693,58620323.1929733,102676633.869509
-"716","Listeria monocytogenes","Initial and sequel disease","All ages","Beef","TotalHumanCapital",193923.961991256,90101.6282155343,368201.461595124
-"717","Listeria monocytogenes","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",26979795.695604,20095421.7930837,35558242.3059062
-"718","Listeria monocytogenes","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",0,0,0
-"719","Listeria monocytogenes","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",579435.999021506,323775.451229303,979700.299096121
-"720","Listeria monocytogenes","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",12407361.0337178,9142459.63851943,16533299.7940712
-"721","Listeria monocytogenes","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",193507.645666314,90105.3142914455,369243.075186753
-"722","Listeria monocytogenes","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",192898.614387462,89574.4295050253,369620.144988158
-"723","Listeria monocytogenes","Initial and sequel disease","All ages","Other","TotalHumanCapital",2509770.93721853,1484993.56196687,4058160.93484388
-"724","Listeria monocytogenes","Initial and sequel disease","All ages","Pork","TotalHumanCapital",6045480.0013066,4518074.095866,7931068.55061608
-"725","Listeria monocytogenes","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",5850071.68605735,4371636.51386879,7670174.14157228
-"726","Listeria monocytogenes","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",1862033.68040081,1185100.31634945,2831454.30337028
-"727","Listeria monocytogenes","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",5852619.96004394,4371228.19878873,7668354.90384199
-"728","Listeria monocytogenes","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",14812064.3129626,11025219.2202884,19526500.8924669
-"729","Non-typhoidal Salmonella","Initial and sequel disease","<5","AllFood","TotalHumanCapital",20130521.5545061,12570242.0798234,33158138.1228903
-"730","Non-typhoidal Salmonella","Initial and sequel disease","<5","Beef","TotalHumanCapital",1228562.12408669,632735.161544367,2352531.50194973
-"731","Non-typhoidal Salmonella","Initial and sequel disease","<5","Dairy","TotalHumanCapital",223411.167195133,120011.674352922,414805.620117474
-"732","Non-typhoidal Salmonella","Initial and sequel disease","<5","Eggs","TotalHumanCapital",7345721.4789715,4155822.98146997,13093319.7808047
-"733","Non-typhoidal Salmonella","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",24013.8545918083,12930.2014986163,44470.4124851661
-"734","Non-typhoidal Salmonella","Initial and sequel disease","<5","Fruit","TotalHumanCapital",496417.563570244,233963.78601865,1015613.26133042
-"735","Non-typhoidal Salmonella","Initial and sequel disease","<5","Lamb","TotalHumanCapital",1005389.46384815,503043.352371053,1958122.68209638
-"736","Non-typhoidal Salmonella","Initial and sequel disease","<5","Nuts","TotalHumanCapital",825573.419046921,380771.881093462,1708076.16801486
-"737","Non-typhoidal Salmonella","Initial and sequel disease","<5","Other","TotalHumanCapital",348805.762817543,195882.457065623,628608.576237909
-"738","Non-typhoidal Salmonella","Initial and sequel disease","<5","Pork","TotalHumanCapital",1756689.31812071,876881.097389986,3432920.93202367
-"739","Non-typhoidal Salmonella","Initial and sequel disease","<5","Poultry","TotalHumanCapital",4776793.88635536,2500775.3501053,9070991.79000548
-"740","Non-typhoidal Salmonella","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",312388.008505388,170820.56209866,572213.892479374
-"741","Non-typhoidal Salmonella","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",60197.5889772679,30921.2598444542,115202.611483945
-"742","Non-typhoidal Salmonella","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",1656061.41919239,946938.690965871,2937705.3429524
-"743","Non-typhoidal Salmonella","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",67225203.1166577,44004166.406674,106482274.241025
-"744","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Beef","TotalHumanCapital",4108432.44320111,2191994.43627778,7620920.98212518
-"745","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",746648.898648958,414882.002098431,1341751.94748223
-"746","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",24517253.2895435,14479309.8693817,42160528.3699334
-"747","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",80286.1838317778,44690.6922773963,143576.73121274
-"748","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",1662258.28178822,805331.600376533,3303698.88690496
-"749","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",3359083.14785993,1745094.71762947,6329800.05099491
-"750","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",2764093.5894191,1311658.46954375,5524492.77561933
-"751","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Other","TotalHumanCapital",1164605.84500174,680572.510009314,2026932.28150538
-"752","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Pork","TotalHumanCapital",5878405.99623824,3029370.67708011,11105028.1214797
-"753","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",15960118.5767016,8636165.11711365,29304945.7606593
-"754","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",1044292.66236985,593040.703727767,1846578.62980545
-"755","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",200880.203766724,106852.078816074,372634.986774409
-"756","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",5533172.14925776,3296436.63446703,9483007.0139647
-"757","Non-typhoidal Salmonella","Initial and sequel disease","65+","AllFood","TotalHumanCapital",51904396.610729,35496078.043033,74568655.7610438
-"758","Non-typhoidal Salmonella","Initial and sequel disease","65+","Beef","TotalHumanCapital",3157528.90757523,1733927.21308742,5497975.75418379
-"759","Non-typhoidal Salmonella","Initial and sequel disease","65+","Dairy","TotalHumanCapital",574322.359482364,331768.518099612,963903.392968946
-"760","Non-typhoidal Salmonella","Initial and sequel disease","65+","Eggs","TotalHumanCapital",18897482.1996792,11571072.0688071,30093363.8872582
-"761","Non-typhoidal Salmonella","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",61739.5448517629,35706.0396888884,103710.685895616
-"762","Non-typhoidal Salmonella","Initial and sequel disease","65+","Fruit","TotalHumanCapital",1278423.03885957,636604.782375175,2394050.47578659
-"763","Non-typhoidal Salmonella","Initial and sequel disease","65+","Lamb","TotalHumanCapital",2583674.16882755,1381789.36186851,4583764.92030943
-"764","Non-typhoidal Salmonella","Initial and sequel disease","65+","Nuts","TotalHumanCapital",2123900.02278739,1038144.93610892,4029464.58280467
-"765","Non-typhoidal Salmonella","Initial and sequel disease","65+","Other","TotalHumanCapital",896980.405981208,544229.009577686,1444395.14600579
-"766","Non-typhoidal Salmonella","Initial and sequel disease","65+","Pork","TotalHumanCapital",4514762.1126815,2402797.45231303,8031378.34386314
-"767","Non-typhoidal Salmonella","Initial and sequel disease","65+","Poultry","TotalHumanCapital",12290616.0794696,6899187.61844272,21133460.2976378
-"768","Non-typhoidal Salmonella","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",803791.415617463,472665.847434915,1329427.39645517
-"769","Non-typhoidal Salmonella","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",154700.031456564,84872.6515742535,267815.937982397
-"770","Non-typhoidal Salmonella","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",4262544.85568884,2635340.86006969,6760421.44242993
-"771","Non-typhoidal Salmonella","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",140229317.383501,101731914.88215,200987818.259745
-"772","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Beef","TotalHumanCapital",8587732.9228406,4864743.88755187,14843747.8525345
-"773","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",1561170.41399708,930018.155138725,2598587.88759868
-"774","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",51289341.9957084,32649928.443443,81234591.3627789
-"775","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",167870.826896539,100053.13785184,278954.539800416
-"776","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",3484045.00607006,1773349.87178851,6470384.45456972
-"777","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",7031370.25854115,3856824.85476469,12361863.795165
-"778","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",5777659.09368663,2885050.68470064,10845101.7275094
-"779","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Other","TotalHumanCapital",2435190.12970699,1528381.8258948,3904826.89254315
-"780","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Pork","TotalHumanCapital",12298939.82416,6718090.31653765,21728141.6840815
-"781","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",33433245.4869558,19243166.974212,56983665.0918869
-"782","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",2184077.14609205,1325485.08402909,3571894.3990521
-"783","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",420799.855617769,237485.96255429,725857.88721151
-"784","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",11574445.674162,7429643.30262697,18185975.4172504
-"785","Norovirus","Initial and sequel disease","<5","AllFood","TotalHumanCapital",6825507.06262459,2637716.41927036,14018248.2056326
-"786","Norovirus","Initial and sequel disease","<5","Beef","TotalHumanCapital",0,0,0
-"787","Norovirus","Initial and sequel disease","<5","Dairy","TotalHumanCapital",0,0,0
-"788","Norovirus","Initial and sequel disease","<5","Eggs","TotalHumanCapital",0,0,0
-"789","Norovirus","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",27025.8960383396,9765.41659813376,61691.5359882244
-"790","Norovirus","Initial and sequel disease","<5","Fruit","TotalHumanCapital",480556.868242402,169404.489535218,1131690.65562879
-"791","Norovirus","Initial and sequel disease","<5","Lamb","TotalHumanCapital",0,0,0
-"792","Norovirus","Initial and sequel disease","<5","Nuts","TotalHumanCapital",0,0,0
-"793","Norovirus","Initial and sequel disease","<5","Other","TotalHumanCapital",491642.119280685,183804.666272466,1071830.63597456
-"794","Norovirus","Initial and sequel disease","<5","Pork","TotalHumanCapital",0,0,0
-"795","Norovirus","Initial and sequel disease","<5","Poultry","TotalHumanCapital",0,0,0
-"796","Norovirus","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",0,0,0
-"797","Norovirus","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",4723196.27594942,1824675.51841585,9705914.08926766
-"798","Norovirus","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",907056.254396732,330209.77985066,2051559.38157352
-"799","Norovirus","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",99506811.5002012,29494958.2095506,204805995.1788
-"800","Norovirus","Initial and sequel disease","5-64","Beef","TotalHumanCapital",0,0,0
-"801","Norovirus","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",0,0,0
-"802","Norovirus","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",0,0,0
-"803","Norovirus","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",392278.025815313,110905.81842973,903064.24159836
-"804","Norovirus","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",6957176.02266717,1922478.67999472,16625598.8092425
-"805","Norovirus","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",0,0,0
-"806","Norovirus","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",0,0,0
-"807","Norovirus","Initial and sequel disease","5-64","Other","TotalHumanCapital",7137058.83543152,2072680.51036862,15706480.5253349
-"808","Norovirus","Initial and sequel disease","5-64","Pork","TotalHumanCapital",0,0,0
-"809","Norovirus","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",0,0,0
-"810","Norovirus","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",0,0,0
-"811","Norovirus","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",68867602.5895788,20355542.717948,141672882.980672
-"812","Norovirus","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",13154930.228491,3727140.45950042,29897345.9500271
-"813","Norovirus","Initial and sequel disease","65+","AllFood","TotalHumanCapital",18050144.5140891,7695476.37528002,59501673.0027755
-"814","Norovirus","Initial and sequel disease","65+","Beef","TotalHumanCapital",0,0,0
-"815","Norovirus","Initial and sequel disease","65+","Dairy","TotalHumanCapital",0,0,0
-"816","Norovirus","Initial and sequel disease","65+","Eggs","TotalHumanCapital",0,0,0
-"817","Norovirus","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",72656.3230077416,28020.4965666178,251532.482813092
-"818","Norovirus","Initial and sequel disease","65+","Fruit","TotalHumanCapital",1299389.79945059,483885.825067286,4528596.1726589
-"819","Norovirus","Initial and sequel disease","65+","Lamb","TotalHumanCapital",0,0,0
-"820","Norovirus","Initial and sequel disease","65+","Nuts","TotalHumanCapital",0,0,0
-"821","Norovirus","Initial and sequel disease","65+","Other","TotalHumanCapital",1313380.88609693,531975.022986933,4424054.71763589
-"822","Norovirus","Initial and sequel disease","65+","Pork","TotalHumanCapital",0,0,0
-"823","Norovirus","Initial and sequel disease","65+","Poultry","TotalHumanCapital",0,0,0
-"824","Norovirus","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",0,0,0
-"825","Norovirus","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",12485287.0501797,5313557.87136254,41062375.3368601
-"826","Norovirus","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",2429666.96712452,949354.236579734,8364233.33523742
-"827","Norovirus","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",128350086.774365,42489142.0410267,262226046.211169
-"828","Norovirus","Initial and sequel disease","All ages","Beef","TotalHumanCapital",0,0,0
-"829","Norovirus","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",0,0,0
-"830","Norovirus","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",0,0,0
-"831","Norovirus","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",506513.863083531,158867.010147644,1156412.58988561
-"832","Norovirus","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",8975708.30329088,2756334.38084153,21342696.5330332
-"833","Norovirus","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",0,0,0
-"834","Norovirus","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",0,0,0
-"835","Norovirus","Initial and sequel disease","All ages","Other","TotalHumanCapital",9206328.15681975,2974117.08111303,20149212.1285098
-"836","Norovirus","Initial and sequel disease","All ages","Pork","TotalHumanCapital",0,0,0
-"837","Norovirus","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",0,0,0
-"838","Norovirus","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",0,0,0
-"839","Norovirus","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",88744534.586956,29308964.7552598,181805393.107446
-"840","Norovirus","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",16987577.0925539,5346748.43800502,38534215.992818
-"841","STEC","Initial and sequel disease","<5","AllFood","TotalHumanCapital",1223602.90381379,495005.177968407,2938581.57428722
-"842","STEC","Initial and sequel disease","<5","Beef","TotalHumanCapital",423015.334508082,170886.116737877,1016577.87988173
-"843","STEC","Initial and sequel disease","<5","Dairy","TotalHumanCapital",183459.500881324,73658.2357231305,444420.051551992
-"844","STEC","Initial and sequel disease","<5","Eggs","TotalHumanCapital",3807.8846009899,1246.20445710829,11025.3870680323
-"845","STEC","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",0,0,0
-"846","STEC","Initial and sequel disease","<5","Fruit","TotalHumanCapital",51454.2742106356,20629.450562733,124313.789071784
-"847","STEC","Initial and sequel disease","<5","Lamb","TotalHumanCapital",82530.6543338831,33227.4894841188,198532.261906452
-"848","STEC","Initial and sequel disease","<5","Nuts","TotalHumanCapital",0,0,0
-"849","STEC","Initial and sequel disease","<5","Other","TotalHumanCapital",48110.1744879016,18951.3672405228,118423.990340764
-"850","STEC","Initial and sequel disease","<5","Pork","TotalHumanCapital",90698.7288107584,36683.9501480062,218099.201336651
-"851","STEC","Initial and sequel disease","<5","Poultry","TotalHumanCapital",51390.6436453338,20682.6094449377,124503.510234324
-"852","STEC","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",51437.5124435856,20645.6734333169,124130.8366359
-"853","STEC","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",0,0,0
-"854","STEC","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",241566.234606064,97460.3956784854,582916.454799925
-"855","STEC","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",8139086.43828331,4540146.16288863,14056712.9165916
-"856","STEC","Initial and sequel disease","5-64","Beef","TotalHumanCapital",2813182.76768767,1567589.83205961,4858508.20041926
-"857","STEC","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",1219959.08281072,672929.039027411,2136046.42979049
-"858","STEC","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",25363.3857443301,10565.2510871758,56192.5008649945
-"859","STEC","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",0,0,0
-"860","STEC","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",341574.185358732,189114.885757689,596356.688435124
-"861","STEC","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",547761.167592784,305046.920236064,950812.642510176
-"862","STEC","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",0,0,0
-"863","STEC","Initial and sequel disease","5-64","Other","TotalHumanCapital",319274.916401815,172134.002197784,576095.479497466
-"864","STEC","Initial and sequel disease","5-64","Pork","TotalHumanCapital",603383.1992063,336775.304112531,1042591.29535031
-"865","STEC","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",341701.370082968,189198.454358408,596410.238814107
-"866","STEC","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",341716.851893141,188879.833680737,595391.939279178
-"867","STEC","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",0,0,0
-"868","STEC","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",1606990.5477263,893541.856168894,2783128.12148068
-"869","STEC","Initial and sequel disease","65+","AllFood","TotalHumanCapital",1864306.99089952,774293.776616152,4308443.50207476
-"870","STEC","Initial and sequel disease","65+","Beef","TotalHumanCapital",643854.368467884,267390.397730552,1489547.58955162
-"871","STEC","Initial and sequel disease","65+","Dairy","TotalHumanCapital",279404.480775573,115217.102912944,651052.283543246
-"872","STEC","Initial and sequel disease","65+","Eggs","TotalHumanCapital",5787.96342603473,1944.44356189011,16149.395601158
-"873","STEC","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",0,0,0
-"874","STEC","Initial and sequel disease","65+","Fruit","TotalHumanCapital",78267.1857182734,32419.1951041373,181934.338508504
-"875","STEC","Initial and sequel disease","65+","Lamb","TotalHumanCapital",125577.492768114,52076.1272791634,291528.156706542
-"876","STEC","Initial and sequel disease","65+","Nuts","TotalHumanCapital",0,0,0
-"877","STEC","Initial and sequel disease","65+","Other","TotalHumanCapital",73194.4777109889,29756.6143337707,173426.884153216
-"878","STEC","Initial and sequel disease","65+","Pork","TotalHumanCapital",138203.239973145,57427.7667662694,319450.210297099
-"879","STEC","Initial and sequel disease","65+","Poultry","TotalHumanCapital",78288.5255995943,32312.164204115,182299.516387706
-"880","STEC","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",78270.1755032872,32333.9994054129,182202.817685134
-"881","STEC","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",0,0,0
-"882","STEC","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",368418.174930151,152644.479592107,852795.198400841
-"883","STEC","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",11684987.6456583,7258988.9794922,18300208.5392068
-"884","STEC","Initial and sequel disease","All ages","Beef","TotalHumanCapital",4037138.13983093,2504167.61310995,6328115.15969387
-"885","STEC","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",1750249.34304043,1071433.0181584,2787665.46584267
-"886","STEC","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",36515.9322302468,16141.0943566806,75444.6411592367
-"887","STEC","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",0,0,0
-"888","STEC","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",490362.277794701,302177.409059282,778560.062975509
-"889","STEC","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",786801.045566989,487441.688071475,1238813.04242578
-"890","STEC","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",0,0,0
-"891","STEC","Initial and sequel disease","All ages","Other","TotalHumanCapital",458554.463321554,273094.539469613,753330.192869463
-"892","STEC","Initial and sequel disease","All ages","Pork","TotalHumanCapital",865992.177717846,537833.388139165,1359027.15061905
-"893","STEC","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",490758.767342297,301687.926194426,777392.88035416
-"894","STEC","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",490738.381781896,301522.33652874,777172.229223206
-"895","STEC","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",0,0,0
-"896","STEC","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",2307372.15009227,1429119.10081335,3630155.9524664
+"169","STEC","Haemolytic uremic syndrome","<5","AllFood","TotalHumanCapital",721561.786026615,239446.371241401,2060778.37730433
+"170","STEC","Haemolytic uremic syndrome","<5","Beef","TotalHumanCapital",249109.761293159,82766.8138952175,710989.167599357
+"171","STEC","Haemolytic uremic syndrome","<5","Dairy","TotalHumanCapital",108069.501349276,35619.9785859199,309527.878060229
+"172","STEC","Haemolytic uremic syndrome","<5","Eggs","TotalHumanCapital",2250.20544928137,622.636511863908,7453.36416797752
+"173","STEC","Haemolytic uremic syndrome","<5","Fin fish","TotalHumanCapital",0,0,0
+"174","STEC","Haemolytic uremic syndrome","<5","Fruit","TotalHumanCapital",30320.1513103197,10001.9336884243,86829.3260914858
+"175","STEC","Haemolytic uremic syndrome","<5","Lamb","TotalHumanCapital",48589.4863335324,16123.3553673801,138891.075993089
+"176","STEC","Haemolytic uremic syndrome","<5","Nuts","TotalHumanCapital",0,0,0
+"177","STEC","Haemolytic uremic syndrome","<5","Other","TotalHumanCapital",28386.6879216618,9254.28189170888,82540.646301115
+"178","STEC","Haemolytic uremic syndrome","<5","Pork","TotalHumanCapital",53513.5706985737,17750.8454692713,152742.149265772
+"179","STEC","Haemolytic uremic syndrome","<5","Poultry","TotalHumanCapital",30276.9624553583,10003.0018322537,86935.3269422685
+"180","STEC","Haemolytic uremic syndrome","<5","Seeds and grains","TotalHumanCapital",30309.8300171611,10012.806590654,86845.3636681199
+"181","STEC","Haemolytic uremic syndrome","<5","Shellfish","TotalHumanCapital",0,0,0
+"182","STEC","Haemolytic uremic syndrome","<5","Vegetables","TotalHumanCapital",142345.631313644,47116.9761732346,407889.237372443
+"183","STEC","Haemolytic uremic syndrome","5-64","AllFood","TotalHumanCapital",6666934.2191495,3426764.24831038,12328508.8294465
+"184","STEC","Haemolytic uremic syndrome","5-64","Beef","TotalHumanCapital",2301581.92792847,1182137.50560439,4262871.63501817
+"185","STEC","Haemolytic uremic syndrome","5-64","Dairy","TotalHumanCapital",998624.019040464,508228.7376035,1871740.3607598
+"186","STEC","Haemolytic uremic syndrome","5-64","Eggs","TotalHumanCapital",20718.4325785358,8214.65100869797,48497.0302851168
+"187","STEC","Haemolytic uremic syndrome","5-64","Fin fish","TotalHumanCapital",0,0,0
+"188","STEC","Haemolytic uremic syndrome","5-64","Fruit","TotalHumanCapital",279929.822400904,142805.640126451,522687.968127794
+"189","STEC","Haemolytic uremic syndrome","5-64","Lamb","TotalHumanCapital",449251.092609927,230209.322849296,834452.454062518
+"190","STEC","Haemolytic uremic syndrome","5-64","Nuts","TotalHumanCapital",0,0,0
+"191","STEC","Haemolytic uremic syndrome","5-64","Other","TotalHumanCapital",261656.048779696,130114.166065498,502353.948583317
+"192","STEC","Haemolytic uremic syndrome","5-64","Pork","TotalHumanCapital",494183.059432623,253875.348595235,915114.247304533
+"193","STEC","Haemolytic uremic syndrome","5-64","Poultry","TotalHumanCapital",279762.258162211,142873.897988362,522418.97767748
+"194","STEC","Haemolytic uremic syndrome","5-64","Seeds and grains","TotalHumanCapital",279914.266745368,142890.529690497,522959.422123007
+"195","STEC","Haemolytic uremic syndrome","5-64","Shellfish","TotalHumanCapital",0,0,0
+"196","STEC","Haemolytic uremic syndrome","5-64","Vegetables","TotalHumanCapital",1317119.75950855,673398.933364455,2443327.79004132
+"197","STEC","Haemolytic uremic syndrome","65+","AllFood","TotalHumanCapital",1166670.51395981,384876.706412658,3165698.03172979
+"198","STEC","Haemolytic uremic syndrome","65+","Beef","TotalHumanCapital",402892.585917905,132827.942365297,1094889.0693422
+"199","STEC","Haemolytic uremic syndrome","65+","Dairy","TotalHumanCapital",174826.108581131,57458.0918593646,479112.829461192
+"200","STEC","Haemolytic uremic syndrome","65+","Eggs","TotalHumanCapital",3603.29943526427,1007.71545418933,11606.1452371975
+"201","STEC","Haemolytic uremic syndrome","65+","Fin fish","TotalHumanCapital",0,0,0
+"202","STEC","Haemolytic uremic syndrome","65+","Fruit","TotalHumanCapital",48980.4488821504,16085.1009659226,134314.931825425
+"203","STEC","Haemolytic uremic syndrome","65+","Lamb","TotalHumanCapital",78559.1647264205,25941.3452187766,214126.326872627
+"204","STEC","Haemolytic uremic syndrome","65+","Nuts","TotalHumanCapital",0,0,0
+"205","STEC","Haemolytic uremic syndrome","65+","Other","TotalHumanCapital",45776.8823153545,14805.7135349181,127197.293513873
+"206","STEC","Haemolytic uremic syndrome","65+","Pork","TotalHumanCapital",86504.4363143752,28548.7545151685,235130.168192392
+"207","STEC","Haemolytic uremic syndrome","65+","Poultry","TotalHumanCapital",49003.4542988447,16070.6392816734,134106.756286344
+"208","STEC","Haemolytic uremic syndrome","65+","Seeds and grains","TotalHumanCapital",49043.4221939876,16127.8055704708,133818.692026171
+"209","STEC","Haemolytic uremic syndrome","65+","Shellfish","TotalHumanCapital",0,0,0
+"210","STEC","Haemolytic uremic syndrome","65+","Vegetables","TotalHumanCapital",230482.837056246,75900.9348680346,627067.573167067
+"211","STEC","Initial","<5","AllFood","TotalHumanCapital",364270.909705208,126007.81937341,1490144.60648761
+"212","STEC","Initial","<5","Beef","TotalHumanCapital",125814.347644165,43514.0277887981,514121.919211031
+"213","STEC","Initial","<5","Dairy","TotalHumanCapital",54585.0225789544,18698.1596851413,224588.724551416
+"214","STEC","Initial","<5","Eggs","TotalHumanCapital",1153.26338066502,324.939450681879,5190.85572843448
+"215","STEC","Initial","<5","Fin fish","TotalHumanCapital",0,0,0
+"216","STEC","Initial","<5","Fruit","TotalHumanCapital",15299.3545646424,5271.44169696122,62860.3734029961
+"217","STEC","Initial","<5","Lamb","TotalHumanCapital",24528.4120997385,8457.89593862852,100252.061101581
+"218","STEC","Initial","<5","Nuts","TotalHumanCapital",0,0,0
+"219","STEC","Initial","<5","Other","TotalHumanCapital",14337.8012791593,4845.6539330314,59188.4866948469
+"220","STEC","Initial","<5","Pork","TotalHumanCapital",26994.6328191986,9327.4062297351,110288.988659854
+"221","STEC","Initial","<5","Poultry","TotalHumanCapital",15302.512275622,5262.43572692407,62658.5365723362
+"222","STEC","Initial","<5","Seeds and grains","TotalHumanCapital",15301.0420470202,5253.46604967321,62772.26906359
+"223","STEC","Initial","<5","Shellfish","TotalHumanCapital",0,0,0
+"224","STEC","Initial","<5","Vegetables","TotalHumanCapital",71853.4593934345,24781.4754906291,294433.110056745
+"225","STEC","Initial","5-64","AllFood","TotalHumanCapital",1297899.9289523,598269.230746623,2828115.68372864
+"226","STEC","Initial","5-64","Beef","TotalHumanCapital",448256.122686436,206626.895690008,979294.145126629
+"227","STEC","Initial","5-64","Dairy","TotalHumanCapital",194485.130382669,88772.2205048761,430199.798959199
+"228","STEC","Initial","5-64","Eggs","TotalHumanCapital",4055.76036443325,1472.88642596937,10735.856727617
+"229","STEC","Initial","5-64","Fin fish","TotalHumanCapital",0,0,0
+"230","STEC","Initial","5-64","Fruit","TotalHumanCapital",54501.1474137489,24931.7446480828,119599.779619544
+"231","STEC","Initial","5-64","Lamb","TotalHumanCapital",87463.5614517424,40158.0759482444,191180.521251231
+"232","STEC","Initial","5-64","Nuts","TotalHumanCapital",0,0,0
+"233","STEC","Initial","5-64","Other","TotalHumanCapital",50987.9090486048,22855.7903613482,114367.792826289
+"234","STEC","Initial","5-64","Pork","TotalHumanCapital",96251.7525078317,44295.2675331632,209971.331971237
+"235","STEC","Initial","5-64","Poultry","TotalHumanCapital",54457.2880387614,24964.8750392222,119846.705647062
+"236","STEC","Initial","5-64","Seeds and grains","TotalHumanCapital",54505.6161043769,24897.1338589103,119991.886126983
+"237","STEC","Initial","5-64","Shellfish","TotalHumanCapital",0,0,0
+"238","STEC","Initial","5-64","Vegetables","TotalHumanCapital",256159.871442864,117524.292172256,560313.006642494
+"239","STEC","Initial","65+","AllFood","TotalHumanCapital",504147.216726613,185339.786634247,1998231.81599028
+"240","STEC","Initial","65+","Beef","TotalHumanCapital",173977.061079718,63875.7044153766,690450.8724822
+"241","STEC","Initial","65+","Dairy","TotalHumanCapital",75642.8887123516,27574.2620370899,302356.484260454
+"242","STEC","Initial","65+","Eggs","TotalHumanCapital",1596.30860145491,476.239606808552,6941.45265134149
+"243","STEC","Initial","65+","Fin fish","TotalHumanCapital",0,0,0
+"244","STEC","Initial","65+","Fruit","TotalHumanCapital",21200.7530290604,7749.08093554119,84442.3714048747
+"245","STEC","Initial","65+","Lamb","TotalHumanCapital",33973.2870763949,12436.0008331271,135225.789990624
+"246","STEC","Initial","65+","Nuts","TotalHumanCapital",0,0,0
+"247","STEC","Initial","65+","Other","TotalHumanCapital",19830.1187092522,7105.50734156793,79591.8449360318
+"248","STEC","Initial","65+","Pork","TotalHumanCapital",37391.4054016051,13731.0215886304,148402.142780499
+"249","STEC","Initial","65+","Poultry","TotalHumanCapital",21152.8070199433,7729.61013164268,84505.7761087183
+"250","STEC","Initial","65+","Seeds and grains","TotalHumanCapital",21164.0358823938,7732.3237414506,84262.3690945857
+"251","STEC","Initial","65+","Shellfish","TotalHumanCapital",0,0,0
+"252","STEC","Initial","65+","Vegetables","TotalHumanCapital",99593.0188297859,36464.9497696657,395415.098925755
+"253","All pathogens","Haemolytic uremic syndrome","<5","AllFood","TotalHumanCapital",721561.786026615,239446.371241401,2060778.37730433
+"254","All pathogens","Haemolytic uremic syndrome","<5","Beef","TotalHumanCapital",249109.761293159,82766.8138952175,710989.167599357
+"255","All pathogens","Haemolytic uremic syndrome","<5","Dairy","TotalHumanCapital",108069.501349276,35619.9785859199,309527.878060229
+"256","All pathogens","Haemolytic uremic syndrome","<5","Eggs","TotalHumanCapital",2250.20544928137,622.636511863908,7453.36416797752
+"257","All pathogens","Haemolytic uremic syndrome","<5","Fin fish","TotalHumanCapital",0,0,0
+"258","All pathogens","Haemolytic uremic syndrome","<5","Fruit","TotalHumanCapital",30320.1513103197,10001.9336884243,86829.3260914858
+"259","All pathogens","Haemolytic uremic syndrome","<5","Lamb","TotalHumanCapital",48589.4863335324,16123.3553673801,138891.075993089
+"260","All pathogens","Haemolytic uremic syndrome","<5","Nuts","TotalHumanCapital",0,0,0
+"261","All pathogens","Haemolytic uremic syndrome","<5","Other","TotalHumanCapital",28386.6879216618,9254.28189170888,82540.646301115
+"262","All pathogens","Haemolytic uremic syndrome","<5","Pork","TotalHumanCapital",53513.5706985737,17750.8454692713,152742.149265772
+"263","All pathogens","Haemolytic uremic syndrome","<5","Poultry","TotalHumanCapital",30276.9624553583,10003.0018322537,86935.3269422685
+"264","All pathogens","Haemolytic uremic syndrome","<5","Seeds and grains","TotalHumanCapital",30309.8300171611,10012.806590654,86845.3636681199
+"265","All pathogens","Haemolytic uremic syndrome","<5","Shellfish","TotalHumanCapital",0,0,0
+"266","All pathogens","Haemolytic uremic syndrome","<5","Vegetables","TotalHumanCapital",142345.631313644,47116.9761732346,407889.237372443
+"267","All pathogens","Haemolytic uremic syndrome","5-64","AllFood","TotalHumanCapital",6666934.2191495,3426764.24831038,12328508.8294465
+"268","All pathogens","Haemolytic uremic syndrome","5-64","Beef","TotalHumanCapital",2301581.92792847,1182137.50560439,4262871.63501817
+"269","All pathogens","Haemolytic uremic syndrome","5-64","Dairy","TotalHumanCapital",998624.019040464,508228.7376035,1871740.3607598
+"270","All pathogens","Haemolytic uremic syndrome","5-64","Eggs","TotalHumanCapital",20718.4325785358,8214.65100869797,48497.0302851168
+"271","All pathogens","Haemolytic uremic syndrome","5-64","Fin fish","TotalHumanCapital",0,0,0
+"272","All pathogens","Haemolytic uremic syndrome","5-64","Fruit","TotalHumanCapital",279929.822400904,142805.640126451,522687.968127794
+"273","All pathogens","Haemolytic uremic syndrome","5-64","Lamb","TotalHumanCapital",449251.092609927,230209.322849296,834452.454062518
+"274","All pathogens","Haemolytic uremic syndrome","5-64","Nuts","TotalHumanCapital",0,0,0
+"275","All pathogens","Haemolytic uremic syndrome","5-64","Other","TotalHumanCapital",261656.048779696,130114.166065498,502353.948583317
+"276","All pathogens","Haemolytic uremic syndrome","5-64","Pork","TotalHumanCapital",494183.059432623,253875.348595235,915114.247304533
+"277","All pathogens","Haemolytic uremic syndrome","5-64","Poultry","TotalHumanCapital",279762.258162211,142873.897988362,522418.97767748
+"278","All pathogens","Haemolytic uremic syndrome","5-64","Seeds and grains","TotalHumanCapital",279914.266745368,142890.529690497,522959.422123007
+"279","All pathogens","Haemolytic uremic syndrome","5-64","Shellfish","TotalHumanCapital",0,0,0
+"280","All pathogens","Haemolytic uremic syndrome","5-64","Vegetables","TotalHumanCapital",1317119.75950855,673398.933364455,2443327.79004132
+"281","All pathogens","Haemolytic uremic syndrome","65+","AllFood","TotalHumanCapital",1166670.51395981,384876.706412658,3165698.03172979
+"282","All pathogens","Haemolytic uremic syndrome","65+","Beef","TotalHumanCapital",402892.585917905,132827.942365297,1094889.0693422
+"283","All pathogens","Haemolytic uremic syndrome","65+","Dairy","TotalHumanCapital",174826.108581131,57458.0918593646,479112.829461192
+"284","All pathogens","Haemolytic uremic syndrome","65+","Eggs","TotalHumanCapital",3603.29943526427,1007.71545418933,11606.1452371975
+"285","All pathogens","Haemolytic uremic syndrome","65+","Fin fish","TotalHumanCapital",0,0,0
+"286","All pathogens","Haemolytic uremic syndrome","65+","Fruit","TotalHumanCapital",48980.4488821504,16085.1009659226,134314.931825425
+"287","All pathogens","Haemolytic uremic syndrome","65+","Lamb","TotalHumanCapital",78559.1647264205,25941.3452187766,214126.326872627
+"288","All pathogens","Haemolytic uremic syndrome","65+","Nuts","TotalHumanCapital",0,0,0
+"289","All pathogens","Haemolytic uremic syndrome","65+","Other","TotalHumanCapital",45776.8823153545,14805.7135349181,127197.293513873
+"290","All pathogens","Haemolytic uremic syndrome","65+","Pork","TotalHumanCapital",86504.4363143752,28548.7545151685,235130.168192392
+"291","All pathogens","Haemolytic uremic syndrome","65+","Poultry","TotalHumanCapital",49003.4542988447,16070.6392816734,134106.756286344
+"292","All pathogens","Haemolytic uremic syndrome","65+","Seeds and grains","TotalHumanCapital",49043.4221939876,16127.8055704708,133818.692026171
+"293","All pathogens","Haemolytic uremic syndrome","65+","Shellfish","TotalHumanCapital",0,0,0
+"294","All pathogens","Haemolytic uremic syndrome","65+","Vegetables","TotalHumanCapital",230482.837056246,75900.9348680346,627067.573167067
+"295","All pathogens","Initial","<5","AllFood","TotalHumanCapital",27471173.8455125,19313733.1555453,38834441.9316352
+"296","All pathogens","Initial","<5","Beef","TotalHumanCapital",930193.368491061,544803.4049089,1610393.5987632
+"297","All pathogens","Initial","<5","Dairy","TotalHumanCapital",5301763.06201581,3057944.79088329,8745136.49090173
+"298","All pathogens","Initial","<5","Eggs","TotalHumanCapital",4285197.73130188,2554441.85905014,7175748.76641215
+"299","All pathogens","Initial","<5","Fin fish","TotalHumanCapital",123425.953058614,64967.8725425312,231348.637276553
+"300","All pathogens","Initial","<5","Fruit","TotalHumanCapital",2671609.15293491,1611635.22134836,4286409.21955973
+"301","All pathogens","Initial","<5","Lamb","TotalHumanCapital",661979.578883743,375097.964559194,1161390.38177789
+"302","All pathogens","Initial","<5","Nuts","TotalHumanCapital",522509.382001752,268122.222267629,988656.940708533
+"303","All pathogens","Initial","<5","Other","TotalHumanCapital",708811.115214063,437192.529972779,1158402.51916302
+"304","All pathogens","Initial","<5","Pork","TotalHumanCapital",2259497.49340768,1483348.55247942,3374387.39714283
+"305","All pathogens","Initial","<5","Poultry","TotalHumanCapital",3970522.60268298,2554917.58509826,6266586.55599007
+"306","All pathogens","Initial","<5","Seeds and grains","TotalHumanCapital",566177.199844401,363103.580860508,881595.538995586
+"307","All pathogens","Initial","<5","Shellfish","TotalHumanCapital",1140118.5171641,655108.493403106,1880000.23716601
+"308","All pathogens","Initial","<5","Vegetables","TotalHumanCapital",3913133.93329515,2561515.22468139,5877790.3430662
+"309","All pathogens","Initial","5-64","AllFood","TotalHumanCapital",67874552.1722922,51423802.2617951,89562032.1588675
+"310","All pathogens","Initial","5-64","Beef","TotalHumanCapital",3180092.88652537,1958032.06465065,5139305.96406226
+"311","All pathogens","Initial","5-64","Dairy","TotalHumanCapital",8591570.89603779,5493459.05979725,13051296.2857921
+"312","All pathogens","Initial","5-64","Eggs","TotalHumanCapital",15573001.3047922,9749115.35181509,24727906.8117589
+"313","All pathogens","Initial","5-64","Fin fish","TotalHumanCapital",222148.203956838,132209.927045478,374300.066855029
+"314","All pathogens","Initial","5-64","Fruit","TotalHumanCapital",4811747.17032748,3215015.199367,7041635.06069282
+"315","All pathogens","Initial","5-64","Lamb","TotalHumanCapital",2293555.89565309,1311940.88816543,3934923.87228174
+"316","All pathogens","Initial","5-64","Nuts","TotalHumanCapital",1817360.29242421,925559.718566614,3371399.42298969
+"317","All pathogens","Initial","5-64","Other","TotalHumanCapital",1563053.36396001,1065277.86618049,2289219.72174979
+"318","All pathogens","Initial","5-64","Pork","TotalHumanCapital",5681802.58901411,3744768.52674072,8655784.05151535
+"319","All pathogens","Initial","5-64","Poultry","TotalHumanCapital",11976994.9124781,7509955.15988959,19227388.8438509
+"320","All pathogens","Initial","5-64","Seeds and grains","TotalHumanCapital",1294861.11845508,893308.488384206,1854007.26221798
+"321","All pathogens","Initial","5-64","Shellfish","TotalHumanCapital",1842935.65288291,1170333.48528627,2801056.17222588
+"322","All pathogens","Initial","5-64","Vegetables","TotalHumanCapital",8251463.27607144,5945780.15016922,11322984.5765047
+"323","All pathogens","Initial","65+","AllFood","TotalHumanCapital",88455155.0785457,65731281.4968474,116981989.114458
+"324","All pathogens","Initial","65+","Beef","TotalHumanCapital",3241849.15013024,1865357.7165307,5492057.9500109
+"325","All pathogens","Initial","65+","Dairy","TotalHumanCapital",14184692.7427778,9174586.4687215,21071209.5008638
+"326","All pathogens","Initial","65+","Eggs","TotalHumanCapital",17262940.5875416,10377765.3075847,27908079.5597589
+"327","All pathogens","Initial","65+","Fin fish","TotalHumanCapital",348656.373840821,202146.451032837,597223.640386323
+"328","All pathogens","Initial","65+","Fruit","TotalHumanCapital",7504999.74630901,5037531.1623515,10847927.533211
+"329","All pathogens","Initial","65+","Lamb","TotalHumanCapital",2513591.40377934,1389687.45170625,4406078.3864929
+"330","All pathogens","Initial","65+","Nuts","TotalHumanCapital",2043130.93514684,1036041.71104075,3837601.33525069
+"331","All pathogens","Initial","65+","Other","TotalHumanCapital",2143828.80262499,1420279.73349894,3213797.37471982
+"332","All pathogens","Initial","65+","Pork","TotalHumanCapital",7321345.6248507,4928527.67349346,10858472.6484585
+"333","All pathogens","Initial","65+","Poultry","TotalHumanCapital",14270897.4610551,9061743.67437327,22712707.5056265
+"334","All pathogens","Initial","65+","Seeds and grains","TotalHumanCapital",1731356.69514085,1174091.2660386,2513789.70503195
+"335","All pathogens","Initial","65+","Shellfish","TotalHumanCapital",3080376.21919057,1998358.10084041,4555869.58451172
+"336","All pathogens","Initial","65+","Vegetables","TotalHumanCapital",11631760.572595,8288582.53269504,15946635.9278146
+"337","All pathogens","Irritable bowel syndrome","<5","AllFood","TotalHumanCapital",3471719.03236305,1828839.82018804,6468603.09258788
+"338","All pathogens","Irritable bowel syndrome","<5","Beef","TotalHumanCapital",210093.757020324,96148.0771977968,447995.967120584
+"339","All pathogens","Irritable bowel syndrome","<5","Dairy","TotalHumanCapital",38341.1306130248,18047.4354244503,79158.6485448614
+"340","All pathogens","Irritable bowel syndrome","<5","Eggs","TotalHumanCapital",1261256.96907374,617846.675152849,2518986.93316915
+"341","All pathogens","Irritable bowel syndrome","<5","Fin fish","TotalHumanCapital",4119.40346147732,1944.09353474575,8518.9319979245
+"342","All pathogens","Irritable bowel syndrome","<5","Fruit","TotalHumanCapital",85436.5052794413,35781.6707988041,191691.960980933
+"343","All pathogens","Irritable bowel syndrome","<5","Lamb","TotalHumanCapital",172347.828857517,77040.256730738,371961.229341688
+"344","All pathogens","Irritable bowel syndrome","<5","Nuts","TotalHumanCapital",141385.573514444,58905.7680290736,322116.419147014
+"345","All pathogens","Irritable bowel syndrome","<5","Other","TotalHumanCapital",59813.9255876862,29229.125734875,120644.184353599
+"346","All pathogens","Irritable bowel syndrome","<5","Pork","TotalHumanCapital",300512.008881413,133973.236975715,653891.930927307
+"347","All pathogens","Irritable bowel syndrome","<5","Poultry","TotalHumanCapital",819971.245543608,378386.316659165,1734603.38102465
+"348","All pathogens","Irritable bowel syndrome","<5","Seeds and grains","TotalHumanCapital",53597.3979976303,25528.5371693,109798.030601811
+"349","All pathogens","Irritable bowel syndrome","<5","Shellfish","TotalHumanCapital",10307.7989044631,4674.26477878947,21887.6928386563
+"350","All pathogens","Irritable bowel syndrome","<5","Vegetables","TotalHumanCapital",283939.944427851,140744.281691554,565631.95090577
+"351","All pathogens","Irritable bowel syndrome","5-64","AllFood","TotalHumanCapital",10540334.698029,5607069.12562443,19420092.1409764
+"352","All pathogens","Irritable bowel syndrome","5-64","Beef","TotalHumanCapital",639392.569127711,294359.467259527,1349134.98540142
+"353","All pathogens","Irritable bowel syndrome","5-64","Dairy","TotalHumanCapital",116572.835701404,55176.205966711,238563.577173104
+"354","All pathogens","Irritable bowel syndrome","5-64","Eggs","TotalHumanCapital",3837592.48370311,1894792.6436466,7572870.72022031
+"355","All pathogens","Irritable bowel syndrome","5-64","Fin fish","TotalHumanCapital",12537.6609818443,5955.78355637998,25596.760246446
+"356","All pathogens","Irritable bowel syndrome","5-64","Fruit","TotalHumanCapital",258911.568444903,109638.445913277,577413.981320286
+"357","All pathogens","Irritable bowel syndrome","5-64","Lamb","TotalHumanCapital",523930.717663932,235771.316239708,1116727.3381434
+"358","All pathogens","Irritable bowel syndrome","5-64","Nuts","TotalHumanCapital",429453.782763006,179846.296019414,969080.457171824
+"359","All pathogens","Irritable bowel syndrome","5-64","Other","TotalHumanCapital",181987.681857702,89375.8126120129,362055.418290347
+"360","All pathogens","Irritable bowel syndrome","5-64","Pork","TotalHumanCapital",912584.495844068,409197.211168723,1966148.4908398
+"361","All pathogens","Irritable bowel syndrome","5-64","Poultry","TotalHumanCapital",2487207.79289704,1159933.89250708,5208829.98349716
+"362","All pathogens","Irritable bowel syndrome","5-64","Seeds and grains","TotalHumanCapital",162822.956880539,78477.6491956615,330076.768533673
+"363","All pathogens","Irritable bowel syndrome","5-64","Shellfish","TotalHumanCapital",31305.4923963366,14348.2870013755,65880.4895439283
+"364","All pathogens","Irritable bowel syndrome","5-64","Vegetables","TotalHumanCapital",863222.176428061,432823.377754887,1703885.65967284
+"365","All pathogens","Irritable bowel syndrome","65+","AllFood","TotalHumanCapital",2137248.05856934,1113137.57353528,4015204.91713055
+"366","All pathogens","Irritable bowel syndrome","65+","Beef","TotalHumanCapital",129715.879637181,58406.054005468,277265.110456007
+"367","All pathogens","Irritable bowel syndrome","65+","Dairy","TotalHumanCapital",23604.1804457988,11012.3207563855,49102.7111173712
+"368","All pathogens","Irritable bowel syndrome","65+","Eggs","TotalHumanCapital",777888.27434635,377769.921373549,1558973.4947343
+"369","All pathogens","Irritable bowel syndrome","65+","Fin fish","TotalHumanCapital",2541.10695391157,1188.87373496745,5281.0178139389
+"370","All pathogens","Irritable bowel syndrome","65+","Fruit","TotalHumanCapital",52593.0762612011,21904.1842587656,118846.618816389
+"371","All pathogens","Irritable bowel syndrome","65+","Lamb","TotalHumanCapital",106271.607947812,46848.9047060824,229984.700080625
+"372","All pathogens","Irritable bowel syndrome","65+","Nuts","TotalHumanCapital",87075.6410254006,35891.4137098386,199651.690295367
+"373","All pathogens","Irritable bowel syndrome","65+","Other","TotalHumanCapital",36915.346990348,17796.0689322227,74632.9842852443
+"374","All pathogens","Irritable bowel syndrome","65+","Pork","TotalHumanCapital",185295.765268703,81685.5835208538,403839.333654281
+"375","All pathogens","Irritable bowel syndrome","65+","Poultry","TotalHumanCapital",505052.625311253,231474.472932263,1074091.81900824
+"376","All pathogens","Irritable bowel syndrome","65+","Seeds and grains","TotalHumanCapital",33068.9810794466,15587.1284264554,67945.9653478291
+"377","All pathogens","Irritable bowel syndrome","65+","Shellfish","TotalHumanCapital",6348.59297894306,2852.63686795767,13565.936475627
+"378","All pathogens","Irritable bowel syndrome","65+","Vegetables","TotalHumanCapital",175252.880042036,86106.8060634709,350188.773723109
+"379","All pathogens","Reactive arthritis","<5","AllFood","TotalHumanCapital",4688353.14558888,1265849.73004994,11267156.9808746
+"380","All pathogens","Reactive arthritis","<5","Beef","TotalHumanCapital",280777.465270779,71190.3492306467,758565.614885555
+"381","All pathogens","Reactive arthritis","<5","Dairy","TotalHumanCapital",51278.064020893,13225.4724641145,135364.306828782
+"382","All pathogens","Reactive arthritis","<5","Eggs","TotalHumanCapital",1691941.63958682,444958.685754135,4307467.41620604
+"383","All pathogens","Reactive arthritis","<5","Fin fish","TotalHumanCapital",5514.21364780565,1411.72203261509,14510.1855281335
+"384","All pathogens","Reactive arthritis","<5","Fruit","TotalHumanCapital",112240.33337106,27523.7923339814,322799.404471988
+"385","All pathogens","Reactive arthritis","<5","Lamb","TotalHumanCapital",228847.269770924,57723.9390280317,625760.431599913
+"386","All pathogens","Reactive arthritis","<5","Nuts","TotalHumanCapital",186577.093905803,45525.2660891695,538805.425481614
+"387","All pathogens","Reactive arthritis","<5","Other","TotalHumanCapital",80391.9494465215,20963.2183088578,206436.369545817
+"388","All pathogens","Reactive arthritis","<5","Pork","TotalHumanCapital",399581.279147158,100226.410699001,1100073.92691737
+"389","All pathogens","Reactive arthritis","<5","Poultry","TotalHumanCapital",1094541.81888981,278675.964052488,2908849.92921539
+"390","All pathogens","Reactive arthritis","<5","Seeds and grains","TotalHumanCapital",71824.6653796941,18640.4420500928,187219.900778105
+"391","All pathogens","Reactive arthritis","<5","Shellfish","TotalHumanCapital",13739.4938141114,3468.08163520253,37170.5558922448
+"392","All pathogens","Reactive arthritis","<5","Vegetables","TotalHumanCapital",382526.758728173,100838.25931933,970210.169813876
+"393","All pathogens","Reactive arthritis","5-64","AllFood","TotalHumanCapital",13383951.8123697,3541427.54877076,32588472.7915115
+"394","All pathogens","Reactive arthritis","5-64","Beef","TotalHumanCapital",800976.886598831,199997.36953619,2191913.39628566
+"395","All pathogens","Reactive arthritis","5-64","Dairy","TotalHumanCapital",146166.577772764,36997.6428508988,391326.478272636
+"396","All pathogens","Reactive arthritis","5-64","Eggs","TotalHumanCapital",4825440.50414523,1244433.06352053,12453562.9624782
+"397","All pathogens","Reactive arthritis","5-64","Fin fish","TotalHumanCapital",15735.0743416249,3956.50083508679,41878.8027691427
+"398","All pathogens","Reactive arthritis","5-64","Fruit","TotalHumanCapital",320370.055260517,77337.0399787207,930864.661505878
+"399","All pathogens","Reactive arthritis","5-64","Lamb","TotalHumanCapital",652248.816402823,161593.010810602,1805489.70872519
+"400","All pathogens","Reactive arthritis","5-64","Nuts","TotalHumanCapital",532768.853442929,127762.863723137,1557420.21312465
+"401","All pathogens","Reactive arthritis","5-64","Other","TotalHumanCapital",229323.046788963,58789.7955848109,595428.134757348
+"402","All pathogens","Reactive arthritis","5-64","Pork","TotalHumanCapital",1139638.71189466,280204.413474649,3175656.48222588
+"403","All pathogens","Reactive arthritis","5-64","Poultry","TotalHumanCapital",3120617.76708683,778216.54288555,8414555.67433972
+"404","All pathogens","Reactive arthritis","5-64","Seeds and grains","TotalHumanCapital",204779.722772903,52199.2982833723,540704.518232336
+"405","All pathogens","Reactive arthritis","5-64","Shellfish","TotalHumanCapital",39242.9989016592,9698.09937713465,107356.189400453
+"406","All pathogens","Reactive arthritis","5-64","Vegetables","TotalHumanCapital",1091774.88354385,281734.129780138,2803229.80000245
+"407","All pathogens","Reactive arthritis","65+","AllFood","TotalHumanCapital",1928609.33230445,512031.024970354,4689773.33188364
+"408","All pathogens","Reactive arthritis","65+","Beef","TotalHumanCapital",115702.424112715,28791.0167618401,315149.036136382
+"409","All pathogens","Reactive arthritis","65+","Dairy","TotalHumanCapital",21101.9535158947,5347.14145280891,56384.555498122
+"410","All pathogens","Reactive arthritis","65+","Eggs","TotalHumanCapital",697708.821150328,179797.638666207,1796692.68262563
+"411","All pathogens","Reactive arthritis","65+","Fin fish","TotalHumanCapital",2272.45243236235,573.183475140143,6032.28924667113
+"412","All pathogens","Reactive arthritis","65+","Fruit","TotalHumanCapital",46217.168754022,11193.711488406,134117.553826132
+"413","All pathogens","Reactive arthritis","65+","Lamb","TotalHumanCapital",94363.2367334446,23339.3870976993,260271.817461108
+"414","All pathogens","Reactive arthritis","65+","Nuts","TotalHumanCapital",76889.0419344242,18428.0814480385,224129.96024122
+"415","All pathogens","Reactive arthritis","65+","Other","TotalHumanCapital",33106.7261905706,8465.77442648146,85758.0861935166
+"416","All pathogens","Reactive arthritis","65+","Pork","TotalHumanCapital",164677.038439725,40523.0983516185,456743.488251079
+"417","All pathogens","Reactive arthritis","65+","Poultry","TotalHumanCapital",450718.081545062,112449.908583326,1211756.73408377
+"418","All pathogens","Reactive arthritis","65+","Seeds and grains","TotalHumanCapital",29597.0557121187,7524.85713826769,77834.1561915964
+"419","All pathogens","Reactive arthritis","65+","Shellfish","TotalHumanCapital",5659.43819407736,1396.94061476279,15415.644132319
+"420","All pathogens","Reactive arthritis","65+","Vegetables","TotalHumanCapital",157641.750524645,40609.5734851142,403174.958302664
+"421","All pathogens","Haemolytic uremic syndrome","All ages","AllFood","TotalHumanCapital",8973580.49881399,5203338.10060945,14997276.2885606
+"422","All pathogens","Haemolytic uremic syndrome","All ages","Beef","TotalHumanCapital",3100470.67600539,1795068.0953995,5188697.17625473
+"423","All pathogens","Haemolytic uremic syndrome","All ages","Dairy","TotalHumanCapital",1345543.05334017,770473.191440714,2279269.05703095
+"424","All pathogens","Haemolytic uremic syndrome","All ages","Eggs","TotalHumanCapital",28028.1290486252,11949.22164683,60522.4755259583
+"425","All pathogens","Haemolytic uremic syndrome","All ages","Fin fish","TotalHumanCapital",0,0,0
+"426","All pathogens","Haemolytic uremic syndrome","All ages","Fruit","TotalHumanCapital",376975.703405907,216747.977096255,637443.065924762
+"427","All pathogens","Haemolytic uremic syndrome","All ages","Lamb","TotalHumanCapital",604727.337557143,349325.932646921,1016203.98089203
+"428","All pathogens","Haemolytic uremic syndrome","All ages","Nuts","TotalHumanCapital",0,0,0
+"429","All pathogens","Haemolytic uremic syndrome","All ages","Other","TotalHumanCapital",352203.423778893,196938.798294249,613883.602629978
+"430","All pathogens","Haemolytic uremic syndrome","All ages","Pork","TotalHumanCapital",665023.991118658,385540.977779009,1112897.99405957
+"431","All pathogens","Haemolytic uremic syndrome","All ages","Poultry","TotalHumanCapital",376833.466585428,216577.887412595,636128.267408974
+"432","All pathogens","Haemolytic uremic syndrome","All ages","Seeds and grains","TotalHumanCapital",376817.570193511,216692.863807802,635539.504494492
+"433","All pathogens","Haemolytic uremic syndrome","All ages","Shellfish","TotalHumanCapital",0,0,0
+"434","All pathogens","Haemolytic uremic syndrome","All ages","Vegetables","TotalHumanCapital",1772482.6101573,1023628.0270817,2974911.82881809
+"435","All pathogens","Initial","All ages","AllFood","TotalHumanCapital",185121861.506208,152537946.125285,224762615.292701
+"436","All pathogens","Initial","All ages","Beef","TotalHumanCapital",7438002.43896187,4719025.22657671,11537248.7213791
+"437","All pathogens","Initial","All ages","Dairy","TotalHumanCapital",28583649.5159273,21643257.0443006,37184130.3518412
+"438","All pathogens","Initial","All ages","Eggs","TotalHumanCapital",37588362.2488505,24882640.7020398,56107315.5669598
+"439","All pathogens","Initial","All ages","Fin fish","TotalHumanCapital",707000.965388101,443887.527462988,1113142.94117245
+"440","All pathogens","Initial","All ages","Fruit","TotalHumanCapital",15212682.4219481,11596236.387369,19704626.3594562
+"441","All pathogens","Initial","All ages","Lamb","TotalHumanCapital",5541012.34071543,3282721.90704137,9060885.16302494
+"442","All pathogens","Initial","All ages","Nuts","TotalHumanCapital",4436385.59506502,2363884.2530858,7839773.57954002
+"443","All pathogens","Initial","All ages","Other","TotalHumanCapital",4466103.49888838,3186705.5728884,6223279.79501416
+"444","All pathogens","Initial","All ages","Pork","TotalHumanCapital",15347775.5771282,10996786.0638,21754396.5086129
+"445","All pathogens","Initial","All ages","Poultry","TotalHumanCapital",30514106.6138708,20451546.4186399,45789616.0504391
+"446","All pathogens","Initial","All ages","Seeds and grains","TotalHumanCapital",3629555.3286376,2661350.07242357,4895211.09083183
+"447","All pathogens","Initial","All ages","Shellfish","TotalHumanCapital",6172727.87266171,4685010.41287926,8002495.29627216
+"448","All pathogens","Initial","All ages","Vegetables","TotalHumanCapital",24024924.2263337,19065438.0123019,30070728.1609057
+"449","All pathogens","Irritable bowel syndrome","All ages","AllFood","TotalHumanCapital",16182240.5864952,8632250.94572286,29686384.0834768
+"450","All pathogens","Irritable bowel syndrome","All ages","Beef","TotalHumanCapital",981834.759757118,452928.482043355,2068172.15187696
+"451","All pathogens","Irritable bowel syndrome","All ages","Dairy","TotalHumanCapital",178819.476990623,84976.2288958955,364073.894755563
+"452","All pathogens","Irritable bowel syndrome","All ages","Eggs","TotalHumanCapital",5890589.33391226,2921787.98057858,11571198.7731437
+"453","All pathogens","Irritable bowel syndrome","All ages","Fin fish","TotalHumanCapital",19248.1779497096,9173.67142782246,39136.5527207222
+"454","All pathogens","Irritable bowel syndrome","All ages","Fruit","TotalHumanCapital",397792.440377944,168733.779823048,884306.848753836
+"455","All pathogens","Irritable bowel syndrome","All ages","Lamb","TotalHumanCapital",803537.62073478,362677.125390964,1706700.78743487
+"456","All pathogens","Irritable bowel syndrome","All ages","Nuts","TotalHumanCapital",659947.828004049,276609.685695846,1483137.25321938
+"457","All pathogens","Irritable bowel syndrome","All ages","Other","TotalHumanCapital",279461.689685701,137619.630114304,553557.165698381
+"458","All pathogens","Irritable bowel syndrome","All ages","Pork","TotalHumanCapital",1402747.17633905,630424.241033336,3008746.54681303
+"459","All pathogens","Irritable bowel syndrome","All ages","Poultry","TotalHumanCapital",3822662.3734727,1782679.77043499,7974840.92691112
+"460","All pathogens","Irritable bowel syndrome","All ages","Seeds and grains","TotalHumanCapital",250219.451004938,120755.325476044,505925.734390295
+"461","All pathogens","Irritable bowel syndrome","All ages","Shellfish","TotalHumanCapital",48082.9043872126,22064.0861005221,100769.605822168
+"462","All pathogens","Irritable bowel syndrome","All ages","Vegetables","TotalHumanCapital",1325863.3978076,666011.252678245,2600930.80430246
+"463","All pathogens","Reactive arthritis","All ages","AllFood","TotalHumanCapital",20008350.2560454,5318345.24927272,48516154.5836225
+"464","All pathogens","Reactive arthritis","All ages","Beef","TotalHumanCapital",1197906.34434321,300719.887636644,3263512.42725774
+"465","All pathogens","Reactive arthritis","All ages","Dairy","TotalHumanCapital",218518.993221424,55680.1173523752,582602.369985349
+"466","All pathogens","Reactive arthritis","All ages","Eggs","TotalHumanCapital",7216515.64650743,1871877.83376171,18536529.2521528
+"467","All pathogens","Reactive arthritis","All ages","Fin fish","TotalHumanCapital",23538.6800267042,5951.18395483636,62443.4037398403
+"468","All pathogens","Reactive arthritis","All ages","Fruit","TotalHumanCapital",478790.991561579,116251.455004845,1387325.01751333
+"469","All pathogens","Reactive arthritis","All ages","Lamb","TotalHumanCapital",975626.577639176,243490.12069287,2690811.19617179
+"470","All pathogens","Reactive arthritis","All ages","Nuts","TotalHumanCapital",796930.921228897,191804.338122091,2319167.28799473
+"471","All pathogens","Reactive arthritis","All ages","Other","TotalHumanCapital",342822.516529801,88212.2934491556,886814.635974259
+"472","All pathogens","Reactive arthritis","All ages","Pork","TotalHumanCapital",1705027.13755043,421049.033205065,4731665.79229988
+"473","All pathogens","Reactive arthritis","All ages","Poultry","TotalHumanCapital",4667641.78958063,1169981.52279314,12526812.05519
+"474","All pathogens","Reactive arthritis","All ages","Seeds and grains","TotalHumanCapital",306134.713092447,78488.2884011066,805092.960837397
+"475","All pathogens","Reactive arthritis","All ages","Shellfish","TotalHumanCapital",58653.9214305185,14579.7458135335,159786.655646606
+"476","All pathogens","Reactive arthritis","All ages","Vegetables","TotalHumanCapital",1633054.95942795,424034.421595267,4174889.2728546
+"477","Listeria monocytogenes","Initial","All ages","AllFood","TotalHumanCapital",78394098.3708693,58620323.1929733,102676633.869509
+"478","Listeria monocytogenes","Initial","All ages","Beef","TotalHumanCapital",193923.961991256,90101.6282155343,368201.461595124
+"479","Listeria monocytogenes","Initial","All ages","Dairy","TotalHumanCapital",26979795.695604,20095421.7930837,35558242.3059062
+"480","Listeria monocytogenes","Initial","All ages","Eggs","TotalHumanCapital",0,0,0
+"481","Listeria monocytogenes","Initial","All ages","Fin fish","TotalHumanCapital",579435.999021506,323775.451229303,979700.299096121
+"482","Listeria monocytogenes","Initial","All ages","Fruit","TotalHumanCapital",12407361.0337178,9142459.63851943,16533299.7940712
+"483","Listeria monocytogenes","Initial","All ages","Lamb","TotalHumanCapital",193507.645666314,90105.3142914455,369243.075186753
+"484","Listeria monocytogenes","Initial","All ages","Nuts","TotalHumanCapital",192898.614387462,89574.4295050253,369620.144988158
+"485","Listeria monocytogenes","Initial","All ages","Other","TotalHumanCapital",2509770.93721853,1484993.56196687,4058160.93484388
+"486","Listeria monocytogenes","Initial","All ages","Pork","TotalHumanCapital",6045480.0013066,4518074.095866,7931068.55061608
+"487","Listeria monocytogenes","Initial","All ages","Poultry","TotalHumanCapital",5850071.68605735,4371636.51386879,7670174.14157228
+"488","Listeria monocytogenes","Initial","All ages","Seeds and grains","TotalHumanCapital",1862033.68040081,1185100.31634945,2831454.30337028
+"489","Listeria monocytogenes","Initial","All ages","Shellfish","TotalHumanCapital",5852619.96004394,4371228.19878873,7668354.90384199
+"490","Listeria monocytogenes","Initial","All ages","Vegetables","TotalHumanCapital",14812064.3129626,11025219.2202884,19526500.8924669
+"491","Non-typhoidal Salmonella","Initial","All ages","AllFood","TotalHumanCapital",102963838.835323,78761979.9509074,135448761.413854
+"492","Non-typhoidal Salmonella","Initial","All ages","Beef","TotalHumanCapital",6298194.43490044,3668095.96414162,10346773.0469388
+"493","Non-typhoidal Salmonella","Initial","All ages","Dairy","TotalHumanCapital",1144396.64058438,704974.653530237,1801935.74252685
+"494","Non-typhoidal Salmonella","Initial","All ages","Eggs","TotalHumanCapital",37581559.1780225,24876197.8560071,56100497.8277493
+"495","Non-typhoidal Salmonella","Initial","All ages","Fin fish","TotalHumanCapital",123086.780871115,75932.8783414851,193827.151599581
+"496","Non-typhoidal Salmonella","Initial","All ages","Fruit","TotalHumanCapital",2548422.67799015,1330953.78413289,4527907.0606333
+"497","Non-typhoidal Salmonella","Initial","All ages","Lamb","TotalHumanCapital",5151887.03769001,2905366.2236331,8666082.51371342
+"498","Non-typhoidal Salmonella","Initial","All ages","Nuts","TotalHumanCapital",4228198.5324767,2162512.5011722,7632173.43920125
+"499","Non-typhoidal Salmonella","Initial","All ages","Other","TotalHumanCapital",1784563.69708646,1165453.06540255,2692672.34590137
+"500","Non-typhoidal Salmonella","Initial","All ages","Pork","TotalHumanCapital",9006080.59217058,5053949.08191753,15206797.9666898
+"501","Non-typhoidal Salmonella","Initial","All ages","Poultry","TotalHumanCapital",24457288.5654003,14567182.1191388,39636717.5290634
+"502","Non-typhoidal Salmonella","Initial","All ages","Seeds and grains","TotalHumanCapital",1601587.32612526,1006108.61582217,2479181.80624888
+"503","Non-typhoidal Salmonella","Initial","All ages","Shellfish","TotalHumanCapital",308093.248639766,179201.721025734,504989.173104671
+"504","Non-typhoidal Salmonella","Initial","All ages","Vegetables","TotalHumanCapital",8484329.38027925,5658019.55940919,12553662.8716487
+"505","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","AllFood","TotalHumanCapital",16182240.5864952,8632250.94572286,29686384.0834768
+"506","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Beef","TotalHumanCapital",981834.759757118,452928.482043355,2068172.15187696
+"507","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Dairy","TotalHumanCapital",178819.476990623,84976.2288958955,364073.894755563
+"508","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Eggs","TotalHumanCapital",5890589.33391226,2921787.98057858,11571198.7731437
+"509","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Fin fish","TotalHumanCapital",19248.1779497096,9173.67142782246,39136.5527207222
+"510","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Fruit","TotalHumanCapital",397792.440377944,168733.779823048,884306.848753836
+"511","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Lamb","TotalHumanCapital",803537.62073478,362677.125390964,1706700.78743487
+"512","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Nuts","TotalHumanCapital",659947.828004049,276609.685695846,1483137.25321938
+"513","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Other","TotalHumanCapital",279461.689685701,137619.630114304,553557.165698381
+"514","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Pork","TotalHumanCapital",1402747.17633905,630424.241033336,3008746.54681303
+"515","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Poultry","TotalHumanCapital",3822662.3734727,1782679.77043499,7974840.92691112
+"516","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Seeds and grains","TotalHumanCapital",250219.451004938,120755.325476044,505925.734390295
+"517","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Shellfish","TotalHumanCapital",48082.9043872126,22064.0861005221,100769.605822168
+"518","Non-typhoidal Salmonella","Irritable bowel syndrome","All ages","Vegetables","TotalHumanCapital",1325863.3978076,666011.252678245,2600930.80430246
+"519","Non-typhoidal Salmonella","Reactive arthritis","All ages","AllFood","TotalHumanCapital",20008350.2560454,5318345.24927272,48516154.5836225
+"520","Non-typhoidal Salmonella","Reactive arthritis","All ages","Beef","TotalHumanCapital",1197906.34434321,300719.887636644,3263512.42725774
+"521","Non-typhoidal Salmonella","Reactive arthritis","All ages","Dairy","TotalHumanCapital",218518.993221424,55680.1173523752,582602.369985349
+"522","Non-typhoidal Salmonella","Reactive arthritis","All ages","Eggs","TotalHumanCapital",7216515.64650743,1871877.83376171,18536529.2521528
+"523","Non-typhoidal Salmonella","Reactive arthritis","All ages","Fin fish","TotalHumanCapital",23538.6800267042,5951.18395483636,62443.4037398403
+"524","Non-typhoidal Salmonella","Reactive arthritis","All ages","Fruit","TotalHumanCapital",478790.991561579,116251.455004845,1387325.01751333
+"525","Non-typhoidal Salmonella","Reactive arthritis","All ages","Lamb","TotalHumanCapital",975626.577639176,243490.12069287,2690811.19617179
+"526","Non-typhoidal Salmonella","Reactive arthritis","All ages","Nuts","TotalHumanCapital",796930.921228897,191804.338122091,2319167.28799473
+"527","Non-typhoidal Salmonella","Reactive arthritis","All ages","Other","TotalHumanCapital",342822.516529801,88212.2934491556,886814.635974259
+"528","Non-typhoidal Salmonella","Reactive arthritis","All ages","Pork","TotalHumanCapital",1705027.13755043,421049.033205065,4731665.79229988
+"529","Non-typhoidal Salmonella","Reactive arthritis","All ages","Poultry","TotalHumanCapital",4667641.78958063,1169981.52279314,12526812.05519
+"530","Non-typhoidal Salmonella","Reactive arthritis","All ages","Seeds and grains","TotalHumanCapital",306134.713092447,78488.2884011066,805092.960837397
+"531","Non-typhoidal Salmonella","Reactive arthritis","All ages","Shellfish","TotalHumanCapital",58653.9214305185,14579.7458135335,159786.655646606
+"532","Non-typhoidal Salmonella","Reactive arthritis","All ages","Vegetables","TotalHumanCapital",1633054.95942795,424034.421595267,4174889.2728546
+"533","STEC","Haemolytic uremic syndrome","All ages","AllFood","TotalHumanCapital",8973580.49881399,5203338.10060945,14997276.2885606
+"534","STEC","Haemolytic uremic syndrome","All ages","Beef","TotalHumanCapital",3100470.67600539,1795068.0953995,5188697.17625473
+"535","STEC","Haemolytic uremic syndrome","All ages","Dairy","TotalHumanCapital",1345543.05334017,770473.191440714,2279269.05703095
+"536","STEC","Haemolytic uremic syndrome","All ages","Eggs","TotalHumanCapital",28028.1290486252,11949.22164683,60522.4755259583
+"537","STEC","Haemolytic uremic syndrome","All ages","Fin fish","TotalHumanCapital",0,0,0
+"538","STEC","Haemolytic uremic syndrome","All ages","Fruit","TotalHumanCapital",376975.703405907,216747.977096255,637443.065924762
+"539","STEC","Haemolytic uremic syndrome","All ages","Lamb","TotalHumanCapital",604727.337557143,349325.932646921,1016203.98089203
+"540","STEC","Haemolytic uremic syndrome","All ages","Nuts","TotalHumanCapital",0,0,0
+"541","STEC","Haemolytic uremic syndrome","All ages","Other","TotalHumanCapital",352203.423778893,196938.798294249,613883.602629978
+"542","STEC","Haemolytic uremic syndrome","All ages","Pork","TotalHumanCapital",665023.991118658,385540.977779009,1112897.99405957
+"543","STEC","Haemolytic uremic syndrome","All ages","Poultry","TotalHumanCapital",376833.466585428,216577.887412595,636128.267408974
+"544","STEC","Haemolytic uremic syndrome","All ages","Seeds and grains","TotalHumanCapital",376817.570193511,216692.863807802,635539.504494492
+"545","STEC","Haemolytic uremic syndrome","All ages","Shellfish","TotalHumanCapital",0,0,0
+"546","STEC","Haemolytic uremic syndrome","All ages","Vegetables","TotalHumanCapital",1772482.6101573,1023628.0270817,2974911.82881809
+"547","STEC","Initial","All ages","AllFood","TotalHumanCapital",2466967.39222827,1190743.2109148,5020567.32586311
+"548","STEC","Initial","All ages","Beef","TotalHumanCapital",851952.326341746,411231.645918224,1734817.29274693
+"549","STEC","Initial","All ages","Dairy","TotalHumanCapital",369716.451245149,176540.907541379,760594.138979619
+"550","STEC","Initial","All ages","Eggs","TotalHumanCapital",7707.88605356681,2895.07579318514,19233.6625807082
+"551","STEC","Initial","All ages","Fin fish","TotalHumanCapital",0,0,0
+"552","STEC","Initial","All ages","Fruit","TotalHumanCapital",103669.844891088,49725.240086423,212178.38594349
+"553","STEC","Initial","All ages","Lamb","TotalHumanCapital",166306.512470047,79987.9725640723,339439.98319412
+"554","STEC","Initial","All ages","Nuts","TotalHumanCapital",0,0,0
+"555","STEC","Initial","All ages","Other","TotalHumanCapital",97019.2573188443,45493.2102396634,203204.316220356
+"556","STEC","Initial","All ages","Pork","TotalHumanCapital",182889.228525219,88271.4406173045,372016.640255392
+"557","STEC","Initial","All ages","Poultry","TotalHumanCapital",103660.807278491,49689.2151481384,212425.185868557
+"558","STEC","Initial","All ages","Seeds and grains","TotalHumanCapital",103608.988765334,49666.8676906669,212607.953903896
+"559","STEC","Initial","All ages","Shellfish","TotalHumanCapital",0,0,0
+"560","STEC","Initial","All ages","Vegetables","TotalHumanCapital",487347.538148795,234419.326472776,992567.746142957
+"561","All pathogens","Initial and sequel disease","<5","AllFood","TotalHumanCapital",37066303.8233733,26027934.4275225,52814986.3038582
+"562","All pathogens","Initial and sequel disease","<5","Beef","TotalHumanCapital",1759280.49502883,1038414.20199387,2981928.13532961
+"563","All pathogens","Initial and sequel disease","<5","Dairy","TotalHumanCapital",5535507.74179213,3283260.06223537,8983838.83421436
+"564","All pathogens","Initial and sequel disease","<5","Eggs","TotalHumanCapital",7350855.2146697,4160767.36296757,13097396.9494286
+"565","All pathogens","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",134504.709020935,74156.1245301321,243440.797754456
+"566","All pathogens","Initial and sequel disease","<5","Fruit","TotalHumanCapital",2944132.41794683,1828591.42954791,4606592.22405847
+"567","All pathogens","Initial and sequel disease","<5","Lamb","TotalHumanCapital",1141830.26057044,629791.15822114,2099632.50274978
+"568","All pathogens","Initial and sequel disease","<5","Nuts","TotalHumanCapital",865400.289681599,419547.459364698,1749136.39792118
+"569","All pathogens","Initial and sequel disease","<5","Other","TotalHumanCapital",902415.097076802,578409.219084406,1402657.57702675
+"570","All pathogens","Initial and sequel disease","<5","Pork","TotalHumanCapital",3069327.03554987,1967288.40224973,4852432.48025325
+"571","All pathogens","Initial and sequel disease","<5","Poultry","TotalHumanCapital",5993716.89287956,3624961.26796314,10328180.5013962
+"572","All pathogens","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",743147.04751271,488357.39364941,1124039.27088341
+"573","All pathogens","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",1168065.37786547,680652.081717976,1908571.77537146
+"574","All pathogens","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",4834739.18485634,3264234.87041685,7047822.3080702
+"575","All pathogens","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",99598062.8753476,73379442.8642011,140352871.286183
+"576","All pathogens","Initial and sequel disease","5-64","Beef","TotalHumanCapital",7171014.23979179,4652536.86695449,11061125.2819634
+"577","All pathogens","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",9968937.78112319,6742715.45595251,14497143.8939537
+"578","All pathogens","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",24544163.1993067,14511438.8936299,42191223.9340587
+"579","All pathogens","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",254761.151959545,156106.764215607,413215.509274219
+"580","All pathogens","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",5771993.490538,3941214.63598696,8318677.05734796
+"581","All pathogens","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",4004098.24087158,2349208.88999782,6985838.80767438
+"582","All pathogens","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",2824949.29345523,1372104.33132673,5581518.81853973
+"583","All pathogens","Initial and sequel disease","5-64","Other","TotalHumanCapital",2288588.21819162,1596116.10051178,3320027.94288365
+"584","All pathogens","Initial and sequel disease","5-64","Pork","TotalHumanCapital",8352527.76268698,5330312.66889016,13626261.2165298
+"585","All pathogens","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",18093492.5850124,10722036.9457682,31433871.3129097
+"586","All pathogens","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",1985423.57481407,1391804.99223302,2872520.77611993
+"587","All pathogens","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",1924064.91274821,1242565.87907451,2889984.27914974
+"588","All pathogens","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",11743952.646366,8550279.06277852,16298891.952108
+"589","All pathogens","Initial and sequel disease","65+","AllFood","TotalHumanCapital",94354078.9162023,71088372.263753,123366725.330894
+"590","All pathogens","Initial and sequel disease","65+","Beef","TotalHumanCapital",3999913.02477274,2444019.76433417,6437466.8166611
+"591","All pathogens","Initial and sequel disease","65+","Dairy","TotalHumanCapital",14435752.8202156,9434925.98260743,21346741.6729297
+"592","All pathogens","Initial and sequel disease","65+","Eggs","TotalHumanCapital",18904838.0732061,11577321.6635399,30102311.7993403
+"593","All pathogens","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",354112.057234856,207039.803672432,602841.83330186
+"594","All pathogens","Initial and sequel disease","65+","Fruit","TotalHumanCapital",7679537.82170147,5190107.61876021,11034033.6663441
+"595","All pathogens","Initial and sequel disease","65+","Lamb","TotalHumanCapital",2831284.26180844,1619128.7240972,4843755.57602698
+"596","All pathogens","Initial and sequel disease","65+","Nuts","TotalHumanCapital",2227576.98376584,1138356.27816865,4138567.6210261
+"597","All pathogens","Initial and sequel disease","65+","Other","TotalHumanCapital",2277447.46607384,1538171.91861992,3360651.73225576
+"598","All pathogens","Initial and sequel disease","65+","Pork","TotalHumanCapital",7814484.02668805,5295822.32534587,11548716.7041784
+"599","All pathogens","Initial and sequel disease","65+","Poultry","TotalHumanCapital",15395713.6017288,9832970.88921054,24337600.9383522
+"600","All pathogens","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",1860933.13851045,1283893.89755438,2660435.68403684
+"601","All pathogens","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",3094288.33509664,2011515.62816252,4570164.82268114
+"602","All pathogens","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",12275887.4356597,8862492.64327806,16663045.3043919
+"603","All pathogens","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",232140183.482844,187038968.660826,296543331.02255
+"604","All pathogens","Initial and sequel disease","All ages","Beef","TotalHumanCapital",13019933.5778271,8791935.54635506,19538281.1778455
+"605","All pathogens","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",30455879.7866424,23426471.4411262,39116761.8611279
+"606","All pathogens","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",51332652.8764392,32689693.5991917,81266922.7522869
+"607","All pathogens","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",756116.80135628,483338.758017832,1168512.86535947
+"608","All pathogens","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",16604346.5538051,12701022.6732837,21538073.0540498
+"609","All pathogens","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",8058952.60398009,4850352.42944316,13414493.1718175
+"610","All pathogens","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",5983856.48326909,3086314.93743224,11048488.1088355
+"611","All pathogens","Initial and sequel disease","All ages","Other","TotalHumanCapital",5522733.81332448,4016717.46178823,7593482.45852189
+"612","All pathogens","Initial and sequel disease","All ages","Pork","TotalHumanCapital",19335917.066252,13417651.1815367,28877622.0675162
+"613","All pathogens","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",39860338.6916065,25584358.0079627,63403255.3722123
+"614","All pathogens","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",4624446.47440491,3421569.46491294,6283594.2626296
+"615","All pathogens","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",6295692.8633664,4796023.92017164,8131237.77202123
+"616","All pathogens","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",29049919.83289,22986444.5252144,37006411.2602882
+"617","Listeria monocytogenes","Initial and sequel disease","<5","AllFood","TotalHumanCapital",14766530.7164118,8299518.02008253,24663529.691766
+"618","Listeria monocytogenes","Initial and sequel disease","<5","Beef","TotalHumanCapital",36191.9048771811,14683.7136058584,79508.9309007846
+"619","Listeria monocytogenes","Initial and sequel disease","<5","Dairy","TotalHumanCapital",5084236.19591259,2846015.0322288,8523294.51614467
+"620","Listeria monocytogenes","Initial and sequel disease","<5","Eggs","TotalHumanCapital",0,0,0
+"621","Listeria monocytogenes","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",108524.445868784,50755.6135032388,215971.156049936
+"622","Listeria monocytogenes","Initial and sequel disease","<5","Fruit","TotalHumanCapital",2335918.50737925,1300514.97611922,3942770.51513891
+"623","Listeria monocytogenes","Initial and sequel disease","<5","Lamb","TotalHumanCapital",36061.1392283926,14697.0240207825,79636.6856105388
+"624","Listeria monocytogenes","Initial and sequel disease","<5","Nuts","TotalHumanCapital",35974.4684571,14568.5578912947,79969.2892973698
+"625","Listeria monocytogenes","Initial and sequel disease","<5","Other","TotalHumanCapital",470992.838310696,229675.712798227,906654.354959703
+"626","Listeria monocytogenes","Initial and sequel disease","<5","Pork","TotalHumanCapital",1138563.30632475,638844.979805211,1902772.68293347
+"627","Listeria monocytogenes","Initial and sequel disease","<5","Poultry","TotalHumanCapital",1102474.23303987,618825.199318686,1842335.62884562
+"628","Listeria monocytogenes","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",349679.074025328,179237.920533739,643203.150228085
+"629","Listeria monocytogenes","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",1102789.33542666,618455.3551103,1843548.02598451
+"630","Listeria monocytogenes","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",2789575.72916577,1560690.31980531,4674860.84350737
+"631","Listeria monocytogenes","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",22889987.6638997,13950079.1317178,35655842.6854702
+"632","Listeria monocytogenes","Initial and sequel disease","5-64","Beef","TotalHumanCapital",56094.0864455196,23891.0987663908,117944.917389642
+"633","Listeria monocytogenes","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",7873638.26699429,4789476.28731742,12330695.6732091
+"634","Listeria monocytogenes","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",0,0,0
+"635","Listeria monocytogenes","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",168148.241093226,83499.8236053759,317813.610754188
+"636","Listeria monocytogenes","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",3619883.63022828,2191619.31152906,5708109.45704152
+"637","Listeria monocytogenes","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",56005.1358929319,23877.8605261795,117543.950575309
+"638","Listeria monocytogenes","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",55863.8527029545,23734.9799988984,118311.012349605
+"639","Listeria monocytogenes","Initial and sequel disease","5-64","Other","TotalHumanCapital",729245.248019703,378854.849632508,1335945.10691987
+"640","Listeria monocytogenes","Initial and sequel disease","5-64","Pork","TotalHumanCapital",1764974.67161343,1075883.92637211,2753521.34462419
+"641","Listeria monocytogenes","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",1708601.90987848,1039009.59877837,2662804.98459595
+"642","Listeria monocytogenes","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",542282.608870462,297567.645034942,940737.917374088
+"643","Listeria monocytogenes","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",1707670.03180244,1040679.78347594,2663952.07684401
+"644","Listeria monocytogenes","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",4324035.85978481,2627761.13515037,6769240.15059631
+"645","Listeria monocytogenes","Initial and sequel disease","65+","AllFood","TotalHumanCapital",39295727.1115352,24869438.5763944,58981648.3487899
+"646","Listeria monocytogenes","Initial and sequel disease","65+","Beef","TotalHumanCapital",96392.7797633944,42031.6389088839,198281.073623943
+"647","Listeria monocytogenes","Initial and sequel disease","65+","Dairy","TotalHumanCapital",13520983.3026744,8540948.6586812,20410742.1177064
+"648","Listeria monocytogenes","Initial and sequel disease","65+","Eggs","TotalHumanCapital",0,0,0
+"649","Listeria monocytogenes","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",288685.047075703,146655.161177051,535626.193398014
+"650","Listeria monocytogenes","Initial and sequel disease","65+","Fruit","TotalHumanCapital",6216742.15930099,3898194.31133603,9447033.65031418
+"651","Listeria monocytogenes","Initial and sequel disease","65+","Lamb","TotalHumanCapital",96260.5173927453,41853.1118656338,198304.765570858
+"652","Listeria monocytogenes","Initial and sequel disease","65+","Nuts","TotalHumanCapital",95980.9888121281,41533.6410666391,198886.021183609
+"653","Listeria monocytogenes","Initial and sequel disease","65+","Other","TotalHumanCapital",1252131.18501779,671085.135348393,2220567.79961075
+"654","Listeria monocytogenes","Initial and sequel disease","65+","Pork","TotalHumanCapital",3029294.68018295,1915504.41563097,4551026.54490396
+"655","Listeria monocytogenes","Initial and sequel disease","65+","Poultry","TotalHumanCapital",2931078.13066886,1852995.10948341,4403855.80664827
+"656","Listeria monocytogenes","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",930168.035626776,528686.030096236,1570310.88593278
+"657","Listeria monocytogenes","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",2932249.39754143,1850315.8157899,4406446.06709094
+"658","Listeria monocytogenes","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",7420428.72575928,4682827.49422574,11181775.5571837
+"659","Listeria monocytogenes","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",78394098.3708693,58620323.1929733,102676633.869509
+"660","Listeria monocytogenes","Initial and sequel disease","All ages","Beef","TotalHumanCapital",193923.961991256,90101.6282155343,368201.461595124
+"661","Listeria monocytogenes","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",26979795.695604,20095421.7930837,35558242.3059062
+"662","Listeria monocytogenes","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",0,0,0
+"663","Listeria monocytogenes","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",579435.999021506,323775.451229303,979700.299096121
+"664","Listeria monocytogenes","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",12407361.0337178,9142459.63851943,16533299.7940712
+"665","Listeria monocytogenes","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",193507.645666314,90105.3142914455,369243.075186753
+"666","Listeria monocytogenes","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",192898.614387462,89574.4295050253,369620.144988158
+"667","Listeria monocytogenes","Initial and sequel disease","All ages","Other","TotalHumanCapital",2509770.93721853,1484993.56196687,4058160.93484388
+"668","Listeria monocytogenes","Initial and sequel disease","All ages","Pork","TotalHumanCapital",6045480.0013066,4518074.095866,7931068.55061608
+"669","Listeria monocytogenes","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",5850071.68605735,4371636.51386879,7670174.14157228
+"670","Listeria monocytogenes","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",1862033.68040081,1185100.31634945,2831454.30337028
+"671","Listeria monocytogenes","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",5852619.96004394,4371228.19878873,7668354.90384199
+"672","Listeria monocytogenes","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",14812064.3129626,11025219.2202884,19526500.8924669
+"673","Non-typhoidal Salmonella","Initial and sequel disease","<5","AllFood","TotalHumanCapital",20130521.5545061,12570242.0798234,33158138.1228903
+"674","Non-typhoidal Salmonella","Initial and sequel disease","<5","Beef","TotalHumanCapital",1228562.12408669,632735.161544367,2352531.50194973
+"675","Non-typhoidal Salmonella","Initial and sequel disease","<5","Dairy","TotalHumanCapital",223411.167195133,120011.674352922,414805.620117474
+"676","Non-typhoidal Salmonella","Initial and sequel disease","<5","Eggs","TotalHumanCapital",7345721.4789715,4155822.98146997,13093319.7808047
+"677","Non-typhoidal Salmonella","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",24013.8545918083,12930.2014986163,44470.4124851661
+"678","Non-typhoidal Salmonella","Initial and sequel disease","<5","Fruit","TotalHumanCapital",496417.563570244,233963.78601865,1015613.26133042
+"679","Non-typhoidal Salmonella","Initial and sequel disease","<5","Lamb","TotalHumanCapital",1005389.46384815,503043.352371053,1958122.68209638
+"680","Non-typhoidal Salmonella","Initial and sequel disease","<5","Nuts","TotalHumanCapital",825573.419046921,380771.881093462,1708076.16801486
+"681","Non-typhoidal Salmonella","Initial and sequel disease","<5","Other","TotalHumanCapital",348805.762817543,195882.457065623,628608.576237909
+"682","Non-typhoidal Salmonella","Initial and sequel disease","<5","Pork","TotalHumanCapital",1756689.31812071,876881.097389986,3432920.93202367
+"683","Non-typhoidal Salmonella","Initial and sequel disease","<5","Poultry","TotalHumanCapital",4776793.88635536,2500775.3501053,9070991.79000548
+"684","Non-typhoidal Salmonella","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",312388.008505388,170820.56209866,572213.892479374
+"685","Non-typhoidal Salmonella","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",60197.5889772679,30921.2598444542,115202.611483945
+"686","Non-typhoidal Salmonella","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",1656061.41919239,946938.690965871,2937705.3429524
+"687","Non-typhoidal Salmonella","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",67225203.1166577,44004166.406674,106482274.241025
+"688","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Beef","TotalHumanCapital",4108432.44320111,2191994.43627778,7620920.98212518
+"689","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",746648.898648958,414882.002098431,1341751.94748223
+"690","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",24517253.2895435,14479309.8693817,42160528.3699334
+"691","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",80286.1838317778,44690.6922773963,143576.73121274
+"692","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",1662258.28178822,805331.600376533,3303698.88690496
+"693","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",3359083.14785993,1745094.71762947,6329800.05099491
+"694","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",2764093.5894191,1311658.46954375,5524492.77561933
+"695","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Other","TotalHumanCapital",1164605.84500174,680572.510009314,2026932.28150538
+"696","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Pork","TotalHumanCapital",5878405.99623824,3029370.67708011,11105028.1214797
+"697","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",15960118.5767016,8636165.11711365,29304945.7606593
+"698","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",1044292.66236985,593040.703727767,1846578.62980545
+"699","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",200880.203766724,106852.078816074,372634.986774409
+"700","Non-typhoidal Salmonella","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",5533172.14925776,3296436.63446703,9483007.0139647
+"701","Non-typhoidal Salmonella","Initial and sequel disease","65+","AllFood","TotalHumanCapital",51904396.610729,35496078.043033,74568655.7610438
+"702","Non-typhoidal Salmonella","Initial and sequel disease","65+","Beef","TotalHumanCapital",3157528.90757523,1733927.21308742,5497975.75418379
+"703","Non-typhoidal Salmonella","Initial and sequel disease","65+","Dairy","TotalHumanCapital",574322.359482364,331768.518099612,963903.392968946
+"704","Non-typhoidal Salmonella","Initial and sequel disease","65+","Eggs","TotalHumanCapital",18897482.1996792,11571072.0688071,30093363.8872582
+"705","Non-typhoidal Salmonella","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",61739.5448517629,35706.0396888884,103710.685895616
+"706","Non-typhoidal Salmonella","Initial and sequel disease","65+","Fruit","TotalHumanCapital",1278423.03885957,636604.782375175,2394050.47578659
+"707","Non-typhoidal Salmonella","Initial and sequel disease","65+","Lamb","TotalHumanCapital",2583674.16882755,1381789.36186851,4583764.92030943
+"708","Non-typhoidal Salmonella","Initial and sequel disease","65+","Nuts","TotalHumanCapital",2123900.02278739,1038144.93610892,4029464.58280467
+"709","Non-typhoidal Salmonella","Initial and sequel disease","65+","Other","TotalHumanCapital",896980.405981208,544229.009577686,1444395.14600579
+"710","Non-typhoidal Salmonella","Initial and sequel disease","65+","Pork","TotalHumanCapital",4514762.1126815,2402797.45231303,8031378.34386314
+"711","Non-typhoidal Salmonella","Initial and sequel disease","65+","Poultry","TotalHumanCapital",12290616.0794696,6899187.61844272,21133460.2976378
+"712","Non-typhoidal Salmonella","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",803791.415617463,472665.847434915,1329427.39645517
+"713","Non-typhoidal Salmonella","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",154700.031456564,84872.6515742535,267815.937982397
+"714","Non-typhoidal Salmonella","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",4262544.85568884,2635340.86006969,6760421.44242993
+"715","Non-typhoidal Salmonella","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",140229317.383501,101731914.88215,200987818.259745
+"716","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Beef","TotalHumanCapital",8587732.9228406,4864743.88755187,14843747.8525345
+"717","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",1561170.41399708,930018.155138725,2598587.88759868
+"718","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",51289341.9957084,32649928.443443,81234591.3627789
+"719","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",167870.826896539,100053.13785184,278954.539800416
+"720","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",3484045.00607006,1773349.87178851,6470384.45456972
+"721","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",7031370.25854115,3856824.85476469,12361863.795165
+"722","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",5777659.09368663,2885050.68470064,10845101.7275094
+"723","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Other","TotalHumanCapital",2435190.12970699,1528381.8258948,3904826.89254315
+"724","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Pork","TotalHumanCapital",12298939.82416,6718090.31653765,21728141.6840815
+"725","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",33433245.4869558,19243166.974212,56983665.0918869
+"726","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",2184077.14609205,1325485.08402909,3571894.3990521
+"727","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",420799.855617769,237485.96255429,725857.88721151
+"728","Non-typhoidal Salmonella","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",11574445.674162,7429643.30262697,18185975.4172504
+"729","STEC","Initial and sequel disease","<5","AllFood","TotalHumanCapital",1223602.90381379,495005.177968407,2938581.57428722
+"730","STEC","Initial and sequel disease","<5","Beef","TotalHumanCapital",423078.469119175,170965.957412922,1015882.61346529
+"731","STEC","Initial and sequel disease","<5","Dairy","TotalHumanCapital",183494.689580285,73524.2242374886,443411.251264994
+"732","STEC","Initial and sequel disease","<5","Eggs","TotalHumanCapital",3818.52044110225,1247.00573308138,10927.8129389869
+"733","STEC","Initial and sequel disease","<5","Fin fish","TotalHumanCapital",0,0,0
+"734","STEC","Initial and sequel disease","<5","Fruit","TotalHumanCapital",51491.1050367522,20638.1497171569,124215.488731028
+"735","STEC","Initial and sequel disease","<5","Lamb","TotalHumanCapital",82387.2105130769,33258.1345239913,198506.071746779
+"736","STEC","Initial and sequel disease","<5","Nuts","TotalHumanCapital",0,0,0
+"737","STEC","Initial and sequel disease","<5","Other","TotalHumanCapital",48138.8224269149,18897.7742050946,118244.1034864
+"738","STEC","Initial and sequel disease","<5","Pork","TotalHumanCapital",90712.5317722271,36721.9928353974,218067.554129134
+"739","STEC","Initial and sequel disease","<5","Poultry","TotalHumanCapital",51394.7135636306,20585.0974714824,124123.908890377
+"740","STEC","Initial and sequel disease","<5","Seeds and grains","TotalHumanCapital",51386.9089752999,20690.0678581404,124105.325473063
+"741","STEC","Initial and sequel disease","<5","Shellfish","TotalHumanCapital",0,0,0
+"742","STEC","Initial and sequel disease","<5","Vegetables","TotalHumanCapital",241703.587329865,97502.3139413614,581375.267521448
+"743","STEC","Initial and sequel disease","5-64","AllFood","TotalHumanCapital",8139086.43828331,4540146.16288863,14056712.9165916
+"744","STEC","Initial and sequel disease","5-64","Beef","TotalHumanCapital",2811085.91370769,1569140.42367384,4859439.20742015
+"745","STEC","Initial and sequel disease","5-64","Dairy","TotalHumanCapital",1220062.87141827,673130.038098334,2134160.10758775
+"746","STEC","Initial and sequel disease","5-64","Eggs","TotalHumanCapital",25409.1992932682,10595.8949747438,56335.2002048435
+"747","STEC","Initial and sequel disease","5-64","Fin fish","TotalHumanCapital",0,0,0
+"748","STEC","Initial and sequel disease","5-64","Fruit","TotalHumanCapital",341794.377878772,188964.933556776,596493.476845315
+"749","STEC","Initial and sequel disease","5-64","Lamb","TotalHumanCapital",548435.514315832,305411.575583002,951065.700370686
+"750","STEC","Initial and sequel disease","5-64","Nuts","TotalHumanCapital",0,0,0
+"751","STEC","Initial and sequel disease","5-64","Other","TotalHumanCapital",319555.356801697,172232.94061337,574802.518337619
+"752","STEC","Initial and sequel disease","5-64","Pork","TotalHumanCapital",603418.057281693,336724.704813024,1042954.96523733
+"753","STEC","Initial and sequel disease","5-64","Poultry","TotalHumanCapital",341693.252354232,188990.93506656,594920.615156486
+"754","STEC","Initial and sequel disease","5-64","Seeds and grains","TotalHumanCapital",341596.535563767,189266.625422284,596260.143143339
+"755","STEC","Initial and sequel disease","5-64","Shellfish","TotalHumanCapital",0,0,0
+"756","STEC","Initial and sequel disease","5-64","Vegetables","TotalHumanCapital",1607380.63296723,893507.606662008,2790710.76278142
+"757","STEC","Initial and sequel disease","65+","AllFood","TotalHumanCapital",1864306.99089952,774293.776616152,4308443.50207476
+"758","STEC","Initial and sequel disease","65+","Beef","TotalHumanCapital",643625.019286603,267667.060603376,1490767.8338028
+"759","STEC","Initial and sequel disease","65+","Dairy","TotalHumanCapital",279196.29150279,115170.284916152,651051.970625727
+"760","STEC","Initial and sequel disease","65+","Eggs","TotalHumanCapital",5801.20833271762,1959.47372345672,16113.6748194737
+"761","STEC","Initial and sequel disease","65+","Fin fish","TotalHumanCapital",0,0,0
+"762","STEC","Initial and sequel disease","65+","Fruit","TotalHumanCapital",78299.4382956824,32420.9871373665,182534.414807486
+"763","STEC","Initial and sequel disease","65+","Lamb","TotalHumanCapital",125521.884322742,52106.8037088402,290962.857228986
+"764","STEC","Initial and sequel disease","65+","Nuts","TotalHumanCapital",0,0,0
+"765","STEC","Initial and sequel disease","65+","Other","TotalHumanCapital",73235.9834803781,29683.718563446,173982.103160351
+"766","STEC","Initial and sequel disease","65+","Pork","TotalHumanCapital",138170.873866781,57416.1783409234,319754.332136725
+"767","STEC","Initial and sequel disease","65+","Poultry","TotalHumanCapital",78303.55979386,32324.6258800171,182590.267209655
+"768","STEC","Initial and sequel disease","65+","Seeds and grains","TotalHumanCapital",78289.0751524736,32360.066977119,181984.637332308
+"769","STEC","Initial and sequel disease","65+","Shellfish","TotalHumanCapital",0,0,0
+"770","STEC","Initial and sequel disease","65+","Vegetables","TotalHumanCapital",368000.978115619,152637.277307971,851685.456450961
+"771","STEC","Initial and sequel disease","All ages","AllFood","TotalHumanCapital",11684987.6456583,7258988.9794922,18300208.5392068
+"772","STEC","Initial and sequel disease","All ages","Beef","TotalHumanCapital",4035816.79042906,2503751.32202576,6337967.896613
+"773","STEC","Initial and sequel disease","All ages","Dairy","TotalHumanCapital",1751313.88673281,1073848.71183748,2786333.91346548
+"774","STEC","Initial and sequel disease","All ages","Eggs","TotalHumanCapital",36603.417812686,16224.1897677303,75618.9596513754
+"775","STEC","Initial and sequel disease","All ages","Fin fish","TotalHumanCapital",0,0,0
+"776","STEC","Initial and sequel disease","All ages","Fruit","TotalHumanCapital",490825.06731454,301759.339785463,778403.319854006
+"777","STEC","Initial and sequel disease","All ages","Lamb","TotalHumanCapital",787680.167265311,487799.511940728,1237527.04226526
+"778","STEC","Initial and sequel disease","All ages","Nuts","TotalHumanCapital",0,0,0
+"779","STEC","Initial and sequel disease","All ages","Other","TotalHumanCapital",458856.016329386,272804.109502171,753283.288557802
+"780","STEC","Initial and sequel disease","All ages","Pork","TotalHumanCapital",866385.400267762,538242.582266985,1358608.83362058
+"781","STEC","Initial and sequel disease","All ages","Poultry","TotalHumanCapital",490482.794912578,301729.184027139,775945.874814749
+"782","STEC","Initial and sequel disease","All ages","Seeds and grains","TotalHumanCapital",490546.999659709,301594.481074453,776702.941684121
+"783","STEC","Initial and sequel disease","All ages","Shellfish","TotalHumanCapital",0,0,0
+"784","STEC","Initial and sequel disease","All ages","Vegetables","TotalHumanCapital",2307581.42643784,1429679.55530714,3636486.89106641

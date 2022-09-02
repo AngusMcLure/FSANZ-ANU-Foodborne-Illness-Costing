@@ -25,7 +25,7 @@ IncidenceList <- readRDS('IncidenceList.rds')
 # HospList <- HospList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 # IncidenceList <- IncidenceList %>% map_depth(3,~.x[1:min(trim,length(.x))])
 
-## Reduce CostList further by dropping unused cost measures --- The below should all work with all kinds of costs split up, but these aren't been used for now
+## Reduce CostList further by dropping unused cost measures --- The rest of the code should work with all kinds of costs split up, but these aren't been used for now
 
 UsedCosts <- c('TotalHumanCapital')
 CostList <- CostList %>% map_depth(3, ~.x[UsedCosts])
@@ -34,7 +34,7 @@ CostList <- CostList %>% map_depth(3, ~.x[UsedCosts])
 ## Load attribution proportions
 ndraws <- length(CostList[[1]][[1]][[1]][[1]])
 loadAttrProps <- function(ndraws){
-  Attr <- readxl::read_excel('Data/AttributionProportions.xlsx',sheet = 'Gamma parameters') %>%
+  Attr <- readxl::read_excel('Data/AttributionProportionsSansNorovirus.xlsx',sheet = 'Gamma parameters') %>%
     mutate(across(c(shape, rate), .f  = ~as.numeric(na_if(.x, "NA")))) %>%
     mutate(Commodity = gsub('.', ' ', Commodity, fixed = TRUE)) %>% #tidying up commodity names to remove any periods
     drop_na
