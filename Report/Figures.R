@@ -55,14 +55,14 @@ CostTotalsOnly <- read.csv('./Outputs/CostTableCategories.csv') %>%
   select(Pathogen, Cost) %>%
   mutate(Pathogen = fct_reorder(Pathogen, Cost),
          PathogenTidy = recode(Pathogen,
-                               `Salmonella Typhi` = '*Salmonella<br />Typhi*',
-                               Shigella = '*Shigella spp.*',
+                               `Salmonella Typhi` = '*Salmonella*<br />Typhi',
+                               Shigella = '*Shigella*',
                                `Yersinia Enterocolitica` = '*Yersinia<br />Enterocolitica*',
                                `Toxoplasma gondii`  = "*Toxoplasma<br />gondii*",
                                `Listeria monocytogenes` = "*Listeria<br />monocytogenes*",
                                `Escherichia coli (Non-STEC)` = "*Escherichia coli*<br />(non-STEC)",
                                `Non-typhoidal Salmonella` = "Non-typhoidal<br />*Salmonella*",
-                               `Campylobacter` = "*Campylobacter<br />spp.*"
+                               `Campylobacter` = "*Campylobacter*"
          ))
 
 P.TotalCost <-  CostTotals %>%
@@ -189,14 +189,14 @@ CostTotalsSequel <- CostTotals %>%
   group_by(Pathogen,SequelOrInitial) %>%
   summarise(Cost = sum(`Annual cost (millions AUD)`)) %>%
   mutate(PathogenTidy = recode(Pathogen,
-                               `Salmonella Typhi` = '*Salmonella<br />Typhi*',
-                               Shigella = '*Shigella spp.*',
+                               `Salmonella Typhi` = '*Salmonella*<br />Typhi',
+                               Shigella = '*Shigella*',
                                `Yersinia Enterocolitica` = '*Yersinia<br />Enterocolitica*',
                                `Toxoplasma gondii`  = "*Toxoplasma<br />gondii*",
                                `Listeria monocytogenes` = "*Listeria<br />monocytogenes*",
                                `Escherichia coli (Non-STEC)` = "*Escherichia coli*<br />(non-STEC)",
                                `Non-typhoidal Salmonella` = "Non-typhoidal<br />*Salmonella*",
-                               `Campylobacter` = "*Campylobacter<br />spp.*"
+                               `Campylobacter` = "*Campylobacter*"
   ))
 
 
@@ -253,8 +253,8 @@ P.CostProportions <-  CostTotals %>%
                            `Pain and suffering` = 'Pain & Suffering',
                            `Premature mortality` = 'Premature Mortality'),
          SequelOrInitial = recode(SequelOrInitial,
-                                  `Initial disease` = 'Initial Disease',
-                                  `Sequel disease(s)` = 'Sequel Disease(s)')) %>%
+                                  `Initial disease` = 'Primary Illness',
+                                  `Sequel disease(s)` = 'Sequel Illness(es)')) %>%
   ggplot(aes(x = Pathogen, y = Proportion,
              fill = CostItem,
              alpha = SequelOrInitial,
@@ -263,11 +263,11 @@ P.CostProportions <-  CostTotals %>%
   geom_bar(stat = 'identity',
            position = 'stack',
            color = 'black') +
-  scale_alpha_manual(values = c(`Initial Disease` = 1, `Sequel Disease(s)` = 0.5)) +
+  scale_alpha_manual(values = c(`Primary Illness` = 1, `Sequel Illness(es)` = 0.5)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
   guides(fill = guide_legend(override.aes = list(pattern = "none"),
-                             title = 'Cost Category'),
-         alpha = guide_legend(title = 'Sequel vs Initial')) +
+                             title = 'Cost Category', order = 1),
+         alpha = guide_legend(title = 'Primary vs Sequel', order = 2)) +
   coord_flip() +
   theme(axis.title.y=element_blank(),
         axis.text.y=element_blank(),
