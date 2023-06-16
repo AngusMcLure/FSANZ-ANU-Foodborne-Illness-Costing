@@ -3,10 +3,19 @@ library(shiny)
 library(shinyBS)
 library(shinyjs)
 library(tidyverse)
+library(stringr)
 library(mc2d) #for the standard PERT distribution parameterised by min, mode, max
 load('Outputs/AusFBDiseaseImage-Light.RData', globalenv())
 source("Outbreak.R")
 
+CPIData <- read.csv('./Data/CPI-ABS.csv',skip = 1,
+                    col.names = c('Quarter', 'Change.Quarterly', 'Change.Annualised')) %>%
+  drop_na() %>%
+  mutate(Date = as_date(paste0('01-',Quarter),format = '%d-%m-%y')) %>%
+  subset(Date > as_date('2019-06-01')) %>%
+  arrange(Date) %>%
+  mutate(Cumm.Inflation.Multiplier = cumprod(1+Change.Quarterly/100),
+         CummCPI = 100*(Cumm.Inflation.Multiplier-1))
 InitialDiseaseNames <- c(unlist(map(PathogenAssumptions, ~.x$name)), `All pathogens` = 'Initial')
 
 CostTable <- read.csv("Outputs/CostTable.csv") %>%
@@ -16,9 +25,9 @@ CostTable <- read.csv("Outputs/CostTable.csv") %>%
                                            scientific = FALSE,
                                            trim = T,
                                            drop0trailing = TRUE))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
+  mutate(`90% UI` = paste(X5.,X95.,sep = ' - ')) %>%
   rename("Cost (thousands AUD)" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
+  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% UI`) %>%
   mutate(CostItem = recode(CostItem,
                            GPSpecialist = 'GP and specialist vists',
                            ED = 'Emergency department visits',
@@ -42,9 +51,9 @@ CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
                                            scientific = FALSE,
                                            trim = T,
                                            drop0trailing = TRUE))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
+  mutate(`90% UI` = paste(X5.,X95.,sep = ' - ')) %>%
   rename("Cost (thousands AUD)" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
+  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% UI`) %>%
   mutate(CostItem = recode(CostItem,
                            Deaths = "Premature Mortality",
                            FrictionLow = 'Friction (low)',
@@ -64,12 +73,12 @@ EpiTable <- read.csv('Outputs/EpiTable.csv') %>%
                                            scientific = FALSE,
                                            trim = T,
                                            drop0trailing = TRUE))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
+  mutate(`90% UI` = paste(X5.,X95.,sep = '-'),
          Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
                           'Initial disease',
                           Disease)) %>%
   rename("Count" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, Measure, Count, `90% CI`)
+  select(Pathogen, Disease, AgeGroup, Measure, Count, `90% UI`)
 
 ProductivityOptions <- c("Human capital", "Friction (high)", "Friction (low)")
 TotalOptions <- paste0("Total.",ProductivityOptions)
@@ -93,10 +102,26 @@ explainer_text <-
          "illness in Australia\\' (2022). This multiplier will not be applied to ",
          "any death or hospitalisation figures supplied by the user.")
 
+#render the starting page to html -- moved away from this approach as it was preventing the tables from displaying without an error that let me debug...
+#rmarkdown::render('InfoText.Rmd')
+
 ui <- fluidPage(
   useShinyjs(),
   titlePanel("Cost of Foodborne Diseases in Australia"),
   tabsetPanel(type = "pills",
+              tabPanel('Info',
+                       #fluidRow(includeHTML('./InfoText.html')),
+                       column(width = 1),
+                       column(width = 10,
+                              fluidRow(includeMarkdown('./InfoText.md')),
+                              fluidRow(selectInput('Quarter.Inflation',
+                                                   'Quarter for Inflation adjustment',
+                                                   c('June 2019 (Baseline - No adjustment)',CPIData$Quarter),
+                                                   selected = 'June 2019 (Baseline - No adjustment)',
+                                                   multiple = FALSE)
+                                       )
+                              )
+                       ),
               tabPanel('Epi Summaries',
                        fluidRow(column(width = 3,
                                        selectInput(
@@ -382,7 +407,7 @@ server <- function(input, output) {
                                                  scientific = FALSE,
                                                  trim = T,
                                                  drop0trailing = TRUE))) %>%
-      mutate(`90% CI` = paste(`5%`,`95%`,sep = ' - ')) %>%
+      mutate(`90% UI` = paste(`5%`,`95%`,sep = ' - ')) %>%
       rename("Cost (AUD)" = "median") %>%
       select(-c(`5%`, `95%`)) %>%
       mutate(CostItem = recode(CostItem,
