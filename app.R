@@ -8,7 +8,7 @@ library(mc2d) #for the standard PERT distribution parameterised by min, mode, ma
 load('Outputs/AusFBDiseaseImage-Light.RData', globalenv())
 source("Outbreak.R")
 
-CPIData <- read.csv('./Data/CPI-ABS.csv',skip = 1,
+CPIData <- read.csv('Data/CPI-ABS.csv',skip = 1,
                     col.names = c('Quarter', 'Change.Quarterly', 'Change.Annualised')) %>%
   drop_na() %>%
   mutate(Date = as_date(paste0('01-',Quarter),format = '%d-%m-%y')) %>%
@@ -88,9 +88,6 @@ explainer_text <-
          "and is the same as in the FSANZ report \\'The annual cost of foodborne ",
          "illness in Australia\\' (2022). This multiplier will not be applied to ",
          "any death or hospitalisation figures supplied by the user.")
-
-#render the starting page to html -- moved away from this approach as it was preventing the tables from displaying without an error that let me debug...
-#rmarkdown::render('InfoText.Rmd')
 
 ui <- fluidPage(
   useShinyjs(),
