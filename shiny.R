@@ -12,7 +12,7 @@ CPIData <- read.csv('./Data/CPI-ABS.csv',skip = 1,
                     col.names = c('Quarter', 'Change.Quarterly', 'Change.Annualised')) %>%
   drop_na() %>%
   mutate(Date = as_date(paste0('01-',Quarter),format = '%d-%m-%y')) %>%
-  subset(Date > as_date('2019-06-01')) %>%
+  subset(Date > as_date('2019-12-01')) %>%
   arrange(Date) %>%
   mutate(Cumm.Inflation.Multiplier = cumprod(1+Change.Quarterly/100),
          CummCPI = 100*(Cumm.Inflation.Multiplier-1))
@@ -116,10 +116,11 @@ ui <- fluidPage(
                               fluidRow(includeMarkdown('./InfoText.md')),
                               fluidRow(selectInput('Quarter.Inflation',
                                                    'Quarter for Inflation adjustment',
-                                                   c('June 2019 (Baseline - No adjustment)',CPIData$Quarter),
-                                                   selected = 'June 2019 (Baseline - No adjustment)',
+                                                   c('Dec-19 (Baseline - No adjustment)',CPIData$Quarter),
+                                                   selected = 'Dec-19 (Baseline - No adjustment)',
                                                    multiple = FALSE)
-                                       )
+                                       ),
+                              fluidRow(includeMarkdown('./Whitespace.md')) ## adds whitespace after selection so that it doesn't run off screen. There is probably a better wat to do this but I couldn't find one easily!
                               )
                        ),
               tabPanel('Epi Summaries',
