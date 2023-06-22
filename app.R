@@ -9,7 +9,7 @@ load('Outputs/AusFBDiseaseImage-Light.RData', globalenv())
 source("Outbreak.R")
 
 CPIData <- read.csv('Data/CPI-ABS.csv',skip = 1,
-                    col.names = c('Quarter', 'Change.Quarterly', 'Change.Annualised')) %>%
+                    col.names = c('Quarter', 'Change.Quarterly', 'Change.Annual')) %>%
   drop_na() %>%
   mutate(Date = as_date(paste0('01-',Quarter),format = '%d-%m-%y')) %>%
   subset(Date > as_date('2019-12-01')) %>%

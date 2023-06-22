@@ -9,11 +9,11 @@ source("./RFiles/estimationFunctions.R")
 
 
 #Load all the data and assumptions
-NNDSSIncidenceAgegroup <- getCasesNNDSSAgeGroup() %>% subset(Disease != "STEC")
+NNDSSIncidenceAgegroup <- getCasesNNDSSAgeGroup() %>% subset(Disease != "STEC") #STEC is in the dataset, but quality of state surveillance deemed better.
 StateIncidenceAgeGroup <- getCasesStateAgeGroup()
 NotificationsAgeGroup <- bind_rows(NNDSSIncidenceAgegroup,StateIncidenceAgeGroup)
-AusPopAgegroup <- getAusPopAgeGroup()
-AusPopSingleYear <- getAusPopSingleYearAge()
+AusPopAgegroup <- getAusPopAgeGroup() #Population by year for the 3 broad age-groups 
+AusPopSingleYear <- getAusPopSingleYearAge() # Population by year for every age
 Hospitalisations <- getHospitalisationsAgeGroup()
 Costs <- getCosts()
 VSL <- getValueStatisticalLife()

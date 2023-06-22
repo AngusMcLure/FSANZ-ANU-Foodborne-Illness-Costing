@@ -1,4 +1,6 @@
 #Functions for extracting data
+
+#Population by year by the 3 age groups (<5, 5-64, 65+)
 getAusPopAgeGroup <- function(){
   AusPopAgeGroup <- getAusPopSingleYearAge() %>%
     mutate(AgeGroup = ifelse(Age<5, "<5",ifelse(Age<65,"5-64", "65+"))) %>%
@@ -7,6 +9,7 @@ getAusPopAgeGroup <- function(){
   AusPopAgeGroup
 }
 
+#Population by year and age
 getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xls"){
   AusPop <- readxl::read_xls(file,
                              sheet = 'Data1',
@@ -219,7 +222,7 @@ getValueStatisticalLife <- function(){
   read.csv('./Data/ValueStatisticalLife.csv')$Value
 }
 
-getABSDeaths <- function(year){
+getABSDeaths <- function(){
 
   col.types <- c("text", "skip", "text", "text", "text", "text", "skip", "text", "text", "text", "text")
   col.names <- c("Cause", "Male.0-14", "Male.15-64", "Male.65+", "Male.All", "Female.0-14", "Female.15-64", "Female.65+", "Female.All")
