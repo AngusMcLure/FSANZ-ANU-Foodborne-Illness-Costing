@@ -92,6 +92,7 @@ explainer_text <-
 ui <- fluidPage(
   useShinyjs(),
   titlePanel("Cost of Foodborne Diseases in Australia"),
+  textOutput('Banner'),
   tabsetPanel(type = "pills",
               tabPanel('Info',
                        #fluidRow(includeHTML('./InfoText.html')),
@@ -345,11 +346,17 @@ server <- function(input, output) {
 
   #Multiplier for inflation calculations
   InflationMult <- reactiveVal(1)
+  BasicBanner <- 'Estimates based on data circa 2019 or earlier,'
   observeEvent(input$Quarter.Inflation,{
     if(input$Quarter.Inflation == 'Dec-19 (Baseline - No adjustment)'){
       InflationMult(1)
+      output$Banner <- renderText(c(BasicBanner,' with no inflation adjustment.',sep = ''))
     }else{
       InflationMult(CPIData[input$Quarter.Inflation,'Cumm.Inflation.Multiplier'])
+      output$Banner <- renderText(c(BasicBanner,' with cost estimates inflation adjusted to ', input$Quarter.Inflation, ' (',
+                                    if(InflationMult()>1){'+'}else{''},
+                                    round(100*(InflationMult()-1),1),
+                                    '%).'), sep = '')
     }
   })
 
