@@ -1,3 +1,4 @@
+# FSANZ Foodborne Disease Costing Model
 This repository contains the R code and data for estimating the burden and cost of food-borne illness, ten priority pathogens and four sequel illnesses in Australia circa 2019.
 
 The code estimates the burden (cases, hospitalisations, and deaths) and estimates the associated costs (direct medical costs, lost productivity, pain and suffering, and fatality). Estimates can be run by executing `Rfiles/BuildCostTable.R`. Cost tables are outputted as .csv files, but can also be explored in an interactive shiny app (`app.R`). The app also allows users to estimate costs for foodborne disease outbreaks based on estimated number of cases, hospitalisations, and deaths using the same costing framework for the main estimates.
@@ -6,7 +7,7 @@ Web-hosted version of interactive table can be found at https://angusmclure.shin
 
 The development of this code was commissioned by Food Standards Australia New Zealand (FSANZ), conducted by Angus McLure at the Australian National University.
 
-This code was used to calculate the estimates presented in the [FSANZ report]( https://www.foodstandards.gov.au/publications/Documents/ANU%20Foodborne%20Disease%20Final%20Report.pdf) *The annual cost of foodborne disease in Australia* (published 2022).  
+This code was used to calculate the estimates presented in the [FSANZ report]( https://www.foodstandards.gov.au/publications/Documents/ANU%20Foodborne%20Disease%20Final%20Report.pdf) *The annual cost of foodborne disease in Australia* (published 2022). The model and results are soon to appear as a [peer-reviewed journal article](https://home.liebertpub.com/publications/foodborne-pathogens-and-disease/108) in *Foodborne Pathogens and Disease*.
 
 # Updating Data
 

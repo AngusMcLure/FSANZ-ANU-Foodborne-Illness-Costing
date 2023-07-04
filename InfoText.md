@@ -1,7 +1,7 @@
 
 ## Introduction
 
-This application summarises Australian national estimates of burden and cost of foodborne disease for ten priority pathogens and four sequel illnesses circa 2019. The work was commissioned by Food Standards Australia New Zealand and the Australian Commonwealth Department of Health. The full report and methodology has been published by FSANZ and can be found [here](https://www.foodstandards.gov.au/publications/Documents/ANU%20Foodborne%20Disease%20Final%20Report.pdf).
+This application summarises Australian national estimates of burden and cost of foodborne disease for ten priority pathogens and four sequel illnesses circa 2019. The work was commissioned by Food Standards Australia New Zealand (FSANZ) and the Australian Commonwealth Department of Health, and conducted by a team of experts from The Australian National University led by [Prof Katie Glass](https://researchers.anu.edu.au/researchers/glass-ka), with model development led by [Dr Angus McLure](https://researchers.anu.edu.au/researchers/mclure-at). The full report and methodology has been published as a [report](https://www.foodstandards.gov.au/publications/Documents/ANU%20Foodborne%20Disease%20Final%20Report.pdf) by FSANZ, and is soon to appear as a [peer-reviewed journal article](https://home.liebertpub.com/publications/foodborne-pathogens-and-disease/108) in *Foodborne Pathogens and Disease*.
 
 There are five tabs:
 

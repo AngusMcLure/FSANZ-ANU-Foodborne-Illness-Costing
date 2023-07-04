@@ -91,7 +91,7 @@ explainer_text <-
 
 ui <- fluidPage(
   useShinyjs(),
-  titlePanel("Cost of Foodborne Diseases in Australia"),
+  titlePanel("FSANZ Foodborne Disease Costing Model"),
   textOutput('Banner'),
   tabsetPanel(type = "pills",
               tabPanel('Info',
@@ -346,11 +346,11 @@ server <- function(input, output) {
 
   #Multiplier for inflation calculations
   InflationMult <- reactiveVal(1)
-  BasicBanner <- 'Estimates based on data circa 2019 or earlier,'
+  BasicBanner <- 'Burden and cost estimates circa 2019 with data from 2019 or older,'
   observeEvent(input$Quarter.Inflation,{
     if(input$Quarter.Inflation == 'Dec-19 (Baseline - No adjustment)'){
       InflationMult(1)
-      output$Banner <- renderText(c(BasicBanner,' with no inflation adjustment.',sep = ''))
+      output$Banner <- renderText(c(BasicBanner,' with no inflation adjustment to present.',sep = ''))
     }else{
       InflationMult(CPIData[input$Quarter.Inflation,'Cumm.Inflation.Multiplier'])
       output$Banner <- renderText(c(BasicBanner,' with cost estimates inflation adjusted to ', input$Quarter.Inflation, ' (',
