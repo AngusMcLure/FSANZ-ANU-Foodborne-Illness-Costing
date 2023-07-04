@@ -33,7 +33,9 @@ CostList <- CostList %>% map_depth(3, ~.x[UsedCosts])
 
 ## Load attribution proportions
 ndraws <- length(CostList[[1]][[1]][[1]][[1]])
-loadAttrProps <- function(ndraws){
+
+#Version for pilot data
+loadAttrPropsPilot <- function(ndraws){
   Attr <- readxl::read_excel('Data/AttributionProportionsSansNorovirus.xlsx',sheet = 'Gamma parameters') %>%
     mutate(across(c(shape, rate), .f  = ~as.numeric(na_if(.x, "NA")))) %>%
     mutate(Commodity = gsub('.', ' ', Commodity, fixed = TRUE)) %>% #tidying up commodity names to remove any periods
@@ -46,6 +48,12 @@ loadAttrProps <- function(ndraws){
     map(~as.matrix(as.data.frame(.x,check.names = FALSE)))
   Attr
 }
+
+#Version for 2023 attribution data
+loadAttrProps <- function(ndraws){
+
+}
+
 
 AttrProps <- loadAttrProps(ndraws)
 
