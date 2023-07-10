@@ -52,7 +52,7 @@ rectangle <- function(x, names_to, values_to){
     rapply(enquote,how = "unlist") %>% #make a dataframe (very wide)
     lapply(eval) %>%
     as.data.frame(check.names = F) %>%
-    summarise(across(.fns = list)) %>% #make the draws list columns so they take up less space with we lengthen the dataframe
+    summarise(across(.cols = everything(),.fns = list)) %>% #make the draws list columns so they take up less space with we lengthen the dataframe
     pivot_longer(everything(), #lengthen dataframe
                  names_sep = "\\.",
                  names_to = names_to,

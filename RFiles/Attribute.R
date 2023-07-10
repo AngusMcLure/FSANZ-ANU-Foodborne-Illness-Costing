@@ -1,4 +1,10 @@
-##### Calculate attributed cases and costs for food-borne pathogens
+##### Calculate attributed cases and costs for food-borne pathogens.
+
+
+# This assumes you have run BuildCostTable.R previously on this machine to
+# generate the objects CostList.rds, DeathList.rds, HospList.rds, and
+# IncidenceList.rds
+
 library(tidyverse)
 library(pluralize)
 library(stringr)
@@ -49,13 +55,48 @@ loadAttrPropsPilot <- function(ndraws){
   Attr
 }
 
-#Version for 2023 attribution data
-loadAttrProps <- function(ndraws){
 
+#Read in data for 2023 attribution aggregations (quite different format)
+loadAttrProps <- function(ndraws){
+  #Inputs were supplied for each pathogen/source pair giving 5%, 50%, and 95%
+  #quantiles for the aggregated attrubution percentages (divide by 100 to get
+  #proportions) percentages. Sources are represented by a number so we also need
+  #to read in a key
+
+  # Read in key for translate source numbers in WEperc.csv to source names
+  SourceKey <- read.csv('GlobalWeightedAggregations/SourceKey.csv') %>%
+    arrange(SourceNumber)
+
+  #Perhaps we should also read in the key for pathogen names? Currently hard-coded
+
+  read.csv('GlobalWeightedAggregations/GWperc.csv') %>% #read in data
+    separate(Id, c('Pathogen','Source'),4) %>%          #Split ID column in to Pathogen and Source columns
+    mutate(across(c(Pathogen, Source),trimws)) %>%      #drop whitespace from names
+    mutate(Pathogen = case_match(Pathogen,
+                                 'Cam' ~ 'Campylobacter',
+                                 'NtS' ~ 'Non-typhoidal Salmonella',
+                                 'Lim' ~ 'Listeria monocytogenes',
+                                 'Tog' ~ 'Toxoplasma gondii',
+                                 'STC' ~ 'STEC',
+                                 'Yer' ~ 'Yersinia Enterocolitica',
+                                 .default = Pathogen),
+           Source = SourceKey$SourceName[as.integer(Source)]) %>%
+    complete(Pathogen, Source) %>%                      # Fill out all combinations of Pathogen and Source (blanks get NA for percentiles
+    rowwise %>%                                         #prepare to draw random numbers for each row (Pathogen/Source Pair)
+    mutate(Draws = list(rstep(ndraws,
+                              c(X5.quantile, X50.quant, X95.qunat)/100, #draw attribution proportions
+                              upper = as.numeric(!is.na(X50.quant))))) %>% #ensure that if quantiles are NA attribution is 0
+    group_by(Pathogen) %>%                              #reformat as a list with an entry for each pathogen with a matrix of attribution draws (every column of the matrices are sources)
+    group_map_named(~{
+      as.data.frame(.x$Draws,col.names = .x$Source,
+                    check.names = FALSE) %>%
+        mutate(AllFood = 1) %>%
+        as.matrix
+    })
 }
 
-
 AttrProps <- loadAttrProps(ndraws)
+
 
 warning('Code currently does not return an error if the food categories are different for each pathogen. This might be a good thing if future surveys use slightly different categories, however it could lead to fairly confusing tables and inconsistent sums over categories.')
 
@@ -77,6 +118,7 @@ HospList <- HospList[CommonPathogens]
 DeathList <- DeathList[CommonPathogens]
 EpiList <- list(Cases = IncidenceList, Hospitalisations = HospList, Deaths = DeathList)
 rm(IncidenceList,HospList,DeathList)
+gc()
 
 ##Attributed costs, cases, etc.
 CostList <- map2(CostList, AttrProps,
@@ -99,6 +141,8 @@ EpiList <- map(EpiList,~{
 #rectangularise the nested lists
 CostList <- CostList %>% rectangle(names_to = c("Pathogen", "Disease",'Agegroup', "CostItem", "Source"), values_to = 'Cost')
 EpiList <- EpiList %>% rectangle(names_to = c("Measure","Pathogen", "Disease",'Agegroup', "Source"), values_to = 'Count')
+gc()
+
 
 #collapse the detailed cost categories to the categories
 DirectCat <- c('GPSpecialist','ED','Hospitalisation','Tests','Medications')
@@ -109,16 +153,20 @@ CostList <- CostList %>%
                                    TRUE ~ CostItem)) %>%
   group_by(across(-c(CostItem, Cost))) %>%
   summarise(Cost = list(reduce(Cost, `+`)))
+gc()
+
 
 #change specific initial illness names all to 'initial'
 CostList <- CostList %>% mutate(Disease = ifelse(Disease %in% names(SequelaeAssumptions), Disease, 'Initial'))
 EpiList <- EpiList %>% mutate(Disease = ifelse(Disease %in% names(SequelaeAssumptions), Disease, 'Initial'))
+gc()
+
 
 #Make totals across agegroups, pathogens and diseases and then calculate quantiles
 group_cols <- list(Pathogen = 'All pathogens', Agegroup = 'All ages', `Disease` = 'Initial and sequel disease')
 CostList <- CostList %>% appendGroupTotals('Cost', group_cols) %>% quantileListColumn('Cost') %>% rename(median = `50%`)
 EpiList <- EpiList %>% appendGroupTotals('Count',group_cols) %>% quantileListColumn('Count') %>% rename(median = `50%`)
-
+gc()
 ## Make the tables for the report
 
 #Epi tables

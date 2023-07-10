@@ -179,4 +179,18 @@ ddiscrete <- function(x, value, prob = NULL){
 }
 
 
+#random samples from a step distribution: a continuous distribution on 0-100
+#specified by quantiles that assumes the density is uniform between the given
+#quantiles. The default  quantiles are for 5%, 50% and 95% and with the lower
+#(0% quantile) and upper (100% quantiles) bounds set to 0 and 1. Modified from
+#code from Anca Hanea
+rstep <- function(n,quantiles,
+                  percentiles = c(0.05,0.5,0.95),
+                  lower = 0,upper = 1){
+  y <- c(lower,quantiles,upper)
+  x <- c(0, percentiles, 1)
+  sample_points <- approx(x,y,xout = runif(n))$y
+  return (sample_points)
+}
+
 
