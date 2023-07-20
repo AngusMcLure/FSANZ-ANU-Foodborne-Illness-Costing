@@ -40,28 +40,17 @@ CostList <- CostList %>% map_depth(3, ~.x[UsedCosts])
 ## Load attribution proportions
 ndraws <- length(CostList[[1]][[1]][[1]][[1]])
 
-#Version for pilot data
-loadAttrPropsPilot <- function(ndraws){
-  Attr <- readxl::read_excel('Data/AttributionProportionsSansNorovirus.xlsx',sheet = 'Gamma parameters') %>%
-    mutate(across(c(shape, rate), .f  = ~as.numeric(na_if(.x, "NA")))) %>%
-    mutate(Commodity = gsub('.', ' ', Commodity, fixed = TRUE)) %>% #tidying up commodity names to remove any periods
-    drop_na
-
-  Attr <- Attr %>% group_by(Pathogen, Commodity) %>%
-    group_map_named(~{#print(1 - pgamma(1, shape = .x$shape, rate  = .x$rate))
-      rgamma(ndraws, shape = .x$shape, rate  = .x$rate)}) %>%
-    map(~{.x$AllFood = rep(1,ndraws); .x}) %>%
-    map(~as.matrix(as.data.frame(.x,check.names = FALSE)))
-  Attr
-}
-
-
-#Read in data for 2023 attribution aggregations (quite different format)
-loadAttrProps <- function(ndraws){
+#Read in data for 2023 attribution aggregations (quite different format to pilot)
+#Drawing attribution proportions will happen in the next function
+readAttrProps <- function(path){
   #Inputs were supplied for each pathogen/source pair giving 5%, 50%, and 95%
   #quantiles for the aggregated attrubution percentages (divide by 100 to get
   #proportions) percentages. Sources are represented by a number so we also need
   #to read in a key
+
+  #ASSUMES THAT THE FIRST COLUMN HAS NAME 'Id' (WITH THE
+  #PATHOGEN/COMMODITY PAIR ID) AND THE THE NEXT THREE COLUMS ARE FROM THE 5, 50,
+  #95 QUANTILES, ASSUMING NO NAMING CONVENTION HERE
 
   # Read in key for translate source numbers in WEperc.csv to source names
   SourceKey <- read.csv('GlobalWeightedAggregations/SourceKey.csv') %>%
@@ -69,7 +58,7 @@ loadAttrProps <- function(ndraws){
 
   #Perhaps we should also read in the key for pathogen names? Currently hard-coded
 
-  read.csv('GlobalWeightedAggregations/GWperc.csv') %>% #read in data
+  AttrProps <- read.csv(path) %>% #read in data
     separate(Id, c('Pathogen','Source'),4) %>%          #Split ID column in to Pathogen and Source columns
     mutate(across(c(Pathogen, Source),trimws)) %>%      #drop whitespace from names
     mutate(Pathogen = case_match(Pathogen,
@@ -81,38 +70,45 @@ loadAttrProps <- function(ndraws){
                                  'Yer' ~ 'Yersinia Enterocolitica',
                                  .default = Pathogen),
            Source = SourceKey$SourceName[as.integer(Source)]) %>%
-    complete(Pathogen, Source) %>%                      # Fill out all combinations of Pathogen and Source (blanks get NA for percentiles
-    rowwise %>%                                         #prepare to draw random numbers for each row (Pathogen/Source Pair)
+    complete(Pathogen, Source)                   # Fill out all combinations of Pathogen and Source (blanks get NA for percentiles
+  names(AttrProps) <- c('Pathogen', 'Source', 'X5.', 'median','X95.')
+  return(AttrProps)
+}
+
+drawAttr <- function(AttrProps, ndraws){
+  AttrProps %>%
+    rowwise %>%             #prepare to draw random numbers for each row (Pathogen/Source Pair)
     mutate(Draws = list(rstep(ndraws,
-                              c(X5.quantile, X50.quant, X95.qunat)/100, #draw attribution proportions
-                              upper = as.numeric(!is.na(X50.quant))))) %>% #ensure that if quantiles are NA attribution is 0
-    group_by(Pathogen) %>%                              #reformat as a list with an entry for each pathogen with a matrix of attribution draws (every column of the matrices are sources)
+                              c(X5., median,X95.)/100, #draw attribution proportions
+                              upper = as.numeric(!is.na(median))))) %>% #ensure that if quantiles are NA attribution is 0
+    group_by(Pathogen) %>%  #reformat as a list with an entry for each pathogen with a matrix of attribution draws (every column of the matrices are sources)
     group_map_named(~{
       as.data.frame(.x$Draws,col.names = .x$Source,
                     check.names = FALSE) %>%
-        mutate(AllFood = 1) %>%
+        mutate(AllFood = 1) %>% #include 'AllFood' Source. Note that adding across the food sources will not add to 1 as they aren't constrained as a joint distribution to do so (and their means don't even add to 1)
         as.matrix
     })
 }
 
-AttrProps <- loadAttrProps(ndraws)
+AttrProps <- readAttrProps(path = 'GlobalWeightedAggregations/GWperc.csv')
+AttrDraws <- drawAttr(AttrProps, ndraws)
 
 
 warning('Code currently does not return an error if the food categories are different for each pathogen. This might be a good thing if future surveys use slightly different categories, however it could lead to fairly confusing tables and inconsistent sums over categories.')
 
 ## Check for missing-ness of cost and/or attribution data and ensure that pathogens have the same order in both
-CommonPathogens <- intersect(names(AttrProps), names(CostList))
-MissingPathogens <- setdiff(names(CostList), names(AttrProps))
+CommonPathogens <- intersect(names(AttrDraws), names(CostList))
+MissingPathogens <- setdiff(names(CostList), names(AttrDraws))
 if(length(MissingPathogens)){
   warning('Attribution data is not available for some pathogens for which cost data is available:\n', paste0(MissingPathogens,col = ',\n'))
 }
-ExtraPathogens <- setdiff(names(AttrProps),names(CostList))
+ExtraPathogens <- setdiff(names(AttrDraws),names(CostList))
 if(length(ExtraPathogens)){
   warning('Cost data is not available for some pathogens for which attribution data is available:\n', paste0(ExtraPathogens,col = ',\n'))
 }
 
 CostList <- CostList[CommonPathogens]
-AttrProps <- AttrProps[CommonPathogens]
+AttrDraws <- AttrDraws[CommonPathogens]
 IncidenceList <- IncidenceList[CommonPathogens]
 HospList <- HospList[CommonPathogens]
 DeathList <- DeathList[CommonPathogens]
@@ -121,13 +117,13 @@ rm(IncidenceList,HospList,DeathList)
 gc()
 
 ##Attributed costs, cases, etc.
-CostList <- map2(CostList, AttrProps,
+CostList <- map2(CostList, AttrDraws,
                  function(.c, .a){
                    map_depth(.c, 3, ~{as.list(as.data.frame(.x * .a))})
                  }
 )
 EpiList <- map(EpiList,~{
-  map2(.x,AttrProps,
+  map2(.x,AttrDraws,
        function(.e,.a){
          map_depth(.e,2,
                    function(.n){as.list(as.data.frame(.n * .a))}
@@ -203,11 +199,31 @@ CostList %>%
                             'csv',sep = '.'))
   })
 
+#Attribution tables
+
+AttrProps %>%
+  bind_rows(., AttrProps %>%
+              group_by(Pathogen) %>%
+              summarise(median = sum(median,na.rm = T)) %>%
+              mutate(Source = 'Total',
+                     X5. = median,
+                     X95. = median)) %>%
+  mutate(across(c(X5., median, X95.), ~replace_na(.x,0))) %>%
+  subset(Pathogen %in% CommonPathogens) %>%
+  medianCIformat(unit = 1,round = T) %>%
+  mutate(Cost = if_else(Cost == "0", "0*", Cost)) %>%
+  select(c(Pathogen, Source, Attribution = Cost)) %>%
+  pivot_wider(names_from = Pathogen, values_from = Attribution) %>%
+  mutate(Source = factor(Source) %>% fct_relevel('Other','Total', after = Inf)) %>%
+  arrange(Source) %>%
+  write_excel_csv('Report/AttrProps.csv')
+
+
 #Order Food by cost
 FoodCatOrdered <- CostList %>% subset(Pathogen == 'All pathogens' &
-                                           CostCategory == 'TotalHumanCapital' &
-                                           Agegroup == 'All ages' &
-                                           Disease == "Initial and sequel disease") %>%
+                                        CostCategory == 'TotalHumanCapital' &
+                                        Agegroup == 'All ages' &
+                                        Disease == "Initial and sequel disease") %>%
   arrange(median) %>% `[`(,'Source', drop = TRUE)
 
 #Combine the summary data for cost and epi
@@ -264,7 +280,7 @@ P.EpiProp <- CombinedSummaries %>%
   coord_flip() +
   ggh4x::facet_grid2(SourceCat~Measure, scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
   theme(legend.position = 'bottom', legend.direction = 'horizontal',
-    #legend.position = c(0.9,0.125),
+        #legend.position = c(0.9,0.125),
         strip.placement = 'outside',
         strip.text.y = element_blank(),
         strip.background.x = element_rect('white'))
@@ -288,7 +304,7 @@ P.CostPropAlt <- CostList %>%
   coord_flip() +
   ggh4x::facet_grid2(PathogenCat~., scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
   theme(strip.placement = 'outside',
-                strip.text.y = element_blank())
+        strip.text.y = element_blank())
 
 P.CostPropAlt
 ggsave(filename = 'AttributionReport/CostByPathogenSource.png',P.CostPropAlt, width = 1941, height = 1787, units = 'px')
@@ -325,8 +341,8 @@ matchVerbNoun <- function(verb, noun){
   if(is_plural(noun)){
     return(pluralize(verb))
   }else{
-      return(singularize(verb))
-    }
+    return(singularize(verb))
+  }
 }
 
 attribtionSentencesPathogen <- function(pathogen){
@@ -432,7 +448,7 @@ attributionSentencesSource <- function(){
 
   str_glue(
     textlist(glue('{PathogenNames}')),
-    ' have an estimated annual burden of {TotalCases} cases and {TotalCost} million AUD.
+    ' have an estimated combined annual burden of {TotalCases} cases and {TotalCost} million AUD.
     Among the pathogens and food categories considered, {tolower(SourcesCostOrdered[1])}
     {matchVerbNoun("was",SourcesCostOrdered[1])} associated with the greatest cost
     of foodborne illness, with a total cost of {SourcesCostOrderedCosts[1]} million AUD.
@@ -458,5 +474,6 @@ CommonPathogens %>%
 #Write Cost and Epi List summaries for further analysis -- e.g. could be used to build an interactive tool
 write.csv(CostList, 'AttributionReport/AttrCostTable.csv')
 write.csv(EpiList, 'AttributionReport/EpiCostTable.csv')
+
 
 
