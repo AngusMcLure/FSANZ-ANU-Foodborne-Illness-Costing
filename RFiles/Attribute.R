@@ -16,6 +16,14 @@ source('RFiles/Distributions.R')
 source('RFiles/ClassDefinitions.R')
 source('RFiles/Diseases.R')
 
+InflationAdjustment <- 1.151
+warning('Estimates of burden and cost were done to the best of our ability, for
+        2019 data. Though none of the underlying inputs have been modified, we
+        have updated all the costs for inflation (+15.1%) using the all-group
+        CPI published by the ABS.
+        https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release
+        The baseline is the last quarter 2019 and the "present" is June 2023.')
+
 set.seed(20220628)
 
 ## Load cost and epi estimates
@@ -23,6 +31,11 @@ CostList <- readRDS('CostList.rds')
 DeathList <- readRDS('DeathList.rds')
 HospList <- readRDS('HospList.rds')
 IncidenceList <- readRDS('IncidenceList.rds')
+
+## Adjust all costs for inflation
+
+#Adjust costs for inflation (see warning above)
+CostList <- CostList %>% map_depth(4, ~.x * InflationAdjustment)
 
 ## Reduce size of files by dropping most draws from the distributions. Since some costs only have a single 0 element simply selecting 1:trim produces many NAs
 # trim <- 10^5
@@ -163,6 +176,8 @@ group_cols <- list(Pathogen = 'All pathogens', Agegroup = 'All ages', `Disease` 
 CostList <- CostList %>% appendGroupTotals('Cost', group_cols) %>% quantileListColumn('Cost') %>% rename(median = `50%`)
 EpiList <- EpiList %>% appendGroupTotals('Count',group_cols) %>% quantileListColumn('Count') %>% rename(median = `50%`)
 gc()
+
+
 ## Make the tables for the report
 
 #Epi tables
@@ -251,7 +266,7 @@ P.CostProp <- CombinedSummaries %>%
              label = round(median * 10^-6))) +
   geom_bar(stat = 'identity') +
   xlab('Food product') +
-  ylab('Annual cost (millions AUD)') +
+  ylab('Annual cost (AUD millions)') +
   coord_flip() +
   ggh4x::facet_grid2("SourceCat", scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
   theme(legend.position = c(0.70, 0.25),
@@ -267,9 +282,9 @@ P.EpiProp <- CombinedSummaries %>%
                           if_else(Measure == "Cost", median/1000000, median))) %>%
   mutate(Measure = recode(Measure,
                           Cases = 'Cases (thousands)',
-                          Cost = 'Cost (millions AUD)')) %>%
+                          Cost = 'Cost (AUD millions)')) %>%
   mutate(Measure = factor(Measure, levels = c('Cases (thousands)', 'Hospitalisations', "Deaths",
-                                              'Cost (millions AUD)'))) %>%
+                                              'Cost (AUD millions)'))) %>%
   ggplot(aes(x = Source,
              y = median,
              fill = Pathogen,
@@ -300,7 +315,7 @@ P.CostPropAlt <- CostList %>%
              label = round(median/10^6))) +
   geom_bar(stat = 'identity') +
   xlab('Pathogen') +
-  ylab('Annual cost (millions AUD)') +
+  ylab('Annual cost (AUD millions)') +
   coord_flip() +
   ggh4x::facet_grid2(PathogenCat~., scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
   theme(strip.placement = 'outside',
@@ -393,13 +408,13 @@ attribtionSentencesPathogen <- function(pathogen){
                                   Disease == 'Initial and sequel disease')$median %>% tidyNumber(unit = 1, max.word = 21)
   hasSequel <- length(SequelDiseases) > 0
   str_glue(
-    '{pathogen} resulted in an annual cost of approximately {TotalCost} million
-    AUD circa 2019 arising from {CasesInit} cases of',
+    '{pathogen} resulted in an annual cost of approximately AUD {TotalCost} million
+    circa 2019 arising from {CasesInit} cases of',
     if(hasSequel){' initial '}else{' '},'illness, ',
     if(hasSequel){'{CasesSequel} cases of sequel illness ({textlist(tolower(SequelDiseases),conj = "or")}), '}else{''},
     '{Hosp} hospitalisations, and {textCountObj(Deaths, "death")}. {SourcesOrdered[1]}
     {matchVerbNoun("was",SourcesOrdered[1])} the leading source ({SourcePropOrdered[1]}%)
-    with a total annual cost of {SourceCostsOrdered[1]} million AUD arising from
+    with a total annual cost of AUD {SourceCostsOrdered[1]} million arising from
     {LeadingSourceCases} cases of', if(hasSequel){' initial '}else{' '},'illness, ',
     if(hasSequel){'{LeadingSourceCasesSequel} cases of sequel illness, '}else{''},
     '{LeadingSourceHosp} hospitalisations, and {textCountObj(LeadingSourceDeaths, "death")}. The
@@ -448,12 +463,12 @@ attributionSentencesSource <- function(){
 
   str_glue(
     textlist(glue('{PathogenNames}')),
-    ' have an estimated combined annual burden of {TotalCases} cases and {TotalCost} million AUD.
+    ' have an estimated combined annual burden of {TotalCases} cases and AUD {TotalCost} million.
     Among the pathogens and food categories considered, {tolower(SourcesCostOrdered[1])}
     {matchVerbNoun("was",SourcesCostOrdered[1])} associated with the greatest cost
-    of foodborne illness, with a total cost of {SourcesCostOrderedCosts[1]} million AUD.
+    of foodborne illness, with a total cost of AUD {SourcesCostOrderedCosts[1]} million.
     Of this total, ',
-    textlist(glue('{PathogensCostOrderedCosts} million AUD was due to {PathogensCostOrdered}')),
+    textlist(glue('AUD {PathogensCostOrderedCosts} million was due to {PathogensCostOrdered}')),
     '. The food category associated with the most cases of foodborne illness circa 2019
     was', if(SourcesCaseOrdered[1] == SourcesCostOrdered[1]){' also '}else{' '},
     '{tolower(SourcesCaseOrdered[1])}, with a total burden of {SourcesCaseOrderedCases[1]} cases. Of this total, ',
