@@ -29,6 +29,7 @@ set.seed(20220222) #Date at time of final run
 Year <- 2019
 
 WTPList <- getWTP(ndraws)
+FBMult <- list() #setup container to hold FoodBorne multiplier draws. Actual drawing happens during the next line (make Incidence List). Though not ideal, I've done it this way to not change the order in which random variables are drawn so the outputs are identical.
 
 IncidenceList <- makeIncidenceList(Year,
                                    pathogens = PathogenAssumptions,

@@ -14,6 +14,7 @@ estimateIncidence <- function(pathogen, ndraws = 10^6,
                   GastroFraction = draw(gastroRate, n) * draw(p$gastroFraction, n),
                   Seroprevalence = draw(p$FOI, n))
   foodborne <- draw(p$foodborne, n)
+  FBMult[[pathogen$pathogen]] <<- foodborne #store FBMult to be retrieved later
   if(!is.null(p$symptomatic)){
     symptomatic <- draw(p$symptomatic, n)
   }else{
@@ -60,8 +61,11 @@ estimateHosp <- function(disease,
     seperations = 1
     stop("Seperations with primary diagnoses not provided")
   }
-  out <- separations / draw(d$hospPrincipalDiagnosis, n) *
-    draw(d$underdiagnosis, n) * draw(d$foodborne, n)
+  hospPrincipalDiagnosis <- draw(d$hospPrincipalDiagnosis, n)
+  underdiagnosis <- draw(d$underdiagnosis, n)
+  foodborne <- draw(d$foodborne, n)
+  out <- separations / hospPrincipalDiagnosis *
+    underdiagnosis * foodborne
   if(d$caseMethod != 'GastroFraction'){
     out <- out * draw(d$domestic, n)
   }
@@ -295,9 +299,10 @@ makeDeathList <- function(year, pathogens, ndraws = 10^6){
         dths <- subset(Deaths,Cause %in% .d$mortCodes & AgeGroup == .a)
         #rgamma(ndraws, sum(dths$Count) + 0.5, dths$PersonYears[1]) * subset(PopInTargetYear, AgeGroup == .a)$Population *
         dths <- rbeta(ndraws, sum(dths$Count) + 0.5, dths$PersonYears[1] - sum(dths$Count) + 0.5) *
-          subset(PopInTargetYear, AgeGroup == .a)$Persons *
-          draw(.d$underdiagnosis,ndraws) *
-          draw(.d$foodborne,ndraws)
+          subset(PopInTargetYear, AgeGroup == .a)$Persons
+        underdiagnosis <- draw(.d$underdiagnosis,ndraws)
+        foodborne <- draw(.d$foodborne,ndraws)
+        dths <- dths * underdiagnosis * foodborne
         if(.d$caseMethod != "GastroFraction"){
           dths <- dths * draw(.d$domestic,ndraws)
         }
