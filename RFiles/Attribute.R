@@ -270,7 +270,8 @@ P.CostProp <- CombinedSummaries %>%
   coord_flip() +
   ggh4x::facet_grid2("SourceCat", scales = 'free',space = 'free_y', independent = 'x',switch = 'both') +
   theme(legend.position = c(0.70, 0.25),
-        strip.text.y = element_blank())
+        strip.text.y = element_blank(),
+        text = element_text(size = 16))
 P.CostProp
 ggsave(filename = 'AttributionReport/CostBySourcePathogen.png',P.CostProp, width = 1941, height = 1787, units = 'px')
 
@@ -298,9 +299,12 @@ P.EpiProp <- CombinedSummaries %>%
         #legend.position = c(0.9,0.125),
         strip.placement = 'outside',
         strip.text.y = element_blank(),
-        strip.background.x = element_rect('white'))
+        strip.background.x = element_rect('white'),
+        text = element_text(size = 20))
 P.EpiProp
-ggsave(filename = 'AttributionReport/EpiBySourcePathogen.png',P.EpiProp, width = 3300, height = 1787, units = 'px')
+ggsave(filename = 'AttributionReport/EpiBySourcePathogen.png',P.EpiProp, width = 3600, height = 1787, units = 'px')
+P.EpiProp$data <- P.EpiProp$data %>% subset(Measure != 'Cost (AUD millions)')
+ggsave(filename = 'AttributionReport/EpiBySourcePathogenNoCost.png',P.EpiProp, width = 3600, height = 1787, units = 'px')
 
 
 P.CostPropAlt <- CostList %>%

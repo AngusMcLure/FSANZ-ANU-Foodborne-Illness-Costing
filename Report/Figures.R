@@ -184,6 +184,12 @@ P.TotalCost.AllPathogens <-  read.csv('./Outputs/CostTableCategories.csv') %>%
 P.TotalCost.AllPathogens
 ggsave(P.TotalCost.AllPathogens,filename = 'Paper and Presentations/AllPathByCatSequel.png',
        height = 2.7, width = 10)
+InflationAdjustment <- 1.151
+P.TotalCost.AllPathogens.Inflation <- P.TotalCost.AllPathogens
+P.TotalCost.AllPathogens.Inflation$data <- P.TotalCost.AllPathogens$data %>%
+  mutate(`Annual cost (millions AUD)` = `Annual cost (millions AUD)` * InflationAdjustment)
+ggsave(P.TotalCost.AllPathogens.Inflation, filename = 'Paper and Presentations/AllPathByCatSequelInflation.png',
+       height = 2.7, width = 10)
 
 CostTotalsSequel <- CostTotals %>%
   group_by(Pathogen,SequelOrInitial) %>%
@@ -240,6 +246,18 @@ P.CostTotalsOnly <- CostTotalsOnly %>%
 P.CostTotalsOnly
 ggsave(P.CostTotalsOnly,filename = 'Paper and Presentations/CostTotalsOnly.png',
        height = 12/2.54, width = 10.5/2.54)
+
+InflationAdjustment <- 1.151
+P.CostTotalsOnlyInflation <- P.CostTotalsOnly +
+  geom_bar(stat = 'identity',
+           position = 'stack') +
+  lims(y = c(0.0,450.0)) +
+  theme(text = element_text(size =  20))
+P.CostTotalsOnlyInflation$data <- P.CostTotalsOnlyInflation$data %>%
+  mutate(Cost = Cost * InflationAdjustment)
+
+ggsave(P.CostTotalsOnlyInflation,filename = 'Paper and Presentations/CostTotalsOnlyInflation.png',
+       height = 12/2.54, width = 18/2.54)
 
 P.CostProportions <-  CostTotals %>%
   group_by(Pathogen) %>%
