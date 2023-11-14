@@ -252,7 +252,7 @@ PathogenAssumptions <- list(
                                 pathogen = 'Toxoplasma gondii',
                                 kind = 'initial',
                                 caseMethod = 'Seroprevalence',
-                                FOI = rdist('pert', min = 0.12, mode = 0.02, max = 0.035),
+                                FOI = rdist('pert', min = 0.012, mode = 0.02, max = 0.035),
                                 domestic = rdist('pert', min = 0.7, mode = 0.85, max = 0.95),
                                 symptomatic = rdist('pert', min = 0.11, mode = 0.15, max = 0.21),
                                 foodborne = rdist('pert', min = 0.04, mode = 0.31, max = 0.74),
