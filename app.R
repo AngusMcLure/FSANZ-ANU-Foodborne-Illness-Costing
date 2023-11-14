@@ -3,22 +3,25 @@ library(shiny)
 library(shinyBS)
 library(shinyjs)
 library(tidyverse)
+library(stringr)
 library(mc2d) #for the standard PERT distribution parameterised by min, mode, max
 load('Outputs/AusFBDiseaseImage-Light.RData', globalenv())
 source("Outbreak.R")
 
+CPIData <- read.csv('Data/CPI-ABS.csv',skip = 1,
+                    col.names = c('Quarter', 'Change.Quarterly', 'Change.Annual')) %>%
+  drop_na() %>%
+  mutate(Date = as_date(paste0('01-',Quarter),format = '%d-%m-%y')) %>%
+  subset(Date > as_date('2019-12-01')) %>%
+  arrange(Date) %>%
+  mutate(Cumm.Inflation.Multiplier = cumprod(1+Change.Quarterly/100),
+         CummCPI = 100*(Cumm.Inflation.Multiplier-1)) %>%
+  `row.names<-`(.$Quarter)
 InitialDiseaseNames <- c(unlist(map(PathogenAssumptions, ~.x$name)), `All pathogens` = 'Initial')
 
 CostTable <- read.csv("Outputs/CostTable.csv") %>%
   select(-X) %>%
-  mutate(across(c(median,X5.,X95.),~format(ifelse(.x/1000<0.1, round(.x/1000,digits = 3),signif(.x/1000,3)),
-                                           big.mark = ",",
-                                           scientific = FALSE,
-                                           trim = T,
-                                           drop0trailing = TRUE))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
-  rename("Cost (thousands AUD)" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
+  select(Pathogen, Disease, AgeGroup, CostItem, median ,X5., X95.) %>%
   mutate(CostItem = recode(CostItem,
                            GPSpecialist = 'GP and specialist vists',
                            ED = 'Emergency department visits',
@@ -37,14 +40,7 @@ CostTable <- read.csv("Outputs/CostTable.csv") %>%
 
 CostTableSummaries <- read.csv("Outputs/CostTableCategories.csv") %>%
   select(-X) %>%
-  mutate(across(c(median,X5.,X95.),~format(ifelse(.x/1000<0.1, round(.x/1000,digits = 3),signif(.x/1000,3)),
-                                           big.mark = ",",
-                                           scientific = FALSE,
-                                           trim = T,
-                                           drop0trailing = TRUE))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = ' - ')) %>%
-  rename("Cost (thousands AUD)" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, CostItem, `Cost (thousands AUD)`, `90% CI`) %>%
+  select(Pathogen, Disease, AgeGroup, CostItem, median ,X5., X95.) %>%
   mutate(CostItem = recode(CostItem,
                            Deaths = "Premature Mortality",
                            FrictionLow = 'Friction (low)',
@@ -64,12 +60,12 @@ EpiTable <- read.csv('Outputs/EpiTable.csv') %>%
                                            scientific = FALSE,
                                            trim = T,
                                            drop0trailing = TRUE))) %>%
-  mutate(`90% CI` = paste(X5.,X95.,sep = '-'),
+  mutate(`90% UI` = paste(X5.,X95.,sep = '-'),
          Disease = ifelse(Disease == InitialDiseaseNames[Pathogen],
                           'Initial disease',
                           Disease)) %>%
   rename("Count" = "median") %>%
-  select(Pathogen, Disease, AgeGroup, Measure, Count, `90% CI`)
+  select(Pathogen, Disease, AgeGroup, Measure, Count, `90% UI`)
 
 ProductivityOptions <- c("Human capital", "Friction (high)", "Friction (low)")
 TotalOptions <- paste0("Total.",ProductivityOptions)
@@ -95,8 +91,26 @@ explainer_text <-
 
 ui <- fluidPage(
   useShinyjs(),
-  titlePanel("Cost of Foodborne Diseases in Australia"),
+  titlePanel("FSANZ Foodborne Disease Costing Model"),
+  textOutput('Banner'),
   tabsetPanel(type = "pills",
+              tabPanel('Info',
+                       #fluidRow(includeHTML('./InfoText.html')),
+                       column(width = 1),
+                       column(width = 10,
+                              fluidRow(includeMarkdown('./InfoText.md')),
+                              fluidRow(column(width = 6,
+                                              selectInput('Quarter.Inflation',
+                                                   'Quarter for Inflation adjustment',
+                                                   c('Dec-19 (Baseline - No adjustment)',CPIData$Quarter),
+                                                   selected = 'Dec-19 (Baseline - No adjustment)',
+                                                   multiple = FALSE)),
+                                       column(6,
+                                              HTML('<br />'), #add some vertical whitespace
+                                              textOutput('Inflation'))),
+                              fluidRow(HTML(paste0(rep('<br />',10),collapse = ' '))) ## adds whitespace after selection so that it doesn't run off screen. There is probably a better wat to do this but I couldn't find one easily!
+                              )
+                       ),
               tabPanel('Epi Summaries',
                        fluidRow(column(width = 3,
                                        selectInput(
@@ -330,6 +344,28 @@ server <- function(input, output) {
     }
   })
 
+  #Multiplier for inflation calculations
+  InflationMult <- reactiveVal(1)
+  BasicBanner <- 'Burden and cost estimates circa 2019 with data from 2019 or older,'
+  observeEvent(input$Quarter.Inflation,{
+    if(input$Quarter.Inflation == 'Dec-19 (Baseline - No adjustment)'){
+      InflationMult(1)
+      output$Banner <- renderText(c(BasicBanner,' with no inflation adjustment to present.',sep = ''))
+    }else{
+      InflationMult(CPIData[input$Quarter.Inflation,'Cumm.Inflation.Multiplier'])
+      output$Banner <- renderText(c(BasicBanner,' with cost estimates inflation adjusted to ', input$Quarter.Inflation, ' (',
+                                    if(InflationMult()>1){'+'}else{''},
+                                    round(100*(InflationMult()-1),1),
+                                    '%).'), sep = '')
+    }
+  })
+
+  output$Inflation <- renderText(c('Total inflation adjustment from baseline is ',
+                                   if(InflationMult()>1){'+'}else{''},
+                                   round(100*(InflationMult()-1),1),
+                                   '%.'), sep = '')
+
+
   output$EpiDT = DT::renderDataTable(EpiTable %>%
                                        subset(Measure %in% input$Measures.Epi &
                                                 AgeGroup %in% input$AgeGroup.Epi &
@@ -343,14 +379,12 @@ server <- function(input, output) {
                                      )
   )
 
-  output$ComparisonDT <- DT::renderDataTable({
-    renderCostTableDetailed(input,CostTable,'Detailed')
-  },
-  server = FALSE)
+  output$ComparisonDT <- DT::renderDataTable(
+    {renderCostTableDetailed(input,CostTable,InflationMult())},
+    server = FALSE)
 
-  output$SummaryDT = DT::renderDataTable({
-    renderCostTableSummaries(input,CostTableSummaries,"Summary")
-  },
+  output$SummaryDT = DT::renderDataTable(
+    {renderCostTableSummaries(input,CostTableSummaries,"Summary",InflationMult())},
   server = FALSE)
 
   OutbreakSummary <- reactive({
@@ -377,14 +411,8 @@ server <- function(input, output) {
                                  ndraws = 10^3)$costs
 
     summariseCostList(list(Outbreak = OutbreakCost))[['Categorised']] %>%
-      mutate(across(c(median,`5%`,`95%`),~format(ifelse(.x<1000, round(.x,digits = 0),signif(.x,3)),
-                                                 big.mark = ",",
-                                                 scientific = FALSE,
-                                                 trim = T,
-                                                 drop0trailing = TRUE))) %>%
-      mutate(`90% CI` = paste(`5%`,`95%`,sep = ' - ')) %>%
-      rename("Cost (AUD)" = "median") %>%
-      select(-c(`5%`, `95%`)) %>%
+      rename('X5.' = `5%`,
+             'X95.' = `95%`) %>%
       mutate(CostItem = recode(CostItem,
                                Deaths = "Premature Mortality",
                                FrictionLow = 'Friction (low)',
@@ -424,7 +452,7 @@ server <- function(input, output) {
       }
       renderCostTableSummaries(input,
                                OutbreakSummary(),
-                               'Outbreak','Outbreak')
+                               'Outbreak',InflationMult(),'Outbreak')
     }
   },
   server = FALSE)
@@ -443,7 +471,7 @@ read.input <- function(x){
   out
 }
 
-renderCostTableSummaries <- function(input,.CostTableSummaries,tabname,.Pathogen = NULL){
+renderCostTableSummaries <- function(input,.CostTableSummaries,tabname,.InflationMult,.Pathogen = NULL){
   .Productivity <- input[[paste0("Productivity.", tabname)]]
   .AgeGroup <- input[[paste0("AgeGroup.", tabname)]]
   if(is.null(.Pathogen)){
@@ -455,7 +483,18 @@ renderCostTableSummaries <- function(input,.CostTableSummaries,tabname,.Pathogen
 
 
   .CostTableSummaries %>%
-    mutate(`Cost Category` = if_else(CostItem == .Productivity,
+    mutate(across(c(median,X5.,X95.),
+                  ~.x * .InflationMult * ifelse(tabname == 'Summary', 0.001, 1)), #adjust for inflation (and divide by 1000 for annual summaries)
+           across(c(median,X5.,X95.), #format numbers
+                  ~format(ifelse(.x<0.1,
+                                 round(.x,digits = 3),
+                                 signif(.x,3)),
+                          big.mark = ",",
+                          scientific = FALSE,
+                          trim = T,
+                          drop0trailing = TRUE)),
+           `90% UI` = paste(X5.,X95.,sep = ' - '), #paste UI into single variables
+           `Cost Category` = if_else(CostItem == .Productivity, #select the costs associated with the productivity loss method (inlcuding total cost)
                                      'Non-fatal productivity losses',
                                      if_else(CostItem == paste0('Total.',.Productivity),
                                              'Total', CostItem))) %>%
@@ -463,38 +502,50 @@ renderCostTableSummaries <- function(input,.CostTableSummaries,tabname,.Pathogen
              AgeGroup == .AgeGroup &
              Pathogen == .Pathogen &
              Disease == .Disease) %>%
-    select(-c(AgeGroup, Pathogen, Disease, CostItem)) %>%
+    rename_with(~{if(tabname == 'Summary'){'Cost (thousands AUD)'}else{'Cost (AUD)'}}, median) %>% #rename the cost estimate column from median to Cost (AUD) or Cost (thousands AUD)
+    select(-c(AgeGroup, Pathogen, Disease, CostItem, X5., X95.)) %>%
     relocate(`Cost Category`) %>%
+
     DT::datatable(rownames = FALSE,
                   extensions = c("Buttons"),
                   options = list(searching = FALSE,
                                  order = list(1, 'asc'),
                                  dom = 'Bfrtip',
                                  buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))) #%>%
-    #DT::formatCurrency(columns = CostCols, currency = "", interval = 3, mark = ",", digits = 0)
 }
 
 
-renderCostTableDetailed <- function(input,.CostTableDetailed, tabname,.Pathogen = NULL){
-  .Productivity <- input[[paste0("Productivity.", tabname)]]
-  .AgeGroup <- input[[paste0("AgeGroup.", tabname)]]
-  if(is.null(.Pathogen)){
-    .Pathogen <- input[[paste0("Pathogen.", tabname)]]
-  }
-  .Disease  <- input[[paste0("Disease.", tabname)]]
-  .CostItem  <- input[[paste0("CostItem.", tabname)]]
+renderCostTableDetailed <- function(input,.CostTableDetailed,.InflationMult){
+  .Productivity <- input$Productivity.Detailed
+  .AgeGroup  <- input$AgeGroup.Detailed
+  .Pathogen  <- input$Pathogen.Detailed
+  .Disease   <- input$Disease.Detailed
+  .CostItem  <- input$CostItem.Detailed
 
   CostTable %>%
     mutate(CostItem = if_else(CostItem == .Productivity,
                               'Non-fatal productivity losses',
                               if_else(CostItem == paste0('Total.',.Productivity),
-                                      'Total', CostItem))) %>%
+                                      'Total', CostItem)),
+           across(c(median,X5.,X95.),
+                  ~.x * .InflationMult * 0.001), #adjust for inflation and divide by 1000
+           across(c(median,X5.,X95.), #format numbers
+                  ~format(ifelse(.x<0.1,
+                                 round(.x,digits = 3),
+                                 signif(.x,3)),
+                          big.mark = ",",
+                          scientific = FALSE,
+                          trim = T,
+                          drop0trailing = TRUE)),
+           `90% UI` = paste(X5.,X95.,sep = ' - '))  %>% #paste UI into single variables)
     subset(CostItem %in% .CostItem &
              AgeGroup %in% .AgeGroup &
              Pathogen %in% .Pathogen &
              Disease %in% .Disease) %>%
     rename(`Age group` = AgeGroup,
-           `Cost Item` = CostItem) %>%
+           `Cost Item` = CostItem,
+           `Cost (thousands AUD)` = median) %>%
+    select(-c(X5., X95.)) %>%
     DT::datatable(rownames = FALSE,
                   extensions = c("Buttons"),
                   options = list(dom = 'Bfrtip',
