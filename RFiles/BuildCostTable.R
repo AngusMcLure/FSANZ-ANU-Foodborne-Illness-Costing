@@ -22,6 +22,44 @@ MissedDaysGastro <- getMissedDaysGastro()
 FrictionRates <- getFrictionRates()
 Workforce <- getWorkforceAssumptions() ##What year is this for and does it need to change by year?
 
+# Some data completeness checks --- ADD TO THESE --- SOME OF THESE SHOULD BE ERRORS NOT WARNINGS
+
+checkMissingCodes <- function(field, datacodes, action = stop){
+  UsedCodes <- map(c(PathogenAssumptions, SequelaeAssumptions), ~.x[[field]]) %>% unlist %>% unique
+  AllCodes <- datacodes %>% unique
+  MissingCodes <- setdiff(UsedCodes,AllCodes)
+
+  if(length(MissingCodes)){
+    message <- paste0('Some of the ', field, ' required by the model are missing from the data :\n   ',
+                      paste(MissingCodes, collapse = '\n   '))
+    action(message)
+  }
+
+}
+
+checkSurplusCodes <- function(field, datacodes, action = stop){
+  UsedCodes <- map(c(PathogenAssumptions, SequelaeAssumptions), ~.x[[field]]) %>% unlist %>% unique
+  AllCodes <- datacodes %>% unique
+  SurplusCodes <- setdiff(AllCodes,UsedCodes)
+  
+  if(length(SurplusCodes)){
+    warning('Some of the ', field, ' provided in the data are not used in the model:\n   ',
+            paste(SurplusCodes, collapse = '\n   '))
+  }
+}
+
+
+checkMissingCodes('mortCodes', Deaths$Cause, action = warning)
+checkSurplusCodes('mortCodes', Deaths$Cause, action = warning)
+
+
+#This second check is perhaps not needed for the hospitalisation data, as this
+#dataset only has rows if there are any hospitalisations recorded (there are no
+#rows with zero separations). If the model finds no rows it already interprets
+#as no seperations, so perhaps we need a seperate check to see if input codes
+#are valid in the future
+checkMissingCodes('hospCodes', Hospitalisations$DC4D, action = warning)
+
 
 # Draw from all distributions
 ndraws <- 10^5
@@ -45,7 +83,7 @@ DeathList <- makeDeathList(Year,
                            ndraws = ndraws)
 CostList <- makeCostList(Year, PathogenAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
-### Inluce sequelae as part of 'All gastro'
+### Include sequelae as part of 'All gastro'
 
 appendSequelaeToAllGastro <- function(List, .f){
   List$`All gastro pathogens` <- c(List$`All gastro pathogens`,
