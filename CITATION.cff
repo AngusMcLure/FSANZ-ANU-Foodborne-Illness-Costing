@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this tool or estimates derived from this tool, please cite as detailed below"
+authors:
+- family-names: "McLure"
+  given-names: "Angus"
+  orcid: "https://orcid.org/0000-0003-2890-2703"
+- family-names: "Glass"
+  given-names: "Katie"
+  orcid: "https://orcid.org/0000-0001-5905-1310"
+title: "FSANZ Foodborne Disease Costing Model"
+version: 1.1.0
+date-released: 2023-11-14
+url: "https://github.com/AngusMcLure/FSANZ-ANU-Foodborne-Illness-Costing"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Glass"
+    given-names: "Kathryn"
+    orcid: "https://orcid.org/0000-0001-5905-1310"
+  - family-names: "McLure"
+    given-names: "Angus"
+    orcid: "https://orcid.org/0000-0003-2890-2703"
+  - family-names: "Bourke"
+    given-names: "Siobhan"
+  - family-names: "Cribb"
+    given-names: "Danielle M."
+    orcid: "https://orcid.org/0000-0002-7200-1227"
+  - family-names: "Kirk"
+    given-names: "Martyn D."
+    orcid: "https://orcid.org/0000-0001-5432-5984"
+  - family-names: "March"
+    given-names: "Jason"
+  - family-names: "Daughtry"
+    given-names: "Ben"
+  - family-names: "Smiljanic"
+    given-names: "Snezana"
+  - family-names: "Lancsar"
+    given-names: "Emily"
+    orcid: "https://orcid.org/0000-0003-2404-6735"
+  doi: "10.1089/fpd.2023.0015"
+  journal: "Foodborne Pathogens and Disease"
+  title: "The Cost of Foodborne Illness and Its Sequelae in Australia Circa 2019"
+  issue: 10
+  volume: 20
+  year: 2023
