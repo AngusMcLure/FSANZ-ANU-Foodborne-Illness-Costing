@@ -7,7 +7,7 @@ Web-hosted version of interactive table can be found at https://angusmclure.shin
 
 The development of this code was commissioned by Food Standards Australia New Zealand (FSANZ), conducted by Angus McLure at the Australian National University.
 
-This code was used to calculate the estimates presented in the [FSANZ report]( https://www.foodstandards.gov.au/publications/Documents/ANU%20Foodborne%20Disease%20Final%20Report.pdf) *The annual cost of foodborne disease in Australia* (published 2022). The model and results are soon to appear as a [peer-reviewed journal article](https://home.liebertpub.com/publications/foodborne-pathogens-and-disease/108) in *Foodborne Pathogens and Disease*.
+This code was used to calculate the estimates presented in the [FSANZ report]( https://www.foodstandards.gov.au/publications/Documents/ANU%20Foodborne%20Disease%20Final%20Report.pdf) *The annual cost of foodborne disease in Australia* (published 2022). The model and results are available as a [peer-reviewed journal article](https://doi.org/10.1089/fpd.2023.0015) in *Foodborne Pathogens and Disease*.
 
 # Updating Data
 
