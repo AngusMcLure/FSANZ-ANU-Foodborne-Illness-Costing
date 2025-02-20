@@ -10,8 +10,8 @@ getAusPopAgeGroup <- function(){
 }
 
 #Population by year and age
-getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xls"){
-  AusPop <- readxl::read_xls(file,
+getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xlsx"){
+  AusPop <- readxl::read_xlsx(file,
                              sheet = 'Data1',
                              range = "A1:GU59")
   AusPop <- AusPop[10:nrow(AusPop),] %>%
@@ -32,7 +32,7 @@ getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xls"
 }
 
 getAusPopAgeSex <- function(){
-  AusPopAgeSex <- readxl::read_xls("./Data/AustralianPopulationByAge.xls",
+  AusPopAgeSex <- readxl::read_xlsx("./Data/AustralianPopulationByAge.xlsx",
                                      sheet = 'Data1',
                                      range = "A1:GU59")
   AusPopAgeSex <- AusPopAgeSex[10:nrow(AusPopAgeSex),] %>%
@@ -112,7 +112,7 @@ getCasesStateAgeGroup <- function(){
   PopFiles <- list.files('./Data', pattern = 'PopulationAgeYear-*', full.names = T)
   names(PopFiles) <- PopFiles %>%
     sub(pattern = "./Data/PopulationAgeYear-", replacement = '') %>%
-    sub(pattern = ".xls", replacement = '')
+    sub(pattern = ".xlsx", replacement = '')
   StatePop <- bind_rows(map(PopFiles, getAusPopSingleYearAge),.id = "State") %>%
     subset(Year %in% c(DataYears,TargetYears)) %>%
     mutate(AgegroupMin = Age %/% 5 * 5,
