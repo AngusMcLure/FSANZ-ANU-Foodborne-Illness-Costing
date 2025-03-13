@@ -43,28 +43,28 @@ checkSurplusCodes <- function(field, datacodes, action = stop){
   SurplusCodes <- setdiff(AllCodes,UsedCodes)
   
   if(length(SurplusCodes)){
-    warning('Some of the ', field, ' provided in the data are not used in the model:\n   ',
+    action('Some of the ', field, ' provided in the data are not used in the model:\n   ',
             paste(SurplusCodes, collapse = '\n   '))
   }
 }
 
 
-checkMissingCodes('mortCodes', Deaths$Cause, action = warning)
+checkMissingCodes('mortCodes', Deaths$Cause, action = stop)
 checkSurplusCodes('mortCodes', Deaths$Cause, action = warning)
 
 
 #This second check is perhaps not needed for the hospitalisation data, as this
 #dataset only has rows if there are any hospitalisations recorded (there are no
 #rows with zero separations). If the model finds no rows it already interprets
-#as no seperations, so perhaps we need a seperate check to see if input codes
+#as no separations, so perhaps we need a separate check to see if input codes
 #are valid in the future
 checkMissingCodes('hospCodes', Hospitalisations$DC4D, action = warning)
 
 
 # Draw from all distributions
 ndraws <- 10^5
-set.seed(20220222) #Date at time of final run
-Year <- 2019
+set.seed(20250314) #Date at time of last run
+Year <- 2024
 
 WTPList <- getWTP(ndraws)
 
