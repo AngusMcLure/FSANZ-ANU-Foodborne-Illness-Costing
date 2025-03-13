@@ -179,7 +179,7 @@ getHospitalisationsAgeGroup <- function(){
              DC4D = substr(`4 digit diagnosis`, start = 1, stop = 5)) %>%
       mutate(DC3D = ifelse(grepl('[A-Z][0-9]{2}',DC4D),DC3D,NA),
              DC4D = ifelse(grepl('[A-Z][0-9]{2}\\.[0-9]',DC4D),DC4D,NA),
-             AgeGroup = as.integer(substr(`Age Group`,start = 1, stop = 2)),
+             AgeGroup = as.integer(substr(`Age Group`,start = 1, stop = 2)), #This generates some NAs as there are rows in the data for which we don't know the age (and often a lot of variables also, so these will end up being ignored)
              AgeGroup = ifelse(AgeGroup<=2,'<5',
                                ifelse(AgeGroup <= 14, '5-64',
                                       ifelse(AgeGroup <= 19, '65+',NA)))) %>%
