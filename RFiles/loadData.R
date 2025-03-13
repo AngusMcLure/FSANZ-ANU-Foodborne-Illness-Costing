@@ -225,93 +225,54 @@ getValueStatisticalLife <- function(){
 
 getABSDeaths <- function(){
 
-  col.types <- c("text", "skip", "text", "text", "text", "text", "skip", "text", "text", "text", "text")
-  col.names <- c("Cause", "Male.0-14", "Male.15-64", "Male.65+", "Male.All", "Female.0-14", "Female.15-64", "Female.65+", "Female.All")
-  out <- bind_rows(Underlying = readxl::read_xlsx("./Data/ABSDeathTable2001-2010.xlsx",
-                                                  sheet = "Table 1",
-                                                  range = "A9:K63",
-                                                  col_types = col.types,
-                                                  col_names = col.names) %>% as.data.frame(),
-                   Multiple = readxl::read_xlsx("./Data/ABSDeathTable2001-2010.xlsx",
-                                                sheet = "Table 2",
-                                                range = "A9:K69",
-                                                col_types = col.types,
-                                                col_names = col.names) %>% as.data.frame(),
-                   .id = "Method") %>%
-    pivot_longer(-c(Cause, Method), names_to = c("Sex", "AgeGroup"), names_sep = "\\.") %>%
-    mutate(value = value %>%
-             na_if('np') %>%
-             recode(`–` = "0") %>%
-             as.numeric,
-           Cause = Cause %>% str_extract('^([^\\s]+)'),
-           Cause = if_else(nchar(Cause)>3,
-                           paste(substr(Cause, 1,3), substr(Cause, 4,nchar(Cause)), sep ='.'),
-                           Cause)
-           )
+  #Input data is in ugly format, so I need to label columns somewhat manually
+  Years <- 2014:2023
+  AgeGroups <- c('<5', '5-64', '65+', 'Total')
+  column_names <- c('Cause',
+                    paste(sort(rep(Years, length(AgeGroups))), AgeGroups))
+  column_types <- c('text', 'skip', #This will skip the second column in the excel spreadsheet (which doesn't contain any information)
+                    rep('numeric', length(Years) * length(AgeGroups)))
+  
+  out <- read_xlsx('./Data/Causes of Death data.xlsx',
+                         sheet = 'Table 1', range = 'A8:AP46',
+                    col_names = column_names,
+                   col_types = column_types)
+  
+  
+  out <- out %>%
+    #Convert to long form data
+    pivot_longer(-Cause, names_sep = ' ',
+                 values_to = 'Deaths',
+                 names_to = c("Year", "AgeGroup")) %>%
+    #Extract out cause of death code
+    mutate(CauseLong = Cause, 
+           Cause = str_extract(CauseLong,'([^\\s]+)') %>% str_trim(), 
+           Cause = ifelse(nchar(Cause) == 4, # include a . for codes of length 4
+                          paste(substr(Cause,1,3), substr(Cause,4,4),sep = '.'),
+                          Cause)
+    )%>%
+    #sum over years
+    group_by(AgeGroup,Cause) %>% 
+    summarise(Count = sum(Deaths))
 
-  #Fix the missing deaths for some of the females. All Causes have a total
-  #given, but there are no estimates from some age groups I am using the
-  #difference between the total and the age groups with deaths given to estimate
-  #the totals across the age groups with missing values and the apportioning the
-  #deaths across the age groups according to size of the population in those age
-  #groups
-
-  AusPop <- getAusPopAgeSex()
-
-  AgeGroupWeights <- AusPop %>%
-    subset(Year %in% 2001:2010) %>%
-    mutate(AgeGroup = ifelse(Age<15, "0-14",ifelse(Age<65,"15-64", "65+"))) %>%
-    group_by(Sex, AgeGroup) %>%
-    summarise(Count = sum(Count))
-
-  for(n in 1:nrow(out)){
-    r <- out[n,]
-    if(is.na(out$value[n])){
-      deficit <- subset(out, Method == r$Method & Cause == r$Cause & Sex == r$Sex & AgeGroup == 'All')$value -
-        sum(subset(out, Method == r$Method & Cause == r$Cause & Sex == r$Sex & AgeGroup != 'All')$value, na.rm = T)
-      out[n,'value'] <- deficit * subset(AgeGroupWeights, Sex == r$Sex & AgeGroup == r$AgeGroup)$Count/
-        sum(subset(AgeGroupWeights, Sex == r$Sex & AgeGroup %in% subset(out, Cause == r$Cause & Sex == r$Sex & is.na(value))$AgeGroup)$Count)
-    }
-  }
-
-  #Collapse by sex and remove totals
-
-  out <- out %>% subset(AgeGroup != "All") %>%
-    group_by(Cause, AgeGroup, Method) %>%
-    summarise(Count = sum(value))
-
-  #Readjust to agegroups <5, 5-64, and 65+ -- assume rate in <5 is the same as rate in
-  Frac0to14Under5 <- sum(subset(AusPop, Year %in% 2001:2010 & Age<5)$Count)/
-    sum(subset(AusPop, Year %in% 2001:2010 & Age<15)$Count)
-
-  out <- bind_rows(out %>%
-                     mutate(AgeGroup = recode(AgeGroup,
-                                              `0-14` = "<5",
-                                              `15-64` = "5-64"),
-                            Count = ifelse(AgeGroup == "<5",
-                                           Count * Frac0to14Under5,
-                                           Count)),
-                   out %>%
-                     subset(AgeGroup == "0-14") %>%
-                     mutate(Count = Count * (1-Frac0to14Under5),
-                            AgeGroup = "5-64")) %>%
-    group_by(Cause,AgeGroup, Method) %>%
-    summarise(Count = sum(Count))
-
-  PopFinalAgeGroups <- AusPop %>% subset(Year %in% 2001:2010) %>%
-    mutate(AgeGroup = ifelse(Age<5, "<5",ifelse(Age<65,"5-64", "65+"))) %>%
+  AusPop <- getAusPopAgeGroup() %>%
+    subset(Year %in% Years) %>%
     group_by(AgeGroup) %>%
-    summarise(PersonYears = sum(Count))
+    summarise(PersonYears = sum(Persons))
+  
 
 
   #Add in additional perinatal deaths for listeria --- this is a 'fudge' using data on perinatal deaths in the years 2010-2016 (9 deaths across 7 years adjusted up to account for the fact other data is across 10 years. No population adjustment)
-  out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] <- out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] + 9/7 * 10
+  #out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] <- out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] + 9/7 * 10
 
-  warning('Reported perinatal deaths due to Listeria in 2010-2016 are being added to reported deaths in <5 yearolds from 2001-2010 data. It would be best to remove/update this manual adjustment if a better dataset becomes available')
+  warning("Reported perinatal deaths due to Listeria have not been added in, ",
+          "but were in previous models. Check that this doesn't need to be fixed")
 
   # Calculate as rate per person per year
-  out <- merge(out, PopFinalAgeGroups, by = "AgeGroup") %>%
-    mutate(Rate = Count/PersonYears)
+  out <- out %>% 
+    merge(AusPop) %>%
+    mutate(Rate = Count/PersonYears) %>% 
+    subset(AgeGroup != 'Total')
 
   return(out)
 }

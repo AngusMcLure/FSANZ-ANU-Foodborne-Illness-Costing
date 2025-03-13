@@ -5,9 +5,8 @@ library(readxl)
 
 source("./RFiles/loadData.R")
 
-DeathsOld <- getABSDeaths() %>%
-  subset(Method == 'Underlying') %>%
-  select(AgeGroup, Cause, Count)
+DeathsOld <- getABSDeaths()
+
 
 DeathsOld <- bind_rows(DeathsOld,DeathsOld %>%
               group_by(Cause) %>%
@@ -17,7 +16,7 @@ DeathsOld <- bind_rows(DeathsOld,DeathsOld %>%
 DeathsOld
 
 #Read in 2014-2023 death data
-DeathsNew <- read_xlsx('C:/Users/u4859599/Downloads/Causes of Death data.xlsx',
+DeathsNew <- read_xlsx('C:/Users/u4859599/Documents/GitHub/FSANZ-ANU-Foodborne-Illness-Costing/Data//Causes of Death data.xlsx',
                       sheet = 'Table 1', range = 'A7:AP46') %>%
   select(-...2)
 colnames(DeathsNew) <- c('Cause',
@@ -34,9 +33,25 @@ DeathsNew <- DeathsNew %>%
          Cause = ifelse(nchar(Cause) == 4, # include a . for codes of length 4
                         paste(substr(Cause,1,3), substr(Cause,4,4),sep = '.'),
                         Cause)
-         ) %>%
-  group_by(Cause, AgeGroup) %>% #sum over years
+         )
+Years <- DeathsNew$Year %>% unique %>% as.integer
+# Sum over years
+DeathsNew <- DeathsNew %>%
+  group_by(AgeGroup,Cause) %>% #sum over years
   summarise(Count = sum(Deaths))
+colnames(DeathsNew)
+
+AusPop <- getAusPopAgeGroup() %>%
+  subset(Year %in% Years) %>%
+  group_by(AgeGroup) %>%
+  summarise(PersonYears = sum(Persons))
+
+DeathsNew <- DeathsNew %>% 
+  merge(AusPop) %>%
+  mutate(Rate = Count)
+
+View(DeathsOld)
+View(DeathsNew)
 
 #Compare two datasets
 
