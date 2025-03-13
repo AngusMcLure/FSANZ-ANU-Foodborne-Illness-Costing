@@ -17,7 +17,7 @@ AusPopSingleYear <- getAusPopSingleYearAge() # Population by year for every age
 Hospitalisations <- getHospitalisationsAgeGroup()
 Costs <- getCosts()
 VSL <- getValueStatisticalLife()
-Deaths <- getABSDeaths() %>% subset(Method == "Underlying")
+Deaths <- getABSDeaths()
 MissedDaysGastro <- getMissedDaysGastro()
 FrictionRates <- getFrictionRates()
 Workforce <- getWorkforceAssumptions() ##What year is this for and does it need to change by year?

@@ -48,7 +48,8 @@ AusPop <- getAusPopAgeGroup() %>%
 
 DeathsNew <- DeathsNew %>% 
   merge(AusPop) %>%
-  mutate(Rate = Count)
+  mutate(Rate = Count/PersonYears) %>% 
+  subset(AgeGroup != 'Total')
 
 View(DeathsOld)
 View(DeathsNew)
