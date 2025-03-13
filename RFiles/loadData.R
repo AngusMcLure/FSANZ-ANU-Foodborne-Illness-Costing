@@ -13,7 +13,7 @@ getAusPopAgeGroup <- function(){
 getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xlsx"){
   AusPop <- readxl::read_xlsx(file,
                              sheet = 'Data1',
-                             range = "A1:GU59")
+                             range = "A1:GU64")
   AusPop <- AusPop[10:nrow(AusPop),] %>%
     rename(Year = `...1`) %>%
     pivot_longer(-Year,names_sep = ";",names_to = c(NA,'Sex','Age',NA),values_to = "Count") %>%
@@ -107,7 +107,7 @@ getCasesNNDSSAgeGroup <- function(){
 
 getCasesStateAgeGroup <- function(){
   #Loads state specific data for Yersinia entercolictica and STEC and then population adjusts them to the 2018 or 2019 populations
-  TargetYears <- 2018:2019
+  TargetYears <- 2024
   DataYears <- 2013:2015
   PopFiles <- list.files('./Data', pattern = 'PopulationAgeYear-*', full.names = T)
   names(PopFiles) <- PopFiles %>%
@@ -140,9 +140,9 @@ getCasesStateAgeGroup <- function(){
   bind_rows(STEC, Yersinia) %>%
     merge(StatePop) %>%
     group_by(AgeGroup, Disease) %>%
-    summarise(Rate = sum(Count)/sum(Persons)) %>%
+    summarise(Rate = sum(Count)/sum(Persons)) %>% #Rate calculation used population in DataYears
     merge(AusPopTargetYears) %>%
-    mutate(Cases = Rate * Persons,
+    mutate(Cases = Rate * Persons, #Age-adjusted case numbers multiply rates by target years
            AgeGroup = recode(AgeGroup,
                              `0-4` = '<5',
                              `5-9` = '5-64',
@@ -170,6 +170,7 @@ getCasesStateAgeGroup <- function(){
 getHospitalisationsAgeGroup <- function(){
   HospFiles <- list.files("./Data", "^Principal_diagnosis_data_cube_")
   Years <- sub("\\.xlsx.*", "", sub(".*Principal_diagnosis_data_cube_", "", HospFiles))
+  print(Years)
   out <- map(HospFiles,function(x){
     readxl::read_xlsx(paste0("./Data/",x),
                       sheet = '5-character PDx Counts Data',
