@@ -5,7 +5,8 @@ getAusPopAgeGroup <- function(){
   AusPopAgeGroup <- getAusPopSingleYearAge() %>%
     mutate(AgeGroup = ifelse(Age<5, "<5",ifelse(Age<65,"5-64", "65+"))) %>%
     group_by(Year, AgeGroup) %>%
-    summarise(Persons = sum(Persons))
+    summarise(Persons = sum(Persons),
+              .groups = "drop")
   AusPopAgeGroup
 }
 
@@ -27,7 +28,8 @@ getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xlsx
              as.Date(origin = "1899-12-30") %>%
              lubridate::year()) %>%
     group_by(Year,Age) %>%
-    summarise(Persons = sum(Count))
+    summarise(Persons = sum(Count),
+              .groups = "drop")
   AusPop
 }
 
@@ -102,7 +104,8 @@ getCasesNNDSSAgeGroup <- function(){
                              `85+`   = '65+')) %>%
     rename(Disease = `Disease Name`) %>%
     group_by(Year, Disease, AgeGroup) %>%
-    summarise(Cases = sum(Cases))
+    summarise(Cases = sum(Cases),
+              .groups = "drop")
 }
 
 getCasesStateAgeGroup <- function(){
@@ -120,16 +123,19 @@ getCasesStateAgeGroup <- function(){
            AgeGroup = ifelse(Age>=85, "85+", paste(AgegroupMin,AgegroupMax,sep = "-"))) %>%
     select(-c(Age,AgegroupMin,AgegroupMax)) %>%
     group_by(State, Year, AgeGroup) %>%
-    summarise(Persons = sum(Persons))
+    summarise(Persons = sum(Persons),
+              .groups = "drop")
   
   AusPopTargetYears <- subset(StatePop, Year %in% TargetYears) %>%
     group_by(AgeGroup,Year) %>%
-    summarise(Persons = sum(Persons))
+    summarise(Persons = sum(Persons),
+              .groups = "drop")
   
   Yersinia <- read.csv("./Data/Yersinia-SelectStates2013-2015.csv",check.names = F) %>%
     pivot_longer(-c(Year, State), names_sep = 1, names_to = c("Sex", "AgeGroup")) %>%
     group_by(Year, State, AgeGroup) %>%
-    summarise(Count = sum(value)) %>%
+    summarise(Count = sum(value),
+              .groups = "drop") %>%
     mutate(Disease = "Yersiniosis")
   
   STEC <- read.csv("./Data/STEC-SouthAustralia2013-2015.csv") %>%
@@ -140,7 +146,8 @@ getCasesStateAgeGroup <- function(){
   bind_rows(STEC, Yersinia) %>%
     merge(StatePop) %>%
     group_by(AgeGroup, Disease) %>%
-    summarise(Rate = sum(Count)/sum(Persons)) %>% #Rate calculation used population in DataYears
+    summarise(Rate = sum(Count)/sum(Persons), #Rate calculation used population in DataYears
+              .groups = "drop") %>% 
     merge(AusPopTargetYears) %>%
     mutate(Cases = Rate * Persons, #Age-adjusted case numbers multiply rates by target years
            AgeGroup = recode(AgeGroup,
@@ -163,14 +170,14 @@ getCasesStateAgeGroup <- function(){
                              `80-84` = '65+',
                              `85+`   = '65+')) %>%
     group_by(Year,Disease,AgeGroup) %>%
-    summarise(Cases = sum(Cases))
+    summarise(Cases = sum(Cases),
+              .groups = "drop")
 }
 
 
 getHospitalisationsAgeGroup <- function(){
   HospFiles <- list.files("./Data", "^Principal_diagnosis_data_cube_")
   Years <- sub("\\.xlsx.*", "", sub(".*Principal_diagnosis_data_cube_", "", HospFiles))
-  print(Years)
   out <- map(HospFiles,function(x){
     readxl::read_xlsx(paste0("./Data/",x),
                       sheet = '5-character PDx Counts Data',
@@ -179,13 +186,16 @@ getHospitalisationsAgeGroup <- function(){
              DC4D = substr(`4 digit diagnosis`, start = 1, stop = 5)) %>%
       mutate(DC3D = ifelse(grepl('[A-Z][0-9]{2}',DC4D),DC3D,NA),
              DC4D = ifelse(grepl('[A-Z][0-9]{2}\\.[0-9]',DC4D),DC4D,NA),
-             AgeGroup = as.integer(substr(`Age Group`,start = 1, stop = 2)), #This generates some NAs as there are rows in the data for which we don't know the age (and often a lot of variables also, so these will end up being ignored)
+             AgeGroup = substr(`Age Group`,start = 1, stop = 2),
+             AgeGroup = na_if(AgeGroup, 'n.'),  #This converts the age-groups listed as n.p. (not published?) as NAs. These rows in the data often have a lot of variables missing. May be useful to keep for calculatin LOS for all ages
+             AgeGroup = as.integer(AgeGroup),
              AgeGroup = ifelse(AgeGroup<=2,'<5',
                                ifelse(AgeGroup <= 14, '5-64',
                                       ifelse(AgeGroup <= 19, '65+',NA)))) %>%
       group_by(DC3D, DC4D, AgeGroup) %>%
       summarise(Separations  = sum(Separations),
-                PatientDays = sum(`Patient Days`))})
+                PatientDays = sum(`Patient Days`),
+                .groups = "drop")})
   names(out) <- Years
   bind_rows(out, .id = "Year") %>%
     mutate(FYNumeric = 2000 + as.integer(substr(Year, 6, 7))) %>%
@@ -253,12 +263,14 @@ getABSDeaths <- function(){
     )%>%
     #sum over years
     group_by(AgeGroup,Cause) %>% 
-    summarise(Count = sum(Deaths))
+    summarise(Count = sum(Deaths),
+              .groups = "drop")
   
   AusPop <- getAusPopAgeGroup() %>%
     subset(Year %in% Years) %>%
     group_by(AgeGroup) %>%
-    summarise(PersonYears = sum(Persons))
+    summarise(PersonYears = sum(Persons),
+              .groups = "drop")
   
   
   
