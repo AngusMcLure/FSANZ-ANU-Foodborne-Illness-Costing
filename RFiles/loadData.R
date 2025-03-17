@@ -12,8 +12,8 @@ getAusPopAgeGroup <- function(){
 #Population by year and age
 getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xlsx"){
   AusPop <- readxl::read_xlsx(file,
-                             sheet = 'Data1',
-                             range = "A1:GU64")
+                              sheet = 'Data1',
+                              range = "A1:GU64")
   AusPop <- AusPop[10:nrow(AusPop),] %>%
     rename(Year = `...1`) %>%
     pivot_longer(-Year,names_sep = ";",names_to = c(NA,'Sex','Age',NA),values_to = "Count") %>%
@@ -33,8 +33,8 @@ getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xlsx
 
 getAusPopAgeSex <- function(){
   AusPopAgeSex <- readxl::read_xlsx("./Data/AustralianPopulationByAge.xlsx",
-                                     sheet = 'Data1',
-                                     range = "A1:GU59")
+                                    sheet = 'Data1',
+                                    range = "A1:GU59")
   AusPopAgeSex <- AusPopAgeSex[10:nrow(AusPopAgeSex),] %>%
     rename(Year = `...1`) %>%
     pivot_longer(-Year,names_sep = ";",names_to = c(NA,'Sex','Age',NA),values_to = "Count") %>%
@@ -47,7 +47,7 @@ getAusPopAgeSex <- function(){
              as.integer %>%
              as.Date(origin = "1899-12-30") %>%
              lubridate::year())
-    AusPopAgeSex
+  AusPopAgeSex
 }
 
 
@@ -106,7 +106,7 @@ getCasesNNDSSAgeGroup <- function(){
 }
 
 getCasesStateAgeGroup <- function(){
-  #Loads state specific data for Yersinia entercolictica and STEC and then population adjusts them to the 2018 or 2019 populations
+  #Loads state specific data for Yersinia entercolictica and STEC and then population adjusts them to 2024 populations
   TargetYears <- 2024
   DataYears <- 2013:2015
   PopFiles <- list.files('./Data', pattern = 'PopulationAgeYear-*', full.names = T)
@@ -121,22 +121,22 @@ getCasesStateAgeGroup <- function(){
     select(-c(Age,AgegroupMin,AgegroupMax)) %>%
     group_by(State, Year, AgeGroup) %>%
     summarise(Persons = sum(Persons))
-
+  
   AusPopTargetYears <- subset(StatePop, Year %in% TargetYears) %>%
     group_by(AgeGroup,Year) %>%
     summarise(Persons = sum(Persons))
-
+  
   Yersinia <- read.csv("./Data/Yersinia-SelectStates2013-2015.csv",check.names = F) %>%
     pivot_longer(-c(Year, State), names_sep = 1, names_to = c("Sex", "AgeGroup")) %>%
     group_by(Year, State, AgeGroup) %>%
     summarise(Count = sum(value)) %>%
     mutate(Disease = "Yersiniosis")
-
+  
   STEC <- read.csv("./Data/STEC-SouthAustralia2013-2015.csv") %>%
     mutate(State = "SA",
            Disease = "STEC") %>%
     rename(AgeGroup = Agegroup)
-
+  
   bind_rows(STEC, Yersinia) %>%
     merge(StatePop) %>%
     group_by(AgeGroup, Disease) %>%
@@ -224,7 +224,7 @@ getValueStatisticalLife <- function(){
 }
 
 getABSDeaths <- function(){
-
+  
   #Input data is in ugly format, so I need to label columns somewhat manually
   Years <- 2014:2023
   AgeGroups <- c('<5', '5-64', '65+', 'Total')
@@ -233,10 +233,10 @@ getABSDeaths <- function(){
   column_types <- c('text', 'skip', #This will skip the second column in the excel spreadsheet (which doesn't contain any information)
                     rep('numeric', length(Years) * length(AgeGroups)))
   
-  out <- read_xlsx('./Data/Causes of Death data.xlsx',
-                         sheet = 'Table 1', range = 'A8:AP46',
-                    col_names = column_names,
-                   col_types = column_types)
+  out <- readxl::read_xlsx('./Data/Causes of Death data.xlsx',
+                           sheet = 'Table 1', range = 'A8:AP46',
+                           col_names = column_names,
+                           col_types = column_types)
   
   
   out <- out %>%
@@ -254,33 +254,33 @@ getABSDeaths <- function(){
     #sum over years
     group_by(AgeGroup,Cause) %>% 
     summarise(Count = sum(Deaths))
-
+  
   AusPop <- getAusPopAgeGroup() %>%
     subset(Year %in% Years) %>%
     group_by(AgeGroup) %>%
     summarise(PersonYears = sum(Persons))
   
-
-
+  
+  
   #Add in additional perinatal deaths for listeria --- this is a 'fudge' using data on perinatal deaths in the years 2010-2016 (9 deaths across 7 years adjusted up to account for the fact other data is across 10 years. No population adjustment)
   #out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] <- out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] + 9/7 * 10
-
+  
   warning("Reported perinatal deaths due to Listeria have not been added in, ",
           "but were in previous models. Check that this doesn't need to be fixed")
-
+  
   # Calculate as rate per person per year
   out <- out %>% 
     merge(AusPop) %>%
     mutate(Rate = Count/PersonYears) %>% 
     subset(AgeGroup != 'Total')
-
+  
   return(out)
 }
 
 
 getMissedDaysGastro <- function(){
   days <- readxl::read_xlsx("./Data/Missed work.xlsx",
-                           sheet = "Missed days - machine readible") %>%
+                            sheet = "Missed days - machine readible") %>%
     as.data.frame()
   days[days$Type == 'Self',"<5"] <- 0
   days <-  days %>%
@@ -288,7 +288,7 @@ getMissedDaysGastro <- function(){
     group_by(Days, Type, AgeGroup) %>%
     group_modify(~{data.frame(dummy= rep(1,.x$Count))}) %>%
     select(-dummy)
-
+  
   fits <- days %>%
     subset(!(AgeGroup == "<5" & Type == "Self")) %>%
     group_by(AgeGroup, Type) %>%

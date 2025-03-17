@@ -20,7 +20,7 @@ VSL <- getValueStatisticalLife()
 Deaths <- getABSDeaths()
 MissedDaysGastro <- getMissedDaysGastro()
 FrictionRates <- getFrictionRates()
-Workforce <- getWorkforceAssumptions() ##What year is this for and does it need to change by year?
+Workforce <- getWorkforceAssumptions()
 
 # Some data completeness checks --- ADD TO THESE --- SOME OF THESE SHOULD BE ERRORS NOT WARNINGS
 
