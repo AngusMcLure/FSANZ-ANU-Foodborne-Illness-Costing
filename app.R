@@ -12,7 +12,7 @@ CPIData <- read.csv('Data/CPI-ABS.csv',skip = 1,
                     col.names = c('Quarter', 'Change.Quarterly', 'Change.Annual')) %>%
   drop_na() %>%
   mutate(Date = as_date(paste0('01-',Quarter),format = '%d-%m-%y')) %>%
-  subset(Date > as_date('2019-12-01')) %>%
+  subset(Date > as_date('2024-12-01')) %>%
   arrange(Date) %>%
   mutate(Cumm.Inflation.Multiplier = cumprod(1+Change.Quarterly/100),
          CummCPI = 100*(Cumm.Inflation.Multiplier-1)) %>%
@@ -102,8 +102,8 @@ ui <- fluidPage(
                               fluidRow(column(width = 6,
                                               selectInput('Quarter.Inflation',
                                                    'Quarter for Inflation adjustment',
-                                                   c('Dec-19 (Baseline - No adjustment)',CPIData$Quarter),
-                                                   selected = 'Dec-19 (Baseline - No adjustment)',
+                                                   c('Dec-24 (Baseline - No adjustment)',CPIData$Quarter),
+                                                   selected = 'Dec-24 (Baseline - No adjustment)',
                                                    multiple = FALSE)),
                                        column(6,
                                               HTML('<br />'), #add some vertical whitespace
@@ -346,11 +346,11 @@ server <- function(input, output) {
 
   #Multiplier for inflation calculations
   InflationMult <- reactiveVal(1)
-  BasicBanner <- 'Burden and cost estimates circa 2019 with data from 2019 or older,'
+  BasicBanner <- 'Burden and cost estimates circa 2024 with data from 2024 or older,'
   observeEvent(input$Quarter.Inflation,{
-    if(input$Quarter.Inflation == 'Dec-19 (Baseline - No adjustment)'){
+    if(input$Quarter.Inflation == 'Dec-24 (Baseline - No adjustment)'){
       InflationMult(1)
-      output$Banner <- renderText(c(BasicBanner,' with no inflation adjustment to present.',sep = ''))
+      output$Banner <- renderText(c(BasicBanner,' with no inflation adjustment.',sep = ''))
     }else{
       InflationMult(CPIData[input$Quarter.Inflation,'Cumm.Inflation.Multiplier'])
       output$Banner <- renderText(c(BasicBanner,' with cost estimates inflation adjusted to ', input$Quarter.Inflation, ' (',
