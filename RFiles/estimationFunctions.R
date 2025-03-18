@@ -176,7 +176,16 @@ costHumanCapital <- function(year, disease,ageGroup,cases,separations,ndraws){
 
   # Additional days off for hospitalised cases based on hospital LOS
   if(disease$kind == "initial"){
+    
+    HospDataYears <- unique(Hospitalisations$FYNumeric)
+    if(year == 'most_recent'){
+      year <- max(HospDataYears)
+    }else if(!(year %in% HospDataYears)){
+      stop('No hospitalisation data available for year ', year)
+    }
     SepData <- subset(Hospitalisations, DC4D %in% disease$hospCode & AgeGroup == ageGroup & FYNumeric == year)
+    
+    
     if(sum(SepData$Separations) == 0){
       warning('No hospital separations available for ', disease$name,
               ' in age group ', ageGroup,
@@ -223,6 +232,13 @@ makeIncidenceList <- function(year, pathogens, ndraws = 10^6, gastroRate){
 
   ageGroups <- c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
+
+  NNDSSDataYears <- unique(NotificationsAgeGroup$Year)
+  if(year == 'most_recent'){
+    year <- max(NNDSSDataYears)
+  }else if(!(year %in% NNDSSDataYears)){
+    stop('No notification data available for year ', year)
+  }
 
   Initial <- map(pathogens,
                  function(.p){
@@ -283,6 +299,11 @@ makeDeathList <- function(year, pathogens, ndraws = 10^6){
 
   ageGroups <- c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
+  
+  PopDataYears <- unique(AusPopAgegroup$Year)
+  if(!(year %in% PopDataYears)){
+    stop('No population data available for year ', year)
+  }
 
   # Adjust to target year
   PopInTargetYear <- subset(AusPopAgegroup, Year == year)
@@ -311,13 +332,18 @@ makeDeathList <- function(year, pathogens, ndraws = 10^6){
   Deaths
 }
 
-makeHospList <- function(year, pathogens, incidenceList, ndraws = 10^6){
+makeHospList <- function(year = 'most_recent', pathogens, incidenceList, ndraws = 10^6){
   ageGroups <- c("<5","5-64","65+")
   names(ageGroups) <- ageGroups
   # InitialCases <- incidenceList$Initial
   # SequelCases <- incidenceList$Sequel
-
-
+  
+  HospDataYears <- unique(Hospitalisations$FYNumeric)
+  if(year == 'most_recent'){
+    year <- max(HospDataYears)
+  }else if(!(year %in% HospDataYears)){
+    stop('No hospitalisation data available for year ', year)
+  }
 
   Hosp <- map(pathogens, function(.p){
     dlist <- c(list(.p), SequelaeAssumptions[names(.p$sequelae)])
@@ -329,15 +355,14 @@ makeHospList <- function(year, pathogens, incidenceList, ndraws = 10^6){
           sep <- sum(subset(Hospitalisations, DC4D %in% .d$hospCodes & AgeGroup == .a & FYNumeric == year)$Separations)
           if(sep == 0){
             sep <- subset(Hospitalisations, DC4D %in% .d$hospCodes & AgeGroup == .a)
-            DataYears <- unique(sep$FYNumeric)
-            if(length(DataYears) == 0){
+            if(nrow(sep) == 0){
               error('No separations recorded for ', .d$name ,' in agegroup ', .a ,
-                    ' for any of the years for which we have separations data: ', paste(DataYears,collapse = ", "))
+                    ' for any of the years for which we have separations data: ', paste(HospDataYears,collapse = ", "))
             }
-            sep <- sum(sep$Separations)/length(DataYears)
+            sep <- sum(sep$Separations)/length(HospDataYears)
             warning('No separations recorded for ', .d$name ,' in agegroup ', .a , ' for ', year,
-                    ' . Using mean number of separations from years: ',
-                    paste(DataYears,collapse = ", "))
+                    '. Using mean number of separations from years: ',
+                    paste(HospDataYears,collapse = ", "))
 
           }
           hosp <- estimateHosp(.d,ndraws = ndraws,separations = sep)
@@ -415,13 +440,20 @@ makeCostList <- function(year,
                          pathogens,
                          ndraws = 10^6,
                          discount){
+  
+  NNDSSDataYears <- unique(NotificationsAgeGroup$Year)
+  if(year == 'most_recent'){
+    NNDSSyear <- max(NNDSSDataYears)
+  }else if(!(year %in% NNDSSDataYears)){
+    stop('No notification data available for year ', year)
+  }
 
   map(pathogens, function(.p){
     cases <- IncidenceList[[.p$pathogen]]
     dList <- c(.p, SequelaeAssumptions[names(.p$sequelae)])
     deaths <- DeathList[[.p$pathogen]]
     separations <- HospList[[.p$pathogen]]
-    ntfctns <- subset(NotificationsAgeGroup, Disease == .p$name & Year == year)
+    ntfctns <- subset(NotificationsAgeGroup, Disease == .p$name & Year == NNDSSyear)
     notifications <- as.list(ntfctns$Cases)
     names(notifications) <- ntfctns$AgeGroup
     estimateCosts(.p,year,ndraws = ndraws, discount = discount,

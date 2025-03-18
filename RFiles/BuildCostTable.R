@@ -25,20 +25,37 @@ Workforce <- getWorkforceAssumptions()
 # Some data completeness checks --- ADD TO THESE --- SOME OF THESE SHOULD BE ERRORS NOT WARNINGS
 
 checkMissingCodes <- function(field, datacodes, action = stop){
-  UsedCodes <- map(c(PathogenAssumptions, SequelaeAssumptions), ~.x[[field]]) %>% unlist %>% unique
+  UsedCodes <- map(c(PathogenAssumptions, SequelaeAssumptions), ~.x[[field]])
+  UsedCodesUnlist <- UsedCodes %>% unlist %>% unique
   AllCodes <- datacodes %>% unique
-  MissingCodes <- setdiff(UsedCodes,AllCodes)
+  MissingCodes <- setdiff(UsedCodesUnlist, AllCodes)
 
   if(length(MissingCodes)){
     message <- paste0('Some of the ', field, ' required by the model are missing from the data :\n   ',
                       paste(MissingCodes, collapse = '\n   '))
+ 
+    ## Flag T/F if all data for a disease is missing. True if the disease has
+    ## any codes listed BUT none of these codes are in the data. I.e. does not
+    ## flag a problem for GBS for which we have not listed or used the hosp
+    ## codes (because we assume all cases are hospitalised)
+       
+    MissingDiseases <- map(UsedCodes,~{
+      PresentCodes <- intersect(.x, AllCodes)
+      !length(PresentCodes) & length(.x)
+
+    }) %>% unlist()
+    
+    if(any(MissingDiseases)){
+      message <- paste0('Some diseases are missing all ', field, ' :\n   ',
+                        paste(names(MissingDiseases)[MissingDiseases], collapse = '\n   '),
+                        '\n', message)
+    }
     action(message)
   }
-
 }
 
 checkSurplusCodes <- function(field, datacodes, action = stop){
-  UsedCodes <- map(c(PathogenAssumptions, SequelaeAssumptions), ~.x[[field]]) %>% unlist %>% unique
+  UsedCodes <- map(c(PathogenAssumptions, SequelaeAssumptions), ~.x[[field]])
   AllCodes <- datacodes %>% unique
   SurplusCodes <- setdiff(AllCodes,UsedCodes)
   
@@ -60,28 +77,36 @@ checkSurplusCodes('mortCodes', Deaths$Cause, action = warning)
 #are valid in the future
 checkMissingCodes('hospCodes', Hospitalisations$DC4D, action = warning)
 
+checkMissingCodes('hospCodes',
+                  subset(Hospitalisations, Year == "2022-23")$DC4D,
+                  action = warning)
+
+
+
 
 # Draw from all distributions
 ndraws <- 10^5
 set.seed(20250314) #Date at time of last run
-Year <- 2024
 
 WTPList <- getWTP(ndraws)
 
-IncidenceList <- makeIncidenceList(Year,
+IncidenceList <- makeIncidenceList(year = 'most_recent', # This uses the most recent NNDSS notifications extracted above from the /Data folder
                                    pathogens = PathogenAssumptions,
                                    ndraws = ndraws,
                                    gastroRate = gastroRate)
 
 SequelaeFractions <- calcSequelaeFractions(IncidenceList)
-HospList <- makeHospList(Year,
+HospList <- makeHospList(year = 'most_recent', # This uses the most recent AIHW separations extracted above from the /Data folder
                          IncidenceList,
                          pathogens = PathogenAssumptions,
                          ndraws = ndraws)
-DeathList <- makeDeathList(Year,
+DeathList <- makeDeathList(year = 2024,  # This uses ABS population data for the year of choice to population adjust ABS-death data (averaged over a decade) to the year of choice
                            pathogens = PathogenAssumptions,
                            ndraws = ndraws)
-CostList <- makeCostList(Year, PathogenAssumptions, ndraws, discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
+CostList <- makeCostList(year = 'most_recent', # this uses the most recent NNDSS notification data (for certain costs that are only for notifications and not for all cases) and the most recent AHIW hospitalisation data (to estimate the LOS to determine time off work)
+                         PathogenAssumptions,
+                         ndraws,
+                         discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
 
 ### Include sequelae as part of 'All gastro'
 
