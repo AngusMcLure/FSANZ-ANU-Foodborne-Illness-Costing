@@ -1,5 +1,9 @@
 #Functions for extracting data
 
+# function for reading CPI data. Reused in shiny app (while the rest of the
+# functions in this script are not, hence the separate file)
+source("./RFiles/loadCPIData.R")
+
 #Population by year by the 3 age groups (<5, 5-64, 65+)
 getAusPopAgeGroup <- function(){
   AusPopAgeGroup <- getAusPopSingleYearAge() %>%
@@ -212,6 +216,9 @@ getCosts <- function(){
 getWTP <- function(ndraws){
   WTPinput <- readxl::read_xlsx("./Data/WTPvaluesUncertainty.xlsx") %>%
     as.data.frame()
+  
+  
+  
   severity <- unique(WTPinput$severity)
   symptom <- unique(WTPinput$symptom)
   WTPdraws <- list()

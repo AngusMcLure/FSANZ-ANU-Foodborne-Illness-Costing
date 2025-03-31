@@ -8,6 +8,7 @@ source('./RFiles/summaryFunctions.R')
 source("./RFiles/estimationFunctions.R")
 
 
+
 #Load all the data and assumptions
 NNDSSIncidenceAgegroup <- getCasesNNDSSAgeGroup() %>% subset(Disease != "STEC") #STEC is in the dataset, but quality of state surveillance deemed better.
 StateIncidenceAgeGroup <- getCasesStateAgeGroup()
@@ -21,6 +22,12 @@ Deaths <- getABSDeaths()
 MissedDaysGastro <- getMissedDaysGastro()
 FrictionRates <- getFrictionRates()
 Workforce <- getWorkforceAssumptions()
+
+### CPI adjustment
+#The only CPI adjustment is for WTP estimates for pain and suffering (values taken from CHERE report in 2017 dollars)
+RefQ <- "Dec-17" #reference quarter for WTP values
+EstQ <- "Dec-24" #estimates quarter for overall costs
+CPI <- getCPI(RefQ)[EstQ,"Cumm.Inflation.Multiplier"] 
 
 # Some data completeness checks --- ADD TO THESE --- SOME OF THESE SHOULD BE ERRORS NOT WARNINGS
 
@@ -86,9 +93,10 @@ checkMissingCodes('hospCodes',
 
 # Draw from all distributions
 ndraws <- 10^5
-set.seed(20250314) #Date at time of last run
+set.seed(20250331) #Date at time of last run
 
-WTPList <- getWTP(ndraws)
+WTPList <- getWTP(ndraws) %>%
+  map_depth(2,~{.x * CPI}) #adjust costs from 2017 dollars to present
 
 IncidenceList <- makeIncidenceList(year = 'most_recent', # This uses the most recent NNDSS notifications extracted above from the /Data folder
                                    pathogens = PathogenAssumptions,
