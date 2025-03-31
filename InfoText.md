@@ -52,7 +52,7 @@ Data to inform unit costs come from a range of sources:
 
 -   Average weekly earnings for all adults (Nov 2024, ABS) and older adults (May 2023, ABS)
 
--   Willingness to avoid pain grief and suffering associated with disease estimated from a discrete choice experiment in Australia (2014, CHERE)
+-   Willingness to avoid pain grief and suffering associated with disease estimated from a discrete choice experiment in Australia ([2023, Manipis et al](https://doi.org/10.1007/s10198-022-01512-3))
 
 -   Hospitalisation costs based on the average cost of the best matching Australian Refined Diagnosis Related Group (2025 Q1, IHACPA)
 
