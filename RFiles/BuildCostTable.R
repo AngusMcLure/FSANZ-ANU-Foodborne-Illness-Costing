@@ -9,7 +9,7 @@ source("./RFiles/estimationFunctions.R")
 
 
 
-#Load all the data and assumptions
+### Load all the data and assumptions
 NNDSSIncidenceAgegroup <- getCasesNNDSSAgeGroup() %>% subset(Disease != "STEC") #STEC is in the dataset, but quality of state surveillance deemed better.
 StateIncidenceAgeGroup <- getCasesStateAgeGroup()
 NotificationsAgeGroup <- bind_rows(NNDSSIncidenceAgegroup,StateIncidenceAgeGroup)
@@ -29,7 +29,7 @@ RefQ <- "Dec-17" #reference quarter for WTP values
 EstQ <- "Dec-24" #estimates quarter for overall costs
 CPI <- getCPI(RefQ)[EstQ,"Cumm.Inflation.Multiplier"] 
 
-# Some data completeness checks --- ADD TO THESE --- SOME OF THESE SHOULD BE ERRORS NOT WARNINGS
+### Data completeness checks
 
 checkMissingCodes <- function(field, datacodes, action = stop){
   UsedCodes <- map(c(PathogenAssumptions, SequelaeAssumptions), ~.x[[field]])
