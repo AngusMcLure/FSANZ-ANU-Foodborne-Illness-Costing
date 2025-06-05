@@ -93,7 +93,7 @@ checkMissingCodes('hospCodes',
 
 # Draw from all distributions
 ndraws <- 10^5
-set.seed(20250331) #Date at time of last run
+set.seed(20250605) #Date at time of last run
 
 WTPList <- getWTP(ndraws) %>%
   map_depth(2,~{.x * CPI}) #adjust costs from 2017 dollars to present
@@ -148,8 +148,6 @@ CostList <- appendAllPathogens(CostList,add2)
 HospList <- appendAllPathogens(HospList,add)
 DeathList <- appendAllPathogens(DeathList,add)
 IncidenceList <- appendAllPathogens(IncidenceList,add)
-
-
 
 warning('When summing across agegroups the draws of the multipliers used for each agegroup are considered independent. Making them dependent would require reworking the whole program, and is not necessarily a better assumption, but it is something to be aware of')
 
@@ -217,6 +215,7 @@ CostSummaries <- summariseCostList(CostList)
 write.csv(CostSummaries$Detailed,'./Outputs/CostTable.csv')
 write.csv(CostSummaries$Categorised,'./Outputs/CostTableCategories.csv')
 
+gc()
 # save workspace in two versions; one light version to be used by the shiny app
 # and another larger version with everything
 save.image('AusFBDiseaseImage.RData')

@@ -282,10 +282,7 @@ getABSDeaths <- function(){
   
   
   #Add in additional perinatal deaths for listeria --- this is a 'fudge' using data on perinatal deaths in the years 2010-2016 (9 deaths across 7 years adjusted up to account for the fact other data is across 10 years. No population adjustment)
-  #out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] <- out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] + 9/7 * 10
-  
-  warning("Reported perinatal deaths due to Listeria have not been added in, ",
-          "but were in previous models. Check that this doesn't need to be fixed")
+  out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] <- out[out$Cause == "A32" & out$AgeGroup == "<5",'Count'] + 9/7 * 10
   
   # Calculate as rate per person per year
   out <- out %>% 
