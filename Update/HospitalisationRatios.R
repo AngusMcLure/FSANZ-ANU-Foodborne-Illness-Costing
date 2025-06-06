@@ -2,6 +2,7 @@
 
 library(tidyverse)
 
+
 # Read in hospitalisation numbers  ------------------------------------
 
 # Data is formatted poorly. In blocks by FY. Need to read in block for each FY
@@ -17,7 +18,7 @@ meta <- data.frame(FY = 2019:2023, ## FY is the year of the end e.g. FY2019 is A
 d <- meta %>% 
   group_by(FY, Kind) %>%
   group_modify(~{
-    readxl::read_excel(path = "./NonPublicData/AH2024-0038 - Part A - Unprotected.xlsx",
+    readxl::read_excel(path = "./Update/NonPublicData/AH2024-0038 - Part A - Unprotected.xlsx",
                                   sheet = paste(.y$Kind, 'diagnosis'),
                                   range = readxl::cell_limits(ul = c(.x$StartRow,1), 
                                                               lr = c(.x$EndRow, 16)))
@@ -108,7 +109,9 @@ View(d.summary)
 
 
 
-## Read in hospitalisation ratios from previous modelling work
+## Read in hospitalisation ratios from previous modelling work (assumes the
+## files haven't been updated yet --- once update this will just be reading in
+## the updated data)
 
 source("./RFiles/Distributions.R")
 source("./RFiles/ClassDefinitions.R")

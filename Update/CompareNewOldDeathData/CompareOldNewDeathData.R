@@ -16,7 +16,7 @@ DeathsOld <- bind_rows(DeathsOld,DeathsOld %>%
 DeathsOld
 
 #Read in 2014-2023 death data
-DeathsNew <- read_xlsx('C:/Users/u4859599/Documents/GitHub/FSANZ-ANU-Foodborne-Illness-Costing/Data//Causes of Death data.xlsx',
+DeathsNew <- read_xlsx('./Data/Causes of Death data.xlsx',
                       sheet = 'Table 1', range = 'A7:AP46') %>%
   select(-...2)
 colnames(DeathsNew) <- c('Cause',
