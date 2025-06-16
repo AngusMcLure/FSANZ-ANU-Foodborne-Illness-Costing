@@ -3,14 +3,14 @@ library(tidyverse)
 # Set year
 # As data sources release on different schedules, source year can be vary
 EstQ <- "Dec-24" #quarter for overall cost estimates
-YearDeaths <- 2024 # Year for population adjusting deaths to (does not change data source for deaths)
+YearDeaths <- 2024  #Year for determing population for population adjusting estimates deaths (does not change data source for deaths)
 YearCases <- 2024 # Year that notification data and population estimates are taken from for estimating cases
-YearHosp <- 2023 # Year that hospitalization data is taken from
-
+YearHosp <- 2023 # Financial year that hospitalization data is taken from --- FY2024 will probably not be available until Nov 2025 given historical reporting timelines
 
 ndraws <- 10^5 #number of random draws for each estimate
 #Set random seed for reproducibility
-set.seed(20250605) #I suggest choosing date for day of last run on which inputs/code changed in ways that effect the outputs
+set.seed(20250605) #I suggest choosing the date of the last run on which inputs/code changed in ways that effected the outputs
+
 
 source("./RFiles/Distributions.R")
 source("./RFiles/ClassDefinitions.R")
