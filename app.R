@@ -3,7 +3,6 @@ library(shiny)
 library(shinyBS)
 library(shinyjs)
 library(tidyverse)
-library(stringr)
 library(mc2d) #for the standard PERT distribution parameterised by min, mode, max
 load('Outputs/AusFBDiseaseImage-Light.RData', globalenv())
 source("Outbreak.R")
