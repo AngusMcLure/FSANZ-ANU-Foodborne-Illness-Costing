@@ -7,6 +7,11 @@ YearDeaths <- 2024 # Year for population adjusting deaths to (does not change da
 YearCases <- 2024 # Year that notification data and population estimates are taken from for estimating cases
 YearHosp <- 2023 # Year that hospitalization data is taken from
 
+
+ndraws <- 10^5 #number of random draws for each estimate
+#Set random seed for reproducibility
+set.seed(20250605) #I suggest choosing date for day of last run on which inputs/code changed in ways that effect the outputs
+
 source("./RFiles/Distributions.R")
 source("./RFiles/ClassDefinitions.R")
 source("./RFiles/Diseases.R")
@@ -98,8 +103,6 @@ checkMissingCodes('hospCodes',
 
 
 # Draw from all distributions
-ndraws <- 10^5
-set.seed(20250605) #Date at time of last run
 
 WTPList <- getWTP(ndraws) %>%
   map_depth(2,~{.x * CPI}) #adjust costs from 2017 dollars to present
