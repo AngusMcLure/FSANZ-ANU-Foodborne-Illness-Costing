@@ -19,7 +19,7 @@ This tool has five tabs:
 
 ## Data
 
-This app use the best data available to the team in early 2025 to estimate burden and cost of disease around the year 2024. There were many data inputs, some up-to-date as of early 2025, but others dating back to the early 2000s. Data for burden estimates include: 
+This app uses the best data available to the team in early 2025 to estimate burden and cost of disease around the year 2024. There were many data inputs, some up-to-date as of early 2025, but others dating back to the early 2000s. Data for burden estimates include: 
 
 -   Number of notifications for nationally notifiable pathogens (2024, NNDSS)
 
@@ -38,11 +38,13 @@ This app use the best data available to the team in early 2025 to estimate burde
 
 Estimates of cost involve two broad steps. In step one we estimate the number of cost items (e.g. GP visits, doses of medication, time off work) based on burden estimates. In the second step we multiply cost items by unit prices. Data to inform the number of cost items comes from a range of data sources:
 
--   Number of days taken off work as estimated from the second national gastroenteritis survey (2008, NGSII)
+-   Number of days taken off work due to hospitalisation, estimated from average length of stay (FY 2022-23, AIHW)
+
+-   Others days taken off work, estimated from the second national gastroenteritis survey (2008, NGSII)
 
 -   Workforce participation rates (2024, ABS)
 
--   Expert elicitation (Various sources)
+-   GP, ED, specialist, medication, and diagnostic testing utilisation rates per case estimated from expert elicitation (<2019, Various sources)
 
 Data to inform unit costs come from a range of sources:
 
