@@ -1,5 +1,12 @@
 library(tidyverse)
 
+# Set year
+# As data sources release on different schedules, source year can be vary
+EstQ <- "Dec-24" #quarter for overall cost estimates
+YearDeaths <- 2024 # Year for population adjusting deaths to (does not change data source for deaths)
+YearCases <- 2024 # Year that notification data and population estimates are taken from for estimating cases
+YearHosp <- 2023 # Year that hospitalization data is taken from
+
 source("./RFiles/Distributions.R")
 source("./RFiles/ClassDefinitions.R")
 source("./RFiles/Diseases.R")
@@ -26,7 +33,6 @@ Workforce <- getWorkforceAssumptions()
 ### CPI adjustment
 #The only CPI adjustment is for WTP estimates for pain and suffering (values taken from CHERE report in 2017 dollars)
 RefQ <- "Dec-17" #reference quarter for WTP values
-EstQ <- "Dec-24" #estimates quarter for overall costs
 CPI <- getCPI(RefQ)[EstQ,"Cumm.Inflation.Multiplier"] 
 
 ### Data completeness checks
@@ -36,20 +42,20 @@ checkMissingCodes <- function(field, datacodes, action = stop){
   UsedCodesUnlist <- UsedCodes %>% unlist %>% unique
   AllCodes <- datacodes %>% unique
   MissingCodes <- setdiff(UsedCodesUnlist, AllCodes)
-
+  
   if(length(MissingCodes)){
     message <- paste0('Some of the ', field, ' required by the model are missing from the data :\n   ',
                       paste(MissingCodes, collapse = '\n   '))
- 
+    
     ## Flag T/F if all data for a disease is missing. True if the disease has
     ## any codes listed BUT none of these codes are in the data. I.e. does not
     ## flag a problem for GBS for which we have not listed or used the hosp
     ## codes (because we assume all cases are hospitalised)
-       
+    
     MissingDiseases <- map(UsedCodes,~{
       PresentCodes <- intersect(.x, AllCodes)
       !length(PresentCodes) & length(.x)
-
+      
     }) %>% unlist()
     
     if(any(MissingDiseases)){
@@ -68,7 +74,7 @@ checkSurplusCodes <- function(field, datacodes, action = stop){
   
   if(length(SurplusCodes)){
     action('Some of the ', field, ' provided in the data are not used in the model:\n   ',
-            paste(SurplusCodes, collapse = '\n   '))
+           paste(SurplusCodes, collapse = '\n   '))
   }
 }
 
@@ -98,20 +104,21 @@ set.seed(20250605) #Date at time of last run
 WTPList <- getWTP(ndraws) %>%
   map_depth(2,~{.x * CPI}) #adjust costs from 2017 dollars to present
 
-IncidenceList <- makeIncidenceList(year = 'most_recent', # This uses the most recent NNDSS notifications extracted above from the /Data folder
+IncidenceList <- makeIncidenceList(year = YearCases, # This uses the most recent NNDSS notifications extracted above from the /Data folder
                                    pathogens = PathogenAssumptions,
                                    ndraws = ndraws,
                                    gastroRate = gastroRate)
 
 SequelaeFractions <- calcSequelaeFractions(IncidenceList)
-HospList <- makeHospList(year = 'most_recent', # This uses the most recent AIHW separations extracted above from the /Data folder
+HospList <- makeHospList(year = YearHosp, # This uses the most recent AIHW separations extracted above from the /Data folder
                          IncidenceList,
                          pathogens = PathogenAssumptions,
                          ndraws = ndraws)
-DeathList <- makeDeathList(year = 2024,  # This uses ABS population data for the year of choice to population adjust ABS-death data (averaged over a decade) to the year of choice
+DeathList <- makeDeathList(year = YearDeaths,  # This uses ABS population data for the year of choice to population adjust ABS-death data (averaged over a decade) to the year of choice
                            pathogens = PathogenAssumptions,
                            ndraws = ndraws)
-CostList <- makeCostList(year = 'most_recent', # this uses the most recent NNDSS notification data (for certain costs that are only for notifications and not for all cases) and the most recent AHIW hospitalisation data (to estimate the LOS to determine time off work)
+CostList <- makeCostList(yearNNDSS = YearCases, # this uses the most recent NNDSS notification data (for certain costs that are only for notifications and not for all cases) 
+                         yearAIHW = YearHosp, #and the most recent AHIW hospitalisation data (to estimate the LOS to determine time off work)
                          PathogenAssumptions,
                          ndraws,
                          discount = 0) # no discounting and assuming a 5 year duration of ongoing illness is equivalent to the cross-sectional approach if we assume that case numbers were the same over the past five years.
@@ -168,11 +175,11 @@ summariseCostList <- function(list){
     map_depth(2,~{.x$`All ages` <- do.call(add,unname(.x));.x}) %>%
     map(~{.x$`Initial and sequel disease` <- do.call(add2,unname(.x));.x})
   Detailed <- totals %>% quantilesNestedList(4, c("Pathogen", "Disease","AgeGroup","CostItem"))
-
+  
   DirectCat <- c('GPSpecialist','ED','Hospitalisation','Tests','Medications')
   WTPCat <- c('WTP', 'WTPOngoing')
   LostProdCat <- c("HumanCapital","FrictionHigh", "FrictionLow")
-
+  
   Categorised <- totals %>%
     map_depth(3,~{
       .x$Direct <- reduce(.x[DirectCat],`+`) #sum over direct costs
@@ -182,7 +189,7 @@ summariseCostList <- function(list){
       .x
     }) %>%
     quantilesNestedList(4, c("Pathogen", "Disease","AgeGroup","CostItem"))
-
+  
   list(Categorised = Categorised, Detailed = Detailed)
 }
 
