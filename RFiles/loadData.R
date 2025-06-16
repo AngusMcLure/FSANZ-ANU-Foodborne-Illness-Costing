@@ -16,31 +16,18 @@ getAusPopAgeGroup <- function(){
 
 #Population by year and age
 getAusPopSingleYearAge <- function(file = "./Data/AustralianPopulationByAge.xlsx"){
-  AusPop <- readxl::read_xlsx(file,
-                              sheet = 'Data1',
-                              range = "A1:GU64")
-  AusPop <- AusPop[10:nrow(AusPop),] %>%
-    rename(Year = `...1`) %>%
-    pivot_longer(-Year,names_sep = ";",names_to = c(NA,'Sex','Age',NA),values_to = "Count") %>%
-    mutate(Count = as.integer(Count),
-           Age = trimws(Age) %>%
-             recode(`100 and over` = "100") %>%
-             as.integer(),
-           Sex = trimws(Sex)) %>%
-    mutate(Year = Year %>%
-             as.integer %>%
-             as.Date(origin = "1899-12-30") %>%
-             lubridate::year()) %>%
+  AusPop <- getAusPopAgeSex(file) %>%
     group_by(Year,Age) %>%
     summarise(Persons = sum(Count),
               .groups = "drop")
   AusPop
 }
 
-getAusPopAgeSex <- function(){
-  AusPopAgeSex <- readxl::read_xlsx("./Data/AustralianPopulationByAge.xlsx",
+#Population by year age and sex
+getAusPopAgeSex <- function(file = "./Data/AustralianPopulationByAge.xlsx"){
+  AusPopAgeSex <- readxl::read_xlsx(file,
                                     sheet = 'Data1',
-                                    range = "A1:GU59")
+                                    range = readxl::cell_cols(c("A:GU")))
   AusPopAgeSex <- AusPopAgeSex[10:nrow(AusPopAgeSex),] %>%
     rename(Year = `...1`) %>%
     pivot_longer(-Year,names_sep = ";",names_to = c(NA,'Sex','Age',NA),values_to = "Count") %>%
