@@ -100,17 +100,6 @@
       ],
       "Hash": "0776bf7526869e0286b0463cb72fb211"
     },
-    "PKI": {
-      "Package": "PKI",
-      "Version": "0.1-14",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "base64enc"
-      ],
-      "Hash": "f5b9c6b2f62f1fa3dd53fd1ddccbb241"
-    },
     "R6": {
       "Package": "R6",
       "Version": "2.6.1",
@@ -168,6 +157,17 @@
         "utils"
       ],
       "Hash": "4ac8e423216b8b70cb9653d1b3f71eb9"
+    },
+    "RcppTOML": {
+      "Package": "RcppTOML",
+      "Version": "0.2.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "Rcpp"
+      ],
+      "Hash": "23eeca7d3c7d63fc7449108c0a66178c"
     },
     "SparseM": {
       "Package": "SparseM",
@@ -331,14 +331,14 @@
     },
     "cachem": {
       "Package": "cachem",
-      "Version": "1.0.8",
+      "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "fastmap",
         "rlang"
       ],
-      "Hash": "c35768291560ce302c0a6589f92e837d"
+      "Hash": "cd9a672193789068eb5a2aad65a0dedf"
     },
     "callr": {
       "Package": "callr",
@@ -436,10 +436,10 @@
     },
     "commonmark": {
       "Package": "commonmark",
-      "Version": "1.9.1",
+      "Version": "2.0.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "5d8225445acb167abf7797de48b2ee3c"
+      "Repository": "RSPM",
+      "Hash": "8cba62334c1088d21689d353a7e87663"
     },
     "conflicted": {
       "Package": "conflicted",
@@ -515,13 +515,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.1",
+      "Version": "8.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R"
       ],
-      "Hash": "411ca2c03b1ce5f548345d2fc2685f7a"
+      "Hash": "5a22716bc6f334da984e0aace1eb8222"
     },
     "data.table": {
       "Package": "data.table",
@@ -671,10 +671,10 @@
     },
     "fastmap": {
       "Package": "fastmap",
-      "Version": "1.1.1",
+      "Version": "1.2.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "f7736a18de97dea803bde0a2daaafb27"
+      "Repository": "RSPM",
+      "Hash": "aa5e1cd11c2d15497494c5292d7ffcc8"
     },
     "fitdistrplus": {
       "Package": "fitdistrplus",
@@ -1092,6 +1092,27 @@
       ],
       "Hash": "ac107251d9d9fd72f0ca8049988f1d7f"
     },
+    "httr2": {
+      "Package": "httr2",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "R6",
+        "cli",
+        "curl",
+        "glue",
+        "lifecycle",
+        "magrittr",
+        "openssl",
+        "rappdirs",
+        "rlang",
+        "vctrs",
+        "withr"
+      ],
+      "Hash": "03d741c92fda96d98c3a3f22494e3b4a"
+    },
     "ids": {
       "Package": "ids",
       "Version": "1.0.1",
@@ -1129,6 +1150,17 @@
         "survival"
       ],
       "Hash": "feb3fc5429087a7e0f7f8464f11cc467"
+    },
+    "jose": {
+      "Package": "jose",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "jsonlite",
+        "openssl"
+      ],
+      "Hash": "448a3007b878ff1f301d9520a5a8008a"
     },
     "jpeg": {
       "Package": "jpeg",
@@ -1455,13 +1487,23 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.1.1",
+      "Version": "2.4.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "2a0dc8c6adfb6f032e4d4af82d258ab5"
+      "Hash": "6994d1c3ea954f29de6aeca5da95c99d"
+    },
+    "otel": {
+      "Package": "otel",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "627d6993db1043703c0b084fa432f21f"
     },
     "packrat": {
       "Package": "packrat",
@@ -1611,19 +1653,20 @@
     },
     "promises": {
       "Package": "promises",
-      "Version": "1.2.1",
+      "Version": "1.5.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
+        "R",
         "R6",
-        "Rcpp",
         "fastmap",
         "later",
+        "lifecycle",
         "magrittr",
-        "rlang",
-        "stats"
+        "otel",
+        "rlang"
       ],
-      "Hash": "0d8a15c9d000970ada1ab21405387dee"
+      "Hash": "62cb899ed5fff70d4e918ec1b762bf7c"
     },
     "ps": {
       "Package": "ps",
@@ -1813,15 +1856,15 @@
     },
     "rsconnect": {
       "Package": "rsconnect",
-      "Version": "1.3.4",
+      "Version": "1.11.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
-        "PKI",
         "R",
         "cli",
         "curl",
         "digest",
+        "httr2",
         "jsonlite",
         "lifecycle",
         "openssl",
@@ -1829,10 +1872,12 @@
         "renv",
         "rlang",
         "rstudioapi",
+        "snowflakeauth",
         "tools",
+        "utils",
         "yaml"
       ],
-      "Hash": "315454d2f50d117ef58691d0bf50fe63"
+      "Hash": "540e48e433a56822b07deef73dc346cd"
     },
     "rstatix": {
       "Package": "rstatix",
@@ -1859,10 +1904,10 @@
     },
     "rstudioapi": {
       "Package": "rstudioapi",
-      "Version": "0.16.0",
+      "Version": "0.19.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "96710351d642b70e8f02ddeb237c46a7"
+      "Repository": "RSPM",
+      "Hash": "db86914207e4e0f112b60ebbc3e1793c"
     },
     "rvest": {
       "Package": "rvest",
@@ -1932,16 +1977,16 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.8.1",
+      "Version": "1.14.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "R6",
         "bslib",
         "cachem",
+        "cli",
         "commonmark",
-        "crayon",
         "fastmap",
         "fontawesome",
         "glue",
@@ -1953,6 +1998,7 @@
         "lifecycle",
         "methods",
         "mime",
+        "otel",
         "promises",
         "rlang",
         "sourcetools",
@@ -1961,31 +2007,49 @@
         "withr",
         "xtable"
       ],
-      "Hash": "a49e145ac3d0d1299e19ab215504f88e"
+      "Hash": "e71fb3fcf73db153eccd8afed293984f"
     },
     "shinyBS": {
       "Package": "shinyBS",
-      "Version": "0.61.1",
+      "Version": "0.65.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "htmltools",
-        "shiny"
+        "jsonlite",
+        "shiny",
+        "stats"
       ],
-      "Hash": "e44255f073ecdc26ba6bc2ce3fcf174d"
+      "Hash": "1b2e257270257d751544d955cb9abec0"
     },
     "shinyjs": {
       "Package": "shinyjs",
-      "Version": "2.1.0",
+      "Version": "2.1.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "digest",
         "jsonlite",
         "shiny"
       ],
-      "Hash": "802e4786b353a4bb27116957558548d5"
+      "Hash": "96b8d41d0dfeef0117b4b7bc43fefabe"
+    },
+    "snowflakeauth": {
+      "Package": "snowflakeauth",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "RcppTOML",
+        "cli",
+        "curl",
+        "jose",
+        "jsonlite",
+        "openssl",
+        "rlang"
+      ],
+      "Hash": "11a7bc4ec72365805a4ba65030e48c62"
     },
     "sourcetools": {
       "Package": "sourcetools",
