@@ -10,11 +10,11 @@ source("RFiles/loadCPIData.R")
 
 # Set year for reference point for inflation adjustments and banner text 
 ReferenceYear <- 2024
-CPIReferencePoint <- "Dec-24" #Follows ABS naming convention for quarters and months. Timepoint name is the three letter abbr of last month followed by last two digits of year, e.g. 'Dec-24'. Note that ABS has switched from publishing quarterly CPI to monthly CPI
-CPIReferencePointText <- paste(CPIReferencePoint, '(Baseline - No adjustment)')
+CPIReferenceQuarter <- "Dec-24" #Follows ABS naming convention for quarters. Quarter's name is the three letter abbr of last month followed by last two digits of year, e.g. 'Dec-24'
+CPIReferenceQuarterText <- paste(CPIReferenceQuarter, '(Baseline - No adjustment)')
 
 
-CPIData <- getCPI(CPIReferencePoint)
+CPIData <- getCPI(CPIReferenceQuarter)
 InitialDiseaseNames <- c(unlist(map(PathogenAssumptions, ~.x$name)), `All pathogens` = 'Initial')
 
 CostTable <- read.csv("Outputs/CostTable.csv") %>%
@@ -98,10 +98,10 @@ ui <- fluidPage(
                        column(width = 10,
                               fluidRow(includeMarkdown('./InfoText.md')),
                               fluidRow(column(width = 6,
-                                              selectInput('Time.Point.Inflation',
-                                                   'Month for Inflation adjustment',
-                                                   c(CPIReferencePointText,CPIData$Time.Point),
-                                                   selected = CPIReferencePointText,
+                                              selectInput('Quarter.Inflation',
+                                                   'Quarter for Inflation adjustment',
+                                                   c(CPIReferenceQuarterText,CPIData$Quarter),
+                                                   selected = CPIReferenceQuarterText,
                                                    multiple = FALSE)),
                                        column(6,
                                               HTML('<br />'), #add some vertical whitespace
@@ -346,13 +346,13 @@ server <- function(input, output) {
   InflationMult <- reactiveVal(1)
   BasicBanner <- paste0('Burden and cost estimates circa ',ReferenceYear,
                         ' with data from ', ReferenceYear,' or older,')
-  observeEvent(input$Time.Point.Inflation,{
-    if(input$Time.Point.Inflation == CPIReferencePointText){
+  observeEvent(input$Quarter.Inflation,{
+    if(input$Quarter.Inflation == CPIReferenceQuarterText){
       InflationMult(1)
       output$Banner <- renderText(c(BasicBanner,' with no inflation adjustment.',sep = ''))
     }else{
-      InflationMult(CPIData[input$Time.Point.Inflation,'Cumm.Inflation.Multiplier'])
-      output$Banner <- renderText(c(BasicBanner,' with cost estimates inflation adjusted to ', input$Time.Point.Inflation, ' (',
+      InflationMult(CPIData[input$Quarter.Inflation,'Cumm.Inflation.Multiplier'])
+      output$Banner <- renderText(c(BasicBanner,' with cost estimates inflation adjusted to ', input$Quarter.Inflation, ' (',
                                     if(InflationMult()>1){'+'}else{''},
                                     round(100*(InflationMult()-1),1),
                                     '%).'), sep = '')

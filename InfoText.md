@@ -61,4 +61,4 @@ Data to inform unit costs come from a range of sources:
 
 ## Inflation adjustment
 
-All costs (across tabs `Cost Summaries`, `Cost Comparisons`, and `Outbreak`) can be adjusted for inflation by selecting the month from below. Inflation adjustment uses monthly all group CPI rates published by the ABS to adjust costs estimates and 90% uncertainty intervals. This does **not** update any of the underlying data listed above or the burden estimate and does **not** adjust for population growth.
+All costs (across tabs `Cost Summaries`, `Cost Comparisons`, and `Outbreak`) can be adjusted for inflation by selecting the quarter from below. Inflation adjustment uses quarterly all group CPI rates published by the ABS to adjust costs estimates and 90% uncertainty intervals. This does **not** update any of the underlying data listed above or the burden estimate and does **not** adjust for population growth.
